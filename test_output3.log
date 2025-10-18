@@ -1,0 +1,805 @@
+Starting main function...
+✅ du_case_01.conf 已生成 / Generated
+   參數修改: gNBs[0].tracking_area_code → 0
+   Parameter modified: gNBs[0].tracking_area_code → 0
+------------------------------------------------------------
+✅ du_case_02.conf 已生成 / Generated
+   參數修改: gNBs[0].nr_cellid → -1
+   Parameter modified: gNBs[0].nr_cellid → -1
+------------------------------------------------------------
+✅ du_case_03.conf 已生成 / Generated
+   參數修改: gNBs[0].pdsch_AntennaPorts_XP → 0
+   Parameter modified: gNBs[0].pdsch_AntennaPorts_XP → 0
+------------------------------------------------------------
+✅ du_case_04.conf 已生成 / Generated
+   參數修改: gNBs[0].gNB_ID → 3584
+   Parameter modified: gNBs[0].gNB_ID → 3584
+------------------------------------------------------------
+✅ du_case_05.conf 已生成 / Generated
+   參數修改: Asn1_verbosity → invalid
+   Parameter modified: Asn1_verbosity → invalid
+------------------------------------------------------------
+✅ du_case_06.conf 已生成 / Generated
+   參數修改: gNBs[0].gNB_ID → 0xggg
+   Parameter modified: gNBs[0].gNB_ID → 0xggg
+------------------------------------------------------------
+✅ du_case_07.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth → 0
+------------------------------------------------------------
+✅ du_case_08.conf 已生成 / Generated
+   參數修改: gNBs[0].tracking_area_code → None
+   Parameter modified: gNBs[0].tracking_area_code → None
+------------------------------------------------------------
+✅ du_case_09.conf 已生成 / Generated
+   參數修改: gNBs[0].plmn_list[0].mcc → 1000
+   Parameter modified: gNBs[0].plmn_list[0].mcc → 1000
+------------------------------------------------------------
+✅ du_case_10.conf 已生成 / Generated
+   參數修改: gNBs[0].plmn_list[0].mcc → 001
+   Parameter modified: gNBs[0].plmn_list[0].mcc → 001
+------------------------------------------------------------
+✅ du_case_11.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing → 4
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing → 4
+------------------------------------------------------------
+✅ du_case_12.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower → 100
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower → 100
+------------------------------------------------------------
+✅ du_case_13.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB → 641280
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB → 641280
+------------------------------------------------------------
+✅ du_case_14.conf 已生成 / Generated
+   參數修改: MACRLCs[0].local_n_address → 127.0.0.300
+   Parameter modified: MACRLCs[0].local_n_address → 127.0.0.300
+------------------------------------------------------------
+✅ du_case_15.conf 已生成 / Generated
+   參數修改: gNBs[0].SCTP.SCTP_INSTREAMS → 0
+   Parameter modified: gNBs[0].SCTP.SCTP_INSTREAMS → 0
+------------------------------------------------------------
+✅ du_case_16.conf 已生成 / Generated
+   參數修改: gNBs[0].maxMIMO_layers → 0
+   Parameter modified: gNBs[0].maxMIMO_layers → 0
+------------------------------------------------------------
+✅ du_case_17.conf 已生成 / Generated
+   參數修改: gNBs[0].gNB_name → None
+   Parameter modified: gNBs[0].gNB_name → None
+------------------------------------------------------------
+✅ du_case_18.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → 8
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → 8
+------------------------------------------------------------
+✅ du_case_19.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].pMax → 100
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].pMax → 100
+------------------------------------------------------------
+✅ du_case_20.conf 已生成 / Generated
+   參數修改: gNBs[0].nr_cellid → 1
+   Parameter modified: gNBs[0].nr_cellid → 1
+------------------------------------------------------------
+✅ du_case_21.conf 已生成 / Generated
+   參數修改: gNBs[0].gNB_ID → e00
+   Parameter modified: gNBs[0].gNB_ID → e00
+------------------------------------------------------------
+✅ du_case_22.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_frequencyBand → 1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_frequencyBand → 1
+------------------------------------------------------------
+✅ du_case_23.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].hoppingId → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].hoppingId → -1
+------------------------------------------------------------
+✅ du_case_24.conf 已生成 / Generated
+   參數修改: gNBs[0].do_CSIRS → 1
+   Parameter modified: gNBs[0].do_CSIRS → 1
+------------------------------------------------------------
+✅ du_case_25.conf 已生成 / Generated
+   參數修改: gNBs[0].plmn_list → None
+   Parameter modified: gNBs[0].plmn_list → None
+------------------------------------------------------------
+✅ du_case_26.conf 已生成 / Generated
+   參數修改: gNBs[0].do_SRS → 2
+   Parameter modified: gNBs[0].do_SRS → 2
+------------------------------------------------------------
+✅ du_case_27.conf 已生成 / Generated
+   參數修改: gNBs[0].min_rxtxtime → 0
+   Parameter modified: gNBs[0].min_rxtxtime → 0
+------------------------------------------------------------
+✅ du_case_28.conf 已生成 / Generated
+   參數修改: gNBs[0].force_256qam_off → 1
+   Parameter modified: gNBs[0].force_256qam_off → 1
+------------------------------------------------------------
+✅ du_case_29.conf 已生成 / Generated
+   參數修改: gNBs[0].sib1_tda → 0
+   Parameter modified: gNBs[0].sib1_tda → 0
+------------------------------------------------------------
+✅ du_case_30.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].physCellId → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].physCellId → -1
+------------------------------------------------------------
+✅ du_case_31.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth → 0
+------------------------------------------------------------
+✅ du_case_32.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex → -1
+------------------------------------------------------------
+✅ du_case_33.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM → 4
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM → 4
+------------------------------------------------------------
+✅ du_case_34.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig → 20
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig → 20
+------------------------------------------------------------
+✅ du_case_35.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].preambleTransMax → 11
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].preambleTransMax → 11
+------------------------------------------------------------
+✅ du_case_36.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].powerRampingStep → 4
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].powerRampingStep → 4
+------------------------------------------------------------
+✅ du_case_37.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow → 0
+------------------------------------------------------------
+✅ du_case_38.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR → 0
+------------------------------------------------------------
+✅ du_case_39.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB → 0
+------------------------------------------------------------
+✅ du_case_40.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer → 8
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer → 8
+------------------------------------------------------------
+✅ du_case_41.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → -1
+------------------------------------------------------------
+✅ du_case_42.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex_PR → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex_PR → 0
+------------------------------------------------------------
+✅ du_case_43.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex → 0
+------------------------------------------------------------
+✅ du_case_44.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].msg1_SubcarrierSpacing → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].msg1_SubcarrierSpacing → 0
+------------------------------------------------------------
+✅ du_case_45.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].restrictedSetConfig → 3
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].restrictedSetConfig → 3
+------------------------------------------------------------
+✅ du_case_46.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].msg3_DeltaPreamble → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].msg3_DeltaPreamble → 0
+------------------------------------------------------------
+✅ du_case_47.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].p0_NominalWithGrant → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].p0_NominalWithGrant → 0
+------------------------------------------------------------
+✅ du_case_48.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].pucchGroupHopping → 3
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].pucchGroupHopping → 3
+------------------------------------------------------------
+✅ du_case_49.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].hoppingId → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].hoppingId → -1
+------------------------------------------------------------
+✅ du_case_50.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].p0_nominal → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].p0_nominal → 0
+------------------------------------------------------------
+✅ du_case_51.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_PositionsInBurst_Bitmap → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_PositionsInBurst_Bitmap → 0
+------------------------------------------------------------
+✅ du_case_52.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → 6
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → 6
+------------------------------------------------------------
+✅ du_case_53.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position → 3
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position → 3
+------------------------------------------------------------
+✅ du_case_54.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].subcarrierSpacing → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].subcarrierSpacing → 0
+------------------------------------------------------------
+✅ du_case_55.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].referenceSubcarrierSpacing → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].referenceSubcarrierSpacing → 0
+------------------------------------------------------------
+✅ du_case_56.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity → 0
+------------------------------------------------------------
+✅ du_case_57.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots → 0
+------------------------------------------------------------
+✅ du_case_58.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols → 0
+------------------------------------------------------------
+✅ du_case_59.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots → 0
+------------------------------------------------------------
+✅ du_case_60.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols → 0
+------------------------------------------------------------
+✅ du_case_61.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower → -61
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower → -61
+------------------------------------------------------------
+✅ du_case_62.conf 已生成 / Generated
+   參數修改: gNBs[0].SCTP.SCTP_INSTREAMS → 0
+   Parameter modified: gNBs[0].SCTP.SCTP_INSTREAMS → 0
+------------------------------------------------------------
+✅ du_case_63.conf 已生成 / Generated
+   參數修改: gNBs[0].SCTP.SCTP_OUTSTREAMS → 0
+   Parameter modified: gNBs[0].SCTP.SCTP_OUTSTREAMS → 0
+------------------------------------------------------------
+✅ du_case_64.conf 已生成 / Generated
+   參數修改: MACRLCs[0].num_cc → 0
+   Parameter modified: MACRLCs[0].num_cc → 0
+------------------------------------------------------------
+✅ du_case_65.conf 已生成 / Generated
+   參數修改: MACRLCs[0].local_n_portc → -1
+   Parameter modified: MACRLCs[0].local_n_portc → -1
+------------------------------------------------------------
+✅ du_case_66.conf 已生成 / Generated
+   參數修改: L1s[0].num_cc → 0
+   Parameter modified: L1s[0].num_cc → 0
+------------------------------------------------------------
+✅ du_case_67.conf 已生成 / Generated
+   參數修改: L1s[0].prach_dtx_threshold → -1
+   Parameter modified: L1s[0].prach_dtx_threshold → -1
+------------------------------------------------------------
+✅ du_case_68.conf 已生成 / Generated
+   參數修改: L1s[0].pucch0_dtx_threshold → 151
+   Parameter modified: L1s[0].pucch0_dtx_threshold → 151
+------------------------------------------------------------
+✅ du_case_69.conf 已生成 / Generated
+   參數修改: L1s[0].ofdm_offset_divisor → 8
+   Parameter modified: L1s[0].ofdm_offset_divisor → 8
+------------------------------------------------------------
+✅ du_case_70.conf 已生成 / Generated
+   參數修改: RUs[0].nb_tx → 0
+   Parameter modified: RUs[0].nb_tx → 0
+------------------------------------------------------------
+✅ du_case_71.conf 已生成 / Generated
+   參數修改: RUs[0].nb_rx → 5
+   Parameter modified: RUs[0].nb_rx → 5
+------------------------------------------------------------
+✅ du_case_72.conf 已生成 / Generated
+   參數修改: RUs[0].att_tx → -1
+   Parameter modified: RUs[0].att_tx → -1
+------------------------------------------------------------
+✅ du_case_73.conf 已生成 / Generated
+   參數修改: RUs[0].max_rxgain → 115
+   Parameter modified: RUs[0].max_rxgain → 115
+------------------------------------------------------------
+✅ du_case_74.conf 已生成 / Generated
+   參數修改: RUs[0].ru_thread_core → 7
+   Parameter modified: RUs[0].ru_thread_core → 7
+------------------------------------------------------------
+✅ du_case_75.conf 已生成 / Generated
+   參數修改: RUs[0].sl_ahead → 6
+   Parameter modified: RUs[0].sl_ahead → 6
+------------------------------------------------------------
+✅ du_case_76.conf 已生成 / Generated
+   參數修改: RUs[0].do_precoding → 0
+   Parameter modified: RUs[0].do_precoding → 0
+------------------------------------------------------------
+✅ du_case_77.conf 已生成 / Generated
+   參數修改: RUs[0].max_pdschReferenceSignalPower → -26
+   Parameter modified: RUs[0].max_pdschReferenceSignalPower → -26
+------------------------------------------------------------
+✅ du_case_78.conf 已生成 / Generated
+   參數修改: RUs[0].sf_extension → 1
+   Parameter modified: RUs[0].sf_extension → 1
+------------------------------------------------------------
+✅ du_case_79.conf 已生成 / Generated
+   參數修改: RUs[0].clock_src → external
+   Parameter modified: RUs[0].clock_src → external
+------------------------------------------------------------
+✅ du_case_80.conf 已生成 / Generated
+   參數修改: RUs[0].local_rf → no
+   Parameter modified: RUs[0].local_rf → no
+------------------------------------------------------------
+✅ du_case_81.conf 已生成 / Generated
+   參數修改: rfsimulator.serveraddr → invalid
+   Parameter modified: rfsimulator.serveraddr → invalid
+------------------------------------------------------------
+✅ du_case_82.conf 已生成 / Generated
+   參數修改: rfsimulator.serverport → 0
+   Parameter modified: rfsimulator.serverport → 0
+------------------------------------------------------------
+✅ du_case_83.conf 已生成 / Generated
+   參數修改: rfsimulator.modelname → invalid
+   Parameter modified: rfsimulator.modelname → invalid
+------------------------------------------------------------
+✅ du_case_84.conf 已生成 / Generated
+   參數修改: rfsimulator.IQfile → /invalid/path
+   Parameter modified: rfsimulator.IQfile → /invalid/path
+------------------------------------------------------------
+✅ du_case_85.conf 已生成 / Generated
+   參數修改: log_config.global_log_level → error
+   Parameter modified: log_config.global_log_level → error
+------------------------------------------------------------
+✅ du_case_86.conf 已生成 / Generated
+   參數修改: log_config.hw_log_level → debug
+   Parameter modified: log_config.hw_log_level → debug
+------------------------------------------------------------
+✅ du_case_87.conf 已生成 / Generated
+   參數修改: log_config.phy_log_level → trace
+   Parameter modified: log_config.phy_log_level → trace
+------------------------------------------------------------
+✅ du_case_88.conf 已生成 / Generated
+   參數修改: log_config.mac_log_level → warn
+   Parameter modified: log_config.mac_log_level → warn
+------------------------------------------------------------
+✅ du_case_89.conf 已生成 / Generated
+   參數修改: fhi_72.system_core → -1
+   Parameter modified: fhi_72.system_core → -1
+------------------------------------------------------------
+✅ du_case_90.conf 已生成 / Generated
+   參數修改: fhi_72.io_core → invalid
+   Parameter modified: fhi_72.io_core → invalid
+------------------------------------------------------------
+✅ du_case_91.conf 已生成 / Generated
+   參數修改: fhi_72.worker_cores[0] → 999
+   Parameter modified: fhi_72.worker_cores[0] → 999
+------------------------------------------------------------
+✅ du_case_92.conf 已生成 / Generated
+   參數修改: fhi_72.ru_addr[0] → invalid
+   Parameter modified: fhi_72.ru_addr[0] → invalid
+------------------------------------------------------------
+✅ du_case_93.conf 已生成 / Generated
+   參數修改: fhi_72.mtu → 0
+   Parameter modified: fhi_72.mtu → 0
+------------------------------------------------------------
+⚠️ 警告: 子子子參數 'T1a_cp_dl[0' 未找到
+✅ du_case_94.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].T1a_cp_dl[0] → 0
+   Parameter modified: fhi_72.fh_config[0].T1a_cp_dl[0] → 0
+------------------------------------------------------------
+⚠️ 警告: 子子子參數 'T1a_cp_ul[0' 未找到
+✅ du_case_95.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].T1a_cp_ul[0] → 0
+   Parameter modified: fhi_72.fh_config[0].T1a_cp_ul[0] → 0
+------------------------------------------------------------
+⚠️ 警告: 子子子參數 'T1a_up[0' 未找到
+✅ du_case_96.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].T1a_up[0] → 0
+   Parameter modified: fhi_72.fh_config[0].T1a_up[0] → 0
+------------------------------------------------------------
+⚠️ 警告: 子子子參數 'Ta4[0' 未找到
+✅ du_case_97.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].Ta4[0] → 0
+   Parameter modified: fhi_72.fh_config[0].Ta4[0] → 0
+------------------------------------------------------------
+✅ du_case_98.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].ru_config.iq_width → 0
+   Parameter modified: fhi_72.fh_config[0].ru_config.iq_width → 0
+------------------------------------------------------------
+✅ du_case_99.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].ru_config.iq_width_prach → 0
+   Parameter modified: fhi_72.fh_config[0].ru_config.iq_width_prach → 0
+------------------------------------------------------------
+✅ du_case_100.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].prach_config.kbar → -1
+   Parameter modified: fhi_72.fh_config[0].prach_config.kbar → -1
+------------------------------------------------------------
+✅ du_case_101.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].prach_config.kbar → invalid
+   Parameter modified: fhi_72.fh_config[0].prach_config.kbar → invalid
+------------------------------------------------------------
+✅ du_case_102.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config[0].prach_config → None
+   Parameter modified: fhi_72.fh_config[0].prach_config → None
+------------------------------------------------------------
+✅ du_case_103.conf 已生成 / Generated
+   參數修改: fhi_72 → None
+   Parameter modified: fhi_72 → None
+------------------------------------------------------------
+✅ du_case_104.conf 已生成 / Generated
+   參數修改: fhi_72.fh_config → []
+   Parameter modified: fhi_72.fh_config → []
+------------------------------------------------------------
+✅ du_case_105.conf 已生成 / Generated
+   參數修改: extra_key → invalid
+   Parameter modified: extra_key → invalid
+------------------------------------------------------------
+✅ du_case_106.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_107.conf 已生成 / Generated
+   參數修改: Asn1_verbosity → None
+   Parameter modified: Asn1_verbosity → None
+------------------------------------------------------------
+✅ du_case_108.conf 已生成 / Generated
+   參數修改: gNBs → []
+   Parameter modified: gNBs → []
+------------------------------------------------------------
+✅ du_case_109.conf 已生成 / Generated
+   參數修改: MACRLCs → []
+   Parameter modified: MACRLCs → []
+------------------------------------------------------------
+✅ du_case_110.conf 已生成 / Generated
+   參數修改: L1s → []
+   Parameter modified: L1s → []
+------------------------------------------------------------
+✅ du_case_111.conf 已生成 / Generated
+   參數修改: RUs → []
+   Parameter modified: RUs → []
+------------------------------------------------------------
+✅ du_case_112.conf 已生成 / Generated
+   參數修改: rfsimulator → None
+   Parameter modified: rfsimulator → None
+------------------------------------------------------------
+✅ du_case_113.conf 已生成 / Generated
+   參數修改: log_config → None
+   Parameter modified: log_config → None
+------------------------------------------------------------
+✅ du_case_114.conf 已生成 / Generated
+   參數修改: fhi_72 → None
+   Parameter modified: fhi_72 → None
+------------------------------------------------------------
+✅ du_case_115.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_116.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_117.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_118.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_119.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_120.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_121.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_122.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_123.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_124.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_125.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_126.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_127.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_128.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_129.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_130.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_131.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_132.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_133.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_134.conf 已生成 / Generated
+   參數修改: Active_gNBs → []
+   Parameter modified: Active_gNBs → []
+------------------------------------------------------------
+✅ du_case_135.conf 已生成 / Generated
+   參數修改: gNBs → []
+   Parameter modified: gNBs → []
+------------------------------------------------------------
+✅ du_case_136.conf 已生成 / Generated
+   參數修改: MACRLCs → []
+   Parameter modified: MACRLCs → []
+------------------------------------------------------------
+✅ du_case_137.conf 已生成 / Generated
+   參數修改: L1s → []
+   Parameter modified: L1s → []
+------------------------------------------------------------
+✅ du_case_138.conf 已生成 / Generated
+   參數修改: RUs → []
+   Parameter modified: RUs → []
+------------------------------------------------------------
+✅ du_case_139.conf 已生成 / Generated
+   參數修改: rfsimulator → None
+   Parameter modified: rfsimulator → None
+------------------------------------------------------------
+✅ du_case_140.conf 已生成 / Generated
+   參數修改: log_config → None
+   Parameter modified: log_config → None
+------------------------------------------------------------
+✅ du_case_141.conf 已生成 / Generated
+   參數修改: fhi_72 → None
+   Parameter modified: fhi_72 → None
+------------------------------------------------------------
+✅ du_case_142.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → 200
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → 200
+------------------------------------------------------------
+✅ du_case_143.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex → 256
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex → 256
+------------------------------------------------------------
+✅ du_case_144.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → invalid
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → invalid
+------------------------------------------------------------
+✅ du_case_145.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth → 0
+------------------------------------------------------------
+✅ du_case_146.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth → 0
+------------------------------------------------------------
+✅ du_case_147.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].pMax → 100
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].pMax → 100
+------------------------------------------------------------
+✅ du_case_148.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower → 100
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower → 100
+------------------------------------------------------------
+✅ du_case_149.conf 已生成 / Generated
+   參數修改: gNBs[0].SCTP.SCTP_INSTREAMS → 0
+   Parameter modified: gNBs[0].SCTP.SCTP_INSTREAMS → 0
+------------------------------------------------------------
+✅ du_case_150.conf 已生成 / Generated
+   參數修改: gNBs[0].SCTP.SCTP_OUTSTREAMS → 0
+   Parameter modified: gNBs[0].SCTP.SCTP_OUTSTREAMS → 0
+------------------------------------------------------------
+✅ du_case_151.conf 已生成 / Generated
+   參數修改: MACRLCs[0].num_cc → 0
+   Parameter modified: MACRLCs[0].num_cc → 0
+------------------------------------------------------------
+✅ du_case_152.conf 已生成 / Generated
+   參數修改: L1s[0].num_cc → 0
+   Parameter modified: L1s[0].num_cc → 0
+------------------------------------------------------------
+✅ du_case_153.conf 已生成 / Generated
+   參數修改: RUs[0].nb_tx → 0
+   Parameter modified: RUs[0].nb_tx → 0
+------------------------------------------------------------
+✅ du_case_154.conf 已生成 / Generated
+   參數修改: rfsimulator.serveraddr → invalid
+   Parameter modified: rfsimulator.serveraddr → invalid
+------------------------------------------------------------
+✅ du_case_155.conf 已生成 / Generated
+   參數修改: gNBs[0].SCTP.SCTP_OUTSTREAMS → 0
+   Parameter modified: gNBs[0].SCTP.SCTP_OUTSTREAMS → 0
+------------------------------------------------------------
+✅ du_case_156.conf 已生成 / Generated
+   參數修改: MACRLCs[0].num_cc → 0
+   Parameter modified: MACRLCs[0].num_cc → 0
+------------------------------------------------------------
+✅ du_case_157.conf 已生成 / Generated
+   參數修改: L1s[0].num_cc → 0
+   Parameter modified: L1s[0].num_cc → 0
+------------------------------------------------------------
+✅ du_case_158.conf 已生成 / Generated
+   參數修改: log_config.global_log_level → error
+   Parameter modified: log_config.global_log_level → error
+------------------------------------------------------------
+✅ du_case_159.conf 已生成 / Generated
+   參數修改: fhi_72.system_core → -1
+   Parameter modified: fhi_72.system_core → -1
+------------------------------------------------------------
+✅ du_case_160.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM → 8
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM → 8
+------------------------------------------------------------
+✅ du_case_161.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow → 16
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow → 16
+------------------------------------------------------------
+✅ du_case_162.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB → 64
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB → 64
+------------------------------------------------------------
+✅ du_case_163.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex → 257
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex → 257
+------------------------------------------------------------
+✅ du_case_164.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → 200
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → 200
+------------------------------------------------------------
+✅ du_case_165.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → invalid
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell → invalid
+------------------------------------------------------------
+✅ du_case_166.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position → 4
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position → 4
+------------------------------------------------------------
+✅ du_case_167.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].subcarrierSpacing → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].subcarrierSpacing → 0
+------------------------------------------------------------
+✅ du_case_168.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots → 0
+------------------------------------------------------------
+✅ du_case_169.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols → 0
+------------------------------------------------------------
+✅ du_case_170.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots → 0
+------------------------------------------------------------
+✅ du_case_171.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols → 0
+------------------------------------------------------------
+✅ du_case_172.conf 已生成 / Generated
+   參數修改: gNBs[0].pdsch_AntennaPorts_XP → 0
+   Parameter modified: gNBs[0].pdsch_AntennaPorts_XP → 0
+------------------------------------------------------------
+✅ du_case_173.conf 已生成 / Generated
+   參數修改: gNBs[0].pdsch_AntennaPorts_N1 → 0
+   Parameter modified: gNBs[0].pdsch_AntennaPorts_N1 → 0
+------------------------------------------------------------
+✅ du_case_174.conf 已生成 / Generated
+   參數修改: gNBs[0].pusch_AntennaPorts → 0
+   Parameter modified: gNBs[0].pusch_AntennaPorts → 0
+------------------------------------------------------------
+✅ du_case_175.conf 已生成 / Generated
+   參數修改: gNBs[0].maxMIMO_layers → 0
+   Parameter modified: gNBs[0].maxMIMO_layers → 0
+------------------------------------------------------------
+✅ du_case_176.conf 已生成 / Generated
+   參數修改: gNBs[0].min_rxtxtime → 0
+   Parameter modified: gNBs[0].min_rxtxtime → 0
+------------------------------------------------------------
+✅ du_case_177.conf 已生成 / Generated
+   參數修改: gNBs[0].sib1_tda → 0
+   Parameter modified: gNBs[0].sib1_tda → 0
+------------------------------------------------------------
+✅ du_case_178.conf 已生成 / Generated
+   參數修改: gNBs[0].pdcch_ConfigSIB1[0].controlResourceSetZero → 0
+   Parameter modified: gNBs[0].pdcch_ConfigSIB1[0].controlResourceSetZero → 0
+------------------------------------------------------------
+✅ du_case_179.conf 已生成 / Generated
+   參數修改: gNBs[0].pdcch_ConfigSIB1[0].searchSpaceZero → 100
+   Parameter modified: gNBs[0].pdcch_ConfigSIB1[0].searchSpaceZero → 100
+------------------------------------------------------------
+✅ du_case_180.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].physCellId → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].physCellId → -1
+------------------------------------------------------------
+✅ du_case_181.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB → 0
+------------------------------------------------------------
+✅ du_case_182.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_frequencyBand → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_frequencyBand → 0
+------------------------------------------------------------
+✅ du_case_183.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA → 0
+------------------------------------------------------------
+✅ du_case_184.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].dl_offstToCarrier → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].dl_offstToCarrier → -1
+------------------------------------------------------------
+✅ du_case_185.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].initialDLBWPlocationAndBandwidth → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].initialDLBWPlocationAndBandwidth → 0
+------------------------------------------------------------
+✅ du_case_186.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].initialULBWPlocationAndBandwidth → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].initialULBWPlocationAndBandwidth → 0
+------------------------------------------------------------
+✅ du_case_187.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower → 200
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower → 200
+------------------------------------------------------------
+✅ du_case_188.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].preambleTransMax → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].preambleTransMax → 0
+------------------------------------------------------------
+✅ du_case_189.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].powerRampingStep → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].powerRampingStep → 0
+------------------------------------------------------------
+✅ du_case_190.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow → 0
+------------------------------------------------------------
+✅ du_case_191.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB → 0
+------------------------------------------------------------
+✅ du_case_192.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer → 0
+------------------------------------------------------------
+✅ du_case_193.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB → 0
+------------------------------------------------------------
+✅ du_case_194.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex → 0
+------------------------------------------------------------
+✅ du_case_195.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].msg1_SubcarrierSpacing → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].msg1_SubcarrierSpacing → 0
+------------------------------------------------------------
+✅ du_case_196.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].restrictedSetConfig → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].restrictedSetConfig → -1
+------------------------------------------------------------
+✅ du_case_197.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].msg3_DeltaPreamble → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].msg3_DeltaPreamble → -1
+------------------------------------------------------------
+✅ du_case_198.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].p0_NominalWithGrant → 200
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].p0_NominalWithGrant → 200
+------------------------------------------------------------
+✅ du_case_199.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].pucchGroupHopping → -1
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].pucchGroupHopping → -1
+------------------------------------------------------------
+✅ du_case_200.conf 已生成 / Generated
+   參數修改: gNBs[0].servingCellConfigCommon[0].hoppingId → 0
+   Parameter modified: gNBs[0].servingCellConfigCommon[0].hoppingId → 0
+------------------------------------------------------------

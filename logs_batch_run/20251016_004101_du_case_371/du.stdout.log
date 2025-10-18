@@ -1,0 +1,15 @@
+[LIBCONFIG] file /home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue/du_case_371.conf - line 124: syntax error
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_load_configmodule.c 376 config module "libconfig" couldn't be loaded
+[CONFIG] config_get, section log_config skipped, config module not properly initialized
+[LOG] init aborted, configuration couldn't be performed
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_userapi.c 68 nfapi has no processed integer availablle
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+Getting configuration failed
+CMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue/du_case_371.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue
+
+[CONFIG] function config_libconfig_init returned -1
+[CONFIG] debug flags: 0x00300000
+log init done
+Reading in command-line options

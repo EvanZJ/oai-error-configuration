@@ -1,0 +1,21 @@
+Overall Context and Setup Assumptions: This is an OAI 5G NR SA mode setup with rfsim, using CU-DU split architecture. The expected flow is: CU initializes threads (NGAP, GTPU, F1AP), binds to local addresses for SCTP and GTPU; DU initializes, connects to CU via F1AP/SCTP; F1 setup succeeds; DU starts rfsim server; UE connects to rfsim server at 127.0.0.1:4043 for simulation. Potential issues include config mismatches in gNB_ID (e.g., empty causing asserts), asserts in code, connection failures. Parsing network_config: cu_conf has gNBs.gNB_ID="" (empty), gNB_name="gNB-Eurecom-CU"; du_conf has gNB_ID="0xe00", gNB_name="gNB-Eurecom-DU"; ue_conf has rfsimulator.serveraddr="127.0.0.1", serverport="4043". Initial mismatch: empty gNB_ID in cu_conf vs. expected valid hex like "0xe00", guided by misconfigured_param "gNBs.gNB_ID=".
+
+Analyzing CU Logs: CU starts in MONOLITHIC mode, initializes structures, sets gNB=0x5b7977298a40, no prs_config, nb_nr_L1_inst:0. Allocates gNB_RRC_INST, F1AP gNB_CU_id[0]=0 (note: 0 instead of 3584), gNB_CU_name="gNB-Eurecom-CU", SDAP disabled, DRB count=1, do_SIB23_NR size=9, pdcp init with GTPU, default drx=0, gNB_app_register. Creates threads: TASK_SCTP, TASK_NGAP (gNB[0] registered, macro gNB id=0, checks AMF state), TASK_GNB_APP, TASK_RRC_GNB, TASK_CU_F1. GTPU configuring SA mode. Assertion (config_isparamset(gnbParms, 0)) failed! "gNB_ID is not defined in configuration file" in RCconfig_NR_CU_E1() /openair2/E1AP/e1ap_setup.c:132. Exits. Anomalies: Early assertion failure on gNB_ID check, preventing further init. Cross-reference: gNB_ID empty in cu_conf matches assertion message.
+
+Analyzing DU Logs: DU starts with cmdline --rfsim --sa -O du_gnb.conf. Initializes northbound for L1, DL/UL freq=3619200000 band=48, configures F1 for MACRLC, MeasurementTimingConfiguration. Creates gNB_tasks nb_nr_L1_inst:1, l1_north_init_gNB, callbacks, allocates gNB_RRC_INST, SDAP disabled, DRB=1, no ciphering/integrity defaults. Creates threads: TASK_SCTP, TASK_GNB_APP, TASK_GTPV1_U, TASK_DU_F1. PHY init gNB 0, registers with MAC, sets lists, gNB structure allocated. F1AP starting at DU, F1-C DU IPaddr=127.0.0.3 connect to CU=127.0.0.5 binding GTP=127.0.0.3, GTPU init UDP 127.0.0.3:2152 id=98. SCTP Connect failed: Connection refused, F1AP retrying. Repeated Connection refused, waiting for F1 Setup Response before radio activation. Stalled waiting for CU. Link to network_config: du_conf gNB_ID="0xe00" valid.
+
+Analyzing UE Logs: UE initializes PHY for gNB TXant=1 RXant=1, no prs_config, freq=3619200000, Nsymb=28, N_TA_offset=800. Configures HW cards 0-7 for TDD, freq=3619200000, gain tx=0 rx=110. Initializes UE threads: UEthread, L1_UE_stats, TASK_RRC_NRUE, TASK_NAS_NRUE. HW running as client, loads RFSIMULATOR, tries connect to 127.0.0.1:4043, fails errno(111) Connection refused. Repeated fails. UICC IMSI=001010000000101, etc. Link to ue_conf: rfsimulator serveraddr="127.0.0.1" port="4043" matches attempts.
+
+Cross-Component Correlations and Root Cause Hypothesis: CU exits immediately due to assertion on empty gNB_ID, no F1AP server starts. DU retries SCTP connect but refused, stalls waiting for F1 setup, never starts rfsim. UE fails connect since rfsim not running. Timeline: CU fails init, DU waits, UE retries. Misconfigured_param "gNBs.gNB_ID=" (empty) causes config_isparamset to fail, assertion triggers exit. Hypothesis: Empty gNB_ID invalidates config validation in e1ap_setup.c, halting CU init. No tools needed, misconfig clear from logs/assertion.
+
+Recommendations for Fix and Further Analysis: Fix: Set gNBs.gNB_ID to valid hex, e.g., "0xe00" to match du_conf. Debug: Check config parsing with libconfig verbosity. Tools: gdb for assertion backtrace. Corrected network_config:
+{
+  "cu_conf": {
+    "gNBs": {
+      "gNB_ID": "0xe00"
+    }
+  },
+  "du_conf": {},
+  "ue_conf": {}
+}
+Limitations: Logs truncated, no timestamps, JSON complete.

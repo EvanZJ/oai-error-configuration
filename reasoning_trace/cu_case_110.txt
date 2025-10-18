@@ -1,0 +1,126 @@
+Overall Context and Setup Assumptions: This is an OpenAirInterface (OAI) 5G NR Standalone (SA) mode simulation using rfsim for radio emulation, as indicated by the logs showing --rfsim --sa options and rfsimulator configuration in network_config. The expected flow is: component initialization (CU, DU, RU threads), F1AP/NGAP setup between CU and DU with matching gNB IDs, AMF connection, UE connection via PRACH/RACH procedure, RRC setup, and PDU session establishment. Potential issues to look for include config mismatches in gNB_ID between CU and DU causing F1AP setup failures or connection issues, asserts in OAI code during F1AP message exchange, or incomplete initialization. Parsing network_config: cu_conf.gNBs includes gNB_ID=2304 (decimal, should match DU for F1AP), gNB_name="gNB-Eurecom-CU", nr_cellid=123456789, tr_s_preference="f1", local_s_address="127.0.0.5", remote_s_address="127.0.0.3", local_s_portc=501, remote_s_portc=500, amf_ip_address ipv4="192.168.70.132". du_conf.gNBs[0] includes gNB_ID="0xe00" (3584 decimal), gNB_DU_ID="0xe00", gNB_name="gNB-Eurecom-DU", nr_cellid=1, and other servingCellConfigCommon params. ue_conf includes imsi="001010000000101", rfsimulator serveraddr="127.0.0.1", serverport="4043". Initial mismatch: CU gNB_ID=2304 does not match DU gNB_ID=3584, potentially causing F1AP ID mismatch issues.
+
+Analyzing CU Logs: CU initialization shows monolithic mode, thread creation for SCTP/NGAP/GNB_APP/RRC_GNB/CU_F1/GTPV1_U, GTPU configuration with SA mode and address 192.168.8.43:2152 but bind failure due to "Cannot assign requested address" (network interface issue), fallback to 127.0.0.5:2152 succeeds. F1AP starts with gNB_CU_id[0] 2304, sends F1 Setup Request to DU. NGAP registers gNB[0] with macro gNB id 2304, checks AMF state but shows "No AMF is associated" (expected in rfsim). RRC receives F1 Setup Response from DU 3584, accepts DU, processes UE connection with RNTI 9f09, creates UE context (CU UE ID 1, DU UE ID 40713), generates RRCSetup, receives RRCSetupComplete, sets UE state to NR_RRC_CONNECTED. No anomalies in CU logs beyond GTPU bind issue, but gNB_ID=2304 used in F1AP.
+
+Analyzing DU Logs: DU initialization shows RU threads creation, rfsimulator library loading, RU config with nr_band=78, nr_scs_for_raster=1, half-slot parallelization=1. RU RF device ready, generates void samples (no connected device). Command line params for UE: -C 3619200000 -r 106 --numerology 1 --ssb 516. RA procedure initiates at frame.slot 183.19 with preamble 63, energy 56.4 dB, generates RA-Msg2 DCI, schedules Msg3, starts contention resolution timer (64ms + 2*7 K2 = 142 slots). Msg3 received correctly, adds UE MAC context, schedules Msg4, receives Ack of Msg4, CBRA succeeds. UE stats show in-sync with RSRP -44 dB, BLER decreasing over frames (0.10000 to 0.00006), MCS 9, NPRB 5, SNR 57.0 dB. No PHY/MAC errors, but DU receives F1 Setup Request from gNB_DU 3584 (its own ID), accepts CU 2304.
+
+Analyzing UE Logs: UE logs show repeated NR band 78 TDD duplex mode confirmation (duplex spacing 0 KHz), harq round stats for downlink increasing from 8/0/0 to 11/0/0 (successful transmissions). No connection failures or repeated connect attempts; UE appears connected and exchanging data. Logs indicate stable operation with no errors.
+
+Cross-Component Correlations and Root Cause Hypothesis: Timelines correlate: CU F1AP starts with ID 2304, DU receives from 3584, F1 Setup succeeds despite ID mismatch, RA procedure starts at 183.19, UE connects. No crashes or failures preventing rfsim server or UE connection. Hypothesis: CU gNB_ID=2304 does not match DU gNB_ID=3584, violating OAI F1AP requirements where gNB IDs must match for proper F1AP message exchange (e.g., F1 Setup Request/Response). Although logs show successful setup (perhaps OAI tolerates mismatch), this could cause issues in multi-gNB scenarios, AMF registration conflicts, or F1AP message routing problems. Network_config cu_conf shows "gNB_ID": 2304 directly causing potential F1AP ID mismatch assert or connection failure.
+
+Recommendations for Fix and Further Analysis: Update CU gNB_ID from 2304 to match DU gNB_ID=3584 (0xe00) for F1AP compliance. Debug steps: Check OAI F1AP code for gNB ID validation in f1ap_messages.c; run with --Asn1_verbosity annoying to catch F1AP encoding errors; verify F1AP message IDs in logs. Tools: Use Wireshark to capture F1AP messages and confirm gNB ID fields. Corrected network_config:
+{
+  "cu_conf": {
+    "Active_gNBs": ["gNB-Eurecom-CU"],
+    "Asn1_verbosity": "none",
+    "Num_Threads_PUSCH": 8,
+    "gNBs": {
+      "gNB_ID": "0xe00",
+      "gNB_name": "gNB-Eurecom-CU",
+      "tracking_area_code": 1,
+      "plmn_list": {"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": {"sst": 1}},
+      "nr_cellid": 123456789,
+      "tr_s_preference": "f1",
+      "local_s_if_name": "lo",
+      "local_s_address": "127.0.0.5",
+      "remote_s_address": "127.0.0.3",
+      "local_s_portc": 501,
+      "local_s_portd": 2152,
+      "remote_s_portc": 500,
+      "remote_s_portd": 2152,
+      "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2},
+      "amf_ip_address": {"ipv4": "192.168.70.132"},
+      "NETWORK_INTERFACES": {"GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43", "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43", "GNB_PORT_FOR_S1U": 2152}
+    },
+    "security": {"ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"], "integrity_algorithms": ["nia2", "nia0"], "drb_ciphering": "yes", "drb_integrity": "no"},
+    "log_config": {"global_log_level": "info", "hw_log_level": "info", "phy_log_level": "info", "mac_log_level": "info", "rlc_log_level": "info", "pdcp_log_level": "info", "rrc_log_level": "info", "ngap_log_level": "info", "f1ap_log_level": "info"}
+  },
+  "du_conf": {
+    "Active_gNBs": ["gNB-Eurecom-DU"],
+    "Asn1_verbosity": "annoying",
+    "gNBs": [{
+      "gNB_ID": "0xe00",
+      "gNB_DU_ID": "0xe00",
+      "gNB_name": "gNB-Eurecom-DU",
+      "tracking_area_code": 1,
+      "plmn_list": [{"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": [{"sst": 1, "sd": "0x010203"}]}],
+      "nr_cellid": 1,
+      "pdsch_AntennaPorts_XP": 2,
+      "pdsch_AntennaPorts_N1": 2,
+      "pusch_AntennaPorts": 4,
+      "do_CSIRS": 1,
+      "maxMIMO_layers": 2,
+      "do_SRS": 0,
+      "min_rxtxtime": 6,
+      "force_256qam_off": 1,
+      "sib1_tda": 15,
+      "pdcch_ConfigSIB1": [{"controlResourceSetZero": 11, "searchSpaceZero": 0}],
+      "servingCellConfigCommon": [{
+        "physCellId": 0,
+        "absoluteFrequencySSB": 641280,
+        "dl_frequencyBand": 78,
+        "dl_absoluteFrequencyPointA": 640008,
+        "dl_offstToCarrier": 0,
+        "dl_subcarrierSpacing": 1,
+        "dl_carrierBandwidth": 106,
+        "initialDLBWPlocationAndBandwidth": 28875,
+        "initialDLBWPsubcarrierSpacing": 1,
+        "initialDLBWPcontrolResourceSetZero": 12,
+        "initialDLBWPsearchSpaceZero": 0,
+        "ul_frequencyBand": 78,
+        "ul_offstToCarrier": 0,
+        "ul_subcarrierSpacing": 1,
+        "ul_carrierBandwidth": 106,
+        "pMax": 20,
+        "initialULBWPlocationAndBandwidth": 28875,
+        "initialULBWPsubcarrierSpacing": 1,
+        "prach_ConfigurationIndex": 98,
+        "prach_msg1_FDM": 0,
+        "prach_msg1_FrequencyStart": 0,
+        "zeroCorrelationZoneConfig": 13,
+        "preambleReceivedTargetPower": -96,
+        "preambleTransMax": 6,
+        "powerRampingStep": 1,
+        "ra_ResponseWindow": 4,
+        "ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR": 4,
+        "ssb_perRACH_OccasionAndCB_PreamblesPerSSB": 15,
+        "ra_ContentionResolutionTimer": 7,
+        "rsrp_ThresholdSSB": 19,
+        "prach_RootSequenceIndex_PR": 2,
+        "prach_RootSequenceIndex": 1,
+        "msg1_SubcarrierSpacing": 1,
+        "restrictedSetConfig": 0,
+        "msg3_DeltaPreamble": 1,
+        "p0_NominalWithGrant": -90,
+        "pucchGroupHopping": 0,
+        "hoppingId": 40,
+        "p0_nominal": -90,
+        "ssb_PositionsInBurst_Bitmap": 1,
+        "ssb_periodicityServingCell": 2,
+        "dmrs_TypeA_Position": 0,
+        "subcarrierSpacing": 1,
+        "referenceSubcarrierSpacing": 1,
+        "dl_UL_TransmissionPeriodicity": 6,
+        "nrofDownlinkSlots": 7,
+        "nrofDownlinkSymbols": 6,
+        "nrofUplinkSlots": 2,
+        "nrofUplinkSymbols": 4,
+        "ssPBCH_BlockPower": -25
+      }],
+      "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2}
+    }],
+    "MACRLCs": [{"num_cc": 1, "tr_s_preference": "local_L1", "tr_n_preference": "f1", "local_n_address": "127.0.0.3", "remote_n_address": "127.0.0.5", "local_n_portc": 500, "local_n_portd": 2152, "remote_n_portc": 501, "remote_n_portd": 2152}],
+    "L1s": [{"num_cc": 1, "tr_n_preference": "local_mac", "prach_dtx_threshold": 120, "pucch0_dtx_threshold": 150, "ofdm_offset_divisor": 8}],
+    "RUs": [{"local_rf": "yes", "nb_tx": 4, "nb_rx": 4, "att_tx": 0, "att_rx": 0, "bands": [78], "max_pdschReferenceSignalPower": -27, "max_rxgain": 114, "sf_extension": 0, "eNB_instances": [0], "clock_src": "internal", "ru_thread_core": 6, "sl_ahead": 5, "do_precoding": 0}],
+    "rfsimulator": {"serveraddr": "server", "serverport": 4043, "options": [], "modelname": "AWGN", "IQfile": "/tmp/rfsimulator.iqs"},
+    "log_config": {"global_log_level": "info", "hw_log_level": "info", "phy_log_level": "info", "mac_log_level": "info"},
+    "fhi_72": {"dpdk_devices": ["0000:ca:02.0", "0000:ca:02.1"], "system_core": 0, "io_core": 4, "worker_cores": [2], "ru_addr": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"], "mtu": 9000, "fh_config": [{"T1a_cp_dl": [285, 429], "T1a_cp_ul": [285, 429], "T1a_up": [96, 196], "Ta4": [110, 180], "ru_config": {"iq_width": 9, "iq_width_prach": 9}, "prach_config": {"kbar": 0}}]}
+  },
+  "ue_conf": {
+    "sa": 1,
+    "rfsim": 1,
+    "uicc0": {"imsi": "001010000000101", "key": "fec86ba6eb707ed08905757b1bb44b8f", "opc": "C42449363BBAD02B66D16BC975D77CC1", "dnn": "oai", "nssai_sst": 1},
+    "telnetsrv": {"listenport": 9091, "histfile": "~/history.telnetsrv"},
+    "rfsimulator": {"serveraddr": "127.0.0.1", "serverport": "4043", "options": [], "modelname": "AWGN"}
+  }
+}

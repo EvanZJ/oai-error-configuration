@@ -1,0 +1,37 @@
+Overall Context and Setup Assumptions:
+This case involves an OpenAirInterface (OAI) 5G NR Standalone (SA) mode setup with radio frequency simulator (rfsim) for UE emulation, using a CU-DU split architecture. The logs indicate monolithic mode operation (--rfsim --sa options), where CU handles control plane (NGAP, F1AP), DU handles user plane and PHY/MAC, and UE connects via rfsim server. Expected flow: Component initialization (threads, bindings), F1AP setup between CU and DU, NGAP association with AMF, UE random access (PRACH), RRC connection setup, security activation, and PDU session establishment. Potential issues include configuration mismatches (e.g., invalid NSSAI params causing AMF association failures), binding errors (errno 99 for non-local IPs), or protocol failures (SCTP associations, AMF connections). Network_config parsing: cu_conf includes gNB_ID=0xe00, gNB_name="gNB-Eurecom-CU", tracking_area_code=1, plmn_list with mcc=1, mnc=1, mnc_length=2, snssaiList sst=256 (operator-specific, but potentially unsupported), nr_cellid=1, tr_s_preference=f1, local/remote SCTP addresses (127.0.0.5/127.0.0.3), AMF IP=192.168.70.132, security with ciphering_algorithms=["nea3","nea2","nea1","nea0"], integrity_algorithms=["nia2","nia0"], drb_ciphering=yes. du_conf has gNB_ID=0xe00, gNB_name="gNB-Eurecom-DU", plmn_list mcc=1, mnc=1, mnc_length=2, snssaiList sst=1, servingCellConfigCommon with band 78, PRACH index=98, rfsimulator serveraddr="server". ue_conf has imsi=001010000000101, nssai_sst=1, rfsimulator serveraddr="127.0.0.1". Initial mismatch: cu_conf snssaiList.sst=256 (operator-specific) vs du_conf sst=1 (standardized), causing NSSAI mismatch.
+
+Analyzing CU Logs:
+CU initialization proceeds normally: nfapi MONOLITHIC, OPT disabled, HW version logged, PHY tasks created (RC.gNB=0x...), no prs_config, nb_nr_L1_inst=0. gNB_APP allocates RRC_INST, F1AP sets gNB_CU_id=3584, gNB_CU_name[0] gNB-Eurecom-CU, SDAP disabled, DRB count=1. SIB23_NR size=9, PDCP init with GTPU, default drx=0, gNB_app_register. Threads created: TASK_SCTP, TASK_NGAP, TASK_GNB_APP, TASK_RRC_GNB. NGAP registers gNB[0] id=3584, checks AMF state. SCTP bindx fails (errno 99: Cannot assign requested address) for AMF IP 192.168.8.43:501 (non-local IP), no SCTP connection. GTPU configures address 192.168.8.43:2152, bind fails (errno 99), can't create GTPU instance (id=-1). F1AP starts, F1AP_CU_SCTP_REQ for 127.0.0.5:10. GTPU initializes UDP for 127.0.0.5:2152, creates instance id=97. Receives F1 Setup Request from DU 3584 (gNB-Eurecom-DU) on assoc_id 462. Accepts DU 3584 (gNB-Eurecom-DU), sends F1 Setup Response, RRC version 17.3.0. Decodes CCCH RNTI aeff, creates UE context CU UE ID 1 DU UE ID 44799, activates SRB1, generates RRCSetup for RNTI aeff, processes NR_RRCSetupComplete, UE state NR_RRC_CONNECTED. Anomalies: SCTP/GTPU bind failures for AMF/NGU IPs (192.168.8.43 non-local), but F1 uses local 127.0.0.5. RRC succeeds, but "[NGAP] No AMF is associated to the gNB" indicates AMF association failure despite NGAP thread running. Cross-reference: AMF IP in cu_conf (192.168.70.132) not matching bind attempts (192.168.8.43), but bind failure secondary; invalid sst=256 likely causes NSSAI rejection, preventing AMF association.
+
+Analyzing DU Logs:
+DU initialization: wait_gNBs, configures RU from file, sets RU mask=1, RU 0 with nr_flag=0, band=78, half-slot parallelization=1, ru_id=0, librfsimulator loaded, random seed set, frame_parms set, sync threads. RU ready, init gNBs after RU, not NFAPI, call init_eNB_afterRU, load libdfts/libldpc. All RUs/gNBs ready, send sync. ITTI handler, TYPE <CTRL-C> TO TERMINATE. RU 0 rf device ready, RF started, void samples. UE command line: -C 3619200000 -r 106 --numerology 1 --ssb 516. Client connects, sends time, warning for out-of-order Tx. NR_PHY RAPROC initiates RA with preamble 53, energy 56.4dB, delay 0. NR_MAC RA-RNTI 010b TC-RNTI aeff, activates RA process, Msg2 DCI, Msg3 scheduled, contention resolution timer 64ms. PUSCH received correctly, adds UE MAC context RNTI 0xaeff, Msg3 received, RLC activates srb0/srb1, activates Msg4 for TC-RNTI 0xaeff, generates msg4 payload 149 bytes, state WAIT_Msg4_ACK. Receives Ack of Msg4, CBRA succeeded. Frame.Slot progresses (128,256,384,512,640,768,896), UE in-sync, PH=0dB, PCMAX=0dBm, RSRP=-44, MCS=9, BLER low, TX/RX bytes increasing. No PHY/MAC errors or assertions. Anomalies: None apparent; DU runs smoothly, UE connects and stays connected with good stats. Link to network_config: du_conf servingCellConfigCommon matches band 78, PRACH index=98, but no direct sst link.
+
+Analyzing UE Logs:
+UE logs repetitive: NR_PHY ============================================, NR_PHY Harq round stats Downlink 7/0/0 to 11/0/0, NR_MAC band 78 TDD spacing 0 KHz (multiple repeats). No connection attempts, PRACH, RRC messages, or errors. Anomalies: Logs show band info but no active UE behavior; implies UE stuck waiting for server or connection. Link to network_config: ue_conf nssai_sst=1, rfsimulator serveraddr="127.0.0.1", but DU has "server" (not IP), potential mismatch, but UE logs don't show connect attempts. UE appears idle, not progressing beyond initial setup.
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Correlating: CU init ~0s, SCTP/GTPU bind fails early, but F1 setup succeeds (~assoc_id 462), RRC setup ~frame 00000, UE RA ~frames 183-185, DU UE context created, RRC connected. UE stays connected (frames 128-896), good stats, but CU shows "No AMF associated" at end, no NGAP progress. DU runs without issues, UE idle. Hypothesis: Invalid snssaiList.sst=256 (operator-specific, but unsupported by AMF) causes NSSAI mismatch during AMF association. CU attempts NGAP but AMF rejects due to invalid SST, preventing association despite RRC success. Bind failures (errno 99) exacerbate but secondary; F1 uses local 127.0.0.5. UE stuck because no AMF means no PDU session, but RRC holds. Guided by misconfigured_param: sst=256 invalid for this setup, known to cause AMF association failures in OAI due to NSSAI issues.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf gNBs.plmn_list.snssaiList.sst from 256 to 1 (match DU/UE, standardized SST). Corrected network_config:
+{
+  "cu_conf": {
+    ... (rest unchanged)
+    "gNBs": {
+      ... (rest unchanged)
+      "plmn_list": {
+        ... (rest unchanged)
+        "snssaiList": {
+          "sst": 1
+        },
+        ... (rest unchanged)
+      },
+      ... (rest unchanged)
+    },
+    ... (rest unchanged)
+  },
+  "du_conf": { ... (unchanged) },
+  "ue_conf": { ... (unchanged) }
+}
+Debug: Check OAI logs for AMF association errors; verify SST 0-255. Tools: grep OAI code for "sst" validation; web_search "3GPP TS 23.501 NSSAI" if needed. Limitations: Logs truncated, no timestamps; incomplete if AMF logs missing.

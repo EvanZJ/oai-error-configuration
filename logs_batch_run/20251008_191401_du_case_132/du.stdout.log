@@ -1,0 +1,23 @@
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[NR_PHY]   RC.gNB = 0x59ee54cfa8c0
+[0m
+Assertion (num_gnbs > 0) failed!
+In RCconfig_NR_L1() /home/sionna/evan/openairinterface5g/openair2/GNB_APP/gnb_config.c:800
+Failed to parse config file no gnbs Active_gNBs 
+
+Exiting execution
+CMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue/du_case_132.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue
+[CONFIG] function config_libconfig_init returned 0
+[CONFIG] config module libconfig loaded
+[CONFIG] debug flags: 0x00000000
+log init done
+Reading in command-line options
+[CONFIG] parallel_conf is set to 2
+[CONFIG] worker_conf is set to 1
+Configuration: nb_rrc_inst 0, nb_nr_L1_inst 1, nb_ru 1
+configuring for RAU/RRU
+/home/sionna/evan/openairinterface5g/openair2/GNB_APP/gnb_config.c:800 RCconfig_NR_L1() Exiting OAI softmodem: _Assert_Exit_

@@ -1,0 +1,255 @@
+===== CU stdout (tail -n 100) =====
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[PHY]   create_gNB_tasks() Task ready initialize structures
+[0m[NR_PHY]   RC.gNB = 0x602105c49a20
+[0m[PHY]   No prs_config configuration found..!!
+[0m[PHY]   create_gNB_tasks() RC.nb_nr_L1_inst:0
+[0m[GNB_APP]   Allocating gNB_RRC_INST for 1 instances
+[0m[GNB_APP]   F1AP: gNB_CU_id[0] 3584
+[0m[GNB_APP]   F1AP: gNB_CU_name[0] gNB-Eurecom-CU
+[0m[GNB_APP]   SDAP layer is disabled
+[0m[GNB_APP]   Data Radio Bearer count 1
+[0m[NR_RRC]   do_SIB23_NR, size 9 
+ [0m[PDCP]   pdcp init,usegtp 
+[0m[GNB_APP]   default drx 0
+[0m[GNB_APP]   [gNB 0] gNB_app_register for instance 0
+[0m[UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_SCTP
+[0m[X2AP]   X2AP is disabled.
+[0m[UTIL]   threadCreate() for TASK_NGAP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_NGAP
+[0m[UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+[0m[NGAP]   Registered new gNB[0] and macro gNB id 3584
+[0m[NGAP]   [gNB 0] check the amf registration state
+[0m[ITTI]   Created Posix thread TASK_GNB_APP
+[0m[93m[SCTP]   sctp_bindx() SCTP_BINDX_ADD_ADDR failed: errno 99 Cannot assign requested address
+[0m[UTIL]   threadCreate() for TASK_RRC_GNB: creating thread with affinity ffffffff, priority 50
+[0m[1;31m[SCTP]   could not open socket, no SCTP connection established
+[0m[UTIL]   threadCreate() for TASK_CU_F1: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_RRC_GNB
+[0m[GTPU]   Configuring GTPu
+[0m[GTPU]   SA mode 
+[0m[GTPU]   Configuring GTPu address : 192.168.8.43, port : 2152
+[0m[GTPU]   Initializing UDP for local address 192.168.8.43 with port 2152
+[0m[93m[GTPU]   bind: Cannot assign requested address
+[0m[1;31m[GTPU]   failed to bind socket: 192.168.8.43 2152 
+[0m[1;31m[GTPU]   can't create GTP-U instance
+[0m[GTPU]   Created gtpu instance id: -1
+[0m[1;31m[E1AP]   Failed to create CUUP N3 UDP listener[0m[F1AP]   Starting F1AP at CU
+[0m[NR_RRC]   Entering main loop of NR_RRC message task
+[0m[ITTI]   Created Posix thread TASK_CU_F1
+[0m[F1AP]   F1AP_CU_SCTP_REQ(create socket) for 127.0.0.5 len 10
+[0m[GTPU]   Initializing UDP for local address 127.0.0.5 with port 2152
+[0m[UTIL]   threadCreate() for TASK_GTPV1_U: creating thread with affinity ffffffff, priority 50
+[0m[NR_RRC]   Accepting new CU-UP ID 3584 name gNB-Eurecom-CU (assoc_id -1)
+[0m[GTPU]   Created gtpu instance id: 97
+[0m[ITTI]   Created Posix thread TASK_GTPV1_U
+[0m[NR_RRC]   Received F1 Setup Request from gNB_DU 3584 (gNB-Eurecom-DU) on assoc_id 1088
+[0m[RRC]   Accepting DU 3584 (gNB-Eurecom-DU), sending F1 Setup Response
+[0m[RRC]   DU uses RRC version 17.3.0
+[0m
+===== DU stdout (tail -n 100) =====
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 6287: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 799.19 Initiating RA procedure with preamble 1, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   799.19 UE RA-RNTI 010b TC-RNTI 04a0: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 799.19 now 800.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 04a0: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 807.19 Initiating RA procedure with preamble 1, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   807.19 UE RA-RNTI 010b TC-RNTI 9f12: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 807.19 now 808.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 9f12: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 815.19 Initiating RA procedure with preamble 50, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   815.19 UE RA-RNTI 010b TC-RNTI 83af: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 815.19 now 816.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 83af: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 823.19 Initiating RA procedure with preamble 6, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   823.19 UE RA-RNTI 010b TC-RNTI b81c: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 823.19 now 824.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI b81c: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 831.19 Initiating RA procedure with preamble 32, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   831.19 UE RA-RNTI 010b TC-RNTI 4467: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 831.19 now 832.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 4467: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 839.19 Initiating RA procedure with preamble 8, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   839.19 UE RA-RNTI 010b TC-RNTI 9928: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 839.19 now 840.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 9928: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 847.19 Initiating RA procedure with preamble 0, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   847.19 UE RA-RNTI 010b TC-RNTI aa1d: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 847.19 now 848.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI aa1d: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 855.19 Initiating RA procedure with preamble 25, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   855.19 UE RA-RNTI 010b TC-RNTI 2c94: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 855.19 now 856.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 2c94: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 863.19 Initiating RA procedure with preamble 29, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   863.19 UE RA-RNTI 010b TC-RNTI 25a2: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 863.19 now 864.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 25a2: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 871.19 Initiating RA procedure with preamble 50, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   871.19 UE RA-RNTI 010b TC-RNTI 3e1f: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 871.19 now 872.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 3e1f: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 879.19 Initiating RA procedure with preamble 44, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   879.19 UE RA-RNTI 010b TC-RNTI c0ac: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 879.19 now 880.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI c0ac: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 887.19 Initiating RA procedure with preamble 13, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   887.19 UE RA-RNTI 010b TC-RNTI cc61: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 887.19 now 888.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI cc61: exceeded RA window, cannot schedule Msg2
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m[NR_PHY]   [RAPROC] 895.19 Initiating RA procedure with preamble 21, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   895.19 UE RA-RNTI 010b TC-RNTI d7ef: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 895.19 now 896.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI d7ef: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 903.19 Initiating RA procedure with preamble 47, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   903.19 UE RA-RNTI 010b TC-RNTI 422b: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 903.19 now 904.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 422b: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 911.19 Initiating RA procedure with preamble 39, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   911.19 UE RA-RNTI 010b TC-RNTI 218a: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 911.19 now 912.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 218a: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 919.19 Initiating RA procedure with preamble 56, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   919.19 UE RA-RNTI 010b TC-RNTI a5cc: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 919.19 now 920.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI a5cc: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 927.19 Initiating RA procedure with preamble 38, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   927.19 UE RA-RNTI 010b TC-RNTI 48c2: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 927.19 now 928.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 48c2: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 935.19 Initiating RA procedure with preamble 27, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   935.19 UE RA-RNTI 010b TC-RNTI 8385: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 935.19 now 936.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 8385: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 943.19 Initiating RA procedure with preamble 32, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   943.19 UE RA-RNTI 010b TC-RNTI df6c: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 943.19 now 944.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI df6c: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 951.19 Initiating RA procedure with preamble 26, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   951.19 UE RA-RNTI 010b TC-RNTI 27b8: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 951.19 now 952.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 27b8: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 959.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   959.19 UE RA-RNTI 010b TC-RNTI 3259: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 959.19 now 960.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 3259: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 967.19 Initiating RA procedure with preamble 33, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   967.19 UE RA-RNTI 010b TC-RNTI 8b12: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 967.19 now 968.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 8b12: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 975.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   975.19 UE RA-RNTI 010b TC-RNTI 396c: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 975.19 now 976.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 396c: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 983.19 Initiating RA procedure with preamble 7, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   983.19 UE RA-RNTI 010b TC-RNTI ac06: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 983.19 now 984.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI ac06: exceeded RA window, cannot schedule Msg2
+[0m
+===== UE stdout (tail -n 100) =====
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 767, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 767.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 5, first_nonzero_root_idx 0
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[93m[MAC]   [UE 0][774:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 775, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 775.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 12, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][782:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 783, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 783.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 10, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][790:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 791, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 791.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 3, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][798:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 799, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 799.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 0, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][806:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 807, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 807.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 0, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][814:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 815, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 815.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 12, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][822:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 823, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 823.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 1, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][830:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 831, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 831.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 8, first_nonzero_root_idx 0
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[93m[MAC]   [UE 0][838:19] RAR reception failed 
+[0m[93m[MAC]   [UE 0][839:7] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 839, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 839.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 2, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][846:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 847, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 847.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 0, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][854:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 855, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 855.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 6, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][862:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 863, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 863.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 7, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][870:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 871, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 871.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 12, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][878:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 879, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 879.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 11, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][886:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 887, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 887.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 3, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][894:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 895, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 895.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 5, first_nonzero_root_idx 0
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[93m[MAC]   [UE 0][902:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 903, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 903.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 11, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][910:19] RAR reception failed 
+[0m[93m[MAC]   [UE 0][911:7] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 911, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 911.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 9, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][918:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 919, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 919.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 14, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][926:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 927, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 927.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 9, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][934:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 935, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 935.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 6, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][942:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 943, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 943.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 8, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][950:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 951, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 951.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 6, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][958:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 959, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 959.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 13, first_nonzero_root_idx 0
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[93m[MAC]   [UE 0][966:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 967, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 967.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 8, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][974:19] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 975, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 975.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 13, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][982:19] RAR reception failed 
+[0m[93m[MAC]   [UE 0][983:7] RAR reception failed 
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 983, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 983.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 1, first_nonzero_root_idx 0
+[0m[93m[MAC]   [UE 0][990:19] RAR reception failed 
+[0m

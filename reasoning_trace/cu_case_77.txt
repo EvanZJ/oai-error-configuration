@@ -1,0 +1,35 @@
+Overall Context and Setup Assumptions: This is an OAI 5G NR SA mode setup with rfsim simulation, as indicated by --rfsim --sa options in CU logs and UE connecting to rfsimulator server. Expected flow: CU initializes, loads config including log_config, sets up F1AP to DU, DU activates radio/rfsim server, UE connects via PRACH/RRC/PDU session. Potential issues: Config syntax errors from empty log_config preventing CU init, blocking F1AP setup, causing DU SCTP failures and UE rfsim connect failures. Network_config parsed: cu_conf has log_config={} (empty object), which mismatches misconfigured_param "log_config={}". du_conf has rfsimulator serveraddr="server" (mismatch with UE's 127.0.0.1). ue_conf has rfsimulator serveraddr="127.0.0.1". Initial mismatch: Empty log_config likely invalid per OAI libconfig requirements.
+
+Analyzing CU Logs: CU starts libconfig init, but hits syntax error at line 81 in cu_case_77.conf: "[LIBCONFIG] file ... - line 81: syntax error". Config module load fails, init aborted. No further init: no threads, no NGAP/F1AP setup, no AMF connection. Logs end early, indicating config parse failure prevents any component init. Anomalous: CU stalls at config load due to empty log_config.
+
+Analyzing DU Logs: DU initializes successfully: loads config, sets up threads (TASK_SCTP, TASK_GNB_APP, etc.), starts F1AP at DU, binds GTPU to 127.0.0.3, attempts SCTP connect to CU at 127.0.0.5. But SCTP connect fails repeatedly ("Connect failed: Connection refused"), F1AP retries association. No crash, but waits indefinitely for F1 Setup Response, radio not activated ("waiting for F1 Setup Response"). No PHY/MAC errors; init completes but stalls on CU connection.
+
+Analyzing UE Logs: UE initializes PHY (samples, antennas, freq 3619200000 Hz), sets up threads (UEthread, TASK_RRC_NRUE, TASK_NAS_NRUE), loads UICC sim (IMSI=001010000000101). Runs as rfsim client, tries connect to 127.0.0.1:4043 repeatedly, but fails with errno(111) (connection refused). No connection attempts succeed; retries indefinitely. No RRC/PDU session progress.
+
+Cross-Component Correlations and Root Cause Hypothesis: CU fails config load due to syntax error at line 81, likely from empty log_config={} in cu_conf, as misconfigured_param indicates. This prevents CU init, so no SCTP listener at 127.0.0.5 for DU's F1AP connect, causing DU's "Connection refused" and retries. DU can't activate radio without F1 Setup, so no rfsim server starts, causing UE's connect failures to 127.0.0.1:4043. Timeline: CU stalls at config → DU waits on SCTP → UE waits on rfsim. Hypothesis: Empty log_config invalid; OAI requires log_config with levels (e.g., global_log_level). Per OAI code, log_config parsed by libconfig; empty object causes syntax error. Guided by misconfigured_param "log_config={}", root cause is missing log config causing libconfig parse fail.
+
+Recommendations for Fix and Further Analysis: Fix: Populate log_config in cu_conf with {"global_log_level": "info", "hw_log_level": "info", ...}. Also fix du_conf rfsimulator serveraddr to "127.0.0.1". Debug: Check cu_case_77.conf line 81 for syntax; validate log_config against OAI docs. Tools: Use grep_search on OAI for log_config usage. Corrected configs:
+
+{
+  "network_config": {
+    "cu_conf": {
+      "log_config": {
+        "global_log_level": "info",
+        "hw_log_level": "info",
+        "phy_log_level": "info",
+        "mac_log_level": "info",
+        "rlc_log_level": "info",
+        "pdcp_log_level": "info",
+        "rrc_log_level": "info",
+        "ngap_log_level": "info",
+        "f1ap_log_level": "info"
+      }
+    },
+    "du_conf": {
+      "rfsimulator": {
+        "serveraddr": "127.0.0.1"
+      }
+    },
+    "ue_conf": {}
+  }
+}

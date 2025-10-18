@@ -1,0 +1,12 @@
+UE RNTI 82da CU-UE-ID 1 out-of-sync PH 0 dB PCMAX 0 dBm, average RSRP 0 (0 meas)
+UE 82da: dlsch_rounds 1/1/1/1, dlsch_errors 1, pucch0_DTX 4, BLER 0.00000 MCS (0) 0
+UE 82da: ulsch_rounds 0/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00000 MCS (0) 0 (Qm 2  dB) NPRB 0  SNR 57.0 dB
+UE 82da: MAC:    TX              0 RX              0 bytes
+UE 82da: LCID 1: TX              0 RX              0 bytes
+UE RNTI 47ec CU-UE-ID 2 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -44 (7 meas)
+UE 47ec: dlsch_rounds 11/1/1/1, dlsch_errors 0, pucch0_DTX 3, BLER 0.06112 MCS (0) 9
+UE 47ec: ulsch_rounds 76/1/0/0, ulsch_errors 0, ulsch_DTX 1, BLER 0.00007 MCS (0) 9 (Qm 2  dB) NPRB 5  SNR 57.0 dB
+UE 47ec: MAC:    TX           1230 RX           8724 bytes
+UE 47ec: LCID 1: TX             15 RX             45 bytes
+
+

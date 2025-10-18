@@ -1,0 +1,168 @@
+===== CU stdout (tail -n 100) =====
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[PHY]   create_gNB_tasks() Task ready initialize structures
+[0m[NR_PHY]   RC.gNB = 0x5c5e76c6ca20
+[0m[PHY]   No prs_config configuration found..!!
+[0m[PHY]   create_gNB_tasks() RC.nb_nr_L1_inst:0
+[0m[GNB_APP]   Allocating gNB_RRC_INST for 1 instances
+[0m[GNB_APP]   F1AP: gNB_CU_id[0] 3584
+[0m[GNB_APP]   F1AP: gNB_CU_name[0] gNB-Eurecom-CU
+[0m[GNB_APP]   SDAP layer is disabled
+[0m[GNB_APP]   Data Radio Bearer count 1
+[0m[NR_RRC]   do_SIB23_NR, size 9 
+ [0m[PDCP]   pdcp init,usegtp 
+[0m[GNB_APP]   default drx 0
+[0m[GNB_APP]   [gNB 0] gNB_app_register for instance 0
+[0m[UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_SCTP
+[0m[X2AP]   X2AP is disabled.
+[0m[UTIL]   threadCreate() for TASK_NGAP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_NGAP
+[0m[UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+[0m[NGAP]   Registered new gNB[0] and macro gNB id 3584
+[0m[NGAP]   [gNB 0] check the amf registration state
+[0m[ITTI]   Created Posix thread TASK_GNB_APP
+[0m[UTIL]   threadCreate() for TASK_RRC_GNB: creating thread with affinity ffffffff, priority 50
+[0m[93m[SCTP]   sctp_bindx() SCTP_BINDX_ADD_ADDR failed: errno 99 Cannot assign requested address
+[0m[1;31m[SCTP]   could not open socket, no SCTP connection established
+[0m[UTIL]   threadCreate() for TASK_CU_F1: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_RRC_GNB
+[0m[GTPU]   Configuring GTPu
+[0m[GTPU]   SA mode 
+[0m[GTPU]   Configuring GTPu address : 192.168.8.43, port : 2152
+[0m[GTPU]   Initializing UDP for local address 192.168.8.43 with port 2152
+[0m[93m[GTPU]   bind: Cannot assign requested address
+[0m[1;31m[GTPU]   failed to bind socket: 192.168.8.43 2152 
+[0m[1;31m[GTPU]   can't create GTP-U instance
+[0m[GTPU]   Created gtpu instance id: -1
+[0m[1;31m[E1AP]   Failed to create CUUP N3 UDP listener[0m[F1AP]   Starting F1AP at CU
+[0m[ITTI]   Created Posix thread TASK_CU_F1
+[0m[NR_RRC]   Entering main loop of NR_RRC message task
+[0m[NR_RRC]   Accepting new CU-UP ID 3584 name gNB-Eurecom-CU (assoc_id -1)
+[0m[UTIL]   threadCreate() for TASK_GTPV1_U: creating thread with affinity ffffffff, priority 50
+[0m[F1AP]   F1AP_CU_SCTP_REQ(create socket) for 127.0.0.5 len 10
+[0m[GTPU]   Initializing UDP for local address 127.0.0.5 with port 2152
+[0m[GTPU]   Created gtpu instance id: 97
+[0m[ITTI]   Created Posix thread TASK_GTPV1_U
+[0m
+===== DU stdout (tail -n 100) =====
+[LIBCONFIG] file /home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue/du_case_351.conf - line 14: syntax error
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_load_configmodule.c 376 config module "libconfig" couldn't be loaded
+[CONFIG] config_get, section log_config skipped, config module not properly initialized
+[LOG] init aborted, configuration couldn't be performed
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_userapi.c 68 nfapi has no processed integer availablle
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+Getting configuration failed
+CMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue/du_case_351.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue
+
+[CONFIG] function config_libconfig_init returned -1
+[CONFIG] debug flags: 0x00300000
+log init done
+Reading in command-line options
+
+===== UE stdout (tail -n 100) =====
+[0m[93m[PHY]   samples_per_subframe 61440/per second 61440000, wCP 57344
+[0m[PHY]   Initializing UE vars for gNB TXant 1, UE RXant 1
+[0m[PHY]   prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   UE 0 Setting N_TA_offset to 800 samples (factor 2.000000, UL Freq 3619200000, N_RB 106, mu 1)
+[0m[PHY]   HW: Configuring card 0, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 1, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 2, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 3, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 4, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 5, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 6, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 7, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   Intializing UE Threads for instance 0 (0x627b8e2e7330,0x7b2a996a3010)...
+[0m[UTIL]   threadCreate() for UEthread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_UE_stats: creating thread with affinity ffffffff, priority 1
+[0m[NR_RRC]   create TASK_RRC_NRUE 
+[0m[UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[HW]   Running as client: will connect to a rfsimulator server side
+[0m[ITTI]   Created Posix thread TASK_RRC_NRUE
+[0m[UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[HW]   [RRU] has loaded RFSIMULATOR device.
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[ITTI]   Created Posix thread TASK_NAS_NRUE
+[0m[SIM]   UICC simulation: IMSI=001010000000101, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=C42449363BBAD02B66D16BC975D77CC1, DNN=oai, SST=0x01, SD=0xffffff
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m

@@ -1,0 +1,218 @@
+Overall Context and Setup Assumptions:
+This is an OAI 5G NR Standalone (SA) mode setup using rfsimulator (--rfsim --sa options from CU logs). The expected flow is: CU initializes, loads config, starts NGAP to AMF and F1AP to DU; DU initializes, connects to CU via F1AP/SCTP, starts rfsim server for UE; UE connects to rfsim server, performs PRACH/RRC/PDU session setup. Potential issues include config syntax errors causing load failures (e.g., invalid IP formats in libconfig), connection failures (SCTP refused if CU not up), or rfsim connect errors if server not running. Guided by misconfigured_param "gNBs.amf_ip_address.ipv4=invalid.ip", suspect invalid AMF IP causing config parse failure in CU, cascading to DU/UE issues.
+
+Parsing network_config: cu_conf has amf_ip_address.ipv4="invalid.ip" (invalid format, should be valid IPv4 like 192.168.70.132), nr_cellid=123456789, local/remote SCTP addresses 127.0.0.5/127.0.0.3. du_conf has rfsimulator serveraddr="server" port=4043. ue_conf has rfsimulator serveraddr="127.0.0.1" port="4043", imsi="001010000000101". Initial mismatch: CU amf_ip_address invalid, causing config load failure.
+
+Analyzing CU Logs:
+CU attempts to load config from cu_case_59.conf, but "[LIBCONFIG] file ... - line 91: syntax error", "config module libconfig couldn't be loaded", "log init aborted", "Getting configuration failed". No further init (no mode confirmation, threads, GTPU/NGAP setup). Key anomaly: Syntax error at line 91, config load failure, CU exits early. Cross-ref: Matches network_config cu_conf amf_ip_address.ipv4="invalid.ip"; libconfig rejects invalid IP format.
+
+Analyzing DU Logs:
+DU starts, loads libconfig successfully, sets parallel_conf=2 worker_conf=1, nb_rrc_inst=1 nb_nr_L1_inst=1 nb_ru=0, configures RAU/RRU, initializes northbound F1 for MACRLC, logs MeasurementTimingConfiguration XML, creates gNB tasks (nb_nr_L1_inst:1), allocates gNB_RRC_INST, sets SDAP disabled, RRC no preferred ciphering/integrity (defaults applied), creates threads (TASK_SCTP, TASK_GNB_APP, TASK_GTPV1_U, TASK_DU_F1), initializes PHY gNB 0, starts F1AP at DU, binds GTPU to 127.0.0.3:2152, creates gtpu instance 98. Key anomaly: Repeated "[SCTP] Connect failed: Connection refused" and "[F1AP] Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying..." to CU at 127.0.0.5:500. DU waits for F1 Setup Response, initializes RU (GPIO/clock internal, RU thread pool, RU proc 0), but no radio activation. Crash point: Infinite retries; DU stuck waiting for CU F1AP connection. Cross-ref: network_config du_conf no issues; failure due to CU not running.
+
+Analyzing UE Logs:
+UE initializes PHY vars (gNB TXant1 UE RXant1, no prs_config, symbol rotation calc for f0=3619200000 Hz Nsymb=28), sets N_TA_offset=800 samples, configures HW cards 0-7 (sample_rate=61440000, duplex_mode=TDD, tx/rx freq=3619200000, gain=0/110), initializes UE threads (UEthread, L1_UE_stats, TASK_RRC_NRUE, TASK_NAS_NRUE), runs as rfsim client, tries connect to 127.0.0.1:4043. Key anomaly: Repeated "[HW] connect() to 127.0.0.1:4043 failed, errno(111)" (connection refused). No PRACH/RRC/PDU setup; UE loops on connect attempts. Cross-ref: network_config ue_conf rfsimulator serveraddr="127.0.0.1" port="4043" matches DU port, but DU not running rfsim server due to CU failure.
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Timelines correlate: CU fails config load early (init phase), DU starts but retries SCTP connect indefinitely (no CU), UE retries rfsim connect (no DU server). Root cause: Invalid AMF IP "invalid.ip" in cu_conf amf_ip_address.ipv4 triggers libconfig syntax error at line 91, preventing CU config load and startup, blocking CU from starting F1AP/NGAP. This blocks DU F1AP/SCTP setup (connection refused), halting DU radio activation and rfsim server. UE connect fails as rfsim server not running. Guided by misconfigured_param, no need for external tools; libconfig requires valid IP format. Hypothesis validated by logs: CU error matches invalid IP, DU/UE failures stem from CU failure.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf gNBs.amf_ip_address.ipv4 from "invalid.ip" to valid IPv4 like "192.168.70.132". Debug: Check libconfig syntax; validate IPs. Tools: Use grep on "amf_ip_address" in OAI code; run libconfig parser on config.
+
+Corrected network_config:
+{
+  "cu_conf": {
+    "Active_gNBs": ["gNB-Eurecom-CU"],
+    "Asn1_verbosity": "none",
+    "Num_Threads_PUSCH": 8,
+    "gNBs": {
+      "gNB_ID": "0xe00",
+      "gNB_name": "gNB-Eurecom-CU",
+      "tracking_area_code": 1,
+      "plmn_list": {
+        "mcc": 1,
+        "mnc": 1,
+        "mnc_length": 2,
+        "snssaiList": {"sst": 1}
+      },
+      "nr_cellid": 123456789,
+      "tr_s_preference": "f1",
+      "local_s_if_name": "lo",
+      "local_s_address": "127.0.0.5",
+      "remote_s_address": "127.0.0.3",
+      "local_s_portc": 501,
+      "local_s_portd": 2152,
+      "remote_s_portc": 500,
+      "remote_s_portd": 2152,
+      "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2},
+      "amf_ip_address": {"ipv4": "192.168.70.132"},  // Changed from "invalid.ip" to valid IPv4 (fixes libconfig syntax error)
+      "NETWORK_INTERFACES": {
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43",
+        "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43",
+        "GNB_PORT_FOR_S1U": 2152
+      }
+    },
+    "security": {
+      "ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"],
+      "integrity_algorithms": ["nia2", "nia0"],
+      "drb_ciphering": "yes",
+      "drb_integrity": "no"
+    },
+    "log_config": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info",
+      "rlc_log_level": "info",
+      "pdcp_log_level": "info",
+      "rrc_log_level": "info",
+      "ngap_log_level": "info",
+      "f1ap_log_level": "info"
+    }
+  },
+  "du_conf": {
+    // No changes needed; config loads fine
+    "Active_gNBs": ["gNB-Eurecom-DU"],
+    "Asn1_verbosity": "annoying",
+    "gNBs": [
+      {
+        "gNB_ID": "0xe00",
+        "gNB_DU_ID": "0xe00",
+        "gNB_name": "gNB-Eurecom-DU",
+        "tracking_area_code": 1,
+        "plmn_list": [{"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": [{"sst": 1, "sd": "0x010203"}]}],
+        "nr_cellid": 1,
+        "pdsch_AntennaPorts_XP": 2,
+        "pdsch_AntennaPorts_N1": 2,
+        "pusch_AntennaPorts": 4,
+        "do_CSIRS": 1,
+        "maxMIMO_layers": 2,
+        "do_SRS": 0,
+        "min_rxtxtime": 6,
+        "force_256qam_off": 1,
+        "sib1_tda": 15,
+        "pdcch_ConfigSIB1": [{"controlResourceSetZero": 11, "searchSpaceZero": 0}],
+        "servingCellConfigCommon": [
+          {
+            "physCellId": 0,
+            "absoluteFrequencySSB": 641280,
+            "dl_frequencyBand": 78,
+            "dl_absoluteFrequencyPointA": 640008,
+            "dl_offstToCarrier": 0,
+            "dl_subcarrierSpacing": 1,
+            "dl_carrierBandwidth": 106,
+            "initialDLBWPlocationAndBandwidth": 28875,
+            "initialDLBWPsubcarrierSpacing": 1,
+            "initialDLBWPcontrolResourceSetZero": 12,
+            "initialDLBWPsearchSpaceZero": 0,
+            "ul_frequencyBand": 78,
+            "ul_offstToCarrier": 0,
+            "ul_subcarrierSpacing": 1,
+            "ul_carrierBandwidth": 106,
+            "pMax": 20,
+            "initialULBWPlocationAndBandwidth": 28875,
+            "initialULBWPsubcarrierSpacing": 1,
+            "prach_ConfigurationIndex": 98,
+            "prach_msg1_FDM": 0,
+            "prach_msg1_FrequencyStart": 0,
+            "zeroCorrelationZoneConfig": 13,
+            "preambleReceivedTargetPower": -96,
+            "preambleTransMax": 6,
+            "powerRampingStep": 1,
+            "ra_ResponseWindow": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB": 15,
+            "ra_ContentionResolutionTimer": 7,
+            "rsrp_ThresholdSSB": 19,
+            "prach_RootSequenceIndex_PR": 2,
+            "prach_RootSequenceIndex": 1,
+            "msg1_SubcarrierSpacing": 1,
+            "restrictedSetConfig": 0,
+            "msg3_DeltaPreamble": 1,
+            "p0_NominalWithGrant": -90,
+            "pucchGroupHopping": 0,
+            "hoppingId": 40,
+            "p0_nominal": -90,
+            "ssb_PositionsInBurst_Bitmap": 1,
+            "ssb_periodicityServingCell": 2,
+            "dmrs_TypeA_Position": 0,
+            "subcarrierSpacing": 1,
+            "referenceSubcarrierSpacing": 1,
+            "dl_UL_TransmissionPeriodicity": 6,
+            "nrofDownlinkSlots": 7,
+            "nrofDownlinkSymbols": 6,
+            "nrofUplinkSlots": 2,
+            "nrofUplinkSymbols": 4,
+            "ssPBCH_BlockPower": -25
+          }
+        ],
+        "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2}
+      }
+    ],
+    "MACRLCs": [
+      {
+        "num_cc": 1,
+        "tr_s_preference": "local_L1",
+        "tr_n_preference": "f1",
+        "local_n_address": "127.0.0.3",
+        "remote_n_address": "127.0.0.5",
+        "local_n_portc": 500,
+        "local_n_portd": 2152,
+        "remote_n_portc": 501,
+        "remote_n_portd": 2152
+      }
+    ],
+    "L1s": [{"num_cc": 1, "tr_n_preference": "local_mac", "prach_dtx_threshold": 120, "pucch0_dtx_threshold": 150, "ofdm_offset_divisor": 8}],
+    "RUs": [
+      {
+        "local_rf": "yes",
+        "nb_tx": 4,
+        "nb_rx": 4,
+        "att_tx": 0,
+        "att_rx": 0,
+        "bands": [78],
+        "max_pdschReferenceSignalPower": -27,
+        "max_rxgain": 114,
+        "sf_extension": 0,
+        "eNB_instances": [0],
+        "clock_src": "internal",
+        "ru_thread_core": 6,
+        "sl_ahead": 5,
+        "do_precoding": 0
+      }
+    ],
+    "rfsimulator": {"serveraddr": "server", "serverport": 4043, "options": [], "modelname": "AWGN", "IQfile": "/tmp/rfsimulator.iqs"},
+    "log_config": {"global_log_level": "info", "hw_log_level": "info", "phy_log_level": "info", "mac_log_level": "info"},
+    "fhi_72": {
+      "dpdk_devices": ["0000:ca:02.0", "0000:ca:02.1"],
+      "system_core": 0,
+      "io_core": 4,
+      "worker_cores": [2],
+      "ru_addr": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+      "mtu": 9000,
+      "fh_config": [
+        {
+          "T1a_cp_dl": [285, 429],
+          "T1a_cp_ul": [285, 429],
+          "T1a_up": [96, 196],
+          "Ta4": [110, 180],
+          "ru_config": {"iq_width": 9, "iq_width_prach": 9},
+          "prach_config": {"kbar": 0}
+        }
+      ]
+    }
+  },
+  "ue_conf": {
+    // No changes needed; serveraddr/port match DU
+    "sa": 1,
+    "rfsim": 1,
+    "uicc0": {
+      "imsi": "001010000000101",
+      "key": "fec86ba6eb707ed08905757b1bb44b8f",
+      "opc": "C42449363BBAD02B66D16BC975D77CC1",
+      "dnn": "oai",
+      "nssai_sst": 1
+    },
+    "telnetsrv": {"listenport": 9091, "histfile": "~/history.telnetsrv"},
+    "rfsimulator": {"serveraddr": "127.0.0.1", "serverport": "4043", "options": [], "modelname": "AWGN"}
+  }
+}

@@ -1,0 +1,22 @@
+Overall Context and Setup Assumptions: This is an OAI 5G NR SA mode setup using rfsim for radio simulation, as indicated by DU logs showing "librfsimulator.so" loading and UE command line with "-C 3619200000 -r 106 --numerology 1 --ssb 516". The expected flow is CU init with NGAP/AMF connection, DU init with RU setup and rfsim server, F1AP setup between CU/DU, UE connection via PRACH/RRC/PDU session. However, the misconfigured parameter "fhi_72.system_core=-1" suggests FHI 7.2 (Fronthaul Interface 7.2) configuration is present, which is for low-latency hardware fronthaul split using DPDK, potentially conflicting with rfsim simulation mode. Parsing network_config: gnb_conf (du_conf) includes servingCellConfigCommon with pMax=20, ssPBCH_BlockPower=-25, prach_ConfigurationIndex=98, SCTP streams=2, MACRLCs/L1s num_cc=1, RUs nb_tx=4, rfsimulator serveraddr="server", log_config global_log_level="info", and fhi_72 with system_core=-1 (invalid, as CPU cores start from 0), io_core=4, worker_cores=[2], dpdk_devices, etc. ue_conf has rfsimulator serveraddr="127.0.0.1", serverport=4043. cu_conf has AMF IP 192.168.70.132, NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF="192.168.8.43". Potential issues: Invalid system_core=-1 may cause DPDK initialization failure in FHI mode, leading to network bind failures preventing AMF association, even in rfsim.
+
+Analyzing CU Logs: CU initializes successfully with monolithic mode, creates gNB tasks, allocates RRC instances, sets up F1AP (gNB_CU_id 3584), SDAP disabled, GTPU configured for SA mode on 192.168.8.43:2152 but bind fails with "Cannot assign requested address", creating gtpu instance -1. SCTP bind also fails with errno 99 "Cannot assign requested address", no SCTP connection established. E1AP fails to create CUUP N3 UDP listener. NGAP thread created, gNB registered, checks AMF state, but F1AP starts, receives F1 Setup Request from DU, sends F1 Setup Response, processes UE RRCSetupComplete, connects UE. However, at end: "No AMF is associated to the gNB". Initialization appears complete but network binds fail, likely due to DPDK issues from invalid fhi_72.system_core.
+
+Analyzing DU Logs: DU initializes RU threads, configures RU from file, loads librfsimulator.so, sets up RU buffers, waits for sync, RF device ready with void samples (no hardware), UE command line shown. Initiates RA procedure, processes Msg3, activates RA-Msg4, UE connects successfully with RNTI b0ad, CU-UE-ID 1, in-sync, good stats (BLER 0.00006, SNR 57.0 dB), ongoing data exchange. No errors or crashes; rfsim server running properly, UE connected and transmitting/receiving data normally.
+
+Analyzing UE Logs: UE logs show repeated NR band 78 TDD mode confirmations, HARQ round stats increasing (8/0/0 to 11/0/0), indicating stable connection and data transmission. No connection failures or errors; UE is successfully attached and exchanging data with DU/CU.
+
+Cross-Component Correlations and Root Cause Hypothesis: CU shows network bind failures for GTPU (192.168.8.43:2152) and SCTP, preventing AMF association despite UE RRC connection succeeding. DU and UE operate normally with rfsim. The misconfigured "fhi_72.system_core=-1" is invalid (CPU cores >=0, default 0 per OAI docs/oran-params.h). FHI 7.2 uses DPDK for networking; invalid system_core likely causes DPDK control thread core assignment failure, leading to network stack issues and bind failures. Even in rfsim mode, fhi_72 config may enable DPDK, conflicting with standard networking. Hypothesis: system_core=-1 triggers DPDK init failure → network binds fail → NGAP can't connect to AMF (192.168.70.132) → "No AMF associated". UE connection succeeds via F1AP but lacks AMF for PDU sessions. External knowledge: OAI FHI 7.2 tutorial shows system_core=0 for isolated core; oran-params.h defines it as mandatory int with default 0.
+
+Recommendations for Fix and Further Analysis: Set fhi_72.system_core to 0 (valid core ID). If not using FHI hardware, remove fhi_72 section to avoid DPDK conflicts in rfsim. Ensure 192.168.8.43 interface is configured. Debug: Check DPDK logs, verify core isolation. Corrected network_config:
+{
+  "cu_conf": { ... (unchanged) },
+  "du_conf": {
+    ... (unchanged except fhi_72.system_core: 0)
+    "fhi_72": {
+      "system_core": 0,
+      ... (rest unchanged)
+    }
+  },
+  "ue_conf": { ... (unchanged) }
+}

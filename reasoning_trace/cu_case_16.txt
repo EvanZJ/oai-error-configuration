@@ -1,0 +1,35 @@
+Overall Context and Setup Assumptions:
+This case involves an OpenAirInterface (OAI) 5G NR Standalone (SA) mode setup with radio frequency simulator (rfsim) for UE emulation, using a CU-DU split architecture. The logs indicate monolithic mode operation (--rfsim --sa options), where CU handles control plane (NGAP, F1AP), DU handles user plane and PHY/MAC, and UE connects via rfsim server. Expected flow: Component initialization (threads, bindings), F1AP setup between CU and DU, NGAP association with AMF, UE random access (PRACH), RRC connection setup, security activation, and PDU session establishment. Potential issues include configuration validation failures (e.g., invalid PLMN params causing config_execcheck exits), binding errors (errno 99 for non-local IPs), or protocol failures (SCTP associations, AMF connections). Network_config parsing: cu_conf includes gNB_ID=0xe00, gNB_name="gNB-Eurecom-CU", tracking_area_code=1, plmn_list with mcc=1, mnc=1000 (invalid for mnc_length=2), mnc_length=2, snssaiList sst=1, nr_cellid=1, tr_s_preference=f1, local/remote SCTP addresses (127.0.0.5/127.0.0.3), AMF IP=192.168.70.132, security with ciphering_algorithms=["nea3","nea2","nea1","nea0"], integrity_algorithms=["nia2","nia0"], drb_ciphering=yes. du_conf has gNB_ID=0xe00, gNB_name="gNB-Eurecom-DU", plmn_list mcc=1, mnc=1, mnc_length=2, servingCellConfigCommon with band 78, PRACH index=98, rfsimulator serveraddr="server". ue_conf has imsi=001010000000101, rfsimulator serveraddr="127.0.0.1". Initial mismatch: cu_conf plmn_list.mnc=1000 invalid (exceeds 3 digits max per 3GPP TS 23.003, incompatible with mnc_length=2), vs du_conf mnc=1.
+
+Analyzing CU Logs:
+CU initialization starts: nfapi MONOLITHIC, OPT disabled, HW version logged, PHY tasks created (RC.gNB=0x...), no prs_config, nb_nr_L1_inst=0. gNB_APP allocates RRC_INST, F1AP sets gNB_CU_id=3584, gNB_CU_name[0] gNB-Eurecom-CU. Then "[CONFIG] config_check_intval: mnc_length: 0 invalid value, authorized values: 2 3" – config validation corrupted mnc_length to 0 due to invalid mnc=1000. "[ENB_APP] [CONFIG] config_execcheck: section gNBs.[0].plmn_list.[0] 1 parameters with wrong value" – config validation fails on plmn_list due to invalid mnc. CMDLINE shows config file path. Then "Exiting OAI softmodem: exit_fun" – CU exits before creating threads or bindings. Anomalies: No threads created, no GTPU/NGAP setup, no F1AP start; CU fails config check and terminates immediately. Cross-reference: mnc=1000 in cu_conf invalid, causes parsing failure, corrupting mnc_length to 0, triggering exit.
+
+Analyzing DU Logs:
+DU initialization proceeds: libconfig init, debug flags, log init, command options, parallel_conf=2, worker_conf=1, nb_rrc_inst=1, nb_nr_L1_inst=1, nb_ru=1, RAU/RRU config, NRRRC f1 southbound. MeasurementTimingConfiguration logged. PHY create_gNB_tasks nb_nr_L1_inst=1, l1_north_init_gNB, callbacks, gNB_APP allocates RRC_INST, SDAP disabled, DRB count=1. "[RRC] no preferred ciphering algorithm set in configuration file, applying default parameters (no security)". "[RRC] no preferred integrity algorithm set in configuration file, applying default parameters (nia2)". Threads created: TASK_SCTP, TASK_GNB_APP, TASK_GTPV1_U, TASK_DU_F1. X2AP disabled. PHY initializes gNB 0, registers MAC, sets indications, nr-gnb.c allocated. F1AP starts at DU, F1-C DU IPaddr 127.0.0.3 connect to F1-C CU 127.0.0.5, binding GTP to 127.0.0.3. GTPU initializes UDP port 2152, creates instance id=98. "[SCTP] Connect failed: Connection refused" – SCTP connect to CU fails because CU not running. "[F1AP] Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying..." – retries repeatedly. PHY sets RU GPIO, clock, number of L1/RU/cores, RU proc initialized. "[GNB_APP] waiting for F1 Setup Response before activating radio" – DU waits for F1 setup, which never comes. Anomalies: SCTP connect refused loops; no F1 setup, no radio activation. Link to network_config: du_conf plmn_list mnc=1 valid, but CU failure prevents connection.
+
+Analyzing UE Logs:
+UE initialization: samples_per_subframe 61440, initializing UE vars gNB TXant 1 UE RXant 1, no prs_config, symbol rotation f0 3619200000, N_TA_offset 800. HW configuring cards 0-7 sample_rate 61440000 tx/rx 1/1 TDD, freq 3619200000, gains. Initializing UE threads, threadCreate UEthread, L1_UE_stats, TASK_RRC_NRUE, TASK_NAS_NRUE. "[HW] Running as client: will connect to a rfsimulator server side". "[HW] Trying to connect to 127.0.0.1:4043" – attempts connect to rfsim server. "[HW] connect() to 127.0.0.1:4043 failed, errno(111)" – connection refused (ECONNREFUSED). Repeats attempts. "[SIM] UICC simulation: IMSI=001010000000101..." – SIM loaded. Anomalies: Repeated connect failures; UE can't connect because DU's rfsim server not started (DU waiting for F1 setup). Link to network_config: ue_conf rfsimulator serveraddr="127.0.0.1", but DU has "server" (not IP), but primary is DU failure preventing server start.
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Correlating: CU fails config validation immediately due to invalid mnc=1000, exits before starting F1AP server. DU starts, tries F1AP connect to CU, gets refused repeatedly, waits for F1 setup. UE tries rfsim connect, gets refused because DU not activating radio/server. No progress beyond init. Hypothesis: gNBs.plmn_list.mnc=1000 invalid (exceeds 3-digit max per 3GPP TS 23.003, incompatible with mnc_length=2), causes config parsing corruption (mnc_length=0), triggering config_execcheck failure and CU exit. Guided by misconfigured_param: mnc=1000 invalid, known to cause validation failure in OAI config. External knowledge: PLMN MNC 2-3 digits; invalid values cause parsing errors corrupting other params like mnc_length.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf gNBs.plmn_list.mnc from 1000 to 1 (match DU, valid 1-3 digits). Corrected network_config:
+{
+  "cu_conf": {
+    ... (rest unchanged)
+    "gNBs": {
+      ... (rest unchanged)
+      "plmn_list": {
+        "mcc": 1,
+        "mnc": 1,
+        ... (rest unchanged)
+      },
+      ... (rest unchanged)
+    },
+    ... (rest unchanged)
+  },
+  "du_conf": { ... (unchanged) },
+  "ue_conf": { ... (unchanged) }
+}
+Debug: Check OAI logs for "config_execcheck"; ensure MNC 1-999. Tools: grep OAI code for "mnc" validation; web_search "3GPP TS 23.003 PLMN format" if needed. Limitations: Logs truncated; incomplete if config parsing details missing.

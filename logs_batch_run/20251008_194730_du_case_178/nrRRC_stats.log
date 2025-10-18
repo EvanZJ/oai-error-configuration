@@ -1,0 +1,14 @@
+UE 0 CU UE ID 1 DU UE ID 33498 RNTI 82da random identity 8403a98e58000000:
+    last RRC activity: 17 seconds ago
+    RRC status inactive
+    (no PDU sessions)
+    associated DU:  DU assoc ID 1076
+UE 1 CU UE ID 2 DU UE ID 18412 RNTI 47ec random identity b078c4a2c7000000:
+    last RRC activity: 16 seconds ago
+    RRC status connected
+    (no PDU sessions)
+    associated DU:  DU assoc ID 1076
+
+1 connected DUs 
+[1] DU ID 3584 (gNB-Eurecom-DU) assoc_id 1076: nrCellID 1, PCI 0
+    TDD: band 78 ARFCN 640008 SCS 30 (kHz) PRB 106

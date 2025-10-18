@@ -1,0 +1,207 @@
+Overall Context and Setup Assumptions: This is an OAI 5G NR SA mode setup with rfsim for simulation, as indicated by --rfsim --sa options in CU logs. The expected flow is: CU initializes, sets up NGAP to AMF, DU initializes and connects to CU via F1AP, UE connects to rfsim server on DU for radio simulation, then proceeds to PRACH, RRC connection, and PDU session. Potential issues include config validation failures (e.g., invalid PLMN params causing early exits), SCTP connection failures (e.g., CU not running), or rfsim server unavailability (e.g., DU not starting due to F1AP issues). Parsing network_config: cu_conf has gNBs.plmn_list.mcc=1 (valid int 0-999), mnc="invalid" (should be int 0-999), mnc_length=2, snssaiList.sst=1 (valid int 0-255); du_conf has plmn_list.mcc=1, mnc=1 (valid); ue_conf has imsi, rfsimulator.serveraddr="127.0.0.1", serverport="4043". Initial mismatch: cu_conf.mnc="invalid" vs. expected int, directly matching misconfigured_param "gNBs.plmn_list.mnc=invalid".
+
+Analyzing CU Logs: CU starts in MONOLITHIC mode, initializes structures, allocates gNB_RRC_INST, sets F1AP gNB_CU_id=3584, name="gNB-Eurecom-CU". Key anomaly: "[CONFIG] config_check_intrange: mnc: 1000 invalid value, authorized range: 0 999" – this indicates libconfig parsed "invalid" as 1000 (possibly default or error value), failing range check 0-999. Followed by "[ENB_APP] [CONFIG] config_execcheck: section gNBs.[0].plmn_list.[0] 1 parameters with wrong value", triggering exit in config_userapi.c:102. No further init (e.g., no AMF connection, no NGAP setup), logs end with early exit. This matches network_config.cu_conf.plmn_list.mnc="invalid", causing validation failure.
+
+Analyzing DU Logs: DU initializes in RAU/RRU mode, configures F1 interfaces, starts threads (TASK_SCTP, TASK_GNB_APP, etc.), initializes PHY, starts F1AP at DU with IP 127.0.0.3 connecting to CU 127.0.0.5. Key anomaly: Repeated "[SCTP] Connect failed: Connection refused" and "[F1AP] Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying..." – DU can't connect to CU because CU exited early. DU waits for F1 Setup Response, initializes RU but doesn't activate radio. No rfsim server started, as DU is stuck retrying F1AP. Logs show no crash, just infinite retries.
+
+Analyzing UE Logs: UE initializes PHY for TDD, configures HW cards, starts threads (UEthread, TASK_RRC_NRUE, TASK_NAS_NRUE), loads RFSIMULATOR device. Key anomaly: Repeated "[HW] Trying to connect to 127.0.0.1:4043" followed by "connect() to 127.0.0.1:4043 failed, errno(111)" – errno 111 is ECONNREFUSED, meaning no server listening on 4043. This matches ue_conf.rfsimulator.serveraddr="127.0.0.1", serverport="4043", but DU isn't running the rfsim server. UE never connects, no RRC/PDU session attempts.
+
+Cross-Component Correlations and Root Cause Hypothesis: Timelines correlate: CU exits immediately after config validation failure (due to invalid mnc), preventing NGAP/AMF setup. DU starts, tries F1AP SCTP to CU (127.0.0.3 to 127.0.0.5), but gets refused because CU isn't listening – this cascades to DU waiting indefinitely, not starting rfsim server. UE tries rfsim connect to 127.0.0.1:4043, fails repeatedly because no server. Root cause: misconfigured_param "gNBs.plmn_list.mnc=invalid" in cu_conf causes config_check_intrange to fail (parsed as 1000 >999), triggering config_execcheck exit in config_userapi.c. Per 3GPP TS 23.003, MNC is 2-3 digits (0-999), so "invalid" string is invalid. No tools needed, as logs directly show validation error.
+
+Recommendations for Fix and Further Analysis: Fix: Change cu_conf.gNBs.plmn_list.mnc from "invalid" to valid int, e.g., 1 (matching du_conf). Debug: Check config_userapi.c for validation logic, ensure PLMN params are ints. Output corrected network_config:
+
+{
+  "cu_conf": {
+    "Active_gNBs": ["gNB-Eurecom-CU"],
+    "Asn1_verbosity": "none",
+    "Num_Threads_PUSCH": 8,
+    "gNBs": {
+      "gNB_ID": "0xe00",
+      "gNB_name": "gNB-Eurecom-CU",
+      "tracking_area_code": 1,
+      "plmn_list": {
+        "mcc": 1,
+        "mnc": 1,  // Changed from "invalid" to 1 for valid int 0-999
+        "mnc_length": 2,
+        "snssaiList": {"sst": 1}
+      },
+      "nr_cellid": 123456789,
+      "tr_s_preference": "f1",
+      "local_s_if_name": "lo",
+      "local_s_address": "127.0.0.5",
+      "remote_s_address": "127.0.0.3",
+      "local_s_portc": 501,
+      "local_s_portd": 2152,
+      "remote_s_portc": 500,
+      "remote_s_portd": 2152,
+      "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2},
+      "amf_ip_address": {"ipv4": "192.168.70.132"},
+      "NETWORK_INTERFACES": {
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43",
+        "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43",
+        "GNB_PORT_FOR_S1U": 2152
+      }
+    },
+    "security": {
+      "ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"],
+      "integrity_algorithms": ["nia2", "nia0"],
+      "drb_ciphering": "yes",
+      "drb_integrity": "no"
+    },
+    "log_config": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info",
+      "rlc_log_level": "info",
+      "pdcp_log_level": "info",
+      "rrc_log_level": "info",
+      "ngap_log_level": "info",
+      "f1ap_log_level": "info"
+    }
+  },
+  "du_conf": {  // No changes needed, already valid
+    "Active_gNBs": ["gNB-Eurecom-DU"],
+    "Asn1_verbosity": "annoying",
+    "gNBs": [
+      {
+        "gNB_ID": "0xe00",
+        "gNB_DU_ID": "0xe00",
+        "gNB_name": "gNB-Eurecom-DU",
+        "tracking_area_code": 1,
+        "plmn_list": [{"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": [{"sst": 1, "sd": "0x010203"}]}],
+        "nr_cellid": 1,
+        "pdsch_AntennaPorts_XP": 2,
+        "pdsch_AntennaPorts_N1": 2,
+        "pusch_AntennaPorts": 4,
+        "do_CSIRS": 1,
+        "maxMIMO_layers": 2,
+        "do_SRS": 0,
+        "min_rxtxtime": 6,
+        "force_256qam_off": 1,
+        "sib1_tda": 15,
+        "pdcch_ConfigSIB1": [{"controlResourceSetZero": 11, "searchSpaceZero": 0}],
+        "servingCellConfigCommon": [
+          {
+            "physCellId": 0,
+            "absoluteFrequencySSB": 641280,
+            "dl_frequencyBand": 78,
+            "dl_absoluteFrequencyPointA": 640008,
+            "dl_offstToCarrier": 0,
+            "dl_subcarrierSpacing": 1,
+            "dl_carrierBandwidth": 106,
+            "initialDLBWPlocationAndBandwidth": 28875,
+            "initialDLBWPsubcarrierSpacing": 1,
+            "initialDLBWPcontrolResourceSetZero": 12,
+            "initialDLBWPsearchSpaceZero": 0,
+            "ul_frequencyBand": 78,
+            "ul_offstToCarrier": 0,
+            "ul_subcarrierSpacing": 1,
+            "ul_carrierBandwidth": 106,
+            "pMax": 20,
+            "initialULBWPlocationAndBandwidth": 28875,
+            "initialULBWPsubcarrierSpacing": 1,
+            "prach_ConfigurationIndex": 98,
+            "prach_msg1_FDM": 0,
+            "prach_msg1_FrequencyStart": 0,
+            "zeroCorrelationZoneConfig": 13,
+            "preambleReceivedTargetPower": -96,
+            "preambleTransMax": 6,
+            "powerRampingStep": 1,
+            "ra_ResponseWindow": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB": 15,
+            "ra_ContentionResolutionTimer": 7,
+            "rsrp_ThresholdSSB": 19,
+            "prach_RootSequenceIndex_PR": 2,
+            "prach_RootSequenceIndex": 1,
+            "msg1_SubcarrierSpacing": 1,
+            "restrictedSetConfig": 0,
+            "msg3_DeltaPreamble": 1,
+            "p0_NominalWithGrant": -90,
+            "pucchGroupHopping": 0,
+            "hoppingId": 40,
+            "p0_nominal": -90,
+            "ssb_PositionsInBurst_Bitmap": 1,
+            "ssb_periodicityServingCell": 2,
+            "dmrs_TypeA_Position": 0,
+            "subcarrierSpacing": 1,
+            "referenceSubcarrierSpacing": 1,
+            "dl_UL_TransmissionPeriodicity": 6,
+            "nrofDownlinkSlots": 7,
+            "nrofDownlinkSymbols": 6,
+            "nrofUplinkSlots": 2,
+            "nrofUplinkSymbols": 4,
+            "ssPBCH_BlockPower": -25
+          }
+        ],
+        "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2}
+      }
+    ],
+    "MACRLCs": [
+      {
+        "num_cc": 1,
+        "tr_s_preference": "local_L1",
+        "tr_n_preference": "f1",
+        "local_n_address": "127.0.0.3",
+        "remote_n_address": "127.0.0.5",
+        "local_n_portc": 500,
+        "local_n_portd": 2152,
+        "remote_n_portc": 501,
+        "remote_n_portd": 2152
+      }
+    ],
+    "L1s": [{"num_cc": 1, "tr_n_preference": "local_mac", "prach_dtx_threshold": 120, "pucch0_dtx_threshold": 150, "ofdm_offset_divisor": 8}],
+    "RUs": [
+      {
+        "local_rf": "yes",
+        "nb_tx": 4,
+        "nb_rx": 4,
+        "att_tx": 0,
+        "att_rx": 0,
+        "bands": [78],
+        "max_pdschReferenceSignalPower": -27,
+        "max_rxgain": 114,
+        "sf_extension": 0,
+        "eNB_instances": [0],
+        "clock_src": "internal",
+        "ru_thread_core": 6,
+        "sl_ahead": 5,
+        "do_precoding": 0
+      }
+    ],
+    "rfsimulator": {"serveraddr": "server", "serverport": 4043, "options": [], "modelname": "AWGN", "IQfile": "/tmp/rfsimulator.iqs"},
+    "log_config": {"global_log_level": "info", "hw_log_level": "info", "phy_log_level": "info", "mac_log_level": "info"},
+    "fhi_72": {
+      "dpdk_devices": ["0000:ca:02.0", "0000:ca:02.1"],
+      "system_core": 0,
+      "io_core": 4,
+      "worker_cores": [2],
+      "ru_addr": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+      "mtu": 9000,
+      "fh_config": [
+        {
+          "T1a_cp_dl": [285, 429],
+          "T1a_cp_ul": [285, 429],
+          "T1a_up": [96, 196],
+          "Ta4": [110, 180],
+          "ru_config": {"iq_width": 9, "iq_width_prach": 9},
+          "prach_config": {"kbar": 0}
+        }
+      ]
+    }
+  },
+  "ue_conf": {  // No changes needed, already valid
+    "sa": 1,
+    "rfsim": 1,
+    "uicc0": {
+      "imsi": "001010000000101",
+      "key": "fec86ba6eb707ed08905757b1bb44b8f",
+      "opc": "C42449363BBAD02B66D16BC975D77CC1",
+      "dnn": "oai",
+      "nssai_sst": 1
+    },
+    "telnetsrv": {"listenport": 9091, "histfile": "~/history.telnetsrv"},
+    "rfsimulator": {"serveraddr": "127.0.0.1", "serverport": "4043", "options": [], "modelname": "AWGN"}
+  }
+}

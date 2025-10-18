@@ -1,0 +1,29 @@
+Overall Context and Setup Assumptions:
+This is an OAI 5G NR SA monolithic mode scenario with rfsim UE simulation, based on CU logs showing "nfapi (0) running mode: MONOLITHIC" and "--rfsim --sa" implied from UE connection attempts. Expected flow: gNB initialization (CU/DU integrated) → thread creation (SCTP, NGAP, GTPU, F1AP) → F1AP setup between CU and DU → GTPU/SCTP binds for NGAP (to AMF) and NGU (to UPF) → UE PRACH/RACH → RRC setup → PDU session establishment. Potential issues: config validation failures from invalid security algorithms (e.g., unknown "nea8" causes RRC assert or early exit), F1AP connection failures (SCTP "Connection refused"), UE rfsim connect failures (errno 111). Parsing network_config: cu_conf security.ciphering_algorithms=["nea3","nea2","nea1","nea8"] (nea8 invalid, valid are nea0-nea3), integrity_algorithms=["nia2","nia0"] (valid nia0-nia2). du_conf has no security section, defaults to no ciphering, nia2 integrity. ue_conf has rfsimulator serveraddr="127.0.0.1", serverport="4043". Initial mismatches: nea8 invalid, causing CU config failure.
+
+Analyzing CU Logs:
+Initialization: Starts with MONOLITHIC mode, OPT disabled, HW version logged, PHY tasks created (RC.gNB=0x5b0f98450a20), no prs_config, nb_nr_L1_inst:0. gNB_RRC_INST allocated, F1AP gNB_CU_id=3584, name="gNB-Eurecom-CU", SDAP disabled, Data Radio Bearer count 1, SIB23_NR size 9. Key anomaly: "[RRC] unknown ciphering algorithm \"nea8\" in section \"security\"" – this causes config validation failure, likely AssertFatal or exit, preventing further init. Logs then show CMDLINE and config reload, libconfig init, parallel_conf 2, worker_conf 1, nb_rrc_inst 1, nb_nr_L1_inst 0, RAU/RRU config, NRRRC 0 Southbound f1. Anomalies: Early RRC error halts CU startup, no threads created, no NGAP/GTPU/F1AP init, CU not ready for DU connection.
+
+Analyzing DU Logs:
+Initialization: Starts with ngran_DU TDD config, CMDLINE, libconfig init, parallel_conf 2, worker_conf 1, nb_rrc_inst 1, nb_nr_L1_inst 1, RAU/RRU config, northbound L1 init, F1 interfaces for MACRLC, MeasurementTimingConfiguration XML, l1_north_init_gNB, callbacks installed, gNB_RRC_INST allocated, SDAP disabled, Data Radio Bearer count 1. Key events: "[RRC] no preferred ciphering algorithm set in configuration file, applying default parameters (no security)", "[RRC] no preferred integrity algorithm set in configuration file, applying default parameters (nia2)" – DU uses defaults since no security config. Threads: TASK_SCTP, TASK_GNB_APP, TASK_GTPV1_U, TASK_DU_F1. PHY init gNB 0, callbacks, IF_Module, gNB structure allocated. F1AP starting DU, F1-C DU IP 127.0.0.3 connect to CU 127.0.0.5, GTPU UDP 127.0.0.3:2152 succeeds id=98. Anomalies: SCTP connect failed "Connection refused" repeatedly, F1AP retries – CU not listening due to config failure. RU init, threads, waiting for F1 Setup Response before activating radio. No crash, but stalled on F1AP.
+
+Analyzing UE Logs:
+Connection attempts: PHY samples_per_subframe 61440, UE vars init TXant 1 RXant 1, no prs_config, symbol rotation for f0 3619200000 Hz, Nsymb 28, N_TA_offset 800, HW configuring cards 0-7 for TDD, tx/rx freq 3619200000, gains. Threads: UEthread, L1_UE_stats, TASK_RRC_NRUE, TASK_NAS_NRUE. HW running as client, connect to rfsimulator server. Anomalies: Repeated "connect() to 127.0.0.1:4043 failed, errno(111)" – errno 111 is "Connection refused", rfsim server not running because DU not fully initialized (waiting for F1AP).
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Correlating timelines: CU starts, hits RRC error on nea8, config fails, no threads/init. DU starts parallel, defaults security, tries F1AP connect to CU, SCTP refused (CU not listening), retries indefinitely. UE starts, tries rfsim connect, refused (DU not activating radio, waiting for F1AP). Root cause: misconfigured_param "security.ciphering_algorithms[3]=nea8" invalid (OAI supports nea0-nea3; nea8 unknown causes RRC config validation failure, AssertFatal in gnb_config.c or rrc_gNB.c). This prevents CU startup, F1AP not established, DU waits, UE can't connect to rfsim. External knowledge: 3GPP TS 33.501 defines ciphering algorithms nea0 (NULL), nea1 (SNOW-3G), nea2 (AES), nea3 (ZUC); nea8 invalid. OAI code validates algorithms in security config, unknown causes error. No tool needed, as misconfig clear.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf security.ciphering_algorithms to remove "nea8", keep ["nea3","nea2","nea1"] (valid algorithms). Integrity already valid. Corrected network_config:
+{
+  "cu_conf": {
+    "security": {
+      "ciphering_algorithms": [
+        "nea3",
+        "nea2",
+        "nea1"
+      ]
+    }
+  }
+}
+Debug steps: Check OAI openair2/RRC/NR/rrc_gNB.c for algorithm validation (grep "ciphering algorithm"). Run with --log_config.rrc_log_level debug to see config parsing. Use strace on nr-softmodem to see AssertFatal. Limitations: Logs truncated, no full CU init after error; incomplete JSON if more config missing. Base on OAI patterns: Invalid security algorithms cause config failures, preventing startup.

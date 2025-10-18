@@ -1,0 +1,44 @@
+Overall Context and Setup Assumptions:
+This scenario involves an OpenAirInterface (OAI) 5G NR Standalone (SA) mode setup with radio frequency simulation (rfsim) for User Equipment (UE). The configuration uses a Centralized Unit (CU) and Distributed Unit (DU) split architecture, communicating via F1 Application Protocol (F1AP) over Stream Control Transmission Protocol (SCTP), with the CU also handling NG Application Protocol (NGAP) for AMF connectivity. The expected flow is: component initialization (PHY, MAC, RRC, GTPU, SCTP threads), F1AP setup between CU and DU, radio activation upon successful F1 Setup Response, UE connection via rfsim server, Physical Random Access Channel (PRACH) procedure, RRC connection establishment, and PDU session setup. Potential issues include configuration mismatches (e.g., invalid SCTP parameters), bind failures (e.g., non-local IP addresses), SCTP association failures, incomplete F1 setup preventing radio activation, and rfsim server not starting, leading to UE connection failures. Parsing network_config: cu_conf includes gNB_ID="0xe00" (3584), tr_s_preference="f1", local_s_address="127.0.0.5", remote_s_address="127.0.0.3", SCTP with SCTP_INSTREAMS=0 (invalid, minimum 1), SCTP_OUTSTREAMS=2, NETWORK_INTERFACES with GNB_IPV4_ADDRESS_FOR_NG_AMF="192.168.8.43" (non-local). du_conf has gNB_ID="0xe00", SCTP_INSTREAMS=2, MACRLCs with local_n_address="127.0.0.3", remote_n_address="127.0.0.5". ue_conf has rfsimulator serveraddr="127.0.0.1", serverport="4043". Mismatch noted: CU SCTP_INSTREAMS=0 vs DU=2, and CU GTPU IP "192.168.8.43" not local.
+
+Analyzing CU Logs:
+CU initialization shows monolithic mode (nfapi 0), getting GNBSParams, OPT disabled, HW version logged. PHY creates gNB tasks, RC.gNB=0x59aef01c2a2a00, no prs_config, nb_nr_L1_inst=0. GNB_APP allocates gNB_RRC_INST for 1 instance, F1AP gNB_CU_id=3584, gNB_CU_name="gNB-Eurecom-CU", SDAP disabled, Data Radio Bearer count=1. NR_RRC do_SIB23_NR size=9. PDCP init with GTPU. GNB_APP default drx=0, registers instance 0. Threads created: TASK_SCTP, TASK_NGAP, TASK_GNB_APP, TASK_RRC_GNB. NGAP registers gNB[0] with id 3584, checks AMF state. GTPU configures address 192.168.8.43:2152, initializes UDP, bind fails (errno 99 "Cannot assign requested address" - IP not local), sctp_bindx fails (likely log prefix error, but bind fails), GTPU fails to create instance. E1AP fails to create CUUP N3 UDP listener. SCTP could not open socket (truncated logs, but implies SCTP socket creation failed due to invalid SCTP_INSTREAMS=0). F1AP starts at CU. NR_RRC enters main loop. TASK_CU_F1 created. GTPU initializes to 127.0.0.1:2152, succeeds (id=97). NR_RRC accepts CU-UP ID 3584. F1AP_CU_SCTP_REQ for 127.0.0.1 (len=10). Anomalies: GTPU bind failure to non-local IP, SCTP socket failure (inferred from later DU retries), no F1 Setup success logged.
+
+Analyzing DU Logs:
+Configuration loaded from /home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf, libconfig loaded, debug flags=0x00000000, log init done. Command-line options: parallel_conf=2, worker_conf=1, nb_rrc_inst=1, nb_nr_L1_inst=1, nb_ru=1, configuring for RAU/RRU. Northbound interface for L1 initialized. DL/UL frequency 3619200000, band 48. F1 interfaces configured for MACRLC. MeasurementTimingConfiguration logged (carrierFreq=641280, ssbSubcarrierSpacing=kHz30, etc.). PHY create_gNB_tasks nb_nr_L1_inst=1. L1 north init gNB, callbacks installed. GNB_APP allocates gNB_RRC_INST, SDAP disabled, Data Radio Bearer count=1. RRC no preferred ciphering/algorithm sets (defaults applied). Threads: TASK_SCTP, TASK_GNB_APP, TASK_GTPV1_U, TASK_DU_F1. PHY initializes gNB 0, registers with MAC, sets indication lists, gNB structure allocated. F1AP starts at DU. F1-C DU IPaddr 127.0.0.3, connect to F1-C CU 127.0.0.5, binding GTP to 127.0.0.3. GTPU initializes UDP to 127.0.0.3:2152, id=98. SCTP Connect failed: Connection refused (repeated ~10 times). F1AP unsuccessful result for SCTP association (3), retrying. PHY GPIO/clock set, RU initialized, thread pools created. GNB_APP waiting for F1 Setup Response before activating radio. Anomalies: SCTP connect refused (CU SCTP socket not listening due to invalid config), retries fail, no F1 setup, radio not activated.
+
+Analyzing UE Logs:
+PHY samples_per_subframe=61440, UE vars initialized for gNB TXant=1, UE RXant=1, no prs_config. Symbol rotation for TX/RX at 3619200000 Hz, Nsymb=28. UE 0 N_TA_offset=800 samples. HW configures cards 0-7 for TDD, frequencies 3619200000, gains set. Threads: UEthread, L1_UE_stats, TASK_RRC_NRUE, TASK_NAS_NRUE. HW as client, will connect to rfsimulator server. UICC simulation: IMSI=001010000000101, etc. HW trying connect to 127.0.0.1:4043, fails errno=111 (Connection refused), repeated ~20 times. Anomalies: Repeated connect failures to rfsim server (server not started due to DU radio not activated from failed F1 setup).
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Correlating timelines: CU starts ~simultaneously with DU/UE. CU GTPU bind fails initially but recovers to local IP. CU F1AP starts, DU F1AP starts and immediately tries SCTP connect to CU, fails with "Connection refused" (errno 111, matching UE errno). DU retries SCTP association ~10 times, all fail. UE tries rfsim connect repeatedly, fails. No F1 Setup Response logged in CU/DU, so DU waits for response, radio not activated, rfsim server not started. Root cause: misconfigured_param "gNBs.SCTP.SCTP_INSTREAMS=0" in cu_conf. SCTP_INSTREAMS=0 is invalid (RFC 4960 requires >=1), causing SCTP socket creation or association to fail in CU. DU SCTP_INSTREAMS=2 is valid, but mismatch prevents association. External knowledge: OAI uses sctp_set_init_opt() with instreams, setsockopt SCTP_INITMSG fails or association invalid if 0. Cases_delta.json confirms SCTP_INSTREAMS=0 causes SCTP connection failures. GTPU IP "192.168.8.43" not local causes initial bind failure (errno 99), but fallback to 127.0.0.1 succeeds, not root cause.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf gNBs.SCTP.SCTP_INSTREAMS from 0 to 2 (matching DU). Optionally, change NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF/GNB_IPV4_ADDRESS_FOR_NGU to local IP (e.g., "127.0.0.1") to avoid bind failures. Corrected network_config:
+{
+  "cu_conf": {
+    "gNBs": {
+      "SCTP": {
+        "SCTP_INSTREAMS": 2,
+        "SCTP_OUTSTREAMS": 2
+      },
+      "NETWORK_INTERFACES": {
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "127.0.0.1",
+        "GNB_IPV4_ADDRESS_FOR_NGU": "127.0.0.1",
+        "GNB_PORT_FOR_S1U": 2152
+      }
+    }
+  },
+  "du_conf": {
+    "gNBs": [
+      {
+        "SCTP": {
+          "SCTP_INSTREAMS": 2,
+          "SCTP_OUTSTREAMS": 2
+        }
+      }
+    ]
+  },
+  "ue_conf": {}
+}
+Debug steps: Check SCTP socket creation logs (truncated here). Use strace on OAI processes for setsockopt errors. Verify SCTP params with netstat/ss. Further analysis: If logs show sctp_set_init_opt failure, confirm OAI validation. Limitations: CU logs truncated (no full SCTP failure), UE logs repetitive, no timestamps for precise correlation.

@@ -1,0 +1,32 @@
+Overall Context and Setup Assumptions:
+This scenario involves an OpenAirInterface (OAI) 5G NR Standalone (SA) mode setup with radio frequency simulation (rfsim) for User Equipment (UE). The configuration uses a Centralized Unit (CU) and Distributed Unit (DU) split architecture, communicating via F1 Application Protocol (F1AP) over Stream Control Transmission Protocol (SCTP), with the CU also handling NG Application Protocol (NGAP) for AMF connectivity. The expected flow is: component initialization (PHY, MAC, RRC, GTPU, SCTP threads), F1AP setup between CU and DU, radio activation upon successful F1 Setup Response, UE connection via rfsim server, Physical Random Access Channel (PRACH) procedure, RRC connection establishment, security setup, and PDU session establishment. Potential issues include configuration mismatches (e.g., invalid security parameters), bind failures (e.g., non-local IP addresses), SCTP association failures, incomplete F1 setup preventing radio activation, AMF association failures, and UE connection failures. Parsing network_config: cu_conf includes gNB_ID="0xe00" (3584), tr_s_preference="f1", local_s_address="127.0.0.5", remote_s_address="127.0.0.3", SCTP with SCTP_INSTREAMS=2, SCTP_OUTSTREAMS=2, amf_ip_address={"ipv4": "192.168.70.132"}, NETWORK_INTERFACES with GNB_IPV4_ADDRESS_FOR_NG_AMF="192.168.8.43" (non-local), security with ciphering_algorithms=["nea3","nea2","nea1","nea0"], integrity_algorithms=["nia2","nia0"], drb_ciphering=true (invalid, should be string "yes" or "no"), drb_integrity="no". du_conf has gNB_ID="0xe00", SCTP_INSTREAMS=2, rfsimulator serveraddr="server". ue_conf has rfsimulator serveraddr="127.0.0.1", serverport="4043". Mismatch noted: CU security.drb_ciphering=true invalid, CU GTPU/NGAP IPs non-local.
+
+Analyzing CU Logs:
+CU initialization shows monolithic mode (nfapi 0), getting GNBSParams, OPT disabled, HW version logged. PHY creates gNB tasks, RC.gNB=0x55e6627e5a20, no prs_config, nb_nr_L1_inst=0. GNB_APP allocates gNB_RRC_INST for 1 instance, F1AP gNB_CU_id=3584, gNB_CU_name="gNB-Eurecom-CU", SDAP disabled, Data Radio Bearer count=1. NR_RRC do_SIB23_NR size=9. GNB_APP default drx=0, registers instance 0. Threads: TASK_SCTP, TASK_NGAP, TASK_GNB_APP, TASK_RRC_GNB. NGAP registered gNB[0] id 3584, checks AMF state. GTPU configures address 192.168.8.43:2152, initializes UDP, bind fails (errno 99 "Cannot assign requested address" - IP not local), GTPU fails to create instance. E1AP fails to create CUUP N3 UDP listener. SCTP could not open socket (truncated, likely for F1AP with wrong IP). F1AP starts at CU. NR_RRC enters main loop. TASK_CU_F1 created. F1AP_CU_SCTP_REQ for 127.0.0.5 (succeeds). TASK_GTPV1_U created. NR_RRC accepts CU-UP ID 3584. GTPU initializes to 127.0.0.5:2152, succeeds (id=97). F1 Setup Request from DU 3584, sending F1 Setup Response. RRC accepts DU 3584, uses RRC version 17.3.0. NR_RRC decoding CCCH RNTI fb8d, creates UE context CU UE ID 1 DU UE ID 64397. RRC activates SRB1 for UE 1. NR_RRC generates RRCSetup for RNTI fb8d. NR_RRC UE 1 Processing NR_RRCSetupComplete. NR_RRC UE 1 State = NR_RRC_CONNECTED. NGAP No AMF is associated to the gNB. Anomalies: GTPU bind failure to non-local IP, SCTP socket failure (inferred), AMF association failure despite NGAP registered locally.
+
+Analyzing DU Logs:
+DU starts, configures RU threads, sets RU mask to 1, initializes RU 0 with rfsimulator, sets nr_flag 0, band 78. RU thread syncs, RF device ready (void samples), command line for UE with C 3619200000, r 106, ssb 516. HW client connects, sending time. NR_MAC Frame.Slot 128. NR_PHY RAPROC initiating RA with preamble 8, energy 54.0 dB. NR_MAC UE RA-RNTI 010b TC-RNTI fb8d, activating RA process. NR_MAC generating RA-Msg2 DCI, RA RNTI 0x10b. NR_MAC Msg3 scheduled. NR_MAC Starting RA Contention Resolution timer. NR_MAC UE fb8d PUSCH received correctly, adding UE MAC Context. NR_MAC RA-Msg3 received. RLC activated srb0/srb1 for UE 64397. NR_MAC activating Msg4 for TC-RNTI fb8d. NR_MAC UE fb8d Generate msg4. NR_MAC Received Ack of RA-Msg4, CBRA succeeded. UE stats logged periodically: in-sync, RSRP -44, BLER low, MCS 9, TX/RX bytes increasing. Anomalies: Successful RA and RRC setup, UE connected and transmitting/receiving data.
+
+Analyzing UE Logs:
+NR_MAC band 78 TDD, duplex spacing 0 KHz. Harq stats Downlink 8/0/0 to 11/0/0. Anomalies: Repetitive band logging, no connection attempts logged (truncated), but DU shows UE connected.
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Correlating timelines: CU/DU start simultaneously, CU GTPU bind fails but recovers locally, F1AP SCTP fails initially then succeeds to local IP, F1 setup completes, UE RA succeeds, RRC connected in CU/DU. UE transmits data in DU, but CU has no AMF association. No PDU session or DRB setup in CU logs. Root cause: misconfigured_param "security.drb_ciphering=True". In OAI, drb_ciphering expects string "yes" or "no"; true (boolean) != "yes" or "no", logs error "bad drb_ciphering value 'true'", but defaults do_drb_ciphering=1 (enabled). With ciphering enabled, AMF association required for security context (key exchange), but AMF IP "192.168.70.132" unreachable or AMF not running, causing NGAP association failure ("No AMF is associated"). UE RRC connected but stuck without AMF for NAS/PDU session. External knowledge: OAI gnb_config.c strcmp for "yes"/"no", else error; rrc_gNB_NGAP.c sets confidentialityProtectionIndication to SECURITY_REQUIRED if do_drb_ciphering=1. For rfsim, drb_ciphering="no" to disable. GTPU/NGAP IPs non-local cause bind failures, but F1 recovers.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf security.drb_ciphering to "no" (string, disables DRB ciphering for rfsim). Correct NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF/GNB_IPV4_ADDRESS_FOR_NGU to local IP (e.g., "127.0.0.1"). Corrected network_config:
+{
+  "cu_conf": {
+    "security": {
+      "drb_ciphering": "no"
+    },
+    "NETWORK_INTERFACES": {
+      "GNB_IPV4_ADDRESS_FOR_NG_AMF": "127.0.0.1",
+      "GNB_IPV4_ADDRESS_FOR_NGU": "127.0.0.1",
+      "GNB_PORT_FOR_S1U": 2152
+    }
+  },
+  "du_conf": {},
+  "ue_conf": {}
+}
+Debug steps: Check CU logs for "bad drb_ciphering value" error. Verify AMF IP/reachability. Use ngap_state in OAI for association status. Further analysis: If AMF running, check NGAP logs for rejection due to security mismatch. Limitations: CU logs truncated (no full NGAP failure), UE logs repetitive, no AMF logs.

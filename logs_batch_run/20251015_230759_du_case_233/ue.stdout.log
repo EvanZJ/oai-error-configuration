@@ -1,0 +1,1259 @@
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool4_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool5_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool6_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool7_-1: creating thread with affinity ffffffff, priority 97
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[PDCP]   pdcp init,usegtp usenetlink
+[0m[PDCP]   TUN: Opened socket oaitun_ue1 with fd nas_sock_fd[0]=97
+[0m[PDCP]   UE pdcp will use tun interface
+[0m[NR_MAC]   [UE0] Initializing MAC
+[0m[NR_MAC]   Initializing dl and ul config_request. num_slots = 20
+[0m[RLC]   Activated srb0 for UE 0
+[0m[93m[RLC]   SRB0 already exists for UE 0, do nothing
+[0m[PHY]   Set UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+, chest-freq 0, chest-time 0
+[0m[PHY]   Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 0, ssb_start_subcarrier 516
+[0m[PHY]   SA init parameters. DL freq 3619200000 UL offset 0 SSB numerology 1 N_RB_DL 106
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[PHY]   Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[93m[PHY]   samples_per_subframe 61440/per second 61440000, wCP 57344
+[0m[PHY]   Initializing UE vars for gNB TXant 1, UE RXant 1
+[0m[PHY]   prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   UE 0 Setting N_TA_offset to 800 samples (factor 2.000000, UL Freq 3619200000, N_RB 106, mu 1)
+[0m[PHY]   HW: Configuring card 0, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 1, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 2, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 3, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 4, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 5, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 6, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 7, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   Intializing UE Threads for instance 0 (0x5df080005330,0x7154c7ca3010)...
+[0m[UTIL]   threadCreate() for UEthread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_UE_stats: creating thread with affinity ffffffff, priority 1
+[0m[NR_RRC]   create TASK_RRC_NRUE 
+[0m[UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[HW]   Running as client: will connect to a rfsimulator server side
+[0m[ITTI]   Created Posix thread TASK_RRC_NRUE
+[0m[UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[HW]   [RRU] has loaded RFSIMULATOR device.
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[ITTI]   Created Posix thread TASK_NAS_NRUE
+[0m[SIM]   UICC simulation: IMSI=001010000000101, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=C42449363BBAD02B66D16BC975D77CC1, DNN=oai, SST=0x01, SD=0xffffff
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   Connection to 127.0.0.1:4043 established
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[93m[PHY]   SSB position provided
+[0m[93m[NR_PHY]   Starting sync detection
+[0m[PHY]   [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY]   Starting cell search with center freq: 3619200000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY]   Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[PHY]   Initial sync: pbch decoded sucessfully, ssb index 0
+[0m[32m[NR_PHY]   Cell Detected with GSCN: 0, SSB SC offset: 516, SSB Ref: 0.000000, PSS Corr peak: 99 dB, PSS Corr Average: 60
+[0m[PHY]   [UE0] In synch, rx_offset 583680 samples
+[0m[PHY]   [UE 0] Measured Carrier Frequency offset 16 Hz
+[0m[32m[PHY]   Initial sync successful, PCI: 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200016 Hz, rx_freq 3619200016 Hz, tune_offset 0
+[0m[PHY]   Got synch: hw_slot_offset 38, carrier off 16 Hz, rxgain 0.000000 (DL 3619200016.000000 Hz, UL 3619200016.000000 Hz)
+[0m[32m[PHY]   UE synchronized! decoded_frame_rx=36 UE->init_sync_frame=2 trashed_frames=4
+[0m[PHY]   Resynchronizing RX by 583680 samples
+[0m[HW]   received write reorder clear context
+[0m[93m[HW]   Gap in writing to USRP: last written 26419199, now 26510559, gap 91360
+[0m[32m[NR_RRC]   SIB1 decoded
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 44, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 45, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 46, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 47, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 48, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 49, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 50, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 51, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 52, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 53, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 54, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 55, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 56, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 57, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 58, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 59, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 60, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 61, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 62, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 63, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 64, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 65, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 66, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 67, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 68, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 69, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 70, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 71, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 72, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 73, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 74, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 75, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 76, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 77, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 78, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 79, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 80, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 81, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 82, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 83, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 84, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 85, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 86, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 87, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 88, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 89, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 90, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 91, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 92, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 93, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 94, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 95, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 96, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 97, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 98, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 99, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 100, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 101, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 102, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 103, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 104, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 105, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 106, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 107, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 108, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 109, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 110, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 111, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 112, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 113, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 114, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 115, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 116, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 117, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 118, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 119, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 120, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 121, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 122, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 123, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 124, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 125, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 126, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 127, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 128, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 129, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 130, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 131, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 132, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 133, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 134, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 135, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 136, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 137, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 138, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 139, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 140, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 141, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 142, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 143, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 144, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 145, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 146, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 147, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 148, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 149, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 150, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 151, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 152, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 153, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 154, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 155, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 156, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 157, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 158, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 159, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 160, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 161, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 162, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 163, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 164, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 165, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 166, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 167, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 168, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 169, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 170, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 171, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 172, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 173, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 174, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 175, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 176, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 177, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 178, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 179, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 180, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 181, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 182, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   Initialization of 4-step contention-based random access procedure
+[0m[1;31m[PHY]   [UE 0] frame 183, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 183, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 183.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 13, first_nonzero_root_idx 0
+[0m[1;31m[NR_MAC]   Trying to process acknack for an inactive harq process (0)
+[0m[NR_MAC]   [UE 0][RAPROC][RA-RNTI 0005] Got BI RAR subPDU 267 ms
+[0m[NR_MAC]   [UE 0][RAPROC][RA-RNTI 010b] Got RAPID RAR subPDU
+[0m[32m[NR_MAC]   [UE 0][RAPROC][184.7] Found RAR with the intended RAPID 55
+[0m[93m[MAC]   received TA command 31
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[PHY]   RAR-Msg2 decoded
+[0m[1;31m[PHY]   [UE 0] frame 184, nr_slot_rx 10, Error decoding PBCH!
+[0m[32m[NR_MAC]   [RAPROC][184.17] RA-Msg3 transmitted
+[0m[1;31m[PHY]   [UE 0] frame 185, nr_slot_rx 10, Error decoding PBCH!
+[0m[MAC]   [UE 0]Frame 185 Contention resolution identity: 0x1dee3fd4cb06 Terminating RA procedure
+[0m[32m[MAC]   [UE 0][185.11][RAPROC] RA procedure succeeded. CB-RA: Contention Resolution is successful.
+[0m[NR_RRC]   [UE0][RAPROC] Logical Channel DL-CCCH (SRB0), Received NR_RRCSetup
+[0m[RLC]   Added srb 1 to UE 0
+[0m[MAC]   Applying CellGroupConfig from gNodeB
+[0m[NR_RRC]   State = NR_RRC_CONNECTED
+[0m[NR_RRC]   [UE 0][RAPROC] Logical Channel UL-DCCH (SRB1), Generating RRCSetupComplete (bytes33)
+[0m[1;31m[PHY]   [UE 0] frame 186, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 187, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 188, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 189, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 190, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 191, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 4/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 192, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 193, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 194, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 195, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 196, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 197, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 198, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 199, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 200, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 201, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 202, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 203, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 204, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 205, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 206, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 207, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 208, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 209, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 210, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 211, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 212, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 213, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 214, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 215, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 216, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 217, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 218, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 219, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 220, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 221, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 222, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 223, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 224, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 225, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 226, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 227, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 228, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 229, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 230, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 231, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 232, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 233, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 234, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 235, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 236, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 237, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 238, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 239, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 240, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 241, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 242, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 243, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 244, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 245, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 246, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 247, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 248, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 249, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 250, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 251, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 252, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 253, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 254, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 255, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 4/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 256, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 257, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 258, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 259, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 260, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 261, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 262, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 263, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 264, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 265, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 266, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 267, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 268, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 269, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 270, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 271, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 272, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 273, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 274, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 275, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 276, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 277, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 278, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 279, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 280, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 281, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 282, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 283, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 284, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 285, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 286, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 287, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 288, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 289, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 290, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 291, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 292, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 293, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 294, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 295, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 296, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 297, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 298, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 299, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 300, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 301, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 302, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 303, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 304, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 305, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 306, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 307, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 308, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 309, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 310, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 311, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 312, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 313, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 314, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 315, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 316, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 317, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 318, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 319, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 5/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 320, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 321, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 322, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 323, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 324, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 325, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 326, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 327, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 328, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 329, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 330, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 331, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 332, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 333, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 334, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 335, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 336, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 337, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 338, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 339, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 340, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 341, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 342, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 343, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 344, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 345, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 346, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 347, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 348, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 349, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 350, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 351, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 352, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 353, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 354, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 355, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 356, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 357, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 358, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 359, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 360, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 361, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 362, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 363, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 364, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 365, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 366, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 367, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 368, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 369, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 370, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 371, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 372, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 373, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 374, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 375, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 376, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 377, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 378, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 379, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 380, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 381, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 382, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 383, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 5/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 384, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 385, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 386, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 387, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 388, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 389, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 390, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 391, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 392, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 393, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 394, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 395, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 396, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 397, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 398, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 399, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 400, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 401, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 402, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 403, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 404, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 405, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 406, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 407, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 408, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 409, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 410, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 411, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 412, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 413, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 414, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 415, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 416, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 417, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 418, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 419, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 420, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 421, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 422, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 423, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 424, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 425, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 426, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 427, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 428, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 429, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 430, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 431, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 432, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 433, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 434, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 435, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 436, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 437, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 438, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 439, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 440, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 441, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 442, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 443, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 444, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 445, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 446, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 447, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 6/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 448, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 449, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 450, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 451, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 452, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 453, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 454, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 455, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 456, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 457, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 458, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 459, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 460, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 461, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 462, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 463, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 464, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 465, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 466, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 467, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 468, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 469, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 470, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 471, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 472, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 473, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 474, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 475, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 476, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 477, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 478, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 479, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 480, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 481, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 482, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 483, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 484, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 485, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 486, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 487, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 488, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 489, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 490, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 491, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 492, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 493, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 494, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 495, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 496, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 497, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 498, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 499, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 500, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 501, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 502, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 503, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 504, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 505, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 506, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 507, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 508, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 509, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 510, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 511, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 7/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 512, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 513, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 514, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 515, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 516, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 517, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 518, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 519, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 520, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 521, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 522, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 523, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 524, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 525, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 526, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 527, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 528, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 529, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 530, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 531, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 532, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 533, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 534, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 535, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 536, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 537, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 538, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 539, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 540, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 541, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 542, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 543, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 544, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 545, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 546, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 547, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 548, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 549, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 550, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 551, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 552, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 553, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 554, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 555, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 556, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 557, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 558, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 559, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 560, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 561, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 562, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 563, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 564, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 565, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 566, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 567, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 568, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 569, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 570, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 571, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 572, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 573, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 574, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 575, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 7/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 576, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 577, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 578, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 579, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 580, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 581, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 582, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 583, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 584, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 585, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 586, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 587, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 588, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 589, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 590, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 591, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 592, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 593, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 594, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 595, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 596, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 597, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 598, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 599, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 600, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 601, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 602, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 603, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 604, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 605, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 606, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 607, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 608, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 609, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 610, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 611, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 612, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 613, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 614, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 615, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 616, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 617, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 618, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 619, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 620, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 621, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 622, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 623, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 624, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 625, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 626, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 627, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 628, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 629, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 630, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 631, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 632, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 633, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 634, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 635, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 636, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 637, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 638, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 639, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 8/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 640, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 641, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 642, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 643, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 644, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 645, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 646, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 647, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 648, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 649, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 650, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 651, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 652, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 653, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 654, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 655, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 656, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 657, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 658, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 659, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 660, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 661, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 662, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 663, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 664, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 665, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 666, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 667, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 668, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 669, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 670, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 671, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 672, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 673, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 674, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 675, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 676, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 677, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 678, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 679, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 680, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 681, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 682, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 683, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 684, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 685, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 686, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 687, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 688, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 689, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 690, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 691, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 692, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 693, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 694, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 695, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 696, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 697, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 698, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 699, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 700, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 701, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 702, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 703, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 9/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 704, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 705, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 706, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 707, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 708, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 709, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 710, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 711, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 712, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 713, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 714, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 715, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 716, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 717, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 718, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 719, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 720, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 721, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 722, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 723, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 724, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 725, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 726, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 727, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 728, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 729, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 730, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 731, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 732, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 733, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 734, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 735, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 736, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 737, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 738, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 739, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 740, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 741, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 742, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 743, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 744, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 745, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 746, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 747, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 748, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 749, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 750, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 751, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 752, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 753, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 754, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 755, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 756, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 757, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 758, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 759, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 760, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 761, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 762, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 763, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 764, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 765, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 766, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 767, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 9/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 768, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 769, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 770, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 771, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 772, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 773, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 774, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 775, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 776, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 777, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 778, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 779, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 780, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 781, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 782, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 783, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 784, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 785, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 786, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 787, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 788, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 789, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 790, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 791, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 792, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 793, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 794, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 795, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 796, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 797, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 798, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 799, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 800, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 801, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 802, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 803, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 804, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 805, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 806, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 807, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 808, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 809, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 810, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 811, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 812, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 813, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 814, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 815, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 816, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 817, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 818, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 819, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 820, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 821, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 822, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 823, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 824, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 825, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 826, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 827, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 828, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 829, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 830, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 831, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 10/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 832, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 833, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 834, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 835, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 836, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 837, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 838, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 839, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 840, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 841, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 842, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 843, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 844, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 845, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 846, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 847, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 848, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 849, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 850, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 851, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 852, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 853, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 854, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 855, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 856, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 857, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 858, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 859, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 860, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 861, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 862, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 863, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 864, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 865, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 866, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 867, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 868, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 869, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 870, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 871, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 872, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 873, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 874, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 875, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 876, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 877, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 878, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 879, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 880, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 881, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 882, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 883, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 884, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 885, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 886, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 887, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 888, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 889, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 890, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 891, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 892, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 893, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 894, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 895, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 11/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 896, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 897, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 898, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 899, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 900, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 901, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 902, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 903, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 904, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 905, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 906, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 907, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 908, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 909, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 910, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 911, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 912, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 913, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 914, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 915, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 916, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 917, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 918, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 919, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 920, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 921, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 922, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 923, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 924, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 925, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 926, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 927, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 928, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 929, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 930, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 931, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 932, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 933, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 934, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 935, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 936, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 937, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 938, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 939, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 940, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 941, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 942, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 943, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 944, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 945, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 946, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 947, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 948, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 949, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 950, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 951, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 952, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 953, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 954, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 955, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 956, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 957, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 958, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 959, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 11/0/0
+[0m[NR_PHY]   ============================================
+[0m[1;31m[PHY]   [UE 0] frame 960, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 961, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 962, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 963, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 964, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 965, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 966, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 967, nr_slot_rx 10, Error decoding PBCH!
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[1;31m[PHY]   [UE 0] frame 968, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 969, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 970, nr_slot_rx 10, Error decoding PBCH!
+[0m[1;31m[PHY]   [UE 0] frame 971, nr_slot_rx 10, Error decoding PBCH!
+[0m

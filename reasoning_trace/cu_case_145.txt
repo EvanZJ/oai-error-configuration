@@ -1,0 +1,33 @@
+Overall Context and Setup Assumptions: This case involves an OAI 5G NR SA mode setup with rfsim (radio frequency simulator) for testing CU (Central Unit), DU (Distributed Unit), and UE (User Equipment) components. The expected flow is: component initialization (CU loads config, validates params like PLMN MCC, starts threads for NGAP, GTPU, F1AP; DU initializes PHY/MAC with rfsim RU, connects to CU via F1AP; UE connects to rfsim server started by DU), F1AP setup between CU and DU, NGAP association with AMF, UE random access (PRACH) and RRC connection, followed by PDU session establishment. Potential issues to look for include config validation failures (e.g., invalid MCC causing immediate exit), connection failures (errno 111 "Connection refused" for rfsim server, SCTP connect refused for F1AP), or early exits ("Exiting OAI softmodem"). Parsing network_config: cu_conf has plmn_list.mcc=-1 (invalid negative, should be 0-999 per 3GPP TS 23.003), gNBs with AMF IP 192.168.70.132, NETWORK_INTERFACES with GNB_IPV4_ADDRESS_FOR_NG_AMF=192.168.8.43. du_conf has plmn_list[0].mcc=1 (valid), rfsimulator serveraddr="server" (but UE has "127.0.0.1", potential mismatch). ue_conf has rfsimulator serveraddr="127.0.0.1", imsi=001010000000101. Initial mismatches: mcc=-1 invalid in cu_conf; AMF IP 192.168.70.132 vs local NG_AMF IP 192.168.8.43; rfsim serveraddr "server" in DU vs "127.0.0.1" in UE.
+
+Analyzing CU Logs: CU starts MONOLITHIC mode, gets GNBSParams, but immediately hits "[CONFIG] config_check_intrange: mcc: -1 invalid value, authorized range: 0 999", then "[ENB_APP] [CONFIG] config_execcheck: section gNBs.[0].plmn_list.[0] 1 parameters with wrong value", and exits with "config_execcheck() Exiting OAI softmodem: exit_fun". No further init; CU never starts threads or connections. Anomalies: Early exit due to invalid MCC; no threads created, no F1AP/NGAP/GTPU setup.
+
+Analyzing DU Logs: DU starts ngran_DU, configures TDD cell, loads config, initializes northbound L1, creates threads TASK_SCTP, TASK_GNB_APP, TASK_GTPV1_U, TASK_DU_F1. Initializes gNB PHY, starts F1AP at DU, binds GTPU to 127.0.0.3:2152, but SCTP connect to 127.0.0.5 fails "Connection refused", retries many times. Waits for F1 Setup Response before activating radio. No crash; DU runs but can't connect to CU. Crash points: None; retries SCTP connect indefinitely.
+
+Analyzing UE Logs: UE initializes PHY vars, configures HW cards for TDD, creates threads UEthread, L1_UE_stats, TASK_RRC_NRUE, TASK_NAS_NRUE. Loads UICC IMSI=001010000000101. Tries to connect to rfsim server 127.0.0.1:4043, but "connect() failed, errno(111)", retries many times. No connection established. Links to ue_conf: rfsimulator serveraddr="127.0.0.1" (matches DU fallback? DU has "server", but UE expects 127.0.0.1). Frequency implied by 3619200000 Hz (3.6GHz band 78).
+
+Cross-Component Correlations and Root Cause Hypothesis: Timelines: CU exits immediately ~line 10 due to invalid MCC. DU starts ~lines 1-50, tries F1AP connect ~line 51, fails "Connection refused" (CU not running), retries. UE starts ~lines 1-20, tries rfsim connect ~line 21, fails errno(111) (rfsim server not started by DU, since DU not connected to CU). Correlation: CU early exit prevents F1AP server, so DU retries SCTP, UE retries rfsim. Hypothesis: mcc=-1 invalid value triggers config validation failure and immediate exit in CU (per OAI config_check_intrange), preventing F1AP setup, so DU can't connect, UE can't connect to rfsim (started by DU after F1AP). Guided by misconfigured_param: Negative MCC invalid per 3GPP TS 23.003 (0-999), causes OAI to exit on config check. Impacts: No CU running, F1AP/NGAP fail, UE can't connect. If uncertain on MCC validation, use tool: search "3GPP TS 23.003 MCC range" or "OAI PLMN MCC validation". But based on advance knowledge, invalid MCC causes config exit.
+
+Recommendations for Fix and Further Analysis: Fix: Set plmn_list.mcc to valid positive integer (e.g., 1) in cu_conf; ensure NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF matches available interface (e.g., change to 127.0.0.1 for local testing); align rfsim serveraddr in du_conf to "127.0.0.1" matching ue_conf. Debug: Check OAI config_userapi.c for config_check_intrange; run with --verbose to see config validation; use strace on CU for early exit. Tools: Use fetch_webpage for 3GPP TS 23.003 PLMN codes. Corrected config snippets:
+{
+  "network_config": {
+    "cu_conf": {
+      "gNBs": {
+        "plmn_list": {
+          "mcc": 1
+        }
+      },
+      "NETWORK_INTERFACES": {
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "127.0.0.1",
+        "GNB_IPV4_ADDRESS_FOR_NGU": "127.0.0.1",
+        "GNB_PORT_FOR_S1U": 2152
+      }
+    },
+    "du_conf": {
+      "rfsimulator": {
+        "serveraddr": "127.0.0.1"
+      }
+    },
+    "ue_conf": {}
+  }
+}

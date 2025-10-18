@@ -1,0 +1,3593 @@
+[
+  {
+    "filename": "cu_case_01.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause the system to fail during thread initialization, leading to gNB startup failure.",
+    "explanation_zh": "將 Num_Threads_PUSCH 設定為負值會在執行緒初始化期間導致系統失敗，造成 gNB 啟動失敗。"
+  },
+  {
+    "filename": "cu_case_02.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "none",
+    "error_value": 123,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing Asn1_verbosity to a number instead of string will cause parsing error in the configuration loader, preventing the config from being loaded.",
+    "explanation_zh": "將 Asn1_verbosity 改為數字而非字串會在配置載入器中造成解析錯誤，阻止配置被載入。"
+  },
+  {
+    "filename": "cu_case_03.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Using an invalid log level will cause the logging system to fail initialization, resulting in no logs being produced and potential debugging issues.",
+    "explanation_zh": "使用無效的日誌級別會導致日誌系統初始化失敗，造成沒有日誌產生並可能出現除錯問題。"
+  },
+  {
+    "filename": "cu_case_04.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format will cause network connection failures during AMF communication, leading to registration rejection.",
+    "explanation_zh": "無效的 IP 位址格式會在 AMF 通訊期間導致網路連線失敗，造成註冊被拒絕。"
+  },
+  {
+    "filename": "cu_case_05.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local_s_portc to the same value as remote_s_portc will cause port conflict in SCTP connection, leading to connection failure.",
+    "explanation_zh": "將 local_s_portc 設定為與 remote_s_portc 相同的值會在 SCTP 連線中造成連接埠衝突，導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_06.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting tracking_area_code to 0, which is reserved, will cause TAC validation failure and cell registration issues.",
+    "explanation_zh": "將 tracking_area_code 設定為 0（保留值）會導致 TAC 驗證失敗並造成小區註冊問題。"
+  },
+  {
+    "filename": "cu_case_07.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": 3840,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing gNB_ID to number instead of hex string will cause parsing error in ID processing.",
+    "explanation_zh": "將 gNB_ID 改為數字而非十六進位字串會在 ID 處理中造成解析錯誤。"
+  },
+  {
+    "filename": "cu_case_08.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid IP address will cause socket binding failure.",
+    "explanation_zh": "無效的 IP 位址會導致 socket 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_09.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Port 0 is invalid for network communication, causing connection failure.",
+    "explanation_zh": "連接埠 0 對於網路通訊無效，導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_10.json",
+    "modified_key": "gNBs.tr_s_preference",
+    "original_value": "f1",
+    "error_value": "f2",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown transport preference will cause interface selection failure.",
+    "explanation_zh": "未知的傳輸偏好會導致介面選擇失敗。"
+  },
+  {
+    "filename": "cu_case_11.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero streams will cause SCTP association failure.",
+    "explanation_zh": "零個串流會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_12.json",
+    "modified_key": "security.drb_ciphering",
+    "original_value": "yes",
+    "error_value": true,
+    "error_type": "wrong_type",
+    "explanation_en": "Boolean instead of string will cause configuration parsing error.",
+    "explanation_zh": "布林值而非字串會導致配置解析錯誤。"
+  },
+  {
+    "filename": "cu_case_13.json",
+    "modified_key": "security.ciphering_algorithms[0]",
+    "original_value": "nea3",
+    "error_value": "nea5",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown ciphering algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的加密演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_14.json",
+    "modified_key": "gNBs.gNB_name",
+    "original_value": "gNB-Eurecom-CU",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Null value for gNB name will cause identification issues.",
+    "explanation_zh": "gNB 名稱的空值會導致識別問題。"
+  },
+  {
+    "filename": "cu_case_15.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "MCC out of range will cause PLMN validation failure.",
+    "explanation_zh": "MCC 超出範圍會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_16.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "MNC out of range will cause PLMN validation failure.",
+    "explanation_zh": "MNC 超出範圍會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_17.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero MNC length will cause PLMN parsing error.",
+    "explanation_zh": "零 MNC 長度會導致 PLMN 解析錯誤。"
+  },
+  {
+    "filename": "cu_case_18.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": 256,
+    "error_type": "out_of_range",
+    "explanation_en": "SST out of range will cause NSSAI validation failure.",
+    "explanation_zh": "SST 超出範圍會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_19.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative NR cell ID will cause cell identification failure.",
+    "explanation_zh": "負 NR 小區 ID 會導致小區識別失敗。"
+  },
+  {
+    "filename": "cu_case_20.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": 123,
+    "error_type": "wrong_type",
+    "explanation_en": "Numeric interface name will cause network interface binding error.",
+    "explanation_zh": "數字介面名稱會導致網路介面綁定錯誤。"
+  },
+  {
+    "filename": "cu_case_21.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid remote IP will cause connection failure.",
+    "explanation_zh": "無效的遠端 IP 會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_22.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "Port number exceeds maximum, causing binding failure.",
+    "explanation_zh": "連接埠號碼超過最大值，導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_23.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Invalid remote port 0 causes connection failure.",
+    "explanation_zh": "無效的遠端連接埠 0 導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_24.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero out streams will cause SCTP association failure.",
+    "explanation_zh": "零輸出串流會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_25.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid NG AMF IP will cause AMF communication failure.",
+    "explanation_zh": "無效的 NG AMF IP 會導致 AMF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_26.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative port number will cause socket binding failure.",
+    "explanation_zh": "負連接埠號碼會導致 socket 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_27.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid NGU IP will cause UPF communication failure.",
+    "explanation_zh": "無效的 NGU IP 會導致 UPF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_28.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Port 0 is invalid for S1U interface, causing binding failure.",
+    "explanation_zh": "連接埠 0 對於 S1U 介面無效，導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_29.json",
+    "modified_key": "security.integrity_algorithms[0]",
+    "original_value": "nia2",
+    "error_value": "nia5",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown integrity algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的完整性演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_30.json",
+    "modified_key": "log_config.hw_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid hardware log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的硬體日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_31.json",
+    "modified_key": "log_config.phy_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid physical layer log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的實體層日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_32.json",
+    "modified_key": "log_config.mac_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid MAC layer log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的 MAC 層日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_33.json",
+    "modified_key": "log_config.rlc_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid RLC layer log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的 RLC 層日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_34.json",
+    "modified_key": "log_config.pdcp_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid PDCP layer log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的 PDCP 層日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_35.json",
+    "modified_key": "log_config.rrc_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid RRC layer log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的 RRC 層日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_36.json",
+    "modified_key": "log_config.ngap_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid NGAP log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的 NGAP 日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_37.json",
+    "modified_key": "log_config.f1ap_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid F1AP log level will cause logging system initialization failure.",
+    "explanation_zh": "無效的 F1AP 日誌級別會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_38.json",
+    "modified_key": "security.drb_integrity",
+    "original_value": "no",
+    "error_value": true,
+    "error_type": "wrong_type",
+    "explanation_en": "Boolean instead of string for DRB integrity will cause configuration parsing error.",
+    "explanation_zh": "DRB 完整性的布林值而非字串會導致配置解析錯誤。"
+  },
+  {
+    "filename": "cu_case_39.json",
+    "modified_key": "Active_gNBs",
+    "original_value": ["gNB-Eurecom-CU"],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Empty active gNBs list will cause system to have no active nodes, leading to startup failure.",
+    "explanation_zh": "空的活躍 gNB 清單會導致系統沒有活躍節點，造成啟動失敗。"
+  },
+  {
+    "filename": "cu_case_40.json",
+    "modified_key": "security.ciphering_algorithms[1]",
+    "original_value": "nea2",
+    "error_value": "nea6",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown ciphering algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的加密演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_41.json",
+    "modified_key": "security.integrity_algorithms[1]",
+    "original_value": "nia0",
+    "error_value": "nia3",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown integrity algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的完整性演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_42.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "Port number exceeds maximum, causing binding failure.",
+    "explanation_zh": "連接埠號碼超過最大值，導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_43.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "Port number exceeds maximum, causing connection failure.",
+    "explanation_zh": "連接埠號碼超過最大值，導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_44.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative port number will cause socket binding failure.",
+    "explanation_zh": "負連接埠號碼會導致 socket 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_45.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative port number will cause connection failure.",
+    "explanation_zh": "負連接埠號碼會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_46.json",
+    "modified_key": "security.ciphering_algorithms[2]",
+    "original_value": "nea1",
+    "error_value": "nea7",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown ciphering algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的加密演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_47.json",
+    "modified_key": "security.ciphering_algorithms[3]",
+    "original_value": "nea0",
+    "error_value": "nea8",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown ciphering algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的加密演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_48.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative streams will cause SCTP association failure.",
+    "explanation_zh": "負串流會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_49.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative out streams will cause SCTP association failure.",
+    "explanation_zh": "負輸出串流會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_50.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "TAC value exceeds maximum, causing cell registration issues.",
+    "explanation_zh": "TAC 值超過最大值，導致小區註冊問題。"
+  },
+  {
+    "filename": "cu_case_51.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 123456789,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting NR cell ID to 0 will cause cell identification failure.",
+    "explanation_zh": "將 NR 小區 ID 設定為 0 會導致小區識別失敗。"
+  },
+  {
+    "filename": "cu_case_52.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative MCC will cause PLMN validation failure.",
+    "explanation_zh": "負 MCC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_53.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative MNC will cause PLMN validation failure.",
+    "explanation_zh": "負 MNC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_54.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": 4,
+    "error_type": "out_of_range",
+    "explanation_en": "MNC length 4 is invalid (should be 2 or 3), causing PLMN parsing error.",
+    "explanation_zh": "MNC 長度 4 無效（應為 2 或 3），導致 PLMN 解析錯誤。"
+  },
+  {
+    "filename": "cu_case_55.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative SST will cause NSSAI validation failure.",
+    "explanation_zh": "負 SST 會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_56.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sd",
+    "original_value": 123,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative SD will cause NSSAI validation failure.",
+    "explanation_zh": "負 SD 會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_57.json",
+    "modified_key": "security.integrity_algorithms[0]",
+    "original_value": "nia2",
+    "error_value": "nia4",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown integrity algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的完整性演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_58.json",
+    "modified_key": "security.integrity_algorithms[1]",
+    "original_value": "nia0",
+    "error_value": "nia5",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown integrity algorithm will cause security negotiation failure.",
+    "explanation_zh": "未知的完整性演算法會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_59.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "invalid.ip",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid IP address format will cause AMF communication failure.",
+    "explanation_zh": "無效的 IP 位址格式會導致 AMF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_60.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "Port number exceeds maximum, causing S1U interface binding failure.",
+    "explanation_zh": "連接埠號碼超過最大值，導致 S1U 介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_61.json",
+    "modified_key": "gNBs.tr_s_preference",
+    "original_value": "f1",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown transport preference will cause interface selection failure.",
+    "explanation_zh": "未知的傳輸偏好會導致介面選擇失敗。"
+  },
+  {
+    "filename": "cu_case_62.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty interface name will cause network interface binding error.",
+    "explanation_zh": "空的介面名稱會導致網路介面綁定錯誤。"
+  },
+  {
+    "filename": "cu_case_63.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty remote address will cause connection failure.",
+    "explanation_zh": "空的遠端位址會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_64.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty AMF IP will cause AMF communication failure.",
+    "explanation_zh": "空的 AMF IP 會導致 AMF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_65.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty NG AMF IP will cause AMF communication failure.",
+    "explanation_zh": "空的 NG AMF IP 會導致 AMF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_66.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty NGU IP will cause UPF communication failure.",
+    "explanation_zh": "空的 NGU IP 會導致 UPF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_67.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty local address will cause socket binding failure.",
+    "explanation_zh": "空的本地位址會導致 socket 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_68.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty gNB ID will cause identification issues.",
+    "explanation_zh": "空的 gNB ID 會導致識別問題。"
+  },
+  {
+    "filename": "cu_case_69.json",
+    "modified_key": "gNBs.gNB_name",
+    "original_value": "gNB-Eurecom-CU",
+    "error_value": "",
+    "error_type": "missing_value",
+    "explanation_en": "Empty gNB name will cause identification issues.",
+    "explanation_zh": "空的 gNB 名稱會導致識別問題。"
+  },
+  {
+    "filename": "cu_case_70.json",
+    "modified_key": "Active_gNBs",
+    "original_value": ["gNB-Eurecom-CU"],
+    "error_value": [""],
+    "error_type": "missing_value",
+    "explanation_en": "Empty active gNB name will cause system to have no active nodes, leading to startup failure.",
+    "explanation_zh": "空的活躍 gNB 名稱會導致系統沒有活躍節點，造成啟動失敗。"
+  },
+  {
+    "filename": "cu_case_71.json",
+    "modified_key": "security.ciphering_algorithms",
+    "original_value": ["nea3", "nea2", "nea1", "nea0"],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Empty ciphering algorithms list will cause security negotiation failure.",
+    "explanation_zh": "空的加密演算法清單會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_72.json",
+    "modified_key": "security.integrity_algorithms",
+    "original_value": ["nia2", "nia0"],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Empty integrity algorithms list will cause security negotiation failure.",
+    "explanation_zh": "空的完整性演算法清單會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_73.json",
+    "modified_key": "gNBs.plmn_list.snssaiList",
+    "original_value": {"sst": 1},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty NSSAI list will cause PLMN validation failure.",
+    "explanation_zh": "空的 NSSAI 清單會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_74.json",
+    "modified_key": "gNBs.SCTP",
+    "original_value": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty SCTP configuration will cause SCTP association failure.",
+    "explanation_zh": "空的 SCTP 配置會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_75.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES",
+    "original_value": {"GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43", "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43", "GNB_PORT_FOR_S1U": 2152},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty network interfaces will cause all network communications to fail.",
+    "explanation_zh": "空的網路介面會導致所有網路通訊失敗。"
+  },
+  {
+    "filename": "cu_case_76.json",
+    "modified_key": "gNBs.amf_ip_address",
+    "original_value": {"ipv4": "192.168.70.132"},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty AMF IP address object will cause AMF communication failure.",
+    "explanation_zh": "空的 AMF IP 位址物件會導致 AMF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_77.json",
+    "modified_key": "log_config",
+    "original_value": {"global_log_level": "info", "hw_log_level": "info", "phy_log_level": "info", "mac_log_level": "info", "rlc_log_level": "info", "pdcp_log_level": "info", "rrc_log_level": "info", "ngap_log_level": "info", "f1ap_log_level": "info"},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty log configuration will cause logging system initialization failure.",
+    "explanation_zh": "空的日誌配置會導致日誌系統初始化失敗。"
+  },
+  {
+    "filename": "cu_case_78.json",
+    "modified_key": "gNBs.plmn_list",
+    "original_value": {"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": {"sst": 1}},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty PLMN list will cause PLMN validation failure.",
+    "explanation_zh": "空的 PLMN 清單會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_79.json",
+    "modified_key": "gNBs",
+    "original_value": {"gNB_ID": "0xe00", "gNB_name": "gNB-Eurecom-CU", "tracking_area_code": 1, "plmn_list": {"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": {"sst": 1}}, "nr_cellid": 123456789, "tr_s_preference": "f1", "local_s_if_name": "lo", "local_s_address": "127.0.0.5", "remote_s_address": "127.0.0.3", "local_s_portc": 501, "local_s_portd": 2152, "remote_s_portc": 500, "remote_s_portd": 2152, "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2}, "amf_ip_address": {"ipv4": "192.168.70.132"}, "NETWORK_INTERFACES": {"GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43", "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43", "GNB_PORT_FOR_S1U": 2152}},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty gNBs configuration will cause complete system failure.",
+    "explanation_zh": "空的 gNBs 配置會導致完整系統失敗。"
+  },
+  {
+    "filename": "cu_case_80.json",
+    "modified_key": "security",
+    "original_value": {"ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"], "integrity_algorithms": ["nia2", "nia0"], "drb_ciphering": "yes", "drb_integrity": "no"},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty security configuration will cause security negotiation failure.",
+    "explanation_zh": "空的安全配置會導致安全協商失敗。"
+  },
+  {
+    "filename": "cu_case_81.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for thread count will cause parsing error.",
+    "explanation_zh": "字串而非數字的執行緒計數會導致解析錯誤。"
+  },
+  {
+    "filename": "cu_case_82.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero threads will cause PUSCH processing failure.",
+    "explanation_zh": "零個執行緒會導致 PUSCH 處理失敗。"
+  },
+  {
+    "filename": "cu_case_83.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "invalid_hex",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid hex format for gNB ID will cause parsing error.",
+    "explanation_zh": "gNB ID 的無效十六進位格式會導致解析錯誤。"
+  },
+  {
+    "filename": "cu_case_84.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": "invalid_interface",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid interface name will cause network interface binding error.",
+    "explanation_zh": "無效的介面名稱會導致網路介面綁定錯誤。"
+  },
+  {
+    "filename": "cu_case_85.json",
+    "modified_key": "security.drb_ciphering",
+    "original_value": "yes",
+    "error_value": "maybe",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown value for DRB ciphering will cause configuration parsing error.",
+    "explanation_zh": "DRB 加密的未知值會導致配置解析錯誤。"
+  },
+  {
+    "filename": "cu_case_86.json",
+    "modified_key": "security.drb_integrity",
+    "original_value": "no",
+    "error_value": "maybe",
+    "error_type": "invalid_enum",
+    "explanation_en": "Unknown value for DRB integrity will cause configuration parsing error.",
+    "explanation_zh": "DRB 完整性的未知值會導致配置解析錯誤。"
+  },
+  {
+    "filename": "cu_case_87.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for SST will cause NSSAI validation failure.",
+    "explanation_zh": "SST 的字串而非數字會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_88.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sd",
+    "original_value": 123,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for SD will cause NSSAI validation failure.",
+    "explanation_zh": "SD 的字串而非數字會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_89.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for SCTP in streams will cause SCTP association failure.",
+    "explanation_zh": "SCTP 輸入串流的字串而非數字會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_90.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for SCTP out streams will cause SCTP association failure.",
+    "explanation_zh": "SCTP 輸出串流的字串而非數字會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_91.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for S1U port will cause binding failure.",
+    "explanation_zh": "S1U 連接埠的字串而非數字會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_92.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for local port C will cause socket binding failure.",
+    "explanation_zh": "本地位址連接埠 C 的字串而非數字會導致 socket 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_93.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for local port D will cause socket binding failure.",
+    "explanation_zh": "本地位址連接埠 D 的字串而非數字會導致 socket 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_94.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for remote port C will cause connection failure.",
+    "explanation_zh": "遠端連接埠 C 的字串而非數字會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_95.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for remote port D will cause connection failure.",
+    "explanation_zh": "遠端連接埠 D 的字串而非數字會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_96.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for MCC will cause PLMN configuration failure.",
+    "explanation_zh": "MCC 的字串而非數字會導致 PLMN 配置失敗。"
+  },
+  {
+    "filename": "cu_case_97.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for MNC will cause PLMN configuration failure.",
+    "explanation_zh": "MNC 的字串而非數字會導致 PLMN 配置失敗。"
+  },
+  {
+    "filename": "cu_case_98.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for MNC length will cause PLMN configuration failure.",
+    "explanation_zh": "MNC 長度的字串而非數字會導致 PLMN 配置失敗。"
+  },
+  {
+    "filename": "cu_case_99.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for tracking area code will cause configuration parsing error.",
+    "explanation_zh": "追蹤區域代碼的字串而非數字會導致配置解析錯誤。"
+  },
+  {
+    "filename": "cu_case_100.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 123456789,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for NR cell ID will cause cell identification failure.",
+    "explanation_zh": "NR 細胞 ID 的字串而非數字會導致細胞識別失敗。"
+  },
+  {
+    "filename": "cu_case_101.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for local port C will cause SCTP binding failure.",
+    "explanation_zh": "本地連接埠 C 的字串而非數字會導致 SCTP 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_102.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for local port D will cause SCTP binding failure.",
+    "explanation_zh": "本地連接埠 D 的字串而非數字會導致 SCTP 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_103.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for remote port C will cause SCTP connection failure.",
+    "explanation_zh": "遠端連接埠 C 的字串而非數字會導致 SCTP 連線失敗。"
+  },
+  {
+    "filename": "cu_case_104.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for remote port D will cause SCTP connection failure.",
+    "explanation_zh": "遠端連接埠 D 的字串而非數字會導致 SCTP 連線失敗。"
+  },
+  {
+    "filename": "cu_case_105.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for SCTP in-streams will cause association setup failure.",
+    "explanation_zh": "SCTP 輸入串流的字串而非數字會導致關聯設定失敗。"
+  },
+  {
+    "filename": "cu_case_106.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for SCTP out-streams will cause association setup failure.",
+    "explanation_zh": "SCTP 輸出串流的字串而非數字會導致關聯設定失敗。"
+  },
+  {
+    "filename": "cu_case_107.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for S1U port will cause network interface binding failure.",
+    "explanation_zh": "S1U 連接埠的字串而非數字會導致網路介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_108.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for SST will cause NSSAI configuration error.",
+    "explanation_zh": "SST 的字串而非數字會導致 NSSAI 配置錯誤。"
+  },
+  {
+    "filename": "cu_case_109.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "String instead of number for PUSCH threads will cause thread allocation failure.",
+    "explanation_zh": "PUSCH 執行緒的字串而非數字會導致執行緒分配失敗。"
+  },
+  {
+    "filename": "cu_case_110.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": 2304,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for gNB ID will cause ID parsing error.",
+    "explanation_zh": "gNB ID 的數字而非字串會導致 ID 解析錯誤。"
+  },
+  {
+    "filename": "cu_case_111.json",
+    "modified_key": "gNBs.gNB_name",
+    "original_value": "gNB-Eurecom-CU",
+    "error_value": 12345,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for gNB name will cause name parsing error.",
+    "explanation_zh": "gNB 名稱的數字而非字串會導致名稱解析錯誤。"
+  },
+  {
+    "filename": "cu_case_112.json",
+    "modified_key": "gNBs.tr_s_preference",
+    "original_value": "f1",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for transport preference will cause configuration rejection.",
+    "explanation_zh": "傳輸偏好的無效枚舉值會導致配置拒絕。"
+  },
+  {
+    "filename": "cu_case_113.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": 12345,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for local interface name will cause interface lookup failure.",
+    "explanation_zh": "本地介面名稱的數字而非字串會導致介面查找失敗。"
+  },
+  {
+    "filename": "cu_case_114.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": 12345,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for local IP address will cause address parsing failure.",
+    "explanation_zh": "本地 IP 位址的數字而非字串會導致位址解析失敗。"
+  },
+  {
+    "filename": "cu_case_115.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": 12345,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for remote IP address will cause address parsing failure.",
+    "explanation_zh": "遠端 IP 位址的數字而非字串會導致位址解析失敗。"
+  },
+  {
+    "filename": "cu_case_116.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": 12345,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for AMF IP address will cause address parsing failure.",
+    "explanation_zh": "AMF IP 位址的數字而非字串會導致位址解析失敗。"
+  },
+  {
+    "filename": "cu_case_117.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": 12345,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for NG-AMF IP address will cause address parsing failure.",
+    "explanation_zh": "NG-AMF IP 位址的數字而非字串會導致位址解析失敗。"
+  },
+  {
+    "filename": "cu_case_118.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": 12345,
+    "error_type": "wrong_type",
+    "explanation_en": "Number instead of string for NGU IP address will cause address parsing failure.",
+    "explanation_zh": "NGU IP 位址的數字而非字串會導致位址解析失敗。"
+  },
+  {
+    "filename": "cu_case_119.json",
+    "modified_key": "security.drb_ciphering",
+    "original_value": "yes",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for DRB ciphering will cause security configuration failure.",
+    "explanation_zh": "DRB 加密的無效枚舉值會導致安全配置失敗。"
+  },
+  {
+    "filename": "cu_case_120.json",
+    "modified_key": "security.drb_integrity",
+    "original_value": "no",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for DRB integrity will cause security configuration failure.",
+    "explanation_zh": "DRB 完整性的無效枚舉值會導致安全配置失敗。"
+  },
+  {
+    "filename": "cu_case_121.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for global log level will cause logging configuration failure.",
+    "explanation_zh": "全域日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_122.json",
+    "modified_key": "log_config.hw_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for HW log level will cause logging configuration failure.",
+    "explanation_zh": "HW 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_123.json",
+    "modified_key": "log_config.phy_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for PHY log level will cause logging configuration failure.",
+    "explanation_zh": "PHY 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_124.json",
+    "modified_key": "log_config.mac_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for MAC log level will cause logging configuration failure.",
+    "explanation_zh": "MAC 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_125.json",
+    "modified_key": "log_config.rlc_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for RLC log level will cause logging configuration failure.",
+    "explanation_zh": "RLC 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_126.json",
+    "modified_key": "log_config.pdcp_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for PDCP log level will cause logging configuration failure.",
+    "explanation_zh": "PDCP 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_127.json",
+    "modified_key": "log_config.rrc_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for RRC log level will cause logging configuration failure.",
+    "explanation_zh": "RRC 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_128.json",
+    "modified_key": "log_config.ngap_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for NGAP log level will cause logging configuration failure.",
+    "explanation_zh": "NGAP 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_129.json",
+    "modified_key": "log_config.f1ap_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for F1AP log level will cause logging configuration failure.",
+    "explanation_zh": "F1AP 日誌等級的無效枚舉值會導致日誌配置失敗。"
+  },
+  {
+    "filename": "cu_case_130.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "none",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Invalid enum value for ASN.1 verbosity will cause ASN.1 parsing configuration failure.",
+    "explanation_zh": "ASN.1 詳細程度的無效枚舉值會導致 ASN.1 解析配置失敗。"
+  },
+  {
+    "filename": "cu_case_131.json",
+    "modified_key": "Active_gNBs",
+    "original_value": ["gNB-Eurecom-CU"],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Empty active gNB list will cause no gNB to be activated.",
+    "explanation_zh": "空的活躍 gNB 清單會導致沒有 gNB 被啟動。"
+  },
+  {
+    "filename": "cu_case_132.json",
+    "modified_key": "security.ciphering_algorithms",
+    "original_value": ["nea3", "nea2", "nea1", "nea0"],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Empty ciphering algorithms list will cause encryption failure.",
+    "explanation_zh": "空的加密演算法清單會導致加密失敗。"
+  },
+  {
+    "filename": "cu_case_133.json",
+    "modified_key": "security.integrity_algorithms",
+    "original_value": ["nia2", "nia0"],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Empty integrity algorithms list will cause integrity protection failure.",
+    "explanation_zh": "空的完整性演算法清單會導致完整性保護失敗。"
+  },
+  {
+    "filename": "cu_case_134.json",
+    "modified_key": "gNBs",
+    "original_value": {"gNB_ID": "0xe00", "gNB_name": "gNB-Eurecom-CU", "tracking_area_code": 1, "plmn_list": {"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": {"sst": 1}}, "nr_cellid": 123456789, "tr_s_preference": "f1", "local_s_if_name": "lo", "local_s_address": "127.0.0.5", "remote_s_address": "127.0.0.3", "local_s_portc": 501, "local_s_portd": 2152, "remote_s_portc": 500, "remote_s_portd": 2152, "SCTP": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2}, "amf_ip_address": {"ipv4": "192.168.70.132"}, "NETWORK_INTERFACES": {"GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43", "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43", "GNB_PORT_FOR_S1U": 2152}},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty gNBs object will cause no gNB configuration to be loaded.",
+    "explanation_zh": "空的 gNBs 物件會導致沒有 gNB 配置被載入。"
+  },
+  {
+    "filename": "cu_case_135.json",
+    "modified_key": "security",
+    "original_value": {"ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"], "integrity_algorithms": ["nia2", "nia0"], "drb_ciphering": "yes", "drb_integrity": "no"},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty security object will cause no security configuration to be loaded.",
+    "explanation_zh": "空的 security 物件會導致沒有安全配置被載入。"
+  },
+  {
+    "filename": "cu_case_136.json",
+    "modified_key": "log_config",
+    "original_value": {"global_log_level": "info", "hw_log_level": "info", "phy_log_level": "info", "mac_log_level": "info", "rlc_log_level": "info", "pdcp_log_level": "info", "rrc_log_level": "info", "ngap_log_level": "info", "f1ap_log_level": "info"},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty log config object will cause no logging configuration to be loaded.",
+    "explanation_zh": "空的 log_config 物件會導致沒有日誌配置被載入。"
+  },
+  {
+    "filename": "cu_case_137.json",
+    "modified_key": "gNBs.plmn_list",
+    "original_value": {"mcc": 1, "mnc": 1, "mnc_length": 2, "snssaiList": {"sst": 1}},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty PLMN list will cause no PLMN configuration to be loaded.",
+    "explanation_zh": "空的 PLMN 清單會導致沒有 PLMN 配置被載入。"
+  },
+  {
+    "filename": "cu_case_138.json",
+    "modified_key": "gNBs.SCTP",
+    "original_value": {"SCTP_INSTREAMS": 2, "SCTP_OUTSTREAMS": 2},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty SCTP configuration will cause SCTP setup failure.",
+    "explanation_zh": "空的 SCTP 配置會導致 SCTP 設定失敗。"
+  },
+  {
+    "filename": "cu_case_139.json",
+    "modified_key": "gNBs.amf_ip_address",
+    "original_value": {"ipv4": "192.168.70.132"},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty AMF IP address configuration will cause AMF connection failure.",
+    "explanation_zh": "空的 AMF IP 位址配置會導致 AMF 連線失敗。"
+  },
+  {
+    "filename": "cu_case_140.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES",
+    "original_value": {"GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43", "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43", "GNB_PORT_FOR_S1U": 2152},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty network interfaces configuration will cause interface binding failure.",
+    "explanation_zh": "空的網路介面配置會導致介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_141.json",
+    "modified_key": "gNBs.plmn_list.snssaiList",
+    "original_value": {"sst": 1},
+    "error_value": {},
+    "error_type": "missing_value",
+    "explanation_en": "Empty SNSSAI list will cause no network slice configuration to be loaded.",
+    "explanation_zh": "空的 SNSSAI 清單會導致沒有網路切片配置被載入。"
+  },
+  {
+    "filename": "cu_case_142.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative thread count will cause thread allocation failure.",
+    "explanation_zh": "負數的執行緒數量會導致執行緒分配失敗。"
+  },
+  {
+    "filename": "cu_case_143.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative tracking area code will cause configuration validation failure.",
+    "explanation_zh": "負數的追蹤區域代碼會導致配置驗證失敗。"
+  },
+  {
+    "filename": "cu_case_144.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 123456789,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative NR cell ID will cause cell identification failure.",
+    "explanation_zh": "負數的 NR 細胞 ID 會導致細胞識別失敗。"
+  },
+  {
+    "filename": "cu_case_145.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative MCC will cause PLMN configuration failure.",
+    "explanation_zh": "負數的 MCC 會導致 PLMN 配置失敗。"
+  },
+  {
+    "filename": "cu_case_146.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative MNC will cause PLMN configuration failure.",
+    "explanation_zh": "負數的 MNC 會導致 PLMN 配置失敗。"
+  },
+  {
+    "filename": "cu_case_147.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative MNC length will cause PLMN parsing error.",
+    "explanation_zh": "負數的 MNC 長度會導致 PLMN 解析錯誤。"
+  },
+  {
+    "filename": "cu_case_148.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative local SCTP port will cause binding failure.",
+    "explanation_zh": "負數的本地 SCTP 連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_149.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative remote SCTP port will cause connection failure.",
+    "explanation_zh": "負數的遠端 SCTP 連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_150.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative local data port will cause binding failure.",
+    "explanation_zh": "負數的本地資料連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_151.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative remote data port will cause connection failure.",
+    "explanation_zh": "負數的遠端資料連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_152.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative SCTP input streams will cause SCTP initialization failure.",
+    "explanation_zh": "負數的 SCTP 輸入串流會導致 SCTP 初始化失敗。"
+  },
+  {
+    "filename": "cu_case_153.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative SCTP output streams will cause SCTP initialization failure.",
+    "explanation_zh": "負數的 SCTP 輸出串流會導致 SCTP 初始化失敗。"
+  },
+  {
+    "filename": "cu_case_154.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative S1U port will cause network interface binding failure.",
+    "explanation_zh": "負數的 S1U 連接埠會導致網路介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_155.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Negative SST will cause NSSAI validation failure.",
+    "explanation_zh": "負數的 SST 會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_156.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero PUSCH threads will cause processing failure.",
+    "explanation_zh": "零個 PUSCH 執行緒會導致處理失敗。"
+  },
+  {
+    "filename": "cu_case_157.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero tracking area code will cause mobility management failure.",
+    "explanation_zh": "零追蹤區域碼會導致行動管理失敗。"
+  },
+  {
+    "filename": "cu_case_158.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero MCC will cause PLMN validation failure.",
+    "explanation_zh": "零 MCC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_159.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero MNC will cause PLMN validation failure.",
+    "explanation_zh": "零 MNC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_160.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero MNC length will cause PLMN parsing error.",
+    "explanation_zh": "零 MNC 長度會導致 PLMN 解析錯誤。"
+  },
+  {
+    "filename": "cu_case_161.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero SST will cause NSSAI validation failure.",
+    "explanation_zh": "零 SST 會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_162.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero local SCTP port will cause binding failure.",
+    "explanation_zh": "零本地 SCTP 連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_163.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero remote SCTP port will cause connection failure.",
+    "explanation_zh": "零遠端 SCTP 連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_164.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero local data port will cause binding failure.",
+    "explanation_zh": "零本地資料連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_165.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero remote data port will cause connection failure.",
+    "explanation_zh": "零遠端資料連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_166.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero SCTP input streams will cause SCTP initialization failure.",
+    "explanation_zh": "零 SCTP 輸入串流會導致 SCTP 初始化失敗。"
+  },
+  {
+    "filename": "cu_case_167.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero SCTP output streams will cause SCTP initialization failure.",
+    "explanation_zh": "零 SCTP 輸出串流會導致 SCTP 初始化失敗。"
+  },
+  {
+    "filename": "cu_case_168.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero S1U port will cause network interface binding failure.",
+    "explanation_zh": "零 S1U 連接埠會導致網路介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_169.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 123456789,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero NR cell ID will cause cell identification failure.",
+    "explanation_zh": "零 NR 小區 ID 會導致小區識別失敗。"
+  },
+  {
+    "filename": "cu_case_170.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "0x0",
+    "error_type": "out_of_range",
+    "explanation_en": "Zero gNB ID will cause gNB identification failure.",
+    "explanation_zh": "零 gNB ID 會導致 gNB 識別失敗。"
+  },
+  {
+    "filename": "cu_case_171.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "0xFFFFFFFF",
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum gNB ID will cause gNB identification failure.",
+    "explanation_zh": "最大 gNB ID 會導致 gNB 識別失敗。"
+  },
+  {
+    "filename": "cu_case_172.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 123456789,
+    "error_value": 268435455,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum NR cell ID will cause cell identification failure.",
+    "explanation_zh": "最大 NR 小區 ID 會導致小區識別失敗。"
+  },
+  {
+    "filename": "cu_case_173.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum tracking area code will cause mobility management failure.",
+    "explanation_zh": "最大追蹤區域碼會導致行動管理失敗。"
+  },
+  {
+    "filename": "cu_case_174.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": 999,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum MCC will cause PLMN validation failure.",
+    "explanation_zh": "最大 MCC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_175.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 999,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum MNC will cause PLMN validation failure.",
+    "explanation_zh": "最大 MNC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_176.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": 3,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum MNC length will cause PLMN parsing error.",
+    "explanation_zh": "最大 MNC 長度會導致 PLMN 解析錯誤。"
+  },
+  {
+    "filename": "cu_case_177.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": 255,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum SST will cause NSSAI validation failure.",
+    "explanation_zh": "最大 SST 會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_178.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum local SCTP port will cause binding failure.",
+    "explanation_zh": "最大本地 SCTP 連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_179.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum remote SCTP port will cause connection failure.",
+    "explanation_zh": "最大遠端 SCTP 連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_180.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum local data port will cause binding failure.",
+    "explanation_zh": "最大本地資料連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_181.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum remote data port will cause connection failure.",
+    "explanation_zh": "最大遠端資料連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_182.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum SCTP input streams will cause SCTP initialization failure.",
+    "explanation_zh": "最大 SCTP 輸入串流會導致 SCTP 初始化失敗。"
+  },
+  {
+    "filename": "cu_case_183.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum SCTP output streams will cause SCTP initialization failure.",
+    "explanation_zh": "最大 SCTP 輸出串流會導致 SCTP 初始化失敗。"
+  },
+  {
+    "filename": "cu_case_184.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 65535,
+    "error_type": "out_of_range",
+    "explanation_en": "Maximum S1U port will cause network interface binding failure.",
+    "explanation_zh": "最大 S1U 連接埠會導致網路介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_185.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive PUSCH threads will cause resource exhaustion.",
+    "explanation_zh": "過多的 PUSCH 執行緒會導致資源耗盡。"
+  },
+  {
+    "filename": "cu_case_186.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive tracking area code will cause mobility management failure.",
+    "explanation_zh": "過大的追蹤區域碼會導致行動管理失敗。"
+  },
+  {
+    "filename": "cu_case_187.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": 10000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive MCC will cause PLMN validation failure.",
+    "explanation_zh": "過大的 MCC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_188.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 10000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive MNC will cause PLMN validation failure.",
+    "explanation_zh": "過大的 MNC 會導致 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_189.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": 10,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive MNC length will cause PLMN parsing error.",
+    "explanation_zh": "過大的 MNC 長度會導致 PLMN 解析錯誤。"
+  },
+  {
+    "filename": "cu_case_190.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive SST will cause NSSAI validation failure.",
+    "explanation_zh": "過大的 SST 會導致 NSSAI 驗證失敗。"
+  },
+  {
+    "filename": "cu_case_191.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive local SCTP port will cause binding failure.",
+    "explanation_zh": "過大的本地 SCTP 連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_192.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive remote SCTP port will cause connection failure.",
+    "explanation_zh": "過大的遠端 SCTP 連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_193.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive local data port will cause binding failure.",
+    "explanation_zh": "過大的本地資料連接埠會導致綁定失敗。"
+  },
+  {
+    "filename": "cu_case_194.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive remote data port will cause connection failure.",
+    "explanation_zh": "過大的遠端資料連接埠會導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_195.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 1,
+    "error_value": 1000000000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive NR cell ID will cause cell identification failure.",
+    "explanation_zh": "過大的NR小區ID會導致小區識別失敗。"
+  },
+  {
+    "filename": "cu_case_196.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": 1000000000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive gNB ID will cause identification failure.",
+    "explanation_zh": "過大的gNB ID會導致識別失敗。"
+  },
+  {
+    "filename": "cu_case_197.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive SCTP in-streams will cause resource exhaustion.",
+    "explanation_zh": "過多的SCTP輸入串流會導致資源耗盡。"
+  },
+  {
+    "filename": "cu_case_198.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive SCTP out-streams will cause resource exhaustion.",
+    "explanation_zh": "過多的SCTP輸出串流會導致資源耗盡。"
+  },
+  {
+    "filename": "cu_case_199.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive tracking area code will cause area identification failure.",
+    "explanation_zh": "過大的追蹤區域代碼會導致區域識別失敗。"
+  },
+  {
+    "filename": "cu_case_200.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": 100000,
+    "error_type": "out_of_range",
+    "explanation_en": "Excessive SST value will cause NSSAI configuration failure.",
+    "explanation_zh": "過大的SST值會導致NSSAI配置失敗。"
+  },
+  {
+    "filename": "cu_case_201.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.8.43",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting AMF IP address to the same value as gNB's NG-AMF interface will cause IP routing conflicts, making AMF unreachable and leading to NG setup failures.",
+    "explanation_zh": "將 AMF IP 位址設定為與 gNB NG-AMF 介面位址相同的值會造成 IP 路由衝突，使 AMF 無法連線，並導致 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_202.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "0.0.0.0",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting AMF IP address to 0.0.0.0 makes it an invalid/unreachable address, causing NG interface connection failures and AMF communication breakdown.",
+    "explanation_zh": "將 AMF IP 位址設定為 0.0.0.0 會使其成為無效/無法連線的位址，導致 NG 介面連線失敗和 AMF 通訊中斷。"
+  },
+  {
+    "filename": "cu_case_203.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting gNB NG-AMF address to an invalid IP (octet > 255) will cause network interface binding failure and NG-AMF communication breakdown.",
+    "explanation_zh": "將 gNB NG-AMF 位址設定為無效 IP (八位元組 > 255) 會導致網路介面綁定失敗和 NG-AMF 通訊中斷。"
+  },
+  {
+    "filename": "cu_case_204.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting gNB NGU address to an invalid IP (octet > 255) will cause network interface binding failure and UPF communication breakdown.",
+    "explanation_zh": "將 gNB NGU 位址設定為無效 IP (八位元組 > 255) 會導致網路介面綁定失敗和 UPF 通訊中斷。"
+  },
+  {
+    "filename": "cu_case_205.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local SCTP address to an invalid IP (octet > 255) will cause SCTP socket binding failure and F1 interface setup failure.",
+    "explanation_zh": "將本地 SCTP 位址設定為無效 IP (八位元組 > 255) 會導致 SCTP 插槽綁定失敗和 F1 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_206.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote SCTP address to an invalid IP (octet > 255) will cause SCTP connection failure and F1 interface setup failure.",
+    "explanation_zh": "將遠端 SCTP 位址設定為無效 IP (八位元組 > 255) 會導致 SCTP 連線失敗和 F1 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_207.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local SCTP control port to an invalid value (-1) will cause socket binding failure and F1 interface setup failure.",
+    "explanation_zh": "將本地 SCTP 控制連接埠設定為無效值 (-1) 會導致插槽綁定失敗和 F1 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_208.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote SCTP control port to an invalid value (65536) will cause connection failure and F1 interface setup failure.",
+    "explanation_zh": "將遠端 SCTP 控制連接埠設定為無效值 (65536) 會導致連線失敗和 F1 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_209.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local SCTP data port to an invalid value (65536) will cause socket binding failure and F1 interface setup failure.",
+    "explanation_zh": "將本地 SCTP 資料連接埠設定為無效值 (65536) 會導致插槽綁定失敗和 F1 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_210.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote SCTP data port to an invalid value (-1) will cause connection failure and F1 interface setup failure.",
+    "explanation_zh": "將遠端 SCTP 資料連接埠設定為無效值 (-1) 會導致連線失敗和 F1 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_211.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting NG-AMF IP to invalid format will cause NG interface connection failure and prevent AMF communication.",
+    "explanation_zh": "将 NG-AMF IP 设置为无效格式会导致 NG 接口连接失败，阻止 AMF 通信。"
+  },
+  {
+    "filename": "cu_case_212.json",
+    "modified_key": "security.integrity_algorithms[0]",
+    "original_value": "nia2",
+    "error_value": "nia9",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection.",
+    "explanation_zh": "将完整性算法设置为未知的枚举值 'nia9'，会在安全协商阶段导致协商失败，并造成 NAS 注册被拒绝。"
+  },
+  {
+    "filename": "cu_case_213.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": "1",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing tracking area code to string instead of number will cause parsing error in the configuration loader, preventing the config from being loaded.",
+    "explanation_zh": "将跟踪区域代码改为字符串而非数字会在配置加载器中造成解析错误，阻止配置被加载。"
+  },
+  {
+    "filename": "cu_case_214.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting NR cell ID to negative value will cause configuration validation failure in cell setup phase.",
+    "explanation_zh": "将 NR 小区 ID 设置为负值会导致小区设置阶段的配置验证失败。"
+  },
+  {
+    "filename": "cu_case_215.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local SCTP control port to the same value as remote will cause port conflict in SCTP connection, leading to connection failure.",
+    "explanation_zh": "将本地 SCTP 控制端口设置为与远程相同的值会在 SCTP 连接中造成端口冲突，导致连接失败。"
+  },
+  {
+    "filename": "cu_case_216.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting AMF IP to null will cause NG-AMF connection failure and prevent UE registration.",
+    "explanation_zh": "将 AMF IP 设置为 null 会导致 NG-AMF 连接失败，阻止 UE 注册。"
+  },
+  {
+    "filename": "cu_case_217.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.70.999",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting AMF IP to invalid format will cause network connection failures during AMF communication, leading to registration rejection.",
+    "explanation_zh": "将 AMF IP 设置为无效格式会在 AMF 通信期间导致网络连接失败，造成注册被拒绝。"
+  },
+  {
+    "filename": "cu_case_218.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP in-streams to 0 will cause invalid SCTP configuration and connection failure.",
+    "explanation_zh": "将 SCTP 输入流设置为 0 会导致无效的 SCTP 配置和连接失败。"
+  },
+  {
+    "filename": "cu_case_219.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": "1",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing MCC to string instead of number will cause parsing error in the configuration loader, preventing the config from being loaded.",
+    "explanation_zh": "将 MCC 改为字符串而非数字会在配置加载器中造成解析错误，阻止配置被加载。"
+  },
+  {
+    "filename": "cu_case_220.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Using an invalid log level will cause the logging system to fail initialization, resulting in no logs being produced and potential debugging issues.",
+    "explanation_zh": "使用无效的日志级别会导致日志系统初始化失败，造成没有日志产生并可能出现调试问题。"
+  },
+  {
+    "filename": "cu_case_221.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local SCTP address to the same value as remote will cause address conflict in SCTP connection, leading to connection failure.",
+    "explanation_zh": "将本地 SCTP 地址设置为与远程相同的值会在 SCTP 连接中造成地址冲突，导致连接失败。"
+  },
+  {
+    "filename": "cu_case_222.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting NGU IP to null will cause NG-U interface connection failure and prevent user plane data transmission.",
+    "explanation_zh": "将 NGU IP 设置为 null 会导致 NG-U 接口连接失败，阻止用户平面数据传输。"
+  },
+  {
+    "filename": "cu_case_223.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting gNB ID to invalid format will cause configuration validation failure and prevent gNB initialization.",
+    "explanation_zh": "将 gNB ID 设置为无效格式会导致配置验证失败，阻止 gNB 初始化。"
+  },
+  {
+    "filename": "cu_case_224.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting MNC to out-of-range value will cause PLMN configuration failure and prevent network registration.",
+    "explanation_zh": "将 MNC 设置为超出范围的值会导致 PLMN 配置失败，阻止网络注册。"
+  },
+  {
+    "filename": "cu_case_225.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": "1",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing SST to string instead of number will cause parsing error in the configuration loader, preventing the config from being loaded.",
+    "explanation_zh": "将 SST 改为字符串而非数字会在配置加载器中造成解析错误，阻止配置被加载。"
+  },
+  {
+    "filename": "cu_case_226.json",
+    "modified_key": "security.drb_integrity",
+    "original_value": "no",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Using an invalid enum for DRB integrity will cause security configuration failure and prevent secure data transmission.",
+    "explanation_zh": "使用无效的枚举值作为 DRB 完整性会导致安全配置失败，阻止安全数据传输。"
+  },
+  {
+    "filename": "cu_case_227.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote SCTP data port to the same value as local control port will cause port conflict in SCTP connection, leading to connection failure.",
+    "explanation_zh": "将远程 SCTP 数据端口设置为与本地控制端口相同的值会在 SCTP 连接中造成端口冲突，导致连接失败。"
+  },
+  {
+    "filename": "cu_case_228.json",
+    "modified_key": "gNBs.amf_ip_address",
+    "original_value": {"ipv4": "192.168.70.132"},
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting AMF IP address to null will cause NG-AMF connection failure and prevent UE registration.",
+    "explanation_zh": "将 AMF IP 地址设置为 null 会导致 NG-AMF 连接失败，阻止 UE 注册。"
+  },
+  {
+    "filename": "cu_case_229.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local SCTP address to invalid IP format will cause network binding failure and F1 interface setup failure.",
+    "explanation_zh": "将本地 SCTP 地址设置为无效 IP 格式会导致网络绑定失败和 F1 接口设置失败。"
+  },
+  {
+    "filename": "cu_case_230.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP out-streams to 0 will cause invalid SCTP configuration and connection failure.",
+    "explanation_zh": "将 SCTP 输出流设置为 0 会导致无效的 SCTP 配置和连接失败。"
+  },
+  {
+    "filename": "cu_case_231.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": "2",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing MNC length to string instead of number will cause parsing error in the configuration loader, preventing the config from being loaded.",
+    "explanation_zh": "将 MNC 长度改为字符串而非数字会在配置加载器中造成解析错误，阻止配置被加载。"
+  },
+  {
+    "filename": "cu_case_232.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.70.132/24",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting the AMF IPv4 address to CIDR notation instead of a plain IP address will cause parsing errors during configuration validation, preventing the CU from establishing the NG-AMF interface.",
+    "explanation_zh": "将 AMF IPv4 地址设置为 CIDR 表示法而非纯 IP 地址，会在配置验证期间导致解析错误，阻止 CU 建立 NG-AMF 接口。"
+  },
+  {
+    "filename": "cu_case_233.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the S1U port to a value above the valid range (0-65535) will cause socket binding failure, preventing NG-U data plane establishment.",
+    "explanation_zh": "将 S1U 端口设置为超出有效范围 (0-65535) 的值，会导致套接字绑定失败，阻止 NG-U 数据平面建立。"
+  },
+  {
+    "filename": "cu_case_234.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": "501",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing the local SCTP control port to string instead of number will cause parsing error during configuration loading, preventing F1 interface establishment.",
+    "explanation_zh": "将本地 SCTP 控制端口改为字符串而非数字，会在配置加载期间导致解析错误，阻止 F1 接口建立。"
+  },
+  {
+    "filename": "cu_case_235.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting the AMF IPv4 address to null will cause connection failure to the AMF, preventing NG-AMF interface establishment and CU registration.",
+    "explanation_zh": "将 AMF IPv4 地址设置为 null 会导致与 AMF 的连接失败，阻止 NG-AMF 接口建立和 CU 注册。"
+  },
+  {
+    "filename": "cu_case_236.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the local SCTP control port to the same value as the remote port will cause port conflict in SCTP connection, leading to F1 interface failure.",
+    "explanation_zh": "将本地 SCTP 控制端口设置为与远程端口相同的值，会在 SCTP 连接中造成端口冲突，导致 F1 接口失败。"
+  },
+  {
+    "filename": "cu_case_237.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.43a",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the NG-AMF interface will cause network connection failures during AMF communication, leading to registration rejection.",
+    "explanation_zh": "NG-AMF 接口的无效 IP 地址格式会在 AMF 通信期间导致网络连接失败，造成注册被拒绝。"
+  },
+  {
+    "filename": "cu_case_238.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting the NGU IPv4 address to null will cause connection failure to the UPF, preventing NG-U data plane establishment.",
+    "explanation_zh": "将 NGU IPv4 地址设置为 null 会导致与 UPF 的连接失败，阻止 NG-U 数据平面建立。"
+  },
+  {
+    "filename": "cu_case_239.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP input streams to 0 will cause invalid SCTP configuration, leading to connection failure in the F1 interface.",
+    "explanation_zh": "将 SCTP 输入流设置为 0 会导致无效的 SCTP 配置，造成 F1 接口的连接失败。"
+  },
+  {
+    "filename": "cu_case_240.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": "2",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing SCTP output streams to string instead of number will cause parsing error during configuration loading, preventing F1 interface establishment.",
+    "explanation_zh": "将 SCTP 输出流改为字符串而非数字，会在配置加载期间导致解析错误，阻止 F1 接口建立。"
+  },
+  {
+    "filename": "cu_case_241.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.5a",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the local SCTP address will cause socket binding failure, preventing F1 connection establishment.",
+    "explanation_zh": "本地 SCTP 地址的无效 IP 格式会导致套接字绑定失败，阻止 F1 连接建立。"
+  },
+  {
+    "filename": "cu_case_242.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting the remote SCTP address to null will cause connection failure to the DU, preventing F1 interface establishment.",
+    "explanation_zh": "将远程 SCTP 地址设置为 null 会导致与 DU 的连接失败，阻止 F1 接口建立。"
+  },
+  {
+    "filename": "cu_case_243.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the local SCTP data port to a value above the valid range (0-65535) will cause socket binding failure, preventing F1 data plane establishment.",
+    "explanation_zh": "将本地 SCTP 数据端口设置为超出有效范围 (0-65535) 的值，会导致套接字绑定失败，阻止 F1 数据平面建立。"
+  },
+  {
+    "filename": "cu_case_244.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": "500",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing the remote SCTP control port to string instead of number will cause parsing error during configuration loading, preventing F1 interface establishment.",
+    "explanation_zh": "将远程 SCTP 控制端口改为字符串而非数字，会在配置加载期间导致解析错误，阻止 F1 接口建立。"
+  },
+  {
+    "filename": "cu_case_245.json",
+    "modified_key": "security.integrity_algorithms[0]",
+    "original_value": "nia2",
+    "error_value": "nia9",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting the integrity algorithm to the unknown enum ‘nia9’ will cause negotiation failure during the security negotiation phase and NAS registration rejection.",
+    "explanation_zh": "将完整性算法设置为未知的枚举值 ‘nia9’，会在安全协商阶段导致协商失败，并造成 NAS 注册被拒绝。"
+  },
+  {
+    "filename": "cu_case_246.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting the local SCTP interface name to null will cause interface binding failure, preventing F1 connection establishment.",
+    "explanation_zh": "将本地 SCTP 接口名称设置为 null 会导致接口绑定失败，阻止 F1 连接建立。"
+  },
+  {
+    "filename": "cu_case_247.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.3a",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the remote SCTP address will cause connection failure to the DU, preventing F1 interface establishment.",
+    "explanation_zh": "远程 SCTP 地址的无效 IP 格式会导致与 DU 的连接失败，阻止 F1 接口建立。"
+  },
+  {
+    "filename": "cu_case_248.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": "2152",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing the remote SCTP data port to string instead of number will cause parsing error during configuration loading, preventing F1 data plane establishment.",
+    "explanation_zh": "将远程 SCTP 数据端口改为字符串而非数字，会在配置加载期间导致解析错误，阻止 F1 数据平面建立。"
+  },
+  {
+    "filename": "cu_case_249.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the remote SCTP control port to a value above the valid range (0-65535) will cause socket connection failure, preventing F1 interface establishment.",
+    "explanation_zh": "将远程 SCTP 控制端口设置为超出有效范围 (0-65535) 的值，会导致套接字连接失败，阻止 F1 接口建立。"
+  },
+  {
+    "filename": "cu_case_250.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the gNB IP address for NG-AMF interface to the same address as the AMF will cause IP address conflict, preventing network communication and NG interface establishment.",
+    "explanation_zh": "將 gNB 用於 NG-AMF 介面的 IP 位址設定為與 AMF 相同的位址會導致 IP 位址衝突，阻止網路通訊並造成 NG 介面建立失敗。"
+  },
+  {
+    "filename": "cu_case_251.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting AMF IP address to an unreachable subnet will cause routing failure, preventing NG interface establishment and AMF communication.",
+    "explanation_zh": "將 AMF IP 位址設定為不可達的子網路會導致路由失敗，阻止 NG 介面建立和 AMF 通訊。"
+  },
+  {
+    "filename": "cu_case_252.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "10.0.0.2",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting NGu IP address to an unreachable subnet will cause routing failure for user plane traffic, preventing UPF communication and data transmission.",
+    "explanation_zh": "將 NGu IP 位址設定為不可達的子網路會導致使用者平面流量的路由失敗，阻止 UPF 通訊和資料傳輸。"
+  },
+  {
+    "filename": "cu_case_253.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local SCTP address to an external subnet IP will cause interface binding failure on the loopback interface, preventing F1 connection establishment.",
+    "explanation_zh": "將本地 SCTP 位址設定為外部子網路 IP 會導致在回環介面上的介面綁定失敗，阻止 F1 連線建立。"
+  },
+  {
+    "filename": "cu_case_254.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.2.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote SCTP address to an external subnet IP will cause connection failure to the DU, preventing F1 interface establishment.",
+    "explanation_zh": "將遠端 SCTP 位址設定為外部子網路 IP 會導致與 DU 的連線失敗，阻止 F1 介面建立。"
+  },
+  {
+    "filename": "cu_case_255.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": "invalid_if",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local SCTP interface name to a non-existent interface will cause binding failure, preventing F1 connection establishment.",
+    "explanation_zh": "將本地 SCTP 介面名稱設定為不存在的介面會導致綁定失敗，阻止 F1 連線建立。"
+  },
+  {
+    "filename": "cu_case_256.json",
+    "modified_key": "gNBs.tr_s_preference",
+    "original_value": "f1",
+    "error_value": "f3",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting transport preference to an unknown enum value will cause interface selection failure, preventing proper communication setup.",
+    "explanation_zh": "將傳輸偏好設定為未知的枚舉值會導致介面選擇失敗，阻止正確的通訊設定。"
+  },
+  {
+    "filename": "cu_case_257.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting NR cell ID to 0, which is reserved, will cause cell identification failure and registration issues.",
+    "explanation_zh": "將 NR 小區 ID 設定為 0（保留值）會導致小區識別失敗並造成註冊問題。"
+  },
+  {
+    "filename": "cu_case_258.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": 3840,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing gNB_ID to number instead of hex string will cause parsing error in ID processing.",
+    "explanation_zh": "將 gNB_ID 改為數字而非十六進位字串會在 ID 處理中造成解析錯誤。"
+  },
+  {
+    "filename": "cu_case_259.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting tracking_area_code to 0, which is reserved, will cause TAC validation failure and cell registration issues.",
+    "explanation_zh": "將 tracking_area_code 設定為 0（保留值）會導致 TAC 驗證失敗並造成小區註冊問題。"
+  },
+  {
+    "filename": "cu_case_260.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Port 0 is invalid for network communication, causing connection failure.",
+    "explanation_zh": "連接埠 0 對於網路通訊無效，導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_261.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the remote SCTP control port to a value above the valid range (0-65535) will cause socket connection failure, preventing F1 interface establishment.",
+    "explanation_zh": "將遠端 SCTP 控制埠設定為超出有效範圍 (0-65535) 的值，會導致套接字連線失敗，阻止 F1 介面建立。"
+  },
+  {
+    "filename": "cu_case_262.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": "2152",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing the remote SCTP data port to string instead of number will cause parsing error during configuration loading, preventing F1 data plane establishment.",
+    "explanation_zh": "將遠端 SCTP 資料埠改為字串而非數字，會在配置載入期間導致解析錯誤，阻止 F1 資料平面建立。"
+  },
+  {
+    "filename": "cu_case_263.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Zero streams will cause SCTP association failure.",
+    "explanation_zh": "零個串流會導致 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_264.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid IP address will cause socket binding failure.",
+    "explanation_zh": "無效的 IP 位址會導致 socket 綁定失敗。"
+  },
+  {
+    "filename": "cu_case_265.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.3a",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the remote SCTP address will cause connection failure to the DU, preventing F1 interface establishment.",
+    "explanation_zh": "遠端 SCTP 位址的無效 IP 格式會導致與 DU 的連線失敗，阻止 F1 介面建立。"
+  },
+  {
+    "filename": "cu_case_266.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting the local SCTP interface name to null will cause interface binding failure, preventing F1 connection establishment.",
+    "explanation_zh": "將本地 SCTP 介面名稱設定為 null 會導致介面綁定失敗，阻止 F1 連線建立。"
+  },
+  {
+    "filename": "cu_case_267.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local_s_portc to the same value as remote_s_portc will cause port conflict in SCTP connection, leading to connection failure.",
+    "explanation_zh": "將 local_s_portc 設定為與 remote_s_portc 相同的值會在 SCTP 連線中造成連接埠衝突，導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_268.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause the system to fail during thread initialization, leading to gNB startup failure.",
+    "explanation_zh": "將 Num_Threads_PUSCH 設定為負值會在執行緒初始化期間導致系統失敗，造成 gNB 啟動失敗。"
+  },
+  {
+    "filename": "cu_case_269.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "none",
+    "error_value": 123,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing Asn1_verbosity to a number instead of string will cause parsing error in the configuration loader, preventing the config from being loaded.",
+    "explanation_zh": "將 Asn1_verbosity 改為數字而非字串會在配置載入器中造成解析錯誤，阻止配置被載入。"
+  },
+  {
+    "filename": "cu_case_270.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the AMF IP address to a different subnet makes it unreachable, causing NG-AP connection failure and preventing gNB registration.",
+    "explanation_zh": "將 AMF IP 位址設定為不同子網路會使其無法連線，導致 NG-AP 連線失敗並阻止 gNB 註冊。"
+  },
+  {
+    "filename": "cu_case_271.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the CU's NG AMF interface IP to a different subnet makes the AMF unreachable, causing NG interface binding failure and registration rejection.",
+    "explanation_zh": "將 CU 的 NG AMF 介面 IP 設定為不同子網路會使 AMF 無法連線，導致 NG 介面綁定失敗並造成註冊被拒絕。"
+  },
+  {
+    "filename": "cu_case_272.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "10.0.0.2",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the CU's NGU interface IP to a different subnet makes the UPF unreachable, causing NG-U interface failure and data path disruption.",
+    "explanation_zh": "將 CU 的 NGU 介面 IP 設定為不同子網路會使 UPF 無法連線，導致 NG-U 介面失敗並造成資料路徑中斷。"
+  },
+  {
+    "filename": "cu_case_273.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "10.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the remote SCTP address to a different subnet makes the DU unreachable, causing F1 interface connection failure and cell setup rejection.",
+    "explanation_zh": "將遠端 SCTP 位址設定為不同子網路會使 DU 無法連線，導致 F1 介面連線失敗並造成小區設定被拒絕。"
+  },
+  {
+    "filename": "cu_case_274.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the local SCTP address the same as the remote address causes IP address conflict, leading to SCTP socket binding failure and F1 interface setup error.",
+    "explanation_zh": "將本地 SCTP 位址設定為與遠端位址相同會造成 IP 位址衝突，導致 SCTP socket 綁定失敗並造成 F1 介面設定錯誤。"
+  },
+  {
+    "filename": "cu_case_275.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the local SCTP control port to a value outside the valid range (0-65535) causes socket creation failure, leading to SCTP connection establishment error and F1 interface failure.",
+    "explanation_zh": "將本地 SCTP 控制連接埠設定為超出有效範圍 (0-65535) 的值會造成 socket 建立失敗，導致 SCTP 連線建立錯誤並造成 F1 介面失敗。"
+  },
+  {
+    "filename": "cu_case_276.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the local SCTP control port the same as the remote port causes port conflict during SCTP association setup, leading to connection failure and F1 interface rejection.",
+    "explanation_zh": "將本地 SCTP 控制連接埠設定為與遠端連接埠相同會在 SCTP 關聯設定期間造成連接埠衝突，導致連線失敗並造成 F1 介面被拒絕。"
+  },
+  {
+    "filename": "cu_case_277.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP instreams to 0 violates the minimum requirement for SCTP streams, causing SCTP association establishment failure and F1 interface connection error.",
+    "explanation_zh": "將 SCTP 輸入流設定為 0 違反了 SCTP 流的 minimum 要求，導致 SCTP 關聯建立失敗並造成 F1 介面連線錯誤。"
+  },
+  {
+    "filename": "cu_case_278.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": "two",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing SCTP instreams to a string instead of an integer causes type validation error during configuration parsing, preventing the config from being loaded.",
+    "explanation_zh": "將 SCTP 輸入流改為字串而非整數會在配置解析期間造成類型驗證錯誤，阻止配置被載入。"
+  },
+  {
+    "filename": "cu_case_279.json",
+    "modified_key": "security.ciphering_algorithms[0]",
+    "original_value": "nea3",
+    "error_value": "nea5",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting the ciphering algorithm to an unknown enum value will cause security negotiation failure during the initial security setup phase, leading to NAS registration rejection.",
+    "explanation_zh": "將加密算法設定為未知的枚舉值會在初始安全設定階段導致安全協商失敗，造成 NAS 註冊被拒絕。"
+  },
+  {
+    "filename": "cu_case_280.json",
+    "modified_key": "security.integrity_algorithms[0]",
+    "original_value": "nia2",
+    "error_value": "nia9",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection.",
+    "explanation_zh": "將完整性算法設定為未知的枚舉值 'nia9'，會在安全協商階段導致協商失敗，並造成 NAS 註冊被拒絕。"
+  },
+  {
+    "filename": "cu_case_281.json",
+    "modified_key": "security.drb_ciphering",
+    "original_value": "yes",
+    "error_value": 1,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing drb_ciphering to a number instead of a string causes type validation error during configuration parsing, preventing the config from being loaded.",
+    "explanation_zh": "將 drb_ciphering 改為數字而非字串會在配置解析期間造成類型驗證錯誤，阻止配置被載入。"
+  },
+  {
+    "filename": "cu_case_282.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Using an invalid log level will cause the logging system to fail initialization, resulting in no logs being produced and potential debugging issues.",
+    "explanation_zh": "使用無效的日誌級別會導致日誌系統初始化失敗，造成沒有日誌產生並可能出現除錯問題。"
+  },
+  {
+    "filename": "cu_case_283.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid gNB ID format will cause configuration validation failure, preventing the gNB from starting up properly.",
+    "explanation_zh": "無效的 gNB ID 格式會導致配置驗證失敗，阻止 gNB 正確啟動。"
+  },
+  {
+    "filename": "cu_case_284.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nr_cellid to a negative value violates the valid range for cell IDs, causing cell setup failure and preventing UE attachment.",
+    "explanation_zh": "將 nr_cellid 設定為負值違反了小區 ID 的有效範圍，導致小區設定失敗並阻止 UE 附接。"
+  },
+  {
+    "filename": "cu_case_285.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mcc to a value outside the valid range (000-999) causes PLMN validation failure, preventing network registration and UE connectivity.",
+    "explanation_zh": "將 mcc 設定為超出有效範圍 (000-999) 的值會導致 PLMN 驗證失敗，阻止網路註冊和 UE 連線。"
+  },
+  {
+    "filename": "cu_case_286.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mnc to a value outside the valid range (00-999) causes PLMN validation failure, preventing network registration and UE connectivity.",
+    "explanation_zh": "將 mnc 設定為超出有效範圍 (00-999) 的值會導致 PLMN 驗證失敗，阻止網路註冊和 UE 連線。"
+  },
+  {
+    "filename": "cu_case_287.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": 5,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mnc_length to a value outside the valid range (2-3) causes PLMN validation failure, preventing network registration and UE connectivity.",
+    "explanation_zh": "將 mnc_length 設定為超出有效範圍 (2-3) 的值會導致 PLMN 驗證失敗，阻止網路註冊和 UE 連線。"
+  },
+  {
+    "filename": "cu_case_288.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": 256,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting sst to a value outside the valid range (0-255) causes NSSAI validation failure, preventing network slice selection and UE connectivity.",
+    "explanation_zh": "將 sst 設定為超出有效範圍 (0-255) 的值會導致 NSSAI 驗證失敗，阻止網路切片選擇和 UE 連線。"
+  },
+  {
+    "filename": "cu_case_289.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting tracking_area_code to a negative value violates the valid range for TAC, causing UE attachment failure and preventing connectivity.",
+    "explanation_zh": "將 tracking_area_code 設定為負值違反了 TAC 的有效範圍，導致 UE 附接失敗並阻止連線。"
+  },
+  {
+    "filename": "cu_case_290.json",
+    "modified_key": "gNBs.tr_s_preference",
+    "original_value": "f1",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting tr_s_preference to an unknown enum value causes transport preference validation failure, preventing F1 interface setup and cell activation.",
+    "explanation_zh": "將 tr_s_preference 設定為未知的枚舉值會導致傳輸偏好驗證失敗，阻止 F1 介面設定和小區啟動。"
+  },
+  {
+    "filename": "cu_case_291.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": 123,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing local_s_if_name to a number instead of a string causes interface name validation error, preventing SCTP socket binding and F1 connection establishment.",
+    "explanation_zh": "將 local_s_if_name 改為數字而非字串會造成介面名稱驗證錯誤，阻止 SCTP socket 綁定和 F1 連線建立。"
+  },
+  {
+    "filename": "cu_case_292.json",
+    "modified_key": "gNBs.gNB_name",
+    "original_value": "gNB-Eurecom-CU",
+    "error_value": 123,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing gNB_name to a number instead of a string causes name validation error, preventing proper gNB identification and configuration loading.",
+    "explanation_zh": "將 gNB_name 改為數字而非字串會造成名稱驗證錯誤，阻止正確的 gNB 識別和配置載入。"
+  },
+  {
+    "filename": "cu_case_293.json",
+    "modified_key": "Active_gNBs",
+    "original_value": ["gNB-Eurecom-CU"],
+    "error_value": "gNB-Eurecom-CU",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing Active_gNBs to a string instead of an array causes list validation error, preventing gNB activation and system startup.",
+    "explanation_zh": "將 Active_gNBs 改為字串而非陣列會造成列表驗證錯誤，阻止 gNB 啟動和系統啟動。"
+  },
+  {
+    "filename": "cu_case_294.json",
+    "modified_key": "security.ciphering_algorithms",
+    "original_value": ["nea3", "nea2", "nea1", "nea0"],
+    "error_value": "nea3",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing ciphering_algorithms to a string instead of an array causes list validation error, preventing security algorithm configuration and UE authentication.",
+    "explanation_zh": "將 ciphering_algorithms 改為字串而非陣列會造成列表驗證錯誤，阻止安全算法配置和 UE 認證。"
+  },
+  {
+    "filename": "cu_case_295.json",
+    "modified_key": "security.integrity_algorithms",
+    "original_value": ["nia2", "nia0"],
+    "error_value": "nia2",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing integrity_algorithms to a string instead of an array causes list validation error, preventing security algorithm configuration and UE authentication.",
+    "explanation_zh": "將 integrity_algorithms 改為字串而非陣列會造成列表驗證錯誤，阻止安全算法配置和 UE 認證。"
+  },
+  {
+    "filename": "cu_case_296.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "127.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the NG AMF IP address to loopback causes routing failure, as the AMF is not reachable via 127.0.0.1, leading to NG interface connection failure.",
+    "explanation_zh": "將 NG AMF IP 位址設定為回環位址會導致路由失敗，因為 AMF 無法透過 127.0.0.1 連線，造成 NG 介面連線失敗。"
+  },
+  {
+    "filename": "cu_case_297.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the remote S address to a different private network IP makes the DU unreachable, causing F1 interface connection failure.",
+    "explanation_zh": "將遠端 S 位址設定為不同私有網路 IP 會使 DU 無法連線，造成 F1 介面連線失敗。"
+  },
+  {
+    "filename": "cu_case_298.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the NGU IP address to the same as AMF IP causes IP conflict and routing error, preventing UPF communication.",
+    "explanation_zh": "將 NGU IP 位址設定為與 AMF IP 相同會造成 IP 衝突和路由錯誤，阻止 UPF 通訊。"
+  },
+  {
+    "filename": "cu_case_299.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.8.43",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting AMF IP to the CU's own NG AMF interface IP causes IP conflict and self-loop, preventing AMF connection.",
+    "explanation_zh": "將 AMF IP 設定為 CU 自身的 NG AMF 介面 IP 會造成 IP 衝突和自迴圈，阻止 AMF 連線。"
+  },
+  {
+    "filename": "cu_case_300.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local S address to AMF IP causes IP conflict, preventing F1 interface binding and DU connection.",
+    "explanation_zh": "將本地 S 位址設定為 AMF IP 會造成 IP 衝突，阻止 F1 介面綁定和 DU 連線。"
+  },
+  {
+    "filename": "cu_case_301.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote S address to AMF IP causes IP conflict and routing error, preventing DU connection.",
+    "explanation_zh": "將遠端 S 位址設定為 AMF IP 會造成 IP 衝突和路由錯誤，阻止 DU 連線。"
+  },
+  {
+    "filename": "cu_case_302.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting NG AMF interface IP to AMF IP causes IP conflict, preventing NG interface setup and AMF communication.",
+    "explanation_zh": "將 NG AMF 介面 IP 設定為 AMF IP 會造成 IP 衝突，阻止 NG 介面設定和 AMF 通訊。"
+  },
+  {
+    "filename": "cu_case_303.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.8.43",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local S address to NG AMF interface IP causes IP conflict, preventing F1 interface binding.",
+    "explanation_zh": "將本地 S 位址設定為 NG AMF 介面 IP 會造成 IP 衝突，阻止 F1 介面綁定。"
+  },
+  {
+    "filename": "cu_case_304.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.8.43",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote S address to NG AMF interface IP causes IP conflict, preventing DU connection.",
+    "explanation_zh": "將遠端 S 位址設定為 NG AMF 介面 IP 會造成 IP 衝突，阻止 DU 連線。"
+  },
+  {
+    "filename": "cu_case_305.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "127.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting NGU address to loopback IP causes routing failure, as UPF is not reachable via 127.0.0.1, leading to UPF communication failure.",
+    "explanation_zh": "將 NGU 位址設定為回環 IP 會導致路由失敗，因為 UPF 無法透過 127.0.0.1 連線，造成 UPF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_306.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "172.16.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting AMF IP to a different private network causes routing failure, preventing AMF connection.",
+    "explanation_zh": "將 AMF IP 設定為不同私有網路會導致路由失敗，阻止 AMF 連線。"
+  },
+  {
+    "filename": "cu_case_307.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "172.16.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local S address to a different subnet IP causes binding failure, preventing F1 interface setup.",
+    "explanation_zh": "將本地 S 位址設定為不同子網路 IP 會造成綁定失敗，阻止 F1 介面設定。"
+  },
+  {
+    "filename": "cu_case_308.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "172.16.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote S address to a different subnet IP causes connection failure, preventing DU communication.",
+    "explanation_zh": "將遠端 S 位址設定為不同子網路 IP 會造成連線失敗，阻止 DU 通訊。"
+  },
+  {
+    "filename": "cu_case_309.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "172.16.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting NG AMF interface to a different subnet IP causes routing failure, preventing NG setup.",
+    "explanation_zh": "將 NG AMF 介面設定為不同子網路 IP 會導致路由失敗，阻止 NG 設定。"
+  },
+  {
+    "filename": "cu_case_310.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "172.16.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting NGU interface to a different subnet IP causes routing failure, preventing UPF communication.",
+    "explanation_zh": "將 NGU 介面設定為不同子網路 IP 會導致路由失敗，阻止 UPF 通訊。"
+  },
+  {
+    "filename": "cu_case_311.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local S port C to the same as remote S port C causes port conflict, preventing F1 connection.",
+    "explanation_zh": "將本地 S 連接埠 C 設定為與遠端 S 連接埠 C 相同會造成連接埠衝突，阻止 F1 連線。"
+  },
+  {
+    "filename": "cu_case_312.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote S port C to the same as local S port C causes port conflict, preventing F1 connection.",
+    "explanation_zh": "將遠端 S 連接埠 C 設定為與本地 S 連接埠 C 相同會造成連接埠衝突，阻止 F1 連線。"
+  },
+  {
+    "filename": "cu_case_313.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local S port D to the same as remote S port C causes port conflict, preventing F1 connection.",
+    "explanation_zh": "將本地 S 連接埠 D 設定為與遠端 S 連接埠 C 相同會造成連接埠衝突，阻止 F1 連線。"
+  },
+  {
+    "filename": "cu_case_314.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote S port D to the same as local S port C causes port conflict, preventing F1 connection.",
+    "explanation_zh": "將遠端 S 連接埠 D 設定為與本地 S 連接埠 C 相同會造成連接埠衝突，阻止 F1 連線。"
+  },
+  {
+    "filename": "cu_case_315.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting S1U port to the same as local S port C causes port conflict, preventing NGU setup.",
+    "explanation_zh": "將 S1U 連接埠設定為與本地 S 連接埠 C 相同會造成連接埠衝突，阻止 NGU 設定。"
+  },
+  {
+    "filename": "cu_case_316.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP in streams to 0 is invalid, causing SCTP connection failure.",
+    "explanation_zh": "將 SCTP 輸入流設定為 0 無效，會造成 SCTP 連線失敗。"
+  },
+  {
+    "filename": "cu_case_317.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP out streams to 0 is invalid, causing SCTP connection failure.",
+    "explanation_zh": "將 SCTP 輸出流設定為 0 無效，會造成 SCTP 連線失敗。"
+  },
+  {
+    "filename": "cu_case_318.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP in streams to an excessively high value may cause resource exhaustion or connection failure.",
+    "explanation_zh": "將 SCTP 輸入流設定為過高值可能造成資源耗盡或連線失敗。"
+  },
+  {
+    "filename": "cu_case_319.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP out streams to an excessively high value may cause resource exhaustion or connection failure.",
+    "explanation_zh": "將 SCTP 輸出流設定為過高值可能造成資源耗盡或連線失敗。"
+  },
+  {
+    "filename": "cu_case_320.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP in streams to a negative value is invalid, causing SCTP connection failure.",
+    "explanation_zh": "將 SCTP 輸入流設定為負值無效，會造成 SCTP 連線失敗。"
+  },
+  {
+    "filename": "cu_case_321.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP out streams to a negative value is invalid, causing SCTP connection failure.",
+    "explanation_zh": "將 SCTP 輸出流設定為負值無效，會造成 SCTP 連線失敗。"
+  },
+  {
+    "filename": "cu_case_322.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local S port C to 0 is invalid, causing F1 interface binding failure.",
+    "explanation_zh": "將本地 S 連接埠 C 設定為 0 無效，會造成 F1 介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_323.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote S port C to 0 is invalid, causing F1 connection failure.",
+    "explanation_zh": "將遠端 S 連接埠 C 設定為 0 無效，會造成 F1 連線失敗。"
+  },
+  {
+    "filename": "cu_case_324.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local S port D to 0 is invalid, causing F1 interface binding failure.",
+    "explanation_zh": "將本地 S 連接埠 D 設定為 0 無效，會造成 F1 介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_325.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote S port D to 0 is invalid, causing F1 connection failure.",
+    "explanation_zh": "將遠端 S 連接埠 D 設定為 0 無效，會造成 F1 連線失敗。"
+  },
+  {
+    "filename": "cu_case_326.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local S address to the same as remote S address will cause routing confusion in F1 interface, leading to connection failure.",
+    "explanation_zh": "將本地 S 位址設定為與遠端 S 位址相同會在 F1 介面中造成路由混亂，導致連線失敗。"
+  },
+  {
+    "filename": "cu_case_327.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting CU IP for NG-AMF to the same as AMF IP will cause IP conflict, preventing AMF reachability and NG setup failure.",
+    "explanation_zh": "將 CU 的 NG-AMF IP 設定為與 AMF IP 相同會造成 IP 衝突，阻止 AMF 可達性並導致 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_328.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid remote S address format will cause F1 connection failure due to unresolvable IP.",
+    "explanation_zh": "無效的遠端 S 位址格式會因無法解析的 IP 而造成 F1 連線失敗。"
+  },
+  {
+    "filename": "cu_case_329.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Invalid CU IP for NGU format will cause UPF communication failure.",
+    "explanation_zh": "無效的 CU NGU IP 格式會造成 UPF 通訊失敗。"
+  },
+  {
+    "filename": "cu_case_330.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local S port C to 0 is invalid, causing F1 interface binding failure.",
+    "explanation_zh": "將本地 S 連接埠 C 設定為 0 無效，會造成 F1 介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_331.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP out streams to 0 will cause SCTP association failure in F1 interface.",
+    "explanation_zh": "將 SCTP 出流設定為 0 會在 F1 介面中造成 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_332.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote S port C to 0 is invalid, causing F1 connection failure.",
+    "explanation_zh": "將遠端 S 連接埠 C 設定為 0 無效，會造成 F1 連線失敗。"
+  },
+  {
+    "filename": "cu_case_333.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP in streams to 0 will cause SCTP association failure in F1 interface.",
+    "explanation_zh": "將 SCTP 入流設定為 0 會在 F1 介面中造成 SCTP 關聯失敗。"
+  },
+  {
+    "filename": "cu_case_334.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Num_Threads_PUSCH to 0 will cause thread allocation failure, leading to gNB startup failure.",
+    "explanation_zh": "將 Num_Threads_PUSCH 設定為 0 會造成執行緒分配失敗，導致 gNB 啟動失敗。"
+  },
+  {
+    "filename": "cu_case_335.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "0x0",
+    "error_type": "out_of_range",
+    "explanation_en": "Setting gNB_ID to 0 is invalid, causing identity conflict in NG setup.",
+    "explanation_zh": "將 gNB_ID 設定為 0 無效，會造成 NG 設定中的身份衝突。"
+  },
+  {
+    "filename": "cu_case_336.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nr_cellid to 0 is invalid, causing cell identity conflict.",
+    "explanation_zh": "將 nr_cellid 設定為 0 無效，會造成細胞身份衝突。"
+  },
+  {
+    "filename": "cu_case_337.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting tracking_area_code to 0 is invalid, causing TAU failure.",
+    "explanation_zh": "將 tracking_area_code 設定為 0 無效，會造成 TAU 失敗。"
+  },
+  {
+    "filename": "cu_case_338.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mcc to 0 is invalid, causing PLMN mismatch and registration failure.",
+    "explanation_zh": "將 mcc 設定為 0 無效，會造成 PLMN 不匹配並導致註冊失敗。"
+  },
+  {
+    "filename": "cu_case_339.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mnc to 0 is invalid, causing PLMN mismatch and registration failure.",
+    "explanation_zh": "將 mnc 設定為 0 無效，會造成 PLMN 不匹配並導致註冊失敗。"
+  },
+  {
+    "filename": "cu_case_340.json",
+    "modified_key": "gNBs.plmn_list.snssaiList.sst",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting sst to 0 is invalid, causing slice mismatch and registration failure.",
+    "explanation_zh": "將 sst 設定為 0 無效，會造成切片不匹配並導致註冊失敗。"
+  },
+  {
+    "filename": "cu_case_341.json",
+    "modified_key": "gNBs.plmn_list.mnc_length",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mnc_length to 0 is invalid, causing PLMN parsing failure.",
+    "explanation_zh": "將 mnc_length 設定為 0 無效，會造成 PLMN 解析失敗。"
+  },
+  {
+    "filename": "cu_case_342.json",
+    "modified_key": "gNBs.tr_s_preference",
+    "original_value": "f1",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting tr_s_preference to invalid enum will cause transport preference parsing failure.",
+    "explanation_zh": "將 tr_s_preference 設定為無效枚舉會造成傳輸偏好解析失敗。"
+  },
+  {
+    "filename": "cu_case_343.json",
+    "modified_key": "gNBs.local_s_if_name",
+    "original_value": "lo",
+    "error_value": 123,
+    "error_type": "wrong_type",
+    "explanation_en": "Setting local_s_if_name to number instead of string will cause interface binding failure.",
+    "explanation_zh": "將 local_s_if_name 設定為數字而非字串會造成介面綁定失敗。"
+  },
+  {
+    "filename": "cu_case_344.json",
+    "modified_key": "gNBs.gNB_name",
+    "original_value": "gNB-Eurecom-CU",
+    "error_value": 123,
+    "error_type": "wrong_type",
+    "explanation_en": "Setting gNB_name to number instead of string will cause configuration parsing failure.",
+    "explanation_zh": "將 gNB_name 設定為數字而非字串會造成配置解析失敗。"
+  },
+  {
+    "filename": "cu_case_345.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "none",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting Asn1_verbosity to invalid enum will cause ASN.1 verbosity parsing failure.",
+    "explanation_zh": "將 Asn1_verbosity 設定為無效枚舉會造成 ASN.1 詳細程度解析失敗。"
+  },
+  {
+    "filename": "cu_case_346.json",
+    "modified_key": "Active_gNBs",
+    "original_value": ["gNB-Eurecom-CU"],
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting Active_gNBs to string instead of array will cause active gNB parsing failure.",
+    "explanation_zh": "將 Active_gNBs 設定為字串而非陣列會造成活躍 gNB 解析失敗。"
+  },
+  {
+    "filename": "cu_case_347.json",
+    "modified_key": "security.drb_ciphering",
+    "original_value": "yes",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting drb_ciphering to invalid enum will cause security configuration parsing failure.",
+    "explanation_zh": "將 drb_ciphering 設定為無效枚舉會造成安全配置解析失敗。"
+  },
+  {
+    "filename": "cu_case_348.json",
+    "modified_key": "security.drb_integrity",
+    "original_value": "no",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting drb_integrity to invalid enum will cause security configuration parsing failure.",
+    "explanation_zh": "將 drb_integrity 設定為無效枚舉會造成安全配置解析失敗。"
+  },
+  {
+    "filename": "cu_case_349.json",
+    "modified_key": "security.ciphering_algorithms[0]",
+    "original_value": "nea3",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting ciphering algorithm to invalid enum will cause security negotiation failure and NAS registration rejection.",
+    "explanation_zh": "將加密算法設定為無效枚舉會造成安全協商失敗並導致 NAS 註冊被拒絕。"
+  },
+  {
+    "filename": "cu_case_350.json",
+    "modified_key": "security.integrity_algorithms[0]",
+    "original_value": "nia2",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting integrity algorithm to invalid enum will cause security negotiation failure and NAS registration rejection.",
+    "explanation_zh": "將完整性算法設定為無效枚舉會造成安全協商失敗並導致 NAS 註冊被拒絕。"
+  },
+  {
+    "filename": "cu_case_351.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.70.256",
+    "error_type": "out_of_range",
+    "explanation_en": "Setting AMF IP to an invalid address with octet 256 will cause the CU to fail connecting to AMF, leading to NG interface setup failure.",
+    "explanation_zh": "將 AMF IP 設定為無效位址（八位元組 256）會導致 CU 無法連接到 AMF，造成 NG 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_352.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "out_of_range",
+    "explanation_en": "Setting GNB IP for NG AMF to an invalid address with octet 256 will cause the CU to fail binding to the interface, leading to NG setup failure.",
+    "explanation_zh": "將 NG AMF 的 GNB IP 設定為無效位址（八位元組 256）會導致 CU 無法綁定介面，造成 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_353.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "out_of_range",
+    "explanation_en": "Setting GNB IP for NGU to an invalid address with octet 256 will cause the CU to fail binding to the UPF interface, leading to NG-U setup failure.",
+    "explanation_zh": "將 NGU 的 GNB IP 設定為無效位址（八位元組 256）會導致 CU 無法綁定 UPF 介面，造成 NG-U 設定失敗。"
+  },
+  {
+    "filename": "cu_case_354.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.256",
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local SCTP address to an invalid IP with octet 256 will cause the CU to fail binding to the F1 interface, leading to F1 setup failure.",
+    "explanation_zh": "將本地 SCTP 位址設定為無效 IP（八位元組 256）會導致 CU 無法綁定 F1 介面，造成 F1 設定失敗。"
+  },
+  {
+    "filename": "cu_case_356.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.256",
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote SCTP address to an invalid IP with octet 256 will cause the CU to fail connecting to the DU, leading to F1 setup failure.",
+    "explanation_zh": "將遠端 SCTP 位址設定為無效 IP（八位元組 256）會導致 CU 無法連接到 DU，造成 F1 設定失敗。"
+  },
+  {
+    "filename": "cu_case_357.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP INSTREAMS to a negative value will cause SCTP initialization failure, leading to F1 connection failure.",
+    "explanation_zh": "將 SCTP INSTREAMS 設定為負值會導致 SCTP 初始化失敗，造成 F1 連線失敗。"
+  },
+  {
+    "filename": "cu_case_358.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP OUTSTREAMS to a negative value will cause SCTP initialization failure, leading to F1 connection failure.",
+    "explanation_zh": "將 SCTP OUTSTREAMS 設定為負值會導致 SCTP 初始化失敗，造成 F1 連線失敗。"
+  },
+  {
+    "filename": "cu_case_359.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local SCTP control port to 0 will cause socket binding failure, leading to F1 setup failure.",
+    "explanation_zh": "將本地 SCTP 控制連接埠設定為 0 會導致 socket 綁定失敗，造成 F1 設定失敗。"
+  },
+  {
+    "filename": "cu_case_360.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote SCTP control port to 0 will cause connection failure to DU, leading to F1 setup failure.",
+    "explanation_zh": "將遠端 SCTP 控制連接埠設定為 0 會導致無法連接到 DU，造成 F1 設定失敗。"
+  },
+  {
+    "filename": "cu_case_361.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local SCTP data port to 0 will cause socket binding failure, leading to F1 setup failure.",
+    "explanation_zh": "將本地 SCTP 資料連接埠設定為 0 會導致 socket 綁定失敗，造成 F1 設定失敗。"
+  },
+  {
+    "filename": "cu_case_362.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote SCTP data port to 0 will cause connection failure to DU, leading to F1 setup failure.",
+    "explanation_zh": "將遠端 SCTP 資料連接埠設定為 0 會導致無法連接到 DU，造成 F1 設定失敗。"
+  },
+  {
+    "filename": "cu_case_363.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting GNB port for S1U to 0 will cause socket binding failure, leading to NG-U setup failure.",
+    "explanation_zh": "將 GNB S1U 連接埠設定為 0 會導致 socket 綁定失敗，造成 NG-U 設定失敗。"
+  },
+  {
+    "filename": "cu_case_364.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local SCTP control port to the same value as remote SCTP control port will cause port conflict in SCTP connection, leading to F1 setup failure.",
+    "explanation_zh": "將本地 SCTP 控制連接埠設定為與遠端 SCTP 控制連接埠相同的值會在 SCTP 連線中造成連接埠衝突，導致 F1 設定失敗。"
+  },
+  {
+    "filename": "cu_case_365.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.8.43",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting AMF IP to the same as CU's NG AMF IP will cause the CU to try connecting to itself, leading to NG setup failure.",
+    "explanation_zh": "將 AMF IP 設定為與 CU NG AMF IP 相同會導致 CU 嘗試連接到自己，造成 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_366.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting GNB IP for NGU to the AMF IP will cause routing confusion, leading to NG-U setup failure.",
+    "explanation_zh": "將 NGU 的 GNB IP 設定為 AMF IP 會導致路由混亂，造成 NG-U 設定失敗。"
+  },
+  {
+    "filename": "cu_case_367.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.8.43",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local SCTP address to the same as GNB NG AMF IP will cause IP address conflict, leading to F1 interface failure.",
+    "explanation_zh": "將本地 SCTP 位址設定為與 GNB NG AMF IP 相同會導致 IP 位址衝突，造成 F1 介面失敗。"
+  },
+  {
+    "filename": "cu_case_368.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.8.43",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote SCTP address to the same as GNB NG AMF IP will cause IP address conflict, leading to F1 connection failure.",
+    "explanation_zh": "將遠端 SCTP 位址設定為與 GNB NG AMF IP 相同會導致 IP 位址衝突，造成 F1 連線失敗。"
+  },
+  {
+    "filename": "cu_case_369.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting AMF IP to the same as local SCTP address will cause IP address conflict, leading to NG setup failure.",
+    "explanation_zh": "將 AMF IP 設定為與本地 SCTP 位址相同會導致 IP 位址衝突，造成 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_370.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting GNB IP for NG AMF to the same as local SCTP address will cause IP address conflict, leading to NG setup failure.",
+    "explanation_zh": "將 NG AMF 的 GNB IP 設定為與本地 SCTP 位址相同會導致 IP 位址衝突，造成 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_371.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting GNB IP for NGU to the same as local SCTP address will cause IP address conflict, leading to NG-U setup failure.",
+    "explanation_zh": "將 NGU 的 GNB IP 設定為與本地 SCTP 位址相同會導致 IP 位址衝突，造成 NG-U 設定失敗。"
+  },
+  {
+    "filename": "cu_case_372.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting AMF IP to the same as remote SCTP address will cause IP address conflict, leading to NG setup failure.",
+    "explanation_zh": "將 AMF IP 設定為與遠端 SCTP 位址相同會導致 IP 位址衝突，造成 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_373.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the gNB's NG-AMF IP address to the same as the AMF IP will cause IP address conflict, leading to NG interface setup failure.",
+    "explanation_zh": "將 gNB 的 NG-AMF IP 位址設定為與 AMF IP 相同會導致 IP 位址衝突，造成 NG 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_374.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the AMF IP address to a different private network range without proper routing configuration will cause the gNB to be unable to establish connection with the AMF, leading to NG interface setup failure and gNB registration failure.",
+    "explanation_zh": "將 AMF IP 位址設定為不同的私有網路範圍而沒有適當的路由配置，會導致 gNB 無法與 AMF 建立連線，造成 NG 介面設定失敗和 gNB 註冊失敗。"
+  },
+  {
+    "filename": "cu_case_375.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "172.16.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the gNB's NG-AMF interface IP to a different private network range without routing will make the AMF unreachable, causing NG setup failure.",
+    "explanation_zh": "將 gNB 的 NG-AMF 介面 IP 設定為不同的私有網路範圍而沒有路由，會使 AMF 無法到達，造成 NG 設定失敗。"
+  },
+  {
+    "filename": "cu_case_376.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the gNB's NGU interface IP to an unreachable network range will prevent UPF connectivity, disrupting user plane traffic flow.",
+    "explanation_zh": "將 gNB 的 NGU 介面 IP 設定為無法到達的網路範圍，會阻止 UPF 連線，干擾使用者平面流量流動。"
+  },
+  {
+    "filename": "cu_case_377.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the remote SCTP address to an unreachable IP will prevent the CU from connecting to the DU, causing F1 interface setup failure.",
+    "explanation_zh": "將遠端 SCTP 位址設定為無法到達的 IP，會阻止 CU 連接到 DU，造成 F1 介面設定失敗。"
+  },
+  {
+    "filename": "cu_case_378.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the local SCTP interface will cause binding failure during F1 setup, preventing DU connection.",
+    "explanation_zh": "本地 SCTP 介面的無效 IP 位址格式會在 F1 設定期間造成綁定失敗，阻止 DU 連線。"
+  },
+  {
+    "filename": "cu_case_379.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the remote SCTP interface will cause connection failure during F1 setup, preventing DU communication.",
+    "explanation_zh": "遠端 SCTP 介面的無效 IP 位址格式會在 F1 設定期間造成連線失敗，阻止 DU 通訊。"
+  },
+  {
+    "filename": "cu_case_380.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "192.168.70.256",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the AMF will cause NG interface initialization failure, preventing gNB registration.",
+    "explanation_zh": "AMF 的無效 IP 位址格式會造成 NG 介面初始化失敗，阻止 gNB 註冊。"
+  },
+  {
+    "filename": "cu_case_381.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the NG-AMF interface will cause network binding failure, preventing AMF communication.",
+    "explanation_zh": "NG-AMF 介面的無效 IP 位址格式會造成網路綁定失敗，阻止 AMF 通訊。"
+  },
+  {
+    "filename": "cu_case_382.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.8.256",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the NGU interface will cause network binding failure, preventing UPF communication.",
+    "explanation_zh": "NGU 介面的無效 IP 位址格式會造成網路綁定失敗，阻止 UPF 通訊。"
+  },
+  {
+    "filename": "cu_case_383.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+    "original_value": 2152,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the S1U port to an out-of-range value will cause socket binding failure, preventing GTP-U tunnel establishment.",
+    "explanation_zh": "將 S1U 連接埠設定為超出範圍的值會造成 socket 綁定失敗，阻止 GTP-U 隧道建立。"
+  },
+  {
+    "filename": "cu_case_384.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the local SCTP control port to an out-of-range value will cause SCTP association failure, preventing F1-C connection.",
+    "explanation_zh": "將本地 SCTP 控制連接埠設定為超出範圍的值會造成 SCTP 關聯失敗，阻止 F1-C 連線。"
+  },
+  {
+    "filename": "cu_case_385.json",
+    "modified_key": "gNBs.remote_s_portc",
+    "original_value": 500,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the remote SCTP control port to an out-of-range value will cause SCTP association failure, preventing F1-C connection.",
+    "explanation_zh": "將遠端 SCTP 控制連接埠設定為超出範圍的值會造成 SCTP 關聯失敗，阻止 F1-C 連線。"
+  },
+  {
+    "filename": "cu_case_386.json",
+    "modified_key": "gNBs.local_s_portd",
+    "original_value": 2152,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the local SCTP data port to an out-of-range value will cause SCTP association failure, preventing F1-U connection.",
+    "explanation_zh": "將本地 SCTP 資料連接埠設定為超出範圍的值會造成 SCTP 關聯失敗，阻止 F1-U 連線。"
+  },
+  {
+    "filename": "cu_case_387.json",
+    "modified_key": "gNBs.remote_s_portd",
+    "original_value": 2152,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the remote SCTP data port to an out-of-range value will cause SCTP association failure, preventing F1-U connection.",
+    "explanation_zh": "將遠端 SCTP 資料連接埠設定為超出範圍的值會造成 SCTP 關聯失敗，阻止 F1-U 連線。"
+  },
+  {
+    "filename": "cu_case_388.json",
+    "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP input streams to zero will cause SCTP association failure, preventing F1 connection.",
+    "explanation_zh": "將 SCTP 輸入流設定為零會造成 SCTP 關聯失敗，阻止 F1 連線。"
+  },
+  {
+    "filename": "cu_case_389.json",
+    "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP output streams to zero will cause SCTP association failure, preventing F1 connection.",
+    "explanation_zh": "將 SCTP 輸出流設定為零會造成 SCTP 關聯失敗，阻止 F1 連線。"
+  },
+  {
+    "filename": "cu_case_390.json",
+    "modified_key": "Num_Threads_PUSCH",
+    "original_value": 8,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause thread initialization failure, leading to gNB startup failure.",
+    "explanation_zh": "將 Num_Threads_PUSCH 設定為負值會造成執行緒初始化失敗，導致 gNB 啟動失敗。"
+  },
+  {
+    "filename": "cu_case_391.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "0x10000",
+    "error_type": "out_of_range",
+    "explanation_en": "Setting gNB_ID to a value exceeding the allowed range will cause configuration validation failure, preventing gNB initialization.",
+    "explanation_zh": "將 gNB_ID 設定為超出允許範圍的值會造成配置驗證失敗，阻止 gNB 初始化。"
+  },
+  {
+    "filename": "cu_case_392.json",
+    "modified_key": "gNBs.tracking_area_code",
+    "original_value": 1,
+    "error_value": 65536,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting tracking_area_code to a value exceeding the allowed range will cause configuration validation failure, preventing gNB initialization.",
+    "explanation_zh": "將 tracking_area_code 設定為超出允許範圍的值會造成配置驗證失敗，阻止 gNB 初始化。"
+  },
+  {
+    "filename": "cu_case_393.json",
+    "modified_key": "gNBs.nr_cellid",
+    "original_value": 1,
+    "error_value": 268435456,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nr_cellid to a value exceeding the allowed range will cause configuration validation failure, preventing gNB initialization.",
+    "explanation_zh": "將 nr_cellid 設定為超出允許範圍的值會造成配置驗證失敗，阻止 gNB 初始化。"
+  },
+  {
+    "filename": "cu_case_394.json",
+    "modified_key": "gNBs.plmn_list.mcc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mcc to a value exceeding the allowed range will cause configuration validation failure, preventing gNB initialization.",
+    "explanation_zh": "將 mcc 設定為超出允許範圍的值會造成配置驗證失敗，阻止 gNB 初始化。"
+  },
+  {
+    "filename": "cu_case_395.json",
+    "modified_key": "gNBs.plmn_list.mnc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mnc to a value exceeding the allowed range will cause configuration validation failure, preventing gNB initialization.",
+    "explanation_zh": "將 mnc 設定為超出允許範圍的值會造成配置驗證失敗，阻止 gNB 初始化。"
+  },
+  {
+    "filename": "cu_case_396.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "127.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the AMF IP address to a loopback address makes the AMF unreachable, causing NG interface connection failure and preventing UE registration.",
+    "explanation_zh": "將 AMF IP 位址設定為回環位址會使 AMF 無法連線，導致 NG 介面連線失敗並阻止 UE 註冊。"
+  },
+  {
+    "filename": "cu_case_397.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+    "original_value": "192.168.8.43",
+    "error_value": "192.168.70.132",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the CU's NG AMF interface IP to the same as the AMF IP causes IP address conflict and routing failure, preventing NG interface establishment and UE attachment.",
+    "explanation_zh": "將 CU 的 NG AMF 介面 IP 設定為與 AMF IP 相同會造成 IP 位址衝突和路由失敗，阻止 NG 介面建立和 UE 附接。"
+  },
+  {
+    "filename": "cu_case_398.json",
+    "modified_key": "gNBs.local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the local SCTP address to the same as the remote SCTP address causes binding conflict, preventing F1 interface connection establishment with DU.",
+    "explanation_zh": "將本地 SCTP 位址設定為與遠端 SCTP 位址相同會造成綁定衝突，阻止與 DU 的 F1 介面連線建立。"
+  },
+  {
+    "filename": "cu_case_399.json",
+    "modified_key": "gNBs.remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the remote SCTP address to an unreachable IP in a different subnet prevents F1 interface connection establishment with DU due to routing misconfiguration.",
+    "explanation_zh": "將遠端 SCTP 位址設定為不同子網路中無法連線的 IP 會因路由錯誤配置而阻止與 DU 的 F1 介面連線建立。"
+  },
+  {
+    "filename": "cu_case_400.json",
+    "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+    "original_value": "192.168.8.43",
+    "error_value": "172.16.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the NGU interface IP to an unreachable address in a different subnet prevents GTP-U tunnel establishment and data path connectivity with UPF.",
+    "explanation_zh": "將 NGU 介面 IP 設定為不同子網路中無法連線的位址會阻止與 UPF 的 GTP-U 隧道建立和資料路徑連線。"
+  }
+]

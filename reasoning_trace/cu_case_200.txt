@@ -1,0 +1,24 @@
+Overall Context and Setup Assumptions: This is an OAI 5G NR SA mode setup using rfsim for simulation, as indicated by the --rfsim --sa options in the logs and the rfsimulator config in du_conf and ue_conf. The expected flow is: CU initializes threads and interfaces (SCTP for NGAP to AMF, GTPU for N3), DU initializes RU and MAC layers, F1AP setup between CU and DU, UE connects via rfsim server for PRACH/RACH, RRC setup, and PDU session establishment. Potential issues include config validation failures causing early exits (e.g., invalid PLMN params like SST exceeding 255), which prevent component startup and lead to connection failures. The network_config's gnb_conf (from cu_conf) includes PLMN params like snssaiList.sst=100000 (invalid, should be 0-255 per 3GPP TS 23.003), AMF IP 192.168.70.132, GTPU address 192.168.8.43:2152; ue_conf has imsi 001010000000101, rfsimulator serveraddr 127.0.0.1:4043. Initial mismatch: snssaiList.sst=100000 exceeds max 255, causing config validation failure and early CU exit.
+
+Analyzing CU Logs: CU starts in MONOLITHIC mode, initializes PHY, RRC, but immediately hits config validation error: "config_check_intrange: sst: 100000 invalid value, authorized range: 0 255", "config_execcheck: section gNBs.[0].plmn_list.[0].snssaiList.[0] 1 parameters with wrong value", and exits with "Exiting OAI softmodem: exit_fun". No further initialization (no threads, SCTP, GTPU, F1AP). Anomalies: Early exit due to invalid config, preventing any CU operation. Cross-reference: network_config's cu_conf has snssaiList.sst=100000, which triggers config_check_intrange failure in config_userapi.c.
+
+Analyzing DU Logs: DU starts successfully, initializes RU threads, loads librfsimulator, sets band 78, TDD, starts RF, creates threads for SCTP, GTPU, F1AP. Attempts F1AP connection to CU (127.0.0.5), but "Connect failed: Connection refused", retries multiple times, waits for F1 Setup Response. No crash, but stuck in retry loop. Links to network_config: du_conf has valid snssaiList.sst=1, but CU failure prevents F1AP.
+
+Analyzing UE Logs: UE initializes PHY, HW cards, threads, tries to connect to rfsimulator server at 127.0.0.1:4043, but "connect() failed, errno(111)" (Connection refused), retries many times. No successful connection. Links to network_config: ue_conf has rfsimulator serveraddr 127.0.0.1:4043, but server not started due to DU/CU issues.
+
+Cross-Component Correlations and Root Cause Hypothesis: Timelines correlate: CU exits early on config validation (invalid SST), preventing CU startup, so DU can't establish F1AP (SCTP connect refused), and UE can't connect to rfsim server (errno 111, likely server not running). Root cause: misconfigured_param "gNBs.plmn_list.snssaiList.sst=100000" is invalid (max 255 per 3GPP TS 23.003); this triggers config_check_intrange in config_userapi.c, causing early CU exit, halting the entire setup. Hypothesis: Invalid SST corrupts CU config validation, leading to exit before interfaces start, cascading to DU F1AP failures and UE rfsim connect failures. No need for tools; based on logs (config_check_intrange error, early exit) and OAI code patterns (config validation exits on invalid params).
+
+Recommendations for Fix and Further Analysis: Fix: Update cu_conf gNBs.plmn_list.snssaiList.sst to valid value like 1. Debug: Check OAI config validation logs for range errors; ensure PLMN params match 3GPP specs. Tools: If needed, grep OAI code for snssaiList.sst validation. Corrected network_config:
+{
+  "cu_conf": {
+    "gNBs": {
+      "plmn_list": {
+        "snssaiList": {
+          "sst": 1
+        }
+      }
+    }
+  },
+  "du_conf": {},
+  "ue_conf": {}
+}

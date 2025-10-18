@@ -1,0 +1,690 @@
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[NR_PHY]   RC.gNB = 0x59f278d739e0
+[0m[NR_PHY]   PRB blacklist 
+[0m[NR_PHY]   Copying 0 blacklisted PRB to L1 context
+[0m[PHY]   L1_RX_THREAD_CORE -1 (15)
+[0m[PHY]   TX_AMP = 519 (-36 dBFS)
+[0m[PHY]   l1_north_init_gNB() RC.nb_nr_L1_inst:1
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[MAC]   Allocating shared L1/L2 interface structure for instance 0 @ 0x59f278d7bab0
+[0m[PHY]   l1_north_init_gNB() RC.gNB[0] installing callbacks
+[0m[PHY]   create_gNB_tasks() Task ready initialize structures
+[0m[PHY]   No prs_config configuration found..!!
+[0m[GNB_APP]   pdsch_AntennaPorts N1 2 N2 1 XP 2 pusch_AntennaPorts 4
+[0m[GNB_APP]   minTXRXTIME 6
+[0m[GNB_APP]   SIB1 TDA 15
+[0m[GNB_APP]   CSI-RS 0, SRS 0, 256 QAM force off, delta_MCS off, maxMIMO_Layers 1
+[0m[GNB_APP]   sr_ProhibitTimer 0, sr_TransMax 64, sr_ProhibitTimer_v1700 0, t300 400, t301 400, t310 2000, n310 10, t311 3000, n311 1, t319 400
+[0m[RRC]   Read in ServingCellConfigCommon (PhysCellId 0, ABSFREQSSB 641280, DLBand 78, ABSFREQPOINTA 640008, DLBW 106,RACH_TargetReceivedPower -96
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[RRC]   absoluteFrequencySSB 641280 corresponds to 3619200000 Hz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[MAC]   [MAIN] Init function start:nb_nr_macrlc_inst=1
+[0m[UTIL]   threadCreate() for MAC_STATS: creating thread with affinity ffffffff, priority 2
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[NR_MAC]   Configuring common parameters from NR ServingCellConfig
+[0m[NR_MAC]   DL_Bandwidth:40
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   DL_Bandwidth:40
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   ssb_OffsetPointA 86, ssb_SubcarrierOffset 0
+[0m[NR_MAC]   Set RX antenna number to 4, Set TX antenna number to 4 (num ssb 1: 80000000,0)
+[0m[NR_MAC]   Setting TDD configuration period to 6
+[0m[PHY]   DL frequency 3619200000 Hz, UL frequency 3619200000 Hz: band 48, uldl offset 0 Hz
+[0m[32m[PHY]   Configuring MIB for instance 0, : (Nid_cell 0,DL freq 3619200000, UL freq 3619200000)
+[0m[PHY]   Initializing frame parms for mu 1, N_RB 106, Ncp 0
+[0m[PHY]   Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   gNB 0 configured
+[0m[NR_MAC]   PUSCH Target 200, PUCCH Target 150, PUCCH Failure 10, PUSCH Failure 10
+[0m[NR_RRC]   SIB1 freq: offsetToPointA 86
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[GNB_APP]   F1AP: gNB idx 0 gNB_DU_id 3584, gNB_DU_name gNB-Eurecom-DU, TAC 1 MCC/MNC/length 1/1/2 cellID 1
+[0m[GNB_APP]   ngran_DU: Configuring Cell 0 for TDD
+[0mCMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue/du_case_264.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue
+[CONFIG] function config_libconfig_init returned 0
+[CONFIG] config module libconfig loaded
+[CONFIG] debug flags: 0x00000000
+log init done
+Reading in command-line options
+[CONFIG] parallel_conf is set to 2
+[CONFIG] worker_conf is set to 1
+Configuration: nb_rrc_inst 1, nb_nr_L1_inst 1, nb_ru 1
+configuring for RAU/RRU
+Initializing northbound interface for L1
+DL frequency 3619200000: band 48, UL frequency 3619200000
+Configuring F1 interfaces for MACRLC
+<MeasurementTimingConfiguration>
+    <criticalExtensions>
+        <c1>
+            <measTimingConf>
+                <measTiming>
+                    <MeasTiming>
+                        <frequencyAndTiming>
+                            <carrierFreq>641280</carrierFreq>
+                            <ssbSubcarrierSpacing><kHz30/></ssbSubcarrierSpacing>
+                            <ssb-MeasurementTimingConfiguration>
+                                <periodicityAndOffset>
+                                    <sf20>0</sf20>
+                                </periodicityAndOffset>
+                                <duration><sf1/></duration>
+                            </ssb-MeasurementTimingConfiguration>
+                        </frequencyAndTiming>
+                    </MeasTiming>
+                </measTiming>
+            </measTimingConf>
+        </c1>
+    </criticalExtensions>
+</MeasurementTimingConfiguration>
+[PHY]   create_gNB_tasks() RC.nb_nr_L1_inst:1
+[0m[PHY]   l1_north_init_gNB() RC.nb_nr_L1_inst:1
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[PHY]   l1_north_init_gNB() RC.gNB[0] installing callbacks
+[0m[GNB_APP]   Allocating gNB_RRC_INST for 1 instances
+[0m[GNB_APP]   SDAP layer is disabled
+[0m[GNB_APP]   Data Radio Bearer count 1
+[0m[93m[RRC]   no preferred ciphering algorithm set in configuration file, applying default parameters (no security)
+[0m[93m[RRC]   no preferred integrity algorithm set in configuration file, applying default parameters (nia2)
+[0m[UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_SCTP
+[0m[X2AP]   X2AP is disabled.
+[0m[UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_GNB_APP
+[0m[UTIL]   threadCreate() for TASK_GTPV1_U: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_GTPV1_U
+[0m[UTIL]   threadCreate() for TASK_DU_F1: creating thread with affinity ffffffff, priority 50
+[0m[PHY]   Initializing gNB 0 single_thread_flag:1
+[0m[PHY]   Initializing gNB 0
+[0m[PHY]   Registering with MAC interface module (before 0x59f278d7bab0)
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[PHY]   Registering with MAC interface module (after 0x59f278d7bab0)
+[0m[PHY]   Setting indication lists
+[0m[PHY]   [nr-gnb.c] gNB structure allocated
+[0m[F1AP]   Starting F1AP at DU
+[0m[ITTI]   Created Posix thread TASK_DU_F1
+[0m[F1AP]   F1-C DU IPaddr 127.0.0.3, connect to F1-C CU 127.0.0.5, binding GTP to 127.0.0.3
+[0m[GTPU]   Initializing UDP for local address 127.0.0.3 with port 2152
+[0m[GTPU]   Created gtpu instance id: 98
+[0m[MAC]   received F1 Setup Response from CU gNB-Eurecom-CU
+[0m[MAC]   CU uses RRC version 17.3.0
+[0m[PHY]   RU GPIO control set as 'generic'
+[0m[PHY]   RU clock source set as internal
+[0m[PHY]   Setting time source to internal
+[0m[PHY]   number of L1 instances 1, number of RU 1, number of CPU cores 20
+[0m[PHY]   Copying frame parms from gNB in RC to gNB 0 in ru 0 and frame_parms in ru
+[0m[PHY]   Initialized RU proc 0 (,synch_to_ext_device),
+[0m[PHY]   RU Thread pool size 2
+[0m[PHY]   RU thread-pool core string -1,-1
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for ru_thread: creating thread with affinity 6, priority 97
+[0m[PHY]   Waiting for RUs to be configured ... RC.ru_mask:01
+[0m[PHY]   Starting RU 0 (,synch_to_ext_device) on cpu 6
+[0m[PHY]   Initializing frame parms for mu 1, N_RB 106, Ncp 0
+[0m[PHY]   Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[PHY]   fp->scs=30000
+[0m[PHY]   fp->ofdm_symbol_size=2048
+[0m[PHY]   fp->nb_prefix_samples0=176
+[0m[PHY]   fp->nb_prefix_samples=144
+[0m[PHY]   fp->slots_per_subframe=2
+[0m[PHY]   fp->samples_per_subframe_wCP=57344
+[0m[PHY]   fp->samples_per_frame_wCP=573440
+[0m[PHY]   fp->samples_per_subframe=61440
+[0m[PHY]   fp->samples_per_frame=614400
+[0m[PHY]   fp->dl_CarrierFreq=3619200000
+[0m[PHY]   fp->ul_CarrierFreq=3619200000
+[0m[PHY]   fp->Nid_cell=0
+[0m[PHY]   fp->first_carrier_offset=1412
+[0m[PHY]   fp->ssb_start_subcarrier=0
+[0m[PHY]   fp->Ncp=0
+[0m[PHY]   fp->N_RB_DL=106
+[0m[PHY]   fp->numerology_index=1
+[0m[PHY]   fp->nr_band=48
+[0m[PHY]   fp->ofdm_offset_divisor=8
+[0m[PHY]   fp->threequarter_fs=0
+[0m[PHY]   fp->sl_CarrierFreq=0
+[0m[PHY]   fp->N_RB_SL=0
+[0m[PHY]   Initializing RU signal buffers (if_south local RF) nb_tx 4, nb_rx 4
+[0m[PHY]   [INIT] common.txdata[0] = 0x791874416040 (2457600 bytes,sf_extension 0)
+[0m[PHY]   [INIT] common.txdata[0] = 0x791874416040 
+[0m[PHY]   [INIT] common.txdata[1] = 0x7918741bd040 (2457600 bytes,sf_extension 0)
+[0m[PHY]   [INIT] common.txdata[1] = 0x7918741bd040 
+[0m[PHY]   [INIT] common.txdata[2] = 0x79186cda1040 (2457600 bytes,sf_extension 0)
+[0m[PHY]   [INIT] common.txdata[2] = 0x79186cda1040 
+[0m[PHY]   [INIT] common.txdata[3] = 0x79186cb48040 (2457600 bytes,sf_extension 0)
+[0m[PHY]   [INIT] common.txdata[3] = 0x79186cb48040 
+[0m[PHY]   nb_tx 4
+[0m[PHY]   rxdata_7_5kHz[0] 0x7918740cc040 for RU 0
+[0m[PHY]   rxdata_7_5kHz[1] 0x79186c0f3040 for RU 0
+[0m[PHY]   rxdata_7_5kHz[2] 0x79186c002040 for RU 0
+[0m[PHY]   rxdata_7_5kHz[3] 0x79185ff0f040 for RU 0
+[0m[PHY]   [INIT] common.txdata_BF= 0x791858000ae0 (32 bytes)
+[0m[PHY]   txdataF_BF[0] 0x791877f8a040 for RU 0
+[0m[PHY]   txdataF_BF[1] 0x791877f51040 for RU 0
+[0m[PHY]   txdataF_BF[2] 0x791877f18040 for RU 0
+[0m[PHY]   txdataF_BF[3] 0x7918778de040 for RU 0
+[0m[PHY]   rxdataF[0] 0x79187405b040 for RU 0
+[0m[PHY]   rxdataF[1] 0x79185f5da040 for RU 0
+[0m[PHY]   rxdataF[2] 0x79185f569040 for RU 0
+[0m[PHY]   rxdataF[3] 0x79185f4f8040 for RU 0
+[0m[PHY]   [INIT] nr_phy_init_RU() ru->num_gNB:1 
+[0m[PHY]   Setting RF config for N_RB 106, NB_RX 4, NB_TX 4
+[0m[PHY]   tune_offset 0 Hz, sample_rate 61440000 Hz
+[0m[PHY]   Channel 0: setting tx_gain offset 0, tx_freq 3619200000 Hz
+[0m[PHY]   Channel 1: setting tx_gain offset 0, tx_freq 3619200000 Hz
+[0m[PHY]   Channel 2: setting tx_gain offset 0, tx_freq 3619200000 Hz
+[0m[PHY]   Channel 3: setting tx_gain offset 0, tx_freq 3619200000 Hz
+[0m[PHY]   Channel 0: setting rx_gain offset 114, rx_freq 3619200000 Hz
+[0m[PHY]   Channel 1: setting rx_gain offset 114, rx_freq 3619200000 Hz
+[0m[PHY]   Channel 2: setting rx_gain offset 114, rx_freq 3619200000 Hz
+[0m[PHY]   Channel 3: setting rx_gain offset 114, rx_freq 3619200000 Hz
+[0m[93m[HW]   The RFSIMULATOR environment variable is deprecated and support will be removed in the future. Instead, add parameter --rfsimulator.serveraddr server to set the server address. Note: the default is "server"; for the gNB/eNB, you don't have to set any configuration.
+[0m[HW]   Remove RFSIMULATOR environment variable to get rid of this message and the sleep.
+[0m[HW]   Running as server waiting opposite rfsimulators to connect
+[0m[HW]   [RAU] has loaded RFSIMULATOR device.
+[0m[PHY]   RU 0 Setting N_TA_offset to 800 samples (factor 2.000000, UL Freq 3600120, N_RB 106, mu 1)
+[0m[PHY]   Signaling main thread that RU 0 is ready, sl_ahead 5
+[0m[PHY]   RUs configured
+[0m[PHY]   init_eNB_afterRU() RC.nb_nr_inst:1
+[0m[PHY]   RC.nb_nr_CC[inst:0]:0x791876fc5010
+[0m[PHY]   [gNB 0] phy_init_nr_gNB() About to wait for gNB to be configured
+[0m[PHY]   Initialise nr transport
+[0m[PHY]   Mapping RX ports from 1 RUs to gNB 0
+[0m[PHY]   gNB->num_RU:1
+[0m[PHY]   Attaching RU 0 antenna 0 to gNB antenna 0
+[0m[PHY]   Attaching RU 0 antenna 1 to gNB antenna 1
+[0m[PHY]   Attaching RU 0 antenna 2 to gNB antenna 2
+[0m[PHY]   Attaching RU 0 antenna 3 to gNB antenna 3
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool4_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool5_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool6_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool7_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_rx_thread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_tx_thread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_stats: creating thread with affinity ffffffff, priority 1
+[0mNRRRC 0: Southbound Transport local_mac
+START MAIN THREADS
+RC.nb_nr_L1_inst:1
+Initializing gNB threads single_thread_flag:1 wait_for_sync:0
+wait_gNBs()
+Waiting for gNB L1 instances to all get configured ... sleeping 50ms (nb_nr_sL1_inst 1)
+gNB L1 are configured
+About to Init RU threads RC.nb_RU:1
+Initializing RU threads
+configuring RU from file
+Set RU mask to 1
+Creating RC.ru[0]:0x59f278db2490
+Setting function for RU 0 to gNodeB_3GPP
+[RU 0] Setting nr_flag 0, nr_band 78, nr_scs_for_raster 1
+[RU 0] Setting half-slot parallelization to 1
+configuring ru_id 0 (start_rf 0x59f25c886ef0)
+wait RUs
+shlib_path librfsimulator.so
+[LOADER] library librfsimulator.so successfully loaded
+Initializing random number generator, seed 3510676557141333630
+setup_RU_buffers: frame_parms = 0x79187466f010
+waiting for sync (ru_thread,-1/0x59f25d43b0ac,0x59f25dccc8c0,0x59f25dccc880)
+RC.ru_mask:00
+ALL RUs READY!
+RC.nb_RU:1
+ALL RUs ready - init gNBs
+Not NFAPI mode - call init_eNB_afterRU()
+shlib_path libdfts.so
+[LOADER] library libdfts.so successfully loaded
+shlib_path libldpc.so
+[LOADER] library libldpc.so successfully loaded
+ALL RUs ready - ALL gNBs ready
+Sending sync to all threads
+Entering ITTI signals handler
+TYPE <CTRL-C> TO TERMINATE
+waiting for sync (L1_stats_thread,0/0x59f25d43b0ac,0x59f25dccc8c0,0x59f25dccc880)
+got sync (L1_stats_thread)
+got sync (ru_thread)
+[PHY]   RU 0 rf device ready
+[0m[PHY]   RU 0 RF started opp_enabled 0
+[0m[HW]   No connected device, generating void samples...
+[0m[32m[PHY]   Command line parameters for the UE: -C 3619200000 -r 106 --numerology 1 --ssb 516
+[0m[HW]   A client connects, sending the current time
+[0m[93m[HW]   Not supported to send Tx out of order 21073920, 21073919
+[0m[NR_MAC]   Frame.Slot 128.0
+
+[0m[NR_PHY]   [RAPROC] 183.19 Initiating RA procedure with preamble 7, energy 56.4 dB (I0 0, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   183.19 UE RA-RNTI 010b TC-RNTI 0462: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 183.19 now 184.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 0462: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 191.19 Initiating RA procedure with preamble 60, energy 54.0 dB (I0 13, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   191.19 UE RA-RNTI 010b TC-RNTI 1471: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 191.19 now 192.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 1471: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 199.19 Initiating RA procedure with preamble 61, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   199.19 UE RA-RNTI 010b TC-RNTI ade9: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 199.19 now 200.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI ade9: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 207.19 Initiating RA procedure with preamble 63, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   207.19 UE RA-RNTI 010b TC-RNTI b16a: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 207.19 now 208.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI b16a: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 215.19 Initiating RA procedure with preamble 40, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   215.19 UE RA-RNTI 010b TC-RNTI ba92: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 215.19 now 216.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI ba92: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 223.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   223.19 UE RA-RNTI 010b TC-RNTI 8ec1: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 223.19 now 224.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 8ec1: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 231.19 Initiating RA procedure with preamble 11, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   231.19 UE RA-RNTI 010b TC-RNTI ff1e: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 231.19 now 232.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI ff1e: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 239.19 Initiating RA procedure with preamble 53, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   239.19 UE RA-RNTI 010b TC-RNTI 7919: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 239.19 now 240.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 7919: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 247.19 Initiating RA procedure with preamble 41, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   247.19 UE RA-RNTI 010b TC-RNTI ae3a: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 247.19 now 248.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI ae3a: exceeded RA window, cannot schedule Msg2
+[0m[NR_MAC]   Frame.Slot 256.0
+
+[0m[NR_PHY]   [RAPROC] 255.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   255.19 UE RA-RNTI 010b TC-RNTI d583: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 255.19 now 256.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI d583: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 263.19 Initiating RA procedure with preamble 25, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   263.19 UE RA-RNTI 010b TC-RNTI f12f: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 263.19 now 264.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI f12f: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 271.19 Initiating RA procedure with preamble 45, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   271.19 UE RA-RNTI 010b TC-RNTI 2c87: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 271.19 now 272.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 2c87: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 279.19 Initiating RA procedure with preamble 54, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   279.19 UE RA-RNTI 010b TC-RNTI 3795: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 279.19 now 280.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 3795: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 287.19 Initiating RA procedure with preamble 47, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   287.19 UE RA-RNTI 010b TC-RNTI 713e: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 287.19 now 288.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 713e: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 295.19 Initiating RA procedure with preamble 45, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   295.19 UE RA-RNTI 010b TC-RNTI ccae: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 295.19 now 296.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI ccae: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 303.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   303.19 UE RA-RNTI 010b TC-RNTI fa84: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 303.19 now 304.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI fa84: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 311.19 Initiating RA procedure with preamble 32, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   311.19 UE RA-RNTI 010b TC-RNTI f4a7: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 311.19 now 312.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI f4a7: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 319.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   319.19 UE RA-RNTI 010b TC-RNTI 9363: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 319.19 now 320.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 9363: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 327.19 Initiating RA procedure with preamble 27, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   327.19 UE RA-RNTI 010b TC-RNTI de3b: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 327.19 now 328.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI de3b: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 335.19 Initiating RA procedure with preamble 45, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   335.19 UE RA-RNTI 010b TC-RNTI 1599: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 335.19 now 336.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 1599: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 343.19 Initiating RA procedure with preamble 43, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   343.19 UE RA-RNTI 010b TC-RNTI 36be: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 343.19 now 344.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 36be: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 351.19 Initiating RA procedure with preamble 13, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   351.19 UE RA-RNTI 010b TC-RNTI 7998: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 351.19 now 352.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 7998: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 359.19 Initiating RA procedure with preamble 55, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   359.19 UE RA-RNTI 010b TC-RNTI 93a8: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 359.19 now 360.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 93a8: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 367.19 Initiating RA procedure with preamble 47, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   367.19 UE RA-RNTI 010b TC-RNTI 6f44: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 367.19 now 368.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 6f44: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 375.19 Initiating RA procedure with preamble 60, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   375.19 UE RA-RNTI 010b TC-RNTI 9a66: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 375.19 now 376.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 9a66: exceeded RA window, cannot schedule Msg2
+[0m[NR_MAC]   Frame.Slot 384.0
+
+[0m[NR_PHY]   [RAPROC] 383.19 Initiating RA procedure with preamble 49, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   383.19 UE RA-RNTI 010b TC-RNTI b284: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 383.19 now 384.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI b284: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 391.19 Initiating RA procedure with preamble 63, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   391.19 UE RA-RNTI 010b TC-RNTI 5259: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 391.19 now 392.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 5259: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 399.19 Initiating RA procedure with preamble 47, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   399.19 UE RA-RNTI 010b TC-RNTI 7962: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 399.19 now 400.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 7962: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 407.19 Initiating RA procedure with preamble 37, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   407.19 UE RA-RNTI 010b TC-RNTI e098: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 407.19 now 408.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI e098: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 415.19 Initiating RA procedure with preamble 11, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   415.19 UE RA-RNTI 010b TC-RNTI 21bf: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 415.19 now 416.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 21bf: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 423.19 Initiating RA procedure with preamble 21, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   423.19 UE RA-RNTI 010b TC-RNTI f2c2: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 423.19 now 424.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI f2c2: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 431.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   431.19 UE RA-RNTI 010b TC-RNTI 1ee3: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 431.19 now 432.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 1ee3: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 439.19 Initiating RA procedure with preamble 48, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   439.19 UE RA-RNTI 010b TC-RNTI a9c9: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 439.19 now 440.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI a9c9: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 447.19 Initiating RA procedure with preamble 41, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   447.19 UE RA-RNTI 010b TC-RNTI 2f35: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 447.19 now 448.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 2f35: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 455.19 Initiating RA procedure with preamble 43, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   455.19 UE RA-RNTI 010b TC-RNTI 7bca: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 455.19 now 456.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 7bca: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 463.19 Initiating RA procedure with preamble 61, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   463.19 UE RA-RNTI 010b TC-RNTI f407: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 463.19 now 464.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI f407: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 471.19 Initiating RA procedure with preamble 22, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   471.19 UE RA-RNTI 010b TC-RNTI a631: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 471.19 now 472.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI a631: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 479.19 Initiating RA procedure with preamble 29, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   479.19 UE RA-RNTI 010b TC-RNTI e4a5: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 479.19 now 480.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI e4a5: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 487.19 Initiating RA procedure with preamble 57, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   487.19 UE RA-RNTI 010b TC-RNTI 4109: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 487.19 now 488.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 4109: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 495.19 Initiating RA procedure with preamble 53, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   495.19 UE RA-RNTI 010b TC-RNTI f226: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 495.19 now 496.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI f226: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 503.19 Initiating RA procedure with preamble 37, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   503.19 UE RA-RNTI 010b TC-RNTI a034: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 503.19 now 504.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI a034: exceeded RA window, cannot schedule Msg2
+[0m[NR_MAC]   Frame.Slot 512.0
+
+[0m[NR_PHY]   [RAPROC] 511.19 Initiating RA procedure with preamble 2, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   511.19 UE RA-RNTI 010b TC-RNTI dd2d: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 511.19 now 512.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI dd2d: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 519.19 Initiating RA procedure with preamble 55, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   519.19 UE RA-RNTI 010b TC-RNTI b44f: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 519.19 now 520.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI b44f: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 527.19 Initiating RA procedure with preamble 38, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   527.19 UE RA-RNTI 010b TC-RNTI 7266: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 527.19 now 528.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 7266: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 535.19 Initiating RA procedure with preamble 61, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   535.19 UE RA-RNTI 010b TC-RNTI 8ff7: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 535.19 now 536.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 8ff7: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 543.19 Initiating RA procedure with preamble 22, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   543.19 UE RA-RNTI 010b TC-RNTI b454: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 543.19 now 544.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI b454: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 551.19 Initiating RA procedure with preamble 63, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   551.19 UE RA-RNTI 010b TC-RNTI e28f: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 551.19 now 552.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI e28f: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 559.19 Initiating RA procedure with preamble 10, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   559.19 UE RA-RNTI 010b TC-RNTI dc52: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 559.19 now 560.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI dc52: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 567.19 Initiating RA procedure with preamble 55, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   567.19 UE RA-RNTI 010b TC-RNTI de5a: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 567.19 now 568.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI de5a: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 575.19 Initiating RA procedure with preamble 17, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   575.19 UE RA-RNTI 010b TC-RNTI b488: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 575.19 now 576.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI b488: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 583.19 Initiating RA procedure with preamble 44, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   583.19 UE RA-RNTI 010b TC-RNTI 1ad8: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 583.19 now 584.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 1ad8: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 591.19 Initiating RA procedure with preamble 59, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   591.19 UE RA-RNTI 010b TC-RNTI 0eb7: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 591.19 now 592.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 0eb7: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 599.19 Initiating RA procedure with preamble 25, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   599.19 UE RA-RNTI 010b TC-RNTI 5a4c: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 599.19 now 600.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 5a4c: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 607.19 Initiating RA procedure with preamble 22, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   607.19 UE RA-RNTI 010b TC-RNTI 4355: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 607.19 now 608.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 4355: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 615.19 Initiating RA procedure with preamble 39, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   615.19 UE RA-RNTI 010b TC-RNTI 0d34: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 615.19 now 616.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 0d34: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 623.19 Initiating RA procedure with preamble 3, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   623.19 UE RA-RNTI 010b TC-RNTI 8e79: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 623.19 now 624.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 8e79: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 631.19 Initiating RA procedure with preamble 14, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   631.19 UE RA-RNTI 010b TC-RNTI 92f5: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 631.19 now 632.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 92f5: exceeded RA window, cannot schedule Msg2
+[0m[NR_MAC]   Frame.Slot 640.0
+
+[0m[NR_PHY]   [RAPROC] 639.19 Initiating RA procedure with preamble 32, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   639.19 UE RA-RNTI 010b TC-RNTI a691: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 639.19 now 640.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI a691: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 647.19 Initiating RA procedure with preamble 49, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   647.19 UE RA-RNTI 010b TC-RNTI 4e1e: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 647.19 now 648.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 4e1e: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 655.19 Initiating RA procedure with preamble 58, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   655.19 UE RA-RNTI 010b TC-RNTI e763: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 655.19 now 656.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI e763: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 663.19 Initiating RA procedure with preamble 43, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   663.19 UE RA-RNTI 010b TC-RNTI 834b: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 663.19 now 664.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 834b: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 671.19 Initiating RA procedure with preamble 43, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   671.19 UE RA-RNTI 010b TC-RNTI c939: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 671.19 now 672.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI c939: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 679.19 Initiating RA procedure with preamble 4, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   679.19 UE RA-RNTI 010b TC-RNTI 9521: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 679.19 now 680.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 9521: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 687.19 Initiating RA procedure with preamble 29, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   687.19 UE RA-RNTI 010b TC-RNTI 9da8: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 687.19 now 688.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 9da8: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 695.19 Initiating RA procedure with preamble 40, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   695.19 UE RA-RNTI 010b TC-RNTI b2a4: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 695.19 now 696.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI b2a4: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 703.19 Initiating RA procedure with preamble 28, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   703.19 UE RA-RNTI 010b TC-RNTI 20ad: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 703.19 now 704.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 20ad: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 711.19 Initiating RA procedure with preamble 23, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   711.19 UE RA-RNTI 010b TC-RNTI e78f: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 711.19 now 712.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI e78f: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 719.19 Initiating RA procedure with preamble 34, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   719.19 UE RA-RNTI 010b TC-RNTI 3d55: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 719.19 now 720.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 3d55: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 727.19 Initiating RA procedure with preamble 2, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   727.19 UE RA-RNTI 010b TC-RNTI 30ef: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 727.19 now 728.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 30ef: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 735.19 Initiating RA procedure with preamble 5, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   735.19 UE RA-RNTI 010b TC-RNTI d9ac: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 735.19 now 736.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI d9ac: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 743.19 Initiating RA procedure with preamble 59, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   743.19 UE RA-RNTI 010b TC-RNTI 1530: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 743.19 now 744.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 1530: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 751.19 Initiating RA procedure with preamble 18, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   751.19 UE RA-RNTI 010b TC-RNTI 4a84: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 751.19 now 752.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 4a84: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 759.19 Initiating RA procedure with preamble 46, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   759.19 UE RA-RNTI 010b TC-RNTI 5357: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 759.19 now 760.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 5357: exceeded RA window, cannot schedule Msg2
+[0m[NR_MAC]   Frame.Slot 768.0
+
+[0m[NR_PHY]   [RAPROC] 767.19 Initiating RA procedure with preamble 56, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   767.19 UE RA-RNTI 010b TC-RNTI 929c: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 767.19 now 768.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 929c: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 775.19 Initiating RA procedure with preamble 15, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   775.19 UE RA-RNTI 010b TC-RNTI c7e2: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 775.19 now 776.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI c7e2: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 783.19 Initiating RA procedure with preamble 11, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   783.19 UE RA-RNTI 010b TC-RNTI 7253: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 783.19 now 784.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 7253: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 791.19 Initiating RA procedure with preamble 54, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   791.19 UE RA-RNTI 010b TC-RNTI 3696: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 791.19 now 792.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 3696: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 799.19 Initiating RA procedure with preamble 55, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   799.19 UE RA-RNTI 010b TC-RNTI 2269: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 799.19 now 800.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 2269: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 807.19 Initiating RA procedure with preamble 62, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   807.19 UE RA-RNTI 010b TC-RNTI 83c0: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 807.19 now 808.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 83c0: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 815.19 Initiating RA procedure with preamble 56, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   815.19 UE RA-RNTI 010b TC-RNTI 5611: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 815.19 now 816.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 5611: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 823.19 Initiating RA procedure with preamble 52, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   823.19 UE RA-RNTI 010b TC-RNTI 3bb1: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 823.19 now 824.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 3bb1: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 831.19 Initiating RA procedure with preamble 62, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   831.19 UE RA-RNTI 010b TC-RNTI 96a6: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 831.19 now 832.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 96a6: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 839.19 Initiating RA procedure with preamble 35, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   839.19 UE RA-RNTI 010b TC-RNTI 07dc: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 839.19 now 840.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 07dc: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 847.19 Initiating RA procedure with preamble 61, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   847.19 UE RA-RNTI 010b TC-RNTI 0977: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 847.19 now 848.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 0977: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 855.19 Initiating RA procedure with preamble 36, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   855.19 UE RA-RNTI 010b TC-RNTI 59e8: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 855.19 now 856.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 59e8: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 863.19 Initiating RA procedure with preamble 55, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   863.19 UE RA-RNTI 010b TC-RNTI 5021: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 863.19 now 864.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 5021: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 871.19 Initiating RA procedure with preamble 39, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   871.19 UE RA-RNTI 010b TC-RNTI 5c33: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 871.19 now 872.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 5c33: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 879.19 Initiating RA procedure with preamble 34, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   879.19 UE RA-RNTI 010b TC-RNTI d087: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 879.19 now 880.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI d087: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 887.19 Initiating RA procedure with preamble 27, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   887.19 UE RA-RNTI 010b TC-RNTI cb2d: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 887.19 now 888.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI cb2d: exceeded RA window, cannot schedule Msg2
+[0m[NR_MAC]   Frame.Slot 896.0
+
+[0m[NR_PHY]   [RAPROC] 895.19 Initiating RA procedure with preamble 46, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   895.19 UE RA-RNTI 010b TC-RNTI 3337: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 895.19 now 896.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 3337: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 903.19 Initiating RA procedure with preamble 53, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   903.19 UE RA-RNTI 010b TC-RNTI 8410: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 903.19 now 904.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 8410: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 911.19 Initiating RA procedure with preamble 60, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   911.19 UE RA-RNTI 010b TC-RNTI ee58: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 911.19 now 912.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI ee58: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 919.19 Initiating RA procedure with preamble 63, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   919.19 UE RA-RNTI 010b TC-RNTI 86b9: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 919.19 now 920.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 86b9: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 927.19 Initiating RA procedure with preamble 40, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   927.19 UE RA-RNTI 010b TC-RNTI 5473: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 927.19 now 928.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 5473: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 935.19 Initiating RA procedure with preamble 50, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   935.19 UE RA-RNTI 010b TC-RNTI a9e4: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 935.19 now 936.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI a9e4: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 943.19 Initiating RA procedure with preamble 26, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   943.19 UE RA-RNTI 010b TC-RNTI 310b: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 943.19 now 944.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 310b: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 951.19 Initiating RA procedure with preamble 7, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   951.19 UE RA-RNTI 010b TC-RNTI f1e4: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 951.19 now 952.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI f1e4: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 959.19 Initiating RA procedure with preamble 9, energy 56.4 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   959.19 UE RA-RNTI 010b TC-RNTI 6d4c: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 959.19 now 960.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 6d4c: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 967.19 Initiating RA procedure with preamble 34, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   967.19 UE RA-RNTI 010b TC-RNTI 77d5: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 967.19 now 968.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 77d5: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 975.19 Initiating RA procedure with preamble 4, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   975.19 UE RA-RNTI 010b TC-RNTI 7a50: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 975.19 now 976.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 7a50: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 983.19 Initiating RA procedure with preamble 38, energy 54.0 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   983.19 UE RA-RNTI 010b TC-RNTI 1ae4: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 983.19 now 984.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 1ae4: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 991.19 Initiating RA procedure with preamble 23, energy 56.4 dB (I0 15, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   991.19 UE RA-RNTI 010b TC-RNTI dfc0: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 991.19 now 992.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI dfc0: exceeded RA window, cannot schedule Msg2
+[0m[NR_PHY]   [RAPROC] 999.19 Initiating RA procedure with preamble 40, energy 54.0 dB (I0 17, thres 120), delay 0 start symbol 0 freq index 0
+[0m[NR_MAC]   999.19 UE RA-RNTI 010b TC-RNTI 42e3: Activating RA process index 0
+[0m[93m[NR_MAC]   exceeded RA window: preamble at 999.19 now 1000.5 (diff 6), ra_ResponseWindow 0/1 slots
+[0m[1;31m[NR_MAC]   UE RA-RNTI 010b TC-RNTI 42e3: exceeded RA window, cannot schedule Msg2
+[0m

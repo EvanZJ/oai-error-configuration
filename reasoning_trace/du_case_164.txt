@@ -1,0 +1,25 @@
+Overall Context and Setup Assumptions: This is an OAI 5G NR SA mode setup using rfsim for radio simulation, as indicated by DU logs showing rfsim config and UE command line with rfsim options. The expected flow is CU init with NGAP/AMF setup, DU init with RU/rfsim server, F1AP connection, UE PRACH/RRC connection. However, the misconfigured parameter "gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB=200" suggests invalid RSRP threshold value. Parsing network_config: gnb_conf (du_conf) includes servingCellConfigCommon with rsrp_ThresholdSSB=200 (invalid, as per TS 38.331 0..127), prach_ConfigurationIndex=98, pMax=20, ssPBCH_BlockPower=-25, SCTP streams=2, MACRLCs/L1s num_cc=1, RUs nb_tx=4, rfsimulator serveraddr="server", fhi_72 present but system_core=0 (valid). ue_conf has rfsimulator serveraddr="127.0.0.1". cu_conf has AMF IP 192.168.70.132, NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF="192.168.8.43". Potential issues: Invalid rsrp_ThresholdSSB=200 causes ASN.1 encoding buffer overflow in RRC config, crashing DU before rfsim server starts, leading to UE connect failures.
+
+Analyzing CU Logs: CU initializes successfully with monolithic mode, creates threads, sets up GTPU on 192.168.8.43:2152 but bind fails "Cannot assign requested address", SCTP bind fails errno 99, E1AP fails CUUP listener, NGAP registers gNB but no AMF association. F1AP starts but no DU connection received. Network binds fail (possibly due to IP not configured), CU waits for DU.
+
+Analyzing DU Logs: DU starts init, configures L1/MAC, reads ServingCellConfigCommon (PhysCellId 0, ABSFREQSSB 641280, DLBand 78), sets carrier config, TDD period 6, MIB config, but in clone_rach_configcommon() at line 68: "Assertion (enc_rval.encoded > 0 && enc_rval.encoded < sizeof(buf)) failed! could not clone NR_RACH_ConfigCommon: problem while encoding". DU exits immediately due to ASN.1 encoding buffer overflow from rsrp_ThresholdSSB=200.
+
+Analyzing UE Logs: UE initializes threads, loads rfsimulator device, attempts connect to 127.0.0.1:4043 repeatedly but fails errno(111) "Connection refused", as rfsim server never starts due to DU crash. UE loops connect attempts indefinitely.
+
+Cross-Component Correlations and Root Cause Hypothesis: DU crashes on ASN.1 encoding buffer overflow in clone_rach_configcommon() from rsrp_ThresholdSSB=200 during RRC config cloning. CU initializes but bind failures (192.168.8.43 not available) and no DU connection. UE can't connect to rfsim server. The misconfigured "gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB=200" is invalid (TS 38.331 rsrp-ThresholdSSB 0..127). Hypothesis: rsrp_ThresholdSSB=200 triggers encoding size > buffer in nr_rrc_config.c:68, crashing DU → no rfsim server → UE connect fails. External knowledge: OAI RRC config cloning fails on out-of-range values; TS 38.331 defines rsrp-ThresholdSSB as INTEGER (0..127).
+
+Recommendations for Fix and Further Analysis: Set rsrp_ThresholdSSB to 19 (valid value). If different threshold needed, choose from 0..127. Ensure 192.168.8.43 interface configured. Debug: Check ASN.1 encoding logs. Corrected network_config:
+{
+  "cu_conf": { ... (unchanged) },
+  "du_conf": {
+    ... (unchanged except servingCellConfigCommon[0].rsrp_ThresholdSSB: 19)
+    "servingCellConfigCommon": [
+      {
+        ... (unchanged except rsrp_ThresholdSSB: 19)
+        "rsrp_ThresholdSSB": 19,
+        ...
+      }
+    ]
+  },
+  "ue_conf": { ... (unchanged) }
+}

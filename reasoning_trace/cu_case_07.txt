@@ -1,0 +1,92 @@
+Overall Context and Setup Assumptions: This scenario involves an OpenAirInterface (OAI) standalone (SA) mode deployment with radio frequency simulator (rfsim), as indicated by log entries showing --rfsim --sa options and librfsimulator.so loading. The expected flow is: component initialization (CU, DU, UE) → F1AP/NGAP setup between CU and AMF/DU → UE connection via PRACH/RACH → RRC setup → PDU session establishment. Potential issues include configuration mismatches in PRACH parameters, SIB encoding errors, code assertions, or connection failures due to IP/port mismatches. Parsing network_config: cu_conf includes gNB_ID=3840, local_s_address="127.0.0.5", remote_s_address="127.0.0.3", amf_ip_address="192.168.70.132", NETWORK_INTERFACES with GNB_IPV4_ADDRESS_FOR_NG_AMF="192.168.8.43" and GNB_IPV4_ADDRESS_FOR_NGU="192.168.8.43"; du_conf includes gNB_ID="0xe00" (decimal 3584), gNB_DU_ID="0xe00", servingCellConfigCommon with prach_ConfigurationIndex=98, absoluteFrequencySSB=641280, dl_frequencyBand=78, etc.; ue_conf includes sa=1, rfsim=1, imsi="001010000000101", rfsimulator serveraddr="127.0.0.1", serverport="4043". Initial mismatch noted: CU gNB_ID=3840 vs. DU gNB_ID=3584, which should be identical per 3GPP TS 38.300 for split gNB.
+
+Analyzing CU Logs: Initialization proceeds with monolithic mode, GNBSParams retrieval, OPT disabled, HW version logging, PHY task creation (RC.gNB allocated, prs_config absent, nb_nr_L1_inst=0), gNB_RRC_INST allocation, F1AP gNB_CU_id=3840 and name="gNB-Eurecom-CU", SDAP disabled, DRB count=1, SIB23 encoding, PDCP GTPU init, gNB_app_register, thread creation for SCTP/NGAP/GNB_APP/RRC_GNB, GTPU SA mode with address 192.168.8.43:2152, SCTP bindx failure (errno 99: Cannot assign requested address) for 192.168.8.43, GTPU bind failure, E1AP CUUP N3 UDP listener failure, F1AP CU start, TASK_CU_F1 thread, NR_RRC main loop, F1AP SCTP request for 127.0.0.5, GTPU UDP for 127.0.0.5:2152 (instance 97), NR_RRC accepting CU-UP ID=3840, TASK_GTPV1_U thread, F1 Setup Request from gNB_DU=3584 ("gNB-Eurecom-DU"), RRC accepting DU=3584 with RRC version 17.3.0, CCCH decoding RNTI=2acf, UE context creation (CU UE ID=1, DU UE ID=10959, random UE ID), SRB1 activation, RRCSetup generation, UE processing NR_RRCSetupComplete, UE state NR_RRC_CONNECTED, NGAP "No AMF is associated". Anomalies: SCTP/GTPU bind failures for non-local IP 192.168.8.43, E1AP failure, but F1AP succeeds with DU, UE RRC connects successfully. Cross-reference with network_config cu_conf: gNB_ID=3840 matches log, but NETWORK_INTERFACES IPs (192.168.8.43) are non-local, causing bind failures; local_s_address="127.0.0.5" used for F1AP/GTPU, but NGAP uses NETWORK_INTERFACES IP.
+
+Analyzing DU Logs: Initialization with wait_gNBs, L1 configured, RU threads init, config from file, RU mask=1, RU 0 as gNodeB_3GPP (nr_band=78, nr_scs_for_raster=1, half-slot=1), ru_id=0, librfsimulator/libdfts/libldpc loaded, RU sync, ITTI handler, RU RF ready, RF started with void samples, UE command line -C 3619200000 -r 106 --numerology 1 --ssb 516, client connect (time send), Tx out-of-order warning, NR_MAC Frame.Slot=128.0, RAPROC RA initiation (preamble=62, energy=54.0 dB), UE RA-RNTI=0x10b TC-RNTI=2acf, RA-Msg2 DCI generation, Msg3 scheduling, RA contention resolution timer (64ms + 2*7 K2=142 slots), UE context addition (RNTI=2acf), PUSCH Msg3 received correctly, RA-Msg3 processing, RLC srb0/srb1 activation, RA-Msg4 activation, ULSCH HARQ PID warning (ignore for RA), CU UE ID addition=1, Msg4 generation (149 bytes), RA-Msg4 Ack received (CBRA success), subsequent frames (256.0 to 896.0) with UE in-sync stats (RSRP=-44, MCS=9, BLER low, TX/RX bytes increasing). No crashes or assertions; RA procedure completes successfully, UE maintains connection with good performance. Link to network_config du_conf: gNB_ID=3584 matches F1AP DU ID, prach_ConfigurationIndex=98 (valid per 3GPP TS 38.211 range 0-255), frequency/band settings align with UE command line.
+
+Analyzing UE Logs: Repetitive entries for NR band=78 TDD, duplex spacing=0 KHz, Harq round stats (8/0/0 to 11/0/0). No explicit connection attempts or failures shown; logs appear truncated or focused on PHY stats. Link to network_config ue_conf: sa=1 and rfsim=1 match deployment, imsi="001010000000101" (valid format), rfsimulator serveraddr="127.0.0.1" aligns with DU RU config (serveraddr="server", but likely localhost), frequency implied by DU dl_absoluteFrequencyPointA=640008 (band 78 n78).
+
+Cross-Component Correlations and Root Cause Hypothesis: Timelines correlate: CU init completes with F1AP start, DU init with RU ready and RA processing, UE connects via RA (Frame 128.0-184.0), RRC setup (post-184.0), UE data exchange (256.0-896.0), but CU NGAP fails ("No AMF associated"). DU crash absent, F1AP succeeds despite CU gNB_ID=3840 vs. DU gNB_ID=3584, UE RA succeeds with prach_ConfigurationIndex=98. Misconfigured_param "gNBs.gNB_ID=3840" indicates CU gNB_ID invalid. Per 3GPP TS 38.300, split gNB CU/DU share gNB ID; mismatch (CU=3840, DU=3584) violates spec, potentially causing AMF rejection (AMF configured for gNB_ID=3584). SCTP bind failure for 192.168.8.43 (non-local) prevents NGAP connection attempt, but gNB_ID mismatch exacerbates by ensuring rejection if bind fixed. NETWORK_INTERFACES IP likely derived incorrectly from gNB_ID; correct gNB_ID=3584 may align IP. Hypothesis: gNB_ID mismatch root cause, leading to AMF association failure despite F1AP/UE success.
+
+Recommendations for Fix and Further Analysis: Change cu_conf gNB_ID from 3840 to 3584 for CU-DU alignment per 3GPP. Update NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF/GNB_IPV4_ADDRESS_FOR_NGU to local IP (e.g., "127.0.0.1" or actual interface IP) to enable SCTP/GTPU bind. Debug: Verify AMF running/configured for gNB_ID=3584; use tcpdump for SCTP/NGAP packets; check OAI code for gNB_ID validation (range 0-2^22-1 per TS 38.300). Tools: OAI logs with increased verbosity, Wireshark for F1AP/NGAP.
+
+Corrected network_config:
+{
+  "gnb_conf": {
+    "Active_gNBs": ["gNB-Eurecom-CU"],
+    "Asn1_verbosity": "none",
+    "Num_Threads_PUSCH": 8,
+    "gNBs": {
+      "gNB_ID": 3584,
+      "gNB_name": "gNB-Eurecom-CU",
+      "tracking_area_code": 1,
+      "plmn_list": {
+        "mcc": 1,
+        "mnc": 1,
+        "mnc_length": 2,
+        "snssaiList": {
+          "sst": 1
+        }
+      },
+      "nr_cellid": 1,
+      "tr_s_preference": "f1",
+      "local_s_if_name": "lo",
+      "local_s_address": "127.0.0.5",
+      "remote_s_address": "127.0.0.3",
+      "local_s_portc": 501,
+      "local_s_portd": 2152,
+      "remote_s_portc": 500,
+      "remote_s_portd": 2152,
+      "SCTP": {
+        "SCTP_INSTREAMS": 2,
+        "SCTP_OUTSTREAMS": 2
+      },
+      "amf_ip_address": {
+        "ipv4": "192.168.70.132"
+      },
+      "NETWORK_INTERFACES": {
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "127.0.0.1",
+        "GNB_IPV4_ADDRESS_FOR_NGU": "127.0.0.1",
+        "GNB_PORT_FOR_S1U": 2152
+      }
+    },
+    "security": {
+      "ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"],
+      "integrity_algorithms": ["nia2", "nia0"],
+      "drb_ciphering": "yes",
+      "drb_integrity": "no"
+    },
+    "log_config": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info",
+      "rlc_log_level": "info",
+      "pdcp_log_level": "info",
+      "rrc_log_level": "info",
+      "ngap_log_level": "info",
+      "f1ap_log_level": "info"
+    }
+  },
+  "ue_conf": {
+    "sa": 1,
+    "rfsim": 1,
+    "uicc0": {
+      "imsi": "001010000000101",
+      "key": "fec86ba6eb707ed08905757b1bb44b8f",
+      "opc": "C42449363BBAD02B66D16BC975D77CC1",
+      "dnn": "oai",
+      "nssai_sst": 1
+    },
+    "telnetsrv": {
+      "listenport": 9091,
+      "histfile": "~/history.telnetsrv"
+    },
+    "rfsimulator": {
+      "serveraddr": "127.0.0.1",
+      "serverport": "4043",
+      "options": [],
+      "modelname": "AWGN"
+    }
+  }
+}

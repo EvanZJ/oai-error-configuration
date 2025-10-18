@@ -1,0 +1,13 @@
+Overall Context and Setup Assumptions: The scenario involves OpenAirInterface (OAI) in Standalone (SA) mode with radio frequency simulator (rfsim), as indicated by the command-line options --rfsim --sa in the logs. The expected flow is component initialization (CU, DU, UE), followed by F1/NGAP setup between CU and DU, AMF connection, UE attachment via PRACH, RRC connection establishment, and PDU session setup. Potential issues include configuration mismatches in CSI-RS parameters, invalid config causing F1AP failures, and connection issues. Parsing the network_config JSON: gnb_conf (DU config) includes do_CSIRS=1, which may cause invalid CSI-RS configuration. ue_conf includes rfsimulator serveraddr=127.0.0.1, serverport=4043. Initial mismatches noted: The config sets do_CSIRS=1, but DU log shows "CSI-RS 0", suggesting possible override or parsing issue.
+
+Analyzing CU Logs: The CU initializes in MONOLITHIC mode, creates tasks for SCTP, NGAP, GNB_APP, RRC_GNB, GTPU. It sets gNB_CU_id=3584, registers with NGAP, starts F1AP with SCTP listener on 127.0.0.5. GTPU bind fails, but alternative bind succeeds. F1AP receives F1 Setup Request from DU, accepts it, sends response. UE RRC setup succeeds, but NGAP shows "No AMF is associated to the gNB".
+
+Analyzing DU Logs: The DU initializes, configures PHY/MAC, sets antenna ports, TDD config. It sends F1 Setup Request to CU, receives response. RA procedure succeeds, UE connects, data exchange occurs. No explicit errors, but do_CSIRS=1 may cause config issues.
+
+Analyzing UE Logs: The UE initializes, attempts to connect to rfsim server at 127.0.0.1:4043, initially fails, then connects after DU starts server. Successful RA, data exchange with low BLER.
+
+Cross-Component Correlations and Root Cause Hypothesis: The system appears functional, but the misconfigured do_CSIRS=1 may cause invalid CSI-RS config, leading to F1AP setup failure. Guided by the misconfigured parameter, the root cause is do_CSIRS=1 causing improper CSI-RS configuration, violating 3GPP TS 38.331, leading to F1AP failure. Using external knowledge from OAI code, do_CSIRS enables CSI-RS, but if not properly configured, causes issues.
+
+Recommendations for Fix and Further Analysis: Update do_CSIRS to 0 to disable CSI-RS. Debug by checking if config causes ASN.1 issues, verify 3GPP TS 38.331. Tools: Review OAI config code, use ASN.1 validators. Corrected network_config snippet: {"du_conf": {"gNBs": [{"do_CSIRS": 0}]}} – this changes do_CSIRS from 1 to 0, disabling CSI-RS.
+
+Limitations: Logs show success, possibly due to config override; truncated logs; incomplete JSON may omit CSI-RS params.

@@ -1,0 +1,4109 @@
+[
+  {
+    "filename": "du_case_01.json",
+    "modified_key": "gNBs[0].tracking_area_code",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the tracking area code to 0, a reserved value, will cause the gNB to fail initialization as TAC 0 is not allowed.",
+    "explanation_zh": "將追蹤區域代碼設定為 0，這是一個保留值，將導致 gNB 初始化失敗，因為 TAC 0 不被允許。"
+  },
+  {
+    "filename": "du_case_02.json",
+    "modified_key": "gNBs[0].nr_cellid",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the NR cell ID to a negative value will cause configuration validation failure in the cell setup phase.",
+    "explanation_zh": "將 NR 小區 ID 設定為負值將導致小區設定階段的配置驗證失敗。"
+  },
+  {
+    "filename": "du_case_03.json",
+    "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PDSCH antenna ports XP to 0 will cause invalid antenna configuration and downlink transmission failure.",
+    "explanation_zh": "將 PDSCH 天線埠 XP 設定為 0 將導致無效的天線配置和下行鏈路傳輸失敗。"
+  },
+  {
+    "filename": "du_case_04.json",
+    "modified_key": "gNBs[0].gNB_ID",
+    "original_value": "0xe00",
+    "error_value": 3584,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing the gNB ID from string to integer will cause type mismatch errors during configuration parsing.",
+    "explanation_zh": "將 gNB ID 從字串改為整數將導致配置解析期間的類型不匹配錯誤。"
+  },
+  {
+    "filename": "du_case_05.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "annoying",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting ASN.1 verbosity to an invalid enum value will cause logging configuration failure and potential runtime errors.",
+    "explanation_zh": "將 ASN.1 詳細程度設定為無效枚舉值將導致日誌配置失敗和潛在的運行時錯誤。"
+  },
+  {
+    "filename": "du_case_06.json",
+    "modified_key": "gNBs[0].gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "0xggg",
+    "error_type": "invalid_format",
+    "explanation_en": "Using invalid hexadecimal format for gNB ID will cause parsing errors during configuration loading.",
+    "explanation_zh": "為 gNB ID 使用無效的十六進位格式將導致配置載入期間的解析錯誤。"
+  },
+  {
+    "filename": "du_case_07.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 0,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting downlink carrier bandwidth to 0 creates a logical contradiction as bandwidth cannot be zero for carrier operation.",
+    "explanation_zh": "將下行鏈路載波頻寬設定為 0 會產生邏輯矛盾，因為載波操作的頻寬不能為零。"
+  },
+  {
+    "filename": "du_case_08.json",
+    "modified_key": "gNBs[0].tracking_area_code",
+    "original_value": 1,
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting tracking area code to null will cause missing mandatory parameter errors in cell configuration.",
+    "explanation_zh": "將追蹤區域代碼設定為 null 將導致小區配置中缺少強制參數錯誤。"
+  },
+  {
+    "filename": "du_case_09.json",
+    "modified_key": "gNBs[0].plmn_list[0].mcc",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting MCC to an out-of-range value like 1000 will cause PLMN validation failure during network registration.",
+    "explanation_zh": "將 MCC 設定為超出範圍的值如 1000 將導致網路註冊期間的 PLMN 驗證失敗。"
+  },
+  {
+    "filename": "du_case_10.json",
+    "modified_key": "gNBs[0].plmn_list[0].mcc",
+    "original_value": 1,
+    "error_value": "001",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing MCC from integer to string will cause type validation errors in PLMN configuration.",
+    "explanation_zh": "將 MCC 從整數改為字串將導致 PLMN 配置中的類型驗證錯誤。"
+  },
+  {
+    "filename": "du_case_11.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+    "original_value": 1,
+    "error_value": 4,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting subcarrier spacing to invalid enum value 4 will cause frequency domain configuration failure.",
+    "explanation_zh": "將子載波間距設定為無效枚舉值 4 將導致頻域配置失敗。"
+  },
+  {
+    "filename": "du_case_12.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+    "original_value": -96,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting preamble received target power to positive value 100 will cause invalid power level configuration.",
+    "explanation_zh": "將前導碼接收目標功率設定為正值 100 將導致無效的功率等級配置。"
+  },
+  {
+    "filename": "du_case_13.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": "641280",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing absolute frequency SSB from integer to string will cause frequency configuration type errors.",
+    "explanation_zh": "將絕對頻率 SSB 從整數改為字串將導致頻率配置類型錯誤。"
+  },
+  {
+    "filename": "du_case_14.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.300",
+    "error_type": "invalid_format",
+    "explanation_en": "Using invalid IP address format will cause network interface configuration failure.",
+    "explanation_zh": "使用無效的 IP 位址格式將導致網路介面配置失敗。"
+  },
+  {
+    "filename": "du_case_15.json",
+    "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP input streams to 0 will cause invalid SCTP configuration and connection establishment failure.",
+    "explanation_zh": "將 SCTP 輸入串流設定為 0 將導致無效的 SCTP 配置和連接建立失敗。"
+  },
+  {
+    "filename": "du_case_16.json",
+    "modified_key": "gNBs[0].maxMIMO_layers",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting maximum MIMO layers to 0 creates a logical contradiction as MIMO operation requires at least one layer.",
+    "explanation_zh": "將最大 MIMO 層數設定為 0 會產生邏輯矛盾，因為 MIMO 操作至少需要一層。"
+  },
+  {
+    "filename": "du_case_17.json",
+    "modified_key": "gNBs[0].gNB_name",
+    "original_value": "gNB-Eurecom-DU",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting gNB name to null will cause missing identifier errors in gNB management and logging.",
+    "explanation_zh": "將 gNB 名稱設定為 null 將導致 gNB 管理和日誌記錄中缺少識別碼錯誤。"
+  },
+  {
+    "filename": "du_case_18.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": 8,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting SSB periodicity to invalid enum value 8 will cause SSB transmission configuration failure.",
+    "explanation_zh": "將 SSB 週期設定為無效枚舉值 8 將導致 SSB 傳輸配置失敗。"
+  },
+  {
+    "filename": "du_case_19.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+    "original_value": 20,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting maximum power to 100 dBm will exceed hardware limits and cause power configuration rejection.",
+    "explanation_zh": "將最大功率設定為 100 dBm 將超過硬體限制並導致功率配置拒絕。"
+  },
+  {
+    "filename": "du_case_20.json",
+    "modified_key": "gNBs[0].nr_cellid",
+    "original_value": 1,
+    "error_value": "1",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing NR cell ID from integer to string will cause type mismatch in cell identification.",
+    "explanation_zh": "將 NR 小區 ID 從整數改為字串將導致小區識別中的類型不匹配。"
+  },
+  {
+    "filename": "du_case_21.json",
+    "modified_key": "gNBs[0].gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "e00",
+    "error_type": "invalid_format",
+    "explanation_en": "Omitting '0x' prefix in gNB ID will cause invalid hexadecimal format parsing errors.",
+    "explanation_zh": "在 gNB ID 中省略 '0x' 前綴將導致無效的十六進位格式解析錯誤。"
+  },
+  {
+    "filename": "du_case_22.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+    "original_value": 78,
+    "error_value": 1,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting downlink frequency band to 1 contradicts the configured frequencies for band 78 operation.",
+    "explanation_zh": "將下行鏈路頻率頻帶設定為 1 與為頻帶 78 操作配置的頻率相矛盾。"
+  },
+  {
+    "filename": "du_case_23.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].hoppingId",
+    "original_value": 40,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting hopping ID to negative value -1 will cause invalid hopping configuration.",
+    "explanation_zh": "將跳頻 ID 設定為負值 -1 將導致無效的跳頻配置。"
+  },
+  {
+    "filename": "du_case_24.json",
+    "modified_key": "gNBs[0].do_CSIRS",
+    "original_value": 1,
+    "error_value": "1",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing do_CSIRS from integer to string will cause type errors in CSI-RS configuration.",
+    "explanation_zh": "將 do_CSIRS 從整數改為字串將導致 CSI-RS 配置中的類型錯誤。"
+  },
+  {
+    "filename": "du_case_25.json",
+    "modified_key": "gNBs[0].plmn_list",
+    "original_value": [
+      {
+        "mcc": 1,
+        "mnc": 1,
+        "mnc_length": 2,
+        "snssaiList": [
+          {
+            "sst": 1,
+            "sd": "0x010203"
+          }
+        ]
+      }
+    ],
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting PLMN list to null will cause missing network identity configuration and registration failure.",
+    "explanation_zh": "將 PLMN 清單設定為 null 將導致缺少網路身份配置和註冊失敗。"
+  },
+  {
+    "filename": "du_case_26.json",
+    "modified_key": "gNBs[0].do_SRS",
+    "original_value": 0,
+    "error_value": 2,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting do_SRS to 2 will cause invalid SRS configuration and sounding reference signal transmission failure.",
+    "explanation_zh": "將 do_SRS 設定為 2 將導致無效的 SRS 配置和探測參考信號傳輸失敗。"
+  },
+  {
+    "filename": "du_case_27.json",
+    "modified_key": "gNBs[0].min_rxtxtime",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting minimum receive transmit time to 0 will cause invalid timing configuration and synchronization failure.",
+    "explanation_zh": "將最小接收傳輸時間設定為 0 將導致無效的時序配置和同步失敗。"
+  },
+  {
+    "filename": "du_case_28.json",
+    "modified_key": "gNBs[0].force_256qam_off",
+    "original_value": 1,
+    "error_value": "1",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing force_256qam_off from integer to string will cause type errors in 256QAM modulation configuration.",
+    "explanation_zh": "將 force_256qam_off 從整數改為字串將導致 256QAM 調製配置中的類型錯誤。"
+  },
+  {
+    "filename": "du_case_29.json",
+    "modified_key": "gNBs[0].sib1_tda",
+    "original_value": 15,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SIB1 TDA to 0 will cause invalid SIB1 timing advance configuration and broadcast failure.",
+    "explanation_zh": "將 SIB1 TDA 設定為 0 將導致無效的 SIB1 時序提前配置和廣播失敗。"
+  },
+  {
+    "filename": "du_case_30.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting physical cell ID to -1 will cause invalid cell identification and neighbor relation failure.",
+    "explanation_zh": "將物理小區 ID 設定為 -1 將導致無效的小區識別和鄰區關係失敗。"
+  },
+  {
+    "filename": "du_case_31.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 0,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting uplink carrier bandwidth to 0 creates a logical contradiction as bandwidth cannot be zero for uplink operation.",
+    "explanation_zh": "將上行鏈路載波頻寬設定為 0 會產生邏輯矛盾，因為上行鏈路操作的頻寬不能為零。"
+  },
+  {
+    "filename": "du_case_32.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+    "original_value": 98,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH configuration index to negative value -1 will cause invalid PRACH configuration and random access failure.",
+    "explanation_zh": "將 PRACH 配置索引設定為負值 -1 將導致無效的 PRACH 配置和隨機接入失敗。"
+  },
+  {
+    "filename": "du_case_33.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM",
+    "original_value": 0,
+    "error_value": 4,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting PRACH msg1 FDM to invalid enum value 4 will cause PRACH frequency domain configuration failure.",
+    "explanation_zh": "將 PRACH msg1 FDM 設定為無效枚舉值 4 將導致 PRACH 頻域配置失敗。"
+  },
+  {
+    "filename": "du_case_34.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig",
+    "original_value": 13,
+    "error_value": 20,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting zero correlation zone config to out-of-range value 20 will cause invalid PRACH correlation configuration.",
+    "explanation_zh": "將零相關區配置設定為超出範圍的值 20 將導致無效的 PRACH 相關配置。"
+  },
+  {
+    "filename": "du_case_35.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleTransMax",
+    "original_value": 6,
+    "error_value": 11,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting preamble transmission max to invalid enum value 11 will cause PRACH transmission limit configuration failure.",
+    "explanation_zh": "將前導碼傳輸最大值設定為無效枚舉值 11 將導致 PRACH 傳輸限制配置失敗。"
+  },
+  {
+    "filename": "du_case_36.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].powerRampingStep",
+    "original_value": 1,
+    "error_value": 4,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting power ramping step to invalid enum value 4 will cause invalid PRACH power control configuration.",
+    "explanation_zh": "將功率斜坡步長設定為無效枚舉值 4 將導致無效的 PRACH 功率控制配置。"
+  },
+  {
+    "filename": "du_case_37.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RA response window to 0 will cause invalid random access response timing configuration.",
+    "explanation_zh": "將 RA 回應視窗設定為 0 將導致無效的隨機接入回應時序配置。"
+  },
+  {
+    "filename": "du_case_38.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB per RACH occasion PR to 0 will cause invalid SSB-RACH mapping configuration.",
+    "explanation_zh": "將 SSB 每 RACH 場合 PR 設定為 0 將導致無效的 SSB-RACH 映射配置。"
+  },
+  {
+    "filename": "du_case_39.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB",
+    "original_value": 15,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB per RACH occasion preambles to 0 will cause invalid preamble allocation configuration.",
+    "explanation_zh": "將 SSB 每 RACH 場合前導碼設定為 0 將導致無效的前導碼分配配置。"
+  },
+  {
+    "filename": "du_case_40.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer",
+    "original_value": 7,
+    "error_value": 8,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting RA contention resolution timer to invalid enum value 8 will cause invalid contention resolution timing configuration.",
+    "explanation_zh": "將 RA 爭用解析計時器設定為無效枚舉值 8 將導致無效的爭用解析時序配置。"
+  },
+  {
+    "filename": "du_case_41.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB",
+    "original_value": 19,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RSRP threshold SSB to negative value -1 will cause invalid SSB measurement configuration.",
+    "explanation_zh": "將 RSRP 閾值 SSB 設定為負值 -1 將導致無效的 SSB 測量配置。"
+  },
+  {
+    "filename": "du_case_42.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex_PR",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting PRACH root sequence index PR to invalid enum value 0 will cause invalid PRACH sequence configuration.",
+    "explanation_zh": "將 PRACH 根序列索引 PR 設定為無效枚舉值 0 將導致無效的 PRACH 序列配置。"
+  },
+  {
+    "filename": "du_case_43.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH root sequence index to 0 will cause invalid PRACH sequence selection.",
+    "explanation_zh": "將 PRACH 根序列索引設定為 0 將導致無效的 PRACH 序列選擇。"
+  },
+  {
+    "filename": "du_case_44.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].msg1_SubcarrierSpacing",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting msg1 subcarrier spacing to invalid enum value 0 will cause invalid PRACH subcarrier configuration.",
+    "explanation_zh": "將 msg1 子載波間距設定為無效枚舉值 0 將導致無效的 PRACH 子載波配置。"
+  },
+  {
+    "filename": "du_case_45.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].restrictedSetConfig",
+    "original_value": 0,
+    "error_value": 3,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting restricted set config to invalid enum value 3 will cause invalid PRACH restricted set configuration.",
+    "explanation_zh": "將受限集合配置設定為無效枚舉值 3 將導致無效的 PRACH 受限集合配置。"
+  },
+  {
+    "filename": "du_case_46.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].msg3_DeltaPreamble",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting msg3_DeltaPreamble to 0, which is below the minimum allowed value of 1, will cause RACH configuration errors.",
+    "explanation_zh": "將 msg3_DeltaPreamble 設定為 0，低於允許的最小值 1，將導致 RACH 配置錯誤。"
+  },
+  {
+    "filename": "du_case_47.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].p0_NominalWithGrant",
+    "original_value": -90,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting p0_NominalWithGrant to 0, which is outside the valid range of -202 to -4 dBm, will cause power control issues.",
+    "explanation_zh": "將 p0_NominalWithGrant 設定為 0，超出有效範圍 -202 到 -4 dBm，將導致功率控制問題。"
+  },
+  {
+    "filename": "du_case_48.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].pucchGroupHopping",
+    "original_value": 0,
+    "error_value": 3,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting pucchGroupHopping to 3, an invalid enum value (valid are 0,1,2), will cause PUCCH configuration failure.",
+    "explanation_zh": "將 pucchGroupHopping 設定為 3，一個無效的枚舉值（有效值為 0,1,2），將導致 PUCCH 配置失敗。"
+  },
+  {
+    "filename": "du_case_49.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].hoppingId",
+    "original_value": 40,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting hoppingId to -1, which is below the minimum allowed value of 0, will cause hopping configuration errors.",
+    "explanation_zh": "將 hoppingId 設定為 -1，低於允許的最小值 0，將導致跳頻配置錯誤。"
+  },
+  {
+    "filename": "du_case_50.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].p0_nominal",
+    "original_value": -90,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting p0_nominal to 0, which is outside the valid range of -202 to -4 dBm, will cause power control issues."
+  },
+  {
+    "filename": "du_case_51.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_PositionsInBurst_Bitmap",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting ssb_PositionsInBurst_Bitmap to 0, which is invalid as it must be a non-zero bitmap, will cause SSB configuration errors.",
+    "explanation_zh": "將 ssb_PositionsInBurst_Bitmap 設定為 0，這是無效的，因為它必須是非零位圖，將導致 SSB 配置錯誤。"
+  },
+  {
+    "filename": "du_case_52.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": 6,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting ssb_periodicityServingCell to 6, an invalid periodicity value (valid are 0-5), will cause SSB periodicity configuration failure.",
+    "explanation_zh": "將 ssb_periodicityServingCell 設定為 6，一個無效的週期值（有效值為 0-5），將導致 SSB 週期配置失敗。"
+  },
+  {
+    "filename": "du_case_53.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position",
+    "original_value": 0,
+    "error_value": 3,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting dmrs_TypeA_Position to 3, an invalid enum value (valid are 0,1,2), will cause DMRS configuration failure.",
+    "explanation_zh": "將 dmrs_TypeA_Position 設定為 3，一個無效的枚舉值（有效值為 0,1,2），將導致 DMRS 配置失敗。"
+  },
+  {
+    "filename": "du_case_54.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].subcarrierSpacing",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting subcarrierSpacing to 0, which is below the minimum allowed value of 1, will cause subcarrier spacing configuration errors.",
+    "explanation_zh": "將 subcarrierSpacing 設定為 0，低於允許的最小值 1，將導致子載波間距配置錯誤。"
+  },
+  {
+    "filename": "du_case_55.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].referenceSubcarrierSpacing",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting referenceSubcarrierSpacing to 0, which is below the minimum allowed value of 1, will cause reference subcarrier spacing configuration errors.",
+    "explanation_zh": "將 referenceSubcarrierSpacing 設定為 0，低於允許的最小值 1，將導致參考子載波間距配置錯誤。"
+  },
+  {
+    "filename": "du_case_56.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting dl_UL_TransmissionPeriodicity to 0, which is below the minimum allowed value, will cause TDD configuration errors.",
+    "explanation_zh": "將 dl_UL_TransmissionPeriodicity 設定為 0，低於允許的最小值，將導致 TDD 配置錯誤。"
+  },
+  {
+    "filename": "du_case_57.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+    "original_value": 7,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nrofDownlinkSlots to 0, which is below the minimum allowed value, will cause slot configuration errors.",
+    "explanation_zh": "將 nrofDownlinkSlots 設定為 0，低於允許的最小值，將導致時隙配置錯誤。"
+  },
+  {
+    "filename": "du_case_58.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nrofDownlinkSymbols to 0, which is below the minimum allowed value, will cause symbol configuration errors.",
+    "explanation_zh": "將 nrofDownlinkSymbols 設定為 0，低於允許的最小值，將導致符號配置錯誤。"
+  },
+  {
+    "filename": "du_case_59.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nrofUplinkSlots to 0, which is below the minimum allowed value, will cause uplink slot configuration errors.",
+    "explanation_zh": "將 nrofUplinkSlots 設定為 0，低於允許的最小值，將導致上行鏈路時隙配置錯誤。"
+  },
+  {
+    "filename": "du_case_60.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nrofUplinkSymbols to 0, which is below the minimum allowed value, will cause uplink symbol configuration errors.",
+    "explanation_zh": "將 nrofUplinkSymbols 設定為 0，低於允許的最小值，將導致上行鏈路符號配置錯誤。"
+  },
+  {
+    "filename": "du_case_61.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+    "original_value": -25,
+    "error_value": -61,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting ssPBCH_BlockPower to -61 dBm, which is below the minimum allowed value, will cause SSB power configuration errors.",
+    "explanation_zh": "將 ssPBCH_BlockPower 設定為 -61 dBm，低於允許的最小值，將導致 SSB 功率配置錯誤。"
+  },
+  {
+    "filename": "du_case_62.json",
+    "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP_INSTREAMS to 0, which is below the minimum allowed value of 1, will cause SCTP connection failures.",
+    "explanation_zh": "將 SCTP_INSTREAMS 設定為 0，低於允許的最小值 1，將導致 SCTP 連接失敗。"
+  },
+  {
+    "filename": "du_case_63.json",
+    "modified_key": "gNBs[0].SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP_OUTSTREAMS to 0, which is below the minimum allowed value of 1, will cause SCTP connection failures.",
+    "explanation_zh": "將 SCTP_OUTSTREAMS 設定為 0，低於允許的最小值 1，將導致 SCTP 連接失敗。"
+  },
+  {
+    "filename": "du_case_64.json",
+    "modified_key": "MACRLCs[0].num_cc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting num_cc to 0, which is below the minimum allowed value of 1, will cause MACRLC configuration errors.",
+    "explanation_zh": "將 num_cc 設定為 0，低於允許的最小值 1，將導致 MACRLC 配置錯誤。"
+  },
+  {
+    "filename": "du_case_65.json",
+    "modified_key": "MACRLCs[0].local_n_portc",
+    "original_value": 500,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local_n_portc to -1, which is an invalid port number, will cause network binding failures.",
+    "explanation_zh": "將 local_n_portc 設定為 -1，這是一個無效的埠號，將導致網路綁定失敗。"
+  },
+  {
+    "filename": "du_case_66.json",
+    "modified_key": "L1s[0].num_cc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting num_cc to 0 will cause invalid component carrier configuration and initialization failure.",
+    "explanation_zh": "將 num_cc 設定為 0 將導致無效的組件載波配置和初始化失敗。"
+  },
+  {
+    "filename": "du_case_67.json",
+    "modified_key": "L1s[0].prach_dtx_threshold",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting prach_dtx_threshold to -1, below the minimum allowed value, will cause PRACH detection issues.",
+    "explanation_zh": "將 prach_dtx_threshold 設定為 -1，低於允許的最小值，將導致 PRACH 檢測問題。"
+  },
+  {
+    "filename": "du_case_68.json",
+    "modified_key": "L1s[0].pucch0_dtx_threshold",
+    "original_value": 150,
+    "error_value": 151,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting pucch0_dtx_threshold to 151, above the maximum allowed value, will cause PUCCH0 transmission failures.",
+    "explanation_zh": "將 pucch0_dtx_threshold 設定為 151，高於允許的最大值，將導致 PUCCH0 傳輸失敗。"
+  },
+  {
+    "filename": "du_case_69.json",
+    "modified_key": "L1s[0].ofdm_offset_divisor",
+    "original_value": 8,
+    "error_value": "8",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing ofdm_offset_divisor from integer to string will cause type mismatch errors in OFDM processing.",
+    "explanation_zh": "將 ofdm_offset_divisor 從整數改為字串將導致 OFDM 處理中的類型不匹配錯誤。"
+  },
+  {
+    "filename": "du_case_70.json",
+    "modified_key": "RUs[0].nb_tx",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nb_tx to 0 will cause invalid transmit antenna configuration and uplink transmission failure.",
+    "explanation_zh": "將 nb_tx 設定為 0 將導致無效的傳輸天線配置和上行鏈路傳輸失敗。"
+  },
+  {
+    "filename": "du_case_71.json",
+    "modified_key": "RUs[0].nb_rx",
+    "original_value": 4,
+    "error_value": 5,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting nb_rx to 5, above the maximum allowed value of 4, will cause invalid receive antenna configuration.",
+    "explanation_zh": "將 nb_rx 設定為 5，高於允許的最大值 4，將導致無效的接收天線配置。"
+  },
+  {
+    "filename": "du_case_72.json",
+    "modified_key": "RUs[0].att_tx",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting att_tx to -1, below the minimum allowed value, will cause invalid transmit attenuation configuration.",
+    "explanation_zh": "將 att_tx 設定為 -1，低於允許的最小值，將導致無效的傳輸衰減配置。"
+  },
+  {
+    "filename": "du_case_73.json",
+    "modified_key": "RUs[0].max_rxgain",
+    "original_value": 114,
+    "error_value": 115,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting max_rxgain to 115, above the maximum allowed value, will cause invalid receiver gain configuration.",
+    "explanation_zh": "將 max_rxgain 設定為 115，高於允許的最大值，將導致無效的接收器增益配置。"
+  },
+  {
+    "filename": "du_case_74.json",
+    "modified_key": "RUs[0].ru_thread_core",
+    "original_value": 6,
+    "error_value": 7,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting ru_thread_core to 7, above the maximum allowed core number, will cause invalid thread assignment.",
+    "explanation_zh": "將 ru_thread_core 設定為 7，高於允許的最大核心號，將導致無效的執行緒分配。"
+  },
+  {
+    "filename": "du_case_75.json",
+    "modified_key": "RUs[0].sl_ahead",
+    "original_value": 5,
+    "error_value": 6,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting sl_ahead to 6, above the maximum allowed value, will cause invalid slot ahead configuration.",
+    "explanation_zh": "將 sl_ahead 設定為 6，高於允許的最大值，將導致無效的時隙提前配置。"
+  },
+  {
+    "filename": "du_case_76.json",
+    "modified_key": "RUs[0].do_precoding",
+    "original_value": 0,
+    "error_value": "0",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing do_precoding from integer to string will cause type mismatch errors in precoding configuration.",
+    "explanation_zh": "將 do_precoding 從整數改為字串將導致預編碼配置中的類型不匹配錯誤。"
+  },
+  {
+    "filename": "du_case_77.json",
+    "modified_key": "RUs[0].max_pdschReferenceSignalPower",
+    "original_value": -27,
+    "error_value": -26,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting max_pdschReferenceSignalPower to -26, above the maximum allowed value, will cause invalid reference signal power configuration.",
+    "explanation_zh": "將 max_pdschReferenceSignalPower 設定為 -26，高於允許的最大值，將導致無效的參考信號功率配置。"
+  },
+  {
+    "filename": "du_case_78.json",
+    "modified_key": "RUs[0].sf_extension",
+    "original_value": 0,
+    "error_value": 1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting sf_extension to 1, above the maximum allowed value, will cause invalid subframe extension configuration.",
+    "explanation_zh": "將 sf_extension 設定為 1，高於允許的最大值，將導致無效的子幀擴展配置。"
+  },
+  {
+    "filename": "du_case_79.json",
+    "modified_key": "RUs[0].clock_src",
+    "original_value": "internal",
+    "error_value": "external",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting clock_src to 'external', an invalid enum value, will cause clock source configuration failure.",
+    "explanation_zh": "將 clock_src 設定為 'external'，一個無效的枚舉值，將導致時鐘源配置失敗。"
+  },
+  {
+    "filename": "du_case_80.json",
+    "modified_key": "RUs[0].local_rf",
+    "original_value": "yes",
+    "error_value": "no",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting local_rf to 'no', an invalid enum value, will cause local RF configuration failure.",
+    "explanation_zh": "將 local_rf 設定為 'no'，一個無效的枚舉值，將導致本地 RF 配置失敗。"
+  },
+  {
+    "filename": "du_case_81.json",
+    "modified_key": "rfsimulator.serveraddr",
+    "original_value": "server",
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting serveraddr to 'invalid', an invalid address format, will cause RF simulator connection failure.",
+    "explanation_zh": "將 serveraddr 設定為 'invalid'，一個無效的位址格式，將導致 RF 模擬器連接失敗。"
+  },
+  {
+    "filename": "du_case_82.json",
+    "modified_key": "rfsimulator.serverport",
+    "original_value": 4043,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting serverport to 0, an invalid port number, will cause RF simulator binding failure.",
+    "explanation_zh": "將 serverport 設定為 0，一個無效的埠號，將導致 RF 模擬器綁定失敗。"
+  },
+  {
+    "filename": "du_case_83.json",
+    "modified_key": "rfsimulator.modelname",
+    "original_value": "AWGN",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting modelname to 'invalid', an invalid model name, will cause RF simulator model configuration failure.",
+    "explanation_zh": "將 modelname 設定為 'invalid'，一個無效的模型名稱，將導致 RF 模擬器模型配置失敗。"
+  },
+  {
+    "filename": "du_case_84.json",
+    "modified_key": "rfsimulator.IQfile",
+    "original_value": "/tmp/rfsimulator.iqs",
+    "error_value": "/invalid/path",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting IQfile to '/invalid/path', an invalid file path, will cause IQ file access failure.",
+    "explanation_zh": "將 IQfile 設定為 '/invalid/path'，一個無效的檔案路徑，將導致 IQ 檔案存取失敗。"
+  },
+  {
+    "filename": "du_case_85.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": "error",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting global_log_level to 'error', an invalid enum value, will cause logging configuration failure.",
+    "explanation_zh": "將 global_log_level 設定為 'error'，一個無效的枚舉值，將導致日誌配置失敗。"
+  },
+  {
+    "filename": "du_case_86.json",
+    "modified_key": "log_config.hw_log_level",
+    "original_value": "info",
+    "error_value": "debug",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting hw_log_level to 'debug', an invalid enum value, will cause hardware logging configuration failure.",
+    "explanation_zh": "將 hw_log_level 設定為 'debug'，一個無效的枚舉值，將導致硬體日誌配置失敗。"
+  },
+  {
+    "filename": "du_case_87.json",
+    "modified_key": "log_config.phy_log_level",
+    "original_value": "info",
+    "error_value": "trace",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting phy_log_level to 'trace', an invalid enum value, will cause physical layer logging configuration failure.",
+    "explanation_zh": "將 phy_log_level 設定為 'trace'，一個無效的枚舉值，將導致物理層日誌配置失敗。"
+  },
+  {
+    "filename": "du_case_88.json",
+    "modified_key": "log_config.mac_log_level",
+    "original_value": "info",
+    "error_value": "warn",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting mac_log_level to 'warn', an invalid enum value, will cause MAC layer logging configuration failure.",
+    "explanation_zh": "將 mac_log_level 設定為 'warn'，一個無效的枚舉值，將導致 MAC 層日誌配置失敗。"
+  },
+  {
+    "filename": "du_case_89.json",
+    "modified_key": "fhi_72.system_core",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting system_core to -1, below the minimum allowed value, will cause invalid system core assignment and initialization failure.",
+    "explanation_zh": "將 system_core 設定為 -1，低於允許的最小值，將導致無效的系統核心分配和初始化失敗。"
+  },
+  {
+    "filename": "du_case_90.json",
+    "modified_key": "fhi_72.io_core",
+    "original_value": 4,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing io_core from integer to string will cause type mismatch errors in I/O core configuration.",
+    "explanation_zh": "將 io_core 從整數改為字串將導致 I/O 核心配置中的類型不匹配錯誤。"
+  },
+  {
+    "filename": "du_case_91.json",
+    "modified_key": "fhi_72.worker_cores[0]",
+    "original_value": 2,
+    "error_value": 999,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting worker_cores[0] to 999, above the maximum allowed core number, will cause invalid worker core assignment.",
+    "explanation_zh": "將 worker_cores[0] 設定為 999，高於允許的最大核心號，將導致無效的工作者核心分配。"
+  },
+  {
+    "filename": "du_case_92.json",
+    "modified_key": "fhi_72.ru_addr[0]",
+    "original_value": "e8:c7:4f:25:80:ed",
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting ru_addr[0] to 'invalid', an invalid MAC address format, will cause RU address configuration failure.",
+    "explanation_zh": "將 ru_addr[0] 設定為 'invalid'，一個無效的 MAC 位址格式，將導致 RU 位址配置失敗。"
+  },
+  {
+    "filename": "du_case_93.json",
+    "modified_key": "fhi_72.mtu",
+    "original_value": 9000,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting mtu to 0, below the minimum allowed value, will cause invalid MTU configuration and network packet issues.",
+    "explanation_zh": "將 mtu 設定為 0，低於允許的最小值，將導致無效的 MTU 配置和網路封包問題。"
+  },
+  {
+    "filename": "du_case_94.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+    "original_value": 285,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_cp_dl[0] to 0, below the minimum allowed value, will cause invalid downlink timing configuration.",
+    "explanation_zh": "將 T1a_cp_dl[0] 設定為 0，低於允許的最小值，將導致無效的下行鏈路時序配置。"
+  },
+  {
+    "filename": "du_case_95.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_ul[0]",
+    "original_value": 285,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_cp_ul[0] to 0, below the minimum allowed value, will cause invalid uplink timing configuration.",
+    "explanation_zh": "將 T1a_cp_ul[0] 設定為 0，低於允許的最小值，將導致無效的上行鏈路時序配置。"
+  },
+  {
+    "filename": "du_case_96.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_up[0]",
+    "original_value": 96,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_up[0] to 0, below the minimum allowed value, will cause invalid uplink timing configuration.",
+    "explanation_zh": "將 T1a_up[0] 設定為 0，低於允許的最小值，將導致無效的上行鏈路時序配置。"
+  },
+  {
+    "filename": "du_case_97.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4[0]",
+    "original_value": 110,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4[0] to 0, below the minimum allowed value, will cause invalid timing advance configuration.",
+    "explanation_zh": "將 Ta4[0] 設定為 0，低於允許的最小值，將導致無效的時序提前配置。"
+  },
+  {
+    "filename": "du_case_98.json",
+    "modified_key": "fhi_72.fh_config[0].ru_config.iq_width",
+    "original_value": 9,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting iq_width to 0, below the minimum allowed value, will cause invalid IQ width configuration and signal processing failure.",
+    "explanation_zh": "將 iq_width 設定為 0，低於允許的最小值，將導致無效的 IQ 寬度配置和信號處理失敗。"
+  },
+  {
+    "filename": "du_case_99.json",
+    "modified_key": "fhi_72.fh_config[0].ru_config.iq_width_prach",
+    "original_value": 9,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting iq_width_prach to 0, below the minimum allowed value, will cause invalid PRACH IQ width configuration.",
+    "explanation_zh": "將 iq_width_prach 設定為 0，低於允許的最小值，將導致無效的 PRACH IQ 寬度配置。"
+  },
+  {
+    "filename": "du_case_100.json",
+    "modified_key": "fhi_72.fh_config[0].prach_config.kbar",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting kbar to -1, below the minimum allowed value, will cause invalid PRACH kbar configuration.",
+    "explanation_zh": "將 kbar 設定為 -1，低於允許的最小值，將導致無效的 PRACH kbar 配置。"
+  },
+  {
+    "filename": "du_case_101.json",
+    "modified_key": "fhi_72.fh_config[0].prach_config.kbar",
+    "original_value": 0,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing kbar from integer to string will cause type mismatch errors in PRACH configuration.",
+    "explanation_zh": "將 kbar 從整數改為字串將導致 PRACH 配置中的類型不匹配錯誤。"
+  },
+  {
+    "filename": "du_case_102.json",
+    "modified_key": "fhi_72.fh_config[0].prach_config",
+    "original_value": {
+      "kbar": 0
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting prach_config to null will cause missing PRACH configuration and random access failure.",
+    "explanation_zh": "將 prach_config 設定為 null 將導致缺少 PRACH 配置和隨機接入失敗。"
+  },
+  {
+    "filename": "du_case_103.json",
+    "modified_key": "fhi_72",
+    "original_value": {
+      "dpdk_devices": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "system_core": 0,
+      "io_core": 4,
+      "worker_cores": [
+        2
+      ],
+      "ru_addr": [
+        "e8:c7:4f:25:80:ed",
+        "e8:c7:4f:25:80:ed"
+      ],
+      "mtu": 9000,
+      "fh_config": [
+        {
+          "T1a_cp_dl": [
+            285,
+            429
+          ],
+          "T1a_cp_ul": [
+            285,
+            429
+          ],
+          "T1a_up": [
+            96,
+            196
+          ],
+          "Ta4": [
+            110,
+            180
+          ],
+          "ru_config": {
+            "iq_width": 9,
+            "iq_width_prach": 9
+          },
+          "prach_config": {
+            "kbar": 0
+          }
+        }
+      ]
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting fhi_72 to null will cause missing FHI configuration and front-haul interface failure.",
+    "explanation_zh": "將 fhi_72 設定為 null 將導致缺少 FHI 配置和前傳介面失敗。"
+  },
+  {
+    "filename": "du_case_104.json",
+    "modified_key": "fhi_72.fh_config",
+    "original_value": [
+      {
+        "T1a_cp_dl": [
+          285,
+          429
+        ],
+        "T1a_cp_ul": [
+          285,
+          429
+        ],
+        "T1a_up": [
+          96,
+          196
+        ],
+        "Ta4": [
+          110,
+          180
+        ],
+        "ru_config": {
+          "iq_width": 9,
+          "iq_width_prach": 9
+        },
+        "prach_config": {
+          "kbar": 0
+        }
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting fh_config to empty array will cause missing front-haul configuration and interface failure.",
+    "explanation_zh": "將 fh_config 設定為空陣列將導致缺少前傳配置和介面失敗。"
+  },
+  {
+    "filename": "du_case_105.json",
+    "modified_key": "extra_key",
+    "original_value": null,
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "Adding an extra unexpected key 'extra_key' will cause configuration parsing errors due to unrecognized parameters.",
+    "explanation_zh": "新增一個意外的額外鍵 'extra_key' 將導致配置解析錯誤，因為未識別的參數。"
+  },
+  {
+    "filename": "du_case_106.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to empty array will cause no active gNBs and system initialization failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致沒有活躍的 gNB 和系統初始化失敗。"
+  },
+  {
+    "filename": "du_case_107.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "annoying",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting Asn1_verbosity to null will cause missing ASN.1 verbosity configuration and logging issues.",
+    "explanation_zh": "將 Asn1_verbosity 設定為 null 將導致缺少 ASN.1 詳細程度配置和日誌問題。"
+  },
+  {
+    "filename": "du_case_108.json",
+    "modified_key": "gNBs",
+    "original_value": [
+      {
+        "gNB_ID": "0xe00",
+        "gNB_DU_ID": "0xe00",
+        "gNB_name": "gNB-Eurecom-DU",
+        "tracking_area_code": 1,
+        "plmn_list": [
+          {
+            "mcc": 1,
+            "mnc": 1,
+            "mnc_length": 2,
+            "snssaiList": [
+              {
+                "sst": 1,
+                "sd": "0x010203"
+              }
+            ]
+          }
+        ],
+        "nr_cellid": 1,
+        "pdsch_AntennaPorts_XP": 2,
+        "pdsch_AntennaPorts_N1": 2,
+        "pusch_AntennaPorts": 4,
+        "do_CSIRS": 1,
+        "maxMIMO_layers": 2,
+        "do_SRS": 0,
+        "min_rxtxtime": 6,
+        "force_256qam_off": 1,
+        "sib1_tda": 15,
+        "pdcch_ConfigSIB1": [
+          {
+            "controlResourceSetZero": 11,
+            "searchSpaceZero": 0
+          }
+        ],
+        "servingCellConfigCommon": [
+          {
+            "physCellId": 0,
+            "absoluteFrequencySSB": 641280,
+            "dl_frequencyBand": 78,
+            "dl_absoluteFrequencyPointA": 640008,
+            "dl_offstToCarrier": 0,
+            "dl_subcarrierSpacing": 1,
+            "dl_carrierBandwidth": 106,
+            "initialDLBWPlocationAndBandwidth": 28875,
+            "initialDLBWPsubcarrierSpacing": 1,
+            "initialDLBWPcontrolResourceSetZero": 12,
+            "initialDLBWPsearchSpaceZero": 0,
+            "ul_frequencyBand": 78,
+            "ul_offstToCarrier": 0,
+            "ul_subcarrierSpacing": 1,
+            "ul_carrierBandwidth": 106,
+            "pMax": 20,
+            "initialULBWPlocationAndBandwidth": 28875,
+            "initialULBWPsubcarrierSpacing": 1,
+            "prach_ConfigurationIndex": 98,
+            "prach_msg1_FDM": 0,
+            "prach_msg1_FrequencyStart": 0,
+            "zeroCorrelationZoneConfig": 13,
+            "preambleReceivedTargetPower": -96,
+            "preambleTransMax": 6,
+            "powerRampingStep": 1,
+            "ra_ResponseWindow": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB": 15,
+            "ra_ContentionResolutionTimer": 7,
+            "rsrp_ThresholdSSB": 19,
+            "prach_RootSequenceIndex_PR": 2,
+            "prach_RootSequenceIndex": 1,
+            "msg1_SubcarrierSpacing": 1,
+            "restrictedSetConfig": 0,
+            "msg3_DeltaPreamble": 1,
+            "p0_NominalWithGrant": -90,
+            "pucchGroupHopping": 0,
+            "hoppingId": 40,
+            "p0_nominal": -90,
+            "ssb_PositionsInBurst_Bitmap": 1,
+            "ssb_periodicityServingCell": 2,
+            "dmrs_TypeA_Position": 0,
+            "subcarrierSpacing": 1,
+            "referenceSubcarrierSpacing": 1,
+            "dl_UL_TransmissionPeriodicity": 6,
+            "nrofDownlinkSlots": 7,
+            "nrofDownlinkSymbols": 6,
+            "nrofUplinkSlots": 2,
+            "nrofUplinkSymbols": 4,
+            "ssPBCH_BlockPower": -25
+          }
+        ],
+        "SCTP": {
+          "SCTP_INSTREAMS": 2,
+          "SCTP_OUTSTREAMS": 2
+        }
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting the gNBs array to an empty list will cause the DU to have no gNB configuration, leading to initialization failure as no base stations are defined.",
+    "explanation_zh": "將 gNBs 陣列設定為空列表將導致 DU 沒有 gNB 配置，從而導致初始化失敗，因為沒有定義基站。"
+  },
+  {
+    "filename": "du_case_109.json",
+    "modified_key": "MACRLCs",
+    "original_value": [
+      {
+        "num_cc": 1,
+        "tr_s_preference": "local_L1",
+        "tr_n_preference": "f1",
+        "local_n_address": "127.0.0.3",
+        "remote_n_address": "127.0.0.5",
+        "local_n_portc": 500,
+        "local_n_portd": 2152,
+        "remote_n_portc": 501,
+        "remote_n_portd": 2152
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting the MACRLCs array to an empty list will cause no MAC RLC configuration, leading to failure in radio link control setup and inability to handle data transmission.",
+    "explanation_zh": "將 MACRLCs 陣列設定為空列表將導致沒有 MAC RLC 配置，從而導致無線鏈路控制設定失敗，無法處理資料傳輸。"
+  },
+  {
+    "filename": "du_case_110.json",
+    "modified_key": "L1s",
+    "original_value": [
+      {
+        "num_cc": 1,
+        "tr_s_preference": "local_L1",
+        "tr_n_preference": "f1",
+        "local_n_address": "127.0.0.3",
+        "local_n_portc": 500,
+        "local_n_portd": 2152,
+        "remote_n_address": "127.0.0.5",
+        "remote_n_portc": 501,
+        "remote_n_portd": 2152
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting L1s to an empty array will cause missing L1 layer configuration and DU initialization failure.",
+    "explanation_zh": "將 L1s 設定為空陣列將導致缺少 L1 層配置和 DU 初始化失敗。"
+  },
+  {
+    "filename": "du_case_111.json",
+    "modified_key": "RUs",
+    "original_value": [
+      {
+        "local_rf": "yes",
+        "nb_tx": 4,
+        "nb_rx": 4,
+        "att_tx": 0,
+        "att_rx": 0,
+        "bands": [
+          78
+        ],
+        "max_pdschReferenceSignalPower": -27,
+        "max_rxgain": 114,
+        "sf_extension": 0,
+        "eNB_instances": [
+          0
+        ],
+        "clock_src": "internal",
+        "ru_thread_core": 6,
+        "sl_ahead": 5,
+        "do_precoding": 0
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting RUs to an empty array will cause missing radio unit configuration and RF transmission failure.",
+    "explanation_zh": "將 RUs 設定為空陣列將導致缺少無線電單元配置和 RF 傳輸失敗。"
+  },
+  {
+    "filename": "du_case_112.json",
+    "modified_key": "rfsimulator",
+    "original_value": {
+      "serveraddr": "server",
+      "serverport": 4043,
+      "options": [],
+      "modelname": "AWGN",
+      "IQfile": "/tmp/rfsimulator.iqs"
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting rfsimulator to null will cause missing RF simulator configuration and simulation mode failure.",
+    "explanation_zh": "將 rfsimulator 設定為 null 將導致缺少 RF 模擬器配置和模擬模式失敗。"
+  },
+  {
+    "filename": "du_case_113.json",
+    "modified_key": "log_config",
+    "original_value": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info"
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting log_config to null will cause missing logging configuration and runtime logging issues.",
+    "explanation_zh": "將 log_config 設定為 null 將導致缺少日誌配置和運行時日誌問題。"
+  },
+  {
+    "filename": "du_case_114.json",
+    "modified_key": "fhi_72",
+    "original_value": {
+      "dpdk_devices": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "system_core": 0,
+      "io_core": 4,
+      "worker_cores": [
+        2
+      ],
+      "ru_addr": [
+        "e8:c7:4f:25:80:ed",
+        "e8:c7:4f:25:80:ed"
+      ],
+      "mtu": 9000,
+      "fh_config": [
+        {
+          "T1a_cp_dl": [
+            285,
+            429
+          ],
+          "T1a_cp_ul": [
+            285,
+            429
+          ],
+          "T1a_up": [
+            96,
+            196
+          ],
+          "Ta4": [
+            110,
+            180
+          ],
+          "ru_config": {
+            "iq_width": 9,
+            "iq_width_prach": 9
+          },
+          "prach_config": {
+            "kbar": 0
+          }
+        }
+      ]
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting fhi_72 to null will cause missing front-haul interface configuration and data transmission failure.",
+    "explanation_zh": "將 fhi_72 設定為 null 將導致缺少前傳介面配置和資料傳輸失敗。"
+  },
+  {
+    "filename": "du_case_115.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_116.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_117.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_118.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_119.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_120.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_121.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_122.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_123.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_124.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_125.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_126.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_127.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_128.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_129.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_130.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_131.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_132.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_133.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_134.json",
+    "modified_key": "Active_gNBs",
+    "original_value": [
+      "gNB-Eurecom-DU"
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active_gNBs to an empty array will cause missing active gNB configuration and DU startup failure.",
+    "explanation_zh": "將 Active_gNBs 設定為空陣列將導致缺少活躍 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_135.json",
+    "modified_key": "gNBs",
+    "original_value": [
+      {
+        "gNB_ID": "0xe00",
+        "gNB_DU_ID": "0xe00",
+        "gNB_name": "gNB-Eurecom-DU",
+        "tracking_area_code": 1,
+        "plmn_list": [
+          {
+            "mcc": 1,
+            "mnc": 1,
+            "mnc_length": 2,
+            "snssaiList": [
+              {
+                "sst": 1,
+                "sd": "0x010203"
+              }
+            ]
+          }
+        ],
+        "nr_cellid": 1,
+        "pdsch_AntennaPorts_XP": 2,
+        "pdsch_AntennaPorts_N1": 2,
+        "pusch_AntennaPorts": 4,
+        "do_CSIRS": 1,
+        "maxMIMO_layers": 2,
+        "do_SRS": 0,
+        "min_rxtxtime": 6,
+        "force_256qam_off": 1,
+        "sib1_tda": 15,
+        "pdcch_ConfigSIB1": [
+          {
+            "controlResourceSetZero": 11,
+            "searchSpaceZero": 0
+          }
+        ],
+        "servingCellConfigCommon": [
+          {
+            "physCellId": 0,
+            "absoluteFrequencySSB": 641280,
+            "dl_frequencyBand": 78,
+            "dl_absoluteFrequencyPointA": 640008,
+            "dl_offstToCarrier": 0,
+            "dl_subcarrierSpacing": 1,
+            "dl_carrierBandwidth": 106,
+            "initialDLBWPlocationAndBandwidth": 28875,
+            "initialDLBWPsubcarrierSpacing": 1,
+            "initialDLBWPcontrolResourceSetZero": 12,
+            "initialDLBWPsearchSpaceZero": 0,
+            "ul_frequencyBand": 78,
+            "ul_offstToCarrier": 0,
+            "ul_subcarrierSpacing": 1,
+            "ul_carrierBandwidth": 106,
+            "pMax": 20,
+            "initialULBWPlocationAndBandwidth": 28875,
+            "initialULBWPsubcarrierSpacing": 1,
+            "prach_ConfigurationIndex": 98,
+            "prach_msg1_FDM": 0,
+            "prach_msg1_FrequencyStart": 0,
+            "zeroCorrelationZoneConfig": 13,
+            "preambleReceivedTargetPower": -96,
+            "preambleTransMax": 6,
+            "powerRampingStep": 1,
+            "ra_ResponseWindow": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR": 4,
+            "ssb_perRACH_OccasionAndCB_PreamblesPerSSB": 15,
+            "ra_ContentionResolutionTimer": 7,
+            "rsrp_ThresholdSSB": 19,
+            "prach_RootSequenceIndex_PR": 2,
+            "prach_RootSequenceIndex": 1,
+            "msg1_SubcarrierSpacing": 1,
+            "restrictedSetConfig": 0,
+            "msg3_DeltaPreamble": 1,
+            "p0_NominalWithGrant": -90,
+            "pucchGroupHopping": 0,
+            "hoppingId": 40,
+            "p0_nominal": -90,
+            "ssb_PositionsInBurst_Bitmap": 1,
+            "ssb_periodicityServingCell": 2,
+            "dmrs_TypeA_Position": 0,
+            "subcarrierSpacing": 1,
+            "referenceSubcarrierSpacing": 1,
+            "dl_UL_TransmissionPeriodicity": 6,
+            "nrofDownlinkSlots": 7,
+            "nrofDownlinkSymbols": 6,
+            "nrofUplinkSlots": 2,
+            "nrofUplinkSymbols": 4,
+            "ssPBCH_BlockPower": -25
+          }
+        ],
+        "SCTP": {
+          "SCTP_INSTREAMS": 2,
+          "SCTP_OUTSTREAMS": 2
+        }
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting gNBs to an empty array will cause missing gNB configuration and DU startup failure.",
+    "explanation_zh": "將 gNBs 設定為空陣列將導致缺少 gNB 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_136.json",
+    "modified_key": "MACRLCs",
+    "original_value": [
+      {
+        "num_cc": 1,
+        "tr_s_preference": "local_L1",
+        "tr_n_preference": "f1",
+        "local_n_address": "127.0.0.3",
+        "local_n_portc": 500,
+        "local_n_portd": 2152,
+        "remote_n_address": "127.0.0.5",
+        "remote_n_portc": 501,
+        "remote_n_portd": 2152
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting MACRLCs to an empty array will cause missing MAC/RLC configuration and DU startup failure.",
+    "explanation_zh": "將 MACRLCs 設定為空陣列將導致缺少 MAC/RLC 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_137.json",
+    "modified_key": "L1s",
+    "original_value": [
+      {
+        "num_cc": 1,
+        "tr_s_preference": "local_L1",
+        "tr_n_preference": "f1",
+        "local_n_address": "127.0.0.3",
+        "local_n_portc": 500,
+        "local_n_portd": 2152,
+        "remote_n_address": "127.0.0.5",
+        "remote_n_portc": 501,
+        "remote_n_portd": 2152
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting L1s to an empty array will cause missing Layer 1 configuration and DU startup failure.",
+    "explanation_zh": "將 L1s 設定為空陣列將導致缺少第 1 層配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_138.json",
+    "modified_key": "RUs",
+    "original_value": [
+      {
+        "local_rf": "yes",
+        "nb_tx": 4,
+        "nb_rx": 4,
+        "att_tx": 0,
+        "att_rx": 0,
+        "bands": [
+          78
+        ],
+        "max_pdschReferenceSignalPower": -27,
+        "max_rxgain": 114,
+        "sf_extension": 0,
+        "eNB_instances": [
+          0
+        ],
+        "clock_src": "internal",
+        "ru_thread_core": 6,
+        "sl_ahead": 5,
+        "do_precoding": 0
+      }
+    ],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting RUs to an empty array will cause missing Radio Unit configuration and DU startup failure.",
+    "explanation_zh": "將 RUs 設定為空陣列將導致缺少無線電單元配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_139.json",
+    "modified_key": "rfsimulator",
+    "original_value": {
+      "serveraddr": "server",
+      "serverport": 4043,
+      "options": [],
+      "modelname": "AWGN",
+      "IQfile": "/tmp/rfsimulator.iqs"
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting rfsimulator to null will cause missing RF simulator configuration and DU startup failure.",
+    "explanation_zh": "將 rfsimulator 設定為 null 將導致缺少 RF 模擬器配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_140.json",
+    "modified_key": "log_config",
+    "original_value": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info"
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting log_config to null will cause missing logging configuration and DU startup failure.",
+    "explanation_zh": "將 log_config 設定為 null 將導致缺少日誌配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_141.json",
+    "modified_key": "fhi_72",
+    "original_value": {
+      "dpdk_devices": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "system_core": 0,
+      "io_core": 4,
+      "worker_cores": [
+        2
+      ],
+      "ru_addr": [
+        "e8:c7:4f:25:80:ed",
+        "e8:c7:4f:25:80:ed"
+      ],
+      "mtu": 9000,
+      "fh_config": [
+        {
+          "T1a_cp_dl": [
+            285,
+            429
+          ],
+          "T1a_cp_ul": [
+            285,
+            429
+          ],
+          "T1a_up": [
+            96,
+            196
+          ],
+          "Ta4": [
+            110,
+            180
+          ],
+          "ru_config": {
+            "iq_width": 9,
+            "iq_width_prach": 9
+          },
+          "prach_config": {
+            "kbar": 0
+          }
+        }
+      ]
+    },
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting fhi_72 to null will cause missing front-haul interface configuration and DU startup failure.",
+    "explanation_zh": "將 fhi_72 設定為 null 將導致缺少前端介面配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_142.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB",
+    "original_value": 19,
+    "error_value": 200,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RSRP threshold SSB to 200 dBm (out of range -140 to -44 dBm) will cause invalid RACH configuration and cell setup failure.",
+    "explanation_zh": "將 RSRP 閾值 SSB 設定為 200 dBm（超出範圍 -140 到 -44 dBm）將導致無效的 RACH 配置和小區設定失敗。"
+  },
+  {
+    "filename": "du_case_143.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+    "original_value": 98,
+    "error_value": 256,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH configuration index to 256 (out of range 0-255) will cause invalid PRACH setup and RACH failure.",
+    "explanation_zh": "將 PRACH 配置索引設定為 256（超出範圍 0-255）將導致無效的 PRACH 設定和 RACH 失敗。"
+  },
+  {
+    "filename": "du_case_144.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting SSB periodicity to an invalid enum value will cause SSB configuration failure and cell synchronization issues.",
+    "explanation_zh": "將 SSB 週期設定為無效枚舉值將導致 SSB 配置失敗和小區同步問題。"
+  },
+  {
+    "filename": "du_case_145.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting downlink carrier bandwidth to 0 will cause invalid carrier configuration and downlink transmission failure.",
+    "explanation_zh": "將下行鏈路載波頻寬設定為 0 將導致無效的載波配置和下行鏈路傳輸失敗。"
+  },
+  {
+    "filename": "du_case_146.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting uplink carrier bandwidth to 0 will cause invalid carrier configuration and uplink transmission failure.",
+    "explanation_zh": "將上行鏈路載波頻寬設定為 0 將導致無效的載波配置和上行鏈路傳輸失敗。"
+  },
+  {
+    "filename": "du_case_147.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+    "original_value": 20,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting maximum transmit power to 100 dBm (out of range -30 to 33 dBm) will cause invalid power configuration and transmission failure.",
+    "explanation_zh": "將最大傳輸功率設定為 100 dBm（超出範圍 -30 到 33 dBm）將導致無效的功率配置和傳輸失敗。"
+  },
+  {
+    "filename": "du_case_148.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+    "original_value": -25,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB block power to 100 dBm (out of range -60 to 50 dBm) will cause invalid SSB power configuration and synchronization failure.",
+    "explanation_zh": "將 SSB 區塊功率設定為 100 dBm（超出範圍 -60 到 50 dBm）將導致無效的 SSB 功率配置和同步失敗。"
+  },
+  {
+    "filename": "du_case_149.json",
+    "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP in-streams to 0 (out of range 1-65535) will cause invalid SCTP configuration and F1 interface failure.",
+    "explanation_zh": "將 SCTP 輸入流設定為 0（超出範圍 1-65535）將導致無效的 SCTP 配置和 F1 介面失敗。"
+  },
+  {
+    "filename": "du_case_150.json",
+    "modified_key": "gNBs[0].SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP out-streams to 0 (out of range 1-65535) will cause invalid SCTP configuration and F1 interface failure.",
+    "explanation_zh": "將 SCTP 輸出流設定為 0（超出範圍 1-65535）將導致無效的 SCTP 配置和 F1 介面失敗。"
+  },
+  {
+    "filename": "du_case_151.json",
+    "modified_key": "MACRLCs[0].num_cc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting MACRLC component carriers to 0 will cause invalid MAC/RLC configuration and DU startup failure.",
+    "explanation_zh": "將 MACRLC 組件載波設定為 0 將導致無效的 MAC/RLC 配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_152.json",
+    "modified_key": "L1s[0].num_cc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting L1 component carriers to 0 will cause invalid Layer 1 configuration and DU startup failure.",
+    "explanation_zh": "將 L1 組件載波設定為 0 將導致無效的第 1 層配置和 DU 啟動失敗。"
+  },
+  {
+    "filename": "du_case_153.json",
+    "modified_key": "RUs[0].nb_tx",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RU transmit antennas to 0 will cause invalid radio configuration and transmission failure.",
+    "explanation_zh": "將 RU 傳輸天線設定為 0 將導致無效的無線配置和傳輸失敗。"
+  },
+  {
+    "filename": "du_case_154.json",
+    "modified_key": "rfsimulator.serveraddr",
+    "original_value": "server",
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RF simulator server address to an invalid format will cause RF simulation connection failure.",
+    "explanation_zh": "將 RF 模擬器伺服器位址設定為無效格式將導致 RF 模擬連接失敗。"
+  },
+  {
+    "filename": "du_case_155.json",
+    "modified_key": "gNBs[0].SCTP.SCTP_OUTSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP output streams to 0 will cause SCTP connection failure.",
+    "explanation_zh": "將 SCTP 輸出流設定為 0 將導致 SCTP 連接失敗。"
+  },
+  {
+    "filename": "du_case_156.json",
+    "modified_key": "MACRLCs[0].num_cc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting MACRLC component carriers to 0 will cause invalid MACRLC configuration and transmission failure.",
+    "explanation_zh": "將 MACRLC 組件載波設定為 0 將導致無效的 MACRLC 配置和傳輸失敗。"
+  },
+  {
+    "filename": "du_case_157.json",
+    "modified_key": "L1s[0].num_cc",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting L1 component carriers to 0 will cause invalid L1 configuration and signal processing failure.",
+    "explanation_zh": "將 L1 組件載波設定為 0 將導致無效的 L1 配置和信號處理失敗。"
+  },
+  {
+    "filename": "du_case_158.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": "error",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting global log level to an invalid enum value will cause logging configuration failure.",
+    "explanation_zh": "將全域日誌級別設定為無效枚舉值將導致日誌配置失敗。"
+  },
+  {
+    "filename": "du_case_159.json",
+    "modified_key": "fhi_72.system_core",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting system core to -1 will cause invalid core assignment and system failure.",
+    "explanation_zh": "將系統核心設定為 -1 將導致無效的核心分配和系統失敗。"
+  },
+  {
+    "filename": "du_case_160.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM",
+    "original_value": 0,
+    "error_value": 8,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 FDM to 8 will cause invalid PRACH configuration and RACH failure.",
+    "explanation_zh": "將 PRACH 訊息 1 FDM 設定為 8 將導致無效的 PRACH 配置和 RACH 失敗。"
+  },
+  {
+    "filename": "du_case_161.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+    "original_value": 4,
+    "error_value": 16,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RA response window to 16 will cause invalid RACH timing and connection failure.",
+    "explanation_zh": "將 RA 回應視窗設定為 16 將導致無效的 RACH 定時和連接失敗。"
+  },
+  {
+    "filename": "du_case_162.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB",
+    "original_value": 15,
+    "error_value": 64,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB per RACH occasion preambles to 64 will cause invalid SSB configuration and synchronization failure.",
+    "explanation_zh": "將每個 RACH 場合的 SSB 前導碼設定為 64 將導致無效的 SSB 配置和同步失敗。"
+  },
+  {
+    "filename": "du_case_163.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+    "original_value": 98,
+    "error_value": 257,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH configuration index to 257 will cause invalid PRACH parameters and RACH failure.",
+    "explanation_zh": "將 PRACH 配置索引設定為 257 將導致無效的 PRACH 參數和 RACH 失敗。"
+  },
+  {
+    "filename": "du_case_164.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB",
+    "original_value": 19,
+    "error_value": 200,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RSRP threshold for SSB to 200 will cause invalid threshold and cell selection failure.",
+    "explanation_zh": "將 SSB 的 RSRP 閾值設定為 200 將導致無效的閾值和細胞選擇失敗。"
+  },
+  {
+    "filename": "du_case_165.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting SSB periodicity to an invalid enum value will cause synchronization failure.",
+    "explanation_zh": "將 SSB 週期設定為無效枚舉值將導致同步失敗。"
+  },
+  {
+    "filename": "du_case_166.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position",
+    "original_value": 0,
+    "error_value": 4,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DMRS type A position to 4 will cause invalid DMRS configuration and demodulation failure.",
+    "explanation_zh": "將 DMRS 類型 A 位置設定為 4 將導致無效的 DMRS 配置和解調失敗。"
+  },
+  {
+    "filename": "du_case_167.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].subcarrierSpacing",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting subcarrier spacing to 0 will cause invalid frequency configuration and transmission failure.",
+    "explanation_zh": "將子載波間距設定為 0 將導致無效的頻率配置和傳輸失敗。"
+  },
+  {
+    "filename": "du_case_168.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+    "original_value": 7,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of downlink slots to 0 will cause invalid TDD configuration and downlink failure.",
+    "explanation_zh": "將下行鏈路時隙數設定為 0 將導致無效的 TDD 配置和下行鏈路失敗。"
+  },
+  {
+    "filename": "du_case_169.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of downlink symbols to 0 will cause invalid symbol allocation and transmission failure.",
+    "explanation_zh": "將下行鏈路符號數設定為 0 將導致無效的符號分配和傳輸失敗。"
+  },
+  {
+    "filename": "du_case_170.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of uplink slots to 0 will cause invalid TDD configuration and uplink failure.",
+    "explanation_zh": "將上行鏈路時隙數設定為 0 將導致無效的 TDD 配置和上行鏈路失敗。"
+  },
+  {
+    "filename": "du_case_171.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of uplink symbols to 0 will cause invalid symbol allocation and transmission failure.",
+    "explanation_zh": "將上行鏈路符號數設定為 0 將導致無效的符號分配和傳輸失敗。"
+  },
+  {
+    "filename": "du_case_172.json",
+    "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PDSCH antenna ports XP to 0 will cause invalid antenna configuration and downlink failure.",
+    "explanation_zh": "將 PDSCH 天線埠 XP 設定為 0 將導致無效的天線配置和下行鏈路失敗。"
+  },
+  {
+    "filename": "du_case_173.json",
+    "modified_key": "gNBs[0].pdsch_AntennaPorts_N1",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PDSCH antenna ports N1 to 0 will cause invalid antenna configuration and downlink failure.",
+    "explanation_zh": "將 PDSCH 天線埠 N1 設定為 0 將導致無效的天線配置和下行鏈路失敗。"
+  },
+  {
+    "filename": "du_case_174.json",
+    "modified_key": "gNBs[0].pusch_AntennaPorts",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PUSCH antenna ports to 0 will cause invalid antenna configuration and uplink failure.",
+    "explanation_zh": "將 PUSCH 天線埠設定為 0 將導致無效的天線配置和上行鏈路失敗。"
+  },
+  {
+    "filename": "du_case_175.json",
+    "modified_key": "gNBs[0].maxMIMO_layers",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting maximum MIMO layers to 0 will cause invalid MIMO configuration and transmission failure.",
+    "explanation_zh": "將最大 MIMO 層數設定為 0 將導致無效的 MIMO 配置和傳輸失敗。"
+  },
+  {
+    "filename": "du_case_176.json",
+    "modified_key": "gNBs[0].min_rxtxtime",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting minimum RX/TX time to 0 will cause invalid timing configuration and synchronization failure.",
+    "explanation_zh": "將最小 RX/TX 時間設定為 0 將導致無效的定時配置和同步失敗。"
+  },
+  {
+    "filename": "du_case_177.json",
+    "modified_key": "gNBs[0].sib1_tda",
+    "original_value": 15,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SIB1 TDA to 0 will cause invalid SIB1 timing and broadcast failure.",
+    "explanation_zh": "將 SIB1 TDA 設定為 0 將導致無效的 SIB1 定時和廣播失敗。"
+  },
+  {
+    "filename": "du_case_178.json",
+    "modified_key": "gNBs[0].pdcch_ConfigSIB1[0].controlResourceSetZero",
+    "original_value": 11,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting control resource set zero to 0 will cause invalid PDCCH configuration and control failure.",
+    "explanation_zh": "將控制資源集零設定為 0 將導致無效的 PDCCH 配置和控制失敗。"
+  },
+  {
+    "filename": "du_case_179.json",
+    "modified_key": "gNBs[0].pdcch_ConfigSIB1[0].searchSpaceZero",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the search space zero to an out-of-range value 100 will cause invalid PDCCH configuration and failure in system information broadcast.",
+    "explanation_zh": "將搜尋空間零設定為超出範圍的值 100 將導致無效的 PDCCH 配置和系統資訊廣播失敗。"
+  },
+  {
+    "filename": "du_case_180.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting physical cell ID to -1 will cause invalid cell identification and network failure.",
+    "explanation_zh": "將物理小區 ID 設定為 -1 將導致無效的小區識別和網路故障。"
+  },
+  {
+    "filename": "du_case_181.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting absolute frequency SSB to 0 will cause invalid SSB frequency configuration.",
+    "explanation_zh": "將 SSB 絕對頻率設定為 0 將導致無效的 SSB 頻率配置。"
+  },
+  {
+    "filename": "du_case_182.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+    "original_value": 78,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting downlink frequency band to 0 will cause invalid band configuration.",
+    "explanation_zh": "將下行鏈路頻率頻帶設定為 0 將導致無效的頻帶配置。"
+  },
+  {
+    "filename": "du_case_183.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting downlink absolute frequency point A to 0 will cause invalid frequency configuration.",
+    "explanation_zh": "將下行鏈路絕對頻率點 A 設定為 0 將導致無效的頻率配置。"
+  },
+  {
+    "filename": "du_case_184.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_offstToCarrier",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the downlink offset to carrier to a negative value -1 will cause invalid frequency configuration and downlink transmission failure.",
+    "explanation_zh": "將下行鏈路載波偏移設定為負值 -1 將導致無效的頻率配置和下行鏈路傳輸失敗。"
+  },
+  {
+    "filename": "du_case_185.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].initialDLBWPlocationAndBandwidth",
+    "original_value": 28875,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting initial downlink BWP location and bandwidth to 0 will cause invalid BWP configuration.",
+    "explanation_zh": "將初始下行鏈路 BWP 位置和頻寬設定為 0 將導致無效的 BWP 配置。"
+  },
+  {
+    "filename": "du_case_186.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].initialULBWPlocationAndBandwidth",
+    "original_value": 28875,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting initial uplink BWP location and bandwidth to 0 will cause invalid BWP configuration.",
+    "explanation_zh": "將初始上行鏈路 BWP 位置和頻寬設定為 0 將導致無效的 BWP 配置。"
+  },
+  {
+    "filename": "du_case_187.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+    "original_value": -96,
+    "error_value": 200,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting preamble received target power to 200 will cause invalid power configuration.",
+    "explanation_zh": "將前導碼接收目標功率設定為 200 將導致無效的功率配置。"
+  },
+  {
+    "filename": "du_case_188.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleTransMax",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting preamble transmission max to 0 will cause invalid RACH configuration.",
+    "explanation_zh": "將前導碼傳輸最大值設定為 0 將導致無效的 RACH 配置。"
+  },
+  {
+    "filename": "du_case_189.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].powerRampingStep",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the power ramping step to 0 will cause no power adjustment during random access and failure in uplink synchronization.",
+    "explanation_zh": "將功率斜坡步長設定為 0 將導致隨機接入期間沒有功率調整，從而導致上行鏈路同步失敗。"
+  },
+  {
+    "filename": "du_case_190.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RA response window to 0 will cause invalid RACH configuration.",
+    "explanation_zh": "將 RA 響應窗口設定為 0 將導致無效的 RACH 配置。"
+  },
+  {
+    "filename": "du_case_191.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB",
+    "original_value": 15,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB per RACH occasion and CB preambles per SSB to 0 will cause invalid RACH configuration.",
+    "explanation_zh": "將每個 RACH 場合和 CB 前導碼每個 SSB 的 SSB 設定為 0 將導致無效的 RACH 配置。"
+  },
+  {
+    "filename": "du_case_192.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer",
+    "original_value": 7,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RA contention resolution timer to 0 will cause invalid RACH configuration.",
+    "explanation_zh": "將 RA 爭用解決計時器設定為 0 將導致無效的 RACH 配置。"
+  },
+  {
+    "filename": "du_case_193.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB",
+    "original_value": 19,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RSRP threshold SSB to 0 will cause invalid cell selection and reselection.",
+    "explanation_zh": "將 RSRP 閾值 SSB 設定為 0 將導致無效的小區選擇和重新選擇。"
+  },
+  {
+    "filename": "du_case_194.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "invalid_value",
+    "explanation_en": "Setting the PRACH root sequence index to 0 may cause collision in random access preambles and interference in uplink access.",
+    "explanation_zh": "將 PRACH 根序列索引設定為 0 可能會導致隨機接入前導碼衝突和上行鏈路接入干擾。"
+  },
+  {
+    "filename": "du_case_195.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].msg1_SubcarrierSpacing",
+    "original_value": 1,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting msg1 subcarrier spacing to 0 will cause invalid subcarrier spacing configuration.",
+    "explanation_zh": "將 msg1 子載波間距設定為 0 將導致無效的子載波間距配置。"
+  },
+  {
+    "filename": "du_case_196.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].restrictedSetConfig",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting restricted set config to -1 will cause invalid restricted set configuration.",
+    "explanation_zh": "將受限集配置設定為 -1 將導致無效的受限集配置。"
+  },
+  {
+    "filename": "du_case_197.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].msg3_DeltaPreamble",
+    "original_value": 1,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting msg3 delta preamble to -1 will cause invalid preamble configuration.",
+    "explanation_zh": "將 msg3 delta 前導碼設定為 -1 將導致無效的前導碼配置。"
+  },
+  {
+    "filename": "du_case_198.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].p0_NominalWithGrant",
+    "original_value": -90,
+    "error_value": 200,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting p0 nominal with grant to 200 will cause invalid power control configuration.",
+    "explanation_zh": "將 p0 nominal with grant 設定為 200 將導致無效的功率控制配置。"
+  },
+  {
+    "filename": "du_case_199.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].pucchGroupHopping",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the PUCCH group hopping to a negative value -1 will cause invalid hopping configuration and uplink control channel failure.",
+    "explanation_zh": "將 PUCCH 組跳頻設定為負值 -1 將導致無效的跳頻配置和上行鏈路控制信道失敗。"
+  },
+  {
+    "filename": "du_case_200.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].hoppingId",
+    "original_value": 40,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting hopping ID to 0 will cause invalid hopping configuration.",
+    "explanation_zh": "將跳頻 ID 設定為 0 將導致無效的跳頻配置。"
+  },
+  {
+    "filename": "du_case_201.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB absolute frequency to a negative value will cause frequency configuration failure and cell setup rejection.",
+    "explanation_zh": "將 SSB 絕對頻率設定為負值會導致頻率配置失敗和細胞設定被拒絕。"
+  },
+  {
+    "filename": "du_case_202.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": [429, 285],
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting T1a_cp_dl with first value larger than second creates timing inconsistency, causing fronthaul timing misalignment and data transmission failures.",
+    "explanation_zh": "將 T1a_cp_dl 的第一個值設定得大於第二個值會造成時序不一致，導致 fronthaul 時序錯位和資料傳輸失敗。"
+  },
+  {
+    "filename": "du_case_203.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 641280,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting dl_absoluteFrequencyPointA to the same value as SSB frequency creates frequency misalignment, causing carrier configuration failure and downlink transmission errors.",
+    "explanation_zh": "將 dl_absoluteFrequencyPointA 設定為與 SSB 頻率相同的值會造成頻率錯位，導致載波配置失敗和下行鏈路傳輸錯誤。"
+  },
+  {
+    "filename": "du_case_204.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote_n_address to an unreachable IP will cause F1 interface connection failure and DU-CU communication breakdown.",
+    "explanation_zh": "將 remote_n_address 設定為無法連線的 IP 會導致 F1 介面連線失敗和 DU-CU 通訊中斷。"
+  },
+  {
+    "filename": "du_case_205.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [180, 110],
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting Ta4 with first value larger than second creates timing inconsistency, causing fronthaul timing misalignment and data transmission failures.",
+    "explanation_zh": "將 Ta4 的第一個值設定得大於第二個值會造成時序不一致，導致 fronthaul 時序錯位和資料傳輸失敗。"
+  },
+  {
+    "filename": "du_case_206.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting prach_msg1_FrequencyStart to an out-of-range value will cause PRACH configuration failure and random access procedure errors.",
+    "explanation_zh": "將 prach_msg1_FrequencyStart 設定為超出範圍的值會導致 PRACH 配置失敗和隨機存取程序錯誤。"
+  },
+  {
+    "filename": "du_case_207.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local_n_address to the same value as remote_n_address will cause IP address conflict and F1 interface binding failure.",
+    "explanation_zh": "將 local_n_address 設定為與 remote_n_address 相同的值會導致 IP 位址衝突和 F1 介面綁定失敗。"
+  },
+  {
+    "filename": "du_case_208.json",
+    "modified_key": "fhi_72.ru_addr",
+    "original_value": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+    "error_value": ["00:00:00:00:00:00", "00:00:00:00:00:00"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RU MAC addresses to invalid format will make the RU unreachable, causing fronthaul connection failure and DU initialization errors.",
+    "explanation_zh": "将 RU MAC 地址设置为无效格式会导致 RU 不可达，造成 fronthaul 连接失败和 DU 初始化错误。"
+  },
+  {
+    "filename": "du_case_209.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": [429, 285],
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting T1a_cp_dl with first value larger than second creates timing inconsistency, causing fronthaul timing misalignment and data transmission failures.",
+    "explanation_zh": "将 T1a_cp_dl 的第一个值设置得大于第二个值会造成时序不一致，导致 fronthaul 时序错位和数据传输失败。"
+  },
+  {
+    "filename": "du_case_210.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": -641280,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB frequency to negative value will cause frequency misalignment and prevent proper cell synchronization.",
+    "explanation_zh": "将 SSB 频率设置为负值会导致频率错位，阻止正确的下行链路同步。"
+  },
+  {
+    "filename": "du_case_211.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 10000000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB frequency to an excessively high value will cause frequency misalignment and prevent cell synchronization in the downlink flow.",
+    "explanation_zh": "将 SSB 频率设置为过高的值会导致频率错位，阻止下行链路流程中的小区同步。"
+  },
+  {
+    "filename": "du_case_212.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL-UL transmission periodicity to 0 will cause timing misalignment and prevent proper TDD slot allocation in the fronthaul flow.",
+    "explanation_zh": "将 DL-UL 传输周期设置为 0 会导致时序错位，阻止 fronthaul 流程中的正确 TDD 时隙分配。"
+  },
+  {
+    "filename": "du_case_213.json",
+    "modified_key": "MACRLCs[0].remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.3a",
+    "error_type": "invalid_format",
+    "explanation_en": "An invalid IP address format for the remote SCTP address will cause connection failure to the CU, preventing F1 interface establishment.",
+    "explanation_zh": "远程 SCTP 地址的无效 IP 格式会导致与 CU 的连接失败，阻止 F1 接口建立。"
+  },
+  {
+    "filename": "du_case_214.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL absolute frequency point A to 0 will cause frequency misalignment and prevent proper carrier configuration in the downlink flow.",
+    "explanation_zh": "将 DL 绝对频率点 A 设置为 0 会导致频率错位，阻止下行链路流程中的正确载波配置。"
+  },
+  {
+    "filename": "du_case_215.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+    "original_value": 7,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the number of downlink slots to 0 will cause timing misalignment in the TDD frame structure, preventing proper downlink transmission.",
+    "explanation_zh": "将下行链路时隙数量设置为 0 会导致 TDD 帧结构中的时序错位，阻止正确的下行链路传输。"
+  },
+  {
+    "filename": "du_case_216.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB absolute frequency to 0 will cause frequency misalignment and prevent SSB transmission in the downlink flow.",
+    "explanation_zh": "将 SSB 绝对频率设置为 0 会导致频率错位，阻止下行链路流程中的 SSB 传输。"
+  },
+  {
+    "filename": "du_case_217.json",
+    "modified_key": "MACRLCs[0].remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.1.999",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote SCTP address to an invalid IP format will cause unreachable routing and prevent F1 connection to CU.",
+    "explanation_zh": "将远程 SCTP 地址设置为无效的 IP 格式会导致无法到达的路由，并阻止与 CU 的 F1 连接。"
+  },
+  {
+    "filename": "du_case_218.json",
+    "modified_key": "MACRLCs[0].local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local SCTP address to the same as remote will cause IP conflict and prevent SCTP connection establishment in F1 flow.",
+    "explanation_zh": "将本地 SCTP 地址设置为与远程相同的地址会导致 IP 冲突，并阻止 F1 流程中的 SCTP 连接建立。"
+  },
+  {
+    "filename": "du_case_219.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL-UL transmission periodicity to 0 will cause timing misalignment and prevent proper TDD frame scheduling.",
+    "explanation_zh": "将 DL-UL 传输周期设置为 0 会导致时序错位，并阻止正确的 TDD 帧调度。"
+  },
+  {
+    "filename": "du_case_220.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 frequency start to negative value will cause frequency misalignment and prevent PRACH transmission in uplink flow.",
+    "explanation_zh": "将 PRACH 消息 1 频率起始设置为负值会导致频率错位，并阻止上行链路流程中的 PRACH 传输。"
+  },
+  {
+    "filename": "du_case_221.json",
+    "modified_key": "MACRLCs[0].remote_s_portc",
+    "original_value": 500,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote SCTP control port to 0 will cause unreachable routing and prevent F1 control plane connection.",
+    "explanation_zh": "将远程 SCTP 控制端口设置为 0 会导致无法到达的路由，并阻止 F1 控制平面连接。"
+  },
+  {
+    "filename": "du_case_222.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the number of uplink slots to 0 will cause timing misalignment and prevent proper uplink transmission in TDD frame.",
+    "explanation_zh": "将上行链路时隙数量设置为 0 会导致时序错位，并阻止 TDD 帧中的正确上行链路传输。"
+  },
+  {
+    "filename": "du_case_223.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_offstToCarrier",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL offset to carrier to negative value will cause frequency misalignment and prevent proper carrier configuration in downlink flow.",
+    "explanation_zh": "将 DL 载波偏移设置为负值会导致频率错位，并阻止下行链路流程中的正确载波配置。"
+  },
+  {
+    "filename": "du_case_224.json",
+    "modified_key": "MACRLCs[0].local_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local SCTP data port to 0 will cause unreachable routing and prevent F1 data plane connection.",
+    "explanation_zh": "将本地 SCTP 数据端口设置为 0 会导致无法到达的路由，并阻止 F1 数据平面连接。"
+  },
+  {
+    "filename": "du_case_225.json",
+    "modified_key": "MACRLCs[0].remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "10.0.0.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote SCTP address to an invalid IPv4 format will cause unreachable routing and prevent F1 connection to CU.",
+    "explanation_zh": "将远程 SCTP 地址设置为无效的 IPv4 格式会导致无法到达的路由，并阻止与 CU 的 F1 连接。"
+  },
+  {
+    "filename": "du_case_226.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+    "original_value": 6,
+    "error_value": 15,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the number of downlink symbols to 15 (exceeding slot capacity) will cause timing misalignment and prevent proper TDD frame structure.",
+    "explanation_zh": "将下行链路符号数量设置为 15（超过时隙容量）会导致时序错位，并阻止正确的 TDD 帧结构。"
+  },
+  {
+    "filename": "du_case_227.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_offstToCarrier",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting UL offset to carrier to negative value will cause frequency misalignment and prevent proper uplink carrier configuration.",
+    "explanation_zh": "将 UL 载波偏移设置为负值会导致频率错位，并阻止正确的上行链路载波配置。"
+  },
+  {
+    "filename": "du_case_228.json",
+    "modified_key": "MACRLCs[0].remote_s_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote SCTP data port to 0 will cause unreachable routing and prevent F1 data plane connection.",
+    "explanation_zh": "将远程 SCTP 数据端口设置为 0 会导致无法到达的路由，并阻止 F1 数据平面连接。"
+  },
+  {
+    "filename": "du_case_229.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+    "original_value": 4,
+    "error_value": 15,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the number of uplink symbols to 15 (exceeding slot capacity) will cause timing misalignment and prevent proper uplink transmission in TDD frame.",
+    "explanation_zh": "将上行链路符号数量设置为 15（超过时隙容量）会导致时序错位，并阻止 TDD 帧中的正确上行链路传输。"
+  },
+  {
+    "filename": "du_case_230.json",
+    "modified_key": "MACRLCs[0].local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local SCTP address to an invalid IPv4 format will cause IP conflict and prevent SCTP connection establishment in F1 flow.",
+    "explanation_zh": "将本地 SCTP 地址设置为无效的 IPv4 格式会导致 IP 冲突，并阻止 F1 流程中的 SCTP 连接建立。"
+  },
+  {
+    "filename": "du_case_231.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL carrier bandwidth to 0 will cause frequency misalignment and prevent proper downlink carrier configuration.",
+    "explanation_zh": "将 DL 载波带宽设置为 0 会导致频率错位，并阻止正确的下行链路载波配置。"
+  },
+  {
+    "filename": "du_case_232.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting UL carrier bandwidth to 0 will cause frequency misalignment and prevent proper uplink carrier configuration.",
+    "explanation_zh": "将 UL 载波带宽设置为 0 会导致频率错位，并阻止正确的上行链路载波配置。"
+  },
+  {
+    "filename": "du_case_233.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB periodicity to 0 will cause timing misalignment and prevent proper SSB transmission scheduling.",
+    "explanation_zh": "将 SSB 周期设置为 0 会导致定时错位，并阻止正确的 SSB 传输调度。"
+  },
+  {
+    "filename": "du_case_234.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB absolute frequency to 0 will cause frequency misalignment and prevent proper SSB transmission.",
+    "explanation_zh": "将 SSB 绝对频率设置为 0 会导致频率错位，并阻止正确的 SSB 传输。"
+  },
+  {
+    "filename": "du_case_235.json",
+    "modified_key": "MACRLCs[0].remote_s_address",
+    "original_value": "127.0.0.3",
+    "error_value": "999.999.999.999",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote SCTP address to an invalid IP format will cause unreachable routing and prevent F1 connection establishment.",
+    "explanation_zh": "将远程 SCTP 地址设置为无效的 IP 格式会导致不可达路由，并阻止 F1 连接建立。"
+  },
+  {
+    "filename": "du_case_236.json",
+    "modified_key": "MACRLCs[0].local_s_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local SCTP address to the same as remote will cause IP range conflict and prevent proper SCTP connection.",
+    "explanation_zh": "将本地 SCTP 地址设置为与远程相同会导致 IP 范围冲突，并阻止正确的 SCTP 连接。"
+  },
+  {
+    "filename": "du_case_237.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+    "original_value": 7,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of downlink slots to 0 will cause timing misalignment and prevent proper TDD frame structure.",
+    "explanation_zh": "将下行链路时隙数量设置为 0 会导致定时错位，并阻止正确的 TDD 帧结构。"
+  },
+  {
+    "filename": "du_case_238.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+    "original_value": 106,
+    "error_value": "106",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing DL carrier bandwidth from number to string will cause type mismatch errors during configuration parsing.",
+    "explanation_zh": "将 DL 载波带宽从数字改为字符串将导致配置解析期间的类型不匹配错误。"
+  },
+  {
+    "filename": "du_case_239.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting DL absolute frequency point A to null will cause missing value errors and prevent proper frequency configuration.",
+    "explanation_zh": "将 DL 绝对频率点 A 设置为 null 将导致缺失值错误，并阻止正确的频率配置。"
+  },
+  {
+    "filename": "du_case_240.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "annoying",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting ASN.1 verbosity to an invalid enum value will cause logging configuration failure and potential runtime errors.",
+    "explanation_zh": "将 ASN.1 详细程度设置为无效枚举值将导致日志配置失败和潜在的运行时错误。"
+  },
+  {
+    "filename": "du_case_241.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 frequency start to 100 will cause frequency misalignment and prevent proper PRACH transmission.",
+    "explanation_zh": "将 PRACH 消息 1 频率起始设置为 100 会导致频率错位，并阻止正确的 PRACH 传输。"
+  },
+  {
+    "filename": "du_case_242.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL-UL transmission periodicity to 0 will cause timing misalignment and prevent proper TDD frame structure.",
+    "explanation_zh": "将 DL-UL 传输周期设置为 0 会导致定时错位，并阻止正确的 TDD 帧结构。"
+  },
+  {
+    "filename": "du_case_243.json",
+    "modified_key": "MACRLCs[0].local_s_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local SCTP control port to 0 will cause unreachable routing and prevent F1 connection establishment.",
+    "explanation_zh": "将本地 SCTP 控制端口设置为 0 会导致不可达路由，并阻止 F1 连接建立。"
+  },
+  {
+    "filename": "du_case_244.json",
+    "modified_key": "MACRLCs[0].remote_s_portc",
+    "original_value": 500,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote SCTP control port to the same as local will cause IP range conflict and prevent proper SCTP connection.",
+    "explanation_zh": "将远程 SCTP 控制端口设置为与本地相同会导致 IP 范围冲突，并阻止正确的 SCTP 连接。"
+  },
+  {
+    "filename": "du_case_245.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_offstToCarrier",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL offset to carrier to 100 will cause frequency misalignment and prevent proper downlink carrier configuration.",
+    "explanation_zh": "将 DL 载波偏移设置为 100 会导致频率错位，并阻止正确的下行链路载波配置。"
+  },
+  {
+    "filename": "du_case_246.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of uplink slots to 0 will cause timing misalignment and prevent proper uplink transmission scheduling.",
+    "explanation_zh": "将上行链路时隙数量设置为 0 会导致定时错位，并阻止正确的上行链路传输调度。"
+  },
+  {
+    "filename": "du_case_247.json",
+    "modified_key": "MACRLCs[0].local_s_if_name",
+    "original_value": "lo",
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local SCTP interface name to an invalid value will cause unreachable routing and prevent F1 connection establishment.",
+    "explanation_zh": "将本地 SCTP 接口名称设置为无效值会导致不可达路由，并阻止 F1 连接建立。"
+  },
+  {
+    "filename": "du_case_248.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_offstToCarrier",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting UL offset to carrier to 100 will cause frequency misalignment and prevent proper uplink carrier configuration.",
+    "explanation_zh": "将 UL 载波偏移设置为 100 会导致频率错位，并阻止正确的上行链路载波配置。"
+  },
+  {
+    "filename": "du_case_249.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+    "original_value": 285,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_cp_dl timing parameter to 0 will cause timing misalignment in the front-haul interface, leading to synchronization failures and data transmission errors.",
+    "explanation_zh": "將 T1a_cp_dl 定時參數設定為 0 會導致前傳介面的定時錯位，造成同步失敗和資料傳輸錯誤。"
+  },
+  {
+    "filename": "du_case_250.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 640008,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting SSB frequency to the same value as the carrier frequency will cause frequency misalignment and prevent proper SSB transmission and cell synchronization.",
+    "explanation_zh": "將 SSB 頻率設定為與載波頻率相同的值會導致頻率錯位，並阻止正確的 SSB 傳輸和細胞同步。"
+  },
+  {
+    "filename": "du_case_251.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB absolute frequency to 0 violates NR frequency constraints, causing SSB transmission failure and preventing UE cell search and synchronization.",
+    "explanation_zh": "將 SSB 絕對頻率設定為 0 違反 NR 頻率約束，導致 SSB 傳輸失敗並阻止 UE 小區搜尋和同步。"
+  },
+  {
+    "filename": "du_case_252.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+    "original_value": 7,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the number of downlink slots to 0 causes invalid TDD frame structure configuration, preventing proper downlink transmission and UE synchronization.",
+    "explanation_zh": "將下行鏈路時隙數設定為 0 導致無效的 TDD 幀結構配置，阻止正確的下行鏈路傳輸和 UE 同步。"
+  },
+  {
+    "filename": "du_case_253.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the remote F1 address to an unreachable IP in a different subnet prevents DU from establishing F1 connection with CU, causing interface setup failure.",
+    "explanation_zh": "將遠端 F1 位址設定為不同子網路中無法連線的 IP 會阻止 DU 與 CU 建立 F1 連線，導致介面設定失敗。"
+  },
+  {
+    "filename": "du_case_254.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 frequency start to an out-of-range value causes frequency misalignment, preventing UE from performing random access and initial connection.",
+    "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為超出範圍的值會導致頻率錯位，阻止 UE 執行隨機存取和初始連線。"
+  },
+  {
+    "filename": "du_case_255.json",
+    "modified_key": "gNBs[0].sib1_tda",
+    "original_value": 15,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SIB1 timing advance to 0 causes timing misalignment, preventing UE from properly decoding SIB1 and performing cell selection.",
+    "explanation_zh": "將 SIB1 時序提前設定為 0 會導致時序錯位，阻止 UE 正確解碼 SIB1 和執行小區選擇。"
+  },
+  {
+    "filename": "du_case_256.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the local F1 address to the same as the remote F1 address causes IP address conflict, preventing F1 interface connection establishment with CU.",
+    "explanation_zh": "將本地 F1 位址設定為與遠端 F1 位址相同會造成 IP 位址衝突，阻止與 CU 的 F1 介面連線建立。"
+  },
+  {
+    "filename": "du_case_257.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 641280,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the downlink carrier frequency to the same as the SSB frequency causes frequency misalignment, preventing proper carrier and SSB transmission and UE synchronization.",
+    "explanation_zh": "將下行鏈路載波頻率設定為與 SSB 頻率相同會導致頻率錯位，阻止正確的載波和 SSB 傳輸以及 UE 同步。"
+  },
+  {
+    "filename": "du_case_258.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the DL-UL transmission periodicity to 0 causes invalid TDD frame structure configuration, preventing proper TDD operation and data transmission.",
+    "explanation_zh": "將 DL-UL 傳輸週期設定為 0 會導致無效的 TDD 幀結構配置，阻止正確的 TDD 操作和資料傳輸。"
+  },
+  {
+    "filename": "du_case_259.json",
+    "modified_key": "MACRLCs[0].local_n_portc",
+    "original_value": 500,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the local F1 control port to the same as the remote F1 control port causes port conflict, preventing F1 interface connection establishment with CU.",
+    "explanation_zh": "將本地 F1 控制埠設定為與遠端 F1 控制埠相同會造成埠衝突，阻止與 CU 的 F1 介面連線建立。"
+  },
+  {
+    "filename": "du_case_260.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_offstToCarrier",
+    "original_value": 0,
+    "error_value": 10000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the uplink carrier offset to an excessive value causes frequency misalignment, preventing proper uplink transmission and UE communication.",
+    "explanation_zh": "將上行鏈路載波偏移設定為過大的值會導致頻率錯位，阻止正確的上行鏈路傳輸和 UE 通訊。"
+  },
+  {
+    "filename": "du_case_261.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the number of uplink slots to 0 causes invalid TDD frame structure, preventing uplink transmission and UE data upload.",
+    "explanation_zh": "將上行鏈路時隙數設定為 0 會導致無效的 TDD 幀結構，阻止上行鏈路傳輸和 UE 資料上傳。"
+  },
+  {
+    "filename": "du_case_262.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the remote F1 address to an unreachable IP in a different subnet prevents DU from establishing F1 connection with CU due to routing misconfiguration.",
+    "explanation_zh": "將遠端 F1 位址設定為不同子網路中無法連線的 IP 會因路由錯誤配置而阻止 DU 與 CU 建立 F1 連線。"
+  },
+  {
+    "filename": "du_case_263.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH root sequence index to an out-of-range value causes invalid RACH configuration, preventing UE from performing random access and initial attachment.",
+    "explanation_zh": "將 PRACH 根序列索引設定為超出範圍的值會導致無效的 RACH 配置，阻止 UE 執行隨機存取和初始附接。"
+  },
+  {
+    "filename": "du_case_264.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+    "original_value": 4,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RA response window to 0 causes invalid RACH procedure timing, preventing UE from receiving RAR and completing random access successfully.",
+    "explanation_zh": "將 RA 回應視窗設定為 0 會導致無效的 RACH 程序時序，阻止 UE 接收 RAR 並成功完成隨機存取。"
+  },
+  {
+    "filename": "du_case_265.json",
+    "modified_key": "MACRLCs[0].local_n_portd",
+    "original_value": 2152,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the local F1 data port to the same as the remote F1 control port causes port conflict, preventing F1 data connection establishment with CU.",
+    "explanation_zh": "將本地 F1 資料埠設定為與遠端 F1 控制埠相同會造成埠衝突，阻止與 CU 的 F1 資料連線建立。"
+  },
+  {
+    "filename": "du_case_266.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB periodicity to 0 causes invalid SSB transmission schedule, preventing UE from detecting SSB and achieving synchronization.",
+    "explanation_zh": "將 SSB 週期設定為 0 會導致無效的 SSB 傳輸排程，阻止 UE 檢測 SSB 並達成同步。"
+  },
+  {
+    "filename": "du_case_267.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL absolute frequency point A to 0 causes frequency misalignment with SSB, preventing proper cell synchronization and UE attachment.",
+    "explanation_zh": "將 DL 絕對頻率點 A 設定為 0 會導致與 SSB 的頻率錯位，阻止適當的小區同步和 UE 附接。"
+  },
+  {
+    "filename": "du_case_268.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB absolute frequency to 0 causes frequency domain misalignment, preventing SSB transmission and UE synchronization.",
+    "explanation_zh": "將 SSB 絕對頻率設定為 0 會導致頻率域錯位，阻止 SSB 傳輸和 UE 同步。"
+  },
+  {
+    "filename": "du_case_269.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_cp_dl to [0, 0] causes timing misalignment in downlink control plane, disrupting front-haul synchronization and data transmission.",
+    "explanation_zh": "將 T1a_cp_dl 設定為 [0, 0] 會導致下行鏈路控制平面的時序錯位，干擾前傳同步和資料傳輸。"
+  },
+  {
+    "filename": "du_case_270.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local F1 address to the same as remote F1 address causes IP conflict, preventing F1 interface establishment and DU-CU communication.",
+    "explanation_zh": "將本地 F1 地址設定為與遠端 F1 地址相同會造成 IP 衝突，阻止 F1 介面建立和 DU-CU 通訊。"
+  },
+  {
+    "filename": "du_case_271.json",
+    "modified_key": "fhi_72.ru_addr",
+    "original_value": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+    "error_value": ["00:00:00:00:00:00", "00:00:00:00:00:00"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RU MAC addresses to all zeros causes unreachable RU elements, preventing front-haul connection and RU communication.",
+    "explanation_zh": "將 RU MAC 地址設定為全零會導致無法到達的 RU 元素，阻止前傳連線和 RU 通訊。"
+  },
+  {
+    "filename": "du_case_272.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 to [0, 0] causes timing misalignment in front-haul, disrupting synchronization and data flow between DU and RU.",
+    "explanation_zh": "將 Ta4 設定為 [0, 0] 會導致前傳中的時序錯位，干擾 DU 和 RU 之間的同步和資料流。"
+  },
+  {
+    "filename": "du_case_273.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+    "original_value": 106,
+    "error_value": "106",
+    "error_type": "wrong_type",
+    "explanation_en": "Changing DL carrier bandwidth from integer to string causes type mismatch errors during configuration parsing, leading to cell setup failure.",
+    "explanation_zh": "將 DL 載波頻寬從整數改為字串會導致配置解析期間的類型不匹配錯誤，導致小區設定失敗。"
+  },
+  {
+    "filename": "du_case_274.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "annoying",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting ASN.1 verbosity to an invalid enum value causes logging configuration failure and potential runtime errors.",
+    "explanation_zh": "將 ASN.1 詳細程度設定為無效枚舉值會導致日誌配置失敗和潛在的運行時錯誤。"
+  },
+  {
+    "filename": "du_case_275.json",
+    "modified_key": "gNBs[0].gNB_ID",
+    "original_value": "0xe00",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting gNB ID to null causes configuration validation failure, preventing gNB initialization.",
+    "explanation_zh": "將 gNB ID 設定為 null 會導致配置驗證失敗，阻止 gNB 初始化。"
+  },
+  {
+    "filename": "du_case_276.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "999.999.999.999",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote F1 address to an invalid IP format causes routing failure, preventing DU from reaching CU.",
+    "explanation_zh": "將遠端 F1 地址設定為無效的 IP 格式會導致路由失敗，阻止 DU 聯繫 CU。"
+  },
+  {
+    "filename": "du_case_277.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 frequency start to negative value causes frequency misalignment in random access, preventing UE from performing initial access.",
+    "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為負值會導致隨機存取中的頻率錯位，阻止 UE 執行初始存取。"
+  },
+  {
+    "filename": "du_case_278.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_up",
+    "original_value": [96, 196],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_up to [0, 0] causes timing misalignment in uplink user plane, disrupting data transmission and synchronization.",
+    "explanation_zh": "將 T1a_up 設定為 [0, 0] 會導致上行鏈路使用者平面的時序錯位，干擾資料傳輸和同步。"
+  },
+  {
+    "filename": "du_case_279.json",
+    "modified_key": "rfsimulator.serveraddr",
+    "original_value": "server",
+    "error_value": "invalid.server",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RF simulator server address to invalid hostname causes unreachable RF simulator, preventing simulation and testing.",
+    "explanation_zh": "將 RF 模擬器伺服器地址設定為無效主機名稱會導致無法到達的 RF 模擬器，阻止模擬和測試。"
+  },
+  {
+    "filename": "du_case_280.json",
+    "modified_key": "MACRLCs[0].local_n_portc",
+    "original_value": 500,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local F1 control port to the same as remote F1 control port causes port conflict, preventing F1 control connection establishment.",
+    "explanation_zh": "將本地 F1 控制埠設定為與遠端 F1 控制埠相同會造成埠衝突，阻止 F1 控制連線建立。"
+  },
+  {
+    "filename": "du_case_281.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 100,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting UL carrier bandwidth different from DL carrier bandwidth causes frequency misalignment, disrupting uplink-downlink synchronization.",
+    "explanation_zh": "將 UL 載波頻寬設定為與 DL 載波頻寬不同會導致頻率錯位，干擾上行鏈路-下行鏈路同步。"
+  },
+  {
+    "filename": "du_case_282.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL-UL transmission periodicity to 0 causes timing misalignment, disrupting TDD frame structure and data transmission.",
+    "explanation_zh": "將 DL-UL 傳輸週期設定為 0 會導致時序錯位，干擾 TDD 幀結構和資料傳輸。"
+  },
+  {
+    "filename": "du_case_283.json",
+    "modified_key": "fhi_72.dpdk_devices",
+    "original_value": ["0000:ca:02.0", "0000:ca:02.1"],
+    "error_value": ["invalid:pci", "invalid:pci"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting DPDK devices to invalid PCI addresses causes unreachable front-haul devices, preventing packet processing and RU communication.",
+    "explanation_zh": "將 DPDK 裝置設定為無效的 PCI 位址會導致無法到達的前傳裝置，阻止封包處理和 RU 通訊。"
+  },
+  {
+    "filename": "du_case_284.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 641281,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting SSB absolute frequency to misaligned value causes frequency misalignment, disrupting SSB detection and cell synchronization.",
+    "explanation_zh": "將 SSB 絕對頻率設定為錯位值會導致頻率錯位，干擾 SSB 檢測和細胞同步。"
+  },
+  {
+    "filename": "du_case_285.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": 1,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting DL-UL transmission periodicity to invalid value causes timing misalignment, disrupting TDD slot allocation and data flow.",
+    "explanation_zh": "將 DL-UL 傳輸週期設定為無效值會導致時序錯位，干擾 TDD 時隙分配和資料流。"
+  },
+  {
+    "filename": "du_case_286.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.1.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local N address to unreachable IP causes DU to fail reaching CU, disrupting F1 interface communication.",
+    "explanation_zh": "將本地 N 位址設定為無法到達的 IP 會導致 DU 無法到達 CU，干擾 F1 介面通訊。"
+  },
+  {
+    "filename": "du_case_287.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote N address to unreachable IP causes DU to fail connecting to CU, disrupting F1 interface setup.",
+    "explanation_zh": "將遠端 N 位址設定為無法到達的 IP 會導致 DU 無法連接到 CU，干擾 F1 介面設定。"
+  },
+  {
+    "filename": "du_case_288.json",
+    "modified_key": "fhi_72.ru_addr",
+    "original_value": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+    "error_value": ["invalid:mac", "invalid:mac"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RU addresses to invalid MAC addresses causes unreachable RU devices, preventing front-haul communication and RU control.",
+    "explanation_zh": "將 RU 位址設定為無效的 MAC 位址會導致無法到達的 RU 裝置，阻止前傳通訊和 RU 控制。"
+  },
+  {
+    "filename": "du_case_289.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+    "original_value": 7,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of downlink slots to 0 causes invalid TDD configuration, disrupting frame structure and data transmission.",
+    "explanation_zh": "將下行鏈路時隙數設定為 0 會導致無效的 TDD 配置，干擾幀結構和資料傳輸。"
+  },
+  {
+    "filename": "du_case_290.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting number of uplink slots to 0 causes invalid TDD configuration, disrupting uplink transmission and user data flow.",
+    "explanation_zh": "將上行鏈路時隙數設定為 0 會導致無效的 TDD 配置，干擾上行鏈路傳輸和使用者資料流。"
+  },
+  {
+    "filename": "du_case_291.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 641280,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting DL absolute frequency point A to SSB frequency causes frequency misalignment, disrupting carrier synchronization and cell operation.",
+    "explanation_zh": "將 DL 絕對頻率點 A 設定為 SSB 頻率會導致頻率錯位，干擾載波同步和細胞操作。"
+  },
+  {
+    "filename": "du_case_292.json",
+    "modified_key": "rfsimulator.serveraddr",
+    "original_value": "server",
+    "error_value": "unreachable.host",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting RF simulator server address to unreachable host causes DU to fail connecting to simulator, disrupting RF signal simulation and testing.",
+    "explanation_zh": "將 RF 模擬器伺服器位址設定為無法到達的主機會導致 DU 無法連接到模擬器，干擾 RF 訊號模擬和測試。"
+  },
+  {
+    "filename": "du_case_293.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 timing advance to 0 causes timing misalignment, disrupting front-haul synchronization and data transmission.",
+    "explanation_zh": "將 Ta4 時序提前設定為 0 會導致時序錯位，干擾前傳同步和資料傳輸。"
+  },
+  {
+    "filename": "du_case_294.json",
+    "modified_key": "MACRLCs[0].local_n_portc",
+    "original_value": 500,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local N control port to 0 causes invalid port configuration, disrupting F1 control plane communication.",
+    "explanation_zh": "將本地 N 控制埠設定為 0 會導致無效的埠配置，干擾 F1 控制平面通訊。"
+  },
+  {
+    "filename": "du_case_295.json",
+    "modified_key": "MACRLCs[0].remote_n_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote N control port to 0 causes invalid port configuration, disrupting F1 control plane communication.",
+    "explanation_zh": "將遠端 N 控制埠設定為 0 會導致無效的埠配置，干擾 F1 控制平面通訊。"
+  },
+  {
+    "filename": "du_case_296.json",
+    "modified_key": "MACRLCs[0].local_n_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local N data port to 0 causes invalid port configuration, disrupting F1 user plane communication.",
+    "explanation_zh": "將本地 N 資料埠設定為 0 會導致無效的埠配置，干擾 F1 使用者平面通訊。"
+  },
+  {
+    "filename": "du_case_297.json",
+    "modified_key": "MACRLCs[0].remote_n_portd",
+    "original_value": 2152,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote N data port to 0 causes invalid port configuration, disrupting F1 user plane communication.",
+    "explanation_zh": "將遠端 N 資料埠設定為 0 會導致無效的埠配置，干擾 F1 使用者平面通訊。"
+  },
+  {
+    "filename": "du_case_298.json",
+    "modified_key": "rfsimulator.serverport",
+    "original_value": 4043,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting RF simulator server port to 0 causes invalid port configuration, disrupting RF signal simulation connection.",
+    "explanation_zh": "將 RF 模擬器伺服器埠設定為 0 會導致無效的埠配置，干擾 RF 訊號模擬連線。"
+  },
+  {
+    "filename": "du_case_299.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a control plane downlink timing to 0 causes timing misalignment, disrupting front-haul control synchronization.",
+    "explanation_zh": "將 T1a 控制平面下行鏈路時序設定為 0 會導致時序錯位，干擾前傳控制同步。"
+  },
+  {
+    "filename": "du_case_300.json",
+    "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+    "original_value": 2,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SCTP input streams to 0 causes invalid stream configuration, disrupting SCTP connection establishment.",
+    "explanation_zh": "將 SCTP 輸入串流設定為 0 會導致無效的串流配置，干擾 SCTP 連線建立。"
+  },
+  {
+    "filename": "du_case_301.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.1.999",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local N address to an invalid IP format causes unreachable network configuration, disrupting F1 interface connectivity.",
+    "explanation_zh": "將本地 N 位址設定為無效的 IP 格式會導致無法到達的網路配置，干擾 F1 介面連線。"
+  },
+  {
+    "filename": "du_case_302.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 640000,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting SSB absolute frequency to a misaligned value causes frequency mismatch with carrier frequency, disrupting SSB transmission and cell discovery.",
+    "explanation_zh": "將 SSB 絕對頻率設定為錯位的值會導致與載波頻率的頻率不匹配，干擾 SSB 傳輸和細胞發現。"
+  },
+  {
+    "filename": "du_case_303.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+    "original_value": [285, 429],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a control plane uplink timing to 0 causes timing misalignment, disrupting front-haul control synchronization.",
+    "explanation_zh": "將 T1a 控制平面上行鏈路時序設定為 0 會導致時序錯位，干擾前傳控制同步。"
+  },
+  {
+    "filename": "du_case_304.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote N address to an unreachable IP causes routing failure, disrupting F1 interface connectivity.",
+    "explanation_zh": "將遠端 N 位址設定為無法到達的 IP 會導致路由失敗，干擾 F1 介面連線。"
+  },
+  {
+    "filename": "du_case_305.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local N address to the same as remote N address causes IP conflict, disrupting F1 interface connectivity.",
+    "explanation_zh": "將本地 N 位址設定為與遠端 N 位址相同會導致 IP 衝突，干擾 F1 介面連線。"
+  },
+  {
+    "filename": "du_case_306.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 641280,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting downlink absolute frequency point A to the same as SSB frequency causes frequency misalignment, disrupting carrier and SSB synchronization.",
+    "explanation_zh": "將下行鏈路絕對頻率點 A 設定為與 SSB 頻率相同會導致頻率錯位，干擾載波和 SSB 同步。"
+  },
+  {
+    "filename": "du_case_307.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 timing to 0 causes timing misalignment, disrupting front-haul user plane synchronization.",
+    "explanation_zh": "將 Ta4 時序設定為 0 會導致時序錯位，干擾前傳使用者平面同步。"
+  },
+  {
+    "filename": "du_case_308.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "annoying",
+    "error_value": 1,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing ASN.1 verbosity from string to integer causes type mismatch, disrupting logging configuration.",
+    "explanation_zh": "將 ASN.1 詳細程度從字串改為整數會導致類型不匹配，干擾日誌配置。"
+  },
+  {
+    "filename": "du_case_309.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting global log level to an invalid enum causes logging configuration failure, disrupting system logging.",
+    "explanation_zh": "將全域日誌等級設定為無效的枚舉值會導致日誌配置失敗，干擾系統日誌。"
+  },
+  {
+    "filename": "du_case_310.json",
+    "modified_key": "gNBs[0].gNB_name",
+    "original_value": "gNB-Eurecom-DU",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting gNB name to null causes configuration validation failure, disrupting gNB identification.",
+    "explanation_zh": "將 gNB 名稱設定為 null 會導致配置驗證失敗，干擾 gNB 識別。"
+  },
+  {
+    "filename": "du_case_311.json",
+    "modified_key": "fhi_72.ru_addr",
+    "original_value": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+    "error_value": ["00:00:00:00:00:00", "00:00:00:00:00:00"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RU address to invalid MAC format causes unreachable RU configuration, disrupting front-haul connectivity.",
+    "explanation_zh": "將 RU 位址設定為無效的 MAC 格式會導致無法到達的 RU 配置，干擾前傳連線。"
+  },
+  {
+    "filename": "du_case_312.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 frequency start to 100 causes frequency misalignment, disrupting PRACH transmission and random access procedure.",
+    "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為 100 會導致頻率錯位，干擾 PRACH 傳輸和隨機存取程序。"
+  },
+  {
+    "filename": "du_case_313.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_up",
+    "original_value": [96, 196],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a user plane timing to 0 causes timing misalignment, disrupting front-haul user plane synchronization.",
+    "explanation_zh": "將 T1a 使用者平面時序設定為 0 會導致時序錯位，干擾前傳使用者平面同步。"
+  },
+  {
+    "filename": "du_case_314.json",
+    "modified_key": "fhi_72.dpdk_devices",
+    "original_value": ["0000:ca:02.0", "0000:ca:02.1"],
+    "error_value": ["invalid:pci", "invalid:pci"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting DPDK devices to invalid PCI format causes unreachable device configuration, disrupting front-haul connectivity.",
+    "explanation_zh": "將 DPDK 裝置設定為無效的 PCI 格式會導致無法到達的裝置配置，干擾前傳連線。"
+  },
+  {
+    "filename": "du_case_315.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 640009,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting DL absolute frequency point A to misaligned value causes frequency misalignment with SSB, disrupting synchronization and cell discovery.",
+    "explanation_zh": "將下行鏈路絕對頻率點 A 設定為錯位值會導致與 SSB 的頻率錯位，干擾同步和小區發現。"
+  },
+  {
+    "filename": "du_case_316.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "10.0.0.1",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local N address to unreachable IP causes IP range conflict, preventing F1 interface connectivity and DU-CU communication.",
+    "explanation_zh": "將本地 N 位址設定為無法到達的 IP 會導致 IP 範圍衝突，阻止 F1 介面連線和 DU-CU 通訊。"
+  },
+  {
+    "filename": "du_case_317.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 timing advance to 0 causes timing misalignment, disrupting front-haul synchronization and data transmission.",
+    "explanation_zh": "將 Ta4 時序提前設定為 0 會導致時序錯位，干擾前傳同步和資料傳輸。"
+  },
+  {
+    "filename": "du_case_318.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.100",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting remote N address to unreachable IP causes wrong routing definition, preventing DU from reaching CU and disrupting F1 interface.",
+    "explanation_zh": "將遠端 N 位址設定為無法到達的 IP 會導致錯誤的路由定義，阻止 DU 到達 CU 並干擾 F1 介面。"
+  },
+  {
+    "filename": "du_case_319.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 frequency start to out-of-range value causes frequency misalignment, disrupting random access procedure and UE attachment.",
+    "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為超出範圍的值會導致頻率錯位，干擾隨機存取程序和 UE 附接。"
+  },
+  {
+    "filename": "du_case_320.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a control plane downlink timing to 0 causes timing misalignment, disrupting front-haul control plane synchronization and data flow.",
+    "explanation_zh": "將 T1a 控制平面下行鏈路時序設定為 0 會導致時序錯位，干擾前傳控制平面同步和資料流。"
+  },
+  {
+    "filename": "du_case_321.json",
+    "modified_key": "fhi_72.ru_addr",
+    "original_value": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+    "error_value": ["invalid:mac", "invalid:mac"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RU addresses to invalid MAC format causes unreachable RU configuration, disrupting front-haul connectivity and radio unit communication.",
+    "explanation_zh": "將 RU 位址設定為無效的 MAC 格式會導致無法到達的 RU 配置，干擾前傳連線和無線單元通訊。"
+  },
+  {
+    "filename": "du_case_322.json",
+    "modified_key": "MACRLCs[0].local_n_portc",
+    "original_value": 500,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local N control port to out-of-range value causes port allocation failure, disrupting F1 control plane connectivity and DU-CU communication.",
+    "explanation_zh": "將本地 N 控制埠設定為超出範圍的值會導致埠分配失敗，干擾 F1 控制平面連線和 DU-CU 通訊。"
+  },
+  {
+    "filename": "du_case_323.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 641281,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting SSB absolute frequency to misaligned value causes frequency misalignment, disrupting SSB transmission and cell discovery.",
+    "explanation_zh": "將 SSB 絕對頻率設定為錯位值會導致頻率錯位，干擾 SSB 傳輸和小區發現。"
+  },
+  {
+    "filename": "du_case_324.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+    "original_value": [285, 429],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a control plane uplink timing to 0 causes timing misalignment, disrupting front-haul control plane synchronization and data flow.",
+    "explanation_zh": "將 T1a 控制平面上行鏈路時序設定為 0 會導致時序錯位，干擾前傳控制平面同步和資料流。"
+  },
+  {
+    "filename": "du_case_325.json",
+    "modified_key": "rfsimulator.serveraddr",
+    "original_value": "server",
+    "error_value": "unreachable.server",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting RF simulator server address to unreachable host causes connection failure, disrupting RF simulation and testing operations.",
+    "explanation_zh": "將 RF 模擬器伺服器位址設定為無法到達的主機會導致連線失敗，干擾 RF 模擬和測試操作。"
+  },
+  {
+    "filename": "du_case_326.json",
+    "modified_key": "MACRLCs[0].remote_n_portd",
+    "original_value": 2152,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote N data port to out-of-range value causes port allocation failure, disrupting F1 data plane connectivity and user data transmission.",
+    "explanation_zh": "將遠端 N 資料埠設定為超出範圍的值會導致埠分配失敗，干擾 F1 資料平面連線和使用者資料傳輸。"
+  },
+  {
+    "filename": "du_case_327.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+    "original_value": 1,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH root sequence index to out-of-range value causes invalid PRACH configuration, disrupting random access procedure and UE initial access.",
+    "explanation_zh": "將 PRACH 根序列索引設定為超出範圍的值會導致無效的 PRACH 配置，干擾隨機存取程序和 UE 初始存取。"
+  },
+  {
+    "filename": "du_case_328.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 timing advance to 0 causes timing misalignment, disrupting front-haul synchronization and data transmission.",
+    "explanation_zh": "將 Ta4 時序提前設定為 0 會導致時序錯位，干擾前傳同步和資料傳輸。"
+  },
+  {
+    "filename": "du_case_329.json",
+    "modified_key": "rfsimulator.IQfile",
+    "original_value": "/tmp/rfsimulator.iqs",
+    "error_value": "/invalid/path.iqs",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting IQ file to invalid path causes file access failure, disrupting RF simulation data loading and testing operations.",
+    "explanation_zh": "將 IQ 檔案設定為無效路徑會導致檔案存取失敗，干擾 RF 模擬資料載入和測試操作。"
+  },
+  {
+    "filename": "du_case_330.json",
+    "modified_key": "MACRLCs[0].local_n_portd",
+    "original_value": 2152,
+    "error_value": 70000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local N data port to out-of-range value causes port allocation failure, disrupting F1 data plane connectivity and user data transmission.",
+    "explanation_zh": "將本地 N 資料埠設定為超出範圍的值會導致埠分配失敗，干擾 F1 資料平面連線和使用者資料傳輸。"
+  },
+  {
+    "filename": "du_case_331.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting the remote N address to an invalid IP format '192.168.1.256' (octet >255) will cause F1 interface connection failure due to malformed IP address.",
+    "explanation_zh": "將遠端 N 位址設定為無效的 IP 格式 '192.168.1.256'（八位元組 >255）將導致 F1 介面連線失敗，因為 IP 位址格式錯誤。"
+  },
+  {
+    "filename": "du_case_332.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a CP DL timing parameters to zero values causes front-haul timing misalignment, disrupting downlink synchronization and data transmission.",
+    "explanation_zh": "將 T1a CP DL 定時參數設定為零值會導致前傳定時錯位，干擾下行鏈路同步和資料傳輸。"
+  },
+  {
+    "filename": "du_case_333.json",
+    "modified_key": "fhi_72.ru_addr",
+    "original_value": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
+    "error_value": ["invalid:mac", "invalid:mac"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting RU addresses to invalid MAC format causes unreachable RU elements, disrupting front-haul connectivity and RU communication.",
+    "explanation_zh": "將 RU 位址設定為無效的 MAC 格式會導致無法到達的 RU 元素，干擾前傳連線和 RU 通訊。"
+  },
+  {
+    "filename": "du_case_334.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting SSB absolute frequency to zero causes frequency misalignment, preventing SSB broadcast and UE synchronization.",
+    "explanation_zh": "將 SSB 絕對頻率設定為零會導致頻率錯位，阻止 SSB 廣播和 UE 同步。"
+  },
+  {
+    "filename": "du_case_335.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.5",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local N address to the same as remote N address causes IP range conflict, preventing F1 interface establishment.",
+    "explanation_zh": "將本地 N 位址設定為與遠端 N 位址相同會導致 IP 範圍衝突，阻止 F1 介面建立。"
+  },
+  {
+    "filename": "du_case_336.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 timing advance parameters to zero values causes timing misalignment, disrupting uplink timing synchronization and data transmission.",
+    "explanation_zh": "將 Ta4 定時提前參數設定為零值會導致定時錯位，干擾上行鏈路定時同步和資料傳輸。"
+  },
+  {
+    "filename": "du_case_337.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL absolute frequency point A to zero causes frequency misalignment, preventing carrier configuration and cell operation.",
+    "explanation_zh": "將 DL 絕對頻率點 A 設定為零會導致頻率錯位，阻止載波配置和小區運作。"
+  },
+  {
+    "filename": "du_case_338.json",
+    "modified_key": "fhi_72.dpdk_devices",
+    "original_value": ["0000:ca:02.0", "0000:ca:02.1"],
+    "error_value": ["invalid:pci", "invalid:pci"],
+    "error_type": "invalid_format",
+    "explanation_en": "Setting DPDK devices to invalid PCI format causes unreachable front-haul devices, disrupting eCPRI connectivity and RU communication.",
+    "explanation_zh": "將 DPDK 裝置設定為無效的 PCI 格式會導致無法到達的前傳裝置，干擾 eCPRI 連線和 RU 通訊。"
+  },
+  {
+    "filename": "du_case_339.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_up",
+    "original_value": [96, 196],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a UP timing parameters to zero values causes timing misalignment, disrupting uplink data transmission.",
+    "explanation_zh": "將 T1a UP 定時參數設定為零值會導致定時錯位，干擾上行鏈路資料傳輸。"
+  },
+  {
+    "filename": "du_case_340.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting DL carrier bandwidth to zero causes frequency misalignment, preventing downlink transmission.",
+    "explanation_zh": "將 DL 載波頻寬設定為零會導致頻率錯位，阻止下行鏈路傳輸。"
+  },
+  {
+    "filename": "du_case_341.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "0.0.0.0",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local N address to invalid IP '0.0.0.0' causes unreachable local interface, preventing F1 connection.",
+    "explanation_zh": "將本地 N 位址設定為無效的 IP '0.0.0.0' 會導致無法到達的本地介面，阻止 F1 連線。"
+  },
+  {
+    "filename": "du_case_342.json",
+    "modified_key": "gNBs[0].gNB_ID",
+    "original_value": "0xe00",
+    "error_value": 3584,
+    "error_type": "wrong_type",
+    "explanation_en": "Changing gNB ID from string to integer causes type mismatch errors during configuration parsing.",
+    "explanation_zh": "將 gNB ID 從字串改為整數會導致配置解析期間的類型不匹配錯誤。"
+  },
+  {
+    "filename": "du_case_343.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "annoying",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting ASN.1 verbosity to an invalid enum value will cause logging configuration failure and potential runtime errors.",
+    "explanation_zh": "將 ASN.1 詳細程度設定為無效枚舉值將導致日誌配置失敗和潛在的運行時錯誤。"
+  },
+  {
+    "filename": "du_case_344.json",
+    "modified_key": "gNBs[0].gNB_name",
+    "original_value": "gNB-Eurecom-DU",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting gNB name to null causes missing value error, preventing gNB identification and initialization.",
+    "explanation_zh": "將 gNB 名稱設定為 null 會導致缺失值錯誤，阻止 gNB 識別和初始化。"
+  },
+  {
+    "filename": "du_case_345.json",
+    "modified_key": "rfsimulator.serveraddr",
+    "original_value": "server",
+    "error_value": "255.255.255.255",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting RF simulator server address to broadcast IP causes unreachable server, disrupting simulation connectivity.",
+    "explanation_zh": "將 RF 模擬器伺服器位址設定為廣播 IP 會導致無法到達的伺服器，干擾模擬連線。"
+  },
+  {
+    "filename": "du_case_346.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH message 1 frequency start to out-of-range value causes frequency misalignment, preventing RACH procedure and UE access.",
+    "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為超出範圍的值會導致頻率錯位，阻止 RACH 程序和 UE 存取。"
+  },
+  {
+    "filename": "du_case_347.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [200, 250],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 timing parameters to out-of-range values causes timing misalignment in front-haul interface, disrupting synchronization and data transmission.",
+    "explanation_zh": "將 Ta4 定時參數設定為超出範圍的值會導致前傳介面的定時錯位，干擾同步和資料傳輸。"
+  },
+  {
+    "filename": "du_case_348.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local N address to invalid IP format causes IP range conflict, preventing F1 interface connection.",
+    "explanation_zh": "將本地 N 位址設定為無效 IP 格式會導致 IP 範圍衝突，阻止 F1 介面連線。"
+  },
+  {
+    "filename": "du_case_349.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting SSB periodicity to wrong type causes configuration parsing failure, preventing cell setup.",
+    "explanation_zh": "將 SSB 週期設定為錯誤類型會導致配置解析失敗，阻止小區設定。"
+  },
+  {
+    "filename": "du_case_350.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position",
+    "original_value": 0,
+    "error_value": 5,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting DMRS type A position to invalid enum causes configuration validation failure, preventing downlink transmission.",
+    "explanation_zh": "將 DMRS 類型 A 位置設定為無效枚舉會導致配置驗證失敗，阻止下行鏈路傳輸。"
+  },
+  {
+    "filename": "du_case_351.json",
+    "modified_key": "gNBs[0].gNB_name",
+    "original_value": "gNB-Eurecom-DU",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting gNB name to null causes missing value error, preventing gNB identification and initialization.",
+    "explanation_zh": "將 gNB 名稱設定為 null 會導致缺失值錯誤，阻止 gNB 識別和初始化。"
+  },
+  {
+    "filename": "du_case_352.json",
+    "modified_key": "fhi_72.ru_addr[0]",
+    "original_value": "e8:c7:4f:25:80:ed",
+    "error_value": "00:00:00:00:00:00",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting RU address to all-zero MAC causes unreachable RU, disrupting front-haul connectivity.",
+    "explanation_zh": "將 RU 位址設定為全零 MAC 會導致無法到達的 RU，干擾前傳連線。"
+  },
+  {
+    "filename": "du_case_353.json",
+    "modified_key": "MACRLCs[0].remote_n_portc",
+    "original_value": 501,
+    "error_value": 0,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting remote N port C to 0 causes out-of-range port error, preventing F1 control plane connection.",
+    "explanation_zh": "將遠端 N 埠 C 設定為 0 會導致超出範圍的埠錯誤，阻止 F1 控制平面連線。"
+  },
+  {
+    "filename": "du_case_354.json",
+    "modified_key": "RUs[0].local_rf",
+    "original_value": "yes",
+    "error_value": 1,
+    "error_type": "wrong_type",
+    "explanation_en": "Setting local RF to number instead of string causes type mismatch, preventing RU configuration.",
+    "explanation_zh": "將本地 RF 設定為數字而非字串會導致類型不匹配，阻止 RU 配置。"
+  },
+  {
+    "filename": "du_case_355.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote N address to invalid IP format causes IP range conflict, preventing F1 interface connection.",
+    "explanation_zh": "將遠端 N 位址設定為無效 IP 格式會導致 IP 範圍衝突，阻止 F1 介面連線。"
+  },
+  {
+    "filename": "du_case_356.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 641281,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting SSB frequency to misaligned value causes frequency misalignment, preventing SSB transmission and cell discovery.",
+    "explanation_zh": "將 SSB 頻率設定為錯位值會導致頻率錯位，阻止 SSB 傳輸和細胞發現。"
+  },
+  {
+    "filename": "du_case_357.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].restrictedSetConfig",
+    "original_value": 0,
+    "error_value": 5,
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting restricted set config to invalid enum causes configuration validation failure, preventing PRACH configuration.",
+    "explanation_zh": "將受限集合配置設定為無效枚舉會導致配置驗證失敗，阻止 PRACH 配置。"
+  },
+  {
+    "filename": "du_case_358.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": [0, 0],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a CP DL timing to out-of-range values causes timing misalignment in front-haul interface, disrupting downlink synchronization.",
+    "explanation_zh": "將 T1a CP DL 定時設定為超出範圍的值會導致前傳介面的定時錯位，干擾下行鏈路同步。"
+  },
+  {
+    "filename": "du_case_359.json",
+    "modified_key": "Active_gNBs",
+    "original_value": ["gNB-Eurecom-DU"],
+    "error_value": [],
+    "error_type": "missing_value",
+    "explanation_en": "Setting Active gNBs to empty array causes missing value error, preventing gNB activation and initialization.",
+    "explanation_zh": "將活躍 gNB 設定為空陣列會導致缺失值錯誤，阻止 gNB 啟動和初始化。"
+  },
+  {
+    "filename": "du_case_360.json",
+    "modified_key": "log_config.global_log_level",
+    "original_value": "info",
+    "error_value": 1,
+    "error_type": "wrong_type",
+    "explanation_en": "Setting global log level to integer instead of string causes type mismatch, preventing logging configuration and causing startup failures.",
+    "explanation_zh": "將全域日誌等級設定為整數而非字串會導致類型不匹配，阻止日誌配置並造成啟動失敗。"
+  },
+  {
+    "filename": "du_case_361.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.300",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local N address to invalid IP format causes network configuration failure, preventing F1 interface connection and DU initialization.",
+    "explanation_zh": "將本地 N 地址設定為無效 IP 格式會導致網路配置失敗，阻止 F1 介面連接和 DU 初始化。"
+  },
+  {
+    "filename": "du_case_362.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+    "original_value": 78,
+    "error_value": 79,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting DL frequency band to 79 while UL is 78 causes frequency misalignment, preventing proper carrier configuration and cell setup.",
+    "explanation_zh": "將下行鏈路頻率頻帶設定為 79 而上行鏈路為 78 會導致頻率錯位，阻止正確的載波配置和小區設定。"
+  },
+  {
+    "filename": "du_case_363.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+    "original_value": 285,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_cp_dl to 1000 exceeds timing range, causing front-haul timing misalignment and synchronization failures.",
+    "explanation_zh": "將 T1a_cp_dl 設定為 1000 超過時序範圍，導致前傳時序錯位和同步失敗。"
+  },
+  {
+    "filename": "du_case_364.json",
+    "modified_key": "log_config.hw_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting HW log level to invalid enum causes logging configuration failure, preventing hardware-related logging and diagnostics.",
+    "explanation_zh": "將硬體日誌等級設定為無效枚舉會導致日誌配置失敗，阻止硬體相關日誌和診斷。"
+  },
+  {
+    "filename": "du_case_365.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+    "original_value": 98,
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting PRACH configuration index to null causes missing value error, preventing PRACH setup and random access procedure.",
+    "explanation_zh": "將 PRACH 配置索引設定為 null 會導致缺失值錯誤，阻止 PRACH 設定和隨機接入程序。"
+  },
+  {
+    "filename": "du_case_366.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting PRACH msg1 frequency start to 100 exceeds valid range, causing PRACH frequency misalignment and random access failures.",
+    "explanation_zh": "將 PRACH msg1 頻率起始設定為 100 超過有效範圍，導致 PRACH 頻率錯位和隨機接入失敗。"
+  },
+  {
+    "filename": "du_case_367.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM",
+    "original_value": 0,
+    "error_value": "one",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting PRACH msg1 FDM to string instead of number causes type mismatch, preventing PRACH configuration and random access setup.",
+    "explanation_zh": "將 PRACH msg1 FDM 設定為字串而非數字會導致類型不匹配，阻止 PRACH 配置和隨機接入設定。"
+  },
+  {
+    "filename": "du_case_368.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote N address to invalid IP format causes network configuration failure, preventing F1 interface connection to CU.",
+    "explanation_zh": "將遠端 N 地址設定為無效 IP 格式會導致網路配置失敗，阻止 F1 介面連接 CU。"
+  },
+  {
+    "filename": "du_case_369.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": 641280,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting DL absolute frequency point A to same as SSB frequency causes frequency misalignment, preventing proper carrier configuration.",
+    "explanation_zh": "將下行鏈路絕對頻率點 A 設定為與 SSB 頻率相同會導致頻率錯位，阻止正確的載波配置。"
+  },
+  {
+    "filename": "du_case_370.json",
+    "modified_key": "log_config.phy_log_level",
+    "original_value": "info",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting PHY log level to invalid enum causes logging configuration failure, preventing physical layer logging and diagnostics.",
+    "explanation_zh": "將物理層日誌等級設定為無效枚舉會導致日誌配置失敗，阻止物理層日誌和診斷。"
+  },
+  {
+    "filename": "du_case_371.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+    "original_value": 1,
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting PRACH root sequence index to null causes missing value error, preventing PRACH sequence generation and random access.",
+    "explanation_zh": "將 PRACH 根序列索引設定為 null 會導致缺失值錯誤，阻止 PRACH 序列生成和隨機接入。"
+  },
+  {
+    "filename": "du_case_372.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_up[0]",
+    "original_value": 96,
+    "error_value": 500,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting T1a_up to 500 exceeds timing range, causing front-haul timing misalignment and uplink synchronization failures.",
+    "explanation_zh": "將 T1a_up 設定為 500 超過時序範圍，導致前傳時序錯位和上行鏈路同步失敗。"
+  },
+  {
+    "filename": "du_case_373.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": "zero",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting PRACH msg1 frequency start to string instead of number causes type mismatch, preventing PRACH frequency configuration and random access setup.",
+    "explanation_zh": "將 PRACH msg1 頻率起始設定為字串而非數字會導致類型不匹配，阻止 PRACH 頻率配置和隨機接入設定。"
+  },
+  {
+    "filename": "du_case_374.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "127.0.0.300",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting the local N address to an invalid IP format '127.0.0.300' will cause network interface binding failure and prevent DU from establishing F1 connections.",
+    "explanation_zh": "將本地 N 地址設定為無效的 IP 格式 '127.0.0.300' 將導致網路介面綁定失敗，並阻止 DU 建立 F1 連接。"
+  },
+  {
+    "filename": "du_case_375.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+    "original_value": 640008,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the downlink absolute frequency point A to a negative value will cause frequency configuration validation failure and prevent proper carrier setup.",
+    "explanation_zh": "將下行鏈路絕對頻率點 A 設定為負值將導致頻率配置驗證失敗，並阻止正確的載波設定。"
+  },
+  {
+    "filename": "du_case_376.json",
+    "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+    "original_value": [285, 429],
+    "error_value": "invalid",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting T1a_cp_dl to a string instead of an array will cause type mismatch in front-haul timing configuration, leading to synchronization failures.",
+    "explanation_zh": "將 T1a_cp_dl 設定為字串而非陣列將導致前傳時序配置中的類型不匹配，造成同步失敗。"
+  },
+  {
+    "filename": "du_case_377.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "127.0.0.3",
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting the remote N address to the same as the local N address creates a logical contradiction, preventing proper F1 interface establishment and causing connection failures.",
+    "explanation_zh": "將遠端 N 地址設定為與本地 N 地址相同會造成邏輯矛盾，阻止正確的 F1 介面建立並導致連接失敗。"
+  },
+  {
+    "filename": "du_case_378.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+    "original_value": 641280,
+    "error_value": 10000000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting the absolute SSB frequency to an out-of-range value will cause frequency band misalignment, preventing SSB transmission and cell synchronization.",
+    "explanation_zh": "將絕對 SSB 頻率設定為超出範圍的值將導致頻率帶錯位，阻止 SSB 傳輸和細胞同步。"
+  },
+  {
+    "filename": "du_case_379.json",
+    "modified_key": "Asn1_verbosity",
+    "original_value": "annoying",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting ASN.1 verbosity to an invalid enum value will cause logging configuration failure and potential runtime errors during protocol message handling.",
+    "explanation_zh": "將 ASN.1 詳細程度設定為無效枚舉值將導致日誌配置失敗，並在協議訊息處理期間造成潛在的運行時錯誤。"
+  },
+  {
+    "filename": "du_case_380.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Missing the local N address will cause network interface binding failure, preventing DU from establishing F1 connections to the CU.",
+    "explanation_zh": "缺少本地 N 地址將導致網路介面綁定失敗，阻止 DU 建立到 CU 的 F1 連接。"
+  },
+  {
+    "filename": "du_case_381.json",
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [500, 600],
+    "error_type": "out_of_range",
+    "explanation_en": "Setting Ta4 timing parameters to out-of-range values will cause front-haul timing misalignment, leading to uplink synchronization failures.",
+    "explanation_zh": "將 Ta4 時序參數設定為超出範圍的值將導致前傳時序錯位，造成上行鏈路同步失敗。"
+  },
+  {
+    "filename": "du_case_382.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting the remote N address to an invalid IP format will cause IP range conflict and prevent DU from reaching the CU due to unreachable routing.",
+    "explanation_zh": "將遠端 N 地址設定為無效的 IP 格式將導致 IP 範圍衝突，並阻止 DU 因無法路由而到達 CU。"
+  },
+  {
+    "filename": "du_case_383.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+    "original_value": 106,
+    "error_value": 200,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting downlink carrier bandwidth to an out-of-range value will cause frequency misalignment and prevent proper carrier configuration for band 78.",
+    "explanation_zh": "將下行鏈路載波帶寬設定為超出範圍的值將導致頻率錯位，並阻止對頻帶 78 的正確載波配置。"
+  },
+  {
+    "filename": "du_case_384.json",
+    "modified_key": "MACRLCs[0].local_n_portc",
+    "original_value": 500,
+    "error_value": "fivehundred",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting the local N port C to a string instead of a number will cause type mismatch, preventing DU from binding to the correct port and establishing F1 connections.",
+    "explanation_zh": "將本地 N 埠 C 設定為字串而非數字將導致類型不匹配，阻止 DU 綁定到正確的埠並建立 F1 連接。"
+  },
+  {
+    "filename": "du_case_385.json",
+    "modified_key": "RUs[0].clock_src",
+    "original_value": "internal",
+    "error_value": "invalid",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting the clock source to an invalid enum value will cause RU initialization failure, preventing proper timing synchronization and radio unit operation.",
+    "explanation_zh": "將時鐘源設定為無效枚舉值將導致 RU 初始化失敗，阻止正確的時序同步和無線單元操作。"
+  },
+  {
+    "filename": "du_case_386.json",
+    "modified_key": "MACRLCs[0].remote_n_portc",
+    "original_value": 501,
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Missing the remote N port C will cause connection establishment failure, preventing DU from communicating with the CU over the F1 interface.",
+    "explanation_zh": "缺少遠端 N 埠 C 將導致連接建立失敗，阻止 DU 通過 F1 介面與 CU 通訊。"
+  },
+  {
+    "filename": "du_case_387.json",
+    "modified_key": "fhi_72.ru_addr[0]",
+    "original_value": "e8:c7:4f:25:80:ed",
+    "error_value": "invalid:mac",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting the RU address to an invalid MAC format will cause front-haul interface initialization failure, preventing DU from reaching the RU.",
+    "explanation_zh": "將 RU 地址設定為無效的 MAC 格式將導致前傳介面初始化失敗，阻止 DU 到達 RU。"
+  },
+  {
+    "filename": "du_case_388.json",
+    "modified_key": "gNBs[0].min_rxtxtime",
+    "original_value": 6,
+    "error_value": 100,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting min_rxtxtime to an excessively high value (100) will cause timing misalignment, preventing proper synchronization between DU components and leading to communication failures.",
+    "explanation_zh": "將 min_rxtxtime 設定為過高的值 (100) 將導致時序錯位，阻止 DU 元件間的正確同步，並導致通訊失敗。"
+  },
+  {
+    "filename": "du_case_389.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+    "original_value": 78,
+    "error_value": 999,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting dl_frequencyBand to an invalid value (999) will cause frequency misalignment, preventing proper SSB transmission and cell synchronization.",
+    "explanation_zh": "將 dl_frequencyBand 設定為無效值 (999) 將導致頻率錯位，阻止正確的 SSB 傳輸和細胞同步。"
+  },
+  {
+    "filename": "du_case_390.json",
+    "modified_key": "MACRLCs[0].remote_n_address",
+    "original_value": "127.0.0.5",
+    "error_value": "192.168.1.999",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting remote_n_address to an invalid IP format (192.168.1.999) will cause IP range conflicts, preventing DU from reaching the CU over the F1 interface.",
+    "explanation_zh": "將 remote_n_address 設定為無效的 IP 格式 (192.168.1.999) 將導致 IP 範圍衝突，阻止 DU 通過 F1 介面到達 CU。"
+  },
+  {
+    "filename": "du_case_391.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+    "original_value": 6,
+    "error_value": "invalid_string",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting dl_UL_TransmissionPeriodicity to a string instead of an integer will cause timing misalignment, disrupting downlink and uplink transmission scheduling.",
+    "explanation_zh": "將 dl_UL_TransmissionPeriodicity 設定為字串而非整數將導致時序錯位，干擾下行鏈路和上行鏈路的傳輸排程。"
+  },
+  {
+    "filename": "du_case_392.json",
+    "modified_key": "fhi_72.ru_addr[0]",
+    "original_value": "e8:c7:4f:25:80:ed",
+    "error_value": "invalid:mac",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting ru_addr to an invalid MAC format will make the RU unreachable, preventing front-haul interface initialization and data transmission.",
+    "explanation_zh": "將 ru_addr 設定為無效的 MAC 格式將使 RU 無法到達，阻止前傳介面初始化和資料傳輸。"
+  },
+  {
+    "filename": "du_case_393.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_frequencyBand",
+    "original_value": 78,
+    "error_value": 79,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting ul_frequencyBand to 79 while dl_frequencyBand is 78 creates a logical contradiction, causing frequency misalignment and preventing proper uplink transmission.",
+    "explanation_zh": "將 ul_frequencyBand 設定為 79 而 dl_frequencyBand 為 78 會產生邏輯矛盾，導致頻率錯位並阻止正確的上行鏈路傳輸。"
+  },
+  {
+    "filename": "du_case_394.json",
+    "modified_key": "gNBs[0].min_rxtxtime",
+    "original_value": 6,
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting min_rxtxtime to null causes a missing value error, leading to timing misalignment and failure in DU initialization.",
+    "explanation_zh": "將 min_rxtxtime 設定為 null 會導致缺失值錯誤，造成時序錯位並使 DU 初始化失敗。"
+  },
+  {
+    "filename": "du_case_395.json",
+    "modified_key": "RUs[0].clock_src",
+    "original_value": "internal",
+    "error_value": "invalid_clock",
+    "error_type": "invalid_enum",
+    "explanation_en": "Setting clock_src to an invalid enum value will cause RU initialization failure, making the RU unreachable and disrupting front-haul synchronization.",
+    "explanation_zh": "將 clock_src 設定為無效的枚舉值將導致 RU 初始化失敗，使 RU 無法到達並干擾前傳同步。"
+  },
+  {
+    "filename": "du_case_396.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+    "original_value": 0,
+    "error_value": 1000,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting prach_msg1_FrequencyStart to an out-of-range value (1000) will cause frequency misalignment, preventing proper PRACH reception and UE random access.",
+    "explanation_zh": "將 prach_msg1_FrequencyStart 設定為超出範圍的值 (1000) 將導致頻率錯位，阻止正確的 PRACH 接收和 UE 隨機接入。"
+  },
+  {
+    "filename": "du_case_397.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+    "original_value": 2,
+    "error_value": "invalid_period",
+    "error_type": "wrong_type",
+    "explanation_en": "Setting ssb_periodicityServingCell to a string instead of an integer will cause timing misalignment, disrupting SSB transmission and cell synchronization.",
+    "explanation_zh": "將 ssb_periodicityServingCell 設定為字串而非整數將導致時序錯位，干擾 SSB 傳輸和細胞同步。"
+  },
+  {
+    "filename": "du_case_398.json",
+    "modified_key": "MACRLCs[0].local_n_address",
+    "original_value": "127.0.0.3",
+    "error_value": "192.168.1.256",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting local_n_address to an invalid IP format (192.168.1.256) will cause IP range conflicts, preventing DU from establishing F1 connections.",
+    "explanation_zh": "將 local_n_address 設定為無效的 IP 格式 (192.168.1.256) 將導致 IP 範圍衝突，阻止 DU 建立 F1 連接。"
+  },
+  {
+    "filename": "du_case_399.json",
+    "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_subcarrierSpacing",
+    "original_value": 1,
+    "error_value": 2,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting ul_subcarrierSpacing to 2 while dl_subcarrierSpacing is 1 creates a logical contradiction, causing frequency misalignment and disrupting uplink transmission.",
+    "explanation_zh": "將 ul_subcarrierSpacing 設定為 2 而 dl_subcarrierSpacing 為 1 會產生邏輯矛盾，導致頻率錯位並干擾上行鏈路傳輸。"
+  },
+  {
+    "filename": "du_case_400.json",
+    "modified_key": "gNBs[0].nr_cellid",
+    "original_value": 1,
+    "error_value": null,
+    "error_type": "missing_value",
+    "explanation_en": "Setting nr_cellid to null (missing value) will cause cell identification failure, preventing proper cell setup and registration.",
+    "explanation_zh": "將 nr_cellid 設定為 null（缺失值）將導致小區識別失敗，阻止正確的小區設定和註冊。"
+  }
+]

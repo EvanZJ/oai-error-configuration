@@ -1,0 +1,31 @@
+Overall Context and Setup Assumptions:
+This is an OAI 5G NR SA monolithic mode scenario with rfsim UE simulation, based on CU logs showing "nfapi (0) running mode: MONOLITHIC" and "--rfsim --sa" implied from UE connection attempts. Expected flow: gNB initialization (CU/DU integrated) → thread creation (SCTP, NGAP, GTPU, F1AP) → F1AP setup between CU and DU → GTPU/SCTP binds for NGAP (to AMF) and NGU (to UPF) → UE PRACH/RACH → RRC setup → PDU session establishment. Potential issues: config validation failures from invalid SCTP parameters (e.g., negative streams like -1 causes socket creation failure), bind failures due to invalid IPs (non-local like 192.168.8.43 causing errno 99 "Cannot assign requested address"), AMF association failures despite F1AP/RRC success. Parsing network_config: cu_conf gNBs SCTP SCTP_INSTREAMS=-1 (invalid, must be >0), SCTP_OUTSTREAMS=2 (valid). NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF="192.168.8.43" (non-local, invalid), GNB_IPV4_ADDRESS_FOR_NGU="192.168.8.43" (same issue). du_conf SCTP SCTP_INSTREAMS=2, SCTP_OUTSTREAMS=2 (valid). ue_conf rfsimulator serveraddr="127.0.0.1", serverport="4043". Initial mismatches: SCTP_INSTREAMS=-1 invalid, IPs 192.168.8.43 not local, causing bind failures.
+
+Analyzing CU Logs:
+Initialization: Starts with MONOLITHIC mode, OPT disabled, HW version logged, PHY tasks created (RC.gNB=0x5858a1c4fa20), no prs_config, nb_nr_L1_inst:0. gNB_RRC_INST allocated, F1AP gNB_CU_id=3584, name="gNB-Eurecom-CU", SDAP disabled, Data Radio Bearer count 1, SIB23_NR size 9, PDCP init with GTPU, default drx 0, gNB_app_register, threads created: TASK_SCTP, TASK_NGAP, TASK_GNB_APP, TASK_RRC_GNB. NGAP registers gNB[0] id 3584, checks AMF state. GTPU configuring SA mode, address 192.168.8.43:2152, bind fails "Cannot assign requested address" (IP not local). SCTP sctp_bindx fails errno 99 "Cannot assign requested address" (likely due to invalid SCTP_INSTREAMS=-1 or IP). GTPU failed to bind socket 192.168.8.43:2152, instance -1. SCTP could not open socket. E1AP failed CUUP N3 UDP listener. Later GTPU initializes 127.0.0.5:2152 succeeds id=97. F1AP starts CU, SCTP_REQ for 127.0.0.5 len 10. F1 Setup Request from DU 3584, response sent, DU uses RRC v17.3.0. UE context created CU UE ID 1 DU UE ID 25175, RNTI 6257, SRB1 activated, RRCSetup generated, UE Processing NR_RRCSetupComplete, UE state NR_RRC_CONNECTED. Anomalies: Early GTPU/SCTP bind failures prevent AMF association, despite F1AP/RRC success; "No AMF is associated to the gNB". Cross-reference: SCTP_INSTREAMS=-1 invalid, NETWORK_INTERFACES IPs 192.168.8.43 non-local, causing binds to fail initially.
+
+Analyzing DU Logs:
+Initialization: wait_gNBs, L1 configured, RU threads init, RU configured from file, RU mask 1, RU[0] created, nr_flag 0, band 78, half-slot parallelization 1, ru_id 0, shlib librfsimulator loaded, random seed, frame_parms, sync waiting. RU ready, gNBs init, NFAPI disabled, init_eNB_afterRU, shlibs libdfts/libldpc loaded, RUs ready, sync sent. ITTI handler, threads: L1_stats_thread, ru_thread, PHY RU 0 rf ready, opp_enabled 0, UE command line logged. RA procedure at 183.19, preamble 24, energy 54dB, TC-RNTI 6257, RA process index 0, Msg2 DCI, Msg3 scheduled, RA Contention Resolution timer 64ms. Msg3 received, srb0/srb1 activated, Msg4 scheduled, UE MAC context added, Msg4 sent, Ack received, CBRA succeeded. UE stats logged periodically: in-sync, RSRP -44, MCS 9, BLER low, TX/RX bytes increasing. No anomalies: DU operates normally, UE connects successfully via rfsim, RACH succeeds, data exchange ongoing. Link to network_config: du_conf SCTP_INSTREAMS=2 valid.
+
+Analyzing UE Logs:
+Connection attempts: Repeated NR band 78 TDD logs, duplex spacing 0 KHz. Harq round stats for Downlink: 8/0/0 to 11/0/0. No explicit connection failures; logs show band info and Harq stats repeatedly, implying UE is connected and exchanging data (Harq rounds increasing). Link to network_config: ue_conf rfsimulator serveraddr="127.0.0.1" (local), serverport="4043" (matches du_conf rfsimulator serverport 4043).
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Correlating timelines: CU init starts, threads created, NGAP checks AMF, GTPU configures 192.168.8.43:2152 fails bind (errno 99, IP not local), SCTP fails (invalid SCTP_INSTREAMS=-1 causes socket creation failure), GTPU instance -1, E1AP fails. Then GTPU retries 127.0.0.5:2152 succeeds id=97. F1AP starts ~same time, succeeds (assoc_id 672), F1 Setup, UE connects ~frame 128, RRC setup ~frame 183, connected ~frame 184, data exchange starts. DU init parallel, RU ready, UE RA ~183.19, succeeds. UE logs show ongoing data ~frames 128-896. Root cause: misconfigured_param "gNBs.SCTP.SCTP_INSTREAMS=-1" invalid (SCTP streams must be >0; -1 causes config validation failure or socket creation error). This leads to SCTP bind failure for NGAP, GTPU bind failures due to invalid IP and SCTP issues, preventing AMF association, UE stuck at RRC connected without PDU session. External knowledge: SCTP streams are validated in OAI (e.g., in sctp_eNB_task.c), invalid values cause socket failures. 3GPP TS 29.281 no direct, but SCTP RFC 4960 requires positive streams. Invalid streams cause errno 99 or socket errors. No tool needed, as misconfig clear.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf gNBs SCTP SCTP_INSTREAMS from -1 to 2 (matches du_conf SCTP_INSTREAMS for consistency). Correct NETWORK_INTERFACES GNB_IPV4_ADDRESS_FOR_NG_AMF and GNB_IPV4_ADDRESS_FOR_NGU from "192.168.8.43" to "127.0.0.5" (local address, matches local_s_address). Corrected network_config:
+{
+  "cu_conf": {
+    "gNBs": {
+      "SCTP": {
+        "SCTP_INSTREAMS": 2
+      }
+    },
+    "NETWORK_INTERFACES": {
+      "GNB_IPV4_ADDRESS_FOR_NG_AMF": "127.0.0.5",
+      "GNB_IPV4_ADDRESS_FOR_NGU": "127.0.0.5"
+    }
+  }
+}
+Debug steps: Check OAI openair3/SCTP/sctp_eNB_task.c for stream validation (grep "SCTP_INSTREAMS"). Run with --log_config.sctp_log_level debug to see socket creation. Use netstat -tuln to verify local IPs. Limitations: Logs truncated, no timestamps for precise correlation; incomplete JSON if more config missing. Base on OAI patterns: Invalid SCTP params cause socket failures, preventing AMF/UPF binds.

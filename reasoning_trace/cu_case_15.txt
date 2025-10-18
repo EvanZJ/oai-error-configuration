@@ -1,0 +1,34 @@
+Overall Context and Setup Assumptions:
+This case involves an OpenAirInterface (OAI) 5G NR Standalone (SA) mode setup with radio frequency simulator (rfsim) for UE emulation, using a CU-DU split architecture. The logs indicate monolithic mode operation (--rfsim --sa options), where CU handles control plane (NGAP, F1AP), DU handles user plane and PHY/MAC, and UE connects via rfsim server. Expected flow: Component initialization (threads, bindings), F1AP setup between CU and DU, NGAP association with AMF, UE random access (PRACH), RRC connection setup, security activation, and PDU session establishment. Potential issues include configuration mismatches (e.g., PLMN params causing F1 setup failures), binding errors (errno 99 for non-local IPs), or protocol failures (SCTP associations, AMF connections). Network_config parsing: cu_conf includes gNB_ID=0xe00, gNB_name="gNB-Eurecom-CU", tracking_area_code=1, plmn_list with mcc=1000 (invalid, 4 digits), mnc=1, mnc_length=2, snssaiList sst=1, nr_cellid=1, tr_s_preference=f1, local/remote SCTP addresses (127.0.0.5/127.0.0.3), AMF IP=192.168.70.132, security with ciphering_algorithms=["nea3","nea2","nea1","nea0"], integrity_algorithms=["nia2","nia0"], drb_ciphering=yes. du_conf has gNB_ID=0xe00, gNB_name="gNB-Eurecom-DU", plmn_list mcc=1, mnc=1, mnc_length=2, servingCellConfigCommon with band 78, PRACH index=98, rfsimulator serveraddr="server". ue_conf has imsi=001010000000101, rfsimulator serveraddr="127.0.0.1". Initial mismatch: cu_conf plmn_list.mcc=1000 invalid (3GPP TS 23.003: MCC 3 digits 001-999), vs du_conf mcc=1, causing PLMN mismatch.
+
+Analyzing CU Logs:
+CU initialization proceeds normally: nfapi MONOLITHIC, OPT disabled, HW version logged, PHY tasks created (RC.gNB=0x...), no prs_config, nb_nr_L1_inst=0. gNB_APP allocates RRC_INST, F1AP sets gNB_CU_id=3584, gNB_CU_name[0] gNB-Eurecom-CU, SDAP disabled, DRB count=1. SIB23_NR size=9, PDCP init with GTPU, default drx=0, gNB_app_register. Threads created: TASK_SCTP, TASK_NGAP, TASK_GNB_APP, TASK_RRC_GNB. NGAP registers gNB[0] id=3584, checks AMF state. SCTP bindx fails (errno 99: Cannot assign requested address) for AMF IP 192.168.8.43:501 (non-local IP), no SCTP connection. GTPU configures address 192.168.8.43:2152, bind fails (errno 99), can't create GTPU instance (id=-1). F1AP starts, F1AP_CU_SCTP_REQ for 127.0.0.5:10. GTPU initializes UDP for 127.0.0.5:2152, creates instance id=97. Receives F1 Setup Request from DU 3584 (gNB-Eurecom-DU) on assoc_id 370. Anomalies: "[NR_RRC] PLMN mismatch: CU 10, DU 11" – PLMN mismatch detected (CU PLMN encoded as 10 from invalid mcc=1000, DU as 11 from mcc=1 mnc=1). SCTP shutdown received, F1AP endpoint removed, "[NR_RRC] no DU connected or not found for assoc_id 370: F1 Setup Failed?". Cross-reference: PLMN mismatch in cu_conf (mcc=1000 invalid) vs du_conf (mcc=1), causing F1 setup rejection.
+
+Analyzing DU Logs:
+DU initialization: NR_MAC band 78 TDD, MAC init nb_nr_macrlc_inst=1, callbacks installed, NR_MAC configuring common params, DL_Bandwidth:40, band 78, ssb_OffsetPointA 86, ssb_SubcarrierOffset 0, RX/TX antennas 4, TDD period 6. PHY DL/UL freq 3619200000, MIB configured, frame parms mu 1 N_RB 106 Ncp 0, symbol rotation, gNB 0 configured. NR_MAC PUSCH/PUCCH targets, SIB1 freq offsetToPointA 86. gNB_APP F1AP gNB_DU_id 3584 gNB_DU_name gNB-Eurecom-DU TAC 1 MCC/MNC/length 1/1/2 cellID 1. ngran_DU TDD config. CMDLINE shows du_gnb.conf. Libconfig init, debug flags, log init, command options, parallel_conf=2, worker_conf=1, nb_rrc_inst=1, nb_nr_L1_inst=1, nb_ru=1, RAU/RRU, NRRRC f1 southbound. MeasurementTimingConfiguration. PHY create_gNB_tasks nb_nr_L1_inst=1, l1_north_init_gNB, callbacks, gNB_APP allocates RRC_INST, SDAP disabled, DRB count=1. "[RRC] no preferred ciphering algorithm set in configuration file, applying default parameters (no security)". "[RRC] no preferred integrity algorithm set in configuration file, applying default parameters (nia2)". Threads: TASK_SCTP, TASK_GNB_APP, TASK_GTPV1_U, TASK_DU_F1. X2AP disabled. PHY initializes gNB 0, registers MAC, sets indications, nr-gnb.c allocated. F1AP starts at DU, F1-C DU IPaddr 127.0.0.3 connect to F1-C CU 127.0.0.5, binding GTP to 127.0.0.3. GTPU initializes UDP port 2152, creates instance id=98. Anomalies: "[MAC] the CU reported F1AP Setup Failure, is there a configuration mismatch?" – F1 setup failed due to PLMN mismatch. NRRRC southbound local_mac, START MAIN THREADS, wait_gNBs, waiting for gNB L1 configured. Link to network_config: du_conf plmn_list mcc=1 valid, but mismatch with CU causes failure.
+
+Analyzing UE Logs:
+UE initialization: samples_per_subframe 61440, initializing UE vars gNB TXant 1 UE RXant 1, no prs_config, symbol rotation f0 3619200000, N_TA_offset 800. HW configuring cards 0-7 sample_rate 61440000 tx/rx 1/1 TDD, freq 3619200000, gains. Initializing UE threads, threadCreate UEthread, L1_UE_stats, TASK_RRC_NRUE, TASK_NAS_NRUE. "[HW] Running as client: will connect to a rfsimulator server side". "[HW] Trying to connect to 127.0.0.1:4043" – attempts connect to rfsim server. "[HW] connect() to 127.0.0.1:4043 failed, errno(111)" – connection refused (ECONNREFUSED). Repeats attempts. "[SIM] UICC simulation: IMSI=001010000000101..." – SIM loaded. Anomalies: Repeated connect failures; UE can't connect because DU's rfsim server not started (DU waiting for F1 setup). Link to network_config: ue_conf rfsimulator serveraddr="127.0.0.1", but DU has "server" (not IP), but primary is DU failure preventing server start.
+
+Cross-Component Correlations and Root Cause Hypothesis:
+Correlating: CU starts, DU starts, F1 setup attempted, CU detects PLMN mismatch (CU 10 from invalid mcc=1000, DU 11 from mcc=1 mnc=1), rejects F1 setup, SCTP shutdown, DU reports F1 failure, waits for setup, no radio activation, UE connect refused. No AMF/NGAP progress. Hypothesis: gNBs.plmn_list.mcc=1000 invalid (3GPP TS 23.003: MCC 3 digits 000-999, 1000 exceeds), causes PLMN encoding mismatch with DU's mcc=1, leading to F1 setup failure. Guided by misconfigured_param: mcc=1000 invalid, known to cause PLMN mismatches in OAI F1 setup. External knowledge: PLMN = MCC (3 digits) + MNC; invalid MCC causes encoding errors, preventing DU association.
+
+Recommendations for Fix and Further Analysis:
+Fix: Update cu_conf gNBs.plmn_list.mcc from 1000 to 1 (match DU). Corrected network_config:
+{
+  "cu_conf": {
+    ... (rest unchanged)
+    "gNBs": {
+      ... (rest unchanged)
+      "plmn_list": {
+        "mcc": 1,
+        ... (rest unchanged)
+      },
+      ... (rest unchanged)
+    },
+    ... (rest unchanged)
+  },
+  "du_conf": { ... (unchanged) },
+  "ue_conf": { ... (unchanged) }
+}
+Debug: Check OAI logs for "PLMN mismatch"; verify MCC 3 digits. Tools: grep OAI code for "PLMN" validation; web_search "3GPP TS 23.003 PLMN format" if needed. Limitations: Logs truncated; incomplete if PLMN encoding details missing.
