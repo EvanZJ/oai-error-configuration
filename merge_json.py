@@ -6,24 +6,19 @@ from pathlib import Path
 # *******************************************************************
 # 您指定的根目錄路徑
 BASE_DIR = Path(__file__).resolve()
-PROJECT_ROOT = BASE_DIR.parent.parent.parent
+PROJECT_ROOT = BASE_DIR.parent.parent
 
 # --- 🎯 步驟 1: 定義所有要合併的「資料夾名稱」清單 ---
 # 請將所有想要合併的資料夾名稱放入這個列表中
 SOURCE_FOLDERS = [
-    "filter_defind_format_1002_600_case",
-    "filter_defind_format_1014_800_case", 
-    "filter_defind_format_1014_2000_case",
-    "filter_defind_format_cu_1009_200_case",
-    "filter_defind_format_cu_1016_150_case",
-    "filter_defind_format_du_1009_200_case",
-    "filter_defind_format_ue_1016_175_case"
+    "/home/sionna/evan/CursorAutomation/cursor_gen_conf/compiled_cu_cases",
+    "/home/sionna/evan/CursorAutomation/cursor_gen_conf/compiled_du_cases"
 ]
 
 # --- 🎯 步驟 2: 設定輸出路徑 (統一輸出到一個檔案) ---
-OUTPUT_DIR = PROJECT_ROOT / "4_filter_out_the_error_log" / "merge_cae"
+OUTPUT_DIR = PROJECT_ROOT / "cursor_gen_conf"
 # 統一輸出檔案名稱 (避免檔名過長，並指出是多資料夾合併)
-OUTPUT_FILE = OUTPUT_DIR / 'merged_from_multiple_sources.jsonl'
+OUTPUT_FILE = OUTPUT_DIR / 'merged_compiled_cases.jsonl'
 
 # 確保輸出目錄存在
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
@@ -38,7 +33,7 @@ failed_files = []
 for folder_name in SOURCE_FOLDERS:
     
     # 計算當前資料夾的 ROOT_DIR
-    ROOT_DIR = PROJECT_ROOT / "4_filter_out_the_error_log" / folder_name
+    ROOT_DIR = Path(folder_name)
     
     print(f"🔄 開始處理目錄: {ROOT_DIR}")
 
@@ -105,6 +100,6 @@ if all_data:
         print(f"寫入檔案時發生致命錯誤: {e}")
 else:
     # 顯示所有嘗試過的根目錄
-    searched_paths = "\n".join([str(PROJECT_ROOT / "4_filter_out_the_error_log" / f) for f in SOURCE_FOLDERS])
+    searched_paths = "\n".join(SOURCE_FOLDERS)
     print(f"❌ 警告: 在指定的路徑及其子目錄中沒有找到有效的 JSON 檔案。")
     print(f"嘗試搜索的根目錄:\n{searched_paths}")
