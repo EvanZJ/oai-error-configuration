@@ -183,6 +183,7 @@ def build_temp_json2(case):
     """Build the temp_json structure for a case"""
     temp_json = {}
     temp_json["misconfigured_param"] = f"{case['modified_key']}={case['error_value']}"
+    temp_json["original_param"] = f"{case['modified_key']}={case['original_value']}"
     temp_json["logs"] = {}
     
     # Find log folder
@@ -219,12 +220,21 @@ def build_temp_json2(case):
     with open(os.path.join(baseline_conf_path, "ue.json"), "r") as f:
         temp_json["network_config"]["ue_conf"] = json.load(f)
     
+    # Save to compiled folder
+    compiled_folder = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/compiled_du_cases/"
+    os.makedirs(compiled_folder, exist_ok=True)
+    case_filename = case["filename"].split(".")[0]
+    compiled_file_path = os.path.join(compiled_folder, f"du_case_{case_filename}_new_format.json")
+    with open(compiled_file_path, "w") as f:
+        json.dump(temp_json, f, indent=2)
+    
     return temp_json
 
 def build_temp_json(case):
     """Build the temp_json structure for a case"""
     temp_json = {}
     temp_json["misconfigured_param"] = f"{case['modified_key']}={case['error_value']}"
+    temp_json["original_param"] = f"{case['modified_key']}={case['original_value']}"
     temp_json["logs"] = {}
     
     # Find log folder
@@ -260,6 +270,14 @@ def build_temp_json(case):
         temp_json["network_config"]["du_conf"] = json.load(f)
     with open(os.path.join(baseline_conf_path, "ue.json"), "r") as f:
         temp_json["network_config"]["ue_conf"] = json.load(f)
+        
+    # Save to compiled folder
+    compiled_folder = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/compiled_cu_cases/"
+    os.makedirs(compiled_folder, exist_ok=True)
+    case_filename = case["filename"].split(".")[0]
+    compiled_file_path = os.path.join(compiled_folder, f"cu_case_{case_filename}_new_format.json")
+    with open(compiled_file_path, "w") as f:
+        json.dump(temp_json, f, indent=2)
     
     return temp_json
 
@@ -346,43 +364,43 @@ def main2():
             case_filename = case["filename"].split(".")[0]
             
             # Check if already processed
-            if check_if_output_exists(case_filename):
-                print(f"⏭️  Skipping (already exists): {case_filename}.txt")
-                skipped_cases.append(case['filename'])
-                continue
+            # if check_if_output_exists(case_filename):
+            #     print(f"⏭️  Skipping (already exists): {case_filename}.txt")
+            #     skipped_cases.append(case['filename'])
+            #     continue
             
             # Build temp_json
             temp_json = build_temp_json2(case)
-            if temp_json is None:
-                print(f"⚠️  Skipping case (no logs): {case['filename']}")
-                skipped_cases.append(case['filename'])
-                continue
+            # if temp_json is None:
+            #     print(f"⚠️  Skipping case (no logs): {case['filename']}")
+            #     skipped_cases.append(case['filename'])
+            #     continue
             
-            # Create prompt
-            prompt, case_filename = create_prompt_for_case(case, temp_json)
+            # # Create prompt
+            # prompt, case_filename = create_prompt_for_case(case, temp_json)
             
-            print(f"📏 Prompt length: {len(prompt)} characters")
+            # print(f"📏 Prompt length: {len(prompt)} characters")
             
-            # Send to Copilot
-            if send_prompt_to_copilot(prompt):
-                # Wait for Copilot to create the file
-                if wait_for_file_creation(case_filename, timeout=COPILOT_WAIT_TIME + 60):
-                    # Verify the file was created successfully
-                    if save_response_to_output(case_filename, None):
-                        processed_cases.append(case['filename'])
-                        print(f"✅ Case processed successfully")
-                    else:
-                        failed_cases.append(case['filename'])
-                        print(f"❌ File verification failed")
-                else:
-                    failed_cases.append(case['filename'])
-                    print(f"❌ Timeout: File not created by Copilot")
-            else:
-                failed_cases.append(case['filename'])
-                print(f"❌ Failed to send prompt to Copilot")
+            # # Send to Copilot
+            # if send_prompt_to_copilot(prompt):
+            #     # Wait for Copilot to create the file
+            #     if wait_for_file_creation(case_filename, timeout=COPILOT_WAIT_TIME + 60):
+            #         # Verify the file was created successfully
+            #         if save_response_to_output(case_filename, None):
+            #             processed_cases.append(case['filename'])
+            #             print(f"✅ Case processed successfully")
+            #         else:
+            #             failed_cases.append(case['filename'])
+            #             print(f"❌ File verification failed")
+            #     else:
+            #         failed_cases.append(case['filename'])
+            #         print(f"❌ Timeout: File not created by Copilot")
+            # else:
+            #     failed_cases.append(case['filename'])
+            #     print(f"❌ Failed to send prompt to Copilot")
             
             # Brief pause between cases
-            time.sleep(2)
+            # time.sleep(2)
             
     except KeyboardInterrupt:
         print("\n\n⚠️  Automation interrupted by user")
@@ -446,43 +464,43 @@ def main():
             case_filename = case["filename"].split(".")[0]
             
             # Check if already processed
-            if check_if_output_exists(case_filename):
-                print(f"⏭️  Skipping (already exists): {case_filename}.txt")
-                skipped_cases.append(case['filename'])
-                continue
+            # if check_if_output_exists(case_filename):
+            #     print(f"⏭️  Skipping (already exists): {case_filename}.txt")
+            #     skipped_cases.append(case['filename'])
+            #     continue
             
             # Build temp_json
             temp_json = build_temp_json(case)
-            if temp_json is None:
-                print(f"⚠️  Skipping case (no logs): {case['filename']}")
-                skipped_cases.append(case['filename'])
-                continue
+            # if temp_json is None:
+            #     print(f"⚠️  Skipping case (no logs): {case['filename']}")
+            #     skipped_cases.append(case['filename'])
+            #     continue
             
-            # Create prompt
-            prompt, case_filename = create_prompt_for_case(case, temp_json)
+            # # Create prompt
+            # prompt, case_filename = create_prompt_for_case(case, temp_json)
             
-            print(f"📏 Prompt length: {len(prompt)} characters")
+            # print(f"📏 Prompt length: {len(prompt)} characters")
             
-            # Send to Copilot
-            if send_prompt_to_copilot(prompt):
-                # Wait for Copilot to create the file
-                if wait_for_file_creation(case_filename, timeout=COPILOT_WAIT_TIME + 60):
-                    # Verify the file was created successfully
-                    if save_response_to_output(case_filename, None):
-                        processed_cases.append(case['filename'])
-                        print(f"✅ Case processed successfully")
-                    else:
-                        failed_cases.append(case['filename'])
-                        print(f"❌ File verification failed")
-                else:
-                    failed_cases.append(case['filename'])
-                    print(f"❌ Timeout: File not created by Copilot")
-            else:
-                failed_cases.append(case['filename'])
-                print(f"❌ Failed to send prompt to Copilot")
+            # # Send to Copilot
+            # if send_prompt_to_copilot(prompt):
+            #     # Wait for Copilot to create the file
+            #     if wait_for_file_creation(case_filename, timeout=COPILOT_WAIT_TIME + 60):
+            #         # Verify the file was created successfully
+            #         if save_response_to_output(case_filename, None):
+            #             processed_cases.append(case['filename'])
+            #             print(f"✅ Case processed successfully")
+            #         else:
+            #             failed_cases.append(case['filename'])
+            #             print(f"❌ File verification failed")
+            #     else:
+            #         failed_cases.append(case['filename'])
+            #         print(f"❌ Timeout: File not created by Copilot")
+            # else:
+            #     failed_cases.append(case['filename'])
+            #     print(f"❌ Failed to send prompt to Copilot")
             
             # Brief pause between cases
-            time.sleep(2)
+            # time.sleep(2)
             
     except KeyboardInterrupt:
         print("\n\n⚠️  Automation interrupted by user")
