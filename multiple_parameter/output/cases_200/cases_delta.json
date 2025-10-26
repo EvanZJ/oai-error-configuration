@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_200.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP port to 0 causes an invalid port number that is out of range, leading to unreachable SCTP connection and routing failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+      "original_value": 285,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the downlink timing parameter T1a_cp_dl[0] to 0 causes timing misalignment, as it is out of the valid range, resulting in invalid timing configuration and synchronization failure.",
+      "explanation_zh": "將下行鏈路定時參數 T1a_cp_dl[0] 設定為 0 會導致定時錯位，因為它超出了有效範圍，導致無效的定時配置和同步失敗。"
+    }
+  }
+]

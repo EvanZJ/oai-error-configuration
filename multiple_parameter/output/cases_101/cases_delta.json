@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_101.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Port number 0 is invalid as it is out of the valid range for TCP/UDP ports (1-65535)."
+    }
+  },
+  {
+    "filename": "du_case_101.json",
+    "du": {
+      "modified_key": "gNBs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Port number 0 is invalid as it is out of the valid range for TCP/UDP ports (1-65535).",
+      "explanation_zh": "端口号0无效，因为它超出了TCP/UDP端口的有效范围（1-65535）。"
+    }
+  }
+]

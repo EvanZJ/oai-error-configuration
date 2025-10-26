@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_43.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid gNB ID format, causing gNB identification failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid gNB ID format, causing gNB identification failure.",
+      "explanation_zh": "無效的 gNB ID 格式，導致 gNB 識別失敗。"
+    }
+  }
+]

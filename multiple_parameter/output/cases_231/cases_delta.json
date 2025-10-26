@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_231.json",
+    "cu": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [110, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 to identical values will cause timing inconsistency in the front-haul configuration and prevent proper synchronization.",
+      "explanation_zh": "將 Ta4 設定為相同的值會導致前傳配置中的時序不一致，並阻止正確的同步。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local_n_address to the same IP as remote_n_address will cause F1 interface loopback and prevent proper DU-CU communication.",
+      "explanation_zh": "將 local_n_address 設定為與 remote_n_address 相同的 IP 會導致 F1 接口迴路，並阻止正確的 DU-CU 通信。"
+    }
+  }
+]

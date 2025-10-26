@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_295.json",
+    "cu": {
+        "modified_key": "gNBs.local_s_address",
+        "original_value": "127.0.0.5",
+        "error_value": "10.0.0.1",
+        "error_type": "logical_contradiction",
+        "explanation_en": "Setting the local S address to '10.0.0.1', which is in a different subnet from the expected loopback or local network, will cause unreachable routing and prevent F1 interface binding.",
+        "explanation_zh": "將本地 S 地址設定為 '10.0.0.1'，該地址位於與預期回環或本地網路不同的子網中，會導致無法到達的路由，並阻止 F1 介面綁定。"
+    },
+    "du": {
+        "modified_key": "MACRLCs[0].local_n_address",
+        "original_value": "127.0.0.3",
+        "error_value": "10.0.0.1",
+        "error_type": "logical_contradiction",
+        "explanation_en": "Setting the local N address to '10.0.0.1', which is in a different subnet, will cause unreachable routing and prevent F1-U interface connectivity.",
+        "explanation_zh": "將本地 N 地址設定為 '10.0.0.1'，該地址位於不同子網中，會導致無法到達的路由，並阻止 F1-U 介面連線。"
+    }
+  }
+]

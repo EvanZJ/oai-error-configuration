@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_16.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP data port to an invalid number (99999) will cause socket binding failures and prevent F1 data plane establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting the gNB name to an empty string will cause identification and logging issues in the DU configuration.",
+      "explanation_zh": "將 gNB 名稱設定為空字串會在 DU 配置中造成識別和記錄問題。"
+    }
+  }
+]

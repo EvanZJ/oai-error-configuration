@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_208.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Set global log level to unknown enum, causing CU logging configuration failure."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Set global log level to unknown enum, causing DU logging configuration failure."
+    }
+  }
+]

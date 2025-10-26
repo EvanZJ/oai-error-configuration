@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_63.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the S1U port to 0 is out of range for valid port numbers and will cause socket binding failure, preventing S1U interface communication."
+    },
+    "du": {
+      "modified_key": "rfsimulator.serverport",
+      "original_value": 4043,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the RF simulator server port to 0 is out of range for valid port numbers and will cause connection failure to the RF simulator.",
+      "explanation_zh": "將 RF 模擬器伺服器端口設定為 0 超出有效端口號範圍，會導致與 RF 模擬器的連接失敗。"
+    }
+  }
+]

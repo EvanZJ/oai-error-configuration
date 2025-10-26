@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_390.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "eight",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing Num_Threads_PUSCH from integer 8 to string \"eight\" will cause type validation failure in configuration parsing, leading to system initialization errors."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_n_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting tr_n_preference to an invalid enum 'invalid' will cause configuration validation failure, preventing proper F1 interface setup.",
+      "explanation_zh": "將 tr_n_preference 設定為無效的枚舉值 'invalid' 會導致配置驗證失敗，阻止正確的 F1 介面設定。"
+    }
+  }
+]

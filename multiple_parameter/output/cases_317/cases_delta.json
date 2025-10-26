@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_317.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation": "Setting local_s_portc to 0 (invalid port number) will cause F1-C interface binding failure and DU connection rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation": "Setting local_n_portc to 0 (invalid port) will cause F1-C interface binding failure and CU connection rejection."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_398.json",
+    "cu": {
+      "modified_key": "remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.70.133",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting remote DU address to IP in AMF subnet '192.168.70.133' causes routing conflicts and unreachable DU."
+    },
+    "du": {
+      "modified_key": "Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "timing misalignment",
+      "explanation_en": "Reversing Ta4 timing parameters to [180, 110] causes inconsistent front-haul timing and synchronization failures."
+    }
+  }
+]

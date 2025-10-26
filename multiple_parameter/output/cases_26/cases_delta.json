@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_26.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": "invalid",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting nr_cellid to a string 'invalid' instead of a number will cause data type validation errors, leading to configuration parsing failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": "invalid",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting nr_cellid to a string 'invalid' instead of a number will cause data type validation errors, leading to configuration parsing failures.",
+      "explanation_zh": "將 nr_cellid 設定為字串 'invalid' 而非數字會導致資料型別驗證錯誤，造成配置解析失敗。"
+    }
+  }
+]

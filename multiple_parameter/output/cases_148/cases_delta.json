@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_148.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local S address to unreachable IP causes routing contradiction and prevents F1 connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting PRACH message 1 frequency start to out-of-range value causes frequency misalignment and prevents RACH procedure."
+    }
+  }
+]

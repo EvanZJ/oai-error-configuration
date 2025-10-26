@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_50.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed tracking_area_code from 1 to 0, which is out of range for valid TAC values (must be between 1-65535), causing TAC configuration errors and preventing UE tracking area updates."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed tracking_area_code from 1 to 0, which is out of range for valid TAC values (must be between 1-65535), causing TAC configuration errors and preventing UE tracking area updates.",
+      "explanation_zh": "将tracking_area_code从1更改为0，这超出了有效TAC值的范围（必须在1-65535之间），导致TAC配置错误，从而阻止UE跟踪区域更新。"
+    }
+  }
+]

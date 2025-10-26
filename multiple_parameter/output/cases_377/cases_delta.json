@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_377.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting remote S address to an unreachable IP causes F1 connection failure, preventing DU communication and system initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 640008,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting SSB frequency equal to PointA causes frequency misalignment, leading to SSB transmission errors and UE cell search failure."
+    }
+  }
+]

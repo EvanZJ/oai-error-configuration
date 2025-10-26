@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_194.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_s_portc to 0 will cause SCTP connection failure as port 0 is invalid and cannot be used for network communication."
+    },
+    "du": {
+      "modified_key": "remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_n_portc to 0 will cause SCTP connection failure as port 0 is invalid and cannot be used for network communication.",
+      "explanation_zh": "將 remote_n_portc 設定為 0 會導致 SCTP 連接失敗，因為端口 0 無效，無法用於網路通訊。"
+    }
+  }
+]

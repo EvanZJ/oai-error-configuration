@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_121.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the AMF IP address to an unreachable IP will cause routing failures and prevent CU-AMF communication."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [0, 0],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting T1a_cp_dl to [0, 0] causes timing misalignment in downlink compression, leading to synchronization failures and data transmission errors.",
+      "explanation_zh": "將 T1a_cp_dl 設定為 [0, 0] 會導致下行壓縮中的時序錯位，造成同步失敗和數據傳輸錯誤。"
+    }
+  }
+]

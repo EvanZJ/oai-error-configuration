@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_309.json",
+    "cu": {
+      "modified_key": "remote_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP data port to 0 (invalid port) will cause F1 data plane connection failure and prevent DU-CU data communication."
+    },
+    "du": {
+      "modified_key": "local_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local N data port to 0 (invalid port) will cause F1 data plane binding failure and prevent DU-CU data communication."
+    }
+  }
+]

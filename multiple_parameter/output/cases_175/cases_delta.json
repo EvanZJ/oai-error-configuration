@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_175.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the GNB IPv4 address for NG AMF to an unreachable IP '10.0.0.1' will cause routing failure and prevent proper connection to the AMF."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting PRACH message 1 frequency start to -1 (out of range) will cause frequency misalignment and lead to PRACH configuration failure.",
+      "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為 -1（超出範圍）會導致頻率錯位，並造成 PRACH 配置失敗。"
+    }
+  }
+]

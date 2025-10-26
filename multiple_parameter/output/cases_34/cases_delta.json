@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_34.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.8.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid IP address format with octet value exceeding 255, causing unreachable NGU interface routing."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_frequencyBand",
+      "original_value": 78,
+      "error_value": 79,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Mismatched frequency bands between DL (78) and UL (79), causing frequency misalignment and potential system faults.",
+      "explanation_zh": "上下行頻率帶不匹配（DL 為 78，UL 為 79），導致頻率錯位並可能引起系統故障。"
+    }
+  }
+]

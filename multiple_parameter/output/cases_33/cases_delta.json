@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_33.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting tracking_area_code to an out-of-range value 99999 will cause TAC validation errors, leading to configuration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting tracking_area_code to an out-of-range value 99999 will cause TAC validation errors, leading to configuration rejection.",
+      "explanation_zh": "將 tracking_area_code 設定為超出範圍的值 99999 會導致 TAC 驗證錯誤，造成配置拒絕。"
+    }
+  }
+]

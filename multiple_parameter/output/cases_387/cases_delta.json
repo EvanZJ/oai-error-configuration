@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_387.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting amf_ip_address.ipv4 to '192.168.8.43' creates an IP conflict with GNB_IPV4_ADDRESS_FOR_NG_AMF, causing address collision and network interface binding failures."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 640000,
+      "error_type": "frequency_misalignment",
+      "explanation_en": "Changing absoluteFrequencySSB from 641280 to 640000 causes frequency misalignment, leading to SSB transmission issues and potential cell search failures due to incorrect frequency positioning.",
+      "explanation_zh": "將 absoluteFrequencySSB 從 641280 更改為 640000 會導致頻率錯位，造成 SSB 傳輸問題，並由於頻率定位不正確而可能導致小區搜尋失敗。"
+    }
+  }
+]

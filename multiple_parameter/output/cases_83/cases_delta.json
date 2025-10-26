@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_83.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "NG-U interface IP changed to 10.0.0.1, which is unreachable and causes UPF connection failures."
+    }
+  },
+  {
+    "filename": "du_case_83.json",
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_gnb_id",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing gNB_ID from a valid hexadecimal string to an invalid string, which should be a hexadecimal value, causing parsing or validation errors.",
+      "explanation_zh": "将 gNB_ID 从有效的十六进制字符串更改为无效字符串，应为十六进制值，导致解析或验证错误。"
+    }
+  }
+]

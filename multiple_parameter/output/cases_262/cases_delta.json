@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_262.json",
+    "cu": {
+      "modified_key": "Num_Threads_PDSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Num_Threads_PDSCH changed from 8 to 0, which is below the valid range, causing PDSCH processing thread allocation failures and downlink data handling issues.",
+      "explanation_zh": "Num_Threads_PDSCH 从 8 更改为 0，低于有效范围，导致 PDSCH 处理线程分配失败和下行数据处理问题。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "remote_n_portc changed from 501 to 0, which is below the valid port range, causing F1 control plane interface binding failures and preventing DU-CU communication.",
+      "explanation_zh": "remote_n_portc 从 501 更改为 0，低于有效端口范围，导致 F1 控制平面接口绑定失败，阻止 DU-CU 通信。"
+    }
+  }
+]

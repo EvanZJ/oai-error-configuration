@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_110.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote SCTP address to an unreachable IP '10.0.0.1' will cause routing failures, preventing the CU from establishing F1 connection to the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the downlink absolute frequency point A to 0 (invalid value) will cause frequency misalignment, resulting in downlink carrier setup failure and cell initialization errors.",
+      "explanation_zh": "將下行鏈路絕對頻率點 A 設定為 0（無效值）會導致頻率錯位，造成下行鏈路載波設定失敗和細胞初始化錯誤。"
+    }
+  }
+]

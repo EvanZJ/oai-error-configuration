@@ -1,0 +1,28 @@
+[
+  {
+    "filename": "cu_case_385.json",
+    "cu_modifications": [
+      {
+        "original_value": "127.0.0.3",
+        "error_value": "10.0.0.1",
+        "error_type": "unreachable_elements",
+        "explanation": "Setting remote_s_address to an unreachable IP '10.0.0.1' will cause connection failure in the front-haul interface, preventing proper communication between CU and DU.",
+        "explanation_zh": "將 remote_s_address 設定為無法連線的 IP '10.0.0.1' 會導致前傳介面的連線失敗，阻止 CU 和 DU 之間的正常通訊。"
+      }
+    ],
+    "du_modifications": []
+  },
+  {
+    "filename": "du_case_385.json",
+    "cu_modifications": [],
+    "du_modifications": [
+      {
+        "original_value": 641280,
+        "error_value": 640008,
+        "error_type": "frequency_misalignment",
+        "explanation": "Changing absoluteFrequencySSB from 641280 to 640008 causes frequency misalignment, leading to synchronization issues in the SSB transmission and potential cell search failures.",
+        "explanation_zh": "將 absoluteFrequencySSB 從 641280 更改為 640008 會導致頻率錯位，造成 SSB 傳輸中的同步問題，並可能導致小區搜尋失敗。"
+      }
+    ]
+  }
+]

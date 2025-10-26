@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_411.json",
+      "cu": "amf_ip_address.ipv4",
+      "original": "192.168.70.132",
+      "error": "172.16.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Unreachable IP address in different subnet causing routing failure."
+    },
+    {
+      "filename": "du_case_411.json",
+      "du": "T1a_cp_dl",
+      "original": [285, 429],
+      "error": [429, 285],
+      "error_type": "timing misalignment",
+      "explanation": "Inconsistent T1a_cp_dl timing parameters causing timing misalignment."
+    }
+  ]

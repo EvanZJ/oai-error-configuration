@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_176.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the AMF IP address to an unreachable IP '10.0.0.1' will cause routing failure and prevent proper AMF connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+      "original_value": 6,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting DL-UL transmission periodicity to 0 (out of range) will cause timing misalignment and lead to transmission scheduling failure.",
+      "explanation_zh": "將 DL-UL 傳輸週期設定為 0（超出範圍）會導致時序錯位，並造成傳輸排程失敗。"
+    }
+  }
+]

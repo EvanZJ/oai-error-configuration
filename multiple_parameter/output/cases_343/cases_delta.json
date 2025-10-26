@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_343.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 0 will cause S1-U port binding failure and prevent NG-U connectivity."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_n_portd to 0 will cause F1-U local port binding failure and prevent F1 interface setup."
+    }
+  }
+]

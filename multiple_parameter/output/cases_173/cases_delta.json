@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_173.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local SCTP control port to 0 causes invalid port number, leading to F1 interface connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting tracking area code to 0 causes invalid TAC, leading to tracking area configuration rejection and mobility issues.",
+      "explanation_zh": "將追蹤區域代碼設定為 0 會導致無效的 TAC，造成追蹤區域配置被拒絕和移動性問題。"
+    }
+  }
+]

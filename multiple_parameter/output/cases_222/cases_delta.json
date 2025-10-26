@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_222.json",
+    "cu": {
+      "modified_key": "sst",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the SST from integer to string 'one' violates the expected data type, causing configuration parsing failures."
+    },
+    "du": {
+      "modified_key": "sd",
+      "original_value": "0x010203",
+      "error_value": 123,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the SD from string to integer 123 violates the expected data type, causing configuration parsing failures."
+    }
+  }
+]

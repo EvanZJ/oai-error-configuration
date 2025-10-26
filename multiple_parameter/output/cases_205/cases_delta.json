@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_205.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Set ASN.1 verbosity to unknown enum, causing configuration validation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong_type",
+      "explanation_en": "Changed MIMO layers from integer to string, causing PHY configuration parsing error."
+    }
+  }
+]

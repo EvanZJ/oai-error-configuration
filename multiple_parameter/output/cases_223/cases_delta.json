@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_223.json",
+    "cu": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc_length",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting MNC length to 0, which is below the minimum valid value (2), will cause PLMN configuration validation failure and prevent network attachment.",
+      "explanation_zh": "將 MNC 長度設定為 0，低於最小有效值 (2)，會導致 PLMN 配置驗證失敗，並阻止網路連接。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc_length",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting MNC length to 0, which is below the minimum valid value (2), will cause PLMN configuration validation failure and prevent network attachment.",
+      "explanation_zh": "將 MNC 長度設定為 0，低於最小有效值 (2)，會導致 PLMN 配置驗證失敗，並阻止網路連接。"
+    }
+  }
+]

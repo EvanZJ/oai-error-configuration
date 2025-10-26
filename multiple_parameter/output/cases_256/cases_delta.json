@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_256.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_PORT_FOR_X2U",
+      "original_value": 36422,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "GNB_PORT_FOR_X2U changed from 36422 to 0, which is below the valid port range, causing X2-U interface binding failures and preventing CU-DU communication.",
+      "explanation_zh": "GNB_PORT_FOR_X2U 从 36422 更改为 0，低于有效端口范围，导致 X2-U 接口绑定失败，阻止 CU-DU 通信。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "dl_frequencyBand changed from 78 to 0, which is an invalid frequency band, causing SSB and PRACH frequency misalignment and cell configuration rejection.",
+      "explanation_zh": "dl_frequencyBand 从 78 更改为 0，这是无效的频段，导致 SSB 和 PRACH 频率错位和小区配置拒绝。"
+    }
+  }
+]

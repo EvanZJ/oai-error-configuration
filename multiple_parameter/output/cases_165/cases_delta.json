@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_165.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting remote SCTP address to an unreachable IP causes wrong routing, preventing F1 interface connection to DU and causing setup failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4[0]",
+      "original_value": 110,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Ta4 timing parameter to 0 causes timing misalignment in front-haul configuration, leading to synchronization issues and data transmission failures.",
+      "explanation_zh": "將 Ta4 定時參數設定為 0 會導致前傳配置中的定時錯位，造成同步問題和數據傳輸失敗。"
+    }
+  }
+]

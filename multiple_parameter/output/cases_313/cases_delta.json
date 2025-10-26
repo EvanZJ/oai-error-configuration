@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_313.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "127.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Setting amf_ip_address.ipv4 to loopback '127.0.0.1' will make AMF unreachable, causing NG interface connection failure and system rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 1282560,
+      "error_type": "frequency misalignment",
+      "explanation": "Setting absoluteFrequencySSB to 1282560 (mismatched for band 78) will cause SSB frequency misalignment and cell synchronization failure."
+    }
+  }
+]

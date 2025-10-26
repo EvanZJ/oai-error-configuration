@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_171.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting tracking area code to 0 causes invalid TAC, leading to tracking area configuration rejection and mobility issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pucchGroupHopping",
+      "original_value": 0,
+      "error_value": 5,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting PUCCH group hopping to unknown value 5 causes configuration validation failure and cell setup issues.",
+      "explanation_zh": "將 PUCCH 群組跳頻設定為未知值 5 會導致配置驗證失敗和小區設定問題。"
+    }
+  }
+]

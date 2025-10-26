@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_237.json",
+    "cu": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [196, 96],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changed T1a_up from [96,196] to [196,96] to simulate timing misalignment where the upper bound is less than the lower bound, causing logical contradiction in timing parameters."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.2",
+      "error_type": "invalid_format",
+      "explanation_en": "Changed remote_n_address from \"127.0.0.5\" to \"10.0.0.2\" to simulate unreachable routing definitions, causing IP range conflict and DU inability to reach CU.",
+      "explanation_zh": "将 remote_n_address 从 \"127.0.0.5\" 更改为 \"10.0.0.2\" 以模拟不可达的路由定义，导致 IP 范围冲突和 DU 无法到达 CU。"
+    }
+  }
+]

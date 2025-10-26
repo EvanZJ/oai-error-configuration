@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_19.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the remote SCTP address to an unreachable IP (10.0.0.1) will cause F1 connection establishment failures."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": 1,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the global log level from a string to a number will cause type validation errors during DU configuration parsing.",
+      "explanation_zh": "將全域日誌級別從字串改為數字會在 DU 配置解析期間造成類型驗證錯誤。"
+    }
+  }
+]

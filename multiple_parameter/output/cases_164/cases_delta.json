@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_164.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.43",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting AMF IP to the same as CU's IP causes IP range conflict, making AMF unreachable and preventing NG interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting downlink frequency band to 0 (invalid) causes frequency misalignment, leading to cell configuration failure and inability to transmit on correct band.",
+      "explanation_zh": "將下行頻率帶設定為 0（無效）會導致頻率錯位，造成小區配置失敗，無法在正確的頻帶上傳輸。"
+    }
+  }
+]

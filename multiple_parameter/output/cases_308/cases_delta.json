@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_308.json",
+    "cu": {
+      "modified_key": "GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the NGU interface IP to an unreachable address '10.0.0.1' will cause connection failure to the UPF and NGU interface setup errors."
+    },
+    "du": {
+      "modified_key": "remote_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote N data port to 0 (invalid port) will cause F1 data plane connection failure and prevent DU-CU data communication."
+    }
+  }
+]

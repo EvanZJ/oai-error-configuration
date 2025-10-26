@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_220.json",
+    "cu": {
+      "modified_key": "mnc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MNC to 0 is invalid as MNC values must be between 00 and 999, causing PLMN identification and network selection failures."
+    },
+    "du": {
+      "modified_key": "mnc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MNC to 0 is invalid as MNC values must be between 00 and 999, causing PLMN identification and network selection failures."
+    }
+  }
+]

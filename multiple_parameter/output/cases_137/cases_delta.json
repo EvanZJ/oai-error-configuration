@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_137.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP in streams to 0 causes invalid SCTP configuration in CU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP out streams to 0 causes invalid SCTP configuration in DU.",
+      "explanation_zh": "將 SCTP 輸出流設定為 0 會導致 DU 中無效的 SCTP 配置。"
+    }
+  }
+]

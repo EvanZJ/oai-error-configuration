@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_123.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local S port C to 0 causes port binding failures and prevents SCTP connections."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting DL absolute frequency point A to 0 causes frequency misalignment, leading to cell configuration and synchronization failures.",
+      "explanation_zh": "將 DL 絕對頻率點 A 設定為 0 會導致頻率錯位，造成小區配置和同步失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_195.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portd to 0 will cause SCTP connection failure as port 0 is invalid and cannot be used for network communication."
+    },
+    "du": {
+      "modified_key": "local_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_n_portd to 0 will cause SCTP connection failure as port 0 is invalid and cannot be used for network communication.",
+      "explanation_zh": "將 local_n_portd 設定為 0 會導致 SCTP 連接失敗，因為端口 0 無效，無法用於網路通訊。"
+    }
+  }
+]

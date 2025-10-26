@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_362.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting MNC length to 3 for a 1-digit MNC creates a logical contradiction in PLMN configuration."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_n_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting transport N preference to an unknown enum value will cause configuration validation errors.",
+      "explanation_zh": "將傳輸 N 偏好設定為未知枚舉值會導致配置驗證錯誤。"
+    }
+  }
+]

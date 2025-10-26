@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_98.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "IP address conflicts with local interface address, causing routing issues and unreachable AMF."
+    }
+  },
+  {
+    "filename": "du_case_98.json",
+    "du": {
+      "modified_key": "gNBs[0].NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "IP address conflicts with local interface address, causing routing issues and unreachable AMF.",
+      "explanation_zh": "IP地址与本地接口地址冲突，导致路由问题和无法到达AMF。"
+    }
+  }
+]

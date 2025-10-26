@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_412.json",
+      "cu": "local_s_address",
+      "original": "127.0.0.5",
+      "error": "192.168.8.43",
+      "error_type": "IP range conflicts",
+      "explanation": "Conflicting IP address with NETWORK_INTERFACES addresses causing IP range conflicts."
+    },
+    {
+      "filename": "du_case_412.json",
+      "du": "local_n_address",
+      "original": "127.0.0.3",
+      "error": "127.0.0.5",
+      "error_type": "IP range conflicts",
+      "explanation": "Conflicting IP address with remote_n_address causing IP range conflicts."
+    }
+  ]

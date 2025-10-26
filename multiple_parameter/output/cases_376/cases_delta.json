@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_376.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting AMF IP to the same as GNB interface IP causes address conflict, preventing AMF connection and NG interface setup failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [110, 110],
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting identical Ta4 timing values causes front-haul timing inconsistency, leading to synchronization errors and RU communication failure."
+    }
+  }
+]

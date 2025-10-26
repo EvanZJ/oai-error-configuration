@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_405.json",
+    "cu": {
+      "modified_key": "remote_s_portc",
+      "original_value": 500,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote CU port to 70000 exceeds valid port range, causing socket connection failures."
+    },
+    "du": {
+      "modified_key": "remote_n_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote DU port to 70000 exceeds valid port range, causing socket connection failures."
+    }
+  }
+]

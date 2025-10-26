@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_226.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.70.133",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NGU to the same IP as GNB_IPV4_ADDRESS_FOR_NG_AMF will cause IP address conflict and prevent NG-U interface establishment.",
+      "explanation_zh": "將 GNB_IPV4_ADDRESS_FOR_NGU 設定為與 GNB_IPV4_ADDRESS_FOR_NG_AMF 相同的 IP 會導致 IP 地址衝突，並阻止 NG-U 接口建立。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting remote_n_address to the same IP as local_n_address will cause F1 interface loopback and prevent proper DU-CU communication.",
+      "explanation_zh": "將 remote_n_address 設定為與 local_n_address 相同的 IP 會導致 F1 接口迴路，並阻止正確的 DU-CU 通信。"
+    }
+  }
+]

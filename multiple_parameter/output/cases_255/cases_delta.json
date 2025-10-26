@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_255.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_X2U",
+      "original_value": "192.168.70.135",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "GNB_IPV4_ADDRESS_FOR_X2U changed from '192.168.70.135' to '10.0.0.1', which is in a different subnet and unreachable, causing X2-U interface routing failures and preventing proper CU-DU communication.",
+      "explanation_zh": "GNB_IPV4_ADDRESS_FOR_X2U 从 '192.168.70.135' 更改为 '10.0.0.1'，该地址位于不同子网且不可达，导致 X2-U 接口路由失败，阻止正确的 CU-DU 通信。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [0, 180],
+      "error_type": "out_of_range",
+      "explanation_en": "Ta4 changed from [110, 180] to [0, 180], where 0 is below the valid range for timing advance, causing Tadv/T2a misalignment and front-haul synchronization failures.",
+      "explanation_zh": "Ta4 从 [110, 180] 更改为 [0, 180]，其中 0 低于定时提前有效范围，导致 Tadv/T2a 错位和前传同步失败。"
+    }
+  }
+]

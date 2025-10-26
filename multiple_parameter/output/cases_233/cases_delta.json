@@ -1,0 +1,36 @@
+[
+  {
+    "filename": "cu_case_233.json",
+    "cu_modifications": [
+      {
+        "original_value": 8,
+        "error_value": "eight",
+        "error_type": "wrong_type",
+        "explanation": "Changed Num_Threads_PDSCH from integer 8 to string \"eight\" to simulate wrong_type error. This would cause type validation failure in configuration parsing.",
+        "explanation_zh": "将 Num_Threads_PDSCH 从整数 8 更改为字符串 \"eight\" 以模拟 wrong_type 错误。这会导致配置解析中的类型验证失败。"
+      }
+    ],
+    "du_modifications": [
+      {
+        "original_value": [96, 196],
+        "error_value": [196, 96],
+        "error_type": "logical_contradiction",
+        "explanation": "Changed T1a_up from [96,196] to [196,96] to simulate timing misalignment where the upper bound is less than the lower bound, causing logical contradiction in timing parameters.",
+        "explanation_zh": "将 T1a_up 从 [96,196] 更改为 [196,96] 以模拟时序错位，其中上限小于下限，导致时序参数中的逻辑矛盾。"
+      }
+    ]
+  },
+  {
+    "filename": "du_case_233.json",
+    "cu_modifications": [],
+    "du_modifications": [
+      {
+        "original_value": [96, 196],
+        "error_value": [196, 96],
+        "error_type": "logical_contradiction",
+        "explanation": "Changed T1a_up from [96,196] to [196,96] to simulate timing misalignment where the upper bound is less than the lower bound, causing logical contradiction in timing parameters.",
+        "explanation_zh": "将 T1a_up 从 [96,196] 更改为 [196,96] 以模拟时序错位，其中上限小于下限，导致时序参数中的逻辑矛盾。"
+      }
+    ]
+  }
+]

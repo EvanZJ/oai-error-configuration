@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_166.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 3840,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing gNB_ID from string to number causes type mismatch, leading to JSON parsing errors or configuration rejection by the system."
+    },
+    "du": {
+      "modified_key": "gNBs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting remote N address to an unreachable IP causes wrong routing, preventing F1-U connection to CU and causing interface setup failure.",
+      "explanation_zh": "將遠端 N 地址設定為無法到達的 IP 會導致路由錯誤，防止 F1-U 連接到 CU，並造成介面設定失敗。"
+    }
+  }
+]

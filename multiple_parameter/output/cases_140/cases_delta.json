@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_140.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB ID to invalid string causes configuration parsing failure in CU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB ID to invalid string causes configuration parsing failure in DU.",
+      "explanation_zh": "將 gNB ID 設定為無效字串會導致 DU 中配置解析失敗。"
+    }
+  }
+]

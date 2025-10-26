@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_215.json",
+    "cu": {
+      "modified_key": "tracking_area_code",
+      "original_value": 1,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the tracking area code to 65536 exceeds the maximum allowed value of 65535, causing mobility and handover failures."
+    },
+    "du": {
+      "modified_key": "T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Reversing the T1a_cp_dl timing parameters creates an inconsistency, leading to fronthaul timing misalignment and data transmission errors."
+    }
+  }
+]

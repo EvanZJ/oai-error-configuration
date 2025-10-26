@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_47.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed SCTP_INSTREAMS from 2 to 0, which is out of range for valid SCTP stream counts (must be at least 1), causing SCTP association failure and preventing F1 connection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+      "original_value": 285,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed T1a_cp_dl[0] from 285 to 0, which is out of range for valid timing parameters (must be positive), causing timing misalignment in downlink compression that disrupts front-haul synchronization.",
+      "explanation_zh": "将T1a_cp_dl[0]从285更改为0，这超出了有效定时参数的范围（必须为正数），导致下行链路压缩中的定时错位，从而破坏前传同步。"
+    }
+  }
+]

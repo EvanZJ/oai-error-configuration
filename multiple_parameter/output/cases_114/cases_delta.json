@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_114.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP control port to 0 (invalid port) will cause SCTP socket connection failure, preventing F1-C connection establishment between CU and DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote N control port to 0 (invalid port) will cause SCTP socket connection failure, preventing F1-C connection establishment between DU and CU.",
+      "explanation_zh": "將遠端 N 控制端口設定為 0（無效端口）會導致 SCTP 套接字連接失敗，防止 DU 與 CU 之間建立 F1-C 連接。"
+    }
+  }
+]

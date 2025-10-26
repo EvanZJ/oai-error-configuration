@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_257.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_PORT_FOR_X2C",
+      "original_value": 36422,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "GNB_PORT_FOR_X2C changed from 36422 to 70000, which exceeds the valid port range, causing X2-C interface binding failures and preventing CU-DU communication.",
+      "explanation_zh": "GNB_PORT_FOR_X2C 从 36422 更改为 70000，超过有效端口范围，导致 X2-C 接口绑定失败，阻止 CU-DU 通信。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "absoluteFrequencySSB changed from 641280 to 0, which is below the valid frequency range, causing SSB frequency misalignment and cell synchronization failures.",
+      "explanation_zh": "absoluteFrequencySSB 从 641280 更改为 0，低于有效频率范围，导致 SSB 频率错位和小区同步失败。"
+    }
+  }
+]

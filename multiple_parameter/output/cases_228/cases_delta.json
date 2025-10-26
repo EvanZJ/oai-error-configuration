@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_228.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_X2C",
+      "original_value": "192.168.70.134",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_X2C to the same IP as GNB_IPV4_ADDRESS_FOR_NG_AMF will cause IP address conflict and prevent X2-C interface establishment.",
+      "explanation_zh": "將 GNB_IPV4_ADDRESS_FOR_X2C 設定為與 GNB_IPV4_ADDRESS_FOR_NG_AMF 相同的 IP 會導致 IP 地址衝突，並阻止 X2-C 接口建立。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting dl_absoluteFrequencyPointA to the same value as absoluteFrequencySSB will cause frequency misalignment and prevent proper carrier configuration.",
+      "explanation_zh": "將 dl_absoluteFrequencyPointA 設定為與 absoluteFrequencySSB 相同的值會導致頻率錯位，並阻止正確的載波配置。"
+    }
+  }
+]

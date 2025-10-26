@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_84.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Remote SCTP address changed to 10.0.0.1, which is unreachable and causes F1 interface connection failures."
+    }
+  },
+  {
+    "filename": "du_case_84.json",
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting gNB_name to an empty string, which is invalid as it requires a non-empty name for identification.",
+      "explanation_zh": "将 gNB_name 设置为空字符串，这是无效的，因为它需要非空名称进行标识。"
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "cu_case_241.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_PORT_FOR_X2C",
+      "original_value": 36422,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "GNB_PORT_FOR_X2C changed from 36422 to 0, which is out of valid port range (1-65535). This simulates an invalid port configuration that would cause connection failures in X2-C interface.",
+      "explanation_zh": "GNB_PORT_FOR_X2C 从 36422 更改为 0，超出有效端口范围 (1-65535)。这模拟了 X2-C 接口中会导致连接失败的无效端口配置。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": -1000,
+      "error_type": "out_of_range",
+      "explanation_en": "pMax changed from 20 to -1000, which is far below the valid range for maximum transmit power. This simulates an invalid power configuration that would cause transmission failures.",
+      "explanation_zh": "pMax 从 20 更改为 -1000，远低于最大发射功率的有效范围。这模拟了会导致发射失败的无效功率配置。"
+    }
+  }
+]

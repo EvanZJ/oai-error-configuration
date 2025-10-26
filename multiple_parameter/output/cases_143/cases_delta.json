@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_143.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting AMF IP to unreachable address causes routing failure and prevents CU-AMF connection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [0, 0],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting T1a_cp_dl to zero values causes timing misalignment and disrupts front-haul synchronization."
+    }
+  }
+]

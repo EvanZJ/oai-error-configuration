@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_277.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the AMF IP to an unreachable address will cause NG interface connection failure and prevent AMF communication."
+    },
+    "du": {
+      "modified_key": "Ta4",
+      "original_value": [110, 180],
+      "error_value": [0, 0],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 to [0, 0] creates an invalid timing range where the values are equal and zero, causing front-haul timing misalignment and synchronization errors.",
+      "explanation_zh": "將 Ta4 設定為 [0, 0] 會創建無效的定時範圍，其中值相等且為零，導致前傳定時錯位和同步錯誤。"
+    }
+  }
+]

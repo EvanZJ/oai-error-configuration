@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_192.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 0 will cause connection failure as port 0 is invalid and cannot be used for network communication."
+    },
+    "du": {
+      "modified_key": "NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 0 will cause connection failure as port 0 is invalid and cannot be used for network communication.",
+      "explanation_zh": "將 GNB_PORT_FOR_S1U 設定為 0 會導致連接失敗，因為端口 0 無效，無法用於網路通訊。"
+    }
+  }
+]

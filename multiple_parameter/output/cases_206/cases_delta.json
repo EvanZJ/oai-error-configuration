@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_206.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Set AMF IP to null, causing undefined AMF address and connection failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Set local F1 IP to null, causing undefined local address and interface binding failure."
+    }
+  }
+]

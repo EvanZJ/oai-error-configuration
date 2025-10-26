@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_219.json",
+    "cu": {
+      "modified_key": "mcc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MCC to 0 is invalid as MCC values must be between 001 and 999, causing PLMN identification and network selection failures."
+    },
+    "du": {
+      "modified_key": "mcc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MCC to 0 is invalid as MCC values must be between 001 and 999, causing PLMN identification and network selection failures."
+    }
+  }
+]

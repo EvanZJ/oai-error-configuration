@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_230.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_X2U",
+      "original_value": "192.168.70.135",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_X2U to the same IP as GNB_IPV4_ADDRESS_FOR_NG_AMF will cause IP address conflict and prevent X2-U interface establishment.",
+      "explanation_zh": "將 GNB_IPV4_ADDRESS_FOR_X2U 設定為與 GNB_IPV4_ADDRESS_FOR_NG_AMF 相同的 IP 會導致 IP 地址衝突，並阻止 X2-U 接口建立。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting prach_msg1_FrequencyStart to -1, which is below the valid range (0 or positive), will cause PRACH frequency configuration failure and prevent random access.",
+      "explanation_zh": "將 prach_msg1_FrequencyStart 設定為 -1，低於有效範圍 (0 或正數)，會導致 PRACH 頻率配置失敗，並阻止隨機接入。"
+    }
+  }
+]

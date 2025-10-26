@@ -1,0 +1,80 @@
+{
+    "Active_gNBs": ["gNB-Eurecom-DU"],
+    "Asn1_verbosity": "none",
+    "gNBs": [
+      {
+        "gNB_ID": "0xe00",
+        "gNB_name": "gNB-Eurecom-DU",
+        "tracking_area_code": 1,
+        "plmn_list": [
+          {
+            "mcc": 1,
+            "mnc": 0,
+            "mnc_length": 2,
+            "snssaiList": [
+              {
+                "sst": 1
+              }
+            ]
+          }
+        ],
+        "nr_cellid": 1,
+        "tr_s_preference": "f1",
+        "servingCellConfigCommon": [
+          {
+            "dl_absoluteFrequencyPointA": 640000,
+            "dl_frequencyBand": 78,
+            "ul_frequencyBand": 78,
+            "prach_msg1_FrequencyStart": 0,
+            "ssb_periodicityServingCell": 20,
+            "nrofDownlinkSlots": 80,
+            "maxMIMO_layers": 1
+          }
+        ],
+        "SCTP": {
+          "SCTP_INSTREAMS": 2,
+          "SCTP_OUTSTREAMS": 2
+        }
+      }
+    ],
+    "MACRLCs": [
+      {
+        "local_n_address": "127.0.0.3",
+        "remote_n_address": "127.0.0.5",
+        "local_n_portc": 500,
+        "local_n_portd": 2152,
+        "remote_n_portc": 501,
+        "remote_n_portd": 2152,
+        "tr_s_preference": "f1"
+      }
+    ],
+    "RUs": [
+      {
+        "ru_thread_core": 0,
+        "nb_tx": 1,
+        "ru_band": 78
+      }
+    ],
+    "log_config": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info",
+      "rlc_log_level": "info",
+      "pdcp_log_level": "info",
+      "rrc_log_level": "info",
+      "f1ap_log_level": "info"
+    },
+    "fhi_72": {
+      "fh_config": [
+        {
+          "T1a_cp_dl": [500, 500],
+          "T1a_cp_ul": [500, 500],
+          "Ta4": 310
+        }
+      ]
+    },
+    "rfsimulator": {
+      "serveraddr": "127.0.0.1"
+    }
+  }

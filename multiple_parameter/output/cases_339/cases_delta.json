@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_339.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portc to 0 will cause F1-C port binding failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [196, 96],
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting T1a_up to inconsistent timing values will cause front-haul uplink timing misalignment and data transmission errors."
+    }
+  }
+]

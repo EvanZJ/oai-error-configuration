@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_324.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting AMF IP to unreachable subnet '10.0.0.1' will cause NG interface connection failure and registration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "T1a_cp_dl timing parameter has inconsistent range [429, 285] where min > max, causing front-haul synchronization failure.",
+      "explanation_zh": "T1a_cp_dl 定時參數具有不一致的範圍 [429, 285]，其中最小值 > 最大值，導致前傳同步失敗。"
+    }
+  }
+]

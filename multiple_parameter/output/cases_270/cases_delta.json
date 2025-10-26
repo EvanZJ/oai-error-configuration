@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "cu_case_270.json",
+    "cu_modifications": [
+      {
+        "modified_key": "gNBs.remote_s_portc",
+        "original_value": 500,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation": "Setting remote_s_portc to 0, which is below the valid port range (1-65535), will cause F1 control plane socket connection failure and prevent DU-CU communication.",
+        "explanation_zh": "將 remote_s_portc 設定為 0，低於有效端口範圍 (1-65535)，會導致 F1 控制平面套接字連接失敗，並阻止 DU-CU 通信。"
+      }
+    ],
+    "du_modifications": []
+  },
+  {
+    "filename": "du_case_270.json",
+    "cu_modifications": [],
+    "du_modifications": [
+      {
+        "modified_key": "MACRLCs[0].remote_n_portc",
+        "original_value": 501,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation": "Setting remote_n_portc to 0, which is below the valid port range (1-65535), will cause F1 control plane socket connection failure and prevent CU-DU communication.",
+        "explanation_zh": "將 remote_n_portc 設定為 0，低於有效端口範圍 (1-65535)，會導致 F1 控制平面套接字連接失敗，並阻止 CU-DU 通信。"
+      }
+    ]
+  }
+]

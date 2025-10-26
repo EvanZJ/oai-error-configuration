@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_99.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Unreachable IP address for DU connection, causing routing failure."
+    }
+  },
+  {
+    "filename": "du_case_99.json",
+    "du": {
+      "modified_key": "gNBs[0].remote_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Unreachable IP address for CU connection, causing routing failure.",
+      "explanation_zh": "无法到达的IP地址用于CU连接，导致路由失败。"
+    }
+  }
+]

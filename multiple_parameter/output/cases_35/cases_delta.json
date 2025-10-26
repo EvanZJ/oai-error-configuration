@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_35.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Invalid port number 0, causing F1 interface binding failure and unreachable DU connection."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Zero transmit antennas, causing downlink transmission failure and system faults.",
+      "explanation_zh": "零個發射天線，導致下行鏈路傳輸失敗並引起系統故障。"
+    }
+  }
+]

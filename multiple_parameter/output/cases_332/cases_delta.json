@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_332.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local SCTP control port to 0 (invalid port) will cause F1 interface binding failure and connection issues."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local N control port to 0 (invalid port) will cause F1 interface binding failure and connection issues.",
+      "explanation_zh": "將本地 N 控制端口設定為 0（無效端口）將導致 F1 介面綁定失敗和連線問題。"
+    }
+  }
+]

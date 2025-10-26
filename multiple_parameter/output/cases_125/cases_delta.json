@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_125.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP out-streams to 0 causes SCTP association failures and prevents proper communication setup."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [0, 0],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting T1a_up to [0, 0] causes timing misalignment in uplink front-haul, leading to synchronization failures and data transmission errors.",
+      "explanation_zh": "將 T1a_up 設定為 [0, 0] 會導致上行前傳中的時序錯位，造成同步失敗和數據傳輸錯誤。"
+    }
+  }
+]

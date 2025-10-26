@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_407.json",
+      "cu": "amf_ip_address.ipv4",
+      "original": "192.168.70.132",
+      "error": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Unreachable IP address in different subnet causing routing failure."
+    },
+    {
+      "filename": "du_case_407.json",
+      "du": "absoluteFrequencySSB",
+      "original": 641280,
+      "error": 640008,
+      "error_type": "frequency misalignment",
+      "explanation": "Mismatched SSB frequency causing frequency misalignment with dl_absoluteFrequencyPointA."
+    }
+  ]

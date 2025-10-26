@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_07.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.3",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote S address to an unreachable subnet (10.0.0.3) will prevent the CU from connecting to the DU, causing F1 interface failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "invalid.local",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local N address to an invalid format 'invalid.local' will cause IP parsing errors and prevent network binding.",
+      "explanation_zh": "將本地 N 地址設定為無效格式 'invalid.local' 會導致 IP 解析錯誤，並阻止網路綁定。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_204.json",
+    "cu": {
+      "modified_key": "local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Set F1 control port to invalid value (>65535), causing socket binding failure and DU unreachable."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Changed local F1 IP to different subnet, causing routing failure and CU unreachable."
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_40.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Invalid transport preference, causing F1 interface setup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Invalid transport preference, causing F1 interface setup failure.",
+      "explanation_zh": "無效的傳輸偏好設定，導致 F1 介面設定失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_05.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "invalid.ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format 'invalid.ip' will cause IP parsing errors and connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 0,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting nrofDownlinkSlots to 0 creates a logical contradiction by disabling all downlink transmission, preventing cell operation.",
+      "explanation_zh": "將 nrofDownlinkSlots 設定為 0 會產生邏輯矛盾，因為它禁用了所有下行鏈路傳輸，阻止細胞運作。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_348.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting AMF IP to invalid format '192.168.70.256' (octet > 255) will cause IP parsing error and configuration validation failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting remote N address to unreachable '10.0.0.1' will cause F1 interface connection failure and DU-CU link establishment error."
+    }
+  }
+]

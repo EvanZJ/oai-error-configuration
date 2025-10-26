@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_127.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local S port D to 0 causes port binding failures and disrupts SCTP communication."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote N port C to 0 causes port binding failures and prevents F1 interface connectivity.",
+      "explanation_zh": "將遠端 N 端口 C 設定為 0 會導致端口綁定失敗，並阻止 F1 接口連接。"
+    }
+  }
+]

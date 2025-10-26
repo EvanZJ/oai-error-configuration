@@ -1,0 +1,135 @@
+[
+  {
+    "gNB_ID": "0xe00",
+    "gNB_name": "gNB-Eurecom-DU",
+    "tracking_area_code": 1,
+    "plmn_list": {
+      "mcc": 1,
+      "mnc": 1,
+      "mnc_length": 2,
+      "snssaiList": {
+        "sst": 1
+      }
+    },
+    "nr_cellid": 1,
+    "tr_s_preference": "f1",
+    "local_n_if_name": "lo",
+    "local_n_address": "127.0.0.3",
+    "remote_n_address": "127.0.0.5",
+    "local_n_portc": 500,
+    "local_n_portd": 2152,
+    "remote_n_portc": 501,
+    "remote_n_portd": 0,
+    "SCTP": {
+      "SCTP_INSTREAMS": 2,
+      "SCTP_OUTSTREAMS": 2
+    },
+    "amf_ip_address": {
+      "ipv4": "192.168.70.132"
+    },
+    "NETWORK_INTERFACES": {
+      "GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43",
+      "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43",
+      "GNB_PORT_FOR_S1U": 2152
+    },
+    "servingCellConfigCommon": {
+      "physCellId": 1,
+      "downlinkConfigCommon": {
+        "frequencyInfoDL": {
+          "absoluteFrequencySSB": 640000,
+          "frequencyBandList": [
+            {
+              "freqBandIndicatorNr": 78
+            }
+          ],
+          "absoluteFrequencyPointA": 640000
+        },
+        "initialDownlinkBWP": {
+          "genericParameters": {
+            "locationAndBandwidth": 14025,
+            "subcarrierSpacing": "subcarrierSpacing30kHz"
+          },
+          "pdcch-ConfigCommon": {
+            "controlResourceSetZero": 0,
+            "searchSpaceZero": 0
+          },
+          "pdsch-ConfigCommon": {
+            "pdsch-TimeDomainAllocationList": [
+              {
+                "k0": 0,
+                "mappingType": "typeA",
+                "startSymbolAndLength": 40
+              }
+            ]
+          }
+        }
+      },
+      "uplinkConfigCommon": {
+        "frequencyInfoUL": {
+          "absoluteFrequencyPointA": 640000,
+          "frequencyBandList": [
+            {
+              "freqBandIndicatorNr": 78
+            }
+          ]
+        },
+        "initialUplinkBWP": {
+          "genericParameters": {
+            "locationAndBandwidth": 14025,
+            "subcarrierSpacing": "subcarrierSpacing30kHz"
+          },
+          "pusch-ConfigCommon": {
+            "pusch-TimeDomainAllocationList": [
+              {
+                "k2": 2,
+                "mappingType": "typeA",
+                "startSymbolAndLength": 40
+              }
+            ]
+          },
+          "pucch-ConfigCommon": {
+            "pucch-ResourceCommon": 11,
+            "pucch-GroupHopping": "neither"
+          }
+        }
+      },
+      "ssb-PositionsInBurst": {
+        "groupPresence": "n1"
+      },
+      "ssb-PeriodicityServingCell": "ms20",
+      "dmrs-TypeA-Position": "pos2",
+      "prach-ConfigIndex": 159,
+      "prach-Config": {
+        "prach-RootSequenceIndex": {
+          "prach-RootSequenceIndex": 1
+        },
+        "prach-msg1-FDM": "one",
+        "prach-msg1-ConfigurationIndex": 92,
+        "prach-RSRP-ThresholdSSB": 20,
+        "prach-RSRP-ThresholdSSB-SUL": 20
+      },
+      "tdd-UL-DL-ConfigurationCommon": {
+        "referenceSubcarrierSpacing": "subcarrierSpacing30kHz",
+        "pattern1": {
+          "dl-UL-TransmissionPeriodicity": "ms5",
+          "nrofDownlinkSlots": 3,
+          "nrofDownlinkSymbols": 0,
+          "nrofUplinkSlots": 1,
+          "nrofUplinkSymbols": 0
+        }
+      },
+      "ss-PBCH-BlockPower": -25
+    },
+    "fhi_72": {
+      "Tadv_cp_dl": 503,
+      "T2a_min_cp_dl": 503,
+      "T2a_max_cp_dl": 503,
+      "T2a_min_cp_ul": 503,
+      "T2a_max_cp_ul": 503,
+      "T2a_min_up": 503,
+      "T2a_max_up": 503,
+      "Tadv_cp_ul": 503,
+      "Tadv_up": 503
+    }
+  }
+]

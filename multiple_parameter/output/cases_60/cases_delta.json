@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_60.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format with octet 256 exceeding 255 will cause configuration rejection and prevent NG interface connection to the AMF."
+    },
+    "du": {
+      "modified_key": "rfsimulator.serveraddr",
+      "original_value": "server",
+      "error_value": "192.168.1.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the RF simulator server address to an invalid IP format with octet 256 exceeding 255 will cause connection failure to the RF simulator.",
+      "explanation_zh": "將 RF 模擬器伺服器地址設定為無效的 IP 格式，其中八位元組 256 超過 255，會導致與 RF 模擬器的連接失敗。"
+    }
+  }
+]

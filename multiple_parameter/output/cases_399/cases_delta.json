@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_399.json",
+    "cu": {
+      "modified_key": "local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local CU port to 70000 exceeds valid port range, causing socket binding failures."
+    },
+    "du": {
+      "modified_key": "ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "out_of_range",
+      "explanation_en": "Increasing SSB block power to 100 dBm exceeds maximum allowed power, causing transmission hardware issues."
+    }
+  }
+]

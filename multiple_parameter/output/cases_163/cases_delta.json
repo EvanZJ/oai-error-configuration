@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_163.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_string",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid format will cause configuration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting PRACH msg1 frequency start to -1 will cause frequency misalignment and RACH failure."
+    }
+  }
+]

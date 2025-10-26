@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "cu_case_263.json",
+    "cu_modifications": [
+      {
+        "modified_key": "gNBs[0].max_num_UE",
+        "original_value": 4,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation": "Setting max_num_UE to 0, which is below the valid range (minimum 1), will cause UE connection rejection and prevent any UEs from connecting to the gNB.",
+        "explanation_zh": "將 max_num_UE 設定為 0，低於有效範圍 (最小值 1)，會導致 UE 連接被拒絕，並阻止任何 UE 連接到 gNB。"
+      }
+    ],
+    "du_modifications": []
+  },
+  {
+    "filename": "du_case_263.json",
+    "cu_modifications": [],
+    "du_modifications": [
+      {
+        "modified_key": "MACRLCs[0].local_n_portd",
+        "original_value": 2152,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation": "Setting local_n_portd to 0, which is below the valid port range (1-65535), will cause F1 data interface binding failure and prevent DU-CU communication.",
+        "explanation_zh": "將 local_n_portd 設定為 0，低於有效端口範圍 (1-65535)，會導致 F1 數據接口綁定失敗，並阻止 DU-CU 通信。"
+      }
+    ]
+  }
+]

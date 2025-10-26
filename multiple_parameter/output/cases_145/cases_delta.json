@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_145.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pucchGroupHopping",
+      "original_value": 0,
+      "error_value": 2,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting PUCCH group hopping to invalid enum value causes configuration rejection."
+    }
+  }
+]

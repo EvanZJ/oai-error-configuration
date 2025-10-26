@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_186.json",
+    "cu": {
+      "modified_key": "SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP_OUTSTREAMS to 0 will cause SCTP connection failure as the number of outstreams must be at least 1."
+    },
+    "du": {
+      "modified_key": "SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP_OUTSTREAMS to 0 will cause SCTP connection failure as the number of outstreams must be at least 1.",
+      "explanation_zh": "將 SCTP_OUTSTREAMS 設定為 0 會導致 SCTP 連接失敗，因為輸出流數量必須至少為 1。"
+    }
+  }
+]

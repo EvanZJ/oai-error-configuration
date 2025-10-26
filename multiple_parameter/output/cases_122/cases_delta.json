@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_122.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP in-streams to 0 causes SCTP association failures and prevents proper communication setup."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote N address to an unreachable IP will cause routing failures and disrupt F1 interface connectivity.",
+      "explanation_zh": "將遠端 N 地址設定為不可達的 IP 會導致路由失敗，並干擾 F1 接口連接。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_218.json",
+    "cu": {
+      "modified_key": "nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the NR cell ID to 0 is invalid as it is reserved, causing cell identification and registration failures."
+    },
+    "du": {
+      "modified_key": "nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the NR cell ID to 0 is invalid as it is reserved, causing cell identification and registration failures."
+    }
+  }
+]

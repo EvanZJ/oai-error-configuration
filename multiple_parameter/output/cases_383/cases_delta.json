@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_383.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local S address to null causes missing value error, preventing F1 socket binding and DU connection establishment."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local N address to null causes missing value error, preventing F1 socket binding and CU connection establishment."
+    }
+  }
+]

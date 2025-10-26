@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_22.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 36864,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the gNB ID from a hex string to a number will cause type validation errors during CU configuration parsing."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid string 'invalid' will cause hex parsing errors and prevent DU initialization.",
+      "explanation_zh": "將 gNB ID 設定為無效字串 'invalid' 會導致十六進制解析錯誤，並阻止 DU 初始化。"
+    }
+  }
+]

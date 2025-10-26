@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_287.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the NG-AMF IP address to an unreachable IP will cause connection failure and prevent NG interface setup.",
+      "explanation_zh": "將 NG-AMF IP 地址設定為無法連接的 IP 會導致連接失敗，並阻止 NG 接口設置。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote N address to an unreachable IP will cause connection failure and prevent F1 interface setup.",
+      "explanation_zh": "將遠程 N 地址設定為無法連接的 IP 會導致連接失敗，並阻止 F1 接口設置。"
+    }
+  }
+]

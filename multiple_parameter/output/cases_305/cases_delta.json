@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_305.json",
+    "cu": {
+      "modified_key": "GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the NG-AMF interface IP to an unreachable address '10.0.0.1' will cause connection failure to the AMF and NG interface setup errors."
+    },
+    "du": {
+      "modified_key": "local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the local N address to an unreachable IP '10.0.0.1' will cause F1 interface binding failure and prevent DU-CU communication."
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_100.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "0.0.0.0",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid IP address format (0.0.0.0), causing unreachable AMF and connection failure."
+    }
+  },
+  {
+    "filename": "du_case_100.json",
+    "du": {
+      "modified_key": "gNBs[0].amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "0.0.0.0",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid IP address format (0.0.0.0), causing unreachable AMF and connection failure.",
+      "explanation_zh": "无效的IP地址格式（0.0.0.0），导致无法到达AMF和连接失败。"
+    }
+  }
+]

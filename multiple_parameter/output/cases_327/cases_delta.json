@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_327.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting NG AMF interface IP to unreachable subnet '10.0.0.1' will cause NG interface connection failure and registration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [196, 96],
+      "error_type": "logical_contradiction",
+      "explanation_en": "T1a_up timing parameter has inconsistent range [196, 96] where min > max, causing front-haul synchronization failure.",
+      "explanation_zh": "T1a_up 定時參數具有不一致的範圍 [196, 96]，其中最小值 > 最大值，導致前傳同步失敗。"
+    }
+  }
+]

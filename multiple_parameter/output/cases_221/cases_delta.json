@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_221.json",
+    "cu": {
+      "modified_key": "sst",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the SST to 0 is invalid as SST values must be between 1 and 255, causing network slice selection and service access failures."
+    },
+    "du": {
+      "modified_key": "sst",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the SST to 0 is invalid as SST values must be between 1 and 255, causing network slice selection and service access failures."
+    }
+  }
+]

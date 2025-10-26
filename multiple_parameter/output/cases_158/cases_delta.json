@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_158.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP in streams to 0 will cause SCTP association failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the local N address to an unreachable IP will cause routing failure and connection issues with CU."
+    }
+  }
+]

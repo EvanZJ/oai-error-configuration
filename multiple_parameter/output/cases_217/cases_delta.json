@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_217.json",
+    "cu": {
+      "modified_key": "GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the S1-U port to 0 is invalid, causing the interface to fail binding and preventing U-plane data transmission."
+    },
+    "du": {
+      "modified_key": "remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote N port C to 0 is invalid, causing F1-C connection failure and loss of control plane communication."
+    }
+  }
+]

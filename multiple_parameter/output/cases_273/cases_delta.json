@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_273.json",
+    "cu": {
+      "modified_key": "GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the S1U port to 0 will cause connection failure as port 0 is invalid and unreachable, leading to NGU interface setup rejection."
+    },
+    "du": {
+      "modified_key": "local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.1.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the local network address to an unreachable subnet IP will cause routing failure and prevent F1 interface connection to the CU.",
+      "explanation_zh": "將本地網路地址更改為不可達的子網 IP 會導致路由失敗，並阻止與 CU 的 F1 介面連接。"
+    }
+  }
+]

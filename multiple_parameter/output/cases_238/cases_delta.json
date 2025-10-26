@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_238.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Changed GNB_IPV4_ADDRESS_FOR_NG_AMF from \"192.168.70.132\" to \"10.0.0.1\" to simulate unreachable routing definitions, causing IP range conflict and CU inability to reach AMF."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.3",
+      "error_type": "invalid_format",
+      "explanation_en": "Changed local_n_address from \"127.0.0.3\" to \"10.0.0.3\" to simulate unreachable routing definitions, causing IP range conflict and DU inability to reach CU.",
+      "explanation_zh": "将 local_n_address 从 \"127.0.0.3\" 更改为 \"10.0.0.3\" 以模拟不可达的路由定义，导致 IP 范围冲突和 DU 无法到达 CU。"
+    }
+  }
+]

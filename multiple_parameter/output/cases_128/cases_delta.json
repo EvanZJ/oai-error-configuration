@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_128.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the GNB port for S1U to 0 causes connection failures and prevents proper data transmission in the NG-U interface."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote N port D to 0 causes port binding failures and disrupts F1 interface communication.",
+      "explanation_zh": "將遠端 N 端口 D 設定為 0 會導致端口綁定失敗，並干擾 F1 接口通信。"
+    }
+  }
+]

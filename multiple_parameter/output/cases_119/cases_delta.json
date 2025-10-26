@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_119.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the GNB port for S1U to 0, an invalid port number, will cause connection failures during the NG-U interface setup and prevent proper data transmission."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+      "original_value": [285, 429],
+      "error_value": [0, 0],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting T1a_cp_ul to [0, 0] causes timing misalignment in the uplink compression, leading to synchronization failures and data transmission errors.",
+      "explanation_zh": "將 T1a_cp_ul 設定為 [0, 0] 會導致上行壓縮中的時序錯位，造成同步失敗和數據傳輸錯誤。"
+    }
+  }
+]

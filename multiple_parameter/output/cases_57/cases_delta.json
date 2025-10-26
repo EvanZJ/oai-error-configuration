@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_57.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.8.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local S address to an invalid IP format with octet 999 exceeding 255 will cause binding failure and prevent the CU from establishing proper network connections."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.8.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local N address to an invalid IP format with octet 999 exceeding 255 will cause routing issues and make the DU unreachable for F1 interface communication.",
+      "explanation_zh": "將本地 N 地址設定為無效的 IP 格式，其中八位元組 999 超過 255，會導致路由問題，並使 DU 無法進行 F1 介面通訊。"
+    }
+  }
+]

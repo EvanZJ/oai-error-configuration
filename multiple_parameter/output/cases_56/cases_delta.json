@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_56.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_if_name",
+      "original_value": "lo",
+      "error_value": 0,
+      "error_type": "wrong_type",
+      "explanation_en": "Changed local_s_if_name from 'lo' to 0, which is wrong type (should be string), causing interface binding failure and preventing F1 connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].local_s_if_name",
+      "original_value": "lo",
+      "error_value": 0,
+      "error_type": "wrong_type",
+      "explanation_en": "Changed local_s_if_name from 'lo' to 0, which is wrong type (should be string), causing interface binding failure and preventing F1 connection.",
+      "explanation_zh": "将local_s_if_name从'lo'更改为0，这是错误类型（应该是字符串），导致接口绑定失败，从而阻止F1连接。"
+    }
+  }
+]

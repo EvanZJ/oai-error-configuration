@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_370.json",
+    "cu": {
+      "modified_key": "remote_s_portc",
+      "original_value": 500,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_s_portc to 70000 (exceeds valid port range) will cause socket connection failure and F1 control interface error."
+    }
+  },
+  {
+    "filename": "du_case_370.json",
+    "du": {
+      "modified_key": "tr_n_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting tr_n_preference to 'invalid' (unknown enum) will cause transport preference parsing failure and F1 interface setup error.",
+      "explanation_zh": "將 tr_n_preference 設定為 'invalid'（未知枚舉）會導致傳輸偏好解析失敗並造成 F1 介面設定錯誤。"
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_282.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MCC to an out-of-range value (1000) will cause PLMN validation failure and prevent network registration.",
+      "explanation_zh": "將 MCC 設定為超出範圍的值 (1000) 會導致 PLMN 驗證失敗，並阻止網路註冊。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MCC to an out-of-range value (1000) will cause PLMN validation failure and prevent network registration.",
+      "explanation_zh": "將 MCC 設定為超出範圍的值 (1000) 會導致 PLMN 驗證失敗，並阻止網路註冊。"
+    }
+  }
+]

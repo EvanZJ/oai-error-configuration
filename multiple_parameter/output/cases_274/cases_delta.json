@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_274.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the number of PUSCH threads to 0 will cause uplink processing failure as no threads are available for PUSCH decoding."
+    },
+    "du": {
+      "modified_key": "Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 180],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 with the first value greater than the second creates an invalid timing range, causing front-haul timing misalignment and synchronization errors.",
+      "explanation_zh": "將 Ta4 的第一個值設定為大於第二個值會創建無效的定時範圍，導致前傳定時錯位和同步錯誤。"
+    }
+  }
+]

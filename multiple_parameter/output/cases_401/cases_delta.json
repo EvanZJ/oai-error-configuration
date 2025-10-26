@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_401.json",
+    "cu": {
+      "modified_key": "mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting mnc_length to 3 while mnc is '1' (1 digit) creates logical contradiction, causing PLMN validation failure."
+    },
+    "du": {
+      "modified_key": "mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting mnc_length to 3 while mnc is '1' (1 digit) creates logical contradiction, causing PLMN validation failure."
+    }
+  }
+]

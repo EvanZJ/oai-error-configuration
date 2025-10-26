@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_403.json",
+    "cu": {
+      "modified_key": "gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xe00x",
+      "error_type": "invalid_format",
+      "explanation_en": "Malformed hexadecimal string for gNB_ID will cause parsing errors and invalid identifier assignment."
+    },
+    "du": {
+      "modified_key": "tr_n_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting transport preference to unknown 'invalid' will cause configuration parsing failure."
+    }
+  }
+]

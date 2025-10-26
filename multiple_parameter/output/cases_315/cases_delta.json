@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_315.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "127.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Setting GNB_IPV4_ADDRESS_FOR_NGU to loopback '127.0.0.1' will make NG-U interface unreachable, causing UPF connection failure and data path disruption."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Setting remote_n_address to '10.0.0.1' (unreachable subnet) will cause F1 interface connection failure to CU and DU initialization rejection."
+    }
+  }
+]

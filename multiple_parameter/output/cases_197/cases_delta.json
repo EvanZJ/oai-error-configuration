@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_197.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Num_Threads_PUSCH to 0 will cause processing failure as zero threads are invalid for PUSCH handling."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon.downlinkConfigCommon.frequencyInfoDL.absoluteFrequencySSB",
+      "original_value": 640000,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting absoluteFrequencySSB to 0 will cause cell setup failure as SSB frequency must be a positive value within the valid range.",
+      "explanation_zh": "將 absoluteFrequencySSB 設定為 0 會導致小區設定失敗，因為 SSB 頻率必須是有效範圍內的正值。"
+    }
+  }
+]

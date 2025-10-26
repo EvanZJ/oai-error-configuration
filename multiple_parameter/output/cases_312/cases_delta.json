@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_312.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation": "Setting Num_Threads_PUSCH to 0 (invalid thread count) will cause thread allocation failure and system startup rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [196, 96],
+      "error_type": "logical_contradiction",
+      "explanation": "T1a_up timing parameter has inconsistent range [196, 96] where min > max, causing timing misalignment and front-haul synchronization failure."
+    }
+  }
+]

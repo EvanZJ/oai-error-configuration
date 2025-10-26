@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_404.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "8",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing Num_Threads_PUSCH from number to string '8' will cause parsing errors and thread allocation failure."
+    },
+    "du": {
+      "modified_key": "nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting nr_cellid to 0 is invalid as cell ID 0 is reserved, causing configuration rejection."
+    }
+  }
+]

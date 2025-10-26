@@ -1,0 +1,22 @@
+[
+  {
+    "filename": "cu_case_365.json",
+    "cu": {
+      "modified_key": "nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting nr_cellid to 0 (invalid range, must be > 0) will cause cell identification failure and prevent proper network attachment."
+    }
+  },
+  {
+    "filename": "du_case_365.json",
+    "du": {
+      "modified_key": "remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting remote_n_address to an invalid IP '192.168.70.256' (octet 256 > 255) will cause unreachable routing to CU and front-haul connection failure."
+    }
+  }
+]

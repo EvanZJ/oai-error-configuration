@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_384.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting AMF IP to the same as GNB interface IP causes address conflict, preventing AMF connection and NG interface setup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting remote N address to the same as local N address causes IP conflict, leading to F1 communication loopback and interface failure."
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_10.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "eight",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing Num_Threads_PUSCH from a number to a string 'eight' will cause type validation errors and prevent thread allocation."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.5",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote N address to an unreachable subnet (10.0.0.5) will prevent the DU from connecting to the CU, causing F1 interface failures.",
+      "explanation_zh": "將遠端 N 地址更改為無法訪問的子網 (10.0.0.5) 將阻止 DU 連接到 CU，導致 F1 接口故障。"
+    }
+  }
+]

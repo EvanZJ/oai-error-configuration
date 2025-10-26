@@ -1,0 +1,20 @@
+[
+    {
+      "filename": "cu_case_91.json",
+      "cu": {
+        "modified_key": "gNBs.local_s_address",
+        "original_value": "127.0.0.5",
+        "error_value": "10.0.0.1",
+        "error_type": "logical_contradiction",
+        "explanation_en": "Setting local_s_address to '10.0.0.1', an unreachable IP address, causing SCTP binding failures due to routing misconfiguration."
+      },
+      "du": {
+        "modified_key": "gNBs[0].local_s_portc",
+        "original_value": 500,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting local_s_portc to 0, which is an invalid port number (ports must be > 0), causing SCTP binding failures.",
+        "explanation_zh": "将 local_s_portc 设置为 0，这是一个无效的端口号（端口必须 > 0），导致 SCTP 绑定失败。"
+      }
+    }
+  ]

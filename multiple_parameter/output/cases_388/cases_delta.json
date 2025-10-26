@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_388.json",
+    "cu": {
+      "modified_key": "remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.70.256",
+      "error_type": "unreachable_elements",
+      "explanation_en": "Setting remote_s_address to an invalid IP '192.168.70.256' (octet > 255) will cause connection failure in the front-haul interface, preventing proper communication between CU and DU."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [196, 96],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing T1a_up from [96, 196] to [196, 96] creates timing misalignment where the upper bound is less than the lower bound, causing logical contradiction in front-haul timing parameters and potential synchronization errors.",
+      "explanation_zh": "將 T1a_up 從 [96, 196] 更改為 [196, 96] 會導致時序錯位，其中上限小於下限，造成前傳時序參數中的邏輯矛盾，並可能導致同步錯誤。"
+    }
+  }
+]

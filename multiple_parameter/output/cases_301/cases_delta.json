@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_301.json",
+    "cu": {
+        "modified_key": "gNBs.remote_s_portd",
+        "original_value": 2152,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting remote_s_portd to 0, which is below the valid port range (1-65535), will cause F1 user plane socket binding failure and prevent CU-DU communication.",
+        "explanation_zh": "將 remote_s_portd 設定為 0，低於有效端口範圍 (1-65535)，會導致 F1 用戶平面套接字綁定失敗，並阻止 CU-DU 通信。"
+    },
+    "du": {
+        "modified_key": "MACRLCs[0].remote_n_portd",
+        "original_value": 2152,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting remote_n_portd to 0, which is below the valid port range (1-65535), will cause F1 user plane socket binding failure and prevent DU-CU communication.",
+        "explanation_zh": "將 remote_n_portd 設定為 0，低於有效端口範圍 (1-65535)，會導致 F1 用戶平面套接字綁定失敗，並阻止 DU-CU 通信。"
+    }
+  }
+]

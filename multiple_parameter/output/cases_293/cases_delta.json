@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_293.json",
+    "cu": {
+        "modified_key": "amf_ip_address.ipv4",
+        "original_value": "192.168.70.132",
+        "error_value": "10.0.0.1",
+        "error_type": "logical_contradiction",
+        "explanation_en": "Setting the AMF IP address to '10.0.0.1', which is in a different subnet from the expected network, will cause unreachable routing and prevent NG interface establishment.",
+        "explanation_zh": "將 AMF IP 地址設定為 '10.0.0.1'，該地址位於與預期網路不同的子網中，會導致無法到達的路由，並阻止 NG 介面建立。"
+    },
+    "du": {
+        "modified_key": "servingCellConfigCommon[0].absoluteFrequencySSB",
+        "original_value": 641280,
+        "error_value": 1282560,
+        "error_type": "logical_contradiction",
+        "explanation_en": "Changing the absolute SSB frequency from 641280 (band 78) to 1282560 (band 3) creates a frequency misalignment, causing synchronization failures and cell search issues.",
+        "explanation_zh": "將絕對 SSB 頻率從 641280（頻段 78）更改為 1282560（頻段 3）會造成頻率錯位，導致同步失敗和細胞搜尋問題。"
+    }
+  }
+]

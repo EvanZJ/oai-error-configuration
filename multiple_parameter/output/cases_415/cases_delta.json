@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_415.json",
+      "cu": "remote_s_address",
+      "original": "127.0.0.3",
+      "error": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Unreachable IP address in different subnet causing routing failure."
+    },
+    {
+      "filename": "du_case_415.json",
+      "du": "Ta4",
+      "original": [110, 180],
+      "error": [180, 110],
+      "error_type": "timing misalignment",
+      "explanation": "Inconsistent Ta4 timing parameters causing timing misalignment."
+    }
+  ]

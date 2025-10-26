@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_45.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed MNC from 1 to 0, which is out of range for valid MNC values (typically 01-99 for 2-digit, 001-999 for 3-digit), causing PLMN configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed MNC from 1 to 0, which is out of range for valid MNC values (typically 01-99 for 2-digit, 001-999 for 3-digit), causing PLMN configuration errors.",
+      "explanation_zh": "将MNC从1更改为0，这超出了有效MNC值的范围（通常为2位数的01-99，3位数的001-999），导致PLMN配置错误。"
+    }
+  }
+]

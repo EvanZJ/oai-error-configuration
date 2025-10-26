@@ -1,0 +1,10 @@
+[
+    {
+      "filename": "cu_case_406.json",
+      "cu": "amf_ip_address.ipv4",
+      "original": "192.168.70.132",
+      "error": "192.168.70.256",
+      "error_type": "invalid_format",
+      "explanation": "Invalid IP address format (last octet exceeds 255)."
+    }
+  ]

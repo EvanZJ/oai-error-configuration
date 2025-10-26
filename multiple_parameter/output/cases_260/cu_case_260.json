@@ -1,0 +1,72 @@
+{
+    "Active_gNBs": ["gNB-Eurecom-CU"],
+    "Asn1_verbosity": "annoying",
+    "gNBs": [
+      {
+        "gNB_ID": "0xe00",
+        "gNB_CU_ID": "0xe00",
+        "gNB_name": "gNB-Eurecom-CU",
+        "tracking_area_code": 1,
+        "plmn_list": [
+          {
+            "mcc": 1,
+            "mnc": 1,
+            "mnc_length": 2,
+            "snssaiList": [
+              {
+                "sst": 1,
+                "sd": "0x010203"
+              }
+            ]
+          }
+        ],
+        "nr_cellid": 1,
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "10.0.0.1",
+        "GNB_PORT_FOR_S1U": 0,
+        "GNB_IPV4_ADDRESS_FOR_NGU": "10.0.0.1",
+        "GNB_PORT_FOR_X2C": 70000,
+        "GNB_IPV4_ADDRESS_FOR_X2C": "192.168.70.132",
+        "GNB_PORT_FOR_X2U": 0,
+        "GNB_IPV4_ADDRESS_FOR_X2U": "10.0.0.1",
+        "Num_Threads_PUSCH": 8,
+        "Num_Threads_PDSCH": 8,
+        "max_num_UE": 4,
+        "max_num_UE_per_cell": 4,
+        "max_num_cells": 1,
+        "SCTP": {
+          "SCTP_INSTREAMS": 2,
+          "SCTP_OUTSTREAMS": 2
+        }
+      }
+    ],
+    "MACRLCs": [
+      {
+        "num_cc": 1,
+        "tr_s_preference": "local_L1",
+        "tr_n_preference": "local_RRC",
+        "local_s_address": "127.0.0.1",
+        "remote_s_address": "127.0.0.2",
+        "local_s_portc": 500,
+        "local_s_portd": 2152,
+        "remote_s_portc": 501,
+        "remote_s_portd": 2152
+      }
+    ],
+    "security": {
+      "ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"],
+      "integrity_algorithms": ["nia2", "nia0"],
+      "drb_ciphering": "yes",
+      "drb_integrity": "no"
+    },
+    "log_config": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info",
+      "rlc_log_level": "info",
+      "pdcp_log_level": "info",
+      "rrc_log_level": "info",
+      "ngap_log_level": "info",
+      "f1ap_log_level": "info"
+    }
+  }

@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "cu_case_253.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_X2U",
+      "original_value": "192.168.70.135",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "GNB_IPV4_ADDRESS_FOR_X2U changed from '192.168.70.135' to '192.168.70.132', which conflicts with the AMF IP address. This simulates a routing conflict that would cause X2-U interface connection failures.",
+      "explanation_zh": "GNB_IPV4_ADDRESS_FOR_X2U 从 '192.168.70.135' 更改为 '192.168.70.132'，与 AMF IP 地址冲突。这模拟了会导致 X2-U 接口连接失败的路由冲突。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "ra_ResponseWindow changed from 4 to 0, which is below the valid range for RACH response windows. This simulates an invalid PRACH configuration that would cause random access failures.",
+      "explanation_zh": "ra_ResponseWindow 从 4 更改为 0，低于 RACH 响应窗口的有效范围。这模拟了会导致随机接入失败的无效 PRACH 配置。"
+    }
+  }
+]

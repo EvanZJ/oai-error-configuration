@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_18.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "local_L1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the CU's transport preference to 'local_L1' (appropriate for DU) creates a logical contradiction, leading to configuration validation failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "f1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the DU's transport preference to 'f1' (appropriate for CU) creates a logical contradiction, leading to configuration validation failures.",
+      "explanation_zh": "將 DU 的傳輸偏好設定為 'f1' (適合 CU) 會造成邏輯矛盾，導致配置驗證失敗。"
+    }
+  }
+]

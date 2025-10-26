@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_408.json",
+      "cu": "local_s_address",
+      "original": "127.0.0.5",
+      "error": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation": "Conflicting IP address with remote_s_address causing IP range conflicts."
+    },
+    {
+      "filename": "du_case_408.json",
+      "du": "Ta4",
+      "original": [110, 180],
+      "error": [180, 110],
+      "error_type": "timing misalignment",
+      "explanation": "Inconsistent Ta4 timing parameters causing timing misalignment."
+    }
+  ]

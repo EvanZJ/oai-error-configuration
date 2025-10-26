@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_108.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the AMF IP address to an unreachable subnet '10.0.0.1' will cause routing failures, preventing the DU from establishing connection to the AMF and leading to F1 setup rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the SSB absolute frequency to 0 (invalid value) will cause frequency misalignment, resulting in SSB transmission failure and cell synchronization issues.",
+      "explanation_zh": "將 SSB 絕對頻率設定為 0（無效值）會導致頻率錯位，造成 SSB 傳輸失敗和細胞同步問題。"
+    }
+  }
+]

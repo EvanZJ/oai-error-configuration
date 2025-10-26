@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_306.json",
+    "cu": {
+      "modified_key": "remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote SCTP address to an unreachable IP '10.0.0.1' will cause connection failure to the DU and F1 interface setup errors."
+    },
+    "du": {
+      "modified_key": "remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote N address to an unreachable IP '10.0.0.1' will cause F1 interface connection failure and prevent DU-CU communication."
+    }
+  }
+]

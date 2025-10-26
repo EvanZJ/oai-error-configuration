@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_302.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the AMF IP address to an unreachable IP '10.0.0.1' will cause connection failure to the AMF and prevent NG interface establishment."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 1282560,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the absolute SSB frequency to 1282560 misaligns with the configured band 78, causing frequency domain configuration errors and cell setup failure."
+    }
+  }
+]

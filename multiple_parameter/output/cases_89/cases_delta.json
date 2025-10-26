@@ -1,0 +1,20 @@
+[
+    {
+      "filename": "cu_case_89.json",
+      "cu": {
+        "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+        "original_value": "192.168.8.43",
+        "error_value": "10.0.0.1",
+        "error_type": "logical_contradiction",
+        "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NGU to '10.0.0.1', an unreachable IP address, causing CU to fail in connecting to the UPF due to routing misconfiguration."
+      },
+      "du": {
+        "modified_key": "gNBs[0].local_s_address",
+        "original_value": "127.0.0.3",
+        "error_value": "999.999.999.999",
+        "error_type": "invalid_format",
+        "explanation_en": "Setting local_s_address to '999.999.999.999', which is an invalid IP address format, causing SCTP binding failures.",
+        "explanation_zh": "将 local_s_address 设置为 '999.999.999.999'，这是无效的 IP 地址格式，导致 SCTP 绑定失败。"
+      }
+    }
+  ]

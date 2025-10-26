@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_124.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote S port C to 0 causes connection failures and disrupts SCTP communication."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [0, 0],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Ta4 to [0, 0] causes timing misalignment in the front-haul, leading to synchronization failures and data transmission errors.",
+      "explanation_zh": "將 Ta4 設定為 [0, 0] 會導致前傳中的時序錯位，造成同步失敗和數據傳輸錯誤。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_28.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting tr_s_preference to an invalid enum 'invalid' will cause transport preference validation errors, leading to configuration rejection or incorrect routing behavior."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting tr_s_preference to an invalid enum 'invalid' will cause transport preference validation errors, leading to configuration rejection or incorrect routing behavior.",
+      "explanation_zh": "將 tr_s_preference 設定為無效的枚舉值 'invalid' 會導致傳輸偏好驗證錯誤，造成配置拒絕或不正確的路由行為。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_402.json",
+    "cu": {
+      "modified_key": "local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local CU address to null will cause socket binding failure and prevent F1 connection."
+    },
+    "du": {
+      "modified_key": "local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local DU address to null will cause socket binding failure and prevent F1 connection."
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_278.json",
+    "cu": {
+      "modified_key": "GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the NGU IP to an unreachable address will cause GTP-U tunnel setup failure and prevent UPF communication."
+    },
+    "du": {
+      "modified_key": "dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the downlink carrier frequency to match the SSB frequency creates misalignment and prevents proper carrier allocation and UE synchronization.",
+      "explanation_zh": "將下行載波頻率設定為與 SSB 頻率匹配會創建錯位，並阻止正確的載波分配和 UE 同步。"
+    }
+  }
+]

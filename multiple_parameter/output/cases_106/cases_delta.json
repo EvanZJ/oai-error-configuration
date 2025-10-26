@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_106.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Unreachable local IP address, causing interface binding failure."
+    }
+  },
+  {
+    "filename": "du_case_106.json",
+    "du": {
+      "modified_key": "gNBs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Unreachable local IP address, causing interface binding failure.",
+      "explanation_zh": "无法到达的本地IP地址，导致接口绑定失败。"
+    }
+  }
+]

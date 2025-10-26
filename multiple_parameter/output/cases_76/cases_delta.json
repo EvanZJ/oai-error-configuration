@@ -1,0 +1,20 @@
+[
+    {
+      "filename": "cu_case_76.json",
+      "cu": {
+        "modified_key": "Num_Threads_MAC",
+        "original_value": 2,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting Num_Threads_MAC to 0, which is out of the valid range (typically 1 or more), causing potential thread allocation failures in MAC processing."
+      },
+      "du": {
+        "modified_key": "gNBs[0].Num_Threads_MAC",
+        "original_value": 2,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting Num_Threads_MAC to 0, which is out of the valid range (typically 1 or more), causing potential thread allocation failures in MAC processing.",
+        "explanation_zh": "将 Num_Threads_MAC 设置为 0，这超出了有效范围（通常为 1 或更多），导致 MAC 处理中的线程分配失败。"
+      }
+    }
+  ]

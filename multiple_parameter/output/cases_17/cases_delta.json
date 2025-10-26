@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_17.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[1]",
+      "original_value": "nia0",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the second integrity algorithm to an unknown enum 'nia9' will cause security negotiation failures and prevent UE registration."
+    },
+    "du": {
+      "modified_key": "rfsimulator.serveraddr",
+      "original_value": "server",
+      "error_value": "server..invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the RF simulator server address to a malformed hostname 'server..invalid' will cause DNS resolution failures and prevent RF simulation connections.",
+      "explanation_zh": "將 RF 模擬器伺服器地址設定為格式錯誤的主機名稱 'server..invalid' 會導致 DNS 解析失敗，並阻止 RF 模擬連接。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_154.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP port C to 0 will cause port binding failure and connection issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].sib1_tda",
+      "original_value": 15,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SIB1 TDA to 0 will cause timing misalignment and UE synchronization failure."
+    }
+  }
+]

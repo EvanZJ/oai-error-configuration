@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_367.json",
+    "cu": {
+      "modified_key": "remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.70.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting remote_s_address to invalid IP '192.168.70.256' (octet 256 > 255) will cause unreachable DU and F1 interface failure."
+    }
+  },
+  {
+    "filename": "du_case_367.json",
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 640008,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting absoluteFrequencySSB to match dl_absoluteFrequencyPointA (640008) will cause frequency misalignment and SSB synchronization failure.",
+      "explanation_zh": "將 absoluteFrequencySSB 設定為與 dl_absoluteFrequencyPointA 相同（640008）會導致頻率錯位並造成 SSB 同步失敗。"
+    }
+  }
+]

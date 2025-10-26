@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "cu_case_267.json",
+    "cu_modifications": [
+      {
+        "modified_key": "gNBs.remote_s_address",
+        "original_value": "127.0.0.3",
+        "error_value": "10.0.0.1",
+        "error_type": "unreachable_elements",
+        "explanation": "Setting remote_s_address to an unreachable IP (10.0.0.1) will prevent F1 remote interface connection and cause DU-CU communication failure.",
+        "explanation_zh": "將 remote_s_address 設定為不可達的 IP (10.0.0.1) 會阻止 F1 遠端接口連接，並導致 DU-CU 通信失敗。"
+      }
+    ],
+    "du_modifications": []
+  },
+  {
+    "filename": "du_case_267.json",
+    "cu_modifications": [],
+    "du_modifications": [
+      {
+        "modified_key": "MACRLCs[0].local_n_address",
+        "original_value": "127.0.0.3",
+        "error_value": "10.0.0.1",
+        "error_type": "unreachable_elements",
+        "explanation": "Setting local_n_address to an unreachable IP (10.0.0.1) will prevent F1 network interface binding and cause CU-DU communication failure.",
+        "explanation_zh": "將 local_n_address 設定為不可達的 IP (10.0.0.1) 會阻止 F1 網路接口綁定，並導致 CU-DU 通信失敗。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_321.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Setting local_s_address to '10.0.0.1' (unreachable subnet) will cause F1 interface binding failure and DU connection rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation": "T1a_cp_ul timing parameter has inconsistent range [429, 285] where min > max, causing timing misalignment and front-haul synchronization failure."
+    }
+  }
+]

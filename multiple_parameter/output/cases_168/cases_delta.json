@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_168.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting MCC to 0 (invalid) causes PLMN configuration rejection, preventing network registration and cell attachment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting PRACH message 1 frequency start to -1 causes frequency misalignment, leading to RACH failure and UE connection issues.",
+      "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為 -1 會導致頻率錯位，造成 RACH 失敗和 UE 連線問題。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_156.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP port D to 0 will cause port binding failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote N address to an unreachable IP will cause routing failure and connection issues with CU."
+    }
+  }
+]

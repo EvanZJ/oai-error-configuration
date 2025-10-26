@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_272.json",
+    "cu": {
+      "modified_key": "remote_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP port to 0 will cause connection failure to the DU as port 0 is invalid and unreachable, leading to F1 interface setup rejection."
+    },
+    "du": {
+      "modified_key": "remote_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote network port to 0 will cause connection failure to the CU as port 0 is invalid and unreachable, leading to F1 interface setup rejection.",
+      "explanation_zh": "將遠端網路端口設定為 0 會導致與 CU 的連接失敗，因為端口 0 無效且不可達，導致 F1 介面設定被拒絕。"
+    }
+  }
+]

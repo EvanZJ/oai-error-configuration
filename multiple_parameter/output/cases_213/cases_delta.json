@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_213.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the AMF IP address to a different subnet (10.0.0.1) creates an IP range conflict, making the AMF unreachable from the CU due to routing misconfiguration."
+    },
+    "du": {
+      "modified_key": "local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the local N address to a different subnet (10.0.0.1) creates an IP range conflict, making the CU unreachable from the DU due to routing misconfiguration."
+    }
+  }
+]

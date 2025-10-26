@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_280.json",
+    "cu": {
+      "modified_key": "local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the local SCTP address to an unreachable IP will cause socket binding failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "dl_offstToCarrier",
+      "original_value": 0,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the downlink carrier offset to an out-of-range value will cause frequency misalignment and prevent proper downlink carrier allocation and UE reception.",
+      "explanation_zh": "將下行載波偏移設定為超出範圍的值會導致頻率錯位，並阻止正確的下行載波分配和 UE 接收。"
+    }
+  }
+]

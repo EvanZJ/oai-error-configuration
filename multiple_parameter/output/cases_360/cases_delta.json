@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_360.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to an unknown enum value will cause security negotiation failures and registration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local N address to null will cause network interface binding failures.",
+      "explanation_zh": "將本地 N 地址設定為 null 會導致網路介面綁定失敗。"
+    }
+  }
+]

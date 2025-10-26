@@ -1,0 +1,6 @@
+UE RNTI be64 CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -44 (13 meas)
+UE be64: dlsch_rounds 8/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.05314 MCS (0) 9
+UE be64: ulsch_rounds 70/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00009 MCS (0) 9 (Qm 2  dB) NPRB 5  SNR 57.0 dB
+UE be64: MAC:    TX            861 RX           8028 bytes
+UE be64: LCID 1: TX              3 RX             45 bytes
+

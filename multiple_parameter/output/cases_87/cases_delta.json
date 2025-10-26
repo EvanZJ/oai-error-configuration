@@ -1,0 +1,20 @@
+[
+    {
+      "filename": "cu_case_87.json",
+      "cu": {
+        "modified_key": "gNBs.tr_s_preference",
+        "original_value": "f1",
+        "error_value": "invalid_transport",
+        "error_type": "invalid_enum",
+        "explanation_en": "Setting tr_s_preference to 'invalid_transport', which is not a valid transport preference (should be 'f1' or similar valid options), causing configuration validation errors."
+      },
+      "du": {
+        "modified_key": "gNBs[0].remote_n_address",
+        "original_value": "127.0.0.5",
+        "error_value": "10.0.0.1",
+        "error_type": "logical_contradiction",
+        "explanation_en": "Setting remote_n_address to '10.0.0.1', an unreachable IP address, causing DU to fail in connecting to the remote CU due to routing misconfiguration.",
+        "explanation_zh": "将 remote_n_address 设置为 '10.0.0.1'，这是一个不可达的 IP 地址，导致 DU 由于路由配置错误而无法连接到远程 CU。"
+      }
+    }
+  ]

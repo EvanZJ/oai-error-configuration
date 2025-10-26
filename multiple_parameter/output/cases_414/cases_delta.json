@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_414.json",
+      "cu": "GNB_IPV4_ADDRESS_FOR_NGU",
+      "original": "192.168.8.43",
+      "error": "192.168.70.132",
+      "error_type": "IP range conflicts",
+      "explanation": "Conflicting IP address with amf_ip_address.ipv4 causing IP range conflicts."
+    },
+    {
+      "filename": "du_case_414.json",
+      "du": "remote_n_address",
+      "original": "127.0.0.5",
+      "error": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation": "Conflicting IP address with local_n_address causing IP range conflicts."
+    }
+  ]

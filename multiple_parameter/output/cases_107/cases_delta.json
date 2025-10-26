@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_107.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "SCTP_OUTSTREAMS value 0 is invalid as it must be at least 1 for proper SCTP association."
+    }
+  },
+  {
+    "filename": "du_case_107.json",
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "SCTP_OUTSTREAMS value 0 is invalid as it must be at least 1 for proper SCTP association.",
+      "explanation_zh": "SCTP_OUTSTREAMS值0无效，因为它必须至少为1才能正确建立SCTP关联。"
+    }
+  }
+]

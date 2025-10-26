@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_328.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting remote SCTP address to unreachable subnet '10.0.0.1' will cause F1 interface connection failure to DU and setup rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting remote N interface address to unreachable subnet '10.0.0.1' will cause F1 interface connection failure to CU and setup rejection.",
+      "explanation_zh": "將遠端 N 介面地址設定為無法到達的子網路 '10.0.0.1' 將導致 F1 介面連線失敗，並拒絕設定。"
+    }
+  }
+]

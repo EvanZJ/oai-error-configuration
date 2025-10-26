@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_355.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting remote S address to unreachable '10.0.0.1' will cause F1 remote connectivity failure and DU-CU link establishment error."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting remote N address to '192.168.70.132' (same as CU's AMF IP) will cause IP address conflict and network routing issues."
+    }
+  }
+]

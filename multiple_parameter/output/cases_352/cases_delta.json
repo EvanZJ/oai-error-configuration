@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_352.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xe00x",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to invalid hexadecimal '0xe00x' will cause format parsing error and gNB initialization failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xe00x",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to invalid hexadecimal '0xe00x' will cause format parsing error and gNB initialization failure."
+    }
+  }
+]

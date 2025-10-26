@@ -1,0 +1,86 @@
+[
+    {
+      "gNB_ID": "0xe00",
+      "gNB_name": "gNB-Eurecom-DU",
+      "tracking_area_code": 1,
+      "plmn_list": {
+        "mcc": 1,
+        "mnc": 1,
+        "mnc_length": 2,
+        "snssaiList": {
+          "sst": 1
+        }
+      },
+      "nr_cellid": 1,
+      "tr_s_preference": "f1",
+      "local_s_if_name": "lo",
+      "local_s_address": "127.0.0.3",
+      "remote_s_address": "127.0.0.5",
+      "local_s_portc": 500,
+      "local_s_portd": 2152,
+      "remote_s_portc": 501,
+      "remote_s_portd": 0,
+      "SCTP": {
+        "SCTP_INSTREAMS": 2,
+        "SCTP_OUTSTREAMS": 2
+      },
+      "amf_ip_address": {
+        "ipv4": "192.168.70.132"
+      },
+      "NETWORK_INTERFACES": {
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43",
+        "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43",
+        "GNB_PORT_FOR_S1U": 2152
+      },
+      "security": {
+        "ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"],
+        "integrity_algorithms": ["nia2", "nia0"],
+        "drb_ciphering": "yes",
+        "drb_integrity": "no"
+      },
+      "log_config": {
+        "global_log_level": "info",
+        "hw_log_level": "info",
+        "phy_log_level": "info",
+        "mac_log_level": "info",
+        "rlc_log_level": "info",
+        "pdcp_log_level": "info",
+        "rrc_log_level": "info",
+        "ngap_log_level": "info",
+        "f1ap_log_level": "info"
+      },
+      "physical_parameters": {
+        "absoluteFrequencySSB": 640000,
+        "absoluteFrequencyPointA": 640008,
+        "dl_frequencyBand": 78,
+        "ul_frequencyBand": 78,
+        "dl_antenna_ports": 1,
+        "ul_antenna_ports": 1,
+        "ssb_SubcarrierSpacing": 30,
+        "ssb_period": 20,
+        "ssb_offset": 0,
+        "pdcch_configSIB1": 11,
+        "pdcch_ConfigCommon": 11,
+        "pdsch_configCommon": 11,
+        "pusch_configCommon": 11,
+        "n_ta_offset": 0,
+        "prach_config": {
+          "prach_RootSequenceIndex": 1,
+          "prach_msg1_FDM": 1,
+          "prach_msg1_FrequencyStart": 0,
+          "prach_msg1_SubcarrierSpacing": 30,
+          "prach_restrictedSetConfig": "unrestricted"
+        },
+        "ssbTable": {
+          "ssbSubcarrierOffset": 0,
+          "ssbOffsetPointA": 8,
+          "ssbPeriod": 20,
+          "ssbSubcarrierSpacing": 30,
+          "ssbMaskList": [0]
+        },
+        "servingCellConfigCommon": {
+          "n_TimingAdvanceOffset": 0
+        }
+      }
+    }
+  ]

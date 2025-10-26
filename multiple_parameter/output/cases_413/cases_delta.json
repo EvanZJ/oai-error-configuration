@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_413.json",
+      "cu": "GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original": "192.168.8.43",
+      "error": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Unreachable IP address in different subnet causing routing failure."
+    },
+    {
+      "filename": "du_case_413.json",
+      "du": "remote_n_address",
+      "original": "127.0.0.5",
+      "error": "172.16.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Unreachable IP address in different subnet causing routing failure."
+    }
+  ]

@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_368.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting amf_ip_address.ipv4 to a number instead of string will cause type mismatch and AMF connection parsing failure."
+    }
+  },
+  {
+    "filename": "du_case_368.json",
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting T1a_cp_dl to [429, 285] (min > max) will cause timing misalignment and front-haul downlink timing failure.",
+      "explanation_zh": "將 T1a_cp_dl 設定為 [429, 285]（最小值 > 最大值）會導致定時錯位並造成前傳下行鏈路定時失敗。"
+    }
+  }
+]

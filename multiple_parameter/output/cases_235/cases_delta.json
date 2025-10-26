@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_235.json",
+    "cu": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changed T1a_cp_dl from [285,429] to [429,285] to simulate timing misalignment where the upper bound is less than the lower bound, causing logical contradiction in timing parameters.",
+      "explanation_zh": "将 T1a_cp_dl 从 [285,429] 更改为 [429,285] 以模拟时序错位，其中上限小于下限，导致时序参数中的逻辑矛盾。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed dl_carrierBandwidth from 106 to 0 to simulate out_of_range error, causing invalid downlink carrier bandwidth configuration that could lead to frequency misalignment.",
+      "explanation_zh": "将 dl_carrierBandwidth 从 106 更改为 0 以模拟 out_of_range 错误，导致无效的下行载波带宽配置，可能导致频率错位。"
+    }
+  }
+]

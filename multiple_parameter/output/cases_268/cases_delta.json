@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "cu_case_268.json",
+    "cu_modifications": [
+      {
+        "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+        "original_value": "192.168.8.43",
+        "error_value": "10.0.0.1",
+        "error_type": "unreachable_elements",
+        "explanation": "Setting GNB_IPV4_ADDRESS_FOR_NGU to an unreachable IP (10.0.0.1) will prevent NG-U interface binding and cause GTP-U tunnel establishment failure.",
+        "explanation_zh": "將 GNB_IPV4_ADDRESS_FOR_NGU 設定為不可達的 IP (10.0.0.1) 會阻止 NG-U 接口綁定，並導致 GTP-U 隧道建立失敗。"
+      }
+    ],
+    "du_modifications": []
+  },
+  {
+    "filename": "du_case_268.json",
+    "cu_modifications": [],
+    "du_modifications": [
+      {
+        "modified_key": "MACRLCs[0].remote_n_address",
+        "original_value": "127.0.0.5",
+        "error_value": "10.0.0.1",
+        "error_type": "unreachable_elements",
+        "explanation": "Setting remote_n_address to an unreachable IP (10.0.0.1) will prevent F1 remote network connection and cause CU-DU communication failure.",
+        "explanation_zh": "將 remote_n_address 設定為不可達的 IP (10.0.0.1) 會阻止 F1 遠端網路連接，並導致 CU-DU 通信失敗。"
+      }
+    ]
+  }
+]

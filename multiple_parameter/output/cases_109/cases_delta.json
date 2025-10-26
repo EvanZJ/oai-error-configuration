@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_109.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP control port to 0 (invalid port) will cause SCTP socket binding failure, preventing F1-C connection establishment between CU and DU."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [0, 0],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Ta4 timing parameters to [0, 0] (invalid values) will cause timing misalignment in front-haul processing, leading to synchronization failures and data transmission errors.",
+      "explanation_zh": "將 Ta4 定時參數設定為 [0, 0]（無效值）會導致前傳處理中的定時錯位，造成同步失敗和數據傳輸錯誤。"
+    }
+  }
+]

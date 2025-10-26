@@ -1,0 +1,54 @@
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[PHY]   create_gNB_tasks() Task ready initialize structures
+[0m[NR_PHY]   RC.gNB = 0x5b79487beaf0
+[0m[PHY]   No prs_config configuration found..!!
+[0m[PHY]   create_gNB_tasks() RC.nb_nr_L1_inst:0
+[0m[GNB_APP]   Allocating gNB_RRC_INST for 1 instances
+[0m[GNB_APP]   F1AP: gNB_CU_id[0] 0
+[0m[GNB_APP]   F1AP: gNB_CU_name[0] gNB-Eurecom-CU
+[0m[GNB_APP]   SDAP layer is disabled
+[0m[GNB_APP]   Data Radio Bearer count 1
+[0m[NR_RRC]   do_SIB23_NR, size 9 
+ [0m[PDCP]   pdcp init,usegtp 
+[0m[GNB_APP]   default drx 0
+[0m[GNB_APP]   [gNB 0] gNB_app_register for instance 0
+[0m[UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_SCTP
+[0m[X2AP]   X2AP is disabled.
+[0m[UTIL]   threadCreate() for TASK_NGAP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_NGAP
+[0m[UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_GNB_APP
+[0m[UTIL]   threadCreate() for TASK_RRC_GNB: creating thread with affinity ffffffff, priority 50
+[0m[NGAP]   Registered new gNB[0] and macro gNB id 0
+[0m[NGAP]   [gNB 0] check the amf registration state
+[0m[ITTI]   Created Posix thread TASK_RRC_GNB
+[0m[93m[SCTP]   sctp_bindx() SCTP_BINDX_ADD_ADDR failed: errno 99 Cannot assign requested address
+[0m[GTPU]   Configuring GTPu
+[0m[1;31m[SCTP]   could not open socket, no SCTP connection established
+[0m[GTPU]   SA mode 
+[0m
+Assertion (config_isparamset(gnbParms, 0)) failed!
+In RCconfig_NR_CU_E1() /home/sionna/evan/openairinterface5g/openair2/E1AP/e1ap_setup.c:132
+gNB_ID is not defined in configuration file
+
+Exiting execution
+CMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_163/cu_case_163.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_163
+[CONFIG] function config_libconfig_init returned 0
+[CONFIG] config module libconfig loaded
+[CONFIG] debug flags: 0x00000000
+log init done
+Reading in command-line options
+[CONFIG] parallel_conf is set to 2
+[CONFIG] worker_conf is set to 1
+Configuration: nb_rrc_inst 1, nb_nr_L1_inst 0, nb_ru 0
+configuring for RAU/RRU
+NRRRC 0: Southbound Transport f1
+[UTIL]   threadCreate() for TASK_CU_F1: creating thread with affinity ffffffff, priority 50
+[0m/home/sionna/evan/openairinterface5g/openair2/E1AP/e1ap_setup.c:132 RCconfig_NR_CU_E1() Exiting OAI softmodem: _Assert_Exit_
+[NR_RRC]   Entering main loop of NR_RRC message task
+[0m

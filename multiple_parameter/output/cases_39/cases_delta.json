@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_39.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Zero PUSCH threads, causing uplink processing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Zero MIMO layers, causing transmission failure.",
+      "explanation_zh": "零個 MIMO 層，導致傳輸失敗。"
+    }
+  }
+]

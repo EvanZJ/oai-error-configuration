@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_364.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB ID to an invalid format will cause parsing errors."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [110, 110],
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting Ta4 timing parameters to identical values will cause timing inconsistency and synchronization failures.",
+      "explanation_zh": "將 Ta4 時序參數設定為相同的值會導致時序不一致和同步失敗。"
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_227.json",
+    "cu": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [285, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting T1a_cp_dl to identical values will cause timing inconsistency in the front-haul configuration and prevent proper synchronization.",
+      "explanation_zh": "將 T1a_cp_dl 設定為相同的值會導致前傳配置中的時序不一致，並阻止正確的同步。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [110, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 to identical values will cause timing inconsistency in the front-haul configuration and prevent proper synchronization.",
+      "explanation_zh": "將 Ta4 設定為相同的值會導致前傳配置中的時序不一致，並阻止正確的同步。"
+    }
+  }
+]

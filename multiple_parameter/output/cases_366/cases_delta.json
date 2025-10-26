@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_366.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting AMF IP to the same as CU's local_s_address '127.0.0.5' will cause IP range conflict and routing failure to AMF."
+    }
+  },
+  {
+    "filename": "du_case_366.json",
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 to [180, 110] (min > max) will cause timing misalignment and front-haul synchronization failure.",
+      "explanation_zh": "將 Ta4 設定為 [180, 110]（最小值 > 最大值）會導致定時錯位並造成前傳同步失敗。"
+    }
+  }
+]

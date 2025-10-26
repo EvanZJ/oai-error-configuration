@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_316.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation": "Setting GNB_PORT_FOR_S1U to 0 (invalid port number) will cause S1-U interface binding failure and GTP tunnel establishment rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation": "Setting remote_n_portc to 0 (invalid port) will cause F1-C interface connection failure and DU setup rejection."
+    }
+  }
+]

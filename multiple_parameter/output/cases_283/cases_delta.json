@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_283.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the AMF IP address to an unreachable IP will cause connection failure and prevent NG interface setup.",
+      "explanation_zh": "將 AMF IP 地址設定為無法連接的 IP 會導致連接失敗，並阻止 NG 接口設置。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 100,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PRACH message 1 frequency start to an out-of-range value will cause RACH frequency misalignment and prevent UE random access.",
+      "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為超出範圍的值會導致 RACH 頻率錯位，並阻止 UE 隨機存取。"
+    }
+  }
+]

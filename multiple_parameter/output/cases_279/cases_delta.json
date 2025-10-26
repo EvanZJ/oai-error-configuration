@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_279.json",
+    "cu": {
+      "modified_key": "GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the NG-AMF IP to an unreachable address will cause SCTP connection failure and prevent control plane setup."
+    },
+    "du": {
+      "modified_key": "ul_offstToCarrier",
+      "original_value": 0,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the uplink carrier offset to an out-of-range value will cause frequency misalignment and prevent proper uplink carrier allocation and UE transmission.",
+      "explanation_zh": "將上行載波偏移設定為超出範圍的值會導致頻率錯位，並阻止正確的上行載波分配和 UE 傳輸。"
+    }
+  }
+]

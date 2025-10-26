@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_329.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting local SCTP address to unreachable subnet '10.0.0.1' will cause F1 interface binding failure and connection issues."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting local N interface address to unreachable subnet '10.0.0.1' will cause F1 interface binding failure and connection issues.",
+      "explanation_zh": "將本地 N 介面地址設定為無法到達的子網路 '10.0.0.1' 將導致 F1 介面綁定失敗和連線問題。"
+    }
+  }
+]

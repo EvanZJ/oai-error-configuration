@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_38.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Zero SCTP output streams, causing SCTP association failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Zero SCTP output streams, causing SCTP association failure.",
+      "explanation_zh": "零個 SCTP 輸出流，導致 SCTP 關聯失敗。"
+    }
+  }
+]

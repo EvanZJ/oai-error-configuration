@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_169.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting AMF IP address to null causes missing value error, preventing NG-AMF interface establishment and causing setup failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].sib1_tda",
+      "original_value": 15,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SIB1 timing advance to 0 causes timing misalignment, leading to SIB1 broadcast failure and cell discovery issues.",
+      "explanation_zh": "將 SIB1 定時提前設定為 0 會導致定時錯位，造成 SIB1 廣播失敗和小區發現問題。"
+    }
+  }
+]

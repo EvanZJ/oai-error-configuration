@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_378.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local S address to null causes missing value error, preventing F1 socket binding and DU connection establishment."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting remote N address to the same as local N address causes IP conflict, leading to F1 communication loopback and interface failure."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_304.json",
+    "cu": {
+      "modified_key": "local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP control port to 0 (invalid port) will cause SCTP socket binding failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote N control port to 0 (invalid port) will cause connection failure to the CU and F1 interface setup errors."
+    }
+  }
+]

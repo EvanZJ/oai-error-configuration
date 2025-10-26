@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_393.json",
+    "cu": {
+      "modified_key": "mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting mnc_length to 3 while mnc is 1 creates a logical contradiction, as the length does not match the actual MNC value, causing PLMN validation failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting tr_s_preference to an invalid enum 'invalid' will cause configuration validation failure, preventing proper MAC RLC setup.",
+      "explanation_zh": "將 tr_s_preference 設定為無效的枚舉值 'invalid' 會導致配置驗證失敗，阻止正確的 MAC RLC 設定。"
+    }
+  }
+]

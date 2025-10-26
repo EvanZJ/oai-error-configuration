@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_281.json",
+    "cu": {
+      "modified_key": "remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote SCTP address to an unreachable IP will cause connection failure and prevent F1 interface setup."
+    },
+    "du": {
+      "modified_key": "prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 100,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PRACH message 1 frequency start to an out-of-range value will cause RACH frequency misalignment and prevent UE random access.",
+      "explanation_zh": "將 PRACH 訊息 1 頻率起始設定為超出範圍的值會導致 RACH 頻率錯位，並阻止 UE 隨機存取。"
+    }
+  }
+]

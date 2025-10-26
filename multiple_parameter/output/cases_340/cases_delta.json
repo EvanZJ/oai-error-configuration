@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_340.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_s_portc to 0 will cause F1-C remote port connection failure and prevent F1 interface setup."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_n_portc to 0 will cause F1-C local port binding failure and prevent F1 interface establishment."
+    }
+  }
+]

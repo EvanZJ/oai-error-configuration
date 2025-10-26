@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_275.json",
+    "cu": {
+      "modified_key": "integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.1.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the remote network address to an unreachable subnet IP will cause routing failure and prevent F1 interface connection to the CU.",
+      "explanation_zh": "將遠端網路地址更改為不可達的子網 IP 會導致路由失敗，並阻止與 CU 的 F1 介面連接。"
+    }
+  }
+]

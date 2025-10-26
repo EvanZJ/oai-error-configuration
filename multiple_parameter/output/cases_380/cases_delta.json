@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_380.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local S port C to 70000 exceeds valid port range, causing socket creation failure and F1 control plane connection rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SSB block power to 100 dBm exceeds maximum allowed power, leading to transmission hardware failure and cell broadcast errors."
+    }
+  }
+]

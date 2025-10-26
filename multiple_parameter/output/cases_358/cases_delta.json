@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_358.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the remote S address to an unreachable IP (10.0.0.1) will cause connectivity failures between CU and DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting remote N address to the same as local N address creates IP conflicts, preventing proper network communication.",
+      "explanation_zh": "將遠端 N 地址設定為與本地 N 地址相同會建立 IP 衝突，阻止正確的網路通訊。"
+    }
+  }
+]

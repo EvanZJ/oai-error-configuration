@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_06.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_if_name",
+      "original_value": "lo",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting the local S interface name to an empty string will cause interface binding failures and prevent SCTP connections."
+    },
+    "du": {
+      "modified_key": "RUs[0].ru_thread_core",
+      "original_value": 6,
+      "error_value": 100,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the RU thread core to 100, which exceeds the available CPU cores, will cause thread allocation failures.",
+      "explanation_zh": "將 RU 線程核心設定為 100，超過可用 CPU 核心數量，將導致線程分配失敗。"
+    }
+  }
+]

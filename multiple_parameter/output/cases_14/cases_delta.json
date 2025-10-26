@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_14.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the local SCTP address to an unreachable IP (10.0.0.1) will cause binding failures and prevent the CU from establishing F1 connections."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the local N address to the same as the remote N address (127.0.0.5) creates an IP conflict, leading to network interface binding issues and F1 connection failures.",
+      "explanation_zh": "將本地 N 地址設定為與遠端 N 地址相同 (127.0.0.5) 會造成 IP 衝突，導致網路介面綁定問題和 F1 連接失敗。"
+    }
+  }
+]

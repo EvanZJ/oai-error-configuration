@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_303.json",
+    "cu": {
+      "modified_key": "local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the local SCTP address to the same as remote SCTP address '127.0.0.3' will cause IP address conflict and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 timing parameters with min value greater than max value [180, 110] will cause timing misalignment and front-haul configuration errors."
+    }
+  }
+]

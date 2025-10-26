@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_170.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_name",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "invalid@name",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB name to invalid format with special characters causes configuration validation failure and rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 3840,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing gNB_ID from string to number causes type mismatch, leading to JSON parsing errors or configuration rejection.",
+      "explanation_zh": "將 gNB_ID 從字串改為數字會導致類型不匹配，造成 JSON 解析錯誤或配置被拒絕。"
+    }
+  }
+]

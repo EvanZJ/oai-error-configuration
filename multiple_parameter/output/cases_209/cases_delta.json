@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_209.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong_type",
+      "explanation_en": "Changed tracking area code from integer to string, causing CU configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong_type",
+      "explanation_en": "Changed tracking area code from integer to string, causing DU configuration parsing failure."
+    }
+  }
+]

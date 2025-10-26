@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_51.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed nr_cellid from 1 to 0, which is out of range for valid NR cell IDs (must be between 1-1007), causing cell identification failure and preventing UE cell selection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed nr_cellid from 1 to 0, which is out of range for valid NR cell IDs (must be between 1-1007), causing cell identification failure and preventing UE cell selection.",
+      "explanation_zh": "将nr_cellid从1更改为0，这超出了有效NR小区ID的范围（必须在1-1007之间），导致小区识别失败，从而阻止UE小区选择。"
+    }
+  }
+]

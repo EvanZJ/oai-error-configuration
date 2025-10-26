@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_49.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed Num_Threads_PUSCH from 8 to 0, which is out of range for valid thread counts (must be at least 1), causing thread allocation failure and preventing uplink processing."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Changed absoluteFrequencySSB from 641280 to 0, which is out of range for valid SSB frequencies (must be positive and within band limits), causing frequency misalignment that prevents SSB transmission and cell discovery.",
+      "explanation_zh": "将absoluteFrequencySSB从641280更改为0，这超出了有效SSB频率的范围（必须为正数且在频带限制内），导致频率错位，从而阻止SSB传输和小区发现。"
+    }
+  }
+]

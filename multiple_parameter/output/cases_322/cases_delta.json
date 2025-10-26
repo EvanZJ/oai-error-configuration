@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_322.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Setting remote_s_address to '10.0.0.1' (unreachable subnet) will cause F1 interface connection failure to DU and setup rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation": "Ta4 timing parameter has inconsistent range [180, 110] where min > max, causing timing misalignment and front-haul synchronization failure."
+    }
+  }
+]

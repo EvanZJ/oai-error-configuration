@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_356.json",
+    "cu": {
+      "modified_key": "NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "127.0.0.5",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the AMF IP to a loopback address (127.0.0.5) creates IP range conflicts, preventing proper network connectivity and AMF reachability."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Swapping Ta4 timing parameters to [180, 110] creates a logical contradiction where the upper bound is less than the lower bound, causing timing misalignment and front-haul synchronization failures.",
+      "explanation_zh": "將 Ta4 時序參數交換為 [180, 110] 會建立邏輯矛盾，其中上限小於下限，導致時序錯位和前傳同步失敗。"
+    }
+  }
+]

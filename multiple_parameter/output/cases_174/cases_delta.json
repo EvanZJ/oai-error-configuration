@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_174.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP in-streams to 0 causes invalid SCTP configuration, leading to F1 interface connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting NR cell ID to 0 causes invalid cell identification, leading to cell configuration rejection and setup failure.",
+      "explanation_zh": "將 NR 小區 ID 設定為 0 會導致無效的小區識別，造成小區配置被拒絕和設定失敗。"
+    }
+  }
+]

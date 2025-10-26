@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_02.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the CU's NG-AMF IP address to the same as the AMF IP (192.168.70.132) will cause IP address conflicts, preventing proper network interface configuration and leading to connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640009,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Changing the DL absolute frequency point A to 640009 misaligns it with the SSB frequency (641280), causing synchronization issues and cell setup failures.",
+      "explanation_zh": "將下行鏈路絕對頻率點 A 更改為 640009 會使其與 SSB 頻率 (641280) 不對齊，導致同步問題和細胞設置失敗。"
+    }
+  }
+]

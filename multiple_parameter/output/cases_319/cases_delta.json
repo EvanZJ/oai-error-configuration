@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_319.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation": "Setting local_s_portd to 0 (invalid port number) will cause F1-U interface binding failure and GTP tunnel rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation": "Setting local_n_portd to 0 (invalid port) will cause F1-U interface binding failure and GTP tunnel establishment rejection."
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_117.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP data port to 0 (invalid port) will cause SCTP socket binding failure, preventing F1-U connection establishment between CU and DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local N data port to 0 (invalid port) will cause SCTP socket binding failure, preventing F1-U connection establishment between DU and CU.",
+      "explanation_zh": "將本地 N 數據端口設定為 0（無效端口）會導致 SCTP 套接字綁定失敗，防止 DU 與 CU 之間建立 F1-U 連接。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_386.json",
+    "cu": {
+      "modified_key": "NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable_elements",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NG_AMF to an unreachable IP '10.0.0.1' will cause AMF connection failure, preventing NG interface communication and leading to system initialization failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing Ta4 from [110, 180] to [180, 110] creates timing misalignment where the upper bound is less than the lower bound, causing logical contradiction in front-haul timing parameters and potential synchronization errors.",
+      "explanation_zh": "將 Ta4 從 [110, 180] 更改為 [180, 110] 會導致時序錯位，其中上限小於下限，造成前傳時序參數中的邏輯矛盾，並可能導致同步錯誤。"
+    }
+  }
+]

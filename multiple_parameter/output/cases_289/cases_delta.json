@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_289.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 0 will cause invalid GTP-U port configuration and prevent S1-U interface setup.",
+      "explanation_zh": "將 GNB_PORT_FOR_S1U 設定為 0 會導致無效的 GTP-U 端口配置，並阻止 S1-U 接口設置。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting T1a_cp_dl with upper bound less than lower bound will cause timing misalignment and prevent proper front-haul synchronization.",
+      "explanation_zh": "將 T1a_cp_dl 的上限設定為小於下限會導致時序錯位，並阻止正確的前傳同步。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_184.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP data port to 0 (out of range) will cause SCTP connection failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local N data port to 0 (out of range) will cause routing failure and prevent proper F1 interface connection.",
+      "explanation_zh": "將本地 N 資料埠設定為 0（超出範圍）會導致路由失敗，並防止正確的 F1 介面連接。"
+    }
+  }
+]

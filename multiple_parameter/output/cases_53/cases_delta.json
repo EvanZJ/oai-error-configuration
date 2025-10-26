@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_53.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Changed tr_s_preference from 'f1' to 'invalid', which is invalid enum, causing unknown transport preference that prevents F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Changed tr_s_preference from 'local_L1' to 'invalid', which is invalid enum, causing unknown transport preference that prevents F1 interface setup.",
+      "explanation_zh": "将tr_s_preference从'local_L1'更改为'invalid'，这是无效枚举，导致未知传输偏好，从而阻止F1接口设置。"
+    }
+  }
+]

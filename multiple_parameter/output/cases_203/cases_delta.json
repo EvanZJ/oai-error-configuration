@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_203.json",
+    "cu": {
+      "modified_key": "NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Set CU's NG-AMF IP to the same as AMF IP, causing IP address conflict and unreachable AMF."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Reversed timing range (min > max), causing timing misalignment and RU synchronization failure."
+    }
+  }
+]

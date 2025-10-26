@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_85.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "AMF IP address changed to 10.0.0.1, which is unreachable and causes NG interface connection failures."
+    }
+  },
+  {
+    "filename": "du_case_85.json",
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting tracking_area_code to -1, which is out of the valid range (typically 0 or positive), causing invalid TAC configuration.",
+      "explanation_zh": "将 tracking_area_code 设置为 -1，这超出了有效范围（通常为 0 或正数），导致无效的 TAC 配置。"
+    }
+  }
+]

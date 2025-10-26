@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_21.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP control port to 0 will cause socket binding failures and prevent F1 control plane establishment."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the number of TX antennas to 0 will cause transmission failures and prevent RF signal generation.",
+      "explanation_zh": "將 TX 天線數量設定為 0 會導致傳輸失敗，並阻止 RF 信號產生。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_354.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting transport S preference to unknown 'invalid' will cause configuration validation error and system startup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_n_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting transport N preference to unknown 'invalid' will cause configuration validation error and system startup failure."
+    }
+  }
+]

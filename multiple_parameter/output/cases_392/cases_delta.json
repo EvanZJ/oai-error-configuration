@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_392.json",
+    "cu": {
+      "modified_key": "local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local_s_address to null creates a missing value, causing interface binding failure and preventing proper F1 setup."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": "-25",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing ssPBCH_BlockPower from integer -25 to string \"-25\" will cause type validation failure in configuration parsing, leading to system initialization errors.",
+      "explanation_zh": "將 ssPBCH_BlockPower 從整數 -25 更改為字符串 \"-25\" 會導致配置解析中的類型驗證失敗，導致系統初始化錯誤。"
+    }
+  }
+]

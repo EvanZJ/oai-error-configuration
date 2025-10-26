@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_180.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the GNB port for S1U to 0 (out of range) will cause routing failure and prevent proper S1U interface connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the DL absolute frequency point A to 0 (out of range) will cause frequency misalignment and lead to downlink transmission failure.",
+      "explanation_zh": "將 DL 絕對頻率點 A 設定為 0（超出範圍）會導致頻率錯位，並造成下行鏈路傳輸失敗。"
+    }
+  }
+]

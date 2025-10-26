@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_349.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "8",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting Num_Threads_PUSCH to string '8' instead of integer will cause type validation error and configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [196, 96],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting T1a_up to [196, 96] creates inconsistent timing parameters (maximum before minimum), causing front-haul timing misalignment and system fault."
+    }
+  }
+]

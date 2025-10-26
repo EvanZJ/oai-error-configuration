@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_369.json",
+    "cu": {
+      "modified_key": "local_s_portd",
+      "original_value": 2152,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portd to 70000 (exceeds valid port range) will cause socket binding failure and F1 data interface error."
+    }
+  },
+  {
+    "filename": "du_case_369.json",
+    "du": {
+      "modified_key": "local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local_n_address to null will cause missing IP address and front-haul interface binding failure.",
+      "explanation_zh": "將 local_n_address 設定為 null 會導致 IP 地址缺失並造成前傳介面綁定失敗。"
+    }
+  }
+]

@@ -1,0 +1,18 @@
+[
+    {
+      "filename": "cu_case_409.json",
+      "cu": "remote_s_address",
+      "original": "127.0.0.3",
+      "error": "192.168.1.1",
+      "error_type": "unreachable elements",
+      "explanation": "Unreachable IP address in different subnet causing routing failure."
+    },
+    {
+      "filename": "du_case_409.json",
+      "du": "remote_n_address",
+      "original": "127.0.0.5",
+      "error": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation": "Unreachable IP address in different subnet causing routing failure."
+    }
+  ]

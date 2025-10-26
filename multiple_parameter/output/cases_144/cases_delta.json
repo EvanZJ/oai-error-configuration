@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_144.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 1234,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting gNB ID to number instead of string causes type mismatch and configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 1234,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting gNB ID to number instead of string causes type mismatch and configuration parsing failure."
+    }
+  }
+]

@@ -1,0 +1,30 @@
+[
+  {
+    "filename": "cu_case_266.json",
+    "cu_modifications": [
+      {
+        "modified_key": "gNBs.local_s_address",
+        "original_value": "127.0.0.5",
+        "error_value": "10.0.0.1",
+        "error_type": "unreachable_elements",
+        "explanation": "Setting local_s_address to an unreachable IP (10.0.0.1) will prevent F1 interface binding and cause DU-CU communication failure.",
+        "explanation_zh": "將 local_s_address 設定為不可達的 IP (10.0.0.1) 會阻止 F1 接口綁定，並導致 DU-CU 通信失敗。"
+      }
+    ],
+    "du_modifications": []
+  },
+  {
+    "filename": "du_case_266.json",
+    "cu_modifications": [],
+    "du_modifications": [
+      {
+        "modified_key": "fhi_72.fh_config[0].Ta4",
+        "original_value": [110, 180],
+        "error_value": [0, 180],
+        "error_type": "out_of_range",
+        "explanation": "Setting Ta4 lower bound to 0, below the valid timing range, will cause front-haul timing misalignment and synchronization failure.",
+        "explanation_zh": "將 Ta4 下限設定為 0，低於有效時序範圍，會導致前傳時序錯位和同步失敗。"
+      }
+    ]
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_41.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_name",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Empty gNB name, causing configuration validation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Empty gNB name, causing configuration validation failure.",
+      "explanation_zh": "空的 gNB 名稱，導致配置驗證失敗。"
+    }
+  }
+]

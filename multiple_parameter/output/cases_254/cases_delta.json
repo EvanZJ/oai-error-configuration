@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_254.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_X2C",
+      "original_value": "192.168.70.134",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "GNB_IPV4_ADDRESS_FOR_X2C changed from '192.168.70.134' to '192.168.70.132', creating IP conflict and unreachable routing for X2-C interface, causing connection failures between CU and DU.",
+      "explanation_zh": "GNB_IPV4_ADDRESS_FOR_X2C 从 '192.168.70.134' 更改为 '192.168.70.132'，造成 IP 冲突和 X2-C 接口不可达路由，导致 CU 和 DU 之间的连接失败。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.132",
+      "error_type": "unreachable_elements",
+      "explanation_en": "remote_n_address changed from '127.0.0.5' to '192.168.70.132', which is unreachable from DU's network, causing F1 interface routing failures and preventing DU from connecting to CU.",
+      "explanation_zh": "remote_n_address 从 '127.0.0.5' 更改为 '192.168.70.132'，该地址从 DU 网络不可达，导致 F1 接口路由失败，阻止 DU 连接到 CU。"
+    }
+  }
+]

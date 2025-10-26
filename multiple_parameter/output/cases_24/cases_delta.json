@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_24.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP_INSTREAMS to an out-of-range value 999 will cause SCTP stream negotiation failures, leading to connection establishment errors and unreachable routing to DU or AMF."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting dl_frequencyBand to an invalid out-of-range value 999 will cause frequency band misalignment, resulting in invalid downlink carrier configurations and cell initialization failures.",
+      "explanation_zh": "將 dl_frequencyBand 設定為無效的超出範圍值 999 會導致頻率帶錯位，造成無效的下行載波配置和細胞初始化失敗。"
+    }
+  }
+]

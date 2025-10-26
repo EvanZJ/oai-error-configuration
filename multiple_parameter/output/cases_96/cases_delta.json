@@ -1,0 +1,20 @@
+[
+    {
+      "filename": "cu_case_96.json",
+      "cu": {
+        "modified_key": "gNBs.local_s_portc",
+        "original_value": 501,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting local_s_portc to 0, which is an invalid port number (ports must be > 0), causing SCTP binding failures."
+      },
+      "du": {
+        "modified_key": "gNBs[0].remote_s_portc",
+        "original_value": 501,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting remote_s_portc to 0, which is an invalid port number (ports must be > 0), causing SCTP connection failures.",
+        "explanation_zh": "将 remote_s_portc 设置为 0，这是一个无效的端口号（端口必须 > 0），导致 SCTP 连接失败。"
+      }
+    }
+  ]

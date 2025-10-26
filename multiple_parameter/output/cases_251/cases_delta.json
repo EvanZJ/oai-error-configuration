@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "cu_case_251.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_PORT_FOR_X2C",
+      "original_value": 36422,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "GNB_PORT_FOR_X2C changed from 36422 to 70000, which is above the valid port range (1-65535). This simulates an invalid port configuration that would cause connection failures in X2-C interface.",
+      "explanation_zh": "GNB_PORT_FOR_X2C 从 36422 更改为 70000，超出有效端口范围 (1-65535)。这模拟了 X2-C 接口中会导致连接失败的无效端口配置。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "preambleReceivedTargetPower changed from -96 to 0, which is above the valid range for power levels. This simulates an invalid PRACH power threshold that would cause random access failures.",
+      "explanation_zh": "preambleReceivedTargetPower 从 -96 更改为 0，高于功率水平的有效范围。这模拟了会导致随机接入失败的无效 PRACH 功率阈值。"
+    }
+  }
+]

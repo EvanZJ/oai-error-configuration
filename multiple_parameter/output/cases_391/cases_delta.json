@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_391.json",
+    "cu": {
+      "modified_key": "gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xe00x",
+      "error_type": "invalid_format",
+      "explanation_en": "Changing gNB_ID from \"0xe00\" to \"0xe00x\" introduces an invalid character 'x', causing format validation failure and configuration rejection."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting physCellId to 1008 exceeds the valid range (0-1007), causing cell ID validation failure and preventing proper cell setup.",
+      "explanation_zh": "將 physCellId 設定為 1008 超過有效範圍 (0-1007)，導致小區 ID 驗證失敗，並阻止正確的小區設定。"
+    }
+  }
+]

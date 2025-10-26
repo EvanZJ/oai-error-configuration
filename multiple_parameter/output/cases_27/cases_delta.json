@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_27.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_name",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting gNB_name to an empty string will cause name validation errors, leading to configuration rejection or system identification issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting gNB_name to an empty string will cause name validation errors, leading to configuration rejection or system identification issues.",
+      "explanation_zh": "將 gNB_name 設定為空字串會導致名稱驗證錯誤，造成配置拒絕或系統識別問題。"
+    }
+  }
+]

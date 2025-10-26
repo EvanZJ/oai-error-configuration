@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_336.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting AMF IP to an unreachable address will cause NG interface connection failure and prevent CU-AMF communication."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting F1 remote address to an unreachable IP will cause DU-CU F1 interface connection failure."
+    }
+  }
+]

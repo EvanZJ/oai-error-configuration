@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_23.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid enum 'invalid' will cause logging configuration validation errors, potentially leading to system startup failures or undefined logging behavior."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [999, 999],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Ta4 timing parameters to out-of-range values [999, 999] will cause timing misalignment in the front-haul interface, leading to synchronization failures, degraded performance, or connection drops between DU and RU.",
+      "explanation_zh": "將 Ta4 定時參數設定為超出範圍的值 [999, 999] 會導致前傳介面的定時錯位，造成同步失敗、效能下降或 DU 與 RU 之間的連接中斷。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_363.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local S address to null will cause network interface binding failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xe00x",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB ID to an invalid hex format will cause parsing errors.",
+      "explanation_zh": "將 gNB ID 設定為無效的十六進制格式會導致解析錯誤。"
+    }
+  }
+]

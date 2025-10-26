@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_260.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "GNB_IPV4_ADDRESS_FOR_NG_AMF changed from '192.168.70.132' to '10.0.0.1', which is in a different subnet and unreachable, causing NG-AMF interface routing failures and preventing CU from connecting to AMF.",
+      "explanation_zh": "GNB_IPV4_ADDRESS_FOR_NG_AMF 从 '192.168.70.132' 更改为 '10.0.0.1'，该地址位于不同子网且不可达，导致 NG-AMF 接口路由失败，阻止 CU 连接到 AMF。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "remote_n_address changed from '127.0.0.5' to '10.0.0.1', which is in a different subnet and unreachable, causing F1 interface routing failures and preventing DU from connecting to CU.",
+      "explanation_zh": "remote_n_address 从 '127.0.0.5' 更改为 '10.0.0.1'，该地址位于不同子网且不可达，导致 F1 接口路由失败，阻止 DU 连接到 CU。"
+    }
+  }
+]

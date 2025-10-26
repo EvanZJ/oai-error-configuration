@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_30.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to an invalid format 'invalid' will cause gNB ID validation errors, leading to configuration rejection or system identification issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to an invalid format 'invalid' will cause gNB ID validation errors, leading to configuration rejection or system identification issues.",
+      "explanation_zh": "將 gNB_ID 設定為無效格式 'invalid' 會導致 gNB ID 驗證錯誤，造成配置拒絕或系統識別問題。"
+    }
+  }
+]

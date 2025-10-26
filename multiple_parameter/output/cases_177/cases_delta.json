@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_177.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the GNB IPv4 address for NGU to an unreachable IP '10.0.0.1' will cause routing failure and prevent proper NGU connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote N address to an unreachable IP '10.0.0.1' will cause routing failure and prevent proper F1 interface connection.",
+      "explanation_zh": "將遠端 N 位址設定為無法到達的 IP '10.0.0.1' 會導致路由失敗，並防止正確的 F1 介面連接。"
+    }
+  }
+]

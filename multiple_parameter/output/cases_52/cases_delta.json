@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_52.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_name",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Changed gNB_name from 'gNB-Eurecom-CU' to '', which is missing value, causing gNB identification failure and preventing proper network management."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Changed gNB_name from 'gNB-Eurecom-DU' to '', which is missing value, causing gNB identification failure and preventing proper network management.",
+      "explanation_zh": "将gNB_name从'gNB-Eurecom-DU'更改为''，这是缺失值，导致gNB识别失败，从而阻止正确的网络管理。"
+    }
+  }
+]

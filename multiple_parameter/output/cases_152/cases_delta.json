@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_152.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the tracking area code to 0, which is out of the valid range (1-16777215), will cause UE attachment failure due to invalid TAC."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the tracking area code to 0, which is out of the valid range (1-16777215), will cause UE attachment failure due to invalid TAC."
+    }
+  }
+]

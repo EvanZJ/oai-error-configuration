@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_291.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the NG-U IP address to an unreachable IP will cause connection failure and prevent NG-U interface setup.",
+      "explanation_zh": "將 NG-U IP 地址設定為無法連接的 IP 會導致連接失敗，並阻止 NG-U 接口設置。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_n_portd to 0 will cause invalid port configuration and prevent F1-D connection.",
+      "explanation_zh": "將 remote_n_portd 設定為 0 會導致無效的端口配置，並阻止 F1-D 連接。"
+    }
+  }
+]

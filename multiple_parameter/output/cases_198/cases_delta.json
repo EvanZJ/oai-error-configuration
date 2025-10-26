@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_198.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to 'invalid' will cause configuration rejection as gNB ID must be in hexadecimal format."
+    },
+    "du": {
+      "modified_key": "gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to 'invalid' will cause configuration rejection as gNB ID must be in hexadecimal format.",
+      "explanation_zh": "將 gNB_ID 設定為 'invalid' 會導致配置拒絕，因為 gNB ID 必須是十六進制格式。"
+    }
+  }
+]

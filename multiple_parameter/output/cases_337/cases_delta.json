@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_337.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Num_Threads_PUSCH to 0 will cause PUSCH thread allocation failure and uplink processing errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting dl_absoluteFrequencyPointA to match absoluteFrequencySSB will cause frequency domain misalignment and carrier configuration errors."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_397.json",
+    "cu": {
+      "modified_key": "NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing NG AMF IP to unreachable address '10.0.0.1' will prevent CU from connecting to AMF."
+    },
+    "du": {
+      "modified_key": "absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 640008,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting SSB frequency to the same as dl_absoluteFrequencyPointA (640008) causes frequency misalignment and synchronization issues."
+    }
+  }
+]

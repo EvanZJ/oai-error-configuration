@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_13.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the NGU IP address to the same as the AMF IP (192.168.70.132) creates an IP conflict, preventing proper network interface binding and causing connection failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul[0]",
+      "original_value": 285,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting T1a_cp_ul timing parameter to 0 causes timing misalignment, leading to synchronization issues and potential frame transmission failures in the DU.",
+      "explanation_zh": "將 T1a_cp_ul 定時參數設定為 0 會導致定時錯位，造成 DU 中的同步問題和潛在的幀傳輸失敗。"
+    }
+  }
+]

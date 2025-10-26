@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_04.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP port to 70000, which is outside the valid port range (0-65535), will cause socket binding failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing maxMIMO_layers from a number to a string 'two' will cause type validation errors and configuration rejection.",
+      "explanation_zh": "將 maxMIMO_layers 從數字更改為字符串 'two' 會導致類型驗證錯誤和配置拒絕。"
+    }
+  }
+]

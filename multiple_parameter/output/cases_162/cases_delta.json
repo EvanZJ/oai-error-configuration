@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_162.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the number of threads for PUSCH to 0 will cause processing failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up[0]",
+      "original_value": 96,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting T1a UP to 0 will cause timing misalignment and synchronization issues."
+    }
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "filename": "cu_case_81.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Local SCTP address changed to 10.0.0.1, which is not in the loopback range and may be unreachable, causing F1 interface connection failures."
+    }
+  },
+  {
+    "filename": "du_case_81.json",
+    "du": {
+      "modified_key": "gNBs[0].Num_Threads_PHY",
+      "original_value": null,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Num_Threads_PHY to 0, which is out of the valid range (typically 1 or more), causing potential thread allocation failures in PHY processing.",
+      "explanation_zh": "将 Num_Threads_PHY 设置为 0，这超出了有效范围（通常为 1 或更多），导致 PHY 处理中的线程分配失败。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_12.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": "001",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the MCC from a number to a string will cause type validation errors during configuration parsing, leading to rejection of the CU configuration."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+      "original_value": 2,
+      "error_value": 99,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting SSB periodicity to an invalid enum value (99) will cause the DU to fail synchronization and reject the configuration due to unsupported periodicity.",
+      "explanation_zh": "將 SSB 週期設定為無效的枚舉值 (99) 將導致 DU 同步失敗，並因不支援的週期而拒絕配置。"
+    }
+  }
+]

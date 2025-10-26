@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_311.json",
+    "cu": {
+      "modified_key": "local_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP data port to 0 (invalid port) will cause F1 data plane binding failure and prevent DU-CU data communication."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting T1a_cp_ul timing parameters with min value greater than max value [429, 285] will cause timing misalignment and front-haul configuration errors."
+    }
+  }
+]

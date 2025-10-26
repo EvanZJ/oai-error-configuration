@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_394.json",
+    "cu": {
+      "modified_key": "local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portc to 70000 exceeds the valid port range (0-65535), causing socket binding failure and preventing F1 interface communication."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local_n_address to null creates a missing value, causing interface binding failure and preventing proper F1 setup.",
+      "explanation_zh": "將 local_n_address 設定為 null 會建立缺失值，導致介面綁定失敗，並阻止正確的 F1 設定。"
+    }
+  }
+]

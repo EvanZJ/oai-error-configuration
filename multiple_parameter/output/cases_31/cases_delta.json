@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_31.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting mnc to an out-of-range value 999 will cause PLMN validation errors, leading to configuration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting mnc to an out-of-range value 999 will cause PLMN validation errors, leading to configuration rejection.",
+      "explanation_zh": "將 mnc 設定為超出範圍的值 999 會導致 PLMN 驗證錯誤，造成配置拒絕。"
+    }
+  }
+]

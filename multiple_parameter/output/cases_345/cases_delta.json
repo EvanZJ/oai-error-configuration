@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_345.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting integrity_algorithms[0] to an unknown enum will cause security negotiation failure and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting T1a_cp_ul to inconsistent timing values will cause front-haul uplink timing misalignment and data transmission errors."
+    }
+  }
+]

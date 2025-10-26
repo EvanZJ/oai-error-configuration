@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_15.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP to a malformed address (192.168.70.132.1) will cause IP parsing errors and prevent NG connection establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the NR cell ID from a number to a string will cause type validation errors during DU configuration parsing.",
+      "explanation_zh": "將 NR 小區 ID 從數字改為字串會在 DU 配置解析期間造成類型驗證錯誤。"
+    }
+  }
+]

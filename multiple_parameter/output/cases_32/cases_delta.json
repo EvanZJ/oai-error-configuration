@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_32.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting sst to an out-of-range value 999 will cause SNSSAI validation errors, leading to configuration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].snssaiList[0].sst",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting sst to an out-of-range value 999 will cause SNSSAI validation errors, leading to configuration rejection.",
+      "explanation_zh": "將 sst 設定為超出範圍的值 999 會導致 SNSSAI 驗證錯誤，造成配置拒絕。"
+    }
+  }
+]

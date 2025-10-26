@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the AMF IP address to an unreachable subnet (10.0.0.1) will prevent the CU from connecting to the AMF, causing registration failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.1.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote N address to an unreachable subnet (192.168.1.1) will prevent the DU from connecting to the CU, causing F1 interface failures.",
+      "explanation_zh": "將遠端 N 地址更改為無法訪問的子網 (192.168.1.1) 將阻止 DU 連接到 CU，導致 F1 接口故障。"
+    }
+  }
+]

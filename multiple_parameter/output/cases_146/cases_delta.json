@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_146.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address",
+      "original_value": {"ipv4": "192.168.70.132"},
+      "error_value": {},
+      "error_type": "missing_value",
+      "explanation_en": "Removing the IPv4 address from AMF IP configuration causes missing value error and prevents AMF connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Removing the local N address from MACRLCs causes missing value error and prevents F1 interface setup."
+    }
+  }
+]

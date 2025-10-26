@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_59.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": 1270003,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the remote S address from a string to a number will cause type mismatch errors during configuration parsing and prevent proper F1 interface connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": 1270005,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the remote N address from a string to a number will cause type mismatch errors during configuration parsing and prevent proper F1 interface connection.",
+      "explanation_zh": "將遠端 N 地址從字串改為數字會導致配置解析期間的類型不匹配錯誤，並阻止正確的 F1 介面連接。"
+    }
+  }
+]

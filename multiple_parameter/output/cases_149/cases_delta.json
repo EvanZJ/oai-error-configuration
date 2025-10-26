@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_149.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote S port C to 0 causes invalid port configuration and prevents F1 connection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [0, 0],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Ta4 to zero values causes timing misalignment and disrupts front-haul synchronization."
+    }
+  }
+]

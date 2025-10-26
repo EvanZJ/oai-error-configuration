@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_202.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "eight",
+      "error_type": "wrong_type",
+      "explanation_en": "Changed thread count from integer to string, causing configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "RUs[0].clock_src",
+      "original_value": "internal",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Set clock source to unknown enum value, causing RU clock configuration failure."
+    }
+  }
+]

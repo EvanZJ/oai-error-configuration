@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_03.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea5",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the invalid enum 'nea5' will cause security negotiation failure and connection rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[1]",
+      "original_value": 429,
+      "error_value": 430,
+      "error_type": "timing misalignment",
+      "explanation_en": "Changing the T1a_cp_dl timing parameter to 430 introduces inconsistency with other timing parameters, causing synchronization issues.",
+      "explanation_zh": "將 T1a_cp_dl 定時參數更改為 430 會引入與其他定時參數的不一致性，導致同步問題。"
+    }
+  }
+]

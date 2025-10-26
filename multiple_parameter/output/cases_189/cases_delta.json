@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_189.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting amf_ip_address.ipv4 to unreachable IP '10.0.0.1' will cause AMF connection failure as the CU cannot establish NGAP connection to the AMF."
+    },
+    "du": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting amf_ip_address.ipv4 to unreachable IP '10.0.0.1' will cause AMF connection failure as the DU cannot establish NGAP connection to the AMF.",
+      "explanation_zh": "將 amf_ip_address.ipv4 設定為無法到達的 IP '10.0.0.1' 會導致 AMF 連接失敗，因為 DU 無法與 AMF 建立 NGAP 連接。"
+    }
+  }
+]
