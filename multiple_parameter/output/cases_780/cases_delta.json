@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_780.json",
+      "cu": {
+        "modified_key": "gNBs.0.security.integrity_algorithms",
+        "original_value": ["nia2"],
+        "error_value": ["invalid"],
+        "error_type": "invalid_enum",
+        "explanation_en": "Invalid integrity algorithm not supported in 5G NR security specifications."
+      }
+    },
+    {
+      "filename": "du_case_780.json",
+      "du": {
+        "modified_key": "gNBs.0.Ta4",
+        "original_value": [110,180],
+        "error_value": [180,110],
+        "error_type": "logical_contradiction",
+        "explanation_en": "Timing advance values are in descending order instead of ascending, causing timing misalignment."
+      }
+    }
+  ]

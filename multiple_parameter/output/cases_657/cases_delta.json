@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_657.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format will cause network unreachable errors and prevent NG interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 999999999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the absolute SSB frequency to an out-of-range value will cause frequency misalignment and SSB transmission failure."
+    }
+  }
+]

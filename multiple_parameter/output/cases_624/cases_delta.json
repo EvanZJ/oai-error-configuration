@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_624.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the CU's NGU IP to the same as AMF IP '192.168.70.132' causes address collision, preventing proper network interface configuration and NGU communication."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the remote N address to the same as local N address '127.0.0.3' causes IP collision, leading to F1 interface connection failures."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_692.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting amf_ip_address.ipv4 to a number instead of string will cause parsing errors and make the AMF unreachable due to incorrect data type."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [999, 999],
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Ta4 to [999, 999] exceeds valid timing range, causing front-haul timing misalignment and synchronization failures."
+    }
+  }
+]

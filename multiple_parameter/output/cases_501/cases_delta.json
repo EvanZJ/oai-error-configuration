@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_501.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.1.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the remote DU address to an IP in a different subnet makes the DU unreachable from the CU, preventing F1 interface establishment and causing system initialization failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [196, 96],
+      "error_type": "timing misalignment",
+      "explanation_en": "Reversing the uplink timing advance parameters causes misalignment in front-haul timing, leading to incorrect data transmission timing and potential packet loss or corruption."
+    }
+  }
+]

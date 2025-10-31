@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_598.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Malformed AMF IP address with extra octet, causing parsing errors."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Malformed local N IP address with extra octet, causing binding failures."
+    }
+  }
+]

@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_444.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 3152,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed remote S port D to a mismatched port, preventing proper F1-U interface connection with the DU.",
+      "explanation_zh": "更改遠程 S 端口 D 為不匹配的端口，防止正確的 F1-U 接口連接 DU。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 600,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed local N port C to a mismatched port, preventing proper F1 interface connection with the CU.",
+      "explanation_zh": "更改本地 N 端口 C 為不匹配的端口，防止正確的 F1 接口連接 CU。"
+    }
+  }
+]

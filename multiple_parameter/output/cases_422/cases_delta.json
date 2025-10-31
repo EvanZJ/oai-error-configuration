@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_422.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 502,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote S port for control to 502 instead of 500 prevents the CU from connecting to the DU's F1-C interface, leading to F1 setup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 502,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Setting the remote N port for control to 502 causes the DU to attempt connection on a mismatched port, disrupting F1-Northbound interface communication."
+    }
+  }
+]

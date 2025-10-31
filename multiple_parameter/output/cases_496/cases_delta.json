@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_496.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": "1",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the NR cell ID from integer to string will cause type validation errors, leading to cell configuration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the physical cell ID to 1008 exceeds the valid range (0-1007), causing cell ID collision or invalid configuration."
+    }
+  }
+]

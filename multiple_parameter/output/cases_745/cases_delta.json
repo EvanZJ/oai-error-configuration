@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_745.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_s_portc to 65536 (exceeds valid port range 0-65535) causes F1-C SCTP connection failure and CU-DU communication breakdown."
+    },
+    "du": {
+      "modified_key": "MACRLCs.0.remote_n_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_n_portc to 0 (invalid port) causes F1 interface connection failure and DU-CU reachability issues."
+    }
+  }
+]

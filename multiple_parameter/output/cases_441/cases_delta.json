@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_441.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changed GNB IPv4 address for NG AMF to an IP in the AMF's subnet, causing potential IP conflict and routing issues.",
+      "explanation_zh": "更改 GNB IPv4 地址為 NG AMF 為 AMF 子網中的 IP，導致潛在的 IP 衝突和路由問題。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.11",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed remote N address to an unreachable IP, preventing proper F1 interface connection with the CU.",
+      "explanation_zh": "更改遠程 N 地址為無法到達的 IP，防止正確的 F1 接口連接 CU。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_525.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.8.44",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the NG-AMF network interface IP to '192.168.8.44' creates IP range conflicts due to overlapping addresses, leading to NG interface communication failures and AMF unreachability."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641281,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying absoluteFrequencySSB to 641281 introduces frequency misalignment, causing SSB frequency mismatch that prevents UE cell search and synchronization."
+    }
+  }
+]

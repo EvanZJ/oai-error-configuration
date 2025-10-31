@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_468.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+      "original_value": 285,
+      "error_value": 286,
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the T1a_cp_dl timing parameter causes inconsistency in downlink timing advance, leading to synchronization issues and potential frame misalignment."
+    }
+  }
+]

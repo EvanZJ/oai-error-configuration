@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_538.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.133",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the AMF IP address to a conflicting value may cause IP address overlap or routing issues, preventing NG interface connectivity."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [286, 430],
+      "error_type": "timing misalignment",
+      "explanation_en": "Offsetting the T1a_cp_dl timing parameters introduces misalignment in front-haul downlink timing, potentially causing data transmission errors."
+    }
+  }
+]

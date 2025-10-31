@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_703.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the AMF IP address to a different subnet (10.0.0.1) makes the AMF unreachable due to wrong routing definitions, preventing NG interface establishment."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 100],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 timing parameters with the second value (100) less than the first (200) creates an inconsistent timing misalignment, causing configuration validation failure."
+    }
+  }
+]

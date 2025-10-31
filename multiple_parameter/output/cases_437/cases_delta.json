@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_437.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.8",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed remote_s_address to an unreachable IP, preventing proper F1 interface connection with the DU.",
+      "explanation_zh": "更改 remote_s_address 為無法到達的 IP，防止正確的 F1 接口連接 DU。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 642280,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altered absoluteFrequencySSB to a misaligned frequency, disrupting SSB synchronization and cell search.",
+      "explanation_zh": "更改 absoluteFrequencySSB 為不對齊的頻率，干擾 SSB 同步和細胞搜索。"
+    }
+  }
+]

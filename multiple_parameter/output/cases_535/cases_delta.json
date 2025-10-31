@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_535.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the local SCTP address to conflict with the remote SCTP address causes IP address overlap, leading to connection failures in the F1 interface."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 181],
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the Ta4 timing parameters introduces inconsistency in front-haul timing, potentially causing synchronization issues and degraded performance in the radio unit interface."
+    }
+  }
+]

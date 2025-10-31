@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_429.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.3",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed local_s_address to an unreachable IP, preventing proper F1 interface binding."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [97, 197],
+      "error_type": "timing misalignment",
+      "explanation_en": "Altered T1a_up timing parameters to cause inconsistency in uplink timing advance.",
+      "explanation_zh": "更改 T1a_up 定時參數以造成上行鏈路定時提前的不一致。"
+    }
+  }
+]

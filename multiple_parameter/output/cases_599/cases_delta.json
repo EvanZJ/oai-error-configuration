@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_599.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Set SCTP in-streams to zero, contradicting SCTP protocol requirements."
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Set SCTP in-streams to zero, contradicting SCTP protocol requirements."
+    }
+  }
+]

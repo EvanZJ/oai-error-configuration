@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_537.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.4",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote SCTP address to an unreachable IP prevents F1 interface connection establishment, leading to DU unavailability."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.4",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Altering the remote N address to an incorrect IP causes F1 network interface routing failures, disrupting CU-DU communication."
+    }
+  }
+]

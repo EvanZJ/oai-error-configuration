@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_483.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to an unknown enum value will cause security negotiation failures and prevent UE authentication and data encryption."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "out_of_range",
+      "explanation_en": "Modifying the physical cell ID to an out-of-range value will cause cell identification conflicts, leading to handover failures and UE connectivity issues."
+    }
+  }
+]

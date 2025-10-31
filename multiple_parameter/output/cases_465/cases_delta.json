@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_465.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.9.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the NG-AMF interface IP address to a different subnet (192.168.9.43) creates an unreachable IP range conflict, preventing CU from establishing proper NG-AMF connections and causing interface failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 1,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altering the PRACH message 1 frequency start by one unit introduces frequency misalignment, leading to RACH procedure failures and potential cell access issues in the DU."
+    }
+  }
+]

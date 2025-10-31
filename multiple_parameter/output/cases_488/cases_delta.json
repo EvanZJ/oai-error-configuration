@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_488.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": "501",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the local S port C from integer to string will cause type validation errors during configuration parsing, leading to startup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local N address to a malformed IP with extra dot will cause IP address validation errors, preventing network interface binding and connection establishment."
+    }
+  }
+]

@@ -1,0 +1,333 @@
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool2_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool3_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool4_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool5_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool6_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool7_-1: creating thread with affinity ffffffff, priority 97
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[PDCP]   pdcp init,usegtp usenetlink
+[0m[PDCP]   TUN: Opened socket oaitun_ue1 with fd nas_sock_fd[0]=97
+[0m[PDCP]   UE pdcp will use tun interface
+[0m[NR_MAC]   [UE0] Initializing MAC
+[0m[NR_MAC]   Initializing dl and ul config_request. num_slots = 20
+[0m[RLC]   Activated srb0 for UE 0
+[0m[93m[RLC]   SRB0 already exists for UE 0, do nothing
+[0m[PHY]   Set UE_fo_compensation 0, UE_scan_carrier 0, UE_no_timing_correction 0 
+, chest-freq 0, chest-time 0
+[0m[PHY]   Set UE nb_rx_antenna 1, nb_tx_antenna 1, threequarter_fs 0, ssb_start_subcarrier 516
+[0m[PHY]   SA init parameters. DL freq 3619200000 UL offset 0 SSB numerology 1 N_RB_DL 106
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[PHY]   Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[93m[PHY]   samples_per_subframe 61440/per second 61440000, wCP 57344
+[0m[PHY]   Initializing UE vars for gNB TXant 1, UE RXant 1
+[0m[PHY]   prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   UE 0 Setting N_TA_offset to 800 samples (factor 2.000000, UL Freq 3619200000, N_RB 106, mu 1)
+[0m[PHY]   HW: Configuring card 0, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 1, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 2, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 3, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 4, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 5, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 6, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 7, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   Intializing UE Threads for instance 0 (0x5a8b1d3b7330,0x75d91f4a3010)...
+[0m[UTIL]   threadCreate() for UEthread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_UE_stats: creating thread with affinity ffffffff, priority 1
+[0m[NR_RRC]   create TASK_RRC_NRUE 
+[0m[UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[HW]   Running as client: will connect to a rfsimulator server side
+[0m[ITTI]   Created Posix thread TASK_RRC_NRUE
+[0m[UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[HW]   [RRU] has loaded RFSIMULATOR device.
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[ITTI]   Created Posix thread TASK_NAS_NRUE
+[0m[SIM]   UICC simulation: IMSI=001010000000101, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=C42449363BBAD02B66D16BC975D77CC1, DNN=oai, SST=0x01, SD=0xffffff
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   Connection to 127.0.0.1:4043 established
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[93m[PHY]   SSB position provided
+[0m[93m[NR_PHY]   Starting sync detection
+[0m[PHY]   [UE thread Synch] Running Initial Synch 
+[0m[NR_PHY]   Starting cell search with center freq: 3619200000, bandwidth: 106. Scanning for 1 number of GSCN.
+[0m[NR_PHY]   Scanning GSCN: 0, with SSB offset: 516, SSB Freq: 0.000000
+[0m[PHY]   Initial sync: pbch decoded sucessfully, ssb index 0
+[0m[32m[NR_PHY]   Cell Detected with GSCN: 0, SSB SC offset: 516, SSB Ref: 0.000000, PSS Corr peak: 99 dB, PSS Corr Average: 60
+[0m[PHY]   [UE0] In synch, rx_offset 416896 samples
+[0m[PHY]   [UE 0] Measured Carrier Frequency offset 15 Hz
+[0m[32m[PHY]   Initial sync successful, PCI: 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200015 Hz, rx_freq 3619200015 Hz, tune_offset 0
+[0m[PHY]   Got synch: hw_slot_offset 27, carrier off 15 Hz, rxgain 0.000000 (DL 3619200015.000000 Hz, UL 3619200015.000000 Hz)
+[0m[32m[PHY]   UE synchronized! decoded_frame_rx=36 UE->init_sync_frame=0 trashed_frames=6
+[0m[PHY]   Resynchronizing RX by 416896 samples
+[0m[HW]   received write reorder clear context
+[0m[93m[HW]   Gap in writing to USRP: last written 26419199, now 26510559, gap 91360
+[0m[32m[NR_RRC]   SIB1 decoded
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 1/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   Initialization of 4-step contention-based random access procedure
+[0m[NR_MAC]   PRACH scheduler: Selected RO Frame 183, Slot 19, Symbol 0, Fdm 0
+[0m[PHY]   PRACH [UE 0] in frame.slot 183.19, placing PRACH in position 2828, msg1 frequency start 0 (k1 0), preamble_offset 0, first_nonzero_root_idx 0
+[0m[1;31m[NR_MAC]   Trying to process acknack for an inactive harq process (0)
+[0m[NR_MAC]   [UE 0][RAPROC][RA-RNTI 0005] Got BI RAR subPDU 267 ms
+[0m[NR_MAC]   [UE 0][RAPROC][RA-RNTI 010b] Got RAPID RAR subPDU
+[0m[32m[NR_MAC]   [UE 0][RAPROC][184.7] Found RAR with the intended RAPID 0
+[0m[93m[MAC]   received TA command 31
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[PHY]   RAR-Msg2 decoded
+[0m[32m[NR_MAC]   [RAPROC][184.17] RA-Msg3 transmitted
+[0m[MAC]   [UE 0]Frame 185 Contention resolution identity: 0x1fdec5db9a46 Terminating RA procedure
+[0m[32m[MAC]   [UE 0][185.10][RAPROC] RA procedure succeeded. CB-RA: Contention Resolution is successful.
+[0m[NR_RRC]   [UE0][RAPROC] Logical Channel DL-CCCH (SRB0), Received NR_RRCSetup
+[0m[RLC]   Added srb 1 to UE 0
+[0m[MAC]   Applying CellGroupConfig from gNodeB
+[0m[NR_RRC]   State = NR_RRC_CONNECTED
+[0m[NR_RRC]   [UE 0][RAPROC] Logical Channel UL-DCCH (SRB1), Generating RRCSetupComplete (bytes33)
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 4/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 4/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 5/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 5/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 6/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 7/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 7/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 8/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 9/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 9/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 10/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 11/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_PHY]   ============================================
+[0m[NR_PHY]   Harq round stats for Downlink: 11/0/0
+[0m[NR_PHY]   ============================================
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m

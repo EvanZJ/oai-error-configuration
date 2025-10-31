@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_440.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.10",
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changed GNB IPv4 address for NGU to an unreachable IP, causing routing issues for UPF communication.",
+      "explanation_zh": "更改 GNB IPv4 地址為 NGU 為無法到達的 IP，導致 UPF 通信的路由問題。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "logical contradiction",
+      "explanation_en": "Set local N address to the same as remote N address, causing logical contradiction in F1 interface configuration.",
+      "explanation_zh": "將本地 N 地址設定為與遠程 N 地址相同，導致 F1 接口配置中的邏輯矛盾。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_589.json",
+    "cu": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 501,
+      "error_value": 600,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changing the local N port C to 600 misaligns it with the expected port for NG interface, causing connection failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 600,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Modifying the local N port C to 600 disrupts the F1 interface binding, leading to communication errors between CU and DU."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_747.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_s_portd to 65536 (exceeds valid port range 0-65535) causes F1-D SCTP connection failure and CU-DU data plane communication breakdown."
+    },
+    "du": {
+      "modified_key": "MACRLCs.0.remote_n_portd",
+      "original_value": 2152,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_n_portd to 65536 (exceeds valid port range 0-65535) causes F1-D interface connection failure and DU data plane issues."
+    }
+  }
+]

@@ -87,21 +87,40 @@ def replace_key_value(conf_text: str, modified_key: str, error_value, original_v
     else:
         # 普通的 key = value;
         key = modified_key.split(".")[-1]
-        pattern = rf"({key}\s*=\s*)([^;]+)(;)"
-
+        
+        # First try quoted string pattern
+        pattern_quoted = rf'({key}\s*=\s*")([^"]+)(".*)'
+        formatted_value = str(error_value)
+        
+        def replacer_quoted(match):
+            old_val = match.group(2)
+            if original_value is not None:
+                comment = f"  # 修改: 原始值 {old_val} → 錯誤值 {error_value} / Modified: original {old_val} → error {error_value}"
+            else:
+                comment = f"  # 修改為 {error_value} / Modified to {error_value}"
+            return f'{match.group(1)}{formatted_value}{match.group(3)}{comment}'
+        
+        new_conf, count = re.subn(pattern_quoted, replacer_quoted, conf_text)
+        if count > 0:
+            return new_conf
+        
+        # If quoted pattern didn't match, try unquoted pattern
+        pattern_unquoted = rf"({key}\s*=\s*)([^;\s}}]+)([;\s}}])"
+        
         if isinstance(error_value, str) and not error_value.startswith("0x"):
             formatted_value = f"\"{error_value}\""
         else:
             formatted_value = str(error_value)
 
-        def replacer(match):
+        def replacer_unquoted(match):
+            old_val = match.group(2)
             if original_value is not None:
-                comment = f"  # 修改: 原始值 {original_value} → 錯誤值 {error_value} / Modified: original {original_value} → error {error_value}"
+                comment = f"  # 修改: 原始值 {old_val} → 錯誤值 {error_value} / Modified: original {old_val} → error {error_value}"
             else:
                 comment = f"  # 修改為 {error_value} / Modified to {error_value}"
             return f"{match.group(1)}{formatted_value}{match.group(3)}{comment}"
 
-        new_conf, count = re.subn(pattern, replacer, conf_text)
+        new_conf, count = re.subn(pattern_unquoted, replacer_unquoted, conf_text)
         if count == 0:
             print(f"⚠️ 警告: 參數 '{key}' 未在 baseline.conf 中找到，跳過此修改 / Warning: key '{key}' not found in baseline.conf, skipping this modification")
             return None

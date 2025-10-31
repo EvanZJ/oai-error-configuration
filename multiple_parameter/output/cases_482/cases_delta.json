@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_482.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MCC to an out-of-range value exceeding 999 will cause PLMN validation failures and prevent gNodeB registration with the core network."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Modifying the MCC to an invalid value will cause PLMN configuration rejection, leading to cell broadcast failures and UE attachment issues."
+    }
+  }
+]

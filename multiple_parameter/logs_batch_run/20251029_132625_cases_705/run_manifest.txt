@@ -1,0 +1,7 @@
+CASE_NAME=cases_705
+CU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_705/cu_case_705.conf
+DU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_705/du_case_705.conf
+UE_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf/ue_oai.conf
+START_TIME=2025-10-29T13:27:03+08:00
+DURATION=30s
+SOURCE_CASE_DIR=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_705

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_512.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.136",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the GNB IPv4 address for NG AMF to '192.168.70.136' creates IP range conflicts, causing NG interface connection issues due to overlapping subnet definitions."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Modifying the local N port D to 2153 introduces wrong routing definitions, leading to F1 interface connection failures due to port mismatch."
+    }
+  }
+]

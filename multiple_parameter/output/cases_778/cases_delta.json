@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_778",
+    "cu": {
+      "modified_key": "gNBs.0.local_s_address",
+      "original_value": "127.0.0.1",
+      "error_value": "192.168.70.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Modified local_s_address to '192.168.70.256', which is an invalid IP address (octet 256 > 255), causing unreachable local SCTP address and routing misconfiguration in CU."
+    },
+    "du": {
+      "modified_key": "gNBs.0.servingCellConfigCommon.absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 10000000,
+      "error_type": "out_of_range",
+      "explanation_en": "Modified absoluteFrequencySSB to 10000000, which is out of the valid frequency range for NR band 78, causing frequency misalignment and SSB configuration rejection in DU."
+    }
+  }
+]

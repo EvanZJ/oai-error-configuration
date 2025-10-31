@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_712.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portd to 0 (out of range for valid port numbers) will cause the CU to fail binding to the port, leading to unreachable F1 interface and DU disconnection."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_portd",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_n_portd to 0 (out of range for valid port numbers) will cause the DU to fail binding to the port, leading to unreachable F1 interface and CU disconnection."
+    }
+  }
+]

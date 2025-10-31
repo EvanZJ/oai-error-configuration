@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_485.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to an unknown enum value will cause security negotiation failures and prevent UE authentication and data integrity protection."
+    },
+    "du": {
+      "modified_key": "fhi_72.ru_addr[0]",
+      "original_value": "e8:c7:4f:25:80:ed",
+      "error_value": "e8:c7:4f:25:80:ed:00",
+      "error_type": "invalid_format",
+      "explanation_en": "Modifying the RU MAC address to an invalid format will cause fronthaul interface binding errors, leading to RU communication failures and cell transmission issues."
+    }
+  }
+]

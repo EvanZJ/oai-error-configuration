@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_658.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": "fivehundredone",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the local SCTP port to a string instead of an integer will cause type validation failure and prevent F1 interface binding."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": "zero",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the physical cell ID to a string instead of an integer will cause type mismatch and cell configuration rejection."
+    }
+  }
+]

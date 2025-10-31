@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_550.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.6",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the local SCTP address to an unreachable IP (127.0.0.6) will prevent F1 interface connectivity between CU and DU, causing setup failures and configuration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.6",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Modifying the remote N address to an unreachable IP (127.0.0.6) will disrupt F1 communication and routing, leading to connectivity issues with the CU and system faults."
+    }
+  }
+]

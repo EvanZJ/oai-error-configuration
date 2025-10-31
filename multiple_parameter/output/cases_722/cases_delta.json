@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_722.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.F1.local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portc to 70000 exceeds the valid port range (0-65535), causing socket binding failure on F1 interface."
+    },
+    "du": {
+      "modified_key": "MACRLCs.tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": 123,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting tr_s_preference to integer 123 instead of expected string enum causes configuration parsing failure."
+    }
+  }
+]

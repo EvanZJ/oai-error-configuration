@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_590.json",
+    "cu": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 500,
+      "error_value": 600,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changed remote_n_portc from 500 to 600, causing routing misalignment between CU and DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 600,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changed local_n_portc from 500 to 600, causing routing misalignment between CU and DU."
+    }
+  }
+]

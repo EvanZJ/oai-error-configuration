@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_522.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.1.100",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the remote SCTP address to an unreachable IP '192.168.1.100' will cause wrong routing definitions, preventing DU from reaching CU and leading to F1 interface connection failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [97, 197],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying T1a_up timing parameters to [97, 197] introduces timing misalignment, causing inconsistent uplink timing that leads to synchronization issues and potential frame loss in the front-haul interface."
+    }
+  }
+]

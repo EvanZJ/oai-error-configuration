@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_721.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.NG.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting remote_n_address to '127.0.0.3' (same as local_n_address) creates a logical contradiction where CU attempts to connect to itself, leading to NG interface failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting remote_n_address to '127.0.0.3' (same as local_n_address) creates a logical contradiction where DU attempts to connect to itself, leading to F1 interface failure."
+    }
+  }
+]

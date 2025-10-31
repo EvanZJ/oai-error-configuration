@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_416.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the GNB IPv4 address for NG AMF to an IP in the AMF's subnet (192.168.70.x) causes potential IP conflict and routing issues, preventing proper communication with the AMF."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Setting the remote N address to an unreachable IP (10.0.0.1) instead of the loopback address prevents the DU from establishing connection with the CU, leading to F1 interface failure."
+    }
+  }
+]

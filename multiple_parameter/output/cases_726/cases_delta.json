@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_726.json",
+    "cu": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+      "original_value": 6,
+      "error_value": 7,
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting dl_UL_TransmissionPeriodicity to 7 misaligns with expected timing, causing TDD frame structure failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 180],
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting Ta4 to [111, 180] misaligns timing advance parameters, causing uplink synchronization failure."
+    }
+  }
+]

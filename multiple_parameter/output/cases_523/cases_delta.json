@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_523.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 502,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP control port to 502 will cause wrong routing definitions, leading to SCTP connection failure as the DU is not listening on the mismatched port."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640009,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying dl_absoluteFrequencyPointA to 640009 introduces frequency misalignment, causing inconsistency between SSB and carrier frequencies that leads to downlink synchronization failures."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_542.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.7",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the local SCTP address to an incorrect IP prevents proper F1 interface binding, causing connection failures to the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641281,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Slightly offsetting the SSB absolute frequency introduces misalignment, potentially disrupting synchronization and cell search procedures."
+    }
+  }
+]

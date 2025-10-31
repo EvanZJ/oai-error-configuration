@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_635.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the NG-U interface IP to an unreachable address (10.0.0.1) will prevent proper UPF connectivity and cause NG-U setup failures, as the CU cannot reach the UPF at this invalid subnet."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the F1 remote address to an unreachable IP (10.0.0.1) will prevent the DU from establishing the F1 connection with the CU, leading to F1 setup failure and inability to forward user plane data."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_564.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.6",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP address to an unreachable IP will prevent F1 interface binding on the CU side, causing connection failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [286, 430],
+      "error_type": "timing misalignment",
+      "explanation_en": "Misaligning the T1a compression parameters for downlink will cause timing issues in front-haul processing, leading to data corruption or transmission delays."
+    }
+  }
+]

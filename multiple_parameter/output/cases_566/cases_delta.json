@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_566.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP data port to an incorrect value will prevent F1 data plane binding, causing data transmission failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the local N interface data port to a mismatched value will block F1-U data plane setup, leading to connectivity issues."
+    }
+  }
+]

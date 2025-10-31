@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_504.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the NG-AMF interface address to the same IP as the AMF causes IP range conflicts, preventing proper network interface configuration and leading to NG-AMF path failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "timing misalignment",
+      "explanation_en": "Reversing the timing advance parameters causes misalignment in front-haul timing, leading to incorrect data transmission timing and potential packet loss or corruption."
+    }
+  }
+]

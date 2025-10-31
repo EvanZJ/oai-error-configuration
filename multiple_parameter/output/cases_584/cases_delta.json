@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_584.json",
+    "cu": {
+      "modified_key": "gNBs[0].amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.140",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the AMF IPv4 address to an unreachable IP (192.168.70.140) will prevent the CU from establishing a connection to the AMF, causing NG interface initialization failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 3,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying the PRACH root sequence index to 3 may cause misalignment with the expected PRACH configuration, leading to random access failures."
+    }
+  }
+]

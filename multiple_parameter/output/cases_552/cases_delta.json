@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_552.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.133",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the AMF IP address to an unreachable IP (192.168.70.133) will prevent NG interface connectivity, causing AMF attachment failures and configuration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 181],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying the Ta4 timing parameters to [111, 181] introduces inconsistency in timing advance configuration, potentially causing synchronization issues, data transmission errors, and system faults in the DU."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_604.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting AMF IP address to invalid format '192.168.70.999' will cause IP parsing failure and NG interface establishment errors."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting local network address to invalid format '127.0.0.999' will cause IP parsing failure and F1 interface binding errors."
+    }
+  }
+]

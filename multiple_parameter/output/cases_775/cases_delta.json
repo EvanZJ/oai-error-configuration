@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_775",
+    "cu": {
+      "modified_key": "gNBs.0.local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Modified local_s_portc to 70000, which is out of the valid port range (0-65535), causing out_of_range error in CU configuration."
+    },
+    "du": {
+      "modified_key": "gNBs.0.servingCellConfigCommon.ul_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 500,
+      "error_type": "out_of_range",
+      "explanation_en": "Modified ul_carrierBandwidth to 500, which is out of the valid range for NR band 78 (typically 5-100 MHz), causing out_of_range error in DU configuration."
+    }
+  }
+]

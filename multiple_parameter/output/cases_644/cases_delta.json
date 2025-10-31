@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_644.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the MCC to a string 'one' instead of an integer will cause type validation errors in the PLMN configuration, preventing proper network identity setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the MCC to a string 'one' instead of an integer will lead to parsing errors in the PLMN list, causing cell identity issues."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_575.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP port to an incorrect value prevents proper F1 interface binding, causing connection failures to the DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote N port to an incorrect value prevents proper F1 interface binding, causing connection failures to the CU."
+    }
+  }
+]

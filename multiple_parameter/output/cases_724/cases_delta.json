@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_724.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.NG.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Removing local_n_address causes NG interface binding failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Removing local_n_address causes F1 interface binding failure."
+    }
+  }
+]

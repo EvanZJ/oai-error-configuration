@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_622.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "127.0.0.1",
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Setting the CU's NG AMF IP to loopback address '127.0.0.1' causes routing failure as AMF is unreachable from external network, preventing NG interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting dl_absoluteFrequencyPointA to match absoluteFrequencySSB causes frequency reference misalignment, leading to SSB positioning errors and cell synchronization failures."
+    }
+  }
+]

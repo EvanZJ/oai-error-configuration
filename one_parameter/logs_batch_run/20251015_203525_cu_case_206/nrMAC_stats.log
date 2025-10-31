@@ -1,6 +1,0 @@
-UE RNTI 5727 CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -44 (11 meas)
-UE 5727: dlsch_rounds 9/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.04783 MCS (0) 9
-UE 5727: ulsch_rounds 81/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00003 MCS (0) 9 (Qm 2  dB) NPRB 5  SNR 57.0 dB
-UE 5727: MAC:    TX            984 RX           9304 bytes
-UE 5727: LCID 1: TX              3 RX             45 bytes
-

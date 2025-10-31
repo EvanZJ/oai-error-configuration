@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_421.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Setting the IPv4 address for NG-AMF to an unreachable network (10.0.0.1) disrupts control plane connectivity, preventing NGAP signaling and gNB registration."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [286, 430],
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the downlink timing advance parameters (T1a_cp_dl) introduces timing inconsistencies, causing synchronization issues and potential frame misalignment in the front-haul interface."
+    }
+  }
+]

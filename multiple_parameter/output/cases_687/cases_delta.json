@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_687",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv6",
+      "original_value": "::1",
+      "error_value": "invalid::1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IPv6 address to an invalid format 'invalid::1' will cause unreachable element error, preventing CU from connecting to AMF."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local network address to an invalid IP format will cause unreachable element error, preventing DU from establishing local connections."
+    }
+  }
+]

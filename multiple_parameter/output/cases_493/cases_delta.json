@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_493.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the number of PUSCH threads to 0 creates a logical contradiction as uplink processing is impossible, leading to CU initialization failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting the remote N address to an empty string simulates a missing value, causing F1 interface connection failures and preventing CU-DU communication."
+    }
+  }
+]

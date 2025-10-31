@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_554.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 502,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the local SCTP control port to 502 will cause F1 control interface connectivity issues, preventing proper routing and signaling, leading to configuration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 502,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Modifying the remote N control port to 502 will disrupt F1 control communication, leading to routing failures, connectivity issues, and system faults in the DU."
+    }
+  }
+]

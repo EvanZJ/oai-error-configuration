@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_734.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": 127005,
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the IP address from string to integer causes type mismatch, leading to configuration parsing failure and system rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2048,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PRACH root sequence index to a value outside the valid range causes PRACH configuration failure and random access issues."
+    }
+  }
+]

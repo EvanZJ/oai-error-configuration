@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_543.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote SCTP data port to a mismatched value prevents proper F1 data interface connection, disrupting user plane traffic."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.7",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Altering the remote N address to an incorrect IP prevents F1 network interface communication, causing CU-DU link failure."
+    }
+  }
+]

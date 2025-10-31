@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_739.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 99999 (out of valid port range 1-65535 but invalid for S1-U) will cause S1-U interface connection failures and GTP tunnel establishment errors."
+    },
+    "du": {
+      "modified_key": "gNBs.0.servingCellConfigCommon.0.dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting dl_absoluteFrequencyPointA equal to absoluteFrequencySSB (641280) causes frequency misalignment, leading to incorrect downlink carrier configuration and potential SSB synchronization faults."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_511.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.70.134",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote S address to '192.168.70.134' creates an unreachable element, preventing F1 interface connection due to incorrect remote address configuration."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.135",
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying the remote N address to '192.168.70.135' creates an unreachable element, causing F1 interface connection failures due to incorrect remote address configuration."
+    }
+  }
+]

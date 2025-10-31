@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_447.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.80.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the AMF IP address to an unreachable subnet (192.168.80.132 instead of 192.168.70.132) will cause the CU to fail to connect to the AMF, resulting in NG interface failure and unreachable elements.",
+      "explanation_zh": "將 AMF IP 地址更改為無法訪問的子網（192.168.80.132 而不是 192.168.70.132）會導致 CU 無法連接到 AMF，從而導致 NG 接口故障和無法訪問的元素。"
+    },
+    "du": {
+      "modified_key": "gNBs.servingCellConfigCommon.absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 642280,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying the absolute SSB frequency to 642280 instead of 641280 will cause frequency misalignment, preventing proper SSB transmission and reception, leading to cell search failures.",
+      "explanation_zh": "將絕對 SSB 頻率修改為 642280 而不是 641280 會導致頻率錯位，阻止正確的 SSB 傳輸和接收，從而導致小區搜索失敗。"
+    }
+  }
+]

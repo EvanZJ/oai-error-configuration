@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_688",
+    "cu": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": 100000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the tracking area code to an out-of-range value 100000 will cause configuration rejection due to invalid TAC."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": "1",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the NR cell ID to a string instead of a number will cause type mismatch and configuration parsing errors."
+    }
+  }
+]

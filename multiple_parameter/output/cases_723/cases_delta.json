@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_723.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia0",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting integrity algorithm to unknown enum 'nia9' causes negotiation failure during security phase."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.1.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting local_n_address to invalid IP format '192.168.1.256' causes network interface binding failure."
+    }
+  }
+]

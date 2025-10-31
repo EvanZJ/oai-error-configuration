@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_579.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.9",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP address to an incorrect IP prevents proper F1 interface binding, causing connection failures to the DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.10",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote N address to an incorrect IP prevents proper F1 interface binding, causing connection failures to the CU."
+    }
+  }
+]

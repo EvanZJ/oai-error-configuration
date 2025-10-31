@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_733.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP control port to an invalid value outside the valid port range will cause socket binding failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Setting the remote N address to loopback causes routing to localhost instead of the CU, preventing F1 interface connection."
+    }
+  }
+]

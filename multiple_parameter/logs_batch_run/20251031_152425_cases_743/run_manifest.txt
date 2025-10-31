@@ -1,0 +1,7 @@
+CASE_NAME=cases_743
+CU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_743/cu_case_743.conf
+DU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_743/du_case_743.conf
+UE_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf/ue_oai.conf
+START_TIME=2025-10-31T15:25:04+08:00
+DURATION=30s
+SOURCE_CASE_DIR=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_743

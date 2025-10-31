@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_450.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.133",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the CU's local S address to 192.168.70.133 instead of 127.0.0.5 will cause wrong routing definitions, making the CU unreachable for F1 connections.",
+      "explanation_zh": "將 CU 的本地 S 地址從 127.0.0.5 更改為 192.168.70.133 會導致錯誤的路由定義，使 CU 無法訪問 F1 連接。"
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.80.3",
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying the local N address to 192.168.80.3 instead of 127.0.0.3 will cause wrong routing definitions, preventing the DU from establishing proper network connections.",
+      "explanation_zh": "將本地 N 地址從 127.0.0.3 修改為 192.168.80.3 會導致錯誤的路由定義，阻止 DU 建立正確的網路連接。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_697.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting amf_ip_address.ipv4 to '192.168.70.132.1' with extra octet will make the AMF unreachable due to invalid IP address format."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting remote_n_address to '192.168.70.132.1' with extra octet will make the CU unreachable due to invalid IP address format."
+    }
+  }
+]

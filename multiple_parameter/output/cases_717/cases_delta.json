@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_717.json",
+    "cu": {
+      "modified_key": "gNBs.servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting pMax to 100 (out of range for valid power levels) will cause configuration rejection or transmission power issues."
+    },
+    "du": {
+      "modified_key": "gNBs.servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting pMax to 100 (out of range for valid power levels) will cause configuration rejection or transmission power issues."
+    }
+  }
+]

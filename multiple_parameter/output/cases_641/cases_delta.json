@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_641.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting the local SCTP address to an empty string will cause socket creation failures, preventing the CU from establishing F1 connections."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "",
+      "error_type": "missing_value",
+      "explanation_en": "Setting the local F1 address to an empty string will cause socket binding errors, preventing the DU from listening for F1 connections."
+    }
+  }
+]

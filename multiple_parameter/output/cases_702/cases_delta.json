@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_702.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP port for CU to 0, which is out of valid port range (1-65535), will cause connection failure to DU and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local_n_address to the same value as remote_n_address (127.0.0.5) creates an IP address conflict, making the DU unreachable and causing routing failures in the F1 interface."
+    }
+  }
+]

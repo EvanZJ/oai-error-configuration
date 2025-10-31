@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_473.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the AMF IP address to null causes missing value errors, preventing AMF connection and NG interface initialization."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Changing the local N address to an invalid IP format (extra octet) causes IP parsing failures, disrupting F1 interface communication."
+    }
+  }
+]

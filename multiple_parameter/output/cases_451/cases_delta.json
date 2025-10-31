@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_451.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.9.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the CU's NGU IP address to 192.168.9.43 instead of 192.168.8.43 will cause unreachable subnet definitions, preventing proper NG-U interface communication.",
+      "explanation_zh": "將 CU 的 NGU IP 地址從 192.168.8.43 更改為 192.168.9.43 會導致無法訪問的子網定義，阻止正確的 NG-U 接口通信。"
+    },
+    "du": {
+      "modified_key": "gNBs.servingCellConfigCommon.dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641008,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying the DL absolute frequency point A to 641008 instead of 640008 will cause frequency misalignment, leading to incorrect carrier frequency settings and potential synchronization issues.",
+      "explanation_zh": "將 DL 絕對頻率點 A 從 640008 修改為 641008 會導致頻率錯位，導致不正確的載波頻率設置和潛在的同步問題。"
+    }
+  }
+]

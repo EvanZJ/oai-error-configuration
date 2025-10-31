@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_531.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.4",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP address to '127.0.0.4' will cause wrong routing definitions, leading to F1 interface connection failure as the DU is bound to '127.0.0.3'."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.4",
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying local_n_address to '127.0.0.4' introduces wrong routing definitions, causing F1 interface connection failure due to address mismatch with the CU."
+    }
+  }
+]

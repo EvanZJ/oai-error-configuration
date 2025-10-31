@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_746.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portd to -1 (negative port) causes F1-D SCTP connection failure and CU-DU data plane communication breakdown."
+    },
+    "du": {
+      "modified_key": "MACRLCs.0.local_n_portd",
+      "original_value": 2152,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_n_portd to -1 (negative port) causes F1-D interface connection failure and DU data plane issues."
+    }
+  }
+]

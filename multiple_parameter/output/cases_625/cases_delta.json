@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_625.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.1",
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Setting the remote S address to loopback '127.0.0.1' causes routing to localhost instead of DU, preventing F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.1",
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Setting the remote N address to loopback '127.0.0.1' causes routing to localhost instead of CU, preventing F1 interface connection."
+    }
+  }
+]

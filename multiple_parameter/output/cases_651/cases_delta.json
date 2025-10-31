@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_651.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting AMF IP address to null will cause missing value errors and prevent NG interface connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting remote N address to null will cause missing value errors and F1 interface setup failures."
+    }
+  }
+]

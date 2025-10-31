@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_771.json",
+      "cu": {
+        "modified_key": "gNBs.security.ciphering_algorithms",
+        "original_value": ["nea2"],
+        "error_value": ["invalid"],
+        "error_type": "invalid_enum",
+        "explanation_en": "Invalid ciphering algorithm value not in allowed set (nea0, nea1, nea2, nea3)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_771.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.servingCellConfigCommon[0].dl_carrierBandwidth",
+        "original_value": 106,
+        "error_value": 500,
+        "error_type": "out_of_range",
+        "explanation_en": "Downlink carrier bandwidth exceeds maximum allowed value for NR band 78"
+      }
+    }
+  ]

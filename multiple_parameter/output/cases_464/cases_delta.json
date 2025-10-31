@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_464.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 3152,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP port for F1-U from 2152 to 3152 creates a port mismatch, preventing CU from establishing proper F1-U connections and causing interface failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Altering the local network address to a different subnet (10.0.0.3) introduces IP range conflicts, preventing DU from proper network configuration and leading to connectivity issues."
+    }
+  }
+]

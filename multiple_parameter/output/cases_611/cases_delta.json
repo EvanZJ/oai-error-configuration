@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_611.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the IPv4 address for NGU to the same as the AMF IP address will cause IP range conflicts, leading to overlapping network assignments and potential routing failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting the downlink absolute frequency point A to the same value as the SSB frequency will cause frequency misalignment, resulting in incorrect carrier frequency calculations and synchronization issues."
+    }
+  }
+]

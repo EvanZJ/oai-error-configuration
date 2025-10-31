@@ -1,6 +1,0 @@
-UE RNTI 1afe CU-UE-ID 1 in-sync PH 0 dB PCMAX 0 dBm, average RSRP -44 (12 meas)
-UE 1afe: dlsch_rounds 10/0/0/0, dlsch_errors 0, pucch0_DTX 0, BLER 0.04305 MCS (0) 9
-UE 1afe: ulsch_rounds 83/0/0/0, ulsch_errors 0, ulsch_DTX 0, BLER 0.00002 MCS (0) 9 (Qm 2  dB) NPRB 5  SNR 57.0 dB
-UE 1afe: MAC:    TX           1107 RX           9536 bytes
-UE 1afe: LCID 1: TX              3 RX             45 bytes
-

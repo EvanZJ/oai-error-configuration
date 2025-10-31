@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_527.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP data port to 2153 will cause wrong routing definitions, leading to F1 data plane connection failure as the DU listens on port 2152."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying prach_RootSequenceIndex to 2 introduces frequency misalignment, causing mismatched PRACH root sequence that leads to random access failures."
+    }
+  }
+]

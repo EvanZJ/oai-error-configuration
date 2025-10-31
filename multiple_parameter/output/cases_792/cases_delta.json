@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_792",
+    "cu": {
+      "modified_key": "gNBs.0.pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": 5,
+      "error_type": "out_of_range",
+      "explanation_en": "Modified pusch_AntennaPorts to 5, which is out of the valid range (typically 1-4 for antenna ports), causing an out_of_range error in CU configuration."
+    },
+    "du": {
+      "modified_key": "gNBs.0.pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": 5,
+      "error_type": "out_of_range",
+      "explanation_en": "Modified pusch_AntennaPorts to 5, which is out of the valid range (typically 1-4 for antenna ports), causing an out_of_range error in DU configuration."
+    }
+  }
+]

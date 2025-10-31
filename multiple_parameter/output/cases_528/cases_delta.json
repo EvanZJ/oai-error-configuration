@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_528.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the NG-U port to 2153 will cause wrong routing definitions, leading to NG-U interface connection failure as the UPF expects port 2152."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying remote_n_portd to 2153 introduces wrong routing definitions, causing F1 data plane connection failure due to port mismatch with the CU."
+    }
+  }
+]

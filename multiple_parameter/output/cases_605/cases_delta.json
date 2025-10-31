@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_605.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 500,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local SCTP port to the same value as remote SCTP port (500) will cause port conflict and F1 interface connection failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_portc",
+      "original_value": 500,
+      "error_value": 501,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local network port to the same value as remote network port (501) will cause port conflict and F1 interface connection failure."
+    }
+  }
+]

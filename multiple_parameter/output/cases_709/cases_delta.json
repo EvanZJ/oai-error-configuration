@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_709.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to an unknown enum 'nea9' will cause negotiation failure during the security phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": "1",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the PRACH root sequence index to a string '1' instead of an integer will cause type validation errors and PRACH configuration failure."
+    }
+  }
+]

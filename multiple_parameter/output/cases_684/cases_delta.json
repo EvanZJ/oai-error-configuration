@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_684",
+    "cu": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc_length",
+      "original_value": 2,
+      "error_value": 1,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting mnc_length to 1 while mnc is '1' creates a logical contradiction, causing PLMN configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the gNB name to null will cause missing value error, preventing proper gNB identification."
+    }
+  }
+]

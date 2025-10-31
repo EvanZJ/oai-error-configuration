@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_627.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.1",
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Setting the local S address to loopback '127.0.0.1' causes F1 interface to bind to localhost instead of proper network, preventing CU-DU communication."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.1",
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Setting the local N address to loopback '127.0.0.1' causes F1 interface to bind to localhost instead of proper network, preventing DU-CU communication."
+    }
+  }
+]

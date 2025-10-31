@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_646.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting AMF IP address to an unreachable IP '10.0.0.1' will prevent the CU from connecting to the AMF, causing NG interface setup failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting remote N address to an unreachable IP '10.0.0.1' will prevent the DU from connecting to the CU, causing F1 interface setup failures."
+    }
+  }
+]

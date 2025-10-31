@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_738.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "127.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Setting the NGU IP to loopback causes routing to localhost instead of the external network, making UPF unreachable and preventing NGU interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 640008,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the SSB absolute frequency equal to the Point A frequency creates a logical contradiction, causing frequency domain misalignment and cell configuration failure."
+    }
+  }
+]

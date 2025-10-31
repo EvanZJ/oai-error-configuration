@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_784.json",
+      "cu": {
+        "modified_key": "SCTP.SCTP_OUTSTREAMS",
+        "original_value": 2,
+        "error_value": 70000,
+        "error_type": "out_of_range",
+        "explanation_en": "SCTP out-streams exceeds maximum allowed value."
+      }
+    },
+    {
+      "filename": "du_case_784.json",
+      "du": {
+        "modified_key": "gNBs.gNB_DU_ID",
+        "original_value": "0xe00",
+        "error_value": "0x100000",
+        "error_type": "out_of_range",
+        "explanation_en": "gNB DU ID exceeds maximum allowed value for 5G NR."
+      }
+    }
+  ]

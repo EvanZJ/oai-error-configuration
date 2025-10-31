@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_446.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 601,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP port for CU to 601 instead of 501 will cause the DU to be unable to connect to the CU, resulting in unreachable elements and F1 interface failure.",
+      "explanation_zh": "將 CU 的本地 SCTP 端口從 501 更改為 601 會導致 DU 無法連接到 CU，從而導致無法訪問的元素和 F1 接口故障。"
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_portd",
+      "original_value": 2152,
+      "error_value": 3152,
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying the remote N port D to 3152 instead of 2152 will prevent the DU from reaching the AMF or other network elements, causing routing misconfiguration and unreachable elements.",
+      "explanation_zh": "將遠程 N 端口 D 從 2152 修改為 3152 會阻止 DU 訪問 AMF 或其他網路元素，從而導致路由配置錯誤和無法訪問的元素。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_478.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting an invalid IPv4 address format with an extra octet will cause NG interface binding failures and prevent AMF connectivity, leading to gNodeB registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 10000000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the SSB absolute frequency to an out-of-range value will cause frequency misalignment, resulting in SSB transmission failures and cell synchronization issues."
+    }
+  }
+]

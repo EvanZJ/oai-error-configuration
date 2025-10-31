@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_710.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local_s_address to the same value as remote_s_address (127.0.0.3) creates an IP address conflict, preventing SCTP connection establishment."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local_n_address to the same value as remote_n_address (127.0.0.5) creates an IP address conflict, causing F1 interface routing failures."
+    }
+  }
+]

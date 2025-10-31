@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_518.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.45",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the AMF IP address to '192.168.8.45' creates IP range conflicts, causing NG interface connection issues due to overlapping subnet definitions with network interfaces."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 181],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying Ta4 to [111, 181] causes timing misalignment in the front-haul Ta4 parameters, leading to synchronization issues and data transmission failures."
+    }
+  }
+]

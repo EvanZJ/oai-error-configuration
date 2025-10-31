@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_540.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 499,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote SCTP control port to a mismatched value prevents connection to the DU's listening port, disrupting F1 interface setup."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.6",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Altering the local N address to an incorrect IP prevents proper F1 network interface binding and communication with the CU."
+    }
+  }
+]

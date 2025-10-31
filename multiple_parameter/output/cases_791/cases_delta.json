@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_791",
+    "cu": {
+      "modified_key": "gNBs.0.pdsch_AntennaPorts_N1",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "out_of_range",
+      "explanation_en": "Modified pdsch_AntennaPorts_N1 to 3, which is out of the valid range (typically 0-2 for N1 ports), causing an out_of_range error in CU configuration."
+    },
+    "du": {
+      "modified_key": "gNBs.0.pdsch_AntennaPorts_N1",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "out_of_range",
+      "explanation_en": "Modified pdsch_AntennaPorts_N1 to 3, which is out of the valid range (typically 0-2 for N1 ports), causing an out_of_range error in DU configuration."
+    }
+  }
+]

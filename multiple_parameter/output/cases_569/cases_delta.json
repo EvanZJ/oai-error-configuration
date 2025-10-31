@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_569.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 2154,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the S1-U port to an incorrect value will prevent GTP-U tunnel establishment, causing data plane connectivity issues."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 181],
+      "error_type": "timing misalignment",
+      "explanation_en": "Misaligning the Ta4 timing parameters will cause synchronization issues in front-haul, leading to data transmission errors."
+    }
+  }
+]

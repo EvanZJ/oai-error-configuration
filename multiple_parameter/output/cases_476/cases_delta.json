@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_476.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause security negotiation failure and connection rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul[0]",
+      "original_value": 285,
+      "error_value": 286,
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the uplink timing parameter causes inconsistency in timing advance, leading to frame synchronization issues and data transmission failures."
+    }
+  }
+]

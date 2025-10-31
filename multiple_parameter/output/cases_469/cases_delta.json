@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_469.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP port to 70000 exceeds the valid port range (0-65535), causing socket binding failure and F1 interface connection errors."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.9.5",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the remote N address to an unreachable subnet (192.168.9.5) prevents the DU from establishing the F1 connection to the CU, leading to interface setup failure."
+    }
+  }
+]

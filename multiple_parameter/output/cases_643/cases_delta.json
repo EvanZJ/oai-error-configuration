@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_643.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP control port to 99999 exceeds the valid TCP/UDP port range (1-65535), causing socket connection errors and F1 setup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Changing the remote F1 control port to 99999 exceeds the valid port range, leading to connection binding failures and F1 interface errors."
+    }
+  }
+]

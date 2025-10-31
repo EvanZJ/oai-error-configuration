@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_744.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portc to 0 (invalid port) causes F1-C SCTP connection failure and CU-DU communication breakdown."
+    },
+    "du": {
+      "modified_key": "gNBs.0.servingCellConfigCommon.0.dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting dl_absoluteFrequencyPointA to 0 (invalid frequency) causes downlink carrier configuration rejection and cell setup failure."
+    }
+  }
+]

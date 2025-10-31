@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_449.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.9.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the CU's NG-AMF IP address to 192.168.9.43 instead of 192.168.8.43 will cause unreachable subnet definitions, preventing the CU from communicating with the AMF.",
+      "explanation_zh": "將 CU 的 NG-AMF IP 地址從 192.168.8.43 更改為 192.168.9.43 會導致無法訪問的子網定義，阻止 CU 與 AMF 通信。"
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.80.5",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Modifying the remote N address to 192.168.80.5 instead of 127.0.0.5 will cause IP range conflicts and unreachable elements, as the DU cannot reach the CU on the wrong subnet.",
+      "explanation_zh": "將遠程 N 地址從 127.0.0.5 修改為 192.168.80.5 會導致 IP 範圍衝突和無法訪問的元素，因為 DU 無法在錯誤的子網上訪問 CU。"
+    }
+  }
+]

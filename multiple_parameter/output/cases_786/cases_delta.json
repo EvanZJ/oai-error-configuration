@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_786.json",
+      "cu": {
+        "modified_key": "plmn_list.mcc",
+        "original_value": 1,
+        "error_value": 1000,
+        "error_type": "out_of_range",
+        "explanation_en": "MCC exceeds maximum allowed value (999)."
+      }
+    },
+    {
+      "filename": "du_case_786.json",
+      "du": {
+        "modified_key": "plmn_list.mcc",
+        "original_value": 1,
+        "error_value": 1000,
+        "error_type": "out_of_range",
+        "explanation_en": "MCC exceeds maximum allowed value (999)."
+      }
+    }
+  ]

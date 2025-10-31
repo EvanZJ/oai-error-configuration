@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_711.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format '192.168.70.132.1' will cause parsing errors and prevent NG interface connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.5.5",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the remote N address to an invalid format '127.0.0.5.5' will cause network configuration errors and F1 interface failure."
+    }
+  }
+]

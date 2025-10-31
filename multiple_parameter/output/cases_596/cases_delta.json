@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_596.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Set MCC to out-of-range value, causing PLMN validation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Set MCC to out-of-range value, causing PLMN validation failure."
+    }
+  }
+]

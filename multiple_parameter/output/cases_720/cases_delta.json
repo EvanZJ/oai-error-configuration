@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_720.json",
+    "cu": {
+      "modified_key": "amf_ip_address[0].ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting ipv4 to \"192.168.70.132.1\" (invalid IP format) will cause the CU to fail binding to the AMF address, leading to unreachable AMF connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.4",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting local_n_address to \"127.0.0.3.4\" (invalid IP format) will cause the DU to fail binding to the address, leading to unreachable F1 interface."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_732.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].t_Advance[0]",
+      "original_value": 110,
+      "error_value": 111,
+      "error_type": "timing misalignment",
+      "explanation_en": "Inconsistent timing advance causes misalignment in uplink synchronization, leading to potential connection failures."
+    }
+  }
+]

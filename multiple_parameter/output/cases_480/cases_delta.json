@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_480.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.8.43.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting an invalid IPv4 address format with an extra octet will cause NG interface binding failures and prevent AMF connectivity, leading to gNodeB registration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Modifying the local N interface IP to an invalid format will cause unreachable element configuration, preventing F1 interface establishment between CU and DU."
+    }
+  }
+]

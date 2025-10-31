@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_423.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote S port for data to 2153 instead of 2152 prevents the CU from connecting to the DU's F1-U interface, leading to user plane data transmission failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Setting the remote N port for data to 2153 causes the DU to attempt connection on a mismatched port, disrupting F1-U interface communication."
+    }
+  }
+]

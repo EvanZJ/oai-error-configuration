@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_508.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the AMF IP address to '192.168.8.43' creates an IP range conflict as it falls outside the expected subnet range for AMF communication, potentially causing connection failures during NG interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 501,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changing the local N port C to 501 introduces wrong routing definitions, as it may conflict with other port assignments in the F1 interface, leading to routing errors and communication breakdowns between CU and DU."
+    }
+  }
+]

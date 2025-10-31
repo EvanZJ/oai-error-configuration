@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_507.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 500,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Setting the remote DU data port to the same value as the control port causes routing conflicts, preventing proper F1 data path establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].remote_n_portd",
+      "original_value": 2152,
+      "error_value": 501,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Setting the remote CU data port to the same value as the control port causes routing conflicts, leading to F1 data path communication failures."
+    }
+  }
+]

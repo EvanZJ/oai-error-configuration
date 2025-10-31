@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_578.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.7",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP address to an incorrect IP prevents proper F1 interface binding, causing connection failures to the DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.8",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local N address to an incorrect IP prevents proper F1 interface binding, causing connection failures to the CU."
+    }
+  }
+]

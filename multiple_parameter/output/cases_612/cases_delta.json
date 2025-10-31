@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_612.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the AMF IP address to an unreachable network (10.0.0.1) will cause the CU to fail in establishing connection to the AMF, leading to unreachable elements and service disruption."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 250],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying the Ta4 timing parameters to inconsistent values will cause timing misalignment between the front-haul interface and the radio unit, resulting in synchronization failures and degraded performance."
+    }
+  }
+]

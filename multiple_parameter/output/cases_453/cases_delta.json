@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_453.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.80.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the AMF IP address to 192.168.80.132 instead of 192.168.70.132 will cause unreachable subnet definitions, preventing the CU from connecting to the AMF.",
+      "explanation_zh": "將 AMF IP 地址從 192.168.70.132 更改為 192.168.80.132 會導致無法訪問的子網定義，阻止 CU 連接到 AMF。"
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_portc",
+      "original_value": 501,
+      "error_value": 601,
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying the remote N port C to 601 instead of 501 will cause wrong routing definitions, making the DU unable to reach the CU for F1 control plane communication.",
+      "explanation_zh": "將遠程 N 端口 C 從 501 修改為 601 會導致錯誤的路由定義，使 DU 無法訪問 CU 以進行 F1 控制平面通信。"
+    }
+  }
+]

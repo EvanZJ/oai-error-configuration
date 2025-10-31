@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_425.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the GNB port for S1-U to 2153 instead of 2152 prevents the CU from establishing GTP-U tunnels on the correct port, disrupting user plane connectivity."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_offstToCarrier",
+      "original_value": 0,
+      "error_value": 1,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting ul_offstToCarrier to 1 causes uplink carrier frequency offset, resulting in misaligned uplink subcarrier positions and degraded uplink signal quality."
+    }
+  }
+]

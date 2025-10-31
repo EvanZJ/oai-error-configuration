@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_715.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia0",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting integrity_algorithms[0] to \"nia9\" (invalid enum value) will cause security negotiation failure and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting remote_n_address to the same as local_n_address (\"127.0.0.3\") creates a logical contradiction where DU attempts to connect to itself, leading to F1 interface failure."
+    }
+  }
+]

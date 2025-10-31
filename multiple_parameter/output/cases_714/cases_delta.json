@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_714.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.F1.remote_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": 127005,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting remote_s_address to an integer (wrong type, should be string) will cause parsing errors and failure to establish F1 connection."
+    },
+    "du": {
+      "modified_key": "gNBs.servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": "641280",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting absoluteFrequencySSB to a string (wrong type, should be integer) will cause parsing errors and failure to configure SSB frequency."
+    }
+  }
+]

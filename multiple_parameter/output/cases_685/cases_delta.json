@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_685",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to an invalid enum will cause security negotiation failure and connection rejection."
+    },
+    "du": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to an invalid enum will cause security negotiation failure and connection rejection."
+    }
+  }
+]

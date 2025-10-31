@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_686",
+    "cu": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 3840,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the gNB ID to a number instead of a string will cause type mismatch and configuration parsing errors."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PRACH root sequence index to an out-of-range value 1000 will cause RACH configuration errors."
+    }
+  }
+]

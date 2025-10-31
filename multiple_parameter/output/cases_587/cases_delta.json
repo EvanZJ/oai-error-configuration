@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_587.json",
+    "cu": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 5,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Changing the PRACH root sequence index to 5 may cause misalignment with the DU's PRACH configuration, leading to random access procedure failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640016,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying the downlink absolute frequency point A to 640016 misaligns it with the CU's expected frequency, causing potential carrier frequency synchronization issues."
+    }
+  }
+]

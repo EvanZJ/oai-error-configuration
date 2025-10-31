@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_760.json",
+      "cu": {
+        "modified_key": "gNBs.local_s_portc",
+        "original_value": 501,
+        "error_value": 70000,
+        "error_type": "out_of_range",
+        "explanation_en": "SCTP port number exceeds maximum allowed value (65535)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_760.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.servingCellConfigCommon[0].absoluteFrequencySSB",
+        "original_value": 641280,
+        "error_value": 10000000,
+        "error_type": "out_of_range",
+        "explanation_en": "SSB absolute frequency exceeds maximum allowed value for NR band 78"
+      }
+    }
+  ]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_669.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Assigning the same IP address as the AMF to the CU's NG interface causes IP range conflict and routing issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting PRACH root sequence index to an out-of-range value causes frequency misalignment and PRACH configuration failure."
+    }
+  }
+]

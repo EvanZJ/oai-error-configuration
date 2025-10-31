@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_556.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the GNB port for S1U to 2153 will cause NG-U interface connectivity issues, preventing proper routing and data transmission, leading to configuration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [97, 197],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying the T1a_up timing parameters to [97, 197] introduces inconsistency in uplink timing alignment, potentially causing synchronization issues, data transmission errors, and system faults in the DU."
+    }
+  }
+]

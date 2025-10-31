@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_571.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 503,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP port to an incorrect value prevents proper F1 interface binding, causing connection failures to the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640009,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Slightly offsetting the downlink absolute frequency point A introduces misalignment, potentially disrupting synchronization and cell procedures."
+    }
+  }
+]

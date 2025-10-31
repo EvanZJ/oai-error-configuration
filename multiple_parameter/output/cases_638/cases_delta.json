@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_638.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": "invalid",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the NR cell ID to a string 'invalid' instead of an integer will cause JSON parsing or type validation errors, preventing configuration loading."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PRACH root sequence index to 2000 exceeds the valid range (0-1023), leading to invalid RACH configuration and random access failures for UEs."
+    }
+  }
+]

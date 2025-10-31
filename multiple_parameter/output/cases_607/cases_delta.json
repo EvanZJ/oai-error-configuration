@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_607.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting MCC to 1000 (exceeding valid range 000-999) will cause PLMN mismatch and UE registration failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 250],
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting Ta4 to [200, 250] (inconsistent timing parameters) will cause T2a misalignment and RU synchronization failure."
+    }
+  }
+]

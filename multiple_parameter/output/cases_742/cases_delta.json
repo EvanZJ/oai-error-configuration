@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_742.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting integrity_algorithms[0] to unknown enum 'nia9' causes security negotiation failure and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs.0.servingCellConfigCommon.0.prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2048,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting prach_RootSequenceIndex to 2048 (exceeds valid range 0-2047) causes PRACH configuration rejection and RACH setup failure."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_708.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP port to 99999, which exceeds the valid port range of 1-65535, will cause connection establishment failure to DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote N port to 99999, which exceeds the valid port range of 1-65535, will cause F1 interface connection failure."
+    }
+  }
+]

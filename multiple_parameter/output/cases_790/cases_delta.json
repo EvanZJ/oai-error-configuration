@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_790.json",
+      "cu": {
+        "modified_key": "gNBs.pdsch_AntennaPorts_XP",
+        "original_value": 2,
+        "error_value": 5,
+        "error_type": "out_of_range",
+        "explanation_en": "PDSCH antenna ports XP exceeds maximum allowed value (4)."
+      }
+    },
+    {
+      "filename": "du_case_790.json",
+      "du": {
+        "modified_key": "gNBs.pdsch_AntennaPorts_XP",
+        "original_value": 2,
+        "error_value": 5,
+        "error_type": "out_of_range",
+        "explanation_en": "PDSCH antenna ports XP exceeds maximum allowed value (4)."
+      }
+    }
+  ]

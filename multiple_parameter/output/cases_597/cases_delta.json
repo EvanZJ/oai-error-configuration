@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_597.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": "1",
+      "error_type": "wrong_type",
+      "explanation_en": "Changed MCC type from number to string, causing type validation errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": "1",
+      "error_type": "wrong_type",
+      "explanation_en": "Changed MCC type from number to string, causing type validation errors."
+    }
+  }
+]

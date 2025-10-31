@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_667.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_name",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the gNB name to null will cause missing value error and prevent configuration validation."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the gNB name to null will cause missing value error and prevent configuration validation."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_529.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.8.44",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the NG-U network interface IP to '192.168.8.44' creates IP range conflicts due to overlapping addresses, leading to NG-U communication failures and UPF unreachability."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying local_n_portd to 2153 introduces wrong routing definitions, causing F1 data plane connection failure due to port mismatch with the CU."
+    }
+  }
+]

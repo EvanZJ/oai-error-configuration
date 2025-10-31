@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_788.json",
+      "cu": {
+        "modified_key": "snssaiList.sst",
+        "original_value": 1,
+        "error_value": 256,
+        "error_type": "out_of_range",
+        "explanation_en": "SST exceeds maximum allowed value (255)."
+      }
+    },
+    {
+      "filename": "du_case_788.json",
+      "du": {
+        "modified_key": "snssaiList.sst",
+        "original_value": 1,
+        "error_value": 256,
+        "error_type": "out_of_range",
+        "explanation_en": "SST exceeds maximum allowed value (255)."
+      }
+    }
+  ]

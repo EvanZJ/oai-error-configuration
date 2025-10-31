@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_728.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.NG.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": 123456789,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting remote_n_address to integer 123456789 instead of string causes configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting remote_n_portc to 70000 exceeds valid port range (0-65535), causing socket connection failure."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_640.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "local_L1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the CU's transport preference to 'local_L1' (a DU-specific setting) creates a logical contradiction, as CU should use F1 for southbound interfaces, leading to initialization failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_n_preference",
+      "original_value": "f1",
+      "error_value": "local_L1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the DU's northbound transport preference to 'local_L1' (a CU-specific setting) creates a logical contradiction, as DU should use F1 for northbound interfaces, causing connection setup errors."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_601.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local SCTP port to 99999 (out of valid port range 0-65535) will cause socket binding failure and F1 interface connection errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 999999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SSB absolute frequency to 999999 (exceeding valid ARFCN range for band 78) will cause frequency misalignment and SSB transmission failures."
+    }
+  }
+]

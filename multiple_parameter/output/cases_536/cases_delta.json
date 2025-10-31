@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_536.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.43",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the NG-AMF interface IP to a different subnet makes the AMF unreachable, preventing NG interface establishment and causing connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640009,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Slightly offsetting the downlink absolute frequency point A introduces frequency misalignment, leading to synchronization issues and degraded downlink performance."
+    }
+  }
+]

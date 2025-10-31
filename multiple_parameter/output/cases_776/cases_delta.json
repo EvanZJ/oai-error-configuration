@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_776.json",
+      "cu": {
+        "modified_key": "security.ciphering_algorithms",
+        "original_value": ["nea2"],
+        "error_value": ["invalid"],
+        "error_type": "invalid_enum",
+        "explanation_en": "Invalid ciphering algorithm not supported in 5G NR security specifications."
+      }
+    },
+    {
+      "filename": "du_case_776.json",
+      "du": {
+        "modified_key": "servingCellConfigCommon.dl_carrierBandwidth",
+        "original_value": 106,
+        "error_value": 500,
+        "error_type": "out_of_range",
+        "explanation_en": "Carrier bandwidth exceeds maximum allowed value for 5G NR band 78."
+      }
+    }
+  ]

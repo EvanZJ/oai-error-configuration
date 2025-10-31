@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_615.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": 268435456,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the NR cell ID to 268435456 exceeds the valid range (0-268435455), causing configuration validation failure and rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": 268435456,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the NR cell ID to 268435456 exceeds the valid range (0-268435455), causing configuration validation failure and rejection."
+    }
+  }
+]

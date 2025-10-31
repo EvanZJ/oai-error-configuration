@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_510.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 502,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changing the remote S port C to 502 introduces wrong routing definitions, causing F1 interface connection failures due to port mismatch with the DU."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [286, 430],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying T1a_cp_dl to [286, 430] causes timing misalignment in the front-haul interface, leading to synchronization issues and data transmission failures."
+    }
+  }
+]

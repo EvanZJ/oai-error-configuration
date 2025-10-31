@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_666.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 501,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote SCTP port to the same as the local port will cause logical contradiction and F1 interface connection failure due to port conflict."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_s_portc",
+      "original_value": 501,
+      "error_value": 500,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the remote SCTP port to the same as the local port will cause logical contradiction and F1 interface connection failure due to port conflict."
+    }
+  }
+]

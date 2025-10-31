@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_748.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ciphering_algorithms[0] to unknown enum 'nea9' causes security negotiation failure and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs.0.servingCellConfigCommon.0.prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting prach_msg1_FrequencyStart to -1 (negative value) causes PRACH configuration rejection and RACH setup failure."
+    }
+  }
+]

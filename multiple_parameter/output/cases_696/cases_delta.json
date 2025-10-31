@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_696.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "invalid.ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting remote_s_address to 'invalid.ip' with malformed format will make the DU unreachable due to invalid IP address."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "invalid.ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting local_n_address to 'invalid.ip' with malformed format will make the CU unreachable due to invalid IP address."
+    }
+  }
+]

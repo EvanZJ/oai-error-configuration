@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_613.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to an invalid enum value 'nia9' will cause security negotiation failure during the initial setup, leading to NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the remote N address to the same as the local N address will cause IP range conflicts, resulting in network interface binding issues and communication failures."
+    }
+  }
+]

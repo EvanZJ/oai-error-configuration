@@ -1,0 +1,64 @@
+{
+    "Active_gNBs": ["gNB-Eurecom-CU"],
+    "Asn1_verbosity": "annoying",
+    "gNBs": {
+      "gNB_ID": "0xe00",
+      "gNB_CU_ID": "0xe00",
+      "gNB_name": "gNB-Eurecom-CU",
+      "tracking_area_code": 1,
+      "plmn_list": [
+        {
+          "mcc": 1,
+          "mnc": 1,
+          "mnc_length": 2,
+          "snssaiList": [
+            {
+              "sst": 1,
+              "sd": "0x010203"
+            }
+          ]
+        }
+      ],
+      "amf_ip_address": {
+        "ipv4": "192.168.70.132",
+        "ipv6": "::1",
+        "active": "yes",
+        "preference": "ipv4"
+      },
+      "NETWORK_INTERFACES": [
+        {
+          "NETWORK_INTERFACES_NAME": "n1",
+          "NETWORK_INTERFACES_CLASS": "S1-C",
+          "NETWORK_INTERFACES_TYPE": "ipv4"
+        },
+        {
+          "NETWORK_INTERFACES_NAME": "n2",
+          "NETWORK_INTERFACES_CLASS": "S1-C",
+          "NETWORK_INTERFACES_TYPE": "ipv4"
+        }
+      ],
+      "SCTP": {
+        "SCTP_INSTREAMS": 2,
+        "SCTP_OUTSTREAMS": 2
+      },
+      "local_s_address": "127.0.0.1",
+      "local_s_portc": 501,
+      "local_s_portd": 2152,
+      "remote_s_portc": 500,
+      "remote_s_portd": 2152,
+      "security": {
+        "ciphering_algorithms": [
+          "nea2"
+        ],
+        "integrity_algorithms": [
+          "nia2"
+        ]
+      }
+    },
+    "log_config": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info"
+    }
+  }

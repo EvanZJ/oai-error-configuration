@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_479.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": 2000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the NR cell ID to an out-of-range value exceeding 1007 will cause cell identification conflicts and prevent proper gNodeB cell registration."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+      "original_value": 285,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Modifying the downlink timing parameter T1a_cp_dl to an excessive value will cause timing misalignment, leading to fronthaul synchronization failures and data transmission errors."
+    }
+  }
+]

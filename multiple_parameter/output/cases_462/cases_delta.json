@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_462.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 600,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP port for F1-C from 500 to 600 creates an unreachable port mismatch, preventing CU from connecting to the DU and causing F1 interface failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [97, 196],
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the uplink timing parameter T1a_up introduces timing misalignment, leading to synchronization issues and potential data transmission errors in the DU."
+    }
+  }
+]

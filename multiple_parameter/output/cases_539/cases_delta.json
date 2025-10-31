@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_539.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 502,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the local SCTP control port to a mismatched value prevents proper F1 interface binding and connection to the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altering the PRACH root sequence index introduces frequency domain misalignment, leading to random access procedure failures."
+    }
+  }
+]

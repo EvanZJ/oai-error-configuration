@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_438.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changed AMF IP address to one in the same subnet as the CU's NG interface, causing IP conflicts and routing issues.",
+      "explanation_zh": "更改 AMF IP 地址為與 CU NG 接口相同子網的地址，導致 IP 衝突和路由問題。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl[0]",
+      "original_value": 285,
+      "error_value": 300,
+      "error_type": "timing misalignment",
+      "explanation_en": "Altered T1a_cp_dl timing parameter, leading to inconsistent timing alignment in the front-haul interface.",
+      "explanation_zh": "更改 T1a_cp_dl 定時參數，導致前傳接口中的定時對齊不一致。"
+    }
+  }
+]

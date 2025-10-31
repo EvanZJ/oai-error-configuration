@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_649.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "RUs[0].clock_src",
+      "original_value": "internal",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting clock source to an invalid enum 'invalid' will cause RU initialization failures and synchronization issues."
+    }
+  }
+]

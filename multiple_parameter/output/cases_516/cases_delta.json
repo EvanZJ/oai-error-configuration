@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_516.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2155,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changing the remote S port D to 2155 introduces wrong routing definitions, causing F1 interface connection failures due to port mismatch."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.70.138",
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying the local N address to '192.168.70.138' creates an unreachable element, preventing F1 interface connection due to incorrect local address configuration."
+    }
+  }
+]

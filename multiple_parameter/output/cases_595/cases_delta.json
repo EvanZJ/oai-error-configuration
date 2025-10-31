@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_595.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Changed integrity algorithm to invalid enum, causing security negotiation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "invalid_enum",
+      "explanation_en": "Set SSB periodicity to invalid value, leading to configuration rejection."
+    }
+  }
+]

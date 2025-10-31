@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_668.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.132.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid IPv4 address format with extra octet will cause AMF connection failure due to malformed IP address."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Swapping minimum and maximum values in Ta4 timing array creates logical inconsistency, leading to timing misalignment and potential synchronization faults."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_541.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.44",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the NG-U interface IP to a different subnet makes the UPF unreachable, preventing GTP-U tunnel establishment for user plane traffic."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 181],
+      "error_type": "timing misalignment",
+      "explanation_en": "Offsetting the Ta4 timing parameters causes inconsistency in front-haul timing advance, leading to potential synchronization issues with the RU."
+    }
+  }
+]

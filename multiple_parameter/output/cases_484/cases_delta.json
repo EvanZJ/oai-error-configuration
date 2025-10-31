@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_484.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local S port C to 0 will cause invalid port binding errors, leading to SCTP connection failures and F1 interface establishment issues."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": "500",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the local N port C to string type will cause parsing errors in the network configuration, preventing proper F1 interface setup."
+    }
+  }
+]

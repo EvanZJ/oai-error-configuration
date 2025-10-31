@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_642.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP address to an unreachable IP will prevent the CU from establishing the F1 connection to the DU, leading to F1 setup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the remote F1 address to an unreachable IP will cause the DU to fail in connecting to the CU, resulting in F1 interface initialization errors."
+    }
+  }
+]

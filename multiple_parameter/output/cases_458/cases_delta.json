@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_458.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.80.3",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP address to an unreachable subnet (192.168.80.3) creates routing misconfiguration, preventing CU-DU F1 interface communication and causing connection failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [286, 429],
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the downlink timing parameter T1a_cp_dl introduces timing misalignment, leading to synchronization issues and potential data transmission errors in the DU."
+    }
+  }
+]

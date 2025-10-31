@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_448.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 3152,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP port D to 3152 instead of 2152 will cause the CU to be unable to connect to the DU, resulting in unreachable elements and F1 interface failure.",
+      "explanation_zh": "將遠程 SCTP 端口 D 從 2152 更改為 3152 會導致 CU 無法連接到 DU，從而導致無法訪問的元素和 F1 接口故障。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config.Ta4",
+      "original_value": [110, 180],
+      "error_value": [210, 280],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying the Ta4 timing parameter to [210, 280] instead of [110, 180] will cause inconsistent timing alignment, leading to synchronization issues and potential frame misalignment in the front-haul interface.",
+      "explanation_zh": "將 Ta4 定時參數修改為 [210, 280] 而不是 [110, 180] 會導致定時對齊不一致，從而導致同步問題和前傳接口中可能的幀錯位。"
+    }
+  }
+]

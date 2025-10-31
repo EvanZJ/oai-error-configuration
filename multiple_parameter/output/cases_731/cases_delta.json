@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_731.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "127.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Setting AMF IP to loopback '127.0.0.1' causes routing to localhost instead of external network, making AMF unreachable and preventing NG interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641281,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Slightly offsetting the SSB absolute frequency introduces misalignment, potentially disrupting synchronization and cell search procedures."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_505.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.1.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the AMF IP address to an unreachable IP in a different subnet prevents the CU from establishing NG-AMF connections, causing system initialization failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the remote CU address to the same IP as the local DU address causes IP range conflicts, resulting in F1 interface binding errors and communication failures."
+    }
+  }
+]

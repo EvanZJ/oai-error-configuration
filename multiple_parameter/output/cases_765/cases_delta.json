@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_765.json",
+      "cu": {
+        "modified_key": "gNBs.remote_s_portc",
+        "original_value": 500,
+        "error_value": 70000,
+        "error_type": "out_of_range",
+        "explanation_en": "SCTP port number exceeds maximum allowed value (65535)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_765.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.servingCellConfigCommon[0].pMax",
+        "original_value": 20,
+        "error_value": 100,
+        "error_type": "out_of_range",
+        "explanation_en": "Maximum transmit power exceeds allowed range for NR band 78"
+      }
+    }
+  ]

@@ -1,0 +1,152 @@
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[NR_PHY]   RC.gNB = 0x63866f829ab0
+[0m[NR_PHY]   PRB blacklist 
+[0m[NR_PHY]   Copying 0 blacklisted PRB to L1 context
+[0m[PHY]   L1_RX_THREAD_CORE -1 (15)
+[0m[PHY]   TX_AMP = 519 (-36 dBFS)
+[0m[PHY]   l1_north_init_gNB() RC.nb_nr_L1_inst:1
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[MAC]   Allocating shared L1/L2 interface structure for instance 0 @ 0x63866f831b80
+[0m[PHY]   l1_north_init_gNB() RC.gNB[0] installing callbacks
+[0m[PHY]   create_gNB_tasks() Task ready initialize structures
+[0m[PHY]   No prs_config configuration found..!!
+[0m[GNB_APP]   pdsch_AntennaPorts N1 2 N2 1 XP 2 pusch_AntennaPorts 4
+[0m[GNB_APP]   minTXRXTIME 6
+[0m[GNB_APP]   SIB1 TDA 15
+[0m[GNB_APP]   CSI-RS 0, SRS 0, 256 QAM force off, delta_MCS off, maxMIMO_Layers 1
+[0m[GNB_APP]   sr_ProhibitTimer 0, sr_TransMax 64, sr_ProhibitTimer_v1700 0, t300 400, t301 400, t310 2000, n310 10, t311 3000, n311 1, t319 400
+[0m[RRC]   Read in ServingCellConfigCommon (PhysCellId 0, ABSFREQSSB 641280, DLBand 78, ABSFREQPOINTA 640008, DLBW 106,RACH_TargetReceivedPower -96
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[RRC]   absoluteFrequencySSB 641280 corresponds to 3619200000 Hz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[MAC]   [MAIN] Init function start:nb_nr_macrlc_inst=1
+[0m[UTIL]   threadCreate() for MAC_STATS: creating thread with affinity ffffffff, priority 2
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[NR_MAC]   Configuring common parameters from NR ServingCellConfig
+[0m[NR_MAC]   DL_Bandwidth:40
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   DL_Bandwidth:40
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[NR_MAC]   ssb_OffsetPointA 86, ssb_SubcarrierOffset 0
+[0m[NR_MAC]   Set RX antenna number to 4, Set TX antenna number to 4 (num ssb 1: 80000000,0)
+[0m[NR_MAC]   Setting TDD configuration period to 6
+[0m[PHY]   DL frequency 3619200000 Hz, UL frequency 3619200000 Hz: band 48, uldl offset 0 Hz
+[0m[32m[PHY]   Configuring MIB for instance 0, : (Nid_cell 0,DL freq 3619200000, UL freq 3619200000)
+[0m[PHY]   Initializing frame parms for mu 1, N_RB 106, Ncp 0
+[0m[PHY]   Init: N_RB_DL 106, first_carrier_offset 1412, nb_prefix_samples 144,nb_prefix_samples0 176, ofdm_symbol_size 2048
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   gNB 0 configured
+[0m[NR_MAC]   PUSCH Target 200, PUCCH Target 150, PUCCH Failure 10, PUSCH Failure 10
+[0m[NR_RRC]   SIB1 freq: offsetToPointA 86
+[0m[NR_MAC]   NR band duplex spacing is 0 KHz (nr_bandtable[40].band = 78)
+[0m[NR_MAC]   NR band 78, duplex mode TDD, duplex spacing = 0 KHz
+[0m[GNB_APP]   F1AP: gNB idx 0 gNB_DU_id 3584, gNB_DU_name gNB-Eurecom-DU, TAC 1 MCC/MNC/length 1/1/2 cellID 1
+[0m[GNB_APP]   ngran_DU: Configuring Cell 0 for TDD
+[0mCMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_490/du_case_490.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_490
+[CONFIG] function config_libconfig_init returned 0
+[CONFIG] config module libconfig loaded
+[CONFIG] debug flags: 0x00000000
+log init done
+Reading in command-line options
+[CONFIG] parallel_conf is set to 2
+[CONFIG] worker_conf is set to 1
+Configuration: nb_rrc_inst 1, nb_nr_L1_inst 1, nb_ru 1
+configuring for RAU/RRU
+Initializing northbound interface for L1
+DL frequency 3619200000: band 48, UL frequency 3619200000
+Configuring F1 interfaces for MACRLC
+<MeasurementTimingConfiguration>
+    <criticalExtensions>
+        <c1>
+            <measTimingConf>
+                <measTiming>
+                    <MeasTiming>
+                        <frequencyAndTiming>
+                            <carrierFreq>641280</carrierFreq>
+                            <ssbSubcarrierSpacing><kHz30/></ssbSubcarrierSpacing>
+                            <ssb-MeasurementTimingConfiguration>
+                                <periodicityAndOffset>
+                                    <sf20>0</sf20>
+                                </periodicityAndOffset>
+                                <duration><sf1/></duration>
+                            </ssb-MeasurementTimingConfiguration>
+                        </frequencyAndTiming>
+                    </MeasTiming>
+                </measTiming>
+            </measTimingConf>
+        </c1>
+    </criticalExtensions>
+</MeasurementTimingConfiguration>
+[PHY]   create_gNB_tasks() RC.nb_nr_L1_inst:1
+[0m[PHY]   l1_north_init_gNB() RC.nb_nr_L1_inst:1
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[PHY]   l1_north_init_gNB() RC.gNB[0] installing callbacks
+[0m[GNB_APP]   Allocating gNB_RRC_INST for 1 instances
+[0m[GNB_APP]   SDAP layer is disabled
+[0m[GNB_APP]   Data Radio Bearer count 1
+[0m[93m[RRC]   no preferred ciphering algorithm set in configuration file, applying default parameters (no security)
+[0m[93m[RRC]   no preferred integrity algorithm set in configuration file, applying default parameters (nia2)
+[0m[UTIL]   threadCreate() for TASK_SCTP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_SCTP
+[0m[X2AP]   X2AP is disabled.
+[0m[UTIL]   threadCreate() for TASK_GNB_APP: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_GNB_APP
+[0m[UTIL]   threadCreate() for TASK_GTPV1_U: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_GTPV1_U
+[0m[UTIL]   threadCreate() for TASK_DU_F1: creating thread with affinity ffffffff, priority 50
+[0m[PHY]   Initializing gNB 0 single_thread_flag:1
+[0m[PHY]   Initializing gNB 0
+[0m[PHY]   Registering with MAC interface module (before 0x63866f831b80)
+[0m[PHY]   Installing callbacks for IF_Module - UL_indication
+[0m[PHY]   Registering with MAC interface module (after 0x63866f831b80)
+[0m[PHY]   Setting indication lists
+[0m[PHY]   [nr-gnb.c] gNB structure allocated
+[0m[F1AP]   Starting F1AP at DU
+[0m[ITTI]   Created Posix thread TASK_DU_F1
+[0m[F1AP]   F1-C DU IPaddr 127.0.0.3, connect to F1-C CU 127.0.0.5, binding GTP to 127.0.0.3
+[0m[GTPU]   Initializing UDP for local address 127.0.0.3 with port 2152
+[0m[GTPU]   Created gtpu instance id: 98
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[PHY]   RU GPIO control set as 'generic'
+[0m[PHY]   RU clock source set as internal
+[0m[PHY]   Setting time source to internal
+[0m[PHY]   number of L1 instances 1, number of RU 1, number of CPU cores 20
+[0m[PHY]   Copying frame parms from gNB in RC to gNB 0 in ru 0 and frame_parms in ru
+[0m[PHY]   Initialized RU proc 0 (,synch_to_ext_device),
+[0m[PHY]   RU Thread pool size 2
+[0m[PHY]   RU thread-pool core string -1,-1
+[0m[UTIL]   threadCreate() for Tpool0_-1: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for Tpool1_-1: creating thread with affinity ffffffff, priority 97
+[0m[93m[GNB_APP]   waiting for F1 Setup Response before activating radio
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m[1;31m[SCTP]   Connect failed: Connection refused
+[0m[93m[F1AP]   Received unsuccessful result for SCTP association (3), instance 0, cnx_id 0, retrying...
+[0m

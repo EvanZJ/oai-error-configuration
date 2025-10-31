@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_582.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the NG AMF IP address to an unreachable subnet (10.0.0.1) will prevent the CU from establishing a connection to the AMF, leading to NG interface failure and system initialization errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641284,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying the SSB absolute frequency to 641284 misaligns it with the expected frequency grid, causing synchronization issues and potential cell search failures in UEs."
+    }
+  }
+]

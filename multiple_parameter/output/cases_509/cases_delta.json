@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_509.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the AMF IP address to '10.0.0.1' creates an unreachable element as it resides in a different network segment, preventing NG interface connection and causing AMF reachability failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641281,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Changing the SSB absolute frequency to 641281 causes frequency misalignment outside the standard channel raster, leading to synchronization failures and UE cell search rejection."
+    }
+  }
+]

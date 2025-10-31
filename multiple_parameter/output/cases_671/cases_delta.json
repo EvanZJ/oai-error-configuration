@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_671.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the remote SCTP address to an unreachable subnet prevents F1 interface connection to DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the downlink frequency point A to the same value as SSB frequency causes frequency misalignment and invalid carrier configuration."
+    }
+  }
+]

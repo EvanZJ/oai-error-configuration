@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_517.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.139",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local S address to '192.168.70.139' creates an unreachable element, preventing F1 interface connection due to incorrect local address configuration."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Modifying the PRACH root sequence index to 2 causes frequency misalignment in PRACH configuration, leading to random access failures."
+    }
+  }
+]

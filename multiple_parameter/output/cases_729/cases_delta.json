@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_729.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea0",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ciphering algorithm to unknown enum 'nea9' causes negotiation failure during security phase."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.4",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting local_n_address to '127.0.0.3.4' (invalid IP with extra octet), causing network interface binding failure."
+    }
+  }
+]

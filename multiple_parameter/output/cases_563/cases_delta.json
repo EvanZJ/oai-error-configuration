@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_563.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.4",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP address to an unreachable IP will prevent F1 interface establishment between CU and DU, causing connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altering the PRACH root sequence index will cause misalignment in random access preamble sequences, leading to failed RACH procedures and UE attachment issues."
+    }
+  }
+]

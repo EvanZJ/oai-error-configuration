@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_727.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.NG.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting local_n_address to '127.0.0.5' (same as remote_n_address) creates IP conflict, causing NG interface binding failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.1.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting remote_n_address to '192.168.1.1' (unreachable IP) causes F1 interface connection failure."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_526.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP data port to 2153 will cause wrong routing definitions, leading to F1 data plane connection failure as the DU expects port 2152."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [286, 430],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying T1a_cp_dl timing parameters to [286, 430] introduces timing misalignment, causing inconsistent downlink timing that leads to front-haul synchronization failures."
+    }
+  }
+]

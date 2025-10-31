@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_442.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 600,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed remote S port C to a mismatched port, preventing proper F1 interface connection with the DU.",
+      "explanation_zh": "更改遠程 S 端口 C 為不匹配的端口，防止正確的 F1 接口連接 DU。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul[0]",
+      "original_value": 285,
+      "error_value": 310,
+      "error_type": "timing misalignment",
+      "explanation_en": "Altered T1a_cp_ul timing parameter, leading to inconsistent timing alignment in the front-haul interface.",
+      "explanation_zh": "更改 T1a_cp_ul 定時參數，導致前傳接口中的定時對齊不一致。"
+    }
+  }
+]

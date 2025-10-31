@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_503.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.1.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the local CU address to an IP in a different subnet makes the CU unreachable from the DU, preventing F1 interface establishment and causing system initialization failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting the PRACH root sequence index to an out-of-range value causes frequency misalignment in the random access channel, resulting in UE RACH failures and inability to connect to the network."
+    }
+  }
+]

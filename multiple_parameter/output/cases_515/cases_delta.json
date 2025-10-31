@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_515.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.137",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the GNB IPv4 address for NG-U to '192.168.70.137' creates IP range conflicts, causing NG-U interface connection issues due to overlapping subnet definitions."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 503,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Modifying the remote N port C to 503 introduces wrong routing definitions, leading to F1 interface connection failures due to port mismatch."
+    }
+  }
+]

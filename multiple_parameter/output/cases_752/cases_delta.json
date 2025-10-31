@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_752.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Port number exceeds maximum causes SCTP connection failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.0.remote_n_portc",
+      "original_value": 501,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Port number exceeds maximum causes SCTP connection failure."
+    }
+  }
+]

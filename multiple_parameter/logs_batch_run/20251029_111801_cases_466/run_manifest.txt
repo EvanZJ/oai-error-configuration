@@ -1,0 +1,7 @@
+CASE_NAME=cases_466
+CU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_466/cu_case_466.conf
+DU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_466/du_case_466.conf
+UE_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf/ue_oai.conf
+START_TIME=2025-10-29T11:18:39+08:00
+DURATION=30s
+SOURCE_CASE_DIR=/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_466

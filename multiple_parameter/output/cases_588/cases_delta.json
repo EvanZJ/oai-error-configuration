@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_588.json",
+    "cu": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.20",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote N address to an unreachable IP (127.0.0.20) will prevent the CU from connecting to the DU, resulting in NG interface setup failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 600,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Modifying the remote N port C to 600 misaligns it with the CU's expected port, causing F1 control plane connection failures."
+    }
+  }
+]

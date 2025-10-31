@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_506.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the NG-U interface address to the same IP as the AMF causes IP range conflicts, preventing proper network interface configuration and leading to NG-U path failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.1.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the local DU address to an unreachable IP in a different subnet prevents the DU from binding to the correct interface, causing F1 connection failures."
+    }
+  }
+]

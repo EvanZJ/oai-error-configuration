@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_758.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.1",
+      "error_value": "127.0.0.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid IP address causes network interface configuration failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config.0.Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Ta4 timing parameters are inconsistent, causing timing misalignment."
+    }
+  }
+]

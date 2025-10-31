@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_673.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the remote SCTP port to an out-of-range value prevents F1 interface connection establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "172.16.0.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the remote N address to an unreachable subnet prevents CU communication and causes network isolation."
+    }
+  }
+]

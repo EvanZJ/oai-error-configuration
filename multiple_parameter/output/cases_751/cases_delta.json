@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_751.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Negative port number causes SCTP binding failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.0.local_n_portc",
+      "original_value": 500,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Negative port number causes SCTP binding failure."
+    }
+  }
+]

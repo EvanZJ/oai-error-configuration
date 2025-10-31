@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_498.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting SCTP_INSTREAMS to 0 creates a logical contradiction as it disables input streams, preventing any data reception on the SCTP connection between CU and DU, leading to connection failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [285, 285],
+      "error_type": "timing misalignment",
+      "explanation_en": "Setting T1a_cp_dl to identical values [285, 285] causes timing misalignment in the downlink compression parameters, potentially leading to synchronization issues and degraded performance in the front-haul interface."
+    }
+  }
+]

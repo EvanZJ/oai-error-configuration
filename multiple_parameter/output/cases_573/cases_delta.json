@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_573.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.4",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP address to an incorrect IP prevents proper F1 interface binding, causing connection failures to the DU."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 181],
+      "error_type": "timing misalignment",
+      "explanation_en": "Slightly offsetting the Ta4 timing parameters introduces misalignment, potentially disrupting front-haul synchronization."
+    }
+  }
+]

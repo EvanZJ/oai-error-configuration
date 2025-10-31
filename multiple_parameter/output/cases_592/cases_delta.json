@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_592.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 700,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changed remote SCTP port to mismatched value, preventing F1 interface connection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 250],
+      "error_type": "timing misalignment",
+      "explanation_en": "Shifted Ta4 timing parameters, causing front-haul timing inconsistencies."
+    }
+  }
+]

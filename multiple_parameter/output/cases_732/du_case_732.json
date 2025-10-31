@@ -1,0 +1,168 @@
+{
+    "Active_gNBs": ["gNB-Eurecom-DU"],
+    "Asn1_verbosity": "annoying",
+    "gNBs": [
+      {
+        "gNB_ID": "0xe00",
+        "gNB_DU_ID": "0xe00",
+        "gNB_name": "gNB-Eurecom-DU",
+        "tracking_area_code": 1,
+        "plmn_list": [
+          {
+            "mcc": 1,
+            "mnc": 1,
+            "mnc_length": 2,
+            "snssaiList": [
+              {
+                "sst": 1,
+                "sd": "0x010203"
+              }
+            ]
+          }
+        ],
+        "nr_cellid": 1,
+        "pdsch_AntennaPorts_XP": 2,
+        "pdsch_AntennaPorts_N1": 2,
+        "pusch_AntennaPorts": 4,
+        "do_CSIRS": 1,
+        "maxMIMO_layers": 2,
+        "do_SRS": 0,
+        "min_rxtxtime": 6,
+        "force_256qam_off": 1,
+        "sib1_tda": 15,
+        "pdcch_ConfigSIB1": [
+          {
+            "controlResourceSetZero": 11,
+            "searchSpaceZero": 0
+          }
+        ],
+        "servingCellConfigCommon": [
+          {
+            "physCellId": 0,
+            "absoluteFrequencySSB": 641280,
+            "dl_frequencyBand": 78,
+            "dl_absoluteFrequencyPointA": 640008,
+            "dl_offstToCarrier": 0,
+            "dl_subcarrierSpacing": 1,
+            "dl_carrierBandwidth": 106,
+            "initialDLBWPlocationAndBandwidth": 28875,
+            "initialDLBWPsubcarrierSpacing": 1,
+            "initialDLBWPcontrolResourceSetZero": 12,
+            "initialDLBWPsearchSpaceZero": 0,
+            "ul_frequencyBand": 78,
+            "ul_offstToCarrier": 0,
+            "ul_subcarrierSpacing": 1,
+            "ul_carrierBandwidth": 106,
+            "initialULBWPlocationAndBandwidth": 28875,
+            "initialULBWPsubcarrierSpacing": 1,
+            "initialULBWPcontrolResourceSetZero": 12,
+            "initialULBWPsearchSpaceZero": 0,
+            "prach_RootSequenceIndex": 1,
+            "prach_msg1_FrequencyStart": 0,
+            "prach_msg1_SubcarrierSpacing": 1,
+            "prach_RestrictedSetConfig": 0,
+            "p_Max": -30,
+            "ss_PBCH_BlockPower": -30,
+            "pdcch_DataScramblingIdentity": 1,
+            "t_Advance": [
+              111,
+              180
+            ],
+            "msg3_DeltaPreamble": 1,
+            "pdsch_HARQ_ACK_Codebook": 1,
+            "rateMatchingResrvdRsc": [
+              {
+                "rateMatchingResrvdRsc_ssb": 1,
+                "rateMatchingPattern": [
+                  {
+                    "symbolsInResourceBlock": "000000000000",
+                    "periodicityAndPattern": "notUsed",
+                    "ext1": null
+                  }
+                ]
+              }
+            ],
+            "csi_RS_ResourceMapping": [
+              {
+                "frequencyDomainAllocation": "000000000000",
+                "nrOfPorts": 1,
+                "firstOFDMSymbolInTimeDomain": 13,
+                "firstOFDMSymbolInTimeDomain2": 0,
+                "cdm_Type": 0,
+                "density": "one",
+                "freqBand": {
+                  "startingRB": 0,
+                  "nrofRBs": 52
+                },
+                "csi_RS_ResourcePeriod": 0,
+                "csi_RS_ResourceRep": 0
+              }
+            ],
+            "srs_CarrierSwitch": null,
+            "subcarrierSpacingSpecificCarrierList": [
+              {
+                "subcarrierSpacing": 1,
+                "carrierBandwidth": 106,
+                "txDirectCurrentLocation": 3300,
+                "subcarrierSpacingSpecificOffsetToCarrier": 0
+              }
+            ]
+          }
+        ],
+        "MACRLCs": [
+          {
+            "num_cc": 1,
+            "tr_s_preference": "local_L1",
+            "tr_n_preference": "f1",
+            "local_n_address": "127.0.0.3",
+            "remote_n_address": "127.0.0.5",
+            "local_n_portc": 500,
+            "local_n_portd": 2152,
+            "remote_n_portc": 501,
+            "remote_n_portd": 2152,
+            "SCTP": {
+              "SCTP_INSTREAMS": 2,
+              "SCTP_OUTSTREAMS": 2
+            }
+          }
+        ],
+        "L1s": [
+          {
+            "num_cc": 1,
+            "tr_n_preference": "local_RRC",
+            "local_n_address": "127.0.0.3",
+            "remote_n_address": "127.0.0.5",
+            "local_n_portc": 500,
+            "local_n_portd": 2152,
+            "remote_n_portc": 501,
+            "remote_n_portd": 2152
+          }
+        ]
+      }
+    ],
+    "security": {
+      "ciphering_algorithms": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "integrity_algorithms": [
+        "nia2",
+        "nia0"
+      ],
+      "drb_ciphering": "yes",
+      "drb_integrity": "no"
+    },
+    "log_config": {
+      "global_log_level": "info",
+      "hw_log_level": "info",
+      "phy_log_level": "info",
+      "mac_log_level": "info",
+      "rlc_log_level": "info",
+      "pdcp_log_level": "info",
+      "rrc_log_level": "info",
+      "ngap_log_level": "info",
+      "f1ap_log_level": "info"
+    }
+  }

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_735.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.4",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the remote S address to an invalid IP format with extra octet causes parsing failure and prevents F1 interface binding."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.3.4",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local N address to an invalid IP format with extra octet causes parsing failure and prevents F1 interface binding."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_568.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.8.45",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the NG-U interface IP to an unreachable address will prevent proper NG-U communication, leading to GTP-U tunnel failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [97, 197],
+      "error_type": "timing misalignment",
+      "explanation_en": "Misaligning the T1a uplink parameters will cause timing issues in front-haul processing for uplink data, leading to data corruption or transmission delays."
+    }
+  }
+]

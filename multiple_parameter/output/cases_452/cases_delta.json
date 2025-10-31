@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_452.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.70.133",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the CU's remote S address to 192.168.70.133 instead of 127.0.0.3 will cause wrong routing definitions, making the DU unreachable for F1 connections.",
+      "explanation_zh": "將 CU 的遠程 S 地址從 127.0.0.3 更改為 192.168.70.133 會導致錯誤的路由定義，使 DU 無法訪問 F1 連接。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config.T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [385, 529],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying the T1a_cp_dl timing parameter to [385, 529] instead of [285, 429] will cause inconsistent timing alignment in the front-haul downlink, leading to synchronization failures and data corruption.",
+      "explanation_zh": "將 T1a_cp_dl 定時參數從 [285, 429] 修改為 [385, 529] 會導致前傳下行鏈路的定時對齊不一致，從而導致同步失敗和數據損壞。"
+    }
+  }
+]

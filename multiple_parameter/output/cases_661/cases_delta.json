@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_661.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the AMF IP address to null will cause missing value error and prevent NG interface connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the downlink absolute frequency point A to the same value as SSB frequency will cause logical contradiction and frequency configuration failure."
+    }
+  }
+]

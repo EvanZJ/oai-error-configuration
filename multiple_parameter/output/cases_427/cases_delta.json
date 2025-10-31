@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_427.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed remote_s_address to an unreachable IP, preventing CU from connecting to DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641281,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Slightly altered SSB absolute frequency to cause misalignment with PRACH or other frequencies."
+    }
+  }
+]

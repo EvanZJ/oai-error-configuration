@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_647.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting MCC to an out-of-range value 1000 will cause PLMN configuration errors and prevent proper network registration."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SSB absolute frequency to a negative value -1 will cause frequency misalignment and radio link failures."
+    }
+  }
+]

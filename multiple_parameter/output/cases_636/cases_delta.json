@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_636.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the SCTP control port to 99999 exceeds the valid TCP/UDP port range (1-65535), causing socket binding failure and preventing F1 connection establishment between CU and DU."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 250],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying the front-haul timing advance Ta4 to [200, 250] introduces inconsistent timing parameters that do not align with standard 5G timing requirements, leading to synchronization failures between DU and RU."
+    }
+  }
+]

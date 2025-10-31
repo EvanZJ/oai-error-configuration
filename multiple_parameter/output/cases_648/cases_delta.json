@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_648.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting MCC to a string 'one' instead of an integer will cause type validation errors and configuration parsing failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": "zero",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting physical cell ID to a string 'zero' instead of an integer will cause type mismatches and cell identification errors."
+    }
+  }
+]

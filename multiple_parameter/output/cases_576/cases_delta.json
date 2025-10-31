@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_576.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 502,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local SCTP port to an incorrect value prevents proper F1 interface binding, causing connection failures to the DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 502,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the local N port to an incorrect value prevents proper F1 interface binding, causing connection failures to the CU."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_645.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 250],
+      "error_type": "out_of_range",
+      "explanation_en": "Modifying Ta4 timing parameters to out-of-range values [200, 250] will cause timing misalignment between DU and RU, leading to synchronization failures and inability to establish proper radio links."
+    }
+  }
+]

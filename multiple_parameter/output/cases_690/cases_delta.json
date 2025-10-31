@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_690.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to 'maybe' (invalid enum value) will cause the security configuration to fail validation and prevent DRB establishment."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 999999999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting absoluteFrequencySSB to 999999999 (out of valid frequency range) will cause frequency misalignment, leading to SSB synchronization failures and cell search issues."
+    }
+  }
+]

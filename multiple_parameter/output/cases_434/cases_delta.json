@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_434.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 2154,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed GNB_PORT_FOR_S1U to a mismatched port, preventing S1-U interface connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": 503,
+      "error_type": "unreachable elements",
+      "explanation_en": "Altered remote_n_portc to a mismatched port, preventing F1-C connection to CU.",
+      "explanation_zh": "更改 remote_n_portc 為不匹配的端口，防止與 CU 的 F1-C 連接。"
+    }
+  }
+]

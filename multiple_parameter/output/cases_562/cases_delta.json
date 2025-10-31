@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_562.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.8.44",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the NG-AMF interface IP to an unreachable address will prevent proper NG interface communication, leading to AMF connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640009,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Misaligning the downlink absolute frequency point A will cause frequency synchronization issues, resulting in failed cell establishment or degraded signal quality."
+    }
+  }
+]

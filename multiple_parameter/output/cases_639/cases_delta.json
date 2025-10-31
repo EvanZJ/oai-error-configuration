@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_639.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Changing the AMF IP address to '192.168.8.999' with an invalid octet (999 > 255) will cause IP address parsing errors and prevent NG interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": "zero",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the physical cell ID to a string 'zero' instead of an integer will cause type validation errors in the configuration parser."
+    }
+  }
+]

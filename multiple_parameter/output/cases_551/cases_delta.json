@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_551.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the GNB IPv4 address for NG-U to an unreachable IP (10.0.0.1) will prevent proper routing and connectivity for user plane traffic, causing network failures and configuration rejection."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+      "original_value": [285, 429],
+      "error_value": [286, 430],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying the T1a_cp_ul timing parameters to [286, 430] introduces inconsistency in uplink timing alignment, potentially causing synchronization issues, data transmission errors, and system faults in the DU."
+    }
+  }
+]

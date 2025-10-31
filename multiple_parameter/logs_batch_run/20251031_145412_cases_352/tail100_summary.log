@@ -1,0 +1,135 @@
+===== CU stdout (tail -n 100) =====
+[LIBCONFIG] file /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_352/cu_case_352.conf - line 11: syntax error
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_load_configmodule.c 376 config module "libconfig" couldn't be loaded
+[CONFIG] config_get, section log_config skipped, config module not properly initialized
+[LOG] init aborted, configuration couldn't be performed
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_userapi.c 68 nfapi has no processed integer availablle
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+Getting configuration failed
+CMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_352/cu_case_352.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_352
+
+[CONFIG] function config_libconfig_init returned -1
+[CONFIG] debug flags: 0x00300000
+log init done
+Reading in command-line options
+
+===== DU stdout (tail -n 100) =====
+[LIBCONFIG] file /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_352/du_case_352.conf - line 9: syntax error
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_load_configmodule.c 376 config module "libconfig" couldn't be loaded
+[CONFIG] config_get, section log_config skipped, config module not properly initialized
+[LOG] init aborted, configuration couldn't be performed
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_userapi.c 68 nfapi has no processed integer availablle
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+Getting configuration failed
+CMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_352/du_case_352.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_352
+
+[CONFIG] function config_libconfig_init returned -1
+[CONFIG] debug flags: 0x00300000
+log init done
+Reading in command-line options
+
+===== UE stdout (tail -n 100) =====
+[0m[93m[PHY]   samples_per_subframe 61440/per second 61440000, wCP 57344
+[0m[PHY]   Initializing UE vars for gNB TXant 1, UE RXant 1
+[0m[PHY]   prs_config configuration NOT found..!! Skipped configuring UE for the PRS reception
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   Doing symbol rotation calculation for TX/RX, f0 3619200000.000000 Hz, Nsymb 28
+[0m[PHY]   UE 0 Setting N_TA_offset to 800 samples (factor 2.000000, UL Freq 3619200000, N_RB 106, mu 1)
+[0m[PHY]   HW: Configuring card 0, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 1, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 2, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 3, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 4, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 5, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 6, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   HW: Configuring card 7, sample_rate 61440000.000000, tx/rx num_channels 1/1, duplex_mode TDD
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_freq 3619200000 Hz, rx_freq 3619200000 Hz, tune_offset 0
+[0m[PHY]   HW: Configuring channel 0 (rf_chain 0): setting tx_gain 0, rx_gain 110
+[0m[PHY]   Intializing UE Threads for instance 0 (0x5d439f979330,0x7466062a3010)...
+[0m[UTIL]   threadCreate() for UEthread: creating thread with affinity ffffffff, priority 97
+[0m[UTIL]   threadCreate() for L1_UE_stats: creating thread with affinity ffffffff, priority 1
+[0m[NR_RRC]   create TASK_RRC_NRUE 
+[0m[UTIL]   threadCreate() for TASK_RRC_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[ITTI]   Created Posix thread TASK_RRC_NRUE
+[0m[UTIL]   threadCreate() for TASK_NAS_NRUE: creating thread with affinity ffffffff, priority 50
+[0m[HW]   Running as client: will connect to a rfsimulator server side
+[0m[ITTI]   Created Posix thread TASK_NAS_NRUE
+[0m[HW]   [RRU] has loaded RFSIMULATOR device.
+[0m[SIM]   UICC simulation: IMSI=001010000000101, IMEISV=6754567890123413, Ki=fec86ba6eb707ed08905757b1bb44b8f, OPc=C42449363BBAD02B66D16BC975D77CC1, DNN=oai, SST=0x01, SD=0xffffff
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m[HW]   Trying to connect to 127.0.0.1:4043
+[0m[HW]   connect() to 127.0.0.1:4043 failed, errno(111)
+[0m

@@ -1,0 +1,6 @@
+CASE_NAME=cu_case_219
+CU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/auto_run_gnb_ue/cu_case_219.conf
+DU_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf/du_gnb.conf
+UE_CONF=/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf/ue_oai.conf
+START_TIME=2025-10-30T15:11:55+08:00
+DURATION=30s

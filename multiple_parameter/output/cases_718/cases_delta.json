@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_718.json",
+    "cu": {
+      "modified_key": "gNBs.servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": "106",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting dl_carrierBandwidth to a string (wrong type, should be integer) will cause parsing errors and configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs.servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": "106",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting dl_carrierBandwidth to a string (wrong type, should be integer) will cause parsing errors and configuration failure."
+    }
+  }
+]

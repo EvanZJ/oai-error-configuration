@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_420.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the local S address to an invalid IP (10.0.0.1) prevents the CU from properly binding to the local interface for F1-Southbound connections."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 1,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Shifting the PRACH message 1 frequency start point causes frequency domain misalignment, resulting in UEs failing to transmit PRACH preambles correctly."
+    }
+  }
+]

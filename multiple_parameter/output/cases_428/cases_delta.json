@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_428.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.2",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed amf_ip_address to an unreachable IP, preventing CU from connecting to AMF."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 1,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altered PRACH message 1 frequency start to cause misalignment with SSB frequency.",
+      "explanation_zh": "更改 PRACH 訊息 1 頻率起始點以造成與 SSB 頻率的錯位。"
+    }
+  }
+]

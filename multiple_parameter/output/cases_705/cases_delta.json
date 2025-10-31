@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_705.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.1.1.1",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the remote SCTP address to an invalid IP format '192.168.1.1.1' will cause parsing errors and prevent connection to DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.5.5",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the remote N address to an invalid IP format '127.0.0.5.5' will cause network configuration errors and F1 interface failure."
+    }
+  }
+]

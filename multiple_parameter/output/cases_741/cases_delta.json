@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_741.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.8.256",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NGU to invalid IP '192.168.8.256' (octet > 255) causes NGU interface configuration rejection and IP format errors."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config.0.Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 to [180, 110] creates inconsistent timing parameters (max < min), causing front-haul timing misalignment and synchronization failures."
+    }
+  }
+]

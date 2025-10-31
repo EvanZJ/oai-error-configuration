@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_716.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.NG.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local_n_address to null (missing value) will cause the CU to fail binding to the NG interface, leading to unreachable AMF connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local_n_address to null (missing value) will cause the DU to fail binding to the F1 interface, leading to unreachable CU connection."
+    }
+  }
+]

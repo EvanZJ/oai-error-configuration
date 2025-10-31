@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_431.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed remote_s_portd to a mismatched port, preventing F1-U connection to DU."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Altered local_n_portd to a mismatched port, preventing proper F1-U interface binding.",
+      "explanation_zh": "更改 local_n_portd 為不匹配的端口，防止正確的 F1-U 接口綁定。"
+    }
+  }
+]

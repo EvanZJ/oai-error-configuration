@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_764.json",
+      "cu": {
+        "modified_key": "gNBs.security.integrity_algorithms",
+        "original_value": ["nia2"],
+        "error_value": ["invalid"],
+        "error_type": "invalid_enum",
+        "explanation_en": "Invalid integrity algorithm value not in allowed set (nia0, nia1, nia2, nia3)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_764.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.servingCellConfigCommon[0].ul_carrierBandwidth",
+        "original_value": 106,
+        "error_value": 500,
+        "error_type": "out_of_range",
+        "explanation_en": "Uplink carrier bandwidth exceeds maximum allowed value for NR band 78"
+      }
+    }
+  ]

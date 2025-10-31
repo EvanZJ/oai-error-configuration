@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_457.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "10.0.0.132",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the AMF IP address to a different subnet (10.0.0.132) creates an unreachable IP range conflict, preventing CU-AMF communication and causing connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641281,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altering the absolute SSB frequency by one unit introduces frequency misalignment, leading to synchronization issues and potential cell search failures in the DU."
+    }
+  }
+]

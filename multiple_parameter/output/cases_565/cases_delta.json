@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_565.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 502,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP control port to an incorrect value will prevent F1 control plane connection establishment, causing interface setup failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.6",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the remote N interface address to an unreachable IP will block F1-U data plane connectivity, leading to data transmission failures."
+    }
+  }
+]

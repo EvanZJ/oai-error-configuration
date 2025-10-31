@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_486.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "8",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the number of PUSCH threads from integer to string type will cause configuration parsing errors, leading to thread allocation failures and gNodeB startup issues."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up[0]",
+      "original_value": 96,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the uplink timing parameter T1a_up to an excessive value will cause timing misalignment, resulting in fronthaul uplink synchronization failures and data transmission errors."
+    }
+  }
+]

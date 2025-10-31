@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_693.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms",
+      "original_value": ["nia2", "nia0"],
+      "error_value": ["nia2", "nia0", "nia99"],
+      "error_type": "invalid_enum",
+      "explanation_en": "Adding an invalid integrity algorithm 'nia99' will cause security negotiation failure and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting remote_n_address to null prevents F1 connection to CU, making the DU unable to communicate with the CU."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_418.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_address",
+      "original_value": "127.0.0.3",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote S address to an unreachable IP (10.0.0.1) prevents the CU from connecting to the DU via the F1 interface, resulting in F1 setup failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_ul",
+      "original_value": [285, 429],
+      "error_value": [286, 430],
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the uplink timing advance parameters (T1a_cp_ul) causes inconsistency with downlink timing, leading to improper timing synchronization and potential data transmission errors."
+    }
+  }
+]

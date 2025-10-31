@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_757.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv6",
+      "original_value": "::1",
+      "error_value": "::256",
+      "error_type": "invalid_format",
+      "explanation_en": "Invalid IPv6 address format causes AMF connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs.0.servingCellConfigCommon.0.prach_RootSequenceIndex",
+      "original_value": 1,
+      "error_value": 2048,
+      "error_type": "out_of_range",
+      "explanation_en": "PRACH root sequence index exceeds maximum, causing RACH configuration failure."
+    }
+  }
+]

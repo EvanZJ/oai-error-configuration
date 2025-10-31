@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_725.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES[0].NETWORK_INTERFACES_CONFIG.NG.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.5.6",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting remote_n_address to invalid IP format '127.0.0.5.6' causes NG interface connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641281,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting absoluteFrequencySSB to 641281 misaligns with dl_absoluteFrequencyPointA, causing SSB transmission failure."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_670.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.1.1",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Changing the local SCTP address to a different subnet makes the CU unreachable for F1 interface communication."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_cp_dl",
+      "original_value": [285, 429],
+      "error_value": [429, 285],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Reversing the timing parameters min and max values causes inconsistent timing alignment in downlink compression."
+    }
+  }
+]

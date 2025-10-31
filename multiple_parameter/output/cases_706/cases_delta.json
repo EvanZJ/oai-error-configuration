@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_706.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": "501",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the local SCTP port to a string '501' instead of an integer will cause type validation errors and prevent CU from starting."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": "500",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the local N port to a string '500' instead of an integer will cause type validation errors and F1 interface configuration failure."
+    }
+  }
+]

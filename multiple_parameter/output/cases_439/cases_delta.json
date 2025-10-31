@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_439.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.9",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed local S address to an unreachable IP, preventing proper F1 interface binding.",
+      "explanation_zh": "更改本地 S 地址為無法到達的 IP，防止正確的 F1 接口綁定。"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical contradiction",
+      "explanation_en": "Set remote N address to the same as local N address, causing logical contradiction in F1 interface configuration.",
+      "explanation_zh": "將遠程 N 地址設定為與本地 N 地址相同，導致 F1 接口配置中的邏輯矛盾。"
+    }
+  }
+]

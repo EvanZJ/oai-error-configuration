@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_789.json",
+      "cu": {
+        "modified_key": "snssaiList.sd",
+        "original_value": "0x010203",
+        "error_value": "0x1000000",
+        "error_type": "out_of_range",
+        "explanation_en": "SD exceeds maximum allowed value (0xFFFFFF)."
+      }
+    },
+    {
+      "filename": "du_case_789.json",
+      "du": {
+        "modified_key": "snssaiList.sd",
+        "original_value": "0x010203",
+        "error_value": "0x1000000",
+        "error_type": "out_of_range",
+        "explanation_en": "SD exceeds maximum allowed value (0xFFFFFF)."
+      }
+    }
+  ]

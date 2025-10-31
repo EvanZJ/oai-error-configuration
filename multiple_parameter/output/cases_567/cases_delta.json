@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_567.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP data port to an incorrect value will prevent F1 data plane connection, causing data transmission failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the remote N interface data port to a mismatched value will block F1-U data plane connectivity, leading to data transmission issues."
+    }
+  }
+]

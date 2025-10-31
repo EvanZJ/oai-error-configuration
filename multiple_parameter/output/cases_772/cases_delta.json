@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_772.json",
+      "cu": {
+        "modified_key": "gNBs.amf_ip_address.ipv4",
+        "original_value": "192.168.70.132",
+        "error_value": "192.168.70.0",
+        "error_type": "invalid_format",
+        "explanation_en": "IPv4 address uses network address (host part is 0)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_772.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.Ta4",
+        "original_value": [110, 180],
+        "error_value": [180, 110],
+        "error_type": "logical_contradiction",
+        "explanation_en": "Timing advance values are in wrong order (first value should be less than second)"
+      }
+    }
+  ]

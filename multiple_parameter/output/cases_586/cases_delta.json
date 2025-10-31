@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_586.json",
+    "cu": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 641288,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Changing the SSB absolute frequency to 641288 misaligns it with the DU's expected frequency, causing potential synchronization and cell search issues."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.15",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the local N address to an unreachable IP (127.0.0.15) will prevent the DU from binding to the correct interface, leading to F1 connection failures."
+    }
+  }
+]

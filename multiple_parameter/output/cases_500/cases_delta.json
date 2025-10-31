@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_500.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.8.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Setting the AMF IP address to the same value as the CU's NG-AMF interface address causes IP range conflicts, preventing proper network binding and leading to connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 641280,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting the downlink absolute frequency point A to match the SSB frequency causes misalignment in carrier frequency configuration, resulting in incorrect resource allocation and potential radio link failures."
+    }
+  }
+]

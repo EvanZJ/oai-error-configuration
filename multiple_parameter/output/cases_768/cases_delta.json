@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_768.json",
+      "cu": {
+        "modified_key": "gNBs.remote_s_portd",
+        "original_value": 2152,
+        "error_value": 70000,
+        "error_type": "out_of_range",
+        "explanation_en": "SCTP port number exceeds maximum allowed value (65535)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_768.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.servingCellConfigCommon[0].physCellId",
+        "original_value": 0,
+        "error_value": 1008,
+        "error_type": "out_of_range",
+        "explanation_en": "Physical cell ID exceeds maximum allowed value (1007)"
+      }
+    }
+  ]

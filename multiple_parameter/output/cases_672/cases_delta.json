@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_672.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local SCTP port to an out-of-range value prevents proper F1 interface binding and connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Assigning the same IP address to local and remote interfaces causes IP conflict and prevents network communication."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_600.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting AMF IP address to null will cause unreachable AMF, preventing NG interface establishment and leading to CU initialization failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting local network address to null will make DU unreachable, causing F1 interface connection failure and DU startup errors."
+    }
+  }
+]

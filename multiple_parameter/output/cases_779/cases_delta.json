@@ -1,0 +1,12 @@
+[
+    {
+      "filename": "du_case_779.json",
+      "du": {
+        "modified_key": "fhi_72.fh_config.0.Ta4",
+        "original_value": [285, 429],
+        "error_value": [180, 110],
+        "error_type": "logical_contradiction",
+        "explanation_en": "Ta4 timing parameter has decreasing values, violating timing alignment requirements."
+      }
+    }
+  ]

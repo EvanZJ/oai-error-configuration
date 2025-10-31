@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_481.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": "500",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the remote S port C from integer to string type will cause parsing errors in the SCTP configuration, leading to F1 interface connection failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_portc",
+      "original_value": 501,
+      "error_value": "501",
+      "error_type": "wrong_type",
+      "explanation_en": "Modifying the remote N port C to string type will cause type mismatch errors, preventing proper F1 interface establishment between CU and DU."
+    }
+  }
+]

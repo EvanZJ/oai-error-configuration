@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_553.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Changing the remote SCTP data port to 2153 will cause F1 data interface connectivity issues, preventing proper routing and data transmission, leading to configuration rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portd",
+      "original_value": 2152,
+      "error_value": 2153,
+      "error_type": "unreachable elements or wrong routing definitions",
+      "explanation_en": "Modifying the local N data port to 2153 will disrupt F1 data communication, leading to routing failures, connectivity issues, and system faults in the DU."
+    }
+  }
+]

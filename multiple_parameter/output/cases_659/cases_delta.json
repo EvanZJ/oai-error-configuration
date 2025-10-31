@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_659.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": "sixfourzerozerozeroeight",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the downlink absolute frequency point A to an invalid string format will cause frequency configuration parsing failure and cell setup rejection."
+    }
+  }
+]

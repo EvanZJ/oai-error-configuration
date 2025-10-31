@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_652.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "192.168.70.132",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local S address to the same as AMF IP '192.168.70.132' will cause IP address conflicts and routing issues."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local N address to the same as remote N address '127.0.0.5' will cause IP address conflicts and F1 interface binding failures."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_695.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_s_portc to 99999 exceeds valid port range, causing wrong routing and F1 connection failure."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_n_portc to 99999 exceeds valid port range, causing wrong routing and F1 connection failure."
+    }
+  }
+]

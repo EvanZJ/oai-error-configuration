@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_455.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.9.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the CU's NG-AMF IP address to 192.168.9.43 instead of 192.168.8.43 will cause unreachable subnet definitions, preventing proper NG-AMF interface communication.",
+      "explanation_zh": "將 CU 的 NG-AMF IP 地址從 192.168.8.43 更改為 192.168.9.43 會導致無法訪問的子網定義，阻止正確的 NG-AMF 接口通信。"
+    },
+    "du": {
+      "modified_key": "MACRLCs.local_n_portd",
+      "original_value": 2152,
+      "error_value": 3152,
+      "error_type": "unreachable elements",
+      "explanation_en": "Modifying the local N port D to 3152 instead of 2152 will cause wrong routing definitions, making the DU unable to bind to the correct port for F1 data plane.",
+      "explanation_zh": "將本地 N 端口 D 從 2152 修改為 3152 會導致錯誤的路由定義，使 DU 無法綁定到正確的 F1 數據平面端口。"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_763.json",
+      "cu": {
+        "modified_key": "gNBs.local_s_address",
+        "original_value": "127.0.0.1",
+        "error_value": "192.168.70.256",
+        "error_type": "invalid_format",
+        "explanation_en": "IPv4 address with invalid octet value (256 exceeds 255)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_763.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+        "original_value": 640008,
+        "error_value": 10000000,
+        "error_type": "out_of_range",
+        "explanation_en": "Downlink absolute frequency point A exceeds maximum allowed value for NR band 78"
+      }
+    }
+  ]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_494.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the MCC to 1000 exceeds the valid range (000-999), causing PLMN configuration rejection and preventing network registration."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_rx",
+      "original_value": 4,
+      "error_value": "4",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the number of receive antennas from integer to string will cause type validation errors, leading to RU configuration failure."
+    }
+  }
+]

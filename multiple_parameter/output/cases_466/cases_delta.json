@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_466.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 3152,
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote SCTP port for F1-U from 2152 to 3152 creates a port mismatch, preventing CU from connecting to the DU and causing F1-U interface failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [111, 180],
+      "error_type": "timing misalignment",
+      "explanation_en": "Altering the timing advance parameter Ta4 introduces timing misalignment, leading to synchronization issues and potential data transmission errors in the DU."
+    }
+  }
+]

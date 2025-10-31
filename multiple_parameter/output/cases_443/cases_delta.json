@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_443.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 3152,
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Changed GNB port for S1U to a mismatched port, causing routing issues for GTP-U communication.",
+      "explanation_zh": "更改 GNB S1U 端口為不匹配的端口，導致 GTP-U 通信的路由問題。"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640108,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altered DL absolute frequency point A, disrupting frequency alignment and cell operation.",
+      "explanation_zh": "更改 DL 絕對頻率點 A，干擾頻率對齊和細胞操作。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_680",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the AMF IPv4 address to a number instead of a string will cause type mismatch, leading to configuration parsing errors."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [200, 100],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 timing parameters with first value greater than second creates a logical contradiction, causing timing misalignment and synchronization issues."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_497.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_name",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "gNB-Eurecom-CU!",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB name to include invalid character '!' will cause name validation errors, preventing gNB identification and registration."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the local N port C to null simulates a missing value, causing F1 interface binding failures and preventing CU-DU communication."
+    }
+  }
+]

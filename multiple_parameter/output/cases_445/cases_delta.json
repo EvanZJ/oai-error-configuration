@@ -1,0 +1,21 @@
+[
+  {
+    "filename": "case_445.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "192.168.70.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changed GNB IPv4 address for NGU to an IP in the AMF's subnet, causing potential IP conflict and routing issues.",
+      "explanation_zh": "更改 GNB IPv4 地址為 NGU 為 AMF 子網中的 IP，導致潛在的 IP 衝突和路由問題。"
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4[0]",
+      "original_value": 110,
+      "error_value": 120,
+      "error_type": "timing misalignment",
+      "explanation_en": "Altered Ta4 timing parameter, leading to inconsistent timing alignment in the front-haul interface.",
+      "explanation_zh": "更改 Ta4 定時參數，導致前傳接口中的定時對齊不一致。"
+    }
+  }
+]

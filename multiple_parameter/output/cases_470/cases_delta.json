@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_470.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 1,
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting mnc_length to 1 contradicts the actual mnc value of 1 (which has 1 digit), causing PLMN encoding inconsistencies and potential registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting physCellId to 1008 exceeds the valid range (0-1007), leading to invalid cell identity and synchronization issues."
+    }
+  }
+]

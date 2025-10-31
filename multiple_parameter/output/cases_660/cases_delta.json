@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_660.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.3",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting the local SCTP address to the same as the remote address will cause logical contradiction and F1 interface connection failure due to address conflict."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the absolute SSB frequency to null will cause missing value error and prevent SSB signal transmission."
+    }
+  }
+]

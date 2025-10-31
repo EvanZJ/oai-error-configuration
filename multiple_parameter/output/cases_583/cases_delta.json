@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_583.json",
+    "cu": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640012,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altering the downlink absolute frequency point A to 640012 causes misalignment with the SSB frequency, leading to potential synchronization failures and degraded cell performance."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.10",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the remote N address to an unreachable IP (127.0.0.10) will prevent the DU from connecting to the CU, resulting in F1 interface setup failure."
+    }
+  }
+]

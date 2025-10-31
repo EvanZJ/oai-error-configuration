@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_634.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the CU's NG AMF IP to '10.0.0.1' makes it unreachable from the network segment, preventing NG interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 642280,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Setting dl_absoluteFrequencyPointA to 642280 misaligns the downlink frequency reference from the SSB frequency at 641280, causing cell synchronization failures."
+    }
+  }
+]

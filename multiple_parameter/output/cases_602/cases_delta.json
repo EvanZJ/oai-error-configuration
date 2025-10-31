@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_602.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": 127005,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting local SCTP address to integer 127005 (expected string IP) will cause IP address parsing failure and F1 interface binding errors."
+    },
+    "du": {
+      "modified_key": "MACRLCs.remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": 127005,
+      "error_type": "wrong_type",
+      "explanation_en": "Setting remote network address to integer 127005 (expected string IP) will cause IP address parsing failure and F1 interface connection errors."
+    }
+  }
+]

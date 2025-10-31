@@ -1,0 +1,16 @@
+[
+  {
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 502,
+    "error_type": "unreachable elements",
+    "explanation": "Modified F1-C port to an incorrect value, making DU unreachable from CU."
+  },
+  {
+    "modified_key": "fhi_72.fh_config[0].Ta4",
+    "original_value": [110, 180],
+    "error_value": [111, 181],
+    "error_type": "timing misalignment",
+    "explanation": "Altered Ta4 timing parameters to cause inconsistency in uplink timing advance."
+  }
+]

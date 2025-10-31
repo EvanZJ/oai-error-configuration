@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_594.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.5",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed local SCTP address to unreachable IP, preventing F1 binding."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].remote_n_address",
+      "original_value": "127.0.0.5",
+      "error_value": "10.0.0.5",
+      "error_type": "wrong routing definitions",
+      "explanation_en": "Altered remote N address to mismatched IP, causing F1 connection failure."
+    }
+  }
+]

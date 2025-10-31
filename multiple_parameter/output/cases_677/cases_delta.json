@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_677.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting transport preference to an invalid enum value causes configuration validation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting transport preference to an invalid enum value causes configuration validation failure."
+    }
+  }
+]

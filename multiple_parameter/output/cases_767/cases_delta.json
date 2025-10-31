@@ -1,0 +1,24 @@
+[
+    {
+      "filename": "cu_case_767.json",
+      "cu": {
+        "modified_key": "gNBs.local_s_portd",
+        "original_value": 2152,
+        "error_value": 70000,
+        "error_type": "out_of_range",
+        "explanation_en": "SCTP port number exceeds maximum allowed value (65535)"
+      },
+      "du": null
+    },
+    {
+      "filename": "du_case_767.json",
+      "cu": null,
+      "du": {
+        "modified_key": "gNBs.servingCellConfigCommon[0].ul_frequencyBand",
+        "original_value": 78,
+        "error_value": 1000,
+        "error_type": "out_of_range",
+        "explanation_en": "Uplink frequency band exceeds maximum allowed NR band number"
+      }
+    }
+  ]

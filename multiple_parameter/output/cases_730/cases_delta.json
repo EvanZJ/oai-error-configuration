@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_730.json",
+    "cu": {
+      "modified_key": "gNBs[0].local_s_address",
+      "original_value": "127.0.0.1",
+      "error_value": "127.0.0.5",
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting local_s_address to '127.0.0.5' creates a logical contradiction as it may conflict with routing definitions or expected network segmentation, potentially causing interface binding issues."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Removing local_n_address causes a missing value error, preventing the DU from binding to the required network interface for F1 connections."
+    }
+  }
+]

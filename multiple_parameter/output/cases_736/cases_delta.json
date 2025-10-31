@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_736.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address",
+      "original_value": {"ipv4": "192.168.70.132"},
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the AMF IP address to null causes missing value error, preventing NG interface establishment and system initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": "0",
+      "error_type": "wrong_type",
+      "explanation_en": "Changing the physical cell ID from integer to string causes type mismatch, leading to configuration parsing failure and system rejection."
+    }
+  }
+]

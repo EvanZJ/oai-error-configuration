@@ -1,0 +1,22 @@
+[
+    {
+      "filename": "cu_case_787.json",
+      "cu": {
+        "modified_key": "plmn_list.mnc",
+        "original_value": 1,
+        "error_value": 1000,
+        "error_type": "out_of_range",
+        "explanation_en": "MNC exceeds maximum allowed value (999)."
+      }
+    },
+    {
+      "filename": "du_case_787.json",
+      "du": {
+        "modified_key": "plmn_list.mnc",
+        "original_value": 1,
+        "error_value": 1000,
+        "error_type": "out_of_range",
+        "explanation_en": "MNC exceeds maximum allowed value (999)."
+      }
+    }
+  ]

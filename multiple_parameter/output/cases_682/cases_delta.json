@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "cases_682",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to an invalid enum will cause security negotiation failure and connection rejection."
+    },
+    "du": {
+      "modified_key": "servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": "641280",
+      "error_type": "wrong_type",
+      "explanation_en": "Setting the SSB frequency to a string instead of a number will cause type mismatch and configuration parsing errors."
+    }
+  }
+]

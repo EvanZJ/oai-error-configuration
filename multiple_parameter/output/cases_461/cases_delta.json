@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_461.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the NGU interface IP address to a different subnet (10.0.0.43) creates an unreachable IP range conflict, preventing CU from establishing proper NGU connections and causing interface failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 640009,
+      "error_type": "frequency misalignment",
+      "explanation_en": "Altering the downlink absolute frequency point A by one unit introduces frequency misalignment, leading to synchronization issues and potential cell search failures in the DU."
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_433.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.5",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changed GNB_IPV4_ADDRESS_FOR_NGU to an unreachable IP, preventing NG-U interface connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 502,
+      "error_type": "unreachable elements",
+      "explanation_en": "Altered local_n_portc to a mismatched port, preventing proper F1-C interface binding.",
+      "explanation_zh": "更改 local_n_portc 為不匹配的端口，防止正確的 F1-C 接口綁定。"
+    }
+  }
+]

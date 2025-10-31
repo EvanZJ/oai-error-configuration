@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_514.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "172.16.0.1",
+      "error_type": "unreachable elements",
+      "explanation_en": "Setting the AMF IP address to '172.16.0.1' creates an unreachable element in a different private network segment, preventing NG interface connection and causing AMF reachability failures."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].T1a_up",
+      "original_value": [96, 196],
+      "error_value": [97, 197],
+      "error_type": "timing misalignment",
+      "explanation_en": "Modifying T1a_up to [97, 197] causes timing misalignment in the uplink front-haul parameters, leading to synchronization issues and data transmission failures."
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_459.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "10.0.0.43",
+      "error_type": "IP range conflicts",
+      "explanation_en": "Changing the NG-AMF interface IP address to a different subnet (10.0.0.43) creates an unreachable IP range conflict, preventing CU-AMF NG interface communication and causing connection failures."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "192.168.80.3",
+      "error_type": "unreachable elements",
+      "explanation_en": "Altering the local network address to an unreachable subnet (192.168.80.3) introduces routing misconfiguration, preventing DU from establishing proper network connections and leading to interface failures."
+    }
+  }
+]

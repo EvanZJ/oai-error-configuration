@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_707.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the local SCTP address to null will cause configuration validation errors and prevent CU from binding to the required interface."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": null,
+      "error_type": "missing_value",
+      "explanation_en": "Setting the local N address to null will cause DU configuration failure and inability to establish F1 connections."
+    }
+  }
+]

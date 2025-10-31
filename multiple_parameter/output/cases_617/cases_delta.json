@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_617.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local S port C to 65536 exceeds the valid port range (0-65535), causing configuration validation failure and rejection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 65536,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the local N port C to 65536 exceeds the valid port range (0-65535), causing configuration validation failure and rejection."
+    }
+  }
+]

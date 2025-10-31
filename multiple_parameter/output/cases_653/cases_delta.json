@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_653.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 70000,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local S port C to out-of-range value 70000 will cause port binding failures and F1 interface setup errors."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [180, 110],
+      "error_type": "logical_contradiction",
+      "explanation_en": "Setting Ta4 timing parameters to [180, 110] where min > max will cause timing misalignment and synchronization failures."
+    }
+  }
+]

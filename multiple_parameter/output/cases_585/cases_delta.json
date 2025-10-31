@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_585.json",
+    "cu": {
+      "modified_key": "gNBs[0].GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.70.132",
+      "error_value": "192.168.70.145",
+      "error_type": "unreachable elements",
+      "explanation_en": "Changing the NGU IPv4 address to an unreachable IP (192.168.70.145) will prevent the CU from connecting to the UPF, causing NG-U interface setup failure."
+    },
+    "du": {
+      "modified_key": "fhi_72.fh_config[0].Ta4",
+      "original_value": [110, 180],
+      "error_value": [115, 185],
+      "error_type": "timing misalignment",
+      "explanation_en": "Adjusting the Ta4 timing parameters to [115, 185] introduces misalignment with the expected timing advance values, potentially causing synchronization issues in the front-haul."
+    }
+  }
+]
