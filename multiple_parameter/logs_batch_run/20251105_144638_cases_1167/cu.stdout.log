@@ -1,0 +1,27 @@
+[ENB_APP]   nfapi (0) running mode: MONOLITHIC
+[0m[GNB_APP]   Getting GNBSParams
+[0m[OPT]   OPT disabled
+[0m[HW]   Version: Branch: HEAD Abrev. Hash: 7026763286 Date: Tue Jul 2 12:38:22 2024 +0000
+[0m[PHY]   create_gNB_tasks() Task ready initialize structures
+[0m[NR_PHY]   RC.gNB = 0x63fba3765b20
+[0m[PHY]   No prs_config configuration found..!!
+[0m[PHY]   create_gNB_tasks() RC.nb_nr_L1_inst:0
+[0m[GNB_APP]   Allocating gNB_RRC_INST for 1 instances
+[0m[GNB_APP]   F1AP: gNB_CU_id[0] 3584
+[0m[GNB_APP]   F1AP: gNB_CU_name[0] gNB-Eurecom-CU
+[0m[GNB_APP]   SDAP layer is disabled
+[0m[GNB_APP]   Data Radio Bearer count 1
+[0m[NR_RRC]   do_SIB23_NR, size 9 
+ [0m[1;31m[RRC]   unknown integrity algorithm "nia9" in section "security" of the configuration file
+[0mCMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_1167/cu_case_1167.conf" 
+[LIBCONFIG] Path for include directive set to: /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_1167
+[CONFIG] function config_libconfig_init returned 0
+[CONFIG] config module libconfig loaded
+[CONFIG] debug flags: 0x00000000
+log init done
+Reading in command-line options
+[CONFIG] parallel_conf is set to 2
+[CONFIG] worker_conf is set to 1
+Configuration: nb_rrc_inst 1, nb_nr_L1_inst 0, nb_ru 0
+configuring for RAU/RRU
+NRRRC 0: Southbound Transport f1

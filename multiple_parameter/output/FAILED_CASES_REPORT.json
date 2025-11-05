@@ -1,21 +1,6 @@
 [
   {
-    "case": 934,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 947,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 1028,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 1041,
+    "case": 1138,
     "step": "DELTA",
     "reason": "file_not_generated"
   }
