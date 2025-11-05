@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting local_s_portc to 0 (invalid port number) will cause F1 interface configuration failure and prevent CU-DU communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+      "original_value": 6,
+      "error_value": 15,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting dl_UL_TransmissionPeriodicity to 15 (valid range 0-7) will cause TDD periodicity configuration validation failure and prevent frame structure setup.",
+      "explanation_zh": "將 dl_UL_TransmissionPeriodicity 設定為 15（有效範圍 0-7）會導致 TDD 週期配置驗證失敗，並阻止幀結構設置。"
+    }
+  }
+]

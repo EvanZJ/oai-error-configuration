@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an unknown enum 'invalid' will cause ASN.1 encoding/decoding configuration failure and protocol issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 10000000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting absoluteFrequencySSB to an out-of-range value (10000000) will cause invalid SSB frequency configuration and synchronization failure.",
+      "explanation_zh": "將 absoluteFrequencySSB 設定為超出範圍的值 (10000000)，會導致無效的 SSB 頻率配置，並造成同步失敗。"
+    }
+  }
+]

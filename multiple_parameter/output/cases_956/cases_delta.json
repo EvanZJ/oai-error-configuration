@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NG_AMF to an invalid IP format (999.999.999.999) will cause AMF connection failure and network unavailability."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofUplinkSlots to an out-of-range value (100) will cause invalid TDD configuration and uplink transmission failure.",
+      "explanation_zh": "將 nrofUplinkSlots 設定為超出範圍的值 (100)，會導致無效的 TDD 配置，並造成上行傳輸失敗。"
+    }
+  }
+]

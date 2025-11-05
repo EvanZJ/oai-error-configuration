@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 300,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the downlink carrier bandwidth to 300 PRBs exceeds the maximum allowed value, causing configuration validation failure.",
+      "explanation_zh": "將下行載波頻寬設定為 300 PRB 超過允許的最大值，導致配置驗證失敗。"
+    }
+  }
+]

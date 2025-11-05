@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SCTP input streams to an excessively high value of 100 will exceed protocol limits and cause SCTP association failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of downlink symbols to an invalid value of 20 will exceed the maximum allowed symbols for the TDD pattern and cause scheduling failures.",
+      "explanation_zh": "將下行符號數設定為無效的值 20，將超過 TDD 模式允許的最大符號數，並導致調度失敗。"
+    }
+  }
+]

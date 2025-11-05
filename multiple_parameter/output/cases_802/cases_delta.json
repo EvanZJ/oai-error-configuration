@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP control port to an out-of-range value 99999 will cause F1-C interface connection failures and prevent F1AP control message exchange with the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_SRS",
+      "original_value": 0,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the SRS enable flag to an invalid value of 99 will cause sounding reference signal configuration errors and prevent proper SRS transmission for uplink channel estimation.",
+      "explanation_zh": "將 SRS 啟用旗標設定為無效值 99 會導致聲音參考訊號配置錯誤，並阻止上行鏈路通道估計的正確 SRS 傳輸。"
+    }
+  }
+]

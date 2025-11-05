@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to -1 (negative value) will cause invalid SCTP configuration error and connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting dl_absoluteFrequencyPointA to -1 (negative frequency) will cause invalid downlink frequency configuration error and cell setup failure.",
+      "explanation_zh": "將 dl_absoluteFrequencyPointA 設定為 -1（負頻率）會導致無效下行鏈路頻率配置錯誤，並造成小區設定失敗。"
+    }
+  }
+]

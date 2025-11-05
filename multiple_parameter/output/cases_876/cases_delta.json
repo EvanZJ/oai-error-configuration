@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the port to an out-of-range value like 99999 will cause network interface binding failures and prevent proper communication with the AMF."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SSB block power to 100 dBm exceeds the maximum allowed power and may cause hardware damage or transmission failures.",
+      "explanation_zh": "將 SSB 區塊功率設定為 100 dBm 超過允許的最大功率，可能導致硬體損壞或傳輸失敗。"
+    }
+  }
+]

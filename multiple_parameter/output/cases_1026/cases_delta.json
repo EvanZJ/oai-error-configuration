@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format will cause AMF connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting number of uplink symbols to 20 exceeds the valid range for the slot, causing TDD configuration failure.",
+      "explanation_zh": "將上行符號數設定為 20 超過時隙有效範圍，會導致 TDD 配置失敗。"
+    }
+  }
+]

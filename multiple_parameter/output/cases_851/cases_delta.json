@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 100,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the number of PUSCH threads to 100 exceeds the maximum allowed value, causing thread configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB",
+      "original_value": 15,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SSB per RACH occasion and CB preambles per SSB to 100 exceeds the maximum allowed value, causing configuration validation failure.",
+      "explanation_zh": "將每個 RACH 場合和每個 SSB 的 CB 前導數設定為 100 超過允許的最大值，導致配置驗證失敗。"
+    }
+  }
+]

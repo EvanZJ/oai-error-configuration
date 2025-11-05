@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP port C to an out-of-range value of 99999 will cause port binding failures and prevent SCTP connection establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+      "original_value": 2,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of uplink slots to an invalid value of 20 will exceed the maximum allowed slots for the TDD pattern and cause scheduling failures.",
+      "explanation_zh": "將上行時隙數設定為無效的值 20，將超過 TDD 模式允許的最大時隙數，並導致調度失敗。"
+    }
+  }
+]

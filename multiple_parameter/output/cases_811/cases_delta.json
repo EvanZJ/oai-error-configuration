@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the S1-U port to an out-of-range value of 99999 will cause GTP-U tunnel establishment failures and prevent user plane data transmission."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig",
+      "original_value": 13,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the zero correlation zone configuration to an invalid value of 999 will cause PRACH detection errors and prevent UE random access.",
+      "explanation_zh": "將零相關區配置設定為無效值 999 會導致 PRACH 檢測錯誤，並阻止 UE 隨機接入。"
+    }
+  }
+]

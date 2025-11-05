@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting tracking_area_code to -1 (must be non-negative) will cause tracking area configuration failure and prevent network registration."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": 15,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofDownlinkSymbols to 15 (valid range 0-13) will cause TDD configuration validation failure and prevent downlink symbol allocation.",
+      "explanation_zh": "將 nrofDownlinkSymbols 設定為 15（有效範圍 0-13）會導致 TDD 配置驗證失敗，並阻止下行鏈路符號分配。"
+    }
+  }
+]

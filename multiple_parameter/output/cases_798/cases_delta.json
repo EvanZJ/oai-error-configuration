@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting PUSCH antenna ports to an invalid value of 99 will cause physical layer configuration errors and prevent proper uplink transmission setup.",
+      "explanation_zh": "將 PUSCH 天線埠設定為無效值 99 會導致實體層配置錯誤，並阻止正確的上行鏈路傳輸設定。"
+    }
+  }
+]

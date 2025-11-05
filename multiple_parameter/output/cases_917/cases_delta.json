@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 65536,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the tracking area code to 65536 exceeds the valid range (0-65535), causing PLMN configuration errors and network registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleTransMax",
+      "original_value": 6,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the preamble transmission max to 100 exceeds the valid range (0-10), leading to improper RACH procedure handling and UE access failures.",
+      "explanation_zh": "將前導傳輸最大值設定為 100 超過有效範圍 (0-10)，導致 RACH 程序處理不當，並造成 UE 接入失敗。"
+    }
+  }
+]

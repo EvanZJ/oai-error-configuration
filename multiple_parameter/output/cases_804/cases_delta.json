@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the SCTP input streams to an invalid value of 99 will cause SCTP association failures and prevent proper F1 interface communication with the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].force_256qam_off",
+      "original_value": 1,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the 256QAM force off flag to an invalid value of 99 will cause modulation configuration errors and prevent proper downlink transmission setup.",
+      "explanation_zh": "將 256QAM 強制關閉旗標設定為無效值 99 會導致調製配置錯誤，並阻止正確的下行鏈路傳輸設定。"
+    }
+  }
+]

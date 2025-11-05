@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ASN.1 verbosity to an unknown enum 'invalid' will cause configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": -1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the absolute frequency SSB to a negative value will cause configuration validation error.",
+      "explanation_zh": "將 SSB 絕對頻率設定為負值會導致配置驗證錯誤。"
+    }
+  }
+]

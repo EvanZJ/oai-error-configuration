@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NG_AMF to an invalid IP format '999.999.999.999' will cause network interface configuration failure and prevent AMF connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 15,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofDownlinkSlots to 15 (valid range 1-10) will cause TDD configuration validation failure and prevent frame structure setup.",
+      "explanation_zh": "將 nrofDownlinkSlots 設定為 15（有效範圍 1-10）會導致 TDD 配置驗證失敗，並阻止幀結構設置。"
+    }
+  }
+]

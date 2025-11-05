@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 99999 (valid range 1024-65535, but typically lower) will cause port configuration validation failure and prevent S1-U interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting dl_frequencyBand to 999 (invalid band number) will cause frequency band configuration validation failure and prevent cell setup.",
+      "explanation_zh": "將 dl_frequencyBand 設定為 999（無效頻帶編號）會導致頻帶配置驗證失敗，並阻止小區設置。"
+    }
+  }
+]

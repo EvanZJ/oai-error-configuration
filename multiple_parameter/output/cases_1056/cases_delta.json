@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 300,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting dl_carrierBandwidth to 300 exceeds the maximum allowed value, causing configuration validation failure and preventing proper downlink setup.",
+      "explanation_zh": "將 dl_carrierBandwidth 設定為 300 超過最大允許值，會導致配置驗證失敗，並阻止正確的下行鏈路設置。"
+    }
+  }
+]

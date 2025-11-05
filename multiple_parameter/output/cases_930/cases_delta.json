@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+      "original_value": 6,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting dl_UL_TransmissionPeriodicity to an out-of-range value (100) will cause invalid TDD configuration and frame structure failure.",
+      "explanation_zh": "將 dl_UL_TransmissionPeriodicity 設定為超出範圍的值 (100)，會導致無效的 TDD 配置，並造成幀結構失敗。"
+    }
+  }
+]

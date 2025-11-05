@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the S1-U port to an out-of-range value (99999) will cause GTP-U tunnel establishment failure and prevent user plane data transmission."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssPBCH_BlockPower to an out-of-range value (100 dBm) will cause invalid SSB power configuration and synchronization failure.",
+      "explanation_zh": "將 ssPBCH_BlockPower 設定為超出範圍的值 (100 dBm)，會導致無效的 SSB 功率配置，並造成同步失敗。"
+    }
+  }
+]

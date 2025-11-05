@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value like -1 will cause thread configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofDownlinkSlots to 0 will cause TDD configuration errors as at least one downlink slot is required.",
+      "explanation_zh": "將 nrofDownlinkSlots 設定為 0 會導致 TDD 配置錯誤，因為至少需要一個下行鏈路時隙。"
+    }
+  }
+]

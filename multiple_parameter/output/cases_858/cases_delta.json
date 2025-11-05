@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local S port C to 99999 exceeds the maximum allowed port number, causing configuration validation error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of uplink symbols to 100 exceeds the maximum allowed value, causing configuration validation error.",
+      "explanation_zh": "將上行符號數設定為 100 超過最大允許值，會導致配置驗證錯誤。"
+    }
+  }
+]

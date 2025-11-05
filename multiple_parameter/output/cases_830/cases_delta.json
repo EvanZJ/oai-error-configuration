@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid format 'invalid' will cause parsing errors and prevent the CU from initializing properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the maximum MIMO layers to an excessively high value of 10 will exceed hardware capabilities and cause configuration validation failures.",
+      "explanation_zh": "將最大 MIMO 層數設定為過高的值 10，將超過硬體能力，並導致配置驗證失敗。"
+    }
+  }
+]

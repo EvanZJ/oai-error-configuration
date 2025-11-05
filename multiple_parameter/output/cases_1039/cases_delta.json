@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to -1 (negative value) will cause configuration validation failure as thread count must be positive."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preambleReceivedTargetPower to 100 (exceeds maximum allowed power) will cause configuration validation failure in the RACH power configuration.",
+      "explanation_zh": "將 preambleReceivedTargetPower 設定為 100（超過最大允許功率）會在 RACH 功率配置中導致配置驗證失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NGU IP address to an invalid format will cause UPF connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting number of downlink symbols to 20 exceeds the valid range for the slot, causing TDD configuration failure.",
+      "explanation_zh": "將下行符號數設定為 20 超過時隙有效範圍，會導致 TDD 配置失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SCTP input streams to 100 exceeds the valid range, causing SCTP association failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+      "original_value": 6,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting TDD transmission periodicity to 20 exceeds the valid range, causing TDD configuration failure.",
+      "explanation_zh": "將 TDD 傳輸週期設定為 20 超過有效範圍，會導致 TDD 配置失敗。"
+    }
+  }
+]

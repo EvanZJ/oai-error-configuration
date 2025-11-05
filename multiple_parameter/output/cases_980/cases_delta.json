@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting local_s_portc to 99999 (exceeds maximum port number) will cause network configuration errors and prevent F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR",
+      "original_value": 4,
+      "error_value": 10,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR to 10 (invalid value, valid range 1-8) will cause configuration validation failure and prevent SSB/RACH setup.",
+      "explanation_zh": "將 ssb_perRACH_OccasionAndCB_PreamblesPerSSB_PR 設定為 10（無效值，有效範圍 1-8）會導致配置驗證失敗，並阻止 SSB/RACH 設定。"
+    }
+  }
+]

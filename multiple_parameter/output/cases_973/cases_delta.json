@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NG_AMF to an invalid IP format '999.999.999.999' will cause network configuration errors and prevent AMF connection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssPBCH_BlockPower to 100 (exceeds maximum allowed power level) will cause configuration validation failure and prevent SSB transmission.",
+      "explanation_zh": "將 ssPBCH_BlockPower 設定為 100（超過最大允許功率水平）會導致配置驗證失敗，並阻止 SSB 傳輸。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP control port to an out-of-range value of 99999 will cause SCTP connection failures and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the uplink carrier bandwidth to an invalid value of 999 will cause frequency configuration errors and prevent proper uplink channel setup.",
+      "explanation_zh": "將上行鏈路載波頻寬設定為無效值 999 會導致頻率配置錯誤，並阻止正確的上行鏈路通道設定。"
+    }
+  }
+]

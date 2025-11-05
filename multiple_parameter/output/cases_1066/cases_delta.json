@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting local_s_portd to 99999 exceeds the maximum allowed port number, causing F1 interface setup failure and preventing proper CU-DU communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleTransMax",
+      "original_value": 6,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preambleTransMax to 999 exceeds the maximum allowed value, causing configuration validation failure and preventing proper RACH setup.",
+      "explanation_zh": "將 preambleTransMax 設定為 999 超過最大允許值，會導致配置驗證失敗，並阻止正確的 RACH 設置。"
+    }
+  }
+]

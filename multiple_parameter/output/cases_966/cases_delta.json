@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting tracking_area_code to 0, which is a reserved value, will cause TAC configuration validation errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 15,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofUplinkSymbols to 15 exceeds the valid range for TDD symbol configuration, causing frame structure errors.",
+      "explanation_zh": "將 nrofUplinkSymbols 設定為 15 超過 TDD 符號配置的有效範圍，會導致幀結構錯誤。"
+    }
+  }
+]

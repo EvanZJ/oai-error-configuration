@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting remote_s_portc to 99999 (exceeds maximum port number) will cause network configuration errors and prevent F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB",
+      "original_value": 15,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssb_perRACH_OccasionAndCB_PreamblesPerSSB to 100 (exceeds maximum allowed value) will cause configuration validation failure and prevent SSB/RACH setup.",
+      "explanation_zh": "將 ssb_perRACH_OccasionAndCB_PreamblesPerSSB 設定為 100（超過最大允許值）會導致配置驗證失敗，並阻止 SSB/RACH 設定。"
+    }
+  }
+]

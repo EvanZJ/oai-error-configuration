@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting local_s_address to '999.999.999.999' (invalid IP format) will cause network interface configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].MACRLCs[0].local_n_address",
+      "original_value": "127.0.0.3",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting local_n_address to '999.999.999.999' (invalid IP format) will cause network interface configuration failure.",
+      "explanation_zh": "將 local_n_address 設定為 '999.999.999.999'（無效 IP 格式）會導致網路介面配置失敗。"
+    }
+  }
+]

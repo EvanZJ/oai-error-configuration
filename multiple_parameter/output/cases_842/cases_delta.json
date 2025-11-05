@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the SCTP output streams to 100 exceeds the maximum allowed value, causing SCTP connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of uplink slots to 10 exceeds the maximum allowed for the TDD pattern, causing configuration validation failure.",
+      "explanation_zh": "將上行時隙數設定為 10 超過 TDD 模式允許的最大值，導致配置驗證失敗。"
+    }
+  }
+]

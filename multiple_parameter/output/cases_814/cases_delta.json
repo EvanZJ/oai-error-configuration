@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the transport preference to an invalid enum value 'invalid' will cause transport layer configuration errors and prevent proper F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+      "original_value": 2,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the SSB periodicity to an invalid value of 99 will cause synchronization signal broadcast errors and prevent UE cell search and selection.",
+      "explanation_zh": "將 SSB 週期設定為無效值 99 會導致同步信號廣播錯誤，並阻止 UE 細胞搜尋和選擇。"
+    }
+  }
+]

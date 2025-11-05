@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the SST to a negative value of -1 will cause the gNB to fail during initialization as the SST must be non-negative."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of downlink symbols to an out-of-range value of 20 will cause the gNB to fail during initialization as the value exceeds the maximum allowed for the slot.",
+      "explanation_zh": "將下行符號數設定為超出範圍的值 20 會導致 gNB 在初始化期間失敗，因為該值超過時隙允許的最大值。"
+    }
+  }
+]

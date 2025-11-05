@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NG AMF IP address to an invalid IP format will cause configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the downlink frequency band to 1000 exceeds the maximum allowed value, causing configuration validation error.",
+      "explanation_zh": "將下行頻率帶設定為 1000 超過最大允許值，會導致配置驗證錯誤。"
+    }
+  }
+]

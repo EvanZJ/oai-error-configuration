@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NG AMF IP address to an invalid format like '999.999.999.999' will cause network interface configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting absoluteFrequencySSB to a negative value like -1 will cause frequency configuration errors.",
+      "explanation_zh": "將 absoluteFrequencySSB 設定為負值如 -1 會導致頻率配置錯誤。"
+    }
+  }
+]

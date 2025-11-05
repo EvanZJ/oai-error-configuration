@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SST to 999 exceeds the valid range for Slice/Service Type (0-255), causing invalid NSSAI configuration and network slice selection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig",
+      "original_value": 13,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting zeroCorrelationZoneConfig to 100 exceeds the valid range (0-15), causing invalid PRACH configuration and RACH setup failure.",
+      "explanation_zh": "將 zeroCorrelationZoneConfig 設定為 100 超過有效範圍（0-15），會導致無效的 PRACH 配置和 RACH 設定失敗。"
+    }
+  }
+]

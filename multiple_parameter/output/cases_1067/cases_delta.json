@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local S port D to an out-of-range value like 99999 will cause connection failures in the F1 interface."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleTransMax",
+      "original_value": 6,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preambleTransMax to 999, which is outside the valid range (0-10), will cause RACH configuration errors.",
+      "explanation_zh": "將 preambleTransMax 設定為 999，這超出有效範圍 (0-10)，會導致 RACH 配置錯誤。"
+    }
+  }
+]

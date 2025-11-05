@@ -1,177 +1,22 @@
 [
   {
-    "case": 426,
+    "case": 934,
     "step": "DELTA",
     "reason": "file_not_generated"
   },
   {
-    "case": 436,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 456,
+    "case": 947,
     "step": "DELTA",
     "reason": "file_not_generated"
   },
   {
-    "case": 463,
+    "case": 1028,
     "step": "DELTA",
     "reason": "file_not_generated"
   },
   {
-    "case": 487,
+    "case": 1041,
     "step": "DELTA",
     "reason": "file_not_generated"
-  },
-  {
-    "case": 492,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 499,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 519,
-    "step": "DU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 520,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 521,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 532,
-    "step": "DU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 533,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 534,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 544,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 545,
-    "step": "DU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 546,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 547,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 558,
-    "step": "DU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 559,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 560,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 581,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 621,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 631,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 632,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 633,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 655,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 656,
-    "step": "DU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 678,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 683,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 691,
-    "step": "DU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 698,
-    "step": "CU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 713,
-    "step": "DU",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 753,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 755,
-    "step": "DELTA",
-    "reason": "file_not_generated"
-  },
-  {
-    "case": 783,
-    "step": "DELTA",
-    "reason": "send_prompt_to_copilot"
   }
 ]

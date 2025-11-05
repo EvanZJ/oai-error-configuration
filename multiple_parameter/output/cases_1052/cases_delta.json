@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting local_s_portc to 99999 (exceeding valid port range) will cause invalid F1 interface configuration and connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+      "original_value": 98,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting prach_ConfigurationIndex to 999 (invalid value) will cause invalid PRACH configuration and RACH procedure failures.",
+      "explanation_zh": "將 prach_ConfigurationIndex 設定為 999（無效值）會導致無效的 PRACH 配置和 RACH 程序失敗。"
+    }
+  }
+]

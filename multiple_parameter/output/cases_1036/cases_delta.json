@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NG_AMF to '999.999.999.999' (invalid IP format) will cause network interface configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofDownlinkSymbols to 20 (exceeds maximum allowed symbols) will cause configuration validation failure in the TDD configuration.",
+      "explanation_zh": "將 nrofDownlinkSymbols 設定為 20（超過最大允許符號數）會在 TDD 配置中導致配置驗證失敗。"
+    }
+  }
+]

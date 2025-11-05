@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local SCTP address to an invalid IP format will cause SCTP binding failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 300,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting uplink carrier bandwidth to 300 PRBs exceeds the valid range for the band, causing configuration failure.",
+      "explanation_zh": "將上行載波頻寬設定為 300 PRB 超過該頻段的有效範圍，會導致配置失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NG AMF IP address to an invalid format '999.999.999.999' will cause network interface configuration failure and AMF connection error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ra_ResponseWindow to 100 is not in the valid set (1,2,4,8,10,20,40,80), causing invalid RACH configuration and cell setup failure.",
+      "explanation_zh": "將 ra_ResponseWindow 設定為 100 不在有效集合（1,2,4,8,10,20,40,80）中，會導致無效的 RACH 配置和細胞設定失敗。"
+    }
+  }
+]

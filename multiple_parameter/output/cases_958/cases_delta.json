@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting remote_s_portc to a negative value (-1) will cause invalid port configuration and F1 interface failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+      "original_value": 6,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting dl_UL_TransmissionPeriodicity to an out-of-range value (100) will cause invalid TDD configuration and transmission failure.",
+      "explanation_zh": "將 dl_UL_TransmissionPeriodicity 設定為超出範圍的值 (100)，會導致無效的 TDD 配置，並造成傳輸失敗。"
+    }
+  }
+]

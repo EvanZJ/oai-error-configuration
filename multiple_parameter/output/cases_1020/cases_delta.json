@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP data port to 99999 exceeds the valid port range, causing SCTP connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 300,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting downlink carrier bandwidth to 300 PRBs exceeds the valid range for the band, causing configuration failure.",
+      "explanation_zh": "將下行載波頻寬設定為 300 PRB 超過該頻段的有效範圍，會導致配置失敗。"
+    }
+  }
+]

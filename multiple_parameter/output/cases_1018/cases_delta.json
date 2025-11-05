@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP data port to 99999 exceeds the valid port range, causing SCTP binding failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preamble received target power to 100 dBm exceeds the valid power range, causing RACH failure.",
+      "explanation_zh": "將前導接收目標功率設定為 100 dBm 超過有效功率範圍，會導致 RACH 失敗。"
+    }
+  }
+]

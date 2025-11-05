@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the downlink frequency band to an invalid value of 999 will cause frequency configuration errors and cell setup failures.",
+      "explanation_zh": "將下行頻率帶設定為無效值 999 會導致頻率配置錯誤，並造成小區設置失敗。"
+    }
+  }
+]

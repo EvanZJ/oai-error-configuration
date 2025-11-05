@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP data port for CU to 0 will cause SCTP connection establishment failure between CU and DU, preventing F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].min_rxtxtime",
+      "original_value": 6,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting minimum RX/TX time to a negative value (-1) will cause physical layer timing configuration errors and prevent proper frame synchronization.",
+      "explanation_zh": "將最小 RX/TX 時間設定為負值 (-1)，會導致實體層時序配置錯誤，並阻止正確的幀同步。"
+    }
+  }
+]

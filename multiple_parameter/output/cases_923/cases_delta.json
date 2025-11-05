@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP port for CU to an out-of-range value (99999) will cause SCTP connection failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].p0_NominalWithGrant",
+      "original_value": -90,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting p0_NominalWithGrant to an out-of-range value (100 dBm) will cause invalid power configuration and uplink transmission failure.",
+      "explanation_zh": "將 p0_NominalWithGrant 設定為超出範圍的值 (100 dBm)，會導致無效的功率配置，並造成上行鏈路傳輸失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ASN.1 verbosity to an unknown enum 'invalid' will cause the gNB to fail during initialization as the value is not one of the valid options (none, info, annoying)."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the absolute frequency SSB to a negative value of -1 will cause the gNB to fail during initialization as the frequency must be positive.",
+      "explanation_zh": "將 SSB 絕對頻率設定為負值 -1 會導致 gNB 在初始化期間失敗，因為頻率必須為正數。"
+    }
+  }
+]

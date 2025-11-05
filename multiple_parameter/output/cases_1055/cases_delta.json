@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM",
+      "original_value": 0,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting prach_msg1_FDM to an invalid value of 999 will cause configuration validation failure and prevent proper PRACH setup.",
+      "explanation_zh": "將 prach_msg1_FDM 設定為無效值 999 會導致配置驗證失敗，並阻止正確的 PRACH 設置。"
+    }
+  }
+]

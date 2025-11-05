@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP port C to an out-of-range value of 99999 will cause connection establishment failures and prevent F1 interface communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of uplink symbols to an invalid value of 20 will exceed the maximum allowed symbols for the TDD pattern and cause scheduling failures.",
+      "explanation_zh": "將上行符號數設定為無效的值 20，將超過 TDD 模式允許的最大符號數，並導致調度失敗。"
+    }
+  }
+]

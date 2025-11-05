@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting sst to an out-of-range value (1000) will cause invalid SNSSAI configuration and network slice selection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofDownlinkSymbols to an out-of-range value (100) will cause invalid TDD configuration and symbol allocation issues.",
+      "explanation_zh": "將 nrofDownlinkSymbols 設定為超出範圍的值 (100)，會導致無效的 TDD 配置，並造成符號分配問題。"
+    }
+  }
+]

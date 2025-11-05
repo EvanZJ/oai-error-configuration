@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 99999 exceeds the maximum allowed port number, causing network interface configuration failure and preventing proper S1-U communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofUplinkSymbols to 20 exceeds the maximum allowed value, causing configuration validation failure and preventing proper TDD symbol configuration.",
+      "explanation_zh": "將 nrofUplinkSymbols 設定為 20 超過最大允許值，會導致配置驗證失敗，並阻止正確的 TDD 符號配置。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting local_s_portd to 99999 (exceeding valid port range) will cause invalid F1 interface configuration and connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+      "original_value": 4,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting ra_ResponseWindow to 999 (invalid value) will cause invalid RACH response window configuration and random access procedure failures.",
+      "explanation_zh": "將 ra_ResponseWindow 設定為 999（無效值）會導致無效的 RACH 回應窗口配置和隨機接入程序失敗。"
+    }
+  }
+]

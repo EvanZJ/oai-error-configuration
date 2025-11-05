@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.mac_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the MAC layer log level to an invalid enum like 'invalid' will cause logging configuration errors and may prevent proper MAC layer logging."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the preamble received target power to 100 dBm is out of the valid negative range and may cause RACH configuration failures.",
+      "explanation_zh": "將前導接收目標功率設定為 100 dBm 超出有效負數範圍，可能導致 RACH 配置失敗。"
+    }
+  }
+]

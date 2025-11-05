@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting Num_Threads_PUSCH to an out-of-range value (1000) will cause thread allocation failure and PUSCH processing issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting prach_msg1_FrequencyStart to an out-of-range value (1000) will cause invalid PRACH frequency configuration and RACH procedure failure.",
+      "explanation_zh": "將 prach_msg1_FrequencyStart 設定為超出範圍的值 (1000)，會導致無效的 PRACH 頻率配置，並造成 RACH 程序失敗。"
+    }
+  }
+]

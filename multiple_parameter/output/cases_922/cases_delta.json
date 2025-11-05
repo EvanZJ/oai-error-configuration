@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP port for DU to an out-of-range value (99999) will cause SCTP binding failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].msg3_DeltaPreamble",
+      "original_value": 1,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting msg3_DeltaPreamble to an out-of-range value (100) will cause invalid preamble power configuration and RACH procedure failure.",
+      "explanation_zh": "將 msg3_DeltaPreamble 設定為超出範圍的值 (100)，會導致無效的前導碼功率配置，並造成 RACH 程序失敗。"
+    }
+  }
+]

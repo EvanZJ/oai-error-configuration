@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP data port to an out-of-range value 99999 will cause F1-D interface connection failures and prevent F1AP data message exchange with the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].min_rxtxtime",
+      "original_value": 6,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the minimum receive/transmit time to an invalid value of 99 will cause timing configuration errors and prevent proper frame synchronization in the DU.",
+      "explanation_zh": "將最小接收/傳輸時間設定為無效值 99 會導致時間配置錯誤，並阻止 DU 中的正確幀同步。"
+    }
+  }
+]

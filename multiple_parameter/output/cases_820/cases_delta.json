@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SCTP input streams to 0 will cause SCTP connection establishment failure between CU and DU, preventing F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].sib1_tda",
+      "original_value": 15,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SIB1 TDA to a negative value (-1) will cause system information broadcast configuration errors and prevent proper cell access.",
+      "explanation_zh": "將 SIB1 TDA 設定為負值 (-1)，會導致系統資訊廣播配置錯誤，並阻止正確的細胞接入。"
+    }
+  }
+]

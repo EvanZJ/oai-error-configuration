@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the hardware log level to an invalid enum like 'invalid' will cause logging configuration errors and may prevent proper hardware logging."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the PRACH msg1 frequency start to 100 is out of the valid range and may cause RACH configuration failures.",
+      "explanation_zh": "將 PRACH msg1 頻率起始設定為 100 超出有效範圍，可能導致 RACH 配置失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to a negative value (-1) will cause configuration validation failure as stream counts must be positive integers."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM",
+      "original_value": 0,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting prach_msg1_FDM to 10 exceeds the valid range (0-3) for PRACH message 1 FDM configuration, causing RACH configuration errors.",
+      "explanation_zh": "將 prach_msg1_FDM 設定為 10 超過有效範圍 (0-3)，會導致 RACH 配置錯誤。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the MCC to 999 exceeds the valid range for Mobile Country Code (typically 3 digits, 000-999 but reserved values), causing invalid PLMN configuration and network registration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the downlink carrier bandwidth to 1000 PRBs exceeds the maximum allowed bandwidth for the frequency band, causing configuration validation failure and cell setup error.",
+      "explanation_zh": "將下行載波頻寬設定為 1000 PRB 超過頻段允許的最大頻寬，會導致配置驗證失敗和細胞設定錯誤。"
+    }
+  }
+]

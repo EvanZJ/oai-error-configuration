@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 99999 (exceeds maximum port number) will cause network configuration errors and prevent S1-U interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofDownlinkSlots to 20 (exceeds maximum allowed for the periodicity) will cause configuration validation failure and prevent TDD pattern setup.",
+      "explanation_zh": "將 nrofDownlinkSlots 設定為 20（超過週期允許的最大值）會導致配置驗證失敗，並阻止 TDD 模式設定。"
+    }
+  }
+]

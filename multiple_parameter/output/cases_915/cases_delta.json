@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SST to 999 exceeds the valid range (0-255), causing PLMN configuration errors and network registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].rsrp_ThresholdSSB",
+      "original_value": 19,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the RSRP threshold SSB to 100 exceeds the valid range (0-127), leading to improper SSB detection and cell selection failures.",
+      "explanation_zh": "將 RSRP 閾值 SSB 設定為 100 超過有效範圍 (0-127)，導致 SSB 檢測不當，並造成小區選擇失敗。"
+    }
+  }
+]

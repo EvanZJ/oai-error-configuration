@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to -1 (must be positive) will cause thread configuration failure and prevent PUSCH processing initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+      "original_value": 2,
+      "error_value": 15,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofUplinkSlots to 15 (valid range 1-10) will cause TDD configuration validation failure and prevent uplink slot allocation.",
+      "explanation_zh": "將 nrofUplinkSlots 設定為 15（有效範圍 1-10）會導致 TDD 配置驗證失敗，並阻止上行鏈路時隙分配。"
+    }
+  }
+]

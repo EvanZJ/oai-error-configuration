@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xZZZ",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to '0xZZZ' (invalid hex format) will cause parsing failure during configuration loading and gNB initialization error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 200,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting dl_carrierBandwidth to 200 (exceeds maximum 106 for band 78) will cause invalid bandwidth configuration error and cell setup failure.",
+      "explanation_zh": "將 dl_carrierBandwidth 設定為 200（超過頻帶 78 的最大值 106）會導致無效頻寬配置錯誤，並造成小區設定失敗。"
+    }
+  }
+]

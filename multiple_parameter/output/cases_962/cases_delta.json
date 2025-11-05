@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format '999.999.999.999' will cause network connectivity failures and AMF association errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+      "original_value": 98,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting prach_ConfigurationIndex to a negative value (-1) will cause RACH configuration validation errors as the index must be non-negative.",
+      "explanation_zh": "將 prach_ConfigurationIndex 設定為負值 (-1) 會導致 RACH 配置驗證錯誤，因為索引必須為非負數。"
+    }
+  }
+]

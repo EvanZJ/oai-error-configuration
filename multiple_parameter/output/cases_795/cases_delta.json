@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format will cause NG interface connection failures and prevent NGAP message exchange with the core network."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 5,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting downlink subcarrier spacing to invalid value 5 will cause serving cell configuration errors and prevent proper BWP setup for downlink transmissions.",
+      "explanation_zh": "將下行鏈路子載波間距設定為無效值 5 會導致服務小區配置錯誤，並阻止下行鏈路傳輸的正確 BWP 設定。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to -1 (must be positive) will cause SCTP configuration failure and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting physCellId to 1008 (valid range 0-1007) will cause cell identity configuration validation failure and prevent cell setup.",
+      "explanation_zh": "將 physCellId 設定為 1008（有效範圍 0-1007）會導致小區身份配置驗證失敗，並阻止小區設置。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to a negative value (-1) will cause invalid cell identification and cell setup failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting pMax to an out-of-range value (100) will cause invalid maximum power configuration and transmission issues.",
+      "explanation_zh": "將 pMax 設定為超出範圍的值 (100)，會導致無效的最大功率配置，並造成傳輸問題。"
+    }
+  }
+]

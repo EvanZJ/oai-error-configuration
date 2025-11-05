@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting MCC to 999 exceeds the valid range for mobile country codes, causing PLMN configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 15,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting number of downlink slots to 15 exceeds the maximum allowed for the TDD periodicity, causing frame structure failure.",
+      "explanation_zh": "將下行時隙數設定為 15 超過 TDD 週期的最大允許值，會導致幀結構失敗。"
+    }
+  }
+]

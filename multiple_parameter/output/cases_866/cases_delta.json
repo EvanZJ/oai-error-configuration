@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format '999.999.999.999' will cause the gNB to fail during initialization as the IP address is malformed."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the uplink frequency band to an out-of-range value of 999 will cause the gNB to fail during initialization as the value exceeds the valid band range.",
+      "explanation_zh": "將上行頻率帶設定為超出範圍的值 999 會導致 gNB 在初始化期間失敗，因為該值超過有效帶範圍。"
+    }
+  }
+]

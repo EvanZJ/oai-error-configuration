@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "invalid.ip.address",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting amf_ip_address.ipv4 to 'invalid.ip.address' (invalid IP format) will cause AMF connection failure and gNB initialization error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting absoluteFrequencySSB to -1 (negative frequency) will cause invalid SSB frequency configuration error and synchronization failure.",
+      "explanation_zh": "將 absoluteFrequencySSB 設定為 -1（負頻率）會導致無效 SSB 頻率配置錯誤，並造成同步失敗。"
+    }
+  }
+]

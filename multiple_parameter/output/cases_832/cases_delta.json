@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NG AMF IP address to an invalid format '999.999.999.999' will cause network binding failures and prevent AMF communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 500,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the uplink carrier bandwidth to an excessively high value of 500 will exceed the maximum allowed bandwidth and cause configuration validation errors.",
+      "explanation_zh": "將上行載波頻寬設定為過高的值 500，將超過允許的最大頻寬，並導致配置驗證錯誤。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the transport preference to an unknown enum 'invalid' will cause configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of downlink slots to 100 exceeds the maximum allowed value, causing configuration validation error.",
+      "explanation_zh": "將下行時隙數設定為 100 超過最大允許值，會導致配置驗證錯誤。"
+    }
+  }
+]

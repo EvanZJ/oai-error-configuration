@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP data port to an out-of-range value 99999 will cause F1-D interface binding failures and prevent F1AP data message exchange with the DU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the CSI-RS enable flag to an invalid value of 99 will cause channel state information reference signal configuration errors and prevent proper CSI-RS transmission.",
+      "explanation_zh": "將 CSI-RS 啟用旗標設定為無效值 99 會導致通道狀態資訊參考訊號配置錯誤，並阻止正確的 CSI-RS 傳輸。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the maximum transmit power to an excessively high value of 100 dBm will exceed regulatory limits and cause power control failures.",
+      "explanation_zh": "將最大發射功率設定為過高的值 100 dBm，將超過法規限制，並導致功率控制失敗。"
+    }
+  }
+]

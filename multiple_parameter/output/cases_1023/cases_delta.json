@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NG AMF IP address to an invalid format will cause AMF connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting number of downlink slots to 20 exceeds the valid range for the periodicity, causing TDD configuration failure.",
+      "explanation_zh": "將下行時隙數設定為 20 超過週期有效範圍，會導致 TDD 配置失敗。"
+    }
+  }
+]

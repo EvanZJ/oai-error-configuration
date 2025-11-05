@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the transport preference to an invalid enum 'invalid' will cause transport configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the preamble received target power to 0 exceeds the maximum allowed value, causing configuration validation failure.",
+      "explanation_zh": "將前導接收目標功率設定為 0 超過允許的最大值，導致配置驗證失敗。"
+    }
+  }
+]

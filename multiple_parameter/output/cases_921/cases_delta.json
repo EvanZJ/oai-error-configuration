@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xZZZ",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid hex format '0xZZZ' will cause parsing errors and gNB initialization failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].restrictedSetConfig",
+      "original_value": 0,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the restricted set config to 10 exceeds the valid range (0-2), leading to improper PRACH configuration and RACH failures.",
+      "explanation_zh": "將受限集合配置設定為 10 超過有效範圍 (0-2)，導致 PRACH 配置不當，並造成 RACH 失敗。"
+    }
+  }
+]

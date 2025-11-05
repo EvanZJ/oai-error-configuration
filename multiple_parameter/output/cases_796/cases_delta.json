@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP control port to an out-of-range value 99999 will cause F1-C interface binding failures and prevent F1AP message exchange with the DU."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "debugg",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an unknown value 'debugg' will cause the logging system to fail and potentially crash the DU process during startup.",
+      "explanation_zh": "將全域日誌級別設定為未知值 'debugg' 會導致日誌系統失敗，並可能在啟動期間崩潰 DU 程序。"
+    }
+  }
+]

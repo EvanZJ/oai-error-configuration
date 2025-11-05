@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP port to 99999 exceeds the valid port range, causing SCTP connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting downlink absolute frequency point A to 0 will cause frequency configuration failure.",
+      "explanation_zh": "將下行絕對頻率點 A 設定為 0 會導致頻率配置失敗。"
+    }
+  }
+]

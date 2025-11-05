@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting amf_ip_address to an invalid IP format (999.999.999.999) will cause AMF connection failure and NG interface issues."
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting prach_dtx_threshold to an out-of-range value (1000) will cause invalid PRACH DTX configuration and RACH procedure failure.",
+      "explanation_zh": "將 prach_dtx_threshold 設定為超出範圍的值 (1000)，會導致無效的 PRACH DTX 配置，並造成 RACH 程序失敗。"
+    }
+  }
+]

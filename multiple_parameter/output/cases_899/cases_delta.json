@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the tracking area code to a negative value -1 will cause invalid TAC configuration and network registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the preamble received target power to an excessively high value of 100 dBm will cause invalid RACH configuration and preamble detection failures.",
+      "explanation_zh": "將前導接收目標功率設定為過高的 100 dBm 值會導致無效的 RACH 配置，並造成前導檢測失敗。"
+    }
+  }
+]

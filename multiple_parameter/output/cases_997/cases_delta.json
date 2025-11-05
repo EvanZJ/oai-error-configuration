@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting mcc to 999 (invalid MCC value) will cause PLMN configuration failure and prevent network attachment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssPBCH_BlockPower to 100 dBm (valid range -60 to 50 dBm) will cause power configuration validation failure and prevent SSB transmission.",
+      "explanation_zh": "將 ssPBCH_BlockPower 設定為 100 dBm（有效範圍 -60 到 50 dBm）會導致功率配置驗證失敗，並阻止 SSB 傳輸。"
+    }
+  }
+]

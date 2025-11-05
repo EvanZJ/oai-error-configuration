@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the number of PUSCH threads to a negative value of -1 will cause the gNB to fail during initialization as the thread count must be positive."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the downlink carrier bandwidth to an out-of-range value of 1000 PRBs will cause the gNB to fail during initialization as the value exceeds the maximum allowed bandwidth.",
+      "explanation_zh": "將下行載波帶寬設定為超出範圍的值 1000 PRB 會導致 gNB 在初始化期間失敗，因為該值超過允許的最大帶寬。"
+    }
+  }
+]

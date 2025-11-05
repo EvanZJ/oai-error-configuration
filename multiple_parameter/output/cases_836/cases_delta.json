@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the transport preference to an invalid enum 'invalid' will cause configuration parsing errors and prevent proper interface initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of downlink slots to an invalid value of 20 will exceed the maximum allowed slots for the TDD pattern and cause scheduling failures.",
+      "explanation_zh": "將下行時隙數設定為無效的值 20，將超過 TDD 模式允許的最大時隙數，並導致調度失敗。"
+    }
+  }
+]

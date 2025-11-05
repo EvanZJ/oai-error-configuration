@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the number of PUSCH threads to a negative value will cause initialization failure in the scheduler."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SSB block power to 100 dBm exceeds the maximum allowed power range, causing transmission failure.",
+      "explanation_zh": "將 SSB 區塊功率設定為 100 dBm 超過允許的最大功率範圍，會導致傳輸失敗。"
+    }
+  }
+]

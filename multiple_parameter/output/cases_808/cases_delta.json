@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IPv4 address to an invalid format '999.999.999.999' will cause AMF connection failures and prevent proper core network communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the downlink carrier bandwidth to an invalid value of 999 will cause frequency configuration errors and prevent proper downlink channel setup.",
+      "explanation_zh": "將下行鏈路載波頻寬設定為無效值 999 會導致頻率配置錯誤，並阻止正確的下行鏈路通道設定。"
+    }
+  }
+]

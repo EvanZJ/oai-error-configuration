@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 9999,
+      "error_type": "invalid_format",
+      "explanation_en": "Setting mcc to 9999 is invalid as MCC must be a 3-digit number, causing configuration validation failure and preventing proper PLMN setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofDownlinkSlots to 20 exceeds the maximum allowed value, causing configuration validation failure and preventing proper TDD slot configuration.",
+      "explanation_zh": "將 nrofDownlinkSlots 設定為 20 超過最大允許值，會導致配置驗證失敗，並阻止正確的 TDD 時隙配置。"
+    }
+  }
+]

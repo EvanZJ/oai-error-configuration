@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the remote SCTP port C to an out-of-range value of 99999 will cause SCTP connection failures and F1 interface errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the maximum transmit power pMax to an excessively high value of 100 dBm will cause invalid power configuration and transmission issues.",
+      "explanation_zh": "將最大傳輸功率 pMax 設定為過高的 100 dBm 值會導致無效的功率配置，並造成傳輸問題。"
+    }
+  }
+]

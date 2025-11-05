@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting tracking_area_code to 0 (reserved value) will cause invalid tracking area configuration and mobility management failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssPBCH_BlockPower to 100 dBm (exceeding valid range) will cause invalid SSB power configuration and synchronization signal transmission failures.",
+      "explanation_zh": "將 ssPBCH_BlockPower 設定為 100 dBm（超出有效範圍）會導致無效的 SSB 功率配置和同步信號傳輸失敗。"
+    }
+  }
+]

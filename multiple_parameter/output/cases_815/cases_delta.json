@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "invalid.ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the local SCTP address to an invalid format 'invalid.ip' will cause SCTP connection failures and prevent F1 interface establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dmrs_TypeA_Position",
+      "original_value": 0,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the DMRS Type A position to an invalid value of 99 will cause demodulation reference signal configuration errors and prevent proper downlink reception.",
+      "explanation_zh": "將 DMRS Type A 位置設定為無效值 99 會導致解調參考信號配置錯誤，並阻止正確的下行鏈路接收。"
+    }
+  }
+]

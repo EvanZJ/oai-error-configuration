@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xZZZ",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal format will cause configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": -1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the downlink absolute frequency point A to a negative value will cause configuration validation error.",
+      "explanation_zh": "將下行絕對頻率點 A 設定為負值會導致配置驗證錯誤。"
+    }
+  }
+]

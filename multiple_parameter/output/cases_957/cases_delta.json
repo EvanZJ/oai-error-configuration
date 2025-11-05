@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting mnc_length to an out-of-range value (10) will cause invalid PLMN configuration and network registration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofUplinkSymbols to an out-of-range value (100) will cause invalid TDD configuration and uplink transmission failure.",
+      "explanation_zh": "將 nrofUplinkSymbols 設定為超出範圍的值 (100)，會導致無效的 TDD 配置，並造成上行傳輸失敗。"
+    }
+  }
+]

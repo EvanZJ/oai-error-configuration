@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the S1U port to an out-of-range value of 99999 will cause port binding failures and prevent GTP-U tunnel establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+      "original_value": 98,
+      "error_value": 200,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the PRACH configuration index to an invalid value of 200 will exceed the maximum allowed index and cause RACH configuration errors.",
+      "explanation_zh": "將 PRACH 配置索引設定為無效的值 200，將超過允許的最大索引，並導致 RACH 配置錯誤。"
+    }
+  }
+]

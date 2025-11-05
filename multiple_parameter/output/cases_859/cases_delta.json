@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SCTP input streams to 100 exceeds the maximum allowed value, causing configuration validation error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SSB block power to 100 exceeds the maximum allowed value, causing configuration validation error.",
+      "explanation_zh": "將 SSB 區塊功率設定為 100 超過最大允許值，會導致配置驗證錯誤。"
+    }
+  }
+]

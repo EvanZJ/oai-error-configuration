@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to 'invalid' is not a valid log level enum (valid options: none, info, annoying), causing logging configuration validation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssPBCH_BlockPower to 100 dBm exceeds the maximum allowed SSB transmit power range (typically -30 to 30 dBm), causing invalid SSB configuration and cell setup error.",
+      "explanation_zh": "將 ssPBCH_BlockPower 設定為 100 dBm 超過允許的 SSB 傳輸功率範圍（通常為 -30 到 30 dBm），會導致無效的 SSB 配置和細胞設定錯誤。"
+    }
+  }
+]

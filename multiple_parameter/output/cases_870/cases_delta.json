@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xZZZ",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid hex format '0xZZZ' will cause the gNB to fail during initialization as the ID must be a valid hexadecimal value."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the uplink carrier bandwidth to an out-of-range value of 1000 PRBs will cause the gNB to fail during initialization as the value exceeds the maximum allowed bandwidth.",
+      "explanation_zh": "將上行載波帶寬設定為超出範圍的值 1000 PRB 會導致 gNB 在初始化期間失敗，因為該值超過允許的最大帶寬。"
+    }
+  }
+]

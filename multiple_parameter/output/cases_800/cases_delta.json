@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the transport preference to an unknown value 'invalid' will cause F1 interface initialization failures and prevent proper CU-DU communication."
+    },
+    "du": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "annoying",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ASN.1 verbosity to an unknown value 'invalid' will cause the ASN.1 processing to fail and potentially crash the DU during message encoding/decoding.",
+      "explanation_zh": "將 ASN.1 詳細程度設定為未知值 'invalid' 會導致 ASN.1 處理失敗，並可能在訊息編碼/解碼期間崩潰 DU。"
+    }
+  }
+]

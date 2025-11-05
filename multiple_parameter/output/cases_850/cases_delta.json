@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ASN.1 verbosity to an invalid enum 'invalid' will cause ASN.1 configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the RA response window to 100 exceeds the maximum allowed value, causing configuration validation failure.",
+      "explanation_zh": "將 RA 回應視窗設定為 100 超過允許的最大值，導致配置驗證失敗。"
+    }
+  }
+]

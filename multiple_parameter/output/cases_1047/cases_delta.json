@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NG_AMF to an invalid IP address '999.999.999.999' will cause AMF connection failures and NG interface establishment issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting physCellId to 1008 (exceeding valid range 0-1007) will cause invalid physical cell identification and synchronization failures.",
+      "explanation_zh": "將 physCellId 設定為 1008（超出有效範圍 0-1007）會導致無效的物理小區識別和同步失敗。"
+    }
+  }
+]

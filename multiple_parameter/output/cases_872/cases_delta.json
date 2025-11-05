@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the MCC to a negative value of -1 will cause the gNB to fail during initialization as the MCC must be non-negative."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the maximum power to an out-of-range value of 100 dBm will cause the gNB to fail during initialization as the value exceeds the maximum allowed power.",
+      "explanation_zh": "將最大功率設定為超出範圍的值 100 dBm 會導致 gNB 在初始化期間失敗，因為該值超過允許的最大功率。"
+    }
+  }
+]

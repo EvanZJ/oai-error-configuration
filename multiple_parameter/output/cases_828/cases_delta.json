@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid enum 'invalid' will cause configuration parsing errors and prevent the gNB from starting properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the downlink carrier bandwidth to an excessively high value of 1000 will exceed the maximum allowed bandwidth for the frequency band and cause configuration validation failures.",
+      "explanation_zh": "將下行載波頻寬設定為過高的值 1000，將超過頻率頻帶允許的最大頻寬，並導致配置驗證失敗。"
+    }
+  }
+]

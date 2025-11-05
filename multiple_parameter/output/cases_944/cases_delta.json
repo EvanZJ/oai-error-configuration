@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting mcc to an out-of-range value (1000) will cause invalid PLMN configuration and network registration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofDownlinkSlots to an out-of-range value (100) will cause invalid TDD configuration and frame structure issues.",
+      "explanation_zh": "將 nrofDownlinkSlots 設定為超出範圍的值 (100)，會導致無效的 TDD 配置，並造成幀結構問題。"
+    }
+  }
+]

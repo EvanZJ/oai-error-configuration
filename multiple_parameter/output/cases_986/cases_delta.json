@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting mcc to -1 (negative value) will cause invalid PLMN configuration error and cell identity failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 15,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofDownlinkSlots to 15 (exceeds maximum allowed slots) will cause invalid TDD configuration error and frame structure failure.",
+      "explanation_zh": "將 nrofDownlinkSlots 設定為 15（超過允許的最大時隙數）會導致無效 TDD 配置錯誤，並造成幀結構失敗。"
+    }
+  }
+]

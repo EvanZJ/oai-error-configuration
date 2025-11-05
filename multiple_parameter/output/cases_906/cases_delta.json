@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the MNC to 999 exceeds the valid range for Mobile Network Code (typically 2-3 digits, 000-999 but reserved values), causing invalid PLMN configuration and network registration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting prach_msg1_FrequencyStart to 100 exceeds the valid range (0-63), causing invalid PRACH configuration and RACH setup failure.",
+      "explanation_zh": "將 prach_msg1_FrequencyStart 設定為 100 超過有效範圍（0-63），會導致無效的 PRACH 配置和 RACH 設定失敗。"
+    }
+  }
+]

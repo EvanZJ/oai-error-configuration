@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SST to an out-of-range value of 999 will cause PLMN configuration errors and network slice selection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 999999999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the absolute SSB frequency to an excessively high value of 999999999 will cause invalid frequency configuration and SSB transmission failures.",
+      "explanation_zh": "將絕對 SSB 頻率設定為過高的 999999999 值會導致無效頻率配置，並造成 SSB 傳輸失敗。"
+    }
+  }
+]

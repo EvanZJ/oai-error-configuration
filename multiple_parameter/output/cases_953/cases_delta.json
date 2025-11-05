@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting local_s_portc to a negative value (-1) will cause invalid port configuration and F1 interface failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting dl_frequencyBand to an out-of-range value (999) will cause invalid frequency band configuration and cell setup failure.",
+      "explanation_zh": "將 dl_frequencyBand 設定為超出範圍的值 (999)，會導致無效的頻率帶配置，並造成小區設定失敗。"
+    }
+  }
+]

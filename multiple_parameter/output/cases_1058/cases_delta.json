@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting tracking_area_code to 0 is invalid as it is a reserved value, causing configuration validation failure and preventing proper cell setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting pMax to 100 exceeds the maximum allowed power level, causing configuration validation failure and preventing proper uplink power control.",
+      "explanation_zh": "將 pMax 設定為 100 超過最大允許功率水平，會導致配置驗證失敗，並阻止正確的上行鏈路功率控制。"
+    }
+  }
+]

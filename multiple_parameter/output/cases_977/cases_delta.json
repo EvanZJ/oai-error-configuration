@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting sst to 999 (exceeds maximum allowed value of 255) will cause PLMN configuration errors and prevent cell identification."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preambleReceivedTargetPower to 100 (exceeds maximum allowed power level) will cause configuration validation failure and prevent PRACH setup.",
+      "explanation_zh": "將 preambleReceivedTargetPower 設定為 100（超過最大允許功率水平）會導致配置驗證失敗，並阻止 PRACH 設定。"
+    }
+  }
+]

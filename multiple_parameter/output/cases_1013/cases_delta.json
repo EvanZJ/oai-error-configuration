@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP port to 99999 exceeds the valid port range, causing SCTP binding failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting downlink frequency band to 999 exceeds the valid band range, causing frequency configuration failure.",
+      "explanation_zh": "將下行頻率頻帶設定為 999 超過有效頻帶範圍，會導致頻率配置失敗。"
+    }
+  }
+]

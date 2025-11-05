@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to -1 (negative value) will cause SCTP configuration errors and prevent F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer",
+      "original_value": 7,
+      "error_value": 10,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ra_ContentionResolutionTimer to 10 (invalid value, valid range 0-7) will cause configuration validation failure and prevent RACH setup.",
+      "explanation_zh": "將 ra_ContentionResolutionTimer 設定為 10（無效值，有效範圍 0-7）會導致配置驗證失敗，並阻止 RACH 設定。"
+    }
+  }
+]

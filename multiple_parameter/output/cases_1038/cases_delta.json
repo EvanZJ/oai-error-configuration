@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting local_s_portc to 99999 (exceeds maximum port number) will cause network configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting pMax to 100 (exceeds maximum allowed power) will cause configuration validation failure in the uplink power configuration.",
+      "explanation_zh": "將 pMax 設定為 100（超過最大允許功率）會在上行功率配置中導致配置驗證失敗。"
+    }
+  }
+]

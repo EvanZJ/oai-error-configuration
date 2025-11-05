@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.rrc_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RRC log level to an invalid enum 'invalid' will cause logging configuration failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig",
+      "original_value": 13,
+      "error_value": 50,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the zero correlation zone config to 50 exceeds the maximum allowed value, causing configuration validation failure.",
+      "explanation_zh": "將零相關區配置設定為 50 超過允許的最大值，導致配置驗證失敗。"
+    }
+  }
+]

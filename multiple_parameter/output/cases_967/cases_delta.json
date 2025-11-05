@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to 0, which is a reserved value, will cause cell ID configuration validation errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_UL_TransmissionPeriodicity",
+      "original_value": 6,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting dl_UL_TransmissionPeriodicity to 10 exceeds the valid range (0-7) for TDD transmission periodicity, causing frame structure errors.",
+      "explanation_zh": "將 dl_UL_TransmissionPeriodicity 設定為 10 超過有效範圍 (0-7)，會導致 TDD 傳輸週期配置錯誤。"
+    }
+  }
+]

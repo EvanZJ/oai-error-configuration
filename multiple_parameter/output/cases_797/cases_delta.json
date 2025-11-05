@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting PUSCH thread count to 0 will cause uplink processing thread allocation failures and prevent any PUSCH decoding capability in the CU."
+    },
+    "du": {
+      "modified_key": "fhi_72.system_core",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the system core to a negative value -1 will cause CPU core assignment errors and prevent proper front-haul interface initialization.",
+      "explanation_zh": "將系統核心設定為負值 -1 會導致 CPU 核心分配錯誤，並阻止正確的前傳介面初始化。"
+    }
+  }
+]

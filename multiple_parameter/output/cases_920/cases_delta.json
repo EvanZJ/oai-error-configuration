@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": 100000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the NR cell ID to 100000 exceeds the valid range (0-1007), causing cell identification errors and network registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the PRACH msg1 frequency start to 100 exceeds the valid range (0-217), leading to improper PRACH configuration and RACH failures.",
+      "explanation_zh": "將 PRACH msg1 頻率起始設定為 100 超過有效範圍 (0-217)，導致 PRACH 配置不當，並造成 RACH 失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SCTP_INSTREAMS to 999 exceeds the maximum allowed value, causing SCTP connection failure and preventing proper F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+      "original_value": 98,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting prach_ConfigurationIndex to 999 exceeds the maximum allowed value, causing configuration validation failure and preventing proper PRACH setup.",
+      "explanation_zh": "將 prach_ConfigurationIndex 設定為 999 超過最大允許值，會導致配置驗證失敗，並阻止正確的 PRACH 設置。"
+    }
+  }
+]

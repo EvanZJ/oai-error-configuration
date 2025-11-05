@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting mcc to 0 (invalid MCC) will cause configuration validation failure as MCC must be non-zero."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofUplinkSlots to 10 (exceeds maximum allowed slots) will cause configuration validation failure in the TDD configuration.",
+      "explanation_zh": "將 nrofUplinkSlots 設定為 10（超過最大允許時隙數）會在 TDD 配置中導致配置驗證失敗。"
+    }
+  }
+]

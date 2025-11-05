@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the number of PUSCH threads to a negative value -1 will cause invalid thread configuration and startup failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig",
+      "original_value": 13,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the zero correlation zone config to 100 will cause invalid PRACH configuration and RACH procedure failures.",
+      "explanation_zh": "將零相關區配置設定為 100 會導致無效的 PRACH 配置，並造成 RACH 程序失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP port for CU to an out-of-range value (99999) will cause SCTP connection establishment failure between CU and DU, preventing F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting PDSCH antenna ports XP to an invalid high value (99) will cause physical layer configuration errors and prevent proper downlink transmission setup.",
+      "explanation_zh": "將 PDSCH 天線埠 XP 設定為無效的高值 (99)，會導致實體層配置錯誤，並阻止正確的下行鏈路傳輸設定。"
+    }
+  }
+]

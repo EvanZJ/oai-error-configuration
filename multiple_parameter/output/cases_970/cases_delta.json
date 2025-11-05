@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_OUTSTREAMS to 0 will cause SCTP connection failures as stream counts must be positive integers."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preambleReceivedTargetPower to 100 exceeds the valid power range for PRACH preamble, causing RACH configuration errors.",
+      "explanation_zh": "將 preambleReceivedTargetPower 設定為 100 超過 PRACH 前導碼的有效功率範圍，會導致 RACH 配置錯誤。"
+    }
+  }
+]

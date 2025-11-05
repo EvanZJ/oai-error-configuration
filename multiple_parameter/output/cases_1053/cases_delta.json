@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting remote_s_portc to 99999 (exceeding valid port range) will cause invalid F1 interface configuration and connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preambleReceivedTargetPower to 100 dBm (exceeding valid range) will cause invalid RACH target power configuration and preamble detection failures.",
+      "explanation_zh": "將 preambleReceivedTargetPower 設定為 100 dBm（超出有效範圍）會導致無效的 RACH 目標功率配置和前導檢測失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting gNB_ID to a negative value -1 is invalid as gNB IDs must be non-negative, causing configuration validation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssPBCH_BlockPower to 100 exceeds the maximum allowed power level, causing configuration validation failure and preventing proper SSB transmission.",
+      "explanation_zh": "將 ssPBCH_BlockPower 設定為 100 超過最大允許功率水平，會導致配置驗證失敗，並阻止正確的 SSB 傳輸。"
+    }
+  }
+]

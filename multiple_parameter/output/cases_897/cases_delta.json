@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format '999.999.999.999' will cause network interface configuration errors and AMF connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM",
+      "original_value": 0,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the PRACH msg1 FDM to 10 will cause invalid PRACH configuration and RACH procedure failures.",
+      "explanation_zh": "將 PRACH msg1 FDM 設定為 10 會導致無效的 PRACH 配置，並造成 RACH 程序失敗。"
+    }
+  }
+]

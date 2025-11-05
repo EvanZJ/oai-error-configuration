@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the MNC to a negative value of -1 will cause the gNB to fail during initialization as the MNC must be non-negative."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the number of downlink slots to an out-of-range value of 20 will cause the gNB to fail during initialization as the value exceeds the maximum allowed for the periodicity.",
+      "explanation_zh": "將下行時隙數設定為超出範圍的值 20 會導致 gNB 在初始化期間失敗，因為該值超過週期允許的最大值。"
+    }
+  }
+]

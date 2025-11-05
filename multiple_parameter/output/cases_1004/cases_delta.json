@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to -1 (must be non-negative) will cause cell ID configuration failure and prevent cell identification."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 15,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofUplinkSymbols to 15 (valid range 0-13) will cause TDD configuration validation failure and prevent uplink symbol allocation.",
+      "explanation_zh": "將 nrofUplinkSymbols 設定為 15（有效範圍 0-13）會導致 TDD 配置驗證失敗，並阻止上行鏈路符號分配。"
+    }
+  }
+]

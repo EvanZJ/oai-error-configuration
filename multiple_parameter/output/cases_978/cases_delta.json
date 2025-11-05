@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting tracking_area_code to -1 (negative value) will cause configuration errors and prevent cell setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].powerRampingStep",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting powerRampingStep to 10 (invalid value, valid range 0-3) will cause configuration validation failure and prevent PRACH setup.",
+      "explanation_zh": "將 powerRampingStep 設定為 10（無效值，有效範圍 0-3）會導致配置驗證失敗，並阻止 PRACH 設定。"
+    }
+  }
+]

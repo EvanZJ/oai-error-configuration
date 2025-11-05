@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting local_s_portc to 99999 exceeds the valid port range (0-65535), causing invalid SCTP configuration and F1 connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer",
+      "original_value": 7,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ra_ContentionResolutionTimer to 100 is not in the valid set (0-7), causing invalid RACH configuration and cell setup failure.",
+      "explanation_zh": "將 ra_ContentionResolutionTimer 設定為 100 不在有效集合（0-7）中，會導致無效的 RACH 配置和細胞設定失敗。"
+    }
+  }
+]

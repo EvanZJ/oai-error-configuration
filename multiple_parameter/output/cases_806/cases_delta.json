@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid enum value 'invalid' will cause logging configuration errors and prevent proper log output initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the PUSCH antenna ports to an invalid value of 99 will cause antenna configuration errors and prevent proper uplink transmission setup.",
+      "explanation_zh": "將 PUSCH 天線埠數設定為無效值 99 會導致天線配置錯誤，並阻止正確的上行鏈路傳輸設定。"
+    }
+  }
+]

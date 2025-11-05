@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.rrc_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RRC log level to an invalid enum value 'invalid' will cause logging configuration errors and potential startup failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+      "original_value": 4,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the RA response window to a negative value -1 will cause invalid configuration and RACH procedure failures.",
+      "explanation_zh": "將 RA 回應視窗設定為負值 -1 會導致無效配置，並造成 RACH 程序失敗。"
+    }
+  }
+]

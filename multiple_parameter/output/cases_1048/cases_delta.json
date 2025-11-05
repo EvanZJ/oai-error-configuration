@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to 0 will cause invalid SCTP stream configuration and F1 interface connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting dl_frequencyBand to 999 (invalid value) will cause frequency band configuration errors and downlink transmission failures.",
+      "explanation_zh": "將 dl_frequencyBand 設定為 999（無效值）會導致頻率帶配置錯誤和下行鏈路傳輸失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to -1 (negative value) will cause invalid thread configuration error and gNB initialization failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofDownlinkSymbols to -1 (negative value) will cause invalid TDD configuration error and frame structure failure.",
+      "explanation_zh": "將 nrofDownlinkSymbols 設定為 -1（負值）會導致無效 TDD 配置錯誤，並造成幀結構失敗。"
+    }
+  }
+]

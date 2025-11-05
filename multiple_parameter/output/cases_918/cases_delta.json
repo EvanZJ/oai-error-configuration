@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the MNC to 1000 exceeds the valid range (0-999), causing PLMN configuration errors and network registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].powerRampingStep",
+      "original_value": 1,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the power ramping step to 100 exceeds the valid range (0-3), leading to improper RACH procedure handling and UE access failures.",
+      "explanation_zh": "將功率斜坡步長設定為 100 超過有效範圍 (0-3)，導致 RACH 程序處理不當，並造成 UE 接入失敗。"
+    }
+  }
+]

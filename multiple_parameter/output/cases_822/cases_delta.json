@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "invalid.ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format will cause AMF connection failure and prevent NG interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting do CSIRS to an invalid value (2) will cause CSI-RS configuration errors and prevent proper channel state information transmission.",
+      "explanation_zh": "將 do CSIRS 設定為無效值 (2)，會導致 CSI-RS 配置錯誤，並阻止正確的通道狀態資訊傳輸。"
+    }
+  }
+]

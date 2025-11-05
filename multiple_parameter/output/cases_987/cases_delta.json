@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 99999 (exceeds maximum port number) will cause invalid network interface configuration error and S1-U connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+      "original_value": 98,
+      "error_value": 200,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting prach_ConfigurationIndex to 200 (invalid value) will cause invalid PRACH configuration error and RACH procedure failure.",
+      "explanation_zh": "將 prach_ConfigurationIndex 設定為 200（無效值）會導致無效 PRACH 配置錯誤，並造成 RACH 程序失敗。"
+    }
+  }
+]

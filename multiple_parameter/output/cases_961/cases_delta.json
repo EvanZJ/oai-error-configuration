@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 99999 exceeds the valid port range (0-65535), causing network interface configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssPBCH_BlockPower",
+      "original_value": -25,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting ssPBCH_BlockPower to 100 exceeds the valid power range for SSB block power, causing physical layer configuration errors.",
+      "explanation_zh": "將 ssPBCH_BlockPower 設定為 100 超過 SSB 區塊功率的有效範圍，會導致物理層配置錯誤。"
+    }
+  }
+]

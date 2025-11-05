@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting MNC to 999 exceeds the valid range for mobile network codes (000-999 but typically 2-3 digits), causing PLMN configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+      "original_value": 2,
+      "error_value": 15,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofUplinkSlots to 15 exceeds the valid range for TDD slot configuration, causing frame structure errors.",
+      "explanation_zh": "將 nrofUplinkSlots 設定為 15 超過 TDD 時隙配置的有效範圍，會導致幀結構錯誤。"
+    }
+  }
+]

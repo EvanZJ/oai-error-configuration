@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting local_s_portc to 99999 exceeds the maximum allowed port number, causing F1 interface setup failure and preventing proper CU-DU communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting preambleReceivedTargetPower to 100 exceeds the maximum allowed power level, causing configuration validation failure and preventing proper RACH setup.",
+      "explanation_zh": "將 preambleReceivedTargetPower 設定為 100 超過最大允許功率水平，會導致配置驗證失敗，並阻止正確的 RACH 設置。"
+    }
+  }
+]

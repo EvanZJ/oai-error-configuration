@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to -1 provides an invalid negative value for thread count, causing configuration validation failure and gNB startup error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSlots",
+      "original_value": 7,
+      "error_value": 15,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofDownlinkSlots to 15 exceeds the maximum allowed downlink slots in a TDD frame (typically 0-14), causing invalid TDD configuration and cell setup failure.",
+      "explanation_zh": "將下行時隙數設定為 15 超過 TDD 幀中允許的最大下行時隙數（通常為 0-14），會導致無效的 TDD 配置和細胞設定失敗。"
+    }
+  }
+]

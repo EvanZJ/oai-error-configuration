@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_OUTSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SCTP output streams to 0 will cause SCTP connection establishment failure between CU and DU, preventing F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].force_256qam_off",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting force 256QAM off to an invalid value (2) will cause modulation configuration errors and prevent proper downlink transmission.",
+      "explanation_zh": "將強制 256QAM 關閉設定為無效值 (2)，會導致調製配置錯誤，並阻止正確的下行鏈路傳輸。"
+    }
+  }
+]

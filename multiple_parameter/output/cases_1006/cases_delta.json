@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.remote_s_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting remote_s_portc to 0 (invalid port number) will cause F1 interface configuration failure and prevent CU-DU communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_periodicityServingCell",
+      "original_value": 2,
+      "error_value": 15,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting ssb_periodicityServingCell to 15 (valid range 0-7) will cause SSB periodicity configuration validation failure and prevent SSB transmission.",
+      "explanation_zh": "將 ssb_periodicityServingCell 設定為 15（有效範圍 0-7）會導致 SSB 週期配置驗證失敗，並阻止 SSB 傳輸。"
+    }
+  }
+]

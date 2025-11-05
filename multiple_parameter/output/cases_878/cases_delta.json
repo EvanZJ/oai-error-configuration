@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the AMF IP address to an invalid format like '999.999.999.999' will cause network connection failures and prevent proper AMF communication."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the uplink carrier bandwidth to 1000 PRBs exceeds the maximum allowed bandwidth for the frequency band and may cause configuration errors or hardware incompatibility.",
+      "explanation_zh": "將上行載波頻寬設定為 1000 PRB 超過頻帶允許的最大頻寬，可能導致配置錯誤或硬體不相容。"
+    }
+  }
+]

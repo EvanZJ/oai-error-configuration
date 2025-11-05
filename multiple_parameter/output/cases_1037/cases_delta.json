@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to 0 (invalid value) will cause SCTP configuration failure as streams must be positive."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSymbols",
+      "original_value": 4,
+      "error_value": 20,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofUplinkSymbols to 20 (exceeds maximum allowed symbols) will cause configuration validation failure in the TDD configuration.",
+      "explanation_zh": "將 nrofUplinkSymbols 設定為 20（超過最大允許符號數）會在 TDD 配置中導致配置驗證失敗。"
+    }
+  }
+]

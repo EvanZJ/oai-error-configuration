@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting tr_s_preference to 'invalid' (unknown enum) will cause transport preference configuration failure and gNB initialization error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_frequencyBand",
+      "original_value": 78,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting dl_frequencyBand to 999 (invalid band number) will cause frequency band configuration error and cell setup failure.",
+      "explanation_zh": "將 dl_frequencyBand 設定為 999（無效頻帶編號）會導致頻帶配置錯誤，並造成小區設定失敗。"
+    }
+  }
+]

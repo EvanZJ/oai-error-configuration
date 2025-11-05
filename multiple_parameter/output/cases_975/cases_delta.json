@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting mcc to -1 (negative value) will cause PLMN configuration errors and prevent cell identification."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+      "original_value": 98,
+      "error_value": 200,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting prach_ConfigurationIndex to 200 (exceeds maximum allowed value) will cause configuration validation failure and prevent PRACH setup.",
+      "explanation_zh": "將 prach_ConfigurationIndex 設定為 200（超過最大允許值）會導致配置驗證失敗，並阻止 PRACH 設定。"
+    }
+  }
+]

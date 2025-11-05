@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig",
+      "original_value": 13,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the zero correlation zone config to 100 exceeds the valid range (0-15), leading to improper PRACH configuration and RACH failures.",
+      "explanation_zh": "將零相關區配置設定為 100 超過有效範圍 (0-15)，導致 PRACH 配置不當，並造成 RACH 失敗。"
+    }
+  }
+]

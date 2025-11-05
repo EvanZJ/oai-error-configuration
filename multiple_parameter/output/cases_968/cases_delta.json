@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting local_s_portc to 0, which is a reserved port, will cause SCTP connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FrequencyStart",
+      "original_value": 0,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting prach_msg1_FrequencyStart to 100 exceeds the valid range for PRACH frequency start configuration, causing RACH errors.",
+      "explanation_zh": "將 prach_msg1_FrequencyStart 設定為 100 超過 PRACH 頻率起始配置的有效範圍，會導致 RACH 錯誤。"
+    }
+  }
+]

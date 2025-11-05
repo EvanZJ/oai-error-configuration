@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "invalid.ip.address",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NG AMF IP address to an invalid format 'invalid.ip.address' will cause network connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pMax",
+      "original_value": 20,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the maximum power to 100 dBm exceeds the maximum allowed value, causing configuration validation failure.",
+      "explanation_zh": "將最大功率設定為 100 dBm 超過允許的最大值，導致配置驗證失敗。"
+    }
+  }
+]

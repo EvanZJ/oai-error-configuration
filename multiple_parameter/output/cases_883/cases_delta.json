@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical layer log level to an invalid enum like 'invalid' will cause logging configuration errors and may prevent proper physical layer logging."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].zeroCorrelationZoneConfig",
+      "original_value": 13,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the zero correlation zone config to -1 is out of the valid range and may cause RACH configuration failures.",
+      "explanation_zh": "將零相關區配置設定為 -1 超出有效範圍，可能導致 RACH 配置失敗。"
+    }
+  }
+]

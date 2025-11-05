@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].preambleReceivedTargetPower",
+      "original_value": -96,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the preamble received target power to an invalid value of 999 will cause random access power control errors and prevent UE initial access.",
+      "explanation_zh": "將前導接收目標功率設定為無效值 999 會導致隨機接入功率控制錯誤，並阻止 UE 初始接入。"
+    }
+  }
+]

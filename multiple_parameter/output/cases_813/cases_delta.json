@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+      "original_value": 4,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the RA response window to an invalid value of 999 will cause random access response timing errors and prevent UE initial access.",
+      "explanation_zh": "將 RA 回應視窗設定為無效值 999 會導致隨機接入回應定時錯誤，並阻止 UE 初始接入。"
+    }
+  }
+]

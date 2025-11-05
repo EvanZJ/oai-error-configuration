@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.snssaiList.sst",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SST to 999 exceeds the valid range for slice/service type (0-255), causing SNSSAI configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofDownlinkSymbols",
+      "original_value": 6,
+      "error_value": 15,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nrofDownlinkSymbols to 15 exceeds the valid range for TDD symbol configuration, causing frame structure errors.",
+      "explanation_zh": "將 nrofDownlinkSymbols 設定為 15 超過 TDD 符號配置的有效範圍，會導致幀結構錯誤。"
+    }
+  }
+]

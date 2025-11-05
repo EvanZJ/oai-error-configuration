@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting DRB integrity to an invalid enum value will cause integrity configuration errors and prevent secure data transmission."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_absoluteFrequencyPointA",
+      "original_value": 640008,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting downlink absolute frequency point A to a negative value (-1) will cause frequency configuration errors and prevent proper downlink transmission.",
+      "explanation_zh": "將下行鏈路絕對頻率點 A 設定為負值 (-1)，會導致頻率配置錯誤，並阻止正確的下行鏈路傳輸。"
+    }
+  }
+]

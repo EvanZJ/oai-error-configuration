@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_ConfigurationIndex",
+      "original_value": 98,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the PRACH configuration index to 1000 exceeds the valid range (0-255), leading to improper PRACH configuration and RACH failures.",
+      "explanation_zh": "將 PRACH 配置索引設定為 1000 超過有效範圍 (0-255)，導致 PRACH 配置不當，並造成 RACH 失敗。"
+    }
+  }
+]

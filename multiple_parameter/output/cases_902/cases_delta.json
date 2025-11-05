@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting GNB_PORT_FOR_S1U to 99999 exceeds the valid port range (0-65535), causing invalid network interface configuration and connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].prach_msg1_FDM",
+      "original_value": 0,
+      "error_value": 10,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting prach_msg1_FDM to 10 is an invalid enum value (valid options are 0=one, 1=two, 2=four, 3=eight), causing RACH configuration validation failure and cell setup error.",
+      "explanation_zh": "將 prach_msg1_FDM 設定為 10 是無效的枚舉值（有效選項為 0=一個，1=兩個，2=四個，3=八個），會導致 RACH 配置驗證失敗和細胞設定錯誤。"
+    }
+  }
+]

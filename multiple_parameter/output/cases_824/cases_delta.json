@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NGU",
+      "original_value": "192.168.8.43",
+      "error_value": "invalid.ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NGU IP address to an invalid format will cause UPF connection failure and prevent NG-U interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting physical cell ID to a negative value (-1) will cause cell identification errors and prevent proper cell synchronization.",
+      "explanation_zh": "將實體細胞 ID 設定為負值 (-1)，會導致細胞識別錯誤，並阻止正確的細胞同步。"
+    }
+  }
+]

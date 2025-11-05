@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the MCC to 999 exceeds the valid range (000-999), causing PLMN configuration errors and network registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ssb_perRACH_OccasionAndCB_PreamblesPerSSB",
+      "original_value": 15,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the SSB per RACH occasion and CB preambles per SSB to 100 exceeds the valid range (0-15), leading to improper RACH configuration and access failures.",
+      "explanation_zh": "將 SSB 每 RACH 機會和 CB 每 SSB 前導碼設定為 100 超過有效範圍 (0-15)，導致 RACH 配置不當，並造成接入失敗。"
+    }
+  }
+]

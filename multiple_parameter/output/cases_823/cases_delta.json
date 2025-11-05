@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "invalid.ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the NG AMF IP address to an invalid format will cause AMF connection failure and prevent NG interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_SRS",
+      "original_value": 0,
+      "error_value": 2,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting do SRS to an invalid value (2) will cause SRS configuration errors and prevent proper sounding reference signal transmission.",
+      "explanation_zh": "將 do SRS 設定為無效值 (2)，會導致 SRS 配置錯誤，並阻止正確的探測參考訊號傳輸。"
+    }
+  }
+]

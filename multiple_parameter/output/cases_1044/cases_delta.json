@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting gNB_ID to a negative value -1 will cause invalid identification and prevent proper gNB registration in the network."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 300,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting dl_carrierBandwidth to 300 (exceeding valid range) will cause bandwidth configuration errors and downlink transmission failures.",
+      "explanation_zh": "將 dl_carrierBandwidth 設定為 300（超出有效範圍）會導致頻寬配置錯誤和下行鏈路傳輸失敗。"
+    }
+  }
+]

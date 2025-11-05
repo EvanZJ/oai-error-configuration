@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an unknown enum 'invalid' will cause logging configuration failure and potential system instability."
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting SCTP_INSTREAMS to an out-of-range value (1000) will cause SCTP connection establishment failure and F1 interface issues.",
+      "explanation_zh": "將 SCTP_INSTREAMS 設定為超出範圍的值 (1000)，會導致 SCTP 連接建立失敗，並造成 F1 介面問題。"
+    }
+  }
+]

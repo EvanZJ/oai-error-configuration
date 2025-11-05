@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to -1 (negative value) will cause configuration errors and prevent cell identification."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ResponseWindow",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ra_ResponseWindow to 100 (invalid value, valid options 1,2,4,8,10,20,40,80) will cause configuration validation failure and prevent RACH setup.",
+      "explanation_zh": "將 ra_ResponseWindow 設定為 100（無效值，有效選項 1,2,4,8,10,20,40,80）會導致配置驗證失敗，並阻止 RACH 設定。"
+    }
+  }
+]

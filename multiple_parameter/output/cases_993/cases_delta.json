@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting local_s_portc to -1 (negative port) will cause invalid port configuration error and F1 connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].nrofUplinkSlots",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nrofUplinkSlots to -1 (negative value) will cause invalid TDD configuration error and frame structure failure.",
+      "explanation_zh": "將 nrofUplinkSlots 設定為 -1（負值）會導致無效 TDD 配置錯誤，並造成幀結構失敗。"
+    }
+  }
+]

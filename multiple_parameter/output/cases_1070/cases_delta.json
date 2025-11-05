@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": "abc",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting MCC to a non-numeric string like 'abc' will cause PLMN configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting physCellId to a negative value like -1 will cause cell identification errors.",
+      "explanation_zh": "將 physCellId 設定為負值如 -1 會導致小區識別錯誤。"
+    }
+  }
+]

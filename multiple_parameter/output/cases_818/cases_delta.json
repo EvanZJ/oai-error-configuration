@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portd",
+      "original_value": 2152,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP data port for CU to 0 will cause SCTP connection establishment failure between CU and DU, preventing F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 99,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting maximum MIMO layers to an invalid high value (99) will cause physical layer configuration errors and prevent proper MIMO transmission setup.",
+      "explanation_zh": "將最大 MIMO 層數設定為無效的高值 (99)，會導致實體層配置錯誤，並阻止正確的 MIMO 傳輸設定。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 1000,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting PUSCH threads to 1000 exceeds the valid range, causing resource allocation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting subcarrier spacing to 10 exceeds the valid range, causing configuration failure.",
+      "explanation_zh": "將子載波間距設定為 10 超過有效範圍，會導致配置失敗。"
+    }
+  }
+]

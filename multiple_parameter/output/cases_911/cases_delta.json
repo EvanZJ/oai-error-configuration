@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the local SCTP port for CU to 99999 exceeds the valid port range (0-65535), causing connection failures during F1 interface setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ra_ContentionResolutionTimer",
+      "original_value": 7,
+      "error_value": 100,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the RA contention resolution timer to 100 exceeds the valid range (0-7), leading to improper RACH procedure handling and potential UE access failures.",
+      "explanation_zh": "將 RA 爭用解析計時器設定為 100 超過有效範圍 (0-7)，導致 RACH 程序處理不當，並可能造成 UE 接入失敗。"
+    }
+  }
+]
