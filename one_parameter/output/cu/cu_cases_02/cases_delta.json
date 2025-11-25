@@ -1,0 +1,11 @@
+[
+  {
+    "filename": "cu_case_01.json",
+    "modified_key": "gNBs.gNB_ID",
+    "original_value": "0xe00",
+    "error_value": "invalid",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting gNB_ID to an invalid hex string will cause parsing error during configuration loading, preventing the gNB from initializing properly.",
+    "explanation_zh": "將 gNB_ID 設定為無效的十六進位字串會在配置載入期間造成解析錯誤，阻止 gNB 正確初始化。"
+  }
+]

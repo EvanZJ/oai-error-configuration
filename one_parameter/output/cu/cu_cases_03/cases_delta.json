@@ -1,0 +1,11 @@
+[
+  {
+    "filename": "cu_case_01.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting local_s_portc to a negative value will cause port binding failure during SCTP initialization, preventing network connections.",
+    "explanation_zh": "將 local_s_portc 設定為負值會在 SCTP 初始化期間造成連接埠綁定失敗，阻止網路連線。"
+  }
+]

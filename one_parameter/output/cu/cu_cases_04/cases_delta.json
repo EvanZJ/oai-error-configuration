@@ -1,0 +1,11 @@
+[
+  {
+    "filename": "cu_case_01.json",
+    "modified_key": "security.ciphering_algorithms",
+    "original_value": ["nea3", "nea2", "nea1", "nea0"],
+    "error_value": ["invalid"],
+    "error_type": "invalid_enum",
+    "explanation_en": "Using an invalid ciphering algorithm will cause security initialization failure, preventing secure communication setup.",
+    "explanation_zh": "使用無效的加密演算法會導致安全性初始化失敗，阻止安全通訊設定。"
+  }
+]

@@ -1,0 +1,11 @@
+[
+  {
+    "filename": "du_case_01.json",
+    "modified_key": "MACRLCs.0.local_n_portc",
+    "original_value": 500,
+    "error_value": 501,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local_n_portc to the same value as remote_n_portc will cause port conflict in F1 connection, leading to connection failure.",
+    "explanation_zh": "將 local_n_portc 設定為與 remote_n_portc 相同的值會在 F1 連線中造成連接埠衝突，導致連線失敗。"
+  }
+]

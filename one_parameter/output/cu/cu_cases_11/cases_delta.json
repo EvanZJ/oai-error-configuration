@@ -1,0 +1,11 @@
+[
+  {
+    "filename": "cu_case_01.json",
+    "modified_key": "gNBs.local_s_portc",
+    "original_value": 501,
+    "error_value": 500,
+    "error_type": "logical_contradiction",
+    "explanation_en": "Setting local_s_portc to the same value as remote_s_portc will cause port conflict in SCTP connection, leading to connection failure.",
+    "explanation_zh": "將 local_s_portc 設定為與 remote_s_portc 相同的值會在 SCTP 連線中造成連接埠衝突，導致連線失敗。"
+  }
+]

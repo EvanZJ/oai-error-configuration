@@ -1,48 +1,33 @@
 {
-    "Active_gNBs": ["gNB-Eurecom-CU"],
-    "Asn1_verbosity": "annoying",
-    "gNBs": [
-      {
-        "gNB_ID": "0xe00",
-        "gNB_CU_ID": "0xe00",
-        "gNB_name": "gNB-Eurecom-CU",
-        "tracking_area_code": 1,
-        "plmn_list": [
-          {
-            "mcc": 1,
-            "mnc": 1,
-            "mnc_length": 2,
-            "snssaiList": [
-              {
-                "sst": 1,
-                "sd": "0x010203"
-              }
-            ]
-          }
-        ]
-      }
+  "Active_gNBs": [
+    "gNB-Eurecom-CU"
+  ],
+  "Asn1_verbosity": "none",
+  "Num_Threads_PUSCH": 8,
+  "gNBs": [],
+  "security": {
+    "ciphering_algorithms": [
+      "nea3",
+      "nea2",
+      "nea1",
+      "nea0"
     ],
-    "NETWORK_INTERFACES": {
-      "GNB_INTERFACE_NAME_FOR_NG_AMF": "eth0",
-      "GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.70.132",
-      "GNB_INTERFACE_NAME_FOR_NGU": "eth0",
-      "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.70.132",
-      "GNB_PORT_FOR_S1U": 2152
-    },
-    "amf_ip_address": {
-      "ipv4": "999.999.999.999",
-      "ipv6": "::1"
-    },
-    "log_config": {
-      "global_log_level": "info",
-      "hw_log_level": "info",
-      "phy_log_level": "info",
-      "mac_log_level": "info"
-    },
-    "security": {
-      "ciphering_algorithms": ["nea3", "nea2", "nea1", "nea0"],
-      "integrity_algorithms": ["nia2", "nia0"],
-      "drb_ciphering": "yes",
-      "drb_integrity": "no"
-    }
+    "integrity_algorithms": [
+      "nia2",
+      "nia0"
+    ],
+    "drb_ciphering": "yes",
+    "drb_integrity": "no"
+  },
+  "log_config": {
+    "global_log_level": "info",
+    "hw_log_level": "info",
+    "phy_log_level": "info",
+    "mac_log_level": "info",
+    "rlc_log_level": "info",
+    "pdcp_log_level": "info",
+    "rrc_log_level": "info",
+    "ngap_log_level": "info",
+    "f1ap_log_level": "info"
   }
+}

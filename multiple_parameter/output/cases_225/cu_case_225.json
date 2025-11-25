@@ -1,126 +1,68 @@
 {
-    "Active_gNBs": ["gNB-Eurecom-CU"],
-    "Asn1_verbosity": "annoying",
-    "gNBs": [
-      {
-        "gNB_ID": "0xe00",
-        "gNB_CU_ID": "0xe00",
-        "gNB_name": "gNB-Eurecom-CU",
-        "tracking_area_code": 1,
-        "plmn_list": [
-          {
-            "mcc": 1,
-            "mnc": 1,
-            "mnc_length": 2,
-            "snssaiList": [
-              {
-                "sst": 1,
-                "sd": "0x010203"
-              }
-            ]
-          }
-        ],
-        "nr_cellid": 1,
-        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.70.132",
-        "GNB_PORT_FOR_S1U": 0,
-        "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.70.133",
-        "GNB_PORT_FOR_X2C": 36422,
-        "GNB_IPV4_ADDRESS_FOR_X2C": "192.168.70.134",
-        "GNB_PORT_FOR_X2U": 36422,
-        "GNB_IPV4_ADDRESS_FOR_X2U": "192.168.70.135",
-        "Num_Threads_PUSCH": 8,
-        "Num_Threads_PDSCH": 8,
-        "max_num_UE": 4,
-        "max_num_UE_per_cell": 4,
-        "max_num_cells": 1,
-        "SCTP": {
-          "SCTP_INSTREAMS": 2,
-          "SCTP_OUTSTREAMS": 2
-        }
-      }
-    ],
-    "MACRLCs": [
-      {
-        "num_cc": 1,
-        "tr_s_preference": "local_L1",
-        "tr_n_preference": "local_RRC",
-        "local_s_address": "127.0.0.1",
-        "remote_s_address": "127.0.0.2",
-        "local_s_portc": 500,
-        "local_s_portd": 2152,
-        "remote_s_portc": 500,
-        "remote_s_portd": 2152
-      }
-    ],
-    "L1s": [
-      {
-        "num_cc": 1,
-        "tr_n_preference": "local_mac",
-        "prach_dtx_threshold": 120,
-        "pucch0_dtx_threshold": 150,
-        "ofdm_offset_divisor": 8
-      }
-    ],
-    "RUs": [
-      {
-        "local_rf": "yes",
-        "nb_tx": 4,
-        "nb_rx": 4,
-        "att_tx": 0,
-        "att_rx": 0,
-        "bands": [78],
-        "max_pdschReferenceSignalPower": -27,
-        "max_rxgain": 114,
-        "sf_extension": 0,
-        "eNB_instances": [0],
-        "clock_src": "internal",
-        "ru_thread_core": 6,
-        "sl_ahead": 5,
-        "do_precoding": 0
-      }
-    ],
-    "rfsimulator": {
-      "serveraddr": "server",
-      "serverport": 4043,
-      "options": [],
-      "modelname": "AWGN",
-      "IQfile": "/tmp/rfsimulator.iqs"
-    },
-    "log_config": {
-      "global_log_level": "info",
-      "hw_log_level": "info",
-      "phy_log_level": "info",
-      "mac_log_level": "info"
-    },
-    "security": {
-      "ciphering_algorithms": [
-        "nea2"
-      ],
-      "integrity_algorithms": [
-        "nia2"
-      ]
-    },
-    "fhi_72": {
-      "dpdk_devices": ["0000:ca:02.0", "0000:ca:02.1"],
-      "system_core": 0,
-      "io_core": 4,
-      "worker_cores": [2],
-      "ru_addr": ["e8:c7:4f:25:80:ed", "e8:c7:4f:25:80:ed"],
-      "mtu": 9000,
-      "fh_config": [
+  "Active_gNBs": [
+    "gNB-Eurecom-CU"
+  ],
+  "Asn1_verbosity": "none",
+  "Num_Threads_PUSCH": 8,
+  "gNBs": [
+    {
+      "gNB_ID": "0xe00",
+      "gNB_name": "gNB-Eurecom-CU",
+      "tracking_area_code": 1,
+      "plmn_list": [
         {
-          "T1a_cp_dl": [285, 429],
-          "T1a_cp_ul": [285, 429],
-          "T1a_up": [96, 196],
-          "Ta4": [110, 180],
-          "ru_config": {
-            "iq_width": 9,
-            "iq_width_prach": 9
-          },
-          "prach_config": {
-            "kbar": 0
-          }
+          "mcc": 1,
+          "mnc": 1,
+          "mnc_length": 2,
+          "snssaiList": []
         }
-      ]
+      ],
+      "nr_cellid": 1,
+      "tr_s_preference": "f1",
+      "local_s_if_name": "lo",
+      "local_s_address": "127.0.0.5",
+      "remote_s_address": "127.0.0.3",
+      "local_s_portc": 501,
+      "local_s_portd": 2152,
+      "remote_s_portc": 500,
+      "remote_s_portd": 2152,
+      "SCTP": {
+        "SCTP_INSTREAMS": 2,
+        "SCTP_OUTSTREAMS": 2
+      },
+      "amf_ip_address": {
+        "ipv4": "192.168.70.132"
+      },
+      "NETWORK_INTERFACES": {
+        "GNB_IPV4_ADDRESS_FOR_NG_AMF": "192.168.8.43",
+        "GNB_IPV4_ADDRESS_FOR_NGU": "192.168.8.43",
+        "GNB_PORT_FOR_S1U": 0
+      }
     }
+  ],
+  "security": {
+    "ciphering_algorithms": [
+      "nea3",
+      "nea2",
+      "nea1",
+      "nea0"
+    ],
+    "integrity_algorithms": [
+      "nia2",
+      "nia0"
+    ],
+    "drb_ciphering": "yes",
+    "drb_integrity": "no"
+  },
+  "log_config": {
+    "global_log_level": "info",
+    "hw_log_level": "info",
+    "phy_log_level": "info",
+    "mac_log_level": "info",
+    "rlc_log_level": "info",
+    "pdcp_log_level": "info",
+    "rrc_log_level": "info",
+    "ngap_log_level": "info",
+    "f1ap_log_level": "info"
   }
+}

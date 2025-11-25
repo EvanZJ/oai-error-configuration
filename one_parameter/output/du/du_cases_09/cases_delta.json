@@ -1,0 +1,11 @@
+[
+  {
+    "filename": "du_case_01.json",
+    "modified_key": "rfsimulator.serverport",
+    "original_value": 4043,
+    "error_value": -1,
+    "error_type": "out_of_range",
+    "explanation_en": "Setting serverport to a negative value will cause RF simulator connection failure, preventing radio simulation.",
+    "explanation_zh": "將 serverport 設定為負值會導致 RF 模擬器連線失敗，阻止無線電模擬。"
+  }
+]

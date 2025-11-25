@@ -10,15 +10,13 @@ from pathlib import Path
 import argparse
 
 # Paths
-cu_output_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/cu_output/json/"
-du_output_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/du_output/json/"
+base_output_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/one_parameter/output/"
 baseline_conf_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf/"
 baseline_conf_json_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf_json/"
-cu_prompt_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/cu_gen_prompt.md"
-du_prompt_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/du_gen_prompt.md"
+cu_prompt_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/one_parameter/cu_gen_prompt.md"
+du_prompt_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/one_parameter/du_gen_prompt.md"
 
-# Wait time for Copilot to generate ONE case
-COPILOT_WAIT_TIME = 120  # 2 minutes default per case
+failed_cases = []
 
 # Mouse mover to prevent screen sleep
 stop_mouse_mover = False
@@ -100,41 +98,71 @@ def ensure_vscode_active():
             time.sleep(1)
     return False
 
-def get_existing_case_count(output_path, prefix):
-    """Count existing case files to determine starting number"""
+def get_existing_case_folders(config_type):
+    """Get list of existing case folders for a specific config type"""
     try:
-        files = [f for f in os.listdir(output_path) if f.startswith(f"{prefix}_case_") and f.endswith(".json")]
-        if not files:
-            return 0
-        
-        # Extract numbers from filenames
-        numbers = []
-        for f in files:
-            try:
-                num_str = f.replace(f"{prefix}_case_", "").replace(".json", "")
-                numbers.append(int(num_str))
-            except ValueError:
-                continue
-        
-        return max(numbers) if numbers else 0
+        type_output_path = os.path.join(base_output_path, config_type)
+        if not os.path.exists(type_output_path):
+            return []
+        folders = [f for f in os.listdir(type_output_path) 
+                   if f.startswith(f"{config_type}_cases_") and os.path.isdir(os.path.join(type_output_path, f))]
+        return sorted(folders)
     except Exception as e:
-        print(f"Error counting existing cases: {e}")
-        return 0
+        print(f"Error getting existing folders: {e}")
+        return []
 
-def get_cases_delta_count(output_path):
-    """Get the count of cases in cases_delta.json"""
+def get_next_case_number(config_type):
+    """Determine the next case number based on existing folders"""
+    folders = get_existing_case_folders(config_type)
+    if not folders:
+        return 1
+    
+    numbers = []
+    for folder in folders:
+        try:
+            num_str = folder.replace(f"{config_type}_cases_", "")
+            numbers.append(int(num_str))
+        except ValueError:
+            continue
+    
+    return max(numbers) + 1 if numbers else 1
+
+def create_case_folder(config_type, case_num):
+    """Create a new case folder"""
+    type_output_path = os.path.join(base_output_path, config_type)
+    os.makedirs(type_output_path, exist_ok=True)
+    
+    folder_name = f"{config_type}_cases_{case_num:02d}"
+    folder_path = os.path.join(type_output_path, folder_name)
+    os.makedirs(folder_path, exist_ok=True)
+    return folder_path
+
+def load_baseline_files():
+    """Load all baseline configuration files"""
     try:
-        delta_file = os.path.join(output_path, "cases_delta.json")
-        if not os.path.exists(delta_file):
-            return 0
+        cu_conf_path = os.path.join(baseline_conf_path, "cu_gnb.conf")
+        du_conf_path = os.path.join(baseline_conf_path, "du_gnb.conf")
+        cu_json_path = os.path.join(baseline_conf_json_path, "cu_gnb.json")
+        du_json_path = os.path.join(baseline_conf_json_path, "du_gnb.json")
         
-        with open(delta_file, 'r') as f:
-            cases_delta = json.load(f)
+        with open(cu_conf_path, 'r') as f:
+            cu_conf = f.read()
+        with open(du_conf_path, 'r') as f:
+            du_conf = f.read()
+        with open(cu_json_path, 'r') as f:
+            cu_json = f.read()
+        with open(du_json_path, 'r') as f:
+            du_json = f.read()
         
-        return len(cases_delta)
+        return {
+            'cu_gnb_conf': cu_conf,
+            'du_gnb_conf': du_conf,
+            'cu_gnb_json': cu_json,
+            'du_gnb_json': du_json
+        }
     except Exception as e:
-        print(f"Error reading cases_delta.json: {e}")
-        return 0
+        print(f"❌ Error loading baseline files: {e}")
+        return None
 
 def load_prompt_template(config_type):
     """Load the prompt template for the config type"""
@@ -149,7 +177,6 @@ def load_prompt_template(config_type):
 def send_prompt_to_copilot(prompt):
     """Send a prompt to Copilot chat"""
     try:
-        # Ensure VS Code is active
         if not ensure_vscode_active():
             print("❌ Could not activate VS Code")
             return False
@@ -183,20 +210,14 @@ def send_prompt_to_copilot(prompt):
         print(f"❌ Error sending prompt to Copilot: {e}")
         return False
 
-def wait_and_verify_case_generation(config_type, expected_case_num, max_timeout=300, check_interval=10):
-    """Wait for and verify that a new case was generated - checks every N seconds"""
-    output_path = cu_output_path if config_type == "cu" else du_output_path
-    prefix = config_type
+def wait_for_cases_delta(folder_path, config_type, max_timeout=300, check_interval=10, stabilization_wait=5):
+    """Wait for cases_delta.json to be created and populated"""
+    delta_filepath = os.path.join(folder_path, "cases_delta.json")
     
-    expected_filename = f"{prefix}_case_{expected_case_num:02d}.json"
-    expected_filepath = os.path.join(output_path, expected_filename)
-    delta_filepath = os.path.join(output_path, "cases_delta.json")
-    
-    print(f"👀 Waiting for: {expected_filename}")
+    print(f"👀 Waiting for: cases_delta.json")
     print(f"⏱️  Checking every {check_interval} seconds, max timeout: {max_timeout} seconds")
     
     start_time = time.time()
-    initial_delta_count = get_cases_delta_count(output_path)
     checks_done = 0
     
     while time.time() - start_time < max_timeout:
@@ -205,40 +226,42 @@ def wait_and_verify_case_generation(config_type, expected_case_num, max_timeout=
         
         print(f"🔍 Check #{checks_done} ({elapsed}s elapsed)...")
         
-        case_file_found = False
-        delta_updated = False
-        
-        # Check if case file exists
-        if os.path.exists(expected_filepath):
-            file_size = os.path.getsize(expected_filepath)
-            if file_size > 100:  # Valid file
-                print(f"  ✓ Case file found: {expected_filename} ({file_size} bytes)")
-                case_file_found = True
+        if os.path.exists(delta_filepath):
+            file_size = os.path.getsize(delta_filepath)
+            if file_size > 50:  # Valid file
+                try:
+                    with open(delta_filepath, 'r') as f:
+                        delta_data = json.load(f)
+                    
+                    if isinstance(delta_data, list) and len(delta_data) > 0:
+                        print(f"  ✓ cases_delta.json found with {len(delta_data)} entries ({file_size} bytes)")
+                        
+                        # Verify it has the expected config type entry
+                        has_expected = any(config_type in str(case).lower() for case in delta_data)
+                        
+                        if has_expected:
+                            # Wait for stabilization
+                            print(f"⏳ File detected, waiting {stabilization_wait}s for Copilot to finish...")
+                            time.sleep(stabilization_wait)
+                            
+                            # Verify file size hasn't changed
+                            new_file_size = os.path.getsize(delta_filepath)
+                            if new_file_size != file_size:
+                                print(f"  ⚠ File still being written ({file_size} -> {new_file_size} bytes), waiting...")
+                                time.sleep(check_interval)
+                                continue
+                            
+                            print(f"✅ cases_delta.json successfully generated for {config_type.upper()}!")
+                            print(f"⚡ Completed in {elapsed + stabilization_wait}s")
+                            return True
+                        else:
+                            print(f"  ⚠ cases_delta.json exists but missing {config_type.upper()} entries")
+                    else:
+                        print(f"  ⚠ cases_delta.json exists but empty or invalid")
+                except json.JSONDecodeError:
+                    print(f"  ⚠ File exists but not valid JSON yet")
             else:
-                print(f"  ⚠ Case file exists but too small: {file_size} bytes")
-        
-        # Check if cases_delta.json was updated
-        current_delta_count = get_cases_delta_count(output_path)
-        if current_delta_count > initial_delta_count:
-            print(f"  ✓ cases_delta.json updated: {initial_delta_count} -> {current_delta_count} entries")
-            delta_updated = True
-        
-        # Both conditions met - verify thoroughly
-        if case_file_found and delta_updated:
-            try:
-                with open(delta_filepath, 'r') as f:
-                    cases_delta = json.load(f)
-                
-                # Check if the expected filename is in the delta
-                found_in_delta = any(case['filename'] == expected_filename for case in cases_delta)
-                if found_in_delta:
-                    print(f"✅ Case {expected_case_num} successfully generated and verified!")
-                    print(f"⚡ Completed in {elapsed}s (saved {max_timeout - elapsed}s)")
-                    return True
-                else:
-                    print(f"  ⚠ Case file exists but not found in cases_delta.json yet")
-            except Exception as e:
-                print(f"  ⚠ Error verifying cases_delta.json: {e}")
+                print(f"  ⚠ File exists but too small: {file_size} bytes")
         
         # Wait for next check interval
         if time.time() - start_time < max_timeout:
@@ -246,84 +269,89 @@ def wait_and_verify_case_generation(config_type, expected_case_num, max_timeout=
     
     # Timeout
     print(f"⏰ Timeout after {max_timeout} seconds")
-    print(f"   Case file found: {case_file_found}")
-    print(f"   Delta updated: {delta_updated}")
     return False
 
-def generate_single_case(config_type, iteration_num, total_iterations, max_wait_time, check_interval):
-    """Generate a single test case"""
+def generate_single_case(config_type, case_num, max_wait_time, check_interval, stabilization_wait, baseline_files):
+    """Generate a single test case (cases_delta.json only)"""
     print("\n" + "=" * 80)
-    print(f"🔄 Iteration {iteration_num}/{total_iterations} - Generating {config_type.upper()} case")
+    print(f"🔄 Generating {config_type.upper()} Case #{case_num}")
     print("=" * 80)
     
-    output_path = cu_output_path if config_type == "cu" else du_output_path
-    prefix = config_type
-    
-    # Get current case count
-    current_count = get_existing_case_count(output_path, prefix)
-    expected_case_num = current_count + 1
-    
-    print(f"📊 Current case count: {current_count}")
-    print(f"🎯 Expected new case: {prefix}_case_{expected_case_num:02d}.json")
+    # Create case folder
+    folder_path = create_case_folder(config_type, case_num)
+    folder_name = os.path.basename(folder_path)
+    print(f"📂 Created folder: {folder_name}")
     
     # Load prompt template
     prompt_template = load_prompt_template(config_type)
     if prompt_template is None:
+        record_failure(config_type, case_num, "load_template")
         return False
     
-    # The prompt template already contains all instructions
-    # Just send it as-is - Copilot will generate ONE case and update cases_delta.json
-    prompt = prompt_template
+    # Build prompt with embedded baseline configs
+    if config_type == "cu":
+        prompt = prompt_template.format(
+            cu_gnb_conf=baseline_files['cu_gnb_conf'],
+            cu_gnb_json=baseline_files['cu_gnb_json']
+        )
+    else:  # du
+        prompt = prompt_template.format(
+            du_gnb_conf=baseline_files['du_gnb_conf'],
+            du_gnb_json=baseline_files['du_gnb_json']
+        )
+    
+    # Add instruction to save as cases_delta.json
+    prompt += f"\n\nIMPORTANT: Save the output as 'cases_delta.json' in the folder '{folder_path}'"
     
     print(f"📏 Prompt length: {len(prompt)} characters")
     
     # Send to Copilot
     if not send_prompt_to_copilot(prompt):
+        record_failure(config_type, case_num, "send_prompt")
         print(f"❌ Failed to send prompt")
         return False
     
-    # Start checking immediately - no fixed wait time
+    # Wait for cases_delta.json
     print(f"🔍 Starting verification checks (every {check_interval}s, max {max_wait_time}s)...")
     
-    # Verify the case was generated (checks every N seconds)
-    if wait_and_verify_case_generation(config_type, expected_case_num, max_timeout=max_wait_time, check_interval=check_interval):
-        print(f"✅ Case {expected_case_num} generation successful")
+    if wait_for_cases_delta(folder_path, config_type, max_wait_time, check_interval, stabilization_wait):
+        print(f"✅ {config_type.upper()} Case #{case_num} generation successful")
         return True
     else:
-        print(f"❌ Case {expected_case_num} generation failed or not verified")
+        record_failure(config_type, case_num, "file_not_generated")
+        print(f"❌ {config_type.upper()} Case #{case_num} generation failed")
         return False
 
-def generate_cases_loop(config_type, num_cases, max_wait_time, check_interval):
+def generate_cases_loop(config_type, num_cases, max_wait_time, check_interval, stabilization_wait, baseline_files):
     """Loop through generating multiple cases one by one"""
     print("\n" + "=" * 80)
-    print(f"🚀 Starting {config_type.upper()} case generation loop")
-    print(f"📝 Will generate {num_cases} cases, one at a time")
-    print(f"⚡ Check interval: {check_interval}s (moves to next when verified)")
+    print(f"🚀 Starting {config_type.upper()} Case Generation Loop")
+    print(f"📝 Will generate {num_cases} cases (each with cases_delta.json only)")
+    print(f"⚡ Check interval: {check_interval}s, stabilization wait: {stabilization_wait}s")
     print("=" * 80)
     
-    output_path = cu_output_path if config_type == "cu" else du_output_path
-    
-    # Create output directory if it doesn't exist
-    os.makedirs(output_path, exist_ok=True)
+    start_case_num = get_next_case_number(config_type)
+    print(f"📊 Starting from case number: {start_case_num}")
     
     success_count = 0
     failed_count = 0
     
-    for i in range(1, num_cases + 1):
+    for i in range(num_cases):
+        case_num = start_case_num + i
+        
         try:
-            if generate_single_case(config_type, i, num_cases, max_wait_time, check_interval):
+            if generate_single_case(config_type, case_num, max_wait_time, check_interval, stabilization_wait, baseline_files):
                 success_count += 1
-                print(f"✅ Progress: {success_count}/{num_cases} cases generated")
+                print(f"✅ Progress: {success_count}/{num_cases} cases completed")
             else:
                 failed_count += 1
-                print(f"❌ Progress: {success_count}/{num_cases} cases generated, {failed_count} failed")
+                print(f"❌ Progress: {success_count}/{num_cases} cases completed, {failed_count} failed")
                 
-                # Ask user if they want to continue
                 print(f"⚠️  Case generation failed. Continue to next case? (waiting 5s...)")
                 time.sleep(5)
             
             # Short pause between iterations
-            if i < num_cases:
+            if i < num_cases - 1:
                 print(f"⏸️  Pausing 3 seconds before next iteration...")
                 time.sleep(3)
                 
@@ -331,14 +359,29 @@ def generate_cases_loop(config_type, num_cases, max_wait_time, check_interval):
             print("\n⚠️  User interrupted the loop")
             break
         except Exception as e:
-            print(f"❌ Error in iteration {i}: {e}")
+            print(f"❌ Error in case {case_num}: {e}")
+            import traceback
+            traceback.print_exc()
             failed_count += 1
     
     return success_count, failed_count
 
+def record_failure(config_type, case_num, reason=""):
+    """Append a structured entry to the global failed_cases list."""
+    global failed_cases
+    entry = {
+        "type": config_type,
+        "case": case_num,
+        "reason": reason or "unknown"
+    }
+    failed_cases.append(entry)
+    print(f"❌ Failed {config_type.upper()} case {case_num} — {reason}")
+
 def main():
     """Main automation function"""
-    parser = argparse.ArgumentParser(description='5G gNodeB Configuration Test Case Generator Automation (Loop Mode)')
+    parser = argparse.ArgumentParser(
+        description='5G gNodeB Single-Parameter Test Case Generator (generates cases_delta.json only)'
+    )
     parser.add_argument('--cu-cases', type=int, default=0,
                         help='Number of CU test cases to generate (default: 0)')
     parser.add_argument('--du-cases', type=int, default=0,
@@ -347,23 +390,36 @@ def main():
                         help='Maximum wait time in seconds for each case (default: 300)')
     parser.add_argument('--check-interval', type=int, default=10,
                         help='Check interval in seconds for file verification (default: 10)')
+    parser.add_argument('--stabilization-wait', type=int, default=5,
+                        help='Wait time in seconds after file detection for Copilot to finish (default: 5)')
     
     args = parser.parse_args()
     
     if args.cu_cases == 0 and args.du_cases == 0:
         print("❌ Please specify at least --cu-cases or --du-cases")
-        print("Example: python case_generator_automation.py --cu-cases 10 --du-cases 15")
+        print("Example: python modified_case_generator_automation.py --cu-cases 10 --du-cases 15")
         return
     
-    print("🚀 Starting 5G Test Case Generator Automation (EFFICIENT LOOP MODE)")
+    print("🚀 Starting 5G Single-Parameter Test Case Generator Automation")
     print("=" * 80)
     print(f"Configuration:")
     print(f"  CU cases to generate: {args.cu_cases}")
     print(f"  DU cases to generate: {args.du_cases}")
+    print(f"  Files per case: cases_delta.json (only)")
     print(f"  Max wait per case: {args.max_wait} seconds")
     print(f"  Check interval: {args.check_interval} seconds")
-    print(f"  ⚡ Mode: Check every {args.check_interval}s, move to next immediately when verified!")
+    print(f"  Stabilization wait: {args.stabilization_wait} seconds")
+    print(f"  Output directory: {base_output_path}")
+    print(f"  ⚡ Mode: Check every {args.check_interval}s, wait {args.stabilization_wait}s after detection!")
     print("=" * 80)
+    
+    # Load baseline files once at the start
+    print("\n📖 Loading baseline configuration files...")
+    baseline_files = load_baseline_files()
+    if not baseline_files:
+        print("❌ Failed to load baseline files. Exiting.")
+        return
+    print("✅ Baseline files loaded successfully")
     
     # Check VS Code availability
     if not find_vscode_window():
@@ -381,7 +437,14 @@ def main():
     try:
         # Generate CU cases one by one
         if args.cu_cases > 0:
-            cu_success, cu_failed = generate_cases_loop("cu", args.cu_cases, args.max_wait, args.check_interval)
+            cu_success, cu_failed = generate_cases_loop(
+                "cu", 
+                args.cu_cases, 
+                args.max_wait, 
+                args.check_interval,
+                args.stabilization_wait,
+                baseline_files
+            )
             
             # Pause between CU and DU
             if args.du_cases > 0:
@@ -390,7 +453,14 @@ def main():
         
         # Generate DU cases one by one
         if args.du_cases > 0:
-            du_success, du_failed = generate_cases_loop("du", args.du_cases, args.max_wait, args.check_interval)
+            du_success, du_failed = generate_cases_loop(
+                "du", 
+                args.du_cases, 
+                args.max_wait, 
+                args.check_interval,
+                args.stabilization_wait,
+                baseline_files
+            )
         
     except KeyboardInterrupt:
         print("\n\n⚠️  Automation interrupted by user")
@@ -416,14 +486,25 @@ def main():
             print(f"  ✅ Success: {du_success}/{args.du_cases}")
             print(f"  ❌ Failed: {du_failed}/{args.du_cases}")
         
+        print(f"\n📁 Output location: {base_output_path}")
+        print(f"\nEach case contains:")
+        print(f"  - cases_delta.json (single-key error test case)")
         print("\n🏁 Automation completed")
-        print("\nPlease verify the generated files in:")
-        if args.cu_cases > 0:
-            print(f"  - {cu_output_path}")
-            print(f"  - {cu_output_path}cases_delta.json")
-        if args.du_cases > 0:
-            print(f"  - {du_output_path}")
-            print(f"  - {du_output_path}cases_delta.json")
+        
+        if failed_cases:
+            print("\n" + "!" * 80)
+            print("FAILURE REPORT")
+            print("!" * 80)
+            for f in failed_cases:
+                print(f" • {f['type'].upper()} Case {f['case']:02d} — {f['reason']}")
+
+            # Save a JSON file for later inspection
+            report_path = os.path.join(base_output_path, "FAILED_CASES_REPORT.json")
+            with open(report_path, "w") as rf:
+                json.dump(failed_cases, rf, indent=2)
+            print(f"\nReport written to: {report_path}")
+        else:
+            print("\nNo failures recorded.")
 
 if __name__ == "__main__":
     main()

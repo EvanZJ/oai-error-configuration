@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-合併配對測試結果 (logs + configs) 到 JSONL 格式
-從 logs_batch_run 資料夾讀取測試結果，並與對應的 CU/DU 配置合併
+Merge paired test results (logs + configs) into JSONL format
+Read test results from logs_batch_run folder and merge with corresponding CU/DU configurations
 """
 
 import json
@@ -10,38 +10,38 @@ from pathlib import Path
 import glob
 
 # *******************************************************************
-# 1. 設定路徑
+# 1. Path Configuration
 # *******************************************************************
 BASE_DIR = Path(__file__).resolve().parent
 PROJECT_ROOT = BASE_DIR.parent
 
-# 路徑設定
+# Path settings
 LOGS_ROOT = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/logs_batch_run"
 CASES_ROOT = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output"
 BASELINE_UE_JSON = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf_json/ue_oai.json"
 
-# 輸出路徑
+# Output paths
 OUTPUT_DIR = Path("/home/sionna/evan/CursorAutomation/cursor_gen_conf")
 OUTPUT_FILE = OUTPUT_DIR / 'merged_paired_test_results.jsonl'
 
 OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 
 # *******************************************************************
-# 2. 輔助函數
+# 2. Helper Functions
 # *******************************************************************
 
 def load_ue_baseline():
-    """載入 baseline UE 配置"""
+    """Load baseline UE configuration"""
     try:
         with open(BASELINE_UE_JSON, 'r', encoding='utf-8') as f:
             return json.load(f)
     except Exception as e:
-        print(f"⚠️ 警告: 無法載入 UE baseline 配置: {e}")
+        print(f"⚠️ Warning: Unable to load UE baseline configuration: {e}")
         return {}
 
 
 def load_tail100_summary(log_dir):
-    """從 log 目錄載入 tail100_summary.json"""
+    """Load tail100_summary.json from log directory"""
     tail100_file = os.path.join(log_dir, "tail100_summary.json")
     try:
         with open(tail100_file, 'r', encoding='utf-8') as f:
@@ -51,7 +51,7 @@ def load_tail100_summary(log_dir):
 
 
 def load_config_json(config_path):
-    """載入配置 JSON 檔案"""
+    """Load configuration JSON file"""
     try:
         with open(config_path, 'r', encoding='utf-8') as f:
             return json.load(f)
@@ -61,11 +61,11 @@ def load_config_json(config_path):
 
 def extract_case_name_from_log_folder(log_folder_name):
     """
-    從 log 資料夾名稱提取 case 名稱
-    例如: "20250101_120000_cases_01" -> "cases_01"
+    Extract case name from log folder name
+    Example: "20250101_120000_cases_01" -> "cases_01"
     """
     parts = log_folder_name.split('_')
-    # 找到 "cases_XX" 部分
+    # Find "cases_XX" part
     for i, part in enumerate(parts):
         if part == "cases" and i + 1 < len(parts):
             return f"cases_{parts[i + 1]}"
@@ -73,7 +73,7 @@ def extract_case_name_from_log_folder(log_folder_name):
 
 
 def load_cases_delta(case_folder):
-    """從 case 資料夾載入 cases_delta.json"""
+    """Load cases_delta.json from case folder"""
     delta_file = os.path.join(case_folder, "cases_delta.json")
     try:
         with open(delta_file, 'r', encoding='utf-8') as f:
@@ -83,17 +83,17 @@ def load_cases_delta(case_folder):
 
 
 def build_misconfigured_param_string(modified_key, error_value):
-    """建構 misconfigured_param 字串"""
-    # 將 modified_key 轉換為點分隔格式
-    # 例如: "security.integrity_algorithms[0]" -> "gNBs.security.integrity_algorithms[0]"
+    """Build misconfigured_param string"""
+    # Convert modified_key to dot-separated format
+    # Example: "security.integrity_algorithms[0]" -> "gNBs.security.integrity_algorithms[0]"
     
-    # 如果不是以 gNBs 開頭，加上 gNBs 前綴
+    # Add gNBs prefix if not already present
     if not modified_key.startswith("gNBs"):
         key = f"gNBs.{modified_key}"
     else:
         key = modified_key
     
-    # 格式化值
+    # Format value
     if isinstance(error_value, str):
         value_str = error_value
     else:
@@ -103,7 +103,7 @@ def build_misconfigured_param_string(modified_key, error_value):
 
 
 def build_correct_param_string(modified_key, original_value):
-    """建構 correct_param 字串"""
+    """Build correct_param string"""
     if not modified_key.startswith("gNBs"):
         key = f"gNBs.{modified_key}"
     else:
@@ -118,70 +118,70 @@ def build_correct_param_string(modified_key, original_value):
 
 
 # *******************************************************************
-# 3. 主處理邏輯
+# 3. Main Processing Logic
 # *******************************************************************
 
 all_records = []
 total_processed = 0
 failed_cases = []
 
-# 載入 baseline UE 配置
+# Load baseline UE configuration
 baseline_ue_config = load_ue_baseline()
 
-print("🔄 開始處理測試結果...")
-print(f"📂 Log 目錄: {LOGS_ROOT}")
-print(f"📂 Cases 目錄: {CASES_ROOT}")
+print("🔄 Starting to process test results...")
+print(f"📂 Log directory: {LOGS_ROOT}")
+print(f"📂 Cases directory: {CASES_ROOT}")
 print("-" * 80)
 
-# 遍歷所有 log 資料夾
+# Iterate through all log folders
 log_folders = sorted([d for d in os.listdir(LOGS_ROOT) if os.path.isdir(os.path.join(LOGS_ROOT, d))])
 
 for log_folder_name in log_folders:
     log_folder_path = os.path.join(LOGS_ROOT, log_folder_name)
     
-    # 提取 case 名稱
+    # Extract case name
     case_name = extract_case_name_from_log_folder(log_folder_name)
     if not case_name:
-        failed_cases.append(f"無法從 {log_folder_name} 提取 case 名稱")
+        failed_cases.append(f"Unable to extract case name from {log_folder_name}")
         continue
     
-    print(f"🔍 處理: {log_folder_name} -> {case_name}")
+    print(f"🔍 Processing: {log_folder_name} -> {case_name}")
     
-    # 找到對應的 case 資料夾
+    # Find corresponding case folder
     case_folder = os.path.join(CASES_ROOT, case_name)
     if not os.path.exists(case_folder):
-        failed_cases.append(f"找不到對應的 case 資料夾: {case_name}")
+        failed_cases.append(f"Corresponding case folder not found: {case_name}")
         continue
     
-    # 載入 tail100_summary.json (logs)
+    # Load tail100_summary.json (logs)
     logs = load_tail100_summary(log_folder_path)
     if not logs:
-        failed_cases.append(f"{case_name}: 無法載入 tail100_summary.json")
+        failed_cases.append(f"{case_name}: Unable to load tail100_summary.json")
         continue
     
-    # 載入 cases_delta.json
+    # Load cases_delta.json
     cases_delta = load_cases_delta(case_folder)
     if not cases_delta:
-        failed_cases.append(f"{case_name}: 無法載入 cases_delta.json")
+        failed_cases.append(f"{case_name}: Unable to load cases_delta.json")
         continue
     
-    # 找到 CU 和 DU 的 JSON 配置檔案
+    # Find CU and DU JSON configuration files
     cu_json_files = glob.glob(os.path.join(case_folder, "cu_case_*.json"))
     du_json_files = glob.glob(os.path.join(case_folder, "du_case_*.json"))
     
     if not cu_json_files or not du_json_files:
-        failed_cases.append(f"{case_name}: 找不到 CU 或 DU JSON 配置")
+        failed_cases.append(f"{case_name}: CU or DU JSON configuration not found")
         continue
     
-    # 載入 CU 和 DU 配置
+    # Load CU and DU configurations
     cu_config = load_config_json(cu_json_files[0])
     du_config = load_config_json(du_json_files[0])
     
     if not cu_config or not du_config:
-        failed_cases.append(f"{case_name}: 無法載入 CU 或 DU 配置")
+        failed_cases.append(f"{case_name}: Unable to load CU or DU configuration")
         continue
     
-    # 從 cases_delta 提取 CU 和 DU 的錯誤描述
+    # Extract CU and DU error descriptions from cases_delta
     cu_case = None
     du_case = None
     
@@ -192,10 +192,10 @@ for log_folder_name in log_folders:
             du_case = case["du"]
     
     if not cu_case or not du_case:
-        failed_cases.append(f"{case_name}: cases_delta.json 中缺少 CU 或 DU 資訊")
+        failed_cases.append(f"{case_name}: CU or DU information missing in cases_delta.json")
         continue
     
-    # 建構 misconfigured_param 和 correct_param
+    # Build misconfigured_param and correct_param
     cu_misconfigured = build_misconfigured_param_string(
         cu_case.get("modified_key", ""),
         cu_case.get("error_value", "")
@@ -214,7 +214,7 @@ for log_folder_name in log_folders:
         du_case.get("original_value", "")
     )
     
-    # 建構完整記錄
+    # Build complete record
     record = {
         "misconfigured_param": {
             "cu": cu_misconfigured,
@@ -240,10 +240,10 @@ for log_folder_name in log_folders:
     
     all_records.append(record)
     total_processed += 1
-    print(f"   ✅ 成功處理")
+    print(f"   ✅ Successfully processed")
 
 # *******************************************************************
-# 4. 寫入結果
+# 4. Write Results
 # *******************************************************************
 
 if all_records:
@@ -254,27 +254,27 @@ if all_records:
                 outfile.write(json_line + '\n')
         
         print("\n" + "=" * 80)
-        print(f"✅ 成功! 合併結果已儲存至：")
+        print(f"✅ Success! Merged results saved to:")
         print(f"   {OUTPUT_FILE}")
-        print(f"📊 統計:")
-        print(f"   - 成功處理: {total_processed} 筆")
-        print(f"   - 失敗: {len(failed_cases)} 筆")
+        print(f"📊 Statistics:")
+        print(f"   - Successfully processed: {total_processed} records")
+        print(f"   - Failed: {len(failed_cases)} records")
         
         if failed_cases:
-            print(f"\n⚠️ 失敗案例 (前 10 項):")
+            print(f"\n⚠️ Failed cases (first 10):")
             for failed in failed_cases[:10]:
                 print(f"   - {failed}")
             if len(failed_cases) > 10:
-                print(f"   ... 還有 {len(failed_cases) - 10} 項")
+                print(f"   ... and {len(failed_cases) - 10} more")
         
         print("=" * 80)
         
-        # 顯示範例記錄
+        # Show sample record
         if all_records:
-            print("\n📋 輸出格式範例 (第 1 筆記錄):")
+            print("\n📋 Output format example (first record):")
             print("-" * 80)
             sample = all_records[0]
-            # 只顯示部分欄位以保持可讀性
+            # Show only partial fields for readability
             sample_preview = {
                 "misconfigured_param": sample["misconfigured_param"],
                 "correct_param": sample["correct_param"],
@@ -289,8 +289,8 @@ if all_records:
             print("-" * 80)
             
     except Exception as e:
-        print(f"❌ 寫入檔案時發生錯誤: {e}")
+        print(f"❌ Error writing to file: {e}")
         import traceback
         traceback.print_exc()
 else:
-    print("❌ 沒有成功處理任何記錄")
+    print("❌ No records were successfully processed")

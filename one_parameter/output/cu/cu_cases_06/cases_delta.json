@@ -1,0 +1,11 @@
+[
+  {
+    "filename": "cu_case_01.json",
+    "modified_key": "gNBs.amf_ip_address.ipv4",
+    "original_value": "192.168.70.132",
+    "error_value": "invalid.ip",
+    "error_type": "invalid_format",
+    "explanation_en": "Setting AMF IP address to an invalid format will cause network connection failures during AMF communication, leading to registration rejection.",
+    "explanation_zh": "將 AMF IP 位址設定為無效格式會在 AMF 通訊期間導致網路連線失敗，造成註冊被拒絕。"
+  }
+]
