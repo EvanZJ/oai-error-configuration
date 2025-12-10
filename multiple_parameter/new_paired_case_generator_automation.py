@@ -15,7 +15,8 @@ baseline_conf_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/baselin
 baseline_conf_json_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf_json/"
 delta_maker_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/cases_delta_maker.md"
 
-failed_cases = []   
+failed_cases = []
+existing_cases_pool = []  # Pool of existing case signatures
 
 # Mouse mover to prevent screen sleep
 stop_mouse_mover = False
@@ -107,6 +108,182 @@ def get_existing_case_folders():
     except Exception as e:
         print(f"Error getting existing folders: {e}")
         return []
+
+def extract_case_signature(case_data):
+    """
+    Extract signature from a case: (cu_key, cu_value, du_key, du_value)
+    Returns a tuple that uniquely identifies the case modifications.
+    
+    Expected JSON structure:
+    {
+        "cu": {
+            "modified_key": "...",
+            "error_value": "..."
+        },
+        "du": {
+            "modified_key": "...",
+            "error_value": "..."
+        }
+    }
+    """
+    try:
+        # Extract CU information
+        cu_data = case_data.get('cu', {})
+        cu_key = cu_data.get('modified_key', '')
+        cu_value = cu_data.get('error_value', '')
+        
+        # Extract DU information
+        du_data = case_data.get('du', {})
+        du_key = du_data.get('modified_key', '')
+        du_value = du_data.get('error_value', '')
+        
+        # Convert values to strings for consistent comparison
+        cu_value_str = json.dumps(cu_value) if not isinstance(cu_value, str) else cu_value
+        du_value_str = json.dumps(du_value) if not isinstance(du_value, str) else du_value
+        
+        # Validate that we have all required fields
+        if not cu_key or not du_key:
+            print(f"  ⚠️  Warning: Missing required keys (cu_key: {bool(cu_key)}, du_key: {bool(du_key)})")
+            return None
+        
+        return (cu_key, cu_value_str, du_key, du_value_str)
+    except Exception as e:
+        print(f"⚠️  Error extracting signature: {e}")
+        return None
+
+def pool_existing_cases():
+    """
+    Pool all existing cases from all case folders.
+    Returns a set of case signatures (tuples) for duplicate detection.
+    """
+    global existing_cases_pool
+    existing_cases_pool = []
+    
+    print("\n" + "=" * 80)
+    print("🔍 POOLING PHASE: Collecting existing cases")
+    print("=" * 80)
+    
+    folders = get_existing_case_folders()
+    
+    if not folders:
+        print("📭 No existing case folders found. Starting fresh.")
+        return set()
+    
+    print(f"📂 Found {len(folders)} existing case folders")
+    
+    signatures = set()
+    total_cases = 0
+    
+    for folder in folders:
+        folder_path = os.path.join(base_output_path, folder)
+        delta_file = os.path.join(folder_path, "cases_delta.json")
+        
+        if not os.path.exists(delta_file):
+            print(f"  ⚠️  {folder}: No cases_delta.json found")
+            continue
+        
+        try:
+            with open(delta_file, 'r') as f:
+                delta_data = json.load(f)
+            
+            if not isinstance(delta_data, list):
+                print(f"  ⚠️  {folder}: Invalid delta data format")
+                continue
+            
+            folder_cases = 0
+            for case in delta_data:
+                signature = extract_case_signature(case)
+                if signature:
+                    signatures.add(signature)
+                    existing_cases_pool.append({
+                        'folder': folder,
+                        'signature': signature,
+                        'case': case
+                    })
+                    folder_cases += 1
+            
+            total_cases += folder_cases
+            print(f"  ✅ {folder}: Collected {folder_cases} case(s)")
+            
+        except json.JSONDecodeError:
+            print(f"  ❌ {folder}: Failed to parse cases_delta.json")
+        except Exception as e:
+            print(f"  ❌ {folder}: Error reading file - {e}")
+    
+    print(f"\n📊 Pooling Summary:")
+    print(f"  Total unique cases collected: {len(signatures)}")
+    print(f"  From {len(folders)} folder(s)")
+    print("=" * 80)
+    
+    return signatures
+
+def is_duplicate_case(new_case_data, existing_signatures):
+    """
+    Check if the new case is a duplicate of any existing case.
+    Returns True if duplicate, False if unique.
+    """
+    new_signature = extract_case_signature(new_case_data)
+    
+    if new_signature is None:
+        print("  ⚠️  Could not extract signature from new case")
+        return False
+    
+    if new_signature in existing_signatures:
+        print(f"  ⚠️  DUPLICATE DETECTED!")
+        print(f"     CU: {new_signature[0]} = {new_signature[1][:50]}...")
+        print(f"     DU: {new_signature[2]} = {new_signature[3][:50]}...")
+        return True
+    
+    return False
+
+def verify_generated_cases(folder_path, existing_signatures):
+    """
+    Verify that generated cases in cases_delta.json are not duplicates.
+    Returns (is_valid, cases_data) tuple.
+    """
+    delta_file = os.path.join(folder_path, "cases_delta.json")
+    
+    if not os.path.exists(delta_file):
+        print("  ❌ cases_delta.json not found")
+        return False, None
+    
+    try:
+        with open(delta_file, 'r') as f:
+            cases_data = json.load(f)
+        
+        if not isinstance(cases_data, list) or len(cases_data) == 0:
+            print("  ❌ No valid cases in cases_delta.json")
+            return False, None
+        
+        print(f"  📋 Checking {len(cases_data)} generated case(s) for duplicates...")
+        
+        for idx, case in enumerate(cases_data, 1):
+            print(f"  🔍 Checking case {idx}/{len(cases_data)}...")
+            
+            # Verify case has required structure
+            if 'cu' not in case or 'du' not in case:
+                print(f"  ❌ Case {idx} missing 'cu' or 'du' structure")
+                return False, cases_data
+            
+            if is_duplicate_case(case, existing_signatures):
+                print(f"  ❌ Case {idx} is a DUPLICATE")
+                return False, cases_data
+            else:
+                sig = extract_case_signature(case)
+                if sig:
+                    print(f"  ✅ Case {idx} is UNIQUE")
+                    print(f"     CU: {sig[0]} = {str(sig[1])[:50]}...")
+                    print(f"     DU: {sig[2]} = {str(sig[3])[:50]}...")
+        
+        print(f"  ✅ All {len(cases_data)} case(s) are unique!")
+        return True, cases_data
+        
+    except json.JSONDecodeError:
+        print("  ❌ Failed to parse cases_delta.json")
+        return False, None
+    except Exception as e:
+        print(f"  ❌ Error verifying cases: {e}")
+        return False, None
 
 def get_next_case_number():
     """Determine the next case number based on existing folders"""
@@ -229,7 +406,7 @@ def wait_for_cases_delta(folder_path, max_timeout=300, check_interval=10, stabil
                     if isinstance(delta_data, list) and len(delta_data) > 0:
                         print(f"  ✓ cases_delta.json found with {len(delta_data)} entries ({file_size} bytes)")
                         
-                        # Verify it has both cu and du entries
+                        # Verify it has both cu and du entries in the new format
                         has_cu = any('cu' in case for case in delta_data)
                         has_du = any('du' in case for case in delta_data)
                         
@@ -265,8 +442,8 @@ def wait_for_cases_delta(folder_path, max_timeout=300, check_interval=10, stabil
     print(f"⏰ Timeout after {max_timeout} seconds")
     return False
 
-def generate_delta_case(case_num, max_wait_time, check_interval, stabilization_wait, baseline_files):
-    """Generate only cases_delta.json directly from baseline configs"""
+def generate_delta_case(case_num, max_wait_time, check_interval, stabilization_wait, baseline_files, existing_signatures, max_retries=3):
+    """Generate cases_delta.json with duplicate detection and retry logic"""
     print("\n" + "=" * 80)
     print(f"📝 Generating Delta Case Set #{case_num}")
     print("=" * 80)
@@ -276,17 +453,22 @@ def generate_delta_case(case_num, max_wait_time, check_interval, stabilization_w
     folder_name = os.path.basename(folder_path)
     print(f"📂 Created folder: {folder_name}")
     
-    # Generate cases_delta.json directly
-    print(f"\n{'─' * 80}")
-    print(f"🔧 Generating cases_delta.json")
-    print(f"{'─' * 80}")
+    retry_count = 0
     
-    delta_prompt_template = load_prompt_template()
-    if delta_prompt_template is None:
-        return False
-    
-    # Build comprehensive prompt with all baseline configs embedded
-    delta_prompt = f"""I want you to create a cases_delta.json file based on the baseline configurations provided below.
+    while retry_count < max_retries:
+        if retry_count > 0:
+            print(f"\n🔄 RETRY #{retry_count}/{max_retries}")
+        
+        print(f"\n{'─' * 80}")
+        print(f"🔧 Generating cases_delta.json (Attempt {retry_count + 1})")
+        print(f"{'─' * 80}")
+        
+        delta_prompt_template = load_prompt_template()
+        if delta_prompt_template is None:
+            return False
+        
+        # Build comprehensive prompt with all baseline configs embedded
+        delta_prompt = f"""I want you to create a cases_delta.json file based on the baseline configurations provided below.
 
 The file should contain test cases with single-key errors for both CU and DU configurations.
 
@@ -315,40 +497,102 @@ The file should contain test cases with single-key errors for both CU and DU con
 
 IMPORTANT: Save the file as 'cases_delta.json' in the folder '{folder_path}'
 
-Generate exactly 1 test case, each with both CU and DU modifications as shown in the example format.
+The JSON structure MUST follow this format:
+[
+  {{
+    "filename": "case_01.json",
+    "cu": {{
+        "modified_key": "...",
+        "original_value": "...",
+        "error_value": "...",
+        "error_type": "...",
+        "explanation_en": "..."
+    }},
+    "du": {{
+        "modified_key": "...",
+        "original_value": "...",
+        "error_value": "...",
+        "error_type": "...",
+        "explanation_en": "...",
+        "explanation_zh": "..."
+    }}
+  }}
+]
+
+Generate exactly 1 test case with both CU and DU modifications as shown in the example format.
+Make sure to create UNIQUE test cases that are different from any previously generated cases.
+Use different parameters and error values to ensure uniqueness.
 """
+        
+        if not send_prompt_to_copilot(delta_prompt):
+            record_failure(case_num, "DELTA", "send_prompt_to_copilot")
+            print(f"❌ Failed to send delta prompt")
+            return False
+        
+        if not wait_for_cases_delta(folder_path, max_wait_time, check_interval, stabilization_wait):
+            record_failure(case_num, "DELTA", "file_not_generated")
+            print(f"❌ cases_delta.json generation failed")
+            return False
+        
+        # Verify for duplicates
+        print(f"\n🔍 Verifying generated cases for duplicates...")
+        is_valid, cases_data = verify_generated_cases(folder_path, existing_signatures)
+        
+        if is_valid:
+            # Add new cases to existing signatures pool
+            for case in cases_data:
+                sig = extract_case_signature(case)
+                if sig:
+                    existing_signatures.add(sig)
+                    existing_cases_pool.append({
+                        'folder': folder_name,
+                        'signature': sig,
+                        'case': case
+                    })
+            
+            print(f"\n{'═' * 80}")
+            print(f"✅ Delta Case Set #{case_num} COMPLETED!")
+            print(f"📁 Location: {folder_path}")
+            print(f"📄 File: cases_delta.json")
+            print(f"🎯 All cases are UNIQUE and validated!")
+            print(f"{'═' * 80}")
+            return True
+        else:
+            retry_count += 1
+            if retry_count < max_retries:
+                print(f"\n⚠️  DUPLICATE or INVALID DETECTED! Regenerating cases...")
+                print(f"🗑️  Removing old cases_delta.json")
+                
+                # Remove the duplicate file
+                delta_file = os.path.join(folder_path, "cases_delta.json")
+                if os.path.exists(delta_file):
+                    os.remove(delta_file)
+                
+                print(f"⏸️  Waiting 5 seconds before retry...")
+                time.sleep(5)
+            else:
+                print(f"\n❌ Max retries ({max_retries}) reached. Could not generate unique cases.")
+                record_failure(case_num, "DELTA", "max_retries_duplicates")
+                return False
     
-    if not send_prompt_to_copilot(delta_prompt):
-        record_failure(case_num, "DELTA", "send_prompt_to_copilot")
-        print(f"❌ Failed to send delta prompt")
-        return False
-    
-    if not wait_for_cases_delta(folder_path, max_wait_time, check_interval, stabilization_wait):
-        record_failure(case_num, "DELTA", "file_not_generated")
-        print(f"❌ cases_delta.json generation failed")
-        return False
-    
-    print(f"\n{'═' * 80}")
-    print(f"✅ Delta Case Set #{case_num} COMPLETED!")
-    print(f"📁 Location: {folder_path}")
-    print(f"📄 File: cases_delta.json")
-    print(f"{'═' * 80}")
-    
-    return True
+    return False
 
 def generate_cases_loop(num_cases, max_wait_time, check_interval, stabilization_wait, baseline_files):
-    """Loop through generating multiple delta case sets"""
+    """Loop through generating multiple delta case sets with duplicate prevention"""
     print("\n" + "=" * 80)
-    print(f"🚀 Starting DELTA-ONLY Case Generation Loop")
-    print(f"📦 Will generate {num_cases} case sets (each with cases_delta.json only)")
+    print(f"🚀 Starting DELTA-ONLY Case Generation Loop with Duplicate Prevention")
+    print(f"📦 Will generate {num_cases} UNIQUE case sets")
     print(f"⚡ Check interval: {check_interval}s, stabilization wait: {stabilization_wait}s")
     print("=" * 80)
     
     # Create base output directory if it doesn't exist
     os.makedirs(base_output_path, exist_ok=True)
     
+    # POOLING PHASE: Collect all existing cases
+    existing_signatures = pool_existing_cases()
+    
     start_case_num = get_next_case_number()
-    print(f"📊 Starting from case number: {start_case_num}")
+    print(f"\n📊 Starting from case number: {start_case_num}")
     
     success_count = 0
     failed_count = 0
@@ -357,9 +601,9 @@ def generate_cases_loop(num_cases, max_wait_time, check_interval, stabilization_
         case_num = start_case_num + i
         
         try:
-            if generate_delta_case(case_num, max_wait_time, check_interval, stabilization_wait, baseline_files):
+            if generate_delta_case(case_num, max_wait_time, check_interval, stabilization_wait, baseline_files, existing_signatures):
                 success_count += 1
-                print(f"✅ Progress: {success_count}/{num_cases} case sets completed")
+                print(f"✅ Progress: {success_count}/{num_cases} UNIQUE case sets completed")
             else:
                 failed_count += 1
                 print(f"❌ Progress: {success_count}/{num_cases} case sets completed, {failed_count} failed")
@@ -397,10 +641,10 @@ def record_failure(case_num, step, reason=""):
 def main():
     """Main automation function"""
     parser = argparse.ArgumentParser(
-        description='5G gNodeB Delta-Only Test Case Generator (generates cases_delta.json only)'
+        description='5G gNodeB Delta-Only Test Case Generator with Duplicate Prevention'
     )
     parser.add_argument('--num-cases', type=int, required=True,
-                        help='Number of case sets to generate (each contains cases_delta.json)')
+                        help='Number of UNIQUE case sets to generate')
     parser.add_argument('--max-wait', type=int, default=300,
                         help='Maximum wait time in seconds for each file (default: 300)')
     parser.add_argument('--check-interval', type=int, default=10,
@@ -414,16 +658,17 @@ def main():
         print("❌ Please specify a positive number of cases with --num-cases")
         return
     
-    print("🚀 Starting 5G Delta-Only Test Case Generator Automation")
+    print("🚀 Starting 5G Delta-Only Test Case Generator with Duplicate Prevention")
     print("=" * 80)
     print(f"Configuration:")
-    print(f"  Case sets to generate: {args.num_cases}")
+    print(f"  Unique case sets to generate: {args.num_cases}")
     print(f"  Files per set: cases_delta.json (only)")
     print(f"  Max wait per file: {args.max_wait} seconds")
     print(f"  Check interval: {args.check_interval} seconds")
-    print(f"  Stabilization wait: {args.stabilization_wait} seconds (after file detected)")
+    print(f"  Stabilization wait: {args.stabilization_wait} seconds")
+    print(f"  Max retries per case: 3")
     print(f"  Output directory: {base_output_path}")
-    print(f"  ⚡ Mode: Check every {args.check_interval}s, wait {args.stabilization_wait}s after detection!")
+    print(f"  🔒 Mode: Duplicate Prevention ENABLED!")
     print("=" * 80)
     
     # Load baseline files once at the start
@@ -470,9 +715,10 @@ def main():
         print(f"Case Sets Generated:")
         print(f"  ✅ Success: {success_count}/{args.num_cases}")
         print(f"  ❌ Failed: {failed_count}/{args.num_cases}")
+        print(f"  🔒 Total unique cases in pool: {len(existing_cases_pool)}")
         print(f"\n📁 Output location: {base_output_path}")
         print(f"\nEach case set contains:")
-        print(f"  - cases_delta.json (delta summary with CU and DU modifications)")
+        print(f"  - cases_delta.json (unique delta summary with CU and DU modifications)")
         print("\n🏁 Automation completed")
         
         if failed_cases:
@@ -488,7 +734,7 @@ def main():
                 json.dump(failed_cases, rf, indent=2)
             print(f"\nReport written to: {report_path}")
         else:
-            print("\nNo failures recorded.")
+            print("\n✅ No failures recorded. All cases generated successfully!")
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.pdcp_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting pdcp_log_level to an invalid enum value 'invalid' will cause log configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting hw_log_level to an invalid enum value 'invalid' will cause log configuration parsing failure.",
+      "explanation_zh": "將 hw_log_level 設定為無效的枚舉值 'invalid' 會導致日誌配置解析失敗。"
+    }
+  }
+]
