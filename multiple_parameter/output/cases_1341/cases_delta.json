@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1341.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].dmrs_TypeA_Position",
+      "original_value": 0,
+      "error_value": 2,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DMRS type A position to an invalid value '2' will cause a configuration error in the physical layer setup, leading to failure in downlink signal transmission.",
+      "explanation_zh": "將 DMRS 類型 A 位置設定為無效值 '2' 會在物理層設定中導致配置錯誤，從而導致下行鏈路信號傳輸失敗。"
+    }
+  }
+]

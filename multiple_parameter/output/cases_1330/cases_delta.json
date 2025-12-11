@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting mcc to 0 is invalid as MCC must be a 3-digit number from 001 to 999, causing PLMN configuration failure and gNB CU startup error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting mcc to 0 is invalid as MCC must be a 3-digit number from 001 to 999, causing PLMN configuration failure and gNB DU startup error.",
+      "explanation_zh": "將 mcc 設定為 0 無效，因為 MCC 必須是從 001 到 999 的 3 位數字，會導致 PLMN 配置失敗並阻止 gNB DU 啟動。"
+    }
+  }
+]

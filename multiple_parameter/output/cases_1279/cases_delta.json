@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1279.json",
+    "cu": {
+        "modified_key": "Asn1_verbosity",
+        "original_value": "none",
+        "error_value": "invalid",
+        "error_type": "invalid_enum",
+        "explanation_en": "Setting ASN.1 verbosity to an invalid value will cause parsing errors during configuration loading and prevent proper initialization."
+    },
+    "du": {
+        "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+        "original_value": 2,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting PDSCH antenna ports XP to zero will invalidate the antenna configuration and prevent proper downlink transmission setup.",
+        "explanation_zh": "將 PDSCH 天線端口 XP 設定為零會使天線配置無效，並阻止正確的下行鏈路傳輸設定。"
+    }
+  }
+]

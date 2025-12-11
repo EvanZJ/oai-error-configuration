@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to an invalid enum value 'invalid_level' will cause logging configuration failure and prevent proper log output."
+    },
+    "du": {
+      "modified_key": "RUs[0].max_rxgain",
+      "original_value": 114,
+      "error_value": 200,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting max_rxgain to 200, which exceeds the valid range for receiver gain, will cause invalid radio unit configuration and signal reception issues.",
+      "explanation_zh": "將 max_rxgain 設定為 200，超出接收器增益的有效範圍，會導致無效的無線單元配置，並造成訊號接收問題。"
+    }
+  }
+]

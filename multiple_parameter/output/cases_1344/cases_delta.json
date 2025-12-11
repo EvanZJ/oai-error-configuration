@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Active_gNBs[0]",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "invalid_gNB",
+      "error_type": "invalid_string",
+      "explanation_en": "Setting the active gNB name to an invalid string will cause configuration parsing failure and prevent the CU from starting properly."
+    },
+    "du": {
+      "modified_key": "Active_gNBs[0]",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "invalid_gNB",
+      "error_type": "invalid_string",
+      "explanation_en": "Setting the active gNB name to an invalid string will cause configuration parsing failure and prevent the DU from starting properly.",
+      "explanation_zh": "將活躍 gNB 名稱設定為無效字串會導致配置解析失敗，並阻止 DU 正確啟動。"
+    }
+  }
+]

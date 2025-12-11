@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical log level to an invalid value 'invalid' will cause logging configuration errors and prevent proper physical layer log output."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_SRS",
+      "original_value": 0,
+      "error_value": 3,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the do SRS to an out-of-range value of 3 will cause SRS configuration errors and prevent proper sounding reference signal transmission.",
+      "explanation_zh": "將 do SRS 設定為超出範圍的值 3，會導致 SRS 配置錯誤，並阻止正確的聲音參考信號傳輸。"
+    }
+  }
+]

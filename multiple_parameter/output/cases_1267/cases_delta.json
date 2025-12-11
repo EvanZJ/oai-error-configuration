@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting maxMIMO_layers to an out-of-range value of 10 will cause configuration validation failure as the maximum supported MIMO layers is typically 8 or less.",
+      "explanation_zh": "將 maxMIMO_layers 設定為超出範圍的值 10 會導致配置驗證失敗，因為最大支援的 MIMO 層通常為 8 或更少。"
+    }
+  }
+]

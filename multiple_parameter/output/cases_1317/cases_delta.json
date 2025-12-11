@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an unknown enum 'invalid_level' will cause the logging system to fail initialization, leading to startup errors or default behavior that may mask important log messages."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an unknown enum 'invalid_level' will cause the logging system to fail initialization, leading to startup errors or default behavior that may mask important log messages.",
+      "explanation_zh": "將全域日誌級別設定為未知的枚舉值 'invalid_level' 會導致日誌系統初始化失敗，造成啟動錯誤或預設行為，可能掩蓋重要日誌訊息。"
+    }
+  }
+]

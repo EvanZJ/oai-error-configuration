@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.pdcp_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the PDCP log level to an invalid value 'invalid' will cause logging configuration errors and prevent proper PDCP layer log output."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_N1",
+      "original_value": 2,
+      "error_value": 8,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PDSCH antenna ports N1 to an out-of-range value of 8 will cause antenna configuration errors and prevent downlink transmission.",
+      "explanation_zh": "將 PDSCH 天線埠 N1 設定為超出範圍的值 8，會導致天線配置錯誤，並阻止下行鏈路傳輸。"
+    }
+  }
+]

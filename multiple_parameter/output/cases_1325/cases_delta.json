@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_negative",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause thread initialization failure during gNB startup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_zero",
+      "explanation_en": "Setting pdsch_AntennaPorts_XP to zero will cause antenna port configuration error and prevent proper PDSCH transmission.",
+      "explanation_zh": "將 pdsch_AntennaPorts_XP 設定為零會導致天線端口配置錯誤，並阻止正確的 PDSCH 傳輸。"
+    }
+  }
+]

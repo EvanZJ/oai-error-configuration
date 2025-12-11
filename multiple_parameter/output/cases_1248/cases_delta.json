@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea5",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea5' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].ul_carrierBandwidth",
+      "original_value": 106,
+      "error_value": 200,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the uplink carrier bandwidth to an out-of-range value of 200 will cause configuration validation failure and prevent proper cell setup.",
+      "explanation_zh": "將上行載波頻寬設定為超出範圍的值 200，會導致配置驗證失敗，並阻止正確的細胞設置。"
+    }
+  }
+]

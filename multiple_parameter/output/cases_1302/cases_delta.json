@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an invalid enum 'invalid' will cause ASN.1 parsing errors."
+    },
+    "du": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "annoying",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an invalid enum 'invalid' will cause ASN.1 parsing errors.",
+      "explanation_zh": "將 Asn1_verbosity 設定為無效的枚舉值 'invalid' 會導致 ASN.1 解析錯誤。"
+    }
+  }
+]

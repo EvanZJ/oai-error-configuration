@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_02.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value -1 will cause thread allocation failure and prevent the CU from starting."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": -1,
+      "error_type": "invalid_port",
+      "explanation_en": "Setting local_n_portc to an invalid negative port number -1 will cause socket binding failure and prevent the DU from establishing F1 connection.",
+      "explanation_zh": "將 local_n_portc 設定為無效的負端口號 -1 會導致套接字綁定失敗，並阻止 DU 建立 F1 連接。"
+    }
+  }
+]

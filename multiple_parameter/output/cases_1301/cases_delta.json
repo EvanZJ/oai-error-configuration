@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "invalid_ip",
+      "error_type": "invalid_ip",
+      "explanation_en": "Setting local_s_address to an invalid IP address will cause network configuration errors and connection failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "invalid_ip",
+      "error_type": "invalid_ip",
+      "explanation_en": "Setting local_s_address to an invalid IP address will cause network configuration errors and connection failures.",
+      "explanation_zh": "將 local_s_address 設定為無效的 IP 地址會導致網路配置錯誤和連接失敗。"
+    }
+  }
+]

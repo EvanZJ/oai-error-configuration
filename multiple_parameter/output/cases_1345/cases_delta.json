@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "negative_value",
+      "explanation_en": "Setting nr_cellid to a negative value will cause an invalid configuration as the cell ID must be a non-negative integer."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "negative_value",
+      "explanation_en": "Setting nr_cellid to a negative value will cause an invalid configuration as the cell ID must be a non-negative integer.",
+      "explanation_zh": "將 nr_cellid 設定為負值會導致無效配置，因為細胞 ID 必須為非負整數。"
+    }
+  }
+]

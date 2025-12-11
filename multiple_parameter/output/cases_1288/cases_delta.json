@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid value 'invalid' will cause configuration parsing errors and prevent proper security setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting do_CSIRS to 2 exceeds the valid range (0 or 1) and may cause channel state information reference signal configuration errors.",
+      "explanation_zh": "將 do_CSIRS 設定為 2 超過有效範圍（0 或 1），可能導致通道狀態資訊參考訊號配置錯誤。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_integrity to an invalid value will cause security configuration error."
+    },
+    "du": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_integrity to an invalid value will cause security configuration error.",
+      "explanation_zh": "將 drb_integrity 設定為無效值會導致安全配置錯誤。"
+    }
+  }
+]

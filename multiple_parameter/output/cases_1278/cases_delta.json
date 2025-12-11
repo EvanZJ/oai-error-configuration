@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1278.json",
+    "cu": {
+        "modified_key": "Num_Threads_PUSCH",
+        "original_value": 8,
+        "error_value": -1,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting the number of PUSCH threads to a negative value will cause configuration validation failure and prevent proper initialization of the CU processing threads."
+    },
+    "du": {
+        "modified_key": "gNBs[0].maxMIMO_layers",
+        "original_value": 2,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting the maximum MIMO layers to zero will cause invalid configuration for downlink transmission and result in setup failure.",
+        "explanation_zh": "將最大 MIMO 層數設定為零會導致下行鏈路傳輸的無效配置，並造成設定失敗。"
+    }
+  }
+]

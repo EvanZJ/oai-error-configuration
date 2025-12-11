@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid value 'invalid' will cause logging configuration errors and prevent proper log output."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": 16,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PUSCH antenna ports to an out-of-range value of 16 will cause antenna configuration errors and prevent uplink transmission.",
+      "explanation_zh": "將 PUSCH 天線埠設定為超出範圍的值 16，會導致天線配置錯誤，並阻止上行鏈路傳輸。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid enum value 'invalid' will cause configuration parsing failure and prevent the security module from initializing properly."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 10,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting nb_tx to 10, which exceeds the valid range for transmit antennas (typically 1-4), will cause radio unit configuration failure and prevent proper hardware initialization.",
+      "explanation_zh": "將 nb_tx 設定為 10，超出發射天線的有效範圍（通常為 1-4），會導致無線單元配置失敗，並阻止正確的硬體初始化。"
+    }
+  }
+]

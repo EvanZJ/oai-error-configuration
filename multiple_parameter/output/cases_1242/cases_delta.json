@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.rrc_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting rrc_log_level to an invalid enum value 'invalid' will cause RRC log configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_SRS",
+      "original_value": 0,
+      "error_value": 2,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting do_SRS to 2 exceeds the valid range (0 or 1) and will cause SRS configuration errors leading to sounding reference signal failures.",
+      "explanation_zh": "將 do_SRS 設定為 2 超過有效範圍（0 或 1），會導致 SRS 配置錯誤並造成聲音參考信號失敗。"
+    }
+  }
+]

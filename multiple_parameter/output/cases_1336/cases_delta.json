@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_hex",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal format will cause ID parsing errors during gNB initialization, leading to startup failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_hex",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal format will cause ID parsing errors during gNB initialization, leading to startup failure.",
+      "explanation_zh": "將 gNB ID 設定為無效的十六進位格式將導致 gNB 初始化期間的 ID 解析錯誤，導致啟動失敗。"
+    }
+  }
+]

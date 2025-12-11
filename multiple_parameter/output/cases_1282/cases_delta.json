@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1282.json",
+    "cu": {
+        "modified_key": "security.drb_integrity",
+        "original_value": "no",
+        "error_value": "invalid",
+        "error_type": "invalid_enum",
+        "explanation_en": "Setting DRB integrity to an invalid value will cause security configuration errors and prevent proper data protection."
+    },
+    "du": {
+        "modified_key": "gNBs[0].sib1_tda",
+        "original_value": 15,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting SIB1 TDA to zero will invalidate system information broadcast timing and prevent proper cell access.",
+        "explanation_zh": "將 SIB1 TDA 設定為零會使系統資訊廣播時序無效，並阻止正確的細胞接入。"
+    }
+  }
+]

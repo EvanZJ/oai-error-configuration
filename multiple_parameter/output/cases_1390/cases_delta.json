@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.rrc_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_log_level",
+      "explanation_en": "Setting the RRC log level to an invalid value 'invalid' will cause logging initialization failure and prevent proper system diagnostics."
+    },
+    "du": {
+      "modified_key": "log_config.rrc_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_log_level",
+      "explanation_en": "Setting the RRC log level to an invalid value 'invalid' will cause logging initialization failure and prevent proper system diagnostics.",
+      "explanation_zh": "將 RRC 日誌等級設定為無效值 'invalid' 會導致日誌初始化失敗，並阻止正確的系統診斷。"
+    }
+  }
+]

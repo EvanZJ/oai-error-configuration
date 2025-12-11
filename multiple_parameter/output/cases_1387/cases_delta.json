@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_03.json",
+    "cu": {
+      "modified_key": "log_config.rrc_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RRC log level to an invalid value 'invalid' will cause the RRC logging system to fail initialization and prevent proper radio resource control monitoring."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 99,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the maximum MIMO layers to an out-of-range value 99 will cause configuration validation failure and prevent proper MIMO operation setup.",
+      "explanation_zh": "將最大 MIMO 層數設定為超出範圍的值 99 會導致配置驗證失敗，並阻止正確的 MIMO 操作設置。"
+    }
+  }
+]

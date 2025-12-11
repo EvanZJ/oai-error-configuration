@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "invalid_port",
+      "explanation_en": "Setting the local SCTP port to a negative value will cause socket binding failure and prevent CU from establishing F1 connection."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": -1,
+      "error_type": "invalid_port",
+      "explanation_en": "Setting the local network port to a negative value will cause socket binding failure and prevent DU from establishing F1 connection.",
+      "explanation_zh": "將本地網路端口設定為負值會導致套接字綁定失敗，並阻止 DU 建立 F1 連接。"
+    }
+  }
+]

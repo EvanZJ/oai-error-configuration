@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Active_gNBs",
+      "original_value": ["gNB-Eurecom-CU"],
+      "error_value": ["invalid"],
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the active gNBs to an invalid list will cause gNB initialization failure."
+    },
+    "du": {
+      "modified_key": "Active_gNBs",
+      "original_value": ["gNB-Eurecom-DU"],
+      "error_value": ["invalid"],
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the active gNBs to an invalid list will cause gNB initialization failure.",
+      "explanation_zh": "將活躍 gNB 設定為無效列表將導致 gNB 初始化失敗。"
+    }
+  }
+]

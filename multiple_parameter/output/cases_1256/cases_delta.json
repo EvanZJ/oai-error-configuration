@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.mac_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the MAC log level to an invalid value 'invalid' will cause logging configuration errors and prevent proper MAC layer log output."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 3,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the do CSIRS to an out-of-range value of 3 will cause CSI-RS configuration errors and prevent proper channel state information reference signal transmission.",
+      "explanation_zh": "將 do CSIRS 設定為超出範圍的值 3，會導致 CSI-RS 配置錯誤，並阻止正確的通道狀態資訊參考信號傳輸。"
+    }
+  }
+]

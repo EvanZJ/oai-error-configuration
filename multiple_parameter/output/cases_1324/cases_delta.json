@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an invalid enum value 'invalid' will cause configuration parsing failure as it does not match any of the allowed choices: none, info, annoying."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_id",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to an invalid format 'invalid_id' will cause identifier parsing error and prevent proper gNB initialization.",
+      "explanation_zh": "將 gNB_ID 設定為無效格式 'invalid_id' 會導致識別碼解析錯誤，並阻止正確的 gNB 初始化。"
+    }
+  }
+]

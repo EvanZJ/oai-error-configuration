@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB ciphering to an invalid value 'invalid' will cause configuration parsing errors and prevent proper security setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 16,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the maximum MIMO layers to an out-of-range value of 16 will cause hardware configuration failure and prevent cell initialization.",
+      "explanation_zh": "將最大 MIMO 層數設定為超出範圍的值 16，會導致硬體配置失敗，並阻止細胞初始化。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "invalid_ip",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the AMF IP address to an invalid value 'invalid_ip' will cause network connection failures and prevent the CU from communicating with the AMF."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": "invalid",
+      "error_type": "invalid_type",
+      "explanation_en": "Setting the CSI-RS enable flag to an invalid type 'invalid' will cause configuration parsing errors and prevent proper CSI-RS signal transmission.",
+      "explanation_zh": "將 CSI-RS 啟用旗標設定為無效類型 'invalid'，會導致配置解析錯誤，並阻止正確的 CSI-RS 信號傳輸。"
+    }
+  }
+]

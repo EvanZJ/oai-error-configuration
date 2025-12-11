@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid value will cause the logging system to fail initialization and prevent the CU from starting properly."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid value will cause the logging system to fail initialization and prevent the DU from starting properly.",
+      "explanation_zh": "將全域日誌等級設定為無效值會導致日誌系統初始化失敗，並阻止 DU 正確啟動。"
+    }
+  }
+]

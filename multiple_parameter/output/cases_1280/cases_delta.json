@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1280.json",
+    "cu": {
+        "modified_key": "gNBs.gNB_ID",
+        "original_value": "0xe00",
+        "error_value": "invalid",
+        "error_type": "invalid_enum",
+        "explanation_en": "Setting the gNB ID to an invalid value will cause configuration validation errors and prevent proper gNB identification and setup."
+    },
+    "du": {
+        "modified_key": "gNBs[0].pusch_AntennaPorts",
+        "original_value": 4,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting PUSCH antenna ports to zero will invalidate the uplink antenna configuration and prevent proper uplink transmission setup.",
+        "explanation_zh": "將 PUSCH 天線端口設定為零會使上行鏈路天線配置無效，並阻止正確的上行鏈路傳輸設定。"
+    }
+  }
+]

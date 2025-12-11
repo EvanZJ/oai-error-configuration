@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting hw_log_level to an invalid enum value 'invalid' will cause hardware log configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": 16,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting pusch_AntennaPorts to 16 exceeds the valid range (typically 1-8) and will cause antenna port configuration errors leading to uplink transmission failures.",
+      "explanation_zh": "將 pusch_AntennaPorts 設定為 16 超過有效範圍（通常為 1-8），會導致天線埠配置錯誤並造成上行鏈路傳輸失敗。"
+    }
+  }
+]

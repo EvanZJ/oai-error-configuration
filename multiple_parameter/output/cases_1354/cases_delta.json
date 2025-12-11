@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Active_gNBs[0]",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "invalid-gNB",
+      "error_type": "invalid_name",
+      "explanation_en": "Setting Active_gNBs to an invalid gNB name 'invalid-gNB' will cause configuration mismatch and CU startup failure."
+    },
+    "du": {
+      "modified_key": "Active_gNBs[0]",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "invalid-gNB",
+      "error_type": "invalid_name",
+      "explanation_en": "Setting Active_gNBs to an invalid gNB name 'invalid-gNB' will cause configuration mismatch and DU startup failure.",
+      "explanation_zh": "將 Active_gNBs 設定為無效的 gNB 名稱 'invalid-gNB' 會導致配置不匹配並造成 DU 啟動失敗。"
+    }
+  }
+]

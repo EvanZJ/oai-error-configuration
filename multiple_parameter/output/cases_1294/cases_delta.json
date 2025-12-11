@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting maxMIMO_layers to 0 will cause MIMO configuration failure and prevent proper signal processing.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 0 會導致 MIMO 配置失敗，並阻止正確的信號處理。"
+    }
+  }
+]

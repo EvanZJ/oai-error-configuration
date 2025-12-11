@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to 0 is invalid as NR cell IDs must be positive non-zero values, causing cell identification failure and gNB CU startup error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to 0 is invalid as NR cell IDs must be positive non-zero values, causing cell identification failure and gNB DU startup error.",
+      "explanation_zh": "將 nr_cellid 設定為 0 無效，因為 NR 細胞 ID 必須是正的非零值，會導致細胞識別失敗並阻止 gNB DU 啟動。"
+    }
+  }
+]

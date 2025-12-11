@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ASN.1 verbosity to an unknown enum 'invalid' will cause configuration parsing errors and system startup failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting max MIMO layers to an invalid high value of 100 will cause hardware configuration failure and radio unit initialization errors.",
+      "explanation_zh": "將最大 MIMO 層數設定為無效的高值 100，會導致硬體配置失敗，並造成無線單元初始化錯誤。"
+    }
+  }
+]

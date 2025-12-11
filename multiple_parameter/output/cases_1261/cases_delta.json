@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical layer log level to an unknown enum 'invalid' will cause logging configuration failure and prevent proper physical layer log initialization."
+    },
+    "du": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical layer log level to an unknown enum 'invalid' will cause logging configuration failure and prevent proper physical layer log initialization.",
+      "explanation_zh": "將物理層日誌等級設定為未知的枚舉值 'invalid' 會導致日誌配置失敗，並阻止正確的物理層日誌初始化。"
+    }
+  }
+]

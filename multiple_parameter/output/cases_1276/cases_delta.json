@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting SCTP_INSTREAMS to 0 will cause invalid SCTP stream configuration and prevent proper F1 interface communication."
+    },
+    "du": {
+      "modified_key": "RUs[0].att_tx",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting att_tx to a negative value (-1) will cause invalid transmit attenuation configuration and signal transmission issues.",
+      "explanation_zh": "將 att_tx 設定為負值 (-1) 會導致無效的發射衰減配置，並造成訊號傳輸問題。"
+    }
+  }
+]

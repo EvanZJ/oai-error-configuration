@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.rlc_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting rlc_log_level to an invalid enum value 'invalid' will cause RLC log configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_N1",
+      "original_value": 2,
+      "error_value": 8,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting pdsch_AntennaPorts_N1 to 8 exceeds the valid range (typically 1-4) and will cause PDSCH antenna port N1 configuration errors leading to downlink transmission failures.",
+      "explanation_zh": "將 pdsch_AntennaPorts_N1 設定為 8 超過有效範圍（通常為 1-4），會導致 PDSCH 天線埠 N1 配置錯誤並造成下行鏈路傳輸失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": "invalid",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the tracking_area_code to an invalid value 'invalid' will cause tracking area configuration failure and prevent proper cell identification."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": "invalid",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the tracking_area_code to an invalid value 'invalid' will cause tracking area configuration failure and prevent proper cell identification.",
+      "explanation_zh": "將 tracking_area_code 設定為無效值 'invalid'，會導致追蹤區域配置失敗，並阻止正確的細胞識別。"
+    }
+  }
+]

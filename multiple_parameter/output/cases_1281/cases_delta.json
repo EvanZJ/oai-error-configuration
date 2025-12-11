@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1281.json",
+    "cu": {
+        "modified_key": "gNBs.amf_ip_address.ipv4",
+        "original_value": "192.168.70.132",
+        "error_value": "invalid_ip",
+        "error_type": "invalid_enum",
+        "explanation_en": "Setting the AMF IP address to an invalid value will cause network connectivity issues and prevent proper AMF communication."
+    },
+    "du": {
+        "modified_key": "gNBs[0].min_rxtxtime",
+        "original_value": 6,
+        "error_value": 0,
+        "error_type": "out_of_range",
+        "explanation_en": "Setting the minimum RX/TX time to zero will invalidate timing configurations and prevent proper signal processing.",
+        "explanation_zh": "將最小 RX/TX 時間設定為零會使時序配置無效，並阻止正確的信號處理。"
+    }
+  }
+]

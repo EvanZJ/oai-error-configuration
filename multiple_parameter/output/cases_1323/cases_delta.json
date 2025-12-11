@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid enum value 'maybe' will cause security configuration parsing failure and prevent proper initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting maxMIMO_layers to 10 exceeds the supported range (typically 1-8) and will cause physical layer configuration failure during startup.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 10 超過支援的範圍（通常為 1-8），會在啟動期間導致物理層配置失敗。"
+    }
+  }
+]

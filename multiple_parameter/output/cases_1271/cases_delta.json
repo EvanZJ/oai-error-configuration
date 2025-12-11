@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting tracking_area_code to 0 (a reserved value) will cause invalid TAC configuration and prevent proper network attachment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting nr_cellid to a negative value (-1) will cause invalid cell ID configuration and lead to cell identification failures.",
+      "explanation_zh": "將 nr_cellid 設定為負值 (-1) 會導致無效的細胞 ID 配置，並導致細胞識別失敗。"
+    }
+  }
+]

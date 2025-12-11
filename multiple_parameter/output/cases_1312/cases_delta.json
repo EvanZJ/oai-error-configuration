@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "eight",
+      "error_type": "type_mismatch",
+      "explanation_en": "Changing Num_Threads_PUSCH from integer to string will cause configuration parsing error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "type_mismatch",
+      "explanation_en": "Changing pdsch_AntennaPorts_XP from integer to string will cause configuration parsing error.",
+      "explanation_zh": "將 pdsch_AntennaPorts_XP 從整數改為字串會導致配置解析錯誤。"
+    }
+  }
+]

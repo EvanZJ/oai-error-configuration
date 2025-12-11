@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Num_Threads_PUSCH to 0 will cause thread allocation failure and prevent proper PUSCH processing."
+    },
+    "du": {
+      "modified_key": "L1s[0].ofdm_offset_divisor",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting ofdm_offset_divisor to 0 will cause invalid OFDM configuration and lead to synchronization issues in the physical layer.",
+      "explanation_zh": "將 ofdm_offset_divisor 設定為 0 會導致無效的 OFDM 配置，並在物理層導致同步問題。"
+    }
+  }
+]

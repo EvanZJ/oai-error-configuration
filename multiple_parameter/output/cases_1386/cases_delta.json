@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ASN.1 verbosity to an unknown enum 'invalid' will cause configuration parsing errors and prevent the CU from starting properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the CSI-RS enable flag to a negative value will cause invalid configuration and prevent proper channel state information processing.",
+      "explanation_zh": "將 CSI-RS 啟用旗標設定為負值會導致無效配置，並阻止正確的通道狀態資訊處理。"
+    }
+  }
+]

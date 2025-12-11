@@ -18,34 +18,7 @@ delta_maker_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_
 failed_cases = []
 existing_cases_pool = []  # Pool of existing case signatures
 
-# Mouse mover to prevent screen sleep
-stop_mouse_mover = False
-
-def mouse_mover():
-    global stop_mouse_mover
-    x, y = pyautogui.position()
-    while not stop_mouse_mover:
-        try:
-            pyautogui.moveTo(x + 100, y)
-            time.sleep(0.4)
-            pyautogui.moveTo(x, y)
-            time.sleep(5)
-        except Exception as e:
-            print(f"Mouse mover error: {e}")
-            time.sleep(5)
-
-def start_mouse_mover():
-    global stop_mouse_mover
-    stop_mouse_mover = False
-    mouse_thread = threading.Thread(target=mouse_mover, daemon=True)
-    mouse_thread.start()
-    print("🖱️  Mouse mover started")
-    return mouse_thread
-
-def stop_mouse_mover_thread():
-    global stop_mouse_mover
-    stop_mouse_mover = True
-    print("🖱️  Mouse mover stopped")
+# Mouse mover functionality removed - not needed
 
 # Window Management Functions
 def is_vscode_window_active():
@@ -380,6 +353,31 @@ def send_prompt_to_copilot(prompt):
         print(f"❌ Error sending prompt to Copilot: {e}")
         return False
 
+def accept_copilot_changes_and_new_chat():
+    """Accept Copilot changes with Ctrl+Enter and start new chat with Ctrl+N"""
+    try:
+        if not ensure_vscode_active():
+            print("❌ Could not activate VS Code")
+            return False
+        
+        time.sleep(1)
+        
+        # Accept the changes with Ctrl+Enter
+        print("✅ Accepting Copilot changes (Ctrl+Enter)...")
+        pyautogui.hotkey('ctrl', 'enter')
+        time.sleep(2)
+        
+        # Start a new chat with Ctrl+N
+        print("🆕 Starting new Copilot chat (Ctrl+N)...")
+        pyautogui.hotkey('ctrl', 'n')
+        time.sleep(2)
+        
+        print("✅ Copilot changes accepted and new chat started")
+        return True
+    except Exception as e:
+        print(f"❌ Error accepting changes and starting new chat: {e}")
+        return False
+
 def wait_for_cases_delta(folder_path, max_timeout=300, check_interval=10, stabilization_wait=5):
     """Wait for cases_delta.json to be created and populated"""
     delta_filepath = os.path.join(folder_path, "cases_delta.json")
@@ -454,6 +452,7 @@ def generate_delta_case(case_num, max_wait_time, check_interval, stabilization_w
     print(f"📂 Created folder: {folder_name}")
     
     retry_count = 0
+    previous_attempts = []  # Store previous attempts for retry guidance
     
     while retry_count < max_retries:
         if retry_count > 0:
@@ -468,7 +467,7 @@ def generate_delta_case(case_num, max_wait_time, check_interval, stabilization_w
             return False
         
         # Build comprehensive prompt with all baseline configs embedded
-        delta_prompt = f"""I want you to create a cases_delta.json file based on the baseline configurations provided below.
+        base_prompt = f"""I want you to create a cases_delta.json file based on the baseline configurations provided below.
 
 The file should contain test cases with single-key errors for both CU and DU configurations.
 
@@ -524,6 +523,32 @@ Make sure to create UNIQUE test cases that are different from any previously gen
 Use different parameters and error values to ensure uniqueness.
 """
         
+        # Add retry-specific instructions if this is a retry attempt
+        if retry_count > 0 and previous_attempts:
+            retry_instructions = "\n\n" + "=" * 80 + "\n"
+            retry_instructions += "⚠️  IMPORTANT - RETRY ATTEMPT ⚠️\n"
+            retry_instructions += "=" * 80 + "\n\n"
+            retry_instructions += "The following key-value pairs have already been generated and are DUPLICATES.\n"
+            retry_instructions += "You MUST generate DIFFERENT modified_key and error_value pairs.\n\n"
+            retry_instructions += "PREVIOUS ATTEMPTS (DO NOT USE THESE):\n\n"
+            
+            for idx, attempt in enumerate(previous_attempts, 1):
+                retry_instructions += f"Attempt #{idx}:\n"
+                retry_instructions += f"```json\n{json.dumps(attempt, indent=2)}\n```\n\n"
+            
+            retry_instructions += "\n" + "─" * 80 + "\n"
+            retry_instructions += "INSTRUCTIONS FOR THIS RETRY:\n"
+            retry_instructions += "─" * 80 + "\n"
+            retry_instructions += "1. Choose COMPLETELY DIFFERENT configuration keys for both CU and DU\n"
+            retry_instructions += "2. Use DIFFERENT error values than the previous attempts\n"
+            retry_instructions += "3. Ensure the modified_key paths are DIFFERENT from all previous attempts\n"
+            retry_instructions += "4. Generate creative and unique test scenarios\n"
+            retry_instructions += "\nGenerate a fresh, unique case now!\n"
+            
+            delta_prompt = base_prompt + retry_instructions
+        else:
+            delta_prompt = base_prompt
+        
         if not send_prompt_to_copilot(delta_prompt):
             record_failure(case_num, "DELTA", "send_prompt_to_copilot")
             print(f"❌ Failed to send delta prompt")
@@ -550,17 +575,31 @@ Use different parameters and error values to ensure uniqueness.
                         'case': case
                     })
             
+            # Accept Copilot changes and start new chat
+            print(f"\n{'─' * 80}")
+            print("📝 Finalizing Copilot interaction...")
+            print(f"{'─' * 80}")
+            if not accept_copilot_changes_and_new_chat():
+                print("⚠️  Warning: Could not accept changes or start new chat, but case is valid")
+            
             print(f"\n{'═' * 80}")
             print(f"✅ Delta Case Set #{case_num} COMPLETED!")
             print(f"📁 Location: {folder_path}")
             print(f"📄 File: cases_delta.json")
             print(f"🎯 All cases are UNIQUE and validated!")
+            if retry_count > 0:
+                print(f"🔄 Succeeded after {retry_count} retry/retries")
             print(f"{'═' * 80}")
             return True
         else:
+            # Store this attempt for next retry
+            if cases_data:
+                previous_attempts.append(cases_data)
+                print(f"\n📝 Storing attempt #{retry_count + 1} for retry guidance...")
+            
             retry_count += 1
             if retry_count < max_retries:
-                print(f"\n⚠️  DUPLICATE or INVALID DETECTED! Regenerating cases...")
+                print(f"\n⚠️  DUPLICATE DETECTED! Regenerating cases with guidance from previous attempts...")
                 print(f"🗑️  Removing old cases_delta.json")
                 
                 # Remove the duplicate file
@@ -684,9 +723,6 @@ def main():
         print("❌ Could not find VS Code window. Please open VS Code.")
         return
     
-    # Start mouse mover
-    mouse_thread = start_mouse_mover()
-    
     success_count = 0
     failed_count = 0
     
@@ -706,8 +742,6 @@ def main():
         import traceback
         traceback.print_exc()
     finally:
-        stop_mouse_mover_thread()
-        
         # Print summary
         print("\n" + "=" * 80)
         print("📊 AUTOMATION SUMMARY")

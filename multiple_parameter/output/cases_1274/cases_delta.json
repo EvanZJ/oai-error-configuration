@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "NETWORK_INTERFACES.GNB_IPV4_ADDRESS_FOR_NG_AMF",
+      "original_value": "192.168.8.43",
+      "error_value": "invalid_ip",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting GNB_IPV4_ADDRESS_FOR_NG_AMF to an invalid IP address format 'invalid_ip' will cause network interface configuration failure and prevent AMF communication."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting local_n_portc to 0, which is an invalid port number, will cause SCTP connection establishment failure between MAC and RLC layers.",
+      "explanation_zh": "將 local_n_portc 設定為 0，這是一個無效的連接埠號碼，會導致 MAC 和 RLC 層之間的 SCTP 連接建立失敗。"
+    }
+  }
+]

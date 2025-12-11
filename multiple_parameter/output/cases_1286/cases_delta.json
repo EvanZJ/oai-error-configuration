@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid enum value 'invalid' will cause configuration validation errors during startup, preventing the CU from initializing properly."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to an invalid enum value 'invalid' will cause logging configuration errors, potentially leading to application startup failures or undefined logging behavior.",
+      "explanation_zh": "將 global_log_level 設定為無效的枚舉值 'invalid' 會導致日誌配置錯誤，可能造成應用程式啟動失敗或未定義的日誌行為。"
+    }
+  }
+]

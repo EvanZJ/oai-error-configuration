@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value -1 will cause thread allocation errors in the CU, leading to initialization failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting maxMIMO_layers to a negative value -1 will cause MIMO configuration errors in the DU, leading to physical layer setup failure.",
+      "explanation_zh": "將 maxMIMO_layers 設定為負值 -1 會導致 DU 中的 MIMO 配置錯誤，導致物理層設置失敗。"
+    }
+  }
+]

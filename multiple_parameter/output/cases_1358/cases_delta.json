@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to a negative value will cause configuration validation errors and prevent proper SCTP stream initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting SCTP_INSTREAMS to a negative value will cause configuration validation errors and prevent proper SCTP stream initialization.",
+      "explanation_zh": "將 SCTP_INSTREAMS 設定為負值會導致配置驗證錯誤，並阻止正確的 SCTP 流初始化。"
+    }
+  }
+]

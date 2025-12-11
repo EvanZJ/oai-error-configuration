@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the number of PUSCH threads to 0 will cause thread allocation failure and prevent uplink processing."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 8,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the PDSCH antenna ports XP to an out-of-range value of 8 will cause antenna configuration errors and prevent downlink transmission.",
+      "explanation_zh": "將 PDSCH 天線埠 XP 設定為超出範圍的值 8，會導致天線配置錯誤，並阻止下行鏈路傳輸。"
+    }
+  }
+]

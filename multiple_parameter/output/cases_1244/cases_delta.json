@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[1]",
+      "original_value": "nia0",
+      "error_value": "nia7",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting integrity_algorithms[1] to an invalid enum value 'nia7' will cause security negotiation failure and connection establishment issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].force_256qam_off",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting force_256qam_off to 2 exceeds the valid range (0 or 1) and will cause 256QAM modulation configuration errors leading to transmission failures.",
+      "explanation_zh": "將 force_256qam_off 設定為 2 超過有效範圍（0 或 1），會導致 256QAM 調製配置錯誤並造成傳輸失敗。"
+    }
+  }
+]

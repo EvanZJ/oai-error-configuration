@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.pdcp_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting pdcp_log_level to an invalid enum value 'invalid' will cause PDCP log configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 3,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting do_CSIRS to 3 exceeds the valid range (0 or 1) and will cause CSI-RS configuration errors leading to channel state information failures.",
+      "explanation_zh": "將 do_CSIRS 設定為 3 超過有效範圍（0 或 1），會導致 CSI-RS 配置錯誤並造成通道狀態資訊失敗。"
+    }
+  }
+]

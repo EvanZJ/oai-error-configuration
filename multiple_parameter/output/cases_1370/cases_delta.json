@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and connection establishment rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "invalid_name",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_name to an invalid string 'invalid_name' will cause configuration validation failure and prevent proper gNB naming.",
+      "explanation_zh": "將 gNB_name 設定為無效的字串 'invalid_name' 會導致配置驗證失敗，並阻止正確的 gNB 命名。"
+    }
+  }
+]

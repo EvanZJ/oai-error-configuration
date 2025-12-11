@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting hw_log_level to an invalid enum value 'invalid' will cause hardware logging configuration failure and prevent proper log output for hardware components."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting physCellId to a negative value (-1) will cause invalid physical cell ID configuration and lead to cell identification and synchronization issues.",
+      "explanation_zh": "將 physCellId 設定為負值 (-1) 會導致無效的物理細胞 ID 配置，並造成細胞識別和同步問題。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_02.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid_hex",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal value will cause configuration parsing errors and prevent gNB initialization.",
+      "explanation_zh": "將 gNB ID 設定為無效的十六進位值會導致配置解析錯誤，並阻止 gNB 初始化。"
+    }
+  }
+]

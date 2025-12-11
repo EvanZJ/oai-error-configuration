@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the number of PUSCH threads to 0 will cause processing failures and prevent uplink data handling."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the maximum MIMO layers to 0 will cause antenna configuration errors and prevent proper signal transmission.",
+      "explanation_zh": "將最大 MIMO 層數設定為 0 會導致天線配置錯誤，並阻止正確的信號傳輸。"
+    }
+  }
+]

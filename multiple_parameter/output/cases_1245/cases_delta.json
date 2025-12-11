@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_integrity to an invalid enum value 'maybe' will cause security configuration parsing failure and connection issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].sib1_tda",
+      "original_value": 15,
+      "error_value": 50,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting sib1_tda to 50 exceeds the valid range (typically 0-32) and will cause SIB1 timing advance configuration errors leading to broadcast failures.",
+      "explanation_zh": "將 sib1_tda 設定為 50 超過有效範圍（通常為 0-32），會導致 SIB1 定時提前配置錯誤並造成廣播失敗。"
+    }
+  }
+]

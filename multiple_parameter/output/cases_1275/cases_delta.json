@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[1]",
+      "original_value": "nia0",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the second integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting prach_dtx_threshold to a negative value (-1) will cause invalid L1 layer configuration and PRACH detection issues.",
+      "explanation_zh": "將 prach_dtx_threshold 設定為負值 (-1) 會導致無效的 L1 層配置，並造成 PRACH 檢測問題。"
+    }
+  }
+]

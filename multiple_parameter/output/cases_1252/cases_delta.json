@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[1]",
+      "original_value": "nia0",
+      "error_value": "nia4",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia4' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the physical cell ID to an out-of-range value of 1008 will cause cell identification conflicts and prevent proper cell setup.",
+      "explanation_zh": "將物理細胞 ID 設定為超出範圍的值 1008，會導致細胞識別衝突，並阻止正確的細胞設置。"
+    }
+  }
+]

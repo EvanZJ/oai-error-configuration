@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB ciphering to an invalid enum 'invalid' will cause configuration validation failure and prevent secure data transmission setup."
+    },
+    "du": {
+      "modified_key": "rfsimulator.serverport",
+      "original_value": 4043,
+      "error_value": "invalid_string",
+      "error_type": "invalid_type",
+      "explanation_en": "Setting the RF simulator server port to a string 'invalid_string' instead of an integer will cause type validation errors and simulator connection failure.",
+      "explanation_zh": "將 RF 模擬器伺服器端口設定為字串 'invalid_string' 而非整數會導致類型驗證錯誤，並造成模擬器連接失敗。"
+    }
+  }
+]

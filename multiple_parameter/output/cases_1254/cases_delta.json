@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the hardware log level to an invalid value 'invalid' will cause logging configuration errors and prevent proper hardware log output."
+    },
+    "du": {
+      "modified_key": "gNBs[0].force_256qam_off",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the force 256QAM off to an out-of-range value of 2 will cause modulation configuration errors and prevent proper signal transmission.",
+      "explanation_zh": "將強制 256QAM 關閉設定為超出範圍的值 2，會導致調製配置錯誤，並阻止正確的信號傳輸。"
+    }
+  }
+]

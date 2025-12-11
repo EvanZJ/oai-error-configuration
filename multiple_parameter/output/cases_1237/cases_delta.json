@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea5",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ciphering_algorithms[0] to an invalid enum value 'nea5' will cause security negotiation failure and connection establishment issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 16,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting maxMIMO_layers to 16 exceeds the valid range (typically 1-8) and will cause MIMO configuration errors leading to transmission failures.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 16 超過有效範圍（通常為 1-8），會導致 MIMO 配置錯誤並造成傳輸失敗。"
+    }
+  }
+]
