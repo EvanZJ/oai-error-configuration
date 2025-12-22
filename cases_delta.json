@@ -1,0 +1,1760 @@
+[
+  {
+    "filename": "case_001.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xg00",
+      "error_type": "invalid format",
+      "explanation": "Invalid hex format causes parsing error in gNB ID validation"
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": "yes",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_002.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 65536,
+      "error_type": "out of range",
+      "explanation": "TAC out of valid range (0-65535) causes NGAP error"
+    },
+    "du": {
+      "modified_key": "RUs[0].max_pdschReferenceSignalPower",
+      "original_value": -27,
+      "error_value": "power",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_003.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": "port501",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "out of range",
+      "explanation": "physCellId out of range (0-1007)"
+    }
+  },
+  {
+    "filename": "case_004.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero TX antennas causes RU config error"
+    }
+  },
+  {
+    "filename": "case_005.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative port causes socket binding failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": 65536,
+      "error_type": "out of range",
+      "explanation": "TAC out of range causes NGAP mismatch"
+    }
+  },
+  {
+    "filename": "case_006.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 123,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch in ID field"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": "spacing",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_007.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty log level causes default failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": "cell",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_008.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out of range",
+      "explanation": "Port out of range causes network error"
+    },
+    "du": {
+      "modified_key": "fhi_72.dpdk_devices",
+      "original_value": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "error_value": [
+        "invalid"
+      ],
+      "error_type": "invalid format",
+      "explanation": "Invalid device format causes DPDK failure"
+    }
+  },
+  {
+    "filename": "case_009.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "invalid.ip",
+      "error_type": "invalid format",
+      "explanation": "Invalid IP causes network interface error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": "freq",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_010.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_DU_ID",
+      "original_value": "0xe00",
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing DU ID causes configuration error"
+    }
+  },
+  {
+    "filename": "case_011.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.5.1",
+      "error_type": "invalid format",
+      "explanation": "Malformed IP causes parsing error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": "cell",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_012.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error in TAC"
+    },
+    "du": {
+      "modified_key": "fhi_72.dpdk_devices",
+      "original_value": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "error_value": [
+        "invalid"
+      ],
+      "error_type": "invalid format",
+      "explanation": "Invalid device format causes DPDK failure"
+    }
+  },
+  {
+    "filename": "case_013.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing port value causes NGU interface failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "invalid enum",
+      "explanation": "Invalid CSIRS value causes flag error"
+    }
+  },
+  {
+    "filename": "case_014.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error in TAC"
+    },
+    "du": {
+      "modified_key": "fhi_72.dpdk_devices",
+      "original_value": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "error_value": {},
+      "error_type": "wrong type",
+      "explanation": "Object instead of array causes DPDK error"
+    }
+  },
+  {
+    "filename": "case_015.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative cell ID causes cell configuration error in RRC"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero frequency causes SSB config error"
+    }
+  },
+  {
+    "filename": "case_016.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero streams causes SCTP association failure"
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "Threshold out of range causes DTX failure"
+    }
+  },
+  {
+    "filename": "case_017.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative thread count causes allocation error in PUSCH processing module"
+    },
+    "du": {
+      "modified_key": "RUs[0].max_pdschReferenceSignalPower",
+      "original_value": -27,
+      "error_value": "power",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_018.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "invalid enum",
+      "explanation": "Invalid subcarrier spacing causes PHY config error"
+    }
+  },
+  {
+    "filename": "case_019.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "out of range",
+      "explanation": "Too many TX antennas causes resource error"
+    }
+  },
+  {
+    "filename": "case_020.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative thread count causes allocation error in PUSCH processing module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": "freq",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_021.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    }
+  },
+  {
+    "filename": "case_022.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative port causes binding error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": "cell",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_023.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.5.1",
+      "error_type": "invalid format",
+      "explanation": "Malformed IP causes parsing error"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].num_cc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero num_cc causes MACRLC failure"
+    }
+  },
+  {
+    "filename": "case_024.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid enum",
+      "explanation": "Invalid log level causes logging module crash"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "invalid enum",
+      "explanation": "Invalid subcarrier spacing causes PHY config error"
+    }
+  },
+  {
+    "filename": "case_025.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid format",
+      "explanation": "Invalid IP format causes AMF connection failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out of range",
+      "explanation": "Too many ports causes resource error"
+    }
+  },
+  {
+    "filename": "case_026.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": [
+        "invalid"
+      ],
+      "error_type": "invalid enum",
+      "explanation": "Invalid ciphering algorithm causes ciphering failure"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing log level causes default failure"
+    }
+  },
+  {
+    "filename": "case_027.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xg00",
+      "error_type": "invalid format",
+      "explanation": "Invalid hex format causes parsing error in gNB ID validation"
+    },
+    "du": {
+      "modified_key": "gNBs[0].num_cc",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_028.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative thread count causes allocation error in PUSCH processing module"
+    },
+    "du": {
+      "modified_key": "rfsimulator.serveraddr",
+      "original_value": "server",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty server address causes RF simulator failure"
+    }
+  },
+  {
+    "filename": "case_029.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical contradiction",
+      "explanation": "MNC length 3 contradicts MNC 1 (should be 2) causes PLMN validation error"
+    },
+    "du": {
+      "modified_key": "RUs[0].max_pdschReferenceSignalPower",
+      "original_value": -27,
+      "error_value": "power",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_030.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "MNC out of range causes PLMN mismatch"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": 2,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type error"
+    }
+  },
+  {
+    "filename": "case_031.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": "nea3",
+      "error_type": "wrong type",
+      "explanation": "String instead of array causes security configuration error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].num_cc",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "out of range",
+      "explanation": "Too many carriers causes resource error"
+    }
+  },
+  {
+    "filename": "case_032.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing preference causes configuration error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_DU_ID",
+      "original_value": "0xe00",
+      "error_value": "not_hex",
+      "error_type": "invalid format",
+      "explanation": "Invalid DU ID format causes ID mismatch"
+    }
+  },
+  {
+    "filename": "case_033.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": 1,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": "yes",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_034.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": "cell1",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": "mcc",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_035.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": "nea3",
+      "error_type": "wrong type",
+      "explanation": "String instead of array causes security configuration error"
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": "thresh",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_036.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": 1,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].num_cc",
+      "original_value": 1,
+      "error_value": "one",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_037.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": "001",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    }
+  },
+  {
+    "filename": "case_038.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "MCC out of range (000-999) causes PLMN mismatch in NGAP"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_DU_ID",
+      "original_value": "0xe00",
+      "error_value": "not_hex",
+      "error_type": "invalid format",
+      "explanation": "Invalid DU ID format causes ID mismatch"
+    }
+  },
+  {
+    "filename": "case_039.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": "port",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero streams causes SCTP failure"
+    }
+  },
+  {
+    "filename": "case_040.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": "01",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "out of range",
+      "explanation": "Too many streams causes resource exhaustion"
+    }
+  },
+  {
+    "filename": "case_041.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid format",
+      "explanation": "Invalid gNB ID format causes parsing error in DU"
+    }
+  },
+  {
+    "filename": "case_042.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": "cell1",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 3584,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch"
+    }
+  },
+  {
+    "filename": "case_043.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "MCC out of range (000-999) causes PLMN mismatch in NGAP"
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": -100,
+      "error_type": "out of range",
+      "explanation": "Negative threshold causes PRACH error"
+    }
+  },
+  {
+    "filename": "case_044.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical contradiction",
+      "explanation": "MNC length 3 contradicts MNC 1 (should be 2) causes PLMN validation error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty ID causes validation failure"
+    }
+  },
+  {
+    "filename": "case_045.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": "invalid_pref",
+      "error_type": "invalid enum",
+      "explanation": "Invalid transport preference causes F1 interface error"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].num_cc",
+      "original_value": 1,
+      "error_value": "string",
+      "error_type": "wrong type",
+      "explanation": "Wrong type for num_cc causes MACRLC error"
+    }
+  },
+  {
+    "filename": "case_046.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 99999,
+      "error_type": "out of range",
+      "explanation": "Port out of range causes network error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative physCellId causes cell identity error"
+    }
+  },
+  {
+    "filename": "case_047.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": 1000000,
+      "error_type": "out of range",
+      "explanation": "Cell ID out of range causes ID collision"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    }
+  },
+  {
+    "filename": "case_048.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": "01",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": 1008,
+      "error_type": "out of range",
+      "explanation": "physCellId out of range (0-1007)"
+    }
+  },
+  {
+    "filename": "case_049.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative port causes socket binding failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "out of range",
+      "explanation": "Too many streams causes resource exhaustion"
+    }
+  },
+  {
+    "filename": "case_050.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": "nea3",
+      "error_type": "wrong type",
+      "explanation": "String instead of array causes security configuration error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative TAC causes RRC error in DU"
+    }
+  },
+  {
+    "filename": "case_051.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative port causes binding error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MCC causes validation error"
+    }
+  },
+  {
+    "filename": "case_052.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "out of range",
+      "explanation": "Too many TX antennas causes resource error"
+    }
+  },
+  {
+    "filename": "case_053.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": "nea3",
+      "error_type": "wrong type",
+      "explanation": "String instead of array causes security configuration error"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].num_cc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero num_cc causes MACRLC failure"
+    }
+  },
+  {
+    "filename": "case_054.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 65536,
+      "error_type": "out of range",
+      "explanation": "TAC out of valid range (0-65535) causes NGAP error"
+    },
+    "du": {
+      "modified_key": "rfsimulator.serveraddr",
+      "original_value": "server",
+      "error_value": "invalid@addr",
+      "error_type": "invalid format",
+      "explanation": "Invalid address format causes connection error"
+    }
+  },
+  {
+    "filename": "case_055.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 123,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch in ID field"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_056.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative thread count causes allocation error in PUSCH processing module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": "mcc",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_057.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 123,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch in ID field"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero antenna ports causes PDSCH failure"
+    }
+  },
+  {
+    "filename": "case_058.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty log level causes default failure"
+    },
+    "du": {
+      "modified_key": "rfsimulator.serveraddr",
+      "original_value": "server",
+      "error_value": "invalid@addr",
+      "error_type": "invalid format",
+      "explanation": "Invalid address format causes connection error"
+    }
+  },
+  {
+    "filename": "case_059.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": "01",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": 2,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type error"
+    }
+  },
+  {
+    "filename": "case_060.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty string causes ID validation failure in RRC"
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": "tac",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_061.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    },
+    "du": {
+      "modified_key": "rfsimulator.serveraddr",
+      "original_value": "server",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty server address causes RF simulator failure"
+    }
+  },
+  {
+    "filename": "case_062.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid format",
+      "explanation": "Invalid IP format causes AMF connection failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero streams causes SCTP failure"
+    }
+  },
+  {
+    "filename": "case_063.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xg00",
+      "error_type": "invalid format",
+      "explanation": "Invalid hex format causes parsing error in gNB ID validation"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MCC causes validation error"
+    }
+  },
+  {
+    "filename": "case_064.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": "port501",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "invalid enum",
+      "explanation": "Invalid subcarrier spacing causes PHY config error"
+    }
+  },
+  {
+    "filename": "case_065.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty log level causes default failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero spacing causes timing error"
+    }
+  },
+  {
+    "filename": "case_066.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing port value causes NGU interface failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "invalid enum",
+      "explanation": "Invalid subcarrier spacing causes PHY config error"
+    }
+  },
+  {
+    "filename": "case_067.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative thread count causes allocation error in PUSCH processing module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "invalid enum",
+      "explanation": "Invalid CSIRS value causes flag error"
+    }
+  },
+  {
+    "filename": "case_068.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": [
+        "invalid"
+      ],
+      "error_type": "invalid enum",
+      "explanation": "Invalid ciphering algorithm causes ciphering failure"
+    },
+    "du": {
+      "modified_key": "RUs[0].max_pdschReferenceSignalPower",
+      "original_value": -27,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "Power out of range causes PHY error"
+    }
+  },
+  {
+    "filename": "case_069.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MCC causes validation error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": "yes",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_070.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "MNC out of range causes PLMN mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].num_cc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero component carriers causes config error"
+    }
+  },
+  {
+    "filename": "case_071.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical contradiction",
+      "explanation": "MNC length 3 contradicts MNC 1 (should be 2) causes PLMN validation error"
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": "thresh",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_072.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xg00",
+      "error_type": "invalid format",
+      "explanation": "Invalid hex format causes parsing error in gNB ID validation"
+    },
+    "du": {
+      "modified_key": "gNBs[0].num_cc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero component carriers causes config error"
+    }
+  },
+  {
+    "filename": "case_073.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty string causes ID validation failure in RRC"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "invalid enum",
+      "explanation": "Invalid subcarrier spacing causes PHY config error"
+    }
+  },
+  {
+    "filename": "case_074.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative port causes binding error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_DU_ID",
+      "original_value": "0xe00",
+      "error_value": 3584,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type error"
+    }
+  },
+  {
+    "filename": "case_075.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing port value causes NGU interface failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": 1000000,
+      "error_type": "out of range",
+      "explanation": "Cell ID out of range causes collision"
+    }
+  },
+  {
+    "filename": "case_076.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing port value causes NGU interface failure"
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "Threshold out of range causes DTX failure"
+    }
+  },
+  {
+    "filename": "case_077.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing log level causes default failure"
+    }
+  },
+  {
+    "filename": "case_078.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative port causes socket binding failure"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid enum",
+      "explanation": "Invalid log level causes logging crash"
+    }
+  },
+  {
+    "filename": "case_079.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MCC causes validation error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out of range",
+      "explanation": "Too many ports causes resource error"
+    }
+  },
+  {
+    "filename": "case_080.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative port causes socket binding failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 100,
+      "error_type": "out of range",
+      "explanation": "Too many streams causes resource exhaustion"
+    }
+  },
+  {
+    "filename": "case_081.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": "port",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].num_cc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero num_cc causes MACRLC failure"
+    }
+  },
+  {
+    "filename": "case_082.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative TAC causes RRC connection failure"
+    },
+    "du": {
+      "modified_key": "fhi_72.dpdk_devices",
+      "original_value": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "error_value": {},
+      "error_type": "wrong type",
+      "explanation": "Object instead of array causes DPDK error"
+    }
+  },
+  {
+    "filename": "case_083.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": "port",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "RUs[0].max_pdschReferenceSignalPower",
+      "original_value": -27,
+      "error_value": "power",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_084.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xg00",
+      "error_type": "invalid format",
+      "explanation": "Invalid hex format causes parsing error in gNB ID validation"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": 2,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type error"
+    }
+  },
+  {
+    "filename": "case_085.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "out of range",
+      "explanation": "Too many TX antennas causes resource error"
+    }
+  },
+  {
+    "filename": "case_086.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": "127.0.0.5.1",
+      "error_type": "invalid format",
+      "explanation": "Malformed IP causes parsing error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": "zero",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_087.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid",
+      "error_type": "invalid format",
+      "explanation": "Invalid gNB ID format causes parsing error in DU"
+    }
+  },
+  {
+    "filename": "case_088.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty log level causes default failure"
+    },
+    "du": {
+      "modified_key": "gNBs[0].num_cc",
+      "original_value": 1,
+      "error_value": 10,
+      "error_type": "out of range",
+      "explanation": "Too many carriers causes resource error"
+    }
+  },
+  {
+    "filename": "case_089.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "eight",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error in thread configuration"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "out of range",
+      "explanation": "Zero spacing causes timing error"
+    }
+  },
+  {
+    "filename": "case_090.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical contradiction",
+      "explanation": "MNC length 3 contradicts MNC 1 (should be 2) causes PLMN validation error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_091.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_address",
+      "original_value": "127.0.0.5",
+      "error_value": 127005,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "",
+      "error_type": "invalid format",
+      "explanation": "Empty ID causes validation failure"
+    }
+  },
+  {
+    "filename": "case_092.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": "two",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].absoluteFrequencySSB",
+      "original_value": 641280,
+      "error_value": "freq",
+      "error_type": "wrong type",
+      "explanation": "String instead of number causes type error"
+    }
+  },
+  {
+    "filename": "case_093.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 123,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch in ID field"
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "Threshold out of range causes DTX failure"
+    }
+  },
+  {
+    "filename": "case_094.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing preference causes configuration error"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 100,
+      "error_type": "out of range",
+      "explanation": "Too many TX antennas causes resource error"
+    }
+  },
+  {
+    "filename": "case_095.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 19216870132,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "MCC out of range causes PLMN error"
+    }
+  },
+  {
+    "filename": "case_096.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": [],
+      "error_type": "missing value",
+      "explanation": "Empty array causes no ciphering available"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out of range",
+      "explanation": "Too many ports causes resource error"
+    }
+  },
+  {
+    "filename": "case_097.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mnc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out of range",
+      "explanation": "Negative MNC causes validation error"
+    }
+  },
+  {
+    "filename": "case_098.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 123,
+      "error_type": "wrong type",
+      "explanation": "Number instead of string causes type mismatch in ID field"
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].num_cc",
+      "original_value": 1,
+      "error_value": null,
+      "error_type": "missing value",
+      "explanation": "Missing num_cc causes configuration error"
+    }
+  },
+  {
+    "filename": "case_099.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mnc_length",
+      "original_value": 2,
+      "error_value": 3,
+      "error_type": "logical contradiction",
+      "explanation": "MNC length 3 contradicts MNC 1 (should be 2) causes PLMN validation error"
+    },
+    "du": {
+      "modified_key": "fhi_72.dpdk_devices",
+      "original_value": [
+        "0000:ca:02.0",
+        "0000:ca:02.1"
+      ],
+      "error_value": {},
+      "error_type": "wrong type",
+      "explanation": "Object instead of array causes DPDK error"
+    }
+  },
+  {
+    "filename": "case_100.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 65536,
+      "error_type": "out of range",
+      "explanation": "TAC out of valid range (0-65535) causes NGAP error"
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": 1000,
+      "error_type": "out of range",
+      "explanation": "Threshold out of range causes DTX failure"
+    }
+  }
+]

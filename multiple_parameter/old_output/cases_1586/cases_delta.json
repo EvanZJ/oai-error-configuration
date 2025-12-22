@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and connection establishment issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting pusch_AntennaPorts to 0 will cause antenna port configuration error and prevent PUSCH transmission.",
+      "explanation_zh": "將 pusch_AntennaPorts 設定為 0 會導致天線埠配置錯誤，並防止 PUSCH 傳輸。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[1]",
+      "original_value": "nia0",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the second integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "RUs[0].clock_src",
+      "original_value": "internal",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RU clock source to an unknown enum 'invalid' will cause hardware synchronization failures and prevent proper RU operation.",
+      "explanation_zh": "將 RU 時鐘源設定為未知的枚舉值 'invalid'，會導致硬體同步失敗，並阻止 RU 正確運作。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause initialization failure as thread count must be positive."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting maxMIMO_layers to 10 exceeds the supported maximum, causing configuration validation error.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 10 超過支援的最大值，導致配置驗證錯誤。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid value will cause logging configuration errors and potential startup failures."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "INVALID_MODEL",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RF simulator model to an unknown value will cause initialization failures in the RF simulation module.",
+      "explanation_zh": "將 RF 模擬器模型設定為未知值，將導致 RF 模擬模組的初始化失敗。"
+    }
+  }
+]

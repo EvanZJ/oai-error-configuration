@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB integrity to an unknown enum 'invalid' will cause configuration parsing failure and prevent proper security setup."
+    },
+    "du": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB integrity to an unknown enum 'invalid' will cause configuration parsing failure and prevent proper security setup.",
+      "explanation_zh": "將 DRB 完整性設定為未知的枚舉值 'invalid'，會導致配置解析失敗，並阻止正確的安全設定。"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "filename": "case_024.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for security.ciphering_algorithms causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs[0].servingCellConfigCommon[0].physCellId causes runtime failure in DU module"
+    }
+  }
+]

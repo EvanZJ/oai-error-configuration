@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to 0 will cause thread allocation error during PUSCH processing initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].min_rxtxtime",
+      "original_value": 6,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting min_rxtxtime to a negative value will cause timing configuration error in the DU setup.",
+      "explanation_zh": "將 min_rxtxtime 設定為負值會在 DU 設定中導致定時配置錯誤。"
+    }
+  }
+]

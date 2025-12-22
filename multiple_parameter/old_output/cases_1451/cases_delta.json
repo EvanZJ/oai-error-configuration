@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_1451.json",
+    "cu": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanations": "Invalid DRB integrity setting causing security configuration error"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].pucchGroupHopping",
+      "original_value": 0,
+      "error_value": 999,
+      "error_type": "invalid_enum",
+      "explanations": "Invalid PUCCH group hopping value causing physical layer configuration error"
+    }
+  }
+]

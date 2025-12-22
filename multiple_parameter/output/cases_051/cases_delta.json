@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_051.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_ip",
+      "explanation": "Setting Invalid IP address format for gNBs.gNB_ID causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_ip",
+      "explanation": "Setting Invalid IP address format for gNBs[0].tr_s_preference causes runtime failure in DU module"
+    }
+  }
+]

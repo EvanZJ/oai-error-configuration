@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "bad",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an invalid enum 'bad' will cause ASN.1 parsing errors and prevent proper message handling."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "INVALID",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RF simulator model name to an invalid value 'INVALID' will cause the simulator initialization to fail and disrupt radio frequency operations.",
+      "explanation_zh": "將射頻模擬器模型名稱設定為無效值 'INVALID' 會導致模擬器初始化失敗，並干擾射頻操作。"
+    }
+  }
+]

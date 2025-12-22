@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_005.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": 999,
+      "error_type": "invalid_type",
+      "explanation": "Setting Invalid data type for log_config.global_log_level causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_string",
+      "error_type": "invalid_type",
+      "explanation": "Setting Invalid data type for gNBs[0].gNB_ID causes runtime failure in DU module"
+    }
+  }
+]

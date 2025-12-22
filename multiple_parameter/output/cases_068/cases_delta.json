@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_068.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": 999999999,
+      "error_type": "too_large",
+      "explanation": "Setting Value too large for gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 999999999,
+      "error_type": "too_large",
+      "explanation": "Setting Value too large for gNBs[0].SCTP.SCTP_INSTREAMS causes runtime failure in DU module"
+    }
+  }
+]

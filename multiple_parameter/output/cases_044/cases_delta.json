@@ -1,0 +1,24 @@
+[
+  {
+    "filename": "case_044.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for security.ciphering_algorithms causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for log_config.global_log_level causes runtime failure in DU module"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_031.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for gNBs.gNB_ID causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for gNBs[0].pdsch_AntennaPorts_XP causes runtime failure in DU module"
+    }
+  }
+]

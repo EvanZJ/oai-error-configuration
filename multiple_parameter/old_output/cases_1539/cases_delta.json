@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_hex",
+      "error_type": "invalid_string",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal string 'invalid_hex' will cause identification parameter parsing failure and prevent proper gNB initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_integer",
+      "explanation_en": "Setting the maximum MIMO layers to a negative value -1 will cause physical layer configuration validation failure and prevent DU startup.",
+      "explanation_zh": "將最大 MIMO 層數設定為負值 -1，會導致物理層配置驗證失敗，並阻止 DU 啟動。"
+    }
+  }
+]

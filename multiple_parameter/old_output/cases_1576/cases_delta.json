@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid_hw",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting hw_log_level to an invalid enum value 'invalid_hw' will cause hardware logging configuration errors and prevent proper HW log output.",
+      "explanation_zh": "將 hw_log_level 設定為無效的枚舉值 'invalid_hw' 會導致硬體日誌配置錯誤，並阻止正確的 HW 日誌輸出。"
+    }
+  }
+]

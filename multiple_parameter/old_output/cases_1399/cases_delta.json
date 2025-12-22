@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid_integrity",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB integrity to an unknown enum 'invalid_integrity' will cause configuration validation errors and prevent proper security setup."
+    },
+    "du": {
+      "modified_key": "MACRLCs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "invalid_transport",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the transport preference to an unknown enum 'invalid_transport' will cause interface initialization failures and communication breakdowns between MAC and RLC layers.",
+      "explanation_zh": "將傳輸偏好設定為未知的枚舉值 'invalid_transport'，會導致介面初始化失敗，並在 MAC 和 RLC 層之間造成通訊中斷。"
+    }
+  }
+]

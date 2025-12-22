@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": -2,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the tracking area code to a negative value will cause configuration validation error during startup, as tracking area codes must be non-negative."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": -2,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the tracking area code to a negative value will cause configuration validation error during startup, as tracking area codes must be non-negative.",
+      "explanation_zh": "將追蹤區域代碼設定為負值會在啟動期間導致配置驗證錯誤，因為追蹤區域代碼必須為非負數。"
+    }
+  }
+]

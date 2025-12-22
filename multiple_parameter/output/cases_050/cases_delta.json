@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_050.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for Num_Threads_PUSCH causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for log_config.global_log_level causes runtime failure in DU module"
+    }
+  }
+]

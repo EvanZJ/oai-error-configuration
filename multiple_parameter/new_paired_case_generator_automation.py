@@ -14,6 +14,8 @@ base_output_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_
 baseline_conf_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf/"
 baseline_conf_json_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/baseline_conf_json/"
 delta_maker_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/cases_delta_maker.md"
+cu_gen_prompt_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/new_cu_gen_prompt.md"
+du_gen_prompt_path = "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/new_du_gen_prompt.md"
 
 failed_cases = []
 existing_cases_pool = []  # Pool of existing case signatures
@@ -308,13 +310,18 @@ def load_baseline_files():
         print(f"❌ Error loading baseline files: {e}")
         return None
 
-def load_prompt_template():
-    """Load the delta maker prompt template"""
+def load_prompt_templates():
+    """Load all prompt templates (CU, DU generation prompts, and delta maker)"""
     try:
+        with open(cu_gen_prompt_path, 'r') as f:
+            cu_prompt = f.read()
+        with open(du_gen_prompt_path, 'r') as f:
+            du_prompt = f.read()
         with open(delta_maker_path, 'r') as f:
-            return f.read()
+            delta_maker = f.read()
+        return {'cu': cu_prompt, 'du': du_prompt, 'delta_maker': delta_maker}
     except Exception as e:
-        print(f"❌ Error loading prompt template: {e}")
+        print(f"❌ Error loading prompt templates: {e}")
         return None
 
 def send_prompt_to_copilot(prompt):
@@ -462,12 +469,12 @@ def generate_delta_case(case_num, max_wait_time, check_interval, stabilization_w
         print(f"🔧 Generating cases_delta.json (Attempt {retry_count + 1})")
         print(f"{'─' * 80}")
         
-        delta_prompt_template = load_prompt_template()
-        if delta_prompt_template is None:
+        prompt_templates = load_prompt_templates()
+        if prompt_templates is None:
             return False
         
-        # Build comprehensive prompt with all baseline configs embedded
-        base_prompt = f"""I want you to create a cases_delta.json file based on the baseline configurations provided below.
+        # Build comprehensive prompt with CU and DU generation guidance
+        base_prompt = f"""I want you to create a cases_delta.json file based on the baseline configurations and generation guidelines provided below.
 
 The file should contain test cases with single-key errors for both CU and DU configurations.
 
@@ -491,34 +498,43 @@ The file should contain test cases with single-key errors for both CU and DU con
 {baseline_files['du_gnb_json']}
 ```
 
-## Task
-{delta_prompt_template}
+## CU Case Generation Guidelines
+{prompt_templates['cu']}
 
-IMPORTANT: Save the file as 'cases_delta.json' in the folder '{folder_path}'
+## DU Case Generation Guidelines
+{prompt_templates['du']}
 
-The JSON structure MUST follow this format:
+## Delta File Merging Instructions
+{prompt_templates['delta_maker']}
+
+## IMPORTANT INSTRUCTIONS
+2. Follow the error generation strategies from the CU and DU guidelines above
+3. Each modification must be syntactically valid but cause runtime errors
+4. Use the Delta File Merging Instructions to properly structure the paired case
+5. Save the file as 'cases_delta.json' in the folder '{folder_path}'
+
+## JSON Structure (STRICT FORMAT)
+Follow the example from the Delta File Merging Instructions:
 [
   {{
     "filename": "case_01.json",
     "cu": {{
-        "modified_key": "...",
-        "original_value": "...",
-        "error_value": "...",
-        "error_type": "...",
-        "explanation_en": "..."
+        "modified_key": "path.to.the.key",
+        "original_value": "original_val",
+        "error_value": "error_val",
+        "error_type": "one of: out of range, wrong type, invalid enum, invalid format, logical contradiction, missing value",
+        "explanation": "Engineering explanation of the runtime failure"
     }},
     "du": {{
-        "modified_key": "...",
-        "original_value": "...",
-        "error_value": "...",
-        "error_type": "...",
-        "explanation_en": "...",
-        "explanation_zh": "..."
+        "modified_key": "path.to.the.key",
+        "original_value": "original_val",
+        "error_value": "error_val",
+        "error_type": "one of: out of range, wrong type, invalid enum, invalid format, logical contradiction, missing value",
+        "explanation": "Engineering explanation of the runtime failure",
     }}
   }}
 ]
 
-Generate exactly 1 test case with both CU and DU modifications as shown in the example format.
 Make sure to create UNIQUE test cases that are different from any previously generated cases.
 Use different parameters and error values to ensure uniqueness.
 """
@@ -708,6 +724,7 @@ def main():
     print(f"  Max retries per case: 3")
     print(f"  Output directory: {base_output_path}")
     print(f"  🔒 Mode: Duplicate Prevention ENABLED!")
+    print(f"  📋 Prompts: new_cu_gen_prompt.md + new_du_gen_prompt.md + cases_delta_maker.md")
     print("=" * 80)
     
     # Load baseline files once at the start

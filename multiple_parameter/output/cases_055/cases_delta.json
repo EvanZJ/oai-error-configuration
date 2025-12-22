@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_055.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_ip",
+      "explanation": "Setting Invalid IP address format for log_config.global_log_level causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_ip",
+      "explanation": "Setting Invalid IP address format for gNBs[0].tr_s_preference causes runtime failure in DU module"
+    }
+  }
+]

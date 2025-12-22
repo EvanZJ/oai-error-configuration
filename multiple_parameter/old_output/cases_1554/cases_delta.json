@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid enum value will cause security configuration errors and prevent proper ciphering setup."
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting prach_dtx_threshold to a negative value will cause PRACH detection threshold errors and disrupt uplink synchronization.",
+      "explanation_zh": "將 prach_dtx_threshold 設定為負值將導致 PRACH 檢測閾值錯誤，並干擾上行鏈路同步。"
+    }
+  }
+]

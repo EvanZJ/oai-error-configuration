@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB ciphering to an unknown enum 'maybe' will cause security configuration failure."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "INVALID",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RF simulator model name to an unknown enum 'INVALID' will cause simulator initialization failure.",
+      "explanation_zh": "將 RF 模擬器模型名稱設定為未知的枚舉值 'INVALID'，會導致模擬器初始化失敗。"
+    }
+  }
+]

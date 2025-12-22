@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": -1,
+      "error_type": "negative_value",
+      "explanation_en": "Setting the S1U port to a negative value will cause network interface configuration errors and prevent proper NG-U connectivity."
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation_en": "Setting SCTP input streams to zero will cause SCTP association failures and prevent F1 interface communication between CU and DU.",
+      "explanation_zh": "將 SCTP 輸入流設定為零會導致 SCTP 關聯失敗，並阻止 CU 和 DU 之間的 F1 介面通訊。"
+    }
+  }
+]

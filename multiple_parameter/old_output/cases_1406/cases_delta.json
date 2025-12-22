@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_hex",
+      "error_type": "invalid_hex_format",
+      "explanation_en": "Setting the gNB_ID to an invalid hexadecimal string 'invalid_hex' will cause parsing errors during configuration loading and prevent the CU from initializing properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the PDSCH antenna ports XP to a negative value -1 will cause validation errors in the physical layer configuration and prevent the DU from starting.",
+      "explanation_zh": "將 PDSCH 天線端口 XP 設定為負值 -1 會在物理層配置中導致驗證錯誤，並阻止 DU 啟動。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_053.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_ip",
+      "explanation": "Setting Invalid IP address format for gNBs.amf_ip_address.ipv4 causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].tr_s_preference",
+      "original_value": "local_L1",
+      "error_value": "999.999.999.999",
+      "error_type": "invalid_ip",
+      "explanation": "Setting Invalid IP address format for gNBs[0].tr_s_preference causes runtime failure in DU module"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea99",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea99' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "error_invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid value 'error_invalid' will cause configuration parsing error and prevent the DU from starting properly.",
+      "explanation_zh": "將全域日誌等級設定為無效值 'error_invalid' 將導致配置解析錯誤，並阻止 DU 正確啟動。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical layer log level to an invalid enum value will cause logging initialization errors and impair physical layer diagnostics."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "invalid_model",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RF simulator model name to an invalid value will cause simulator configuration failures and prevent proper RF signal simulation.",
+      "explanation_zh": "將 RF 模擬器模型名稱設定為無效值會導致模擬器配置失敗，並阻止正確的 RF 信號模擬。"
+    }
+  }
+]

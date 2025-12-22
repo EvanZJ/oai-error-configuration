@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_03.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid enum 'invalid_level' will cause a configuration parsing error during startup, preventing the DU from initializing properly.",
+      "explanation_zh": "將全域日誌等級設定為無效枚舉值 'invalid_level' 會在啟動期間導致配置解析錯誤，阻止 DU 正確初始化。"
+    }
+  }
+]

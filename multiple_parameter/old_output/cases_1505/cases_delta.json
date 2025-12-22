@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to an unknown enum 'nea9' will cause negotiation failure during the security setup phase and prevent successful connection establishment."
+    },
+    "du": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the hardware log level to an invalid enum value will cause logging configuration errors and disrupt system monitoring capabilities.",
+      "explanation_zh": "將硬體日誌級別設定為無效的枚舉值會導致日誌配置錯誤，並干擾系統監控功能。"
+    }
+  }
+]

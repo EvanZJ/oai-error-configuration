@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid_verbosity",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ASN.1 verbosity to an unknown enum 'invalid_verbosity' will cause parsing errors in ASN.1 messages, leading to communication failures between CU and DU."
+    },
+    "du": {
+      "modified_key": "rfsimulator.serverport",
+      "original_value": 4043,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting the RF simulator server port to a negative value -1 will cause socket binding failures, preventing proper RF simulation and leading to initialization errors.",
+      "explanation_zh": "將 RF 模擬器伺服器端口設定為負值 -1 會導致 socket 綁定失敗，無法進行適當的 RF 模擬，並導致初始化錯誤。"
+    }
+  }
+]

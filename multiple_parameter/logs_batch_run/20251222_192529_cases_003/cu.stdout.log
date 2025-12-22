@@ -1,0 +1,11 @@
+CMDLINE: "/home/sionna/evan/openairinterface5g/cmake_targets/ran_build/build/nr-softmodem" "--rfsim" "--sa" "-O" "/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_003/cu_case_003.conf" 
+[LIBCONFIG] file /home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/output/cases_003/cu_case_003.conf - line 91: syntax error
+
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_load_configmodule.c 384 config module "libconfig" couldn't be loaded
+[CONFIG] config_get, section log_config skipped, config module not properly initialized
+[LOG] init aborted, configuration couldn't be performed
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+[CONFIG] /home/sionna/evan/openairinterface5g/common/config/config_userapi.c 68 nfapi has no processed integer availablle
+[CONFIG] config_get, section (null) skipped, config module not properly initialized
+Getting configuration failed
+[CONFIG] function config_libconfig_init returned -1

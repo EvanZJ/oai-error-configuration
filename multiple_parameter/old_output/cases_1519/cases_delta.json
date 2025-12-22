@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause configuration validation failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nr_cellid to a negative value will cause cell identification issues.",
+      "explanation_zh": "將 nr_cellid 設定為負值會導致小區識別問題。"
+    }
+  }
+]

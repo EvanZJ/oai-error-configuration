@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting phy_log_level to an invalid value will cause PHY layer logging configuration errors and prevent proper PHY event logging."
+    },
+    "du": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting phy_log_level to an invalid value will cause PHY layer logging configuration errors and prevent proper PHY event logging.",
+      "explanation_zh": "將 phy_log_level 設定為無效值會導致 PHY 層日誌配置錯誤，並阻止正確的 PHY 事件記錄。"
+    }
+  }
+]

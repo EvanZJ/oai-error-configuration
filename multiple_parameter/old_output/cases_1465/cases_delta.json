@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid value will cause ciphering configuration errors and security protocol failures."
+    },
+    "du": {
+      "modified_key": "rfsimulator.serverport",
+      "original_value": 4043,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting serverport to a negative value will cause RF simulator connection failures and prevent proper signal simulation.",
+      "explanation_zh": "將 serverport 設定為負值會導致 RF 模擬器連接失敗，並阻止正確的信號模擬。"
+    }
+  }
+]

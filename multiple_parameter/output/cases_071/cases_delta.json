@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_071.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for gNBs.gNB_ID causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for RUs[0].nb_tx causes runtime failure in DU module"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -5,
+      "error_type": "negative_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause thread allocation errors and prevent the CU from initializing properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting maxMIMO_layers to 0 will disable MIMO functionality and cause connection issues during cell setup.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 0 會停用 MIMO 功能，並在小區設定期間造成連接問題。"
+    }
+  }
+]

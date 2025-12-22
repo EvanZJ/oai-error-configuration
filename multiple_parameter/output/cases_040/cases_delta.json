@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_040.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for Num_Threads_PUSCH causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for gNBs[0].pdsch_AntennaPorts_XP causes runtime failure in DU module"
+    }
+  }
+]

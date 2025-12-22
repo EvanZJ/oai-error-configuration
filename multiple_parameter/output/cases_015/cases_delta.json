@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_015.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "info",
+      "error_type": "out_of_range_negative",
+      "explanation": "Setting Out of range negative value for log_config.global_log_level causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": -1,
+      "error_type": "out_of_range_negative",
+      "explanation": "Setting Out of range negative value for gNBs[0].local_n_portc causes runtime failure in DU module"
+    }
+  }
+]

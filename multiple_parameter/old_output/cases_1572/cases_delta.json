@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to an unknown enum 'nea9' will cause negotiation failure during the security setup phase."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 10,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting nb_tx to an out-of-range value will cause radio unit configuration errors and initialization failure.",
+      "explanation_zh": "將 nb_tx 設定為超出範圍的值將導致無線單元配置錯誤和初始化失敗。"
+    }
+  }
+]

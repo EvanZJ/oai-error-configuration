@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_035.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for log_config.global_log_level causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for gNBs[0].pdsch_AntennaPorts_XP causes runtime failure in DU module"
+    }
+  }
+]

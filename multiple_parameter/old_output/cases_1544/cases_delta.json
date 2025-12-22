@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea5",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea5' will cause negotiation failure during the security negotiation phase and prevent secure communication establishment."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "INVALID_MODEL",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RF simulator model name to an unsupported value 'INVALID_MODEL' will cause initialization failures in the RF simulation module and prevent DU startup.",
+      "explanation_zh": "將 RF 模擬器模型名稱設定為不支援的值 'INVALID_MODEL'，會導致 RF 模擬模組初始化失敗，並阻止 DU 啟動。"
+    }
+  }
+]

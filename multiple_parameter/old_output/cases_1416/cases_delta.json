@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB ciphering to an invalid enum 'maybe' will cause configuration parsing errors and prevent security setup."
+    },
+    "du": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "error_invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the PHY log level to an invalid value 'error_invalid' will cause the logging configuration to fail and halt system initialization.",
+      "explanation_zh": "將 PHY 日誌級別設定為無效值 'error_invalid' 會導致日誌配置失敗，並停止系統初始化。"
+    }
+  }
+]

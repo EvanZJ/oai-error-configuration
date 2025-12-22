@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xinvalid",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting the gNB_ID to an invalid hexadecimal format '0xinvalid' will cause parsing errors during configuration loading and prevent the CU from initializing properly."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the number of transmit antennas to 0 will cause radio unit configuration failure and prevent proper signal transmission.",
+      "explanation_zh": "將發射天線數量設定為 0 會導致無線電單元配置失敗，並阻止正確的信號傳輸。"
+    }
+  }
+]

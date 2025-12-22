@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB ciphering to an invalid enum 'invalid' will cause security configuration failure and prevent proper encryption setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": "invalid",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the maximum MIMO layers to an invalid value 'invalid' will cause physical layer configuration error and prevent proper MIMO operation.",
+      "explanation_zh": "將最大 MIMO 層數設定為無效值 'invalid' 會導致物理層配置錯誤，並阻止正確的 MIMO 操作。"
+    }
+  }
+]

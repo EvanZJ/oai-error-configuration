@@ -1,0 +1,24 @@
+[
+  {
+    "filename": "case_084.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": "string_instead_of_array",
+      "error_type": "wrong_array",
+      "explanation": "Setting Wrong array type for security.ciphering_algorithms causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": [],
+      "error_type": "wrong_array",
+      "explanation": "Setting Wrong array type for gNBs[0].plmn_list[0].mcc causes runtime failure in DU module"
+    }
+  }
+]

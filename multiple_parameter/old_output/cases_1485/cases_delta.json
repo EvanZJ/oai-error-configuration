@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "invalid",
+      "error_type": "invalid_type",
+      "explanation_en": "Setting Num_Threads_PUSCH to an invalid string type will cause configuration parsing failure and prevent the CU from starting properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting pdsch_AntennaPorts_XP to an out-of-range value will cause antenna configuration error and lead to transmission failures.",
+      "explanation_zh": "將 pdsch_AntennaPorts_XP 設定為超出範圍的值會導致天線配置錯誤，並造成傳輸失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid enum value 'invalid_level' will cause logging configuration errors and prevent proper log output initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 3,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting do_CSIRS to an out-of-range value 3 (valid values are 0 or 1) will cause configuration validation errors and prevent the DU from initializing CSI-RS properly.",
+      "explanation_zh": "將 do_CSIRS 設定為超出範圍的值 3（有效值為 0 或 1），會導致配置驗證錯誤，並阻止 DU 正確初始化 CSI-RS。"
+    }
+  }
+]

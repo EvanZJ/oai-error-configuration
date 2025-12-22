@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.ngap_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the NGAP log level to an invalid enum will cause configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "log_config.ngap_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the NGAP log level to an invalid enum will cause configuration parsing failure.",
+      "explanation_zh": "將 NGAP 日誌等級設定為無效的枚舉值將導致配置解析失敗。"
+    }
+  }
+]

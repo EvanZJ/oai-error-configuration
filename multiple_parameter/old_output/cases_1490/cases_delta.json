@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_id",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting gNB_ID to an invalid value 'invalid_id' will cause identification conflicts, preventing the gNB from being properly recognized in the network and leading to registration failures."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_id",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting gNB_ID to an invalid value 'invalid_id' will cause identification conflicts, preventing the gNB from being properly recognized in the network and leading to registration failures.",
+      "explanation_zh": "將 gNB_ID 設定為無效值 'invalid_id' 會導致識別衝突，阻止 gNB 在網路中被正確識別，並導致註冊失敗。"
+    }
+  }
+]

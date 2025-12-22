@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_id",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to an invalid format 'invalid_id' will cause configuration parsing failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_id",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to an invalid format 'invalid_id' will cause configuration parsing failure.",
+      "explanation_zh": "將 gNB_ID 設定為無效格式 'invalid_id' 將導致配置解析失敗。"
+    }
+  }
+]

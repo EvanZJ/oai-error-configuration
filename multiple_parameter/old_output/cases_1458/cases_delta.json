@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the hardware log level to an invalid enum value 'invalid_level' will cause log configuration parsing errors and prevent proper logging initialization in the CU."
+    },
+    "du": {
+      "modified_key": "fhi_72.mtu",
+      "original_value": 9000,
+      "error_value": "invalid",
+      "error_type": "type_mismatch",
+      "explanation_en": "Setting the MTU value to a string 'invalid' instead of an integer will cause type mismatch errors during FHI configuration parsing in the DU.",
+      "explanation_zh": "將 MTU 值設定為字串 'invalid' 而非整數會導致 DU 中 FHI 配置解析期間的類型不匹配錯誤。"
+    }
+  }
+]

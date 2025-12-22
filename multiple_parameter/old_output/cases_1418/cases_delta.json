@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1418.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia8",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia8' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": 2,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting do_CSIRS to 2, which is outside the valid range (0 or 1), will cause configuration validation errors and cell setup failures.",
+      "explanation_zh": "將 do_CSIRS 設定為 2，這超出了有效範圍 (0 或 1)，會導致配置驗證錯誤和細胞設置失敗。"
+    }
+  }
+]

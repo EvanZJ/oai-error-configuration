@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_03.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid value 'maybe' will cause security configuration parsing error and connection failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting do_CSIRS to -1 will cause invalid CSI-RS configuration and beamforming failure.",
+      "explanation_zh": "將 do_CSIRS 設定為 -1 會導致無效的 CSI-RS 配置，並造成波束成型失敗。"
+    }
+  }
+]

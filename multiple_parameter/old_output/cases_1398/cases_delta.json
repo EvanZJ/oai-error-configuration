@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "nonexistent",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to a nonexistent value will cause logging configuration errors, potentially leading to silent failures or excessive logging that impacts performance."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "nonexistent",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to a nonexistent value will cause logging configuration errors, potentially leading to silent failures or excessive logging that impacts performance.",
+      "explanation_zh": "將 global_log_level 設定為不存在的值將導致日誌配置錯誤，可能導致靜默失敗或過度日誌記錄影響性能。"
+    }
+  }
+]

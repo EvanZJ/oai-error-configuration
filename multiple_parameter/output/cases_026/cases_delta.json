@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_026.json",
+    "cu": {
+      "modified_key": "gNBs.tr_s_preference",
+      "original_value": "f1",
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs.tr_s_preference causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs[0].servingCellConfigCommon[0].physCellId causes runtime failure in DU module"
+    }
+  }
+]

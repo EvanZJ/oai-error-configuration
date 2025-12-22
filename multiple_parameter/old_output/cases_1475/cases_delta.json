@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ASN.1 verbosity to an unknown level will cause parsing errors in ASN.1 messages, leading to communication failures between network components."
+    },
+    "du": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "annoying",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting ASN.1 verbosity to an unknown level will cause parsing errors in ASN.1 messages, leading to communication failures between network components.",
+      "explanation_zh": "將 ASN.1 詳細程度設定為未知級別會導致 ASN.1 消息解析錯誤，導致網路元件間的通信失敗。"
+    }
+  }
+]

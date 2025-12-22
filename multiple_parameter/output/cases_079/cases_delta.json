@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_079.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for gNBs.plmn_list.mcc causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for RUs[0].nb_tx causes runtime failure in DU module"
+    }
+  }
+]

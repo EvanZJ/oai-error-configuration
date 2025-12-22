@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_name",
+      "original_value": "gNB-Eurecom-CU",
+      "error_value": "invalid_name",
+      "error_type": "invalid_string",
+      "explanation_en": "Setting gNB_name to an invalid string 'invalid_name' will cause gNB identification errors during initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "invalid_name",
+      "error_type": "invalid_string",
+      "explanation_en": "Setting gNB_name to an invalid string 'invalid_name' will cause gNB identification errors during initialization.",
+      "explanation_zh": "將 gNB_name 設定為無效字串 'invalid_name' 會在初始化期間導致 gNB 識別錯誤。"
+    }
+  }
+]

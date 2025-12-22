@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_090.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": [],
+      "error_type": "wrong_array",
+      "explanation": "Setting Wrong array type for Num_Threads_PUSCH causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": [],
+      "error_type": "wrong_array",
+      "explanation": "Setting Wrong array type for gNBs[0].plmn_list[0].mcc causes runtime failure in DU module"
+    }
+  }
+]

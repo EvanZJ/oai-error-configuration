@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting hw_log_level to an invalid enumeration value will cause hardware logging configuration errors and prevent proper HW log initialization in the CU gNB."
+    },
+    "du": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting phy_log_level to an invalid enumeration value will cause physical layer logging configuration errors and prevent proper PHY log initialization in the DU gNB.",
+      "explanation_zh": "將 phy_log_level 設定為無效的枚舉值將導致物理層日誌配置錯誤，並阻止 DU gNB 中正確的 PHY 日誌初始化。"
+    }
+  }
+]

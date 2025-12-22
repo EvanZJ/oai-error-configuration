@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_088.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": [],
+      "error_type": "wrong_array",
+      "explanation": "Setting Wrong array type for gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].plmn_list[0].mcc",
+      "original_value": 1,
+      "error_value": [],
+      "error_type": "wrong_array",
+      "explanation": "Setting Wrong array type for gNBs[0].plmn_list[0].mcc causes runtime failure in DU module"
+    }
+  }
+]

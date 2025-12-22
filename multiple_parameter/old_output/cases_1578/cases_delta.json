@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting MCC to a negative value will cause PLMN configuration validation error as MCC must be positive."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting physCellId to a negative value will cause invalid cell configuration as physCellId must be non-negative.",
+      "explanation_zh": "將 physCellId 設定為負值會導致無效的細胞配置，因為 physCellId 必須為非負數。"
+    }
+  }
+]

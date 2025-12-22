@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting hw_log_level to an invalid enum value 'invalid' will cause logging configuration parsing errors and prevent proper hardware logging setup."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nb_tx to 0 will cause radio unit transmission configuration errors and prevent proper TX antenna setup.",
+      "explanation_zh": "將 nb_tx 設定為 0 會導致無線單元傳輸配置錯誤，並阻止正確的 TX 天線設置。"
+    }
+  }
+]

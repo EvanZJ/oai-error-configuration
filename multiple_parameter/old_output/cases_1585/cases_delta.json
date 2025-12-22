@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 4,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the downlink subcarrier spacing to the invalid value 4 (valid values are 0-3 corresponding to 15kHz, 30kHz, 60kHz, 120kHz) will cause configuration parsing errors or invalid bandwidth calculations leading to system initialization failure.",
+      "explanation_zh": "將下行子載波間距設定為無效值 4（有效值為 0-3，對應 15kHz、30kHz、60kHz、120kHz）會導致配置解析錯誤或無效的帶寬計算，從而導致系統初始化失敗。"
+    }
+  }
+]

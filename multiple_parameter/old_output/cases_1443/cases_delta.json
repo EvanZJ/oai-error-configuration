@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid_phy",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical log level to an invalid enum 'invalid_phy' will cause physical layer logging initialization to fail and impair radio frequency monitoring."
+    },
+    "du": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "invalid_phy",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical log level to an invalid enum 'invalid_phy' will cause physical layer logging initialization to fail and impair radio frequency monitoring.",
+      "explanation_zh": "將實體日誌級別設定為無效的枚舉值 'invalid_phy'，會導致實體層日誌初始化失敗，並損害無線電頻率監控。"
+    }
+  }
+]

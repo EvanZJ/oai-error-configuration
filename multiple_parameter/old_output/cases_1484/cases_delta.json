@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting drb_ciphering to an invalid value 'invalid' will cause configuration parsing error."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "INVALID_MODEL",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting modelname to an unknown model 'INVALID_MODEL' will cause simulator initialization failure.",
+      "explanation_zh": "將 modelname 設定為未知的模型 'INVALID_MODEL' 會導致模擬器初始化失敗。"
+    }
+  }
+]

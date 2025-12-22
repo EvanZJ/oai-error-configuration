@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.rrc_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RRC log level to an unknown value 'invalid_level' will cause logging configuration failure and potential system instability."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting CSIRS enable flag to a negative value will cause physical layer configuration validation error.",
+      "explanation_zh": "將 CSIRS 啟用旗標設定為負值會導致物理層配置驗證錯誤。"
+    }
+  }
+]

@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_003.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": 12345,
+      "error_type": "invalid_type",
+      "explanation": "Setting Invalid data type for gNBs.amf_ip_address.ipv4 causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_string",
+      "error_type": "invalid_type",
+      "explanation": "Setting Invalid data type for gNBs[0].gNB_ID causes runtime failure in DU module"
+    }
+  }
+]

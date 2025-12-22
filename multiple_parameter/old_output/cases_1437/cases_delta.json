@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an unknown enum 'invalid_level' will cause configuration parsing failure and prevent the CU from starting properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].dl_subcarrierSpacing",
+      "original_value": 1,
+      "error_value": 5,
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the downlink subcarrier spacing to an invalid value '5' (valid values are 0,1,2,3) will cause cell configuration failure and prevent proper radio resource allocation.",
+      "explanation_zh": "將下行鏈路子載波間距設定為無效值 '5'（有效值為 0、1、2、3），會導致小區配置失敗，並阻止正確的無線資源分配。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -5,
+      "error_type": "negative_value",
+      "explanation_en": "Setting the number of PUSCH threads to a negative value '-5' will cause invalid thread configuration and prevent the CU from allocating resources properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 10,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the maximum MIMO layers to an out-of-range value '10' will cause configuration validation errors and prevent the DU from initializing MIMO processing correctly.",
+      "explanation_zh": "將最大 MIMO 層數設定為超出範圍的值 '10'，會導致配置驗證錯誤，並阻止 DU 正確初始化 MIMO 處理。"
+    }
+  }
+]

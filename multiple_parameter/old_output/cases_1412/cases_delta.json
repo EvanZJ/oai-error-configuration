@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting pdsch_AntennaPorts_XP to -1 will cause antenna port configuration error and transmission failure.",
+      "explanation_zh": "將 pdsch_AntennaPorts_XP 設定為 -1 會導致天線埠配置錯誤，並造成傳輸失敗。"
+    }
+  }
+]

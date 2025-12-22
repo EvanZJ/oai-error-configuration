@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid_choice",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an invalid enum value 'invalid_choice' will cause ASN.1 parsing errors and configuration loading failure."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation_en": "Setting maxMIMO_layers to 0 will disable MIMO functionality and cause physical layer transmission errors.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 0 會停用 MIMO 功能，並造成物理層傳輸錯誤。"
+    }
+  }
+]

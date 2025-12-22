@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_020.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "out_of_range_negative",
+      "explanation": "Setting Out of range negative value for Num_Threads_PUSCH causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": -1,
+      "error_type": "out_of_range_negative",
+      "explanation": "Setting Out of range negative value for gNBs[0].local_n_portc causes runtime failure in DU module"
+    }
+  }
+]

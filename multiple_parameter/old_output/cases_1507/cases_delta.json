@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_integrity to an unknown enum 'invalid' will cause security configuration failure and prevent proper DRB integrity setup."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RF simulator model name to an unknown enum 'invalid' will cause RF simulation configuration failure and disrupt radio frequency operations.",
+      "explanation_zh": "將 RF 模擬器模型名稱設定為未知的枚舉值 'invalid'，會導致 RF 模擬配置失敗，並干擾無線電頻率操作。"
+    }
+  }
+]

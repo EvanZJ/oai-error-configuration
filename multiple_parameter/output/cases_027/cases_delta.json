@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_027.json",
+    "cu": {
+      "modified_key": "gNBs.SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs.SCTP.SCTP_INSTREAMS causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs[0].servingCellConfigCommon[0].physCellId causes runtime failure in DU module"
+    }
+  }
+]

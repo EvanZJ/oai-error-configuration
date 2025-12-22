@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_02.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause encryption negotiation failure during the security setup phase and prevent secure communication establishment."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting max MIMO layers to 0 disables MIMO functionality entirely, which may lead to degraded signal quality and connection instability in multi-antenna scenarios.",
+      "explanation_zh": "將最大 MIMO 層數設定為 0 會完全禁用 MIMO 功能，這可能導致多天線場景中的信號品質下降和連接不穩定。"
+    }
+  }
+]

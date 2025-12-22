@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "none",
+      "error_value": "invalid_choice",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an invalid enum 'invalid_choice' will cause ASN.1 verbosity configuration error and potential parsing issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting maxMIMO_layers to a negative value -1 will cause MIMO layer configuration validation failure.",
+      "explanation_zh": "將 maxMIMO_layers 設定為負值 -1，會導致 MIMO 層配置驗證失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting the PDSCH antenna ports XP to a negative value will cause a configuration validation error during initialization.",
+      "explanation_zh": "將 PDSCH 天線端口 XP 設定為負值會在初始化期間導致配置驗證錯誤。"
+    }
+  }
+]

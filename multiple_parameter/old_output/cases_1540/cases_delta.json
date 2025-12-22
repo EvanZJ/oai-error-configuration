@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "invalid_string",
+      "error_type": "invalid_type",
+      "explanation_en": "Setting Num_Threads_PUSCH to a string 'invalid_string' instead of an integer will cause configuration parsing failure and prevent PUSCH thread initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": "invalid_string",
+      "error_type": "invalid_type",
+      "explanation_en": "Setting maxMIMO_layers to a string 'invalid_string' instead of an integer will cause MIMO configuration failure and disrupt downlink transmission capabilities.",
+      "explanation_zh": "將 maxMIMO_layers 設定為字串 'invalid_string' 而非整數會導致 MIMO 配置失敗，並干擾下行鏈路傳輸能力。"
+    }
+  }
+]

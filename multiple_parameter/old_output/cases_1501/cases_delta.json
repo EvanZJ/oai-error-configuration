@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[1]",
+      "original_value": "nia0",
+      "error_value": "nia10",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the second integrity algorithm to the unknown enum 'nia10' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 99,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting the maximum MIMO layers to an out-of-range value '99' will cause configuration validation failure and prevent the DU from initializing properly.",
+      "explanation_zh": "將最大 MIMO 層數設定為超出範圍的值 '99' 會導致配置驗證失敗，並阻止 DU 正確初始化。"
+    }
+  }
+]

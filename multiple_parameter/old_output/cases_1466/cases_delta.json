@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid value 'invalid' will cause security configuration parsing errors, leading to failure in establishing secure connections for data radio bearers."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting rfsimulator.modelname to an invalid value 'invalid' will cause the RF simulator to fail initialization, preventing proper signal simulation and potentially causing the DU to malfunction.",
+      "explanation_zh": "將 rfsimulator.modelname 設定為無效值 'invalid' 會導致 RF 模擬器初始化失敗，阻止正確的信號模擬，並可能導致 DU 故障。"
+    }
+  }
+]

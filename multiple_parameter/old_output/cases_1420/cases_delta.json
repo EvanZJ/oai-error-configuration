@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting pdsch_AntennaPorts_XP to a negative value will cause antenna configuration error.",
+      "explanation_zh": "將 pdsch_AntennaPorts_XP 設定為負值會導致天線配置錯誤。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_1408.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to 0 will cause invalid thread configuration, leading to processing failures in the CU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": 5,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting pdsch_AntennaPorts_XP to 5 (invalid value) will cause antenna configuration errors and cell setup failures.",
+      "explanation_zh": "將 pdsch_AntennaPorts_XP 設定為 5（無效值）將導致天線配置錯誤和細胞設置失敗。"
+    }
+  }
+]

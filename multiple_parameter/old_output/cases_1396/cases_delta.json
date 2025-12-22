@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting MCC to an invalid value (999) will cause PLMN identification failure during network registration."
+    },
+    "du": {
+      "modified_key": "plmn_list.mcc",
+      "original_value": 1,
+      "error_value": 999,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting MCC to an invalid value (999) will cause PLMN identification failure during network registration.",
+      "explanation_zh": "將 MCC 設定為無效值 (999) 會在網路註冊期間導致 PLMN 識別失敗。"
+    }
+  }
+]

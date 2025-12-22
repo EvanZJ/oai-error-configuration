@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nr_cellid to a negative value -1 will cause cell ID validation failure as NR cell IDs must be non-negative."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting nr_cellid to a negative value -1 will cause cell ID validation failure as NR cell IDs must be non-negative.",
+      "explanation_zh": "將 nr_cellid 設定為負值 -1 會導致細胞 ID 驗證失敗，因為 NR 細胞 ID 必須為非負數。"
+    }
+  }
+]

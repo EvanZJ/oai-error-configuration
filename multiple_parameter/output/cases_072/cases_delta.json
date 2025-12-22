@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_072.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for gNBs.local_s_portc causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for RUs[0].nb_tx causes runtime failure in DU module"
+    }
+  }
+]

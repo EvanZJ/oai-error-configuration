@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid_hw",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting hw_log_level to an invalid value 'invalid_hw' will cause hardware logging configuration errors."
+    },
+    "du": {
+      "modified_key": "gNBs[0].pusch_AntennaPorts",
+      "original_value": 4,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting pusch_AntennaPorts to a negative value -1 will cause antenna configuration validation errors as it expects a positive integer.",
+      "explanation_zh": "將 pusch_AntennaPorts 設定為負值 -1 會導致天線配置驗證錯誤，因為它期望正整數。"
+    }
+  }
+]

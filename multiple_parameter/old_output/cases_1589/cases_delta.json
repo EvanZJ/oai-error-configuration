@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_string",
+      "explanation_en": "Setting DRB ciphering to an invalid string value will cause configuration parsing errors and prevent secure communication setup."
+    },
+    "du": {
+      "modified_key": "L1s[0].prach_dtx_threshold",
+      "original_value": 120,
+      "error_value": -100,
+      "error_type": "negative_value",
+      "explanation_en": "Setting the PRACH DTX threshold to a negative value will cause invalid threshold handling and potential RACH procedure failures.",
+      "explanation_zh": "將 PRACH DTX 閾值設定為負值將導致無效的閾值處理，並可能導致 RACH 程序失敗。"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea9",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea9' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "gNBs[0].do_CSIRS",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting do_CSIRS to a negative value will cause an invalid configuration error during DU initialization.",
+      "explanation_zh": "將 do_CSIRS 設定為負值會在 DU 初始化期間導致無效配置錯誤。"
+    }
+  }
+]

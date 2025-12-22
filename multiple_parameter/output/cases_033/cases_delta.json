@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_033.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for gNBs.amf_ip_address.ipv4 causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].pdsch_AntennaPorts_XP",
+      "original_value": 2,
+      "error_value": "",
+      "error_type": "empty_string",
+      "explanation": "Setting Empty string for gNBs[0].pdsch_AntennaPorts_XP causes runtime failure in DU module"
+    }
+  }
+]

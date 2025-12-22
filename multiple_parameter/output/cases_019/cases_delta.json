@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_019.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "out_of_range_negative",
+      "explanation": "Setting Out of range negative value for gNBs.plmn_list.mcc causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].local_n_portc",
+      "original_value": 500,
+      "error_value": -1,
+      "error_type": "out_of_range_negative",
+      "explanation": "Setting Out of range negative value for gNBs[0].local_n_portc causes runtime failure in DU module"
+    }
+  }
+]

@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid enum value 'maybe' will cause security configuration parsing errors and prevent proper ciphering setup in the CU."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting maxMIMO_layers to 0, which is below the valid minimum, will cause MIMO configuration errors and prevent proper layer allocation in the DU.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 0（低於有效最小值）會導致 MIMO 配置錯誤，並阻止 DU 中正確的層分配。"
+    }
+  }
+]

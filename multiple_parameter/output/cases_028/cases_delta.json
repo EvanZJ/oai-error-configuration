@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_028.json",
+    "cu": {
+      "modified_key": "gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U",
+      "original_value": 2152,
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs.NETWORK_INTERFACES.GNB_PORT_FOR_S1U causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs[0].servingCellConfigCommon[0].physCellId causes runtime failure in DU module"
+    }
+  }
+]

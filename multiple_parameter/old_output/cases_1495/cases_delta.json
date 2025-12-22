@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_hex",
+      "error_type": "invalid_format",
+      "explanation_en": "Setting gNB_ID to an invalid hexadecimal string will cause parsing errors in the configuration loader."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": -1,
+      "error_type": "invalid_range",
+      "explanation_en": "Setting tracking_area_code to a negative value violates the specification requirements and may cause initialization failures.",
+      "explanation_zh": "將 tracking_area_code 設定為負值違反了規範要求，可能導致初始化失敗。"
+    }
+  }
+]

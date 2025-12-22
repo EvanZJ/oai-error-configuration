@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms[0]",
+      "original_value": "nea3",
+      "error_value": "nea5",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the ciphering algorithm to the unknown enum 'nea5' will cause negotiation failure during the security negotiation phase and connection establishment rejection."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to an invalid enum value 'invalid' will cause logging configuration failure as the system expects valid log levels like 'info', 'debug', etc.",
+      "explanation_zh": "將 global_log_level 設定為無效的枚舉值 'invalid' 會導致日誌配置失敗，因為系統期望有效的日誌級別如 'info'、'debug' 等。"
+    }
+  }
+]

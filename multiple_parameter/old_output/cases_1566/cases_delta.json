@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting tracking_area_code to 0, a reserved value, will cause identification parameter validation error."
+    },
+    "du": {
+      "modified_key": "gNBs[0].maxMIMO_layers",
+      "original_value": 2,
+      "error_value": 0,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting maxMIMO_layers to 0 will cause physical layer configuration error.",
+      "explanation_zh": "將 maxMIMO_layers 設定為 0 會導致物理層配置錯誤。"
+    }
+  }
+]

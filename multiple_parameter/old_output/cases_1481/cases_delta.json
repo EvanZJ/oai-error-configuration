@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xinvalid",
+      "error_type": "invalid_hex",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal value '0xinvalid' will cause configuration validation failure and prevent the CU from initializing properly."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_name",
+      "original_value": "gNB-Eurecom-DU",
+      "error_value": "invalid_name",
+      "error_type": "invalid_string",
+      "explanation_en": "Setting the gNB name to an invalid string 'invalid_name' will cause naming convention errors and potentially disrupt DU identification and communication.",
+      "explanation_zh": "將 gNB 名稱設定為無效字串 'invalid_name'，會導致命名慣例錯誤，並可能干擾 DU 識別和通訊。"
+    }
+  }
+]

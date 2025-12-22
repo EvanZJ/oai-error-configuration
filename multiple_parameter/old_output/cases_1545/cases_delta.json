@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_hex",
+      "error_type": "invalid_hex",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal value 'invalid_hex' will cause gNB identification failure and prevent proper network initialization."
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_hex",
+      "error_type": "invalid_hex",
+      "explanation_en": "Setting the gNB ID to an invalid hexadecimal value 'invalid_hex' will cause gNB identification failure and prevent proper network initialization.",
+      "explanation_zh": "將 gNB ID 設定為無效的十六進位值 'invalid_hex' 會導致 gNB 識別失敗，並阻止正確的網路初始化。"
+    }
+  }
+]

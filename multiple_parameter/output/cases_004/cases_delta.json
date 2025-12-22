@@ -1,0 +1,24 @@
+[
+  {
+    "filename": "case_004.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": "not_an_array",
+      "error_type": "invalid_type",
+      "explanation": "Setting Invalid data type for security.ciphering_algorithms causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "invalid_string",
+      "error_type": "invalid_type",
+      "explanation": "Setting Invalid data type for gNBs[0].gNB_ID causes runtime failure in DU module"
+    }
+  }
+]

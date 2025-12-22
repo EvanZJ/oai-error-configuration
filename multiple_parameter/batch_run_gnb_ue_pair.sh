@@ -33,7 +33,7 @@ LOG_ROOT="/home/sionna/evan/CursorAutomation/cursor_gen_conf/multiple_parameter/
 
 # Docker 容器 IDs（每輪測試前重啟）
 # Docker container IDs to restart before each test case
-DOCKER_CONTAINERS="78d03d6ed583 a86f24977b1b a752fa1f5a13 fd3aca606db3 f4e16e89b2ee f612b909f593 766a65ecce01 3f2a91613157 24c88761f8ef"
+DOCKER_CONTAINERS="a92a238c15d7 085eaf9f22fe 1b5e9f072c83 5331bc2c27e7 e615f020ad46 8760595f7074 c860eff60581 1047c532f10a bbd8133f760b"
 ### ====== 使用者可調整區 / End of User-tunable Settings ======
 
 

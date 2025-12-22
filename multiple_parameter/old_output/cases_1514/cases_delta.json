@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid value 'maybe' will cause configuration parsing error and prevent proper security setup."
+    },
+    "du": {
+      "modified_key": "gNBs[0].physCellId",
+      "original_value": 0,
+      "error_value": 1007,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting physCellId to 1007 exceeds the valid range (0-1006), causing cell identification failure and network initialization issues.",
+      "explanation_zh": "將 physCellId 設定為 1007 超過有效範圍 (0-1006)，會導致小區識別失敗和網路初始化問題。"
+    }
+  }
+]

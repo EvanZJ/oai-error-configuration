@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "nope",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB ciphering to an invalid enum 'nope' will cause configuration parsing errors and prevent secure data transmission setup."
+    },
+    "du": {
+      "modified_key": "log_config.mac_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the MAC log level to an invalid value will cause logging initialization failures and impair debugging capabilities.",
+      "explanation_zh": "將 MAC 日誌等級設定為無效值將導致日誌初始化失敗，並損害調試能力。"
+    }
+  }
+]

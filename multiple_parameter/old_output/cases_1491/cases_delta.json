@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.nr_cellid",
+      "original_value": 1,
+      "error_value": "invalid_cell",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to an invalid value 'invalid_cell' will cause cell identification conflicts, preventing proper cell recognition and leading to handover failures and connectivity issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].nr_cellid",
+      "original_value": 1,
+      "error_value": "invalid_cell",
+      "error_type": "invalid_value",
+      "explanation_en": "Setting nr_cellid to an invalid value 'invalid_cell' will cause cell identification conflicts, preventing proper cell recognition and leading to handover failures and connectivity issues.",
+      "explanation_zh": "將 nr_cellid 設定為無效值 'invalid_cell' 會導致細胞識別衝突，阻止正確的細胞識別，並導致切換失敗和連接問題。"
+    }
+  }
+]

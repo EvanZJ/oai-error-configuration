@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_042.json",
+    "cu": {
+      "modified_key": "gNBs.local_s_portc",
+      "original_value": 501,
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for gNBs.local_s_portc causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for log_config.global_log_level causes runtime failure in DU module"
+    }
+  }
+]

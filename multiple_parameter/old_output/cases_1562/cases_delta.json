@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[0]",
+      "original_value": "nia2",
+      "error_value": "nia7",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the integrity algorithm to the unknown enum 'nia7' will cause negotiation failure during the security negotiation phase and NAS registration rejection."
+    },
+    "du": {
+      "modified_key": "rfsimulator.modelname",
+      "original_value": "AWGN",
+      "error_value": "invalid_model",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the RF simulator model name to an invalid enum 'invalid_model' will cause RF simulation initialization errors and prevent proper signal processing in the DU.",
+      "explanation_zh": "將 RF 模擬器模型名稱設定為無效的枚舉值 'invalid_model' 會導致 RF 模擬初始化錯誤，並阻止 DU 中的正確訊號處理。"
+    }
+  }
+]

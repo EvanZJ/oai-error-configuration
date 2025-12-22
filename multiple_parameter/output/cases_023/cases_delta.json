@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_023.json",
+    "cu": {
+      "modified_key": "gNBs.amf_ip_address.ipv4",
+      "original_value": "192.168.70.132",
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs.amf_ip_address.ipv4 causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].servingCellConfigCommon[0].physCellId",
+      "original_value": 0,
+      "error_value": null,
+      "error_type": "null_value",
+      "explanation": "Setting Null value for gNBs[0].servingCellConfigCommon[0].physCellId causes runtime failure in DU module"
+    }
+  }
+]

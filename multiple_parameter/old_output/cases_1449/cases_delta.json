@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid enum value 'maybe' will cause configuration parsing errors and prevent proper security setup for DRBs."
+    },
+    "du": {
+      "modified_key": "security.drb_integrity",
+      "original_value": "no",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_integrity to an invalid enum value 'maybe' will cause configuration parsing errors and prevent proper security setup for DRBs.",
+      "explanation_zh": "將 drb_integrity 設定為無效的枚舉值 'maybe' 會導致配置解析錯誤，並阻止 DRB 的正確安全設定。"
+    }
+  }
+]

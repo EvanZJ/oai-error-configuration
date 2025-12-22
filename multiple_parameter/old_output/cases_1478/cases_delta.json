@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the global log level to an invalid enum 'invalid' will cause logging configuration errors and potential system instability during initialization."
+    },
+    "du": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid_hw",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the hardware log level to an invalid enum 'invalid_hw' will cause logging configuration errors and potential hardware-related issues during operation.",
+      "explanation_zh": "將硬體日誌級別設定為無效的枚舉值 'invalid_hw'，會導致日誌配置錯誤，並在操作期間造成潛在的硬體相關問題。"
+    }
+  }
+]

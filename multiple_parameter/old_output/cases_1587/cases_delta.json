@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to an invalid enum value will cause logging configuration errors and prevent proper log output."
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "out_of_range",
+      "explanation_en": "Setting nb_tx to 0 will disable transmit antennas and cause transmission failures.",
+      "explanation_zh": "將 nb_tx 設定為 0 會停用傳輸天線，並造成傳輸失敗。"
+    }
+  }
+]

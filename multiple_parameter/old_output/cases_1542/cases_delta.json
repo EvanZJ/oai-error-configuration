@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": "eight",
+      "error_type": "invalid_type",
+      "explanation_en": "Setting Num_Threads_PUSCH to a string value instead of an integer will cause a configuration parsing error during CU initialization."
+    },
+    "du": {
+      "modified_key": "Asn1_verbosity",
+      "original_value": "annoying",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting Asn1_verbosity to an unknown enumeration value will cause configuration validation failure in the DU component.",
+      "explanation_zh": "將 Asn1_verbosity 設定為未知的枚舉值將導致 DU 元件中的配置驗證失敗。"
+    }
+  }
+]

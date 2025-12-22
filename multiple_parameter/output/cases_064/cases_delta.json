@@ -1,0 +1,29 @@
+[
+  {
+    "filename": "case_064.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_type": "too_large",
+      "explanation": "Setting Value too large for security.ciphering_algorithms causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 999999999,
+      "error_type": "too_large",
+      "explanation": "Setting Value too large for gNBs[0].SCTP.SCTP_INSTREAMS causes runtime failure in DU module"
+    }
+  }
+]

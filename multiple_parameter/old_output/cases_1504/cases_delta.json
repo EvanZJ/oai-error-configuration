@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.integrity_algorithms[1]",
+      "original_value": "nia0",
+      "error_value": "nia5",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the second integrity algorithm to the unknown enum 'nia5' will cause security negotiation failures and prevent UE attachment."
+    },
+    "du": {
+      "modified_key": "log_config.hw_log_level",
+      "original_value": "info",
+      "error_value": "invalid",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the hardware log level to an invalid value 'invalid' will cause logging initialization errors and halt DU startup.",
+      "explanation_zh": "將硬體日誌級別設定為無效值 'invalid' 會導致日誌初始化錯誤，並停止 DU 啟動。"
+    }
+  }
+]

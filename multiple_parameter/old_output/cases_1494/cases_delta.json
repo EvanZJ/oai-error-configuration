@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "unknown",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the DRB ciphering to an unknown enum 'unknown' will cause configuration validation errors and prevent proper security setup."
+    },
+    "du": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "bad",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the physical layer log level to an invalid value 'bad' will cause logging configuration errors and potential physical layer instability.",
+      "explanation_zh": "將物理層日誌級別設定為無效值 'bad' 會導致日誌配置錯誤，並可能造成物理層不穩定。"
+    }
+  }
+]

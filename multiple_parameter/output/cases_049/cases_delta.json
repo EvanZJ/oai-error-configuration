@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_049.json",
+    "cu": {
+      "modified_key": "gNBs.plmn_list.mcc",
+      "original_value": 1,
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for gNBs.plmn_list.mcc causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_enum_value",
+      "error_type": "invalid_enum",
+      "explanation": "Setting Invalid enumeration value for log_config.global_log_level causes runtime failure in DU module"
+    }
+  }
+]

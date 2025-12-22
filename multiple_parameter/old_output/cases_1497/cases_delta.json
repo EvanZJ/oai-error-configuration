@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid value 'maybe' will cause security configuration errors during initialization."
+    },
+    "du": {
+      "modified_key": "security.drb_ciphering",
+      "original_value": "yes",
+      "error_value": "maybe",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting drb_ciphering to an invalid value 'maybe' will cause security configuration errors during initialization.",
+      "explanation_zh": "將 drb_ciphering 設定為無效值 'maybe' 會在初始化期間導致安全配置錯誤。"
+    }
+  }
+]

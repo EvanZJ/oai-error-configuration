@@ -1,0 +1,19 @@
+[
+  {
+    "filename": "case_061.json",
+    "cu": {
+      "modified_key": "gNBs.gNB_ID",
+      "original_value": "0xe00",
+      "error_value": "0xe00",
+      "error_type": "too_large",
+      "explanation": "Setting Value too large for gNBs.gNB_ID causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "gNBs[0].SCTP.SCTP_INSTREAMS",
+      "original_value": 2,
+      "error_value": 999999999,
+      "error_type": "too_large",
+      "explanation": "Setting Value too large for gNBs[0].SCTP.SCTP_INSTREAMS causes runtime failure in DU module"
+    }
+  }
+]

@@ -1,0 +1,24 @@
+[
+  {
+    "filename": "case_074.json",
+    "cu": {
+      "modified_key": "security.ciphering_algorithms",
+      "original_value": [
+        "nea3",
+        "nea2",
+        "nea1",
+        "nea0"
+      ],
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for security.ciphering_algorithms causes runtime failure in CU module"
+    },
+    "du": {
+      "modified_key": "RUs[0].nb_tx",
+      "original_value": 4,
+      "error_value": 0,
+      "error_type": "zero_value",
+      "explanation": "Setting Zero value where positive required for RUs[0].nb_tx causes runtime failure in DU module"
+    }
+  }
+]

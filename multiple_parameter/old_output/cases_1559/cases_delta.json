@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "unknown",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the PHY layer log level to an unknown enum 'unknown' will cause logging configuration failure and prevent proper system initialization."
+    },
+    "du": {
+      "modified_key": "log_config.phy_log_level",
+      "original_value": "info",
+      "error_value": "unknown",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting the PHY layer log level to an unknown enum 'unknown' will cause logging configuration failure and prevent proper system initialization.",
+      "explanation_zh": "將 PHY 層日誌等級設定為未知的枚舉值 'unknown'，會導致日誌配置失敗，並阻止正確的系統初始化。"
+    }
+  }
+]

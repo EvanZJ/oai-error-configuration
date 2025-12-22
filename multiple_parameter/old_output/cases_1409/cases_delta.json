@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "gNBs.tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "reserved_value",
+      "explanation_en": "Setting the tracking area code to a reserved value (0x0000) will cause network registration and mobility issues."
+    },
+    "du": {
+      "modified_key": "gNBs[0].tracking_area_code",
+      "original_value": 1,
+      "error_value": 0,
+      "error_type": "reserved_value",
+      "explanation_en": "Setting the tracking area code to a reserved value (0x0000) will cause network registration and mobility issues.",
+      "explanation_zh": "將追蹤區域代碼設定為保留值 (0x0000) 將導致網路註冊和移動性問題。"
+    }
+  }
+]

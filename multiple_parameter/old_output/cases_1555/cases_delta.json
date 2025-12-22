@@ -1,0 +1,20 @@
+[
+  {
+    "filename": "case_01.json",
+    "cu": {
+      "modified_key": "Num_Threads_PUSCH",
+      "original_value": 8,
+      "error_value": -1,
+      "error_type": "invalid_value",
+      "explanation_en": "Setting Num_Threads_PUSCH to a negative value will cause thread allocation failure and prevent the CU from starting properly."
+    },
+    "du": {
+      "modified_key": "log_config.global_log_level",
+      "original_value": "info",
+      "error_value": "invalid_level",
+      "error_type": "invalid_enum",
+      "explanation_en": "Setting global_log_level to an invalid enum value will cause logging configuration error and potential startup issues.",
+      "explanation_zh": "將 global_log_level 設定為無效的枚舉值會導致日誌配置錯誤，並可能造成啟動問題。"
+    }
+  }
+]
